@@ -1,0 +1,5 @@
+package shareddiscovery
+
+func main() {
+
+}
