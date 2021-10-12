@@ -1,0 +1,377 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>fsxiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package fsxiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/fsx/fsxiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package fsxiface provides an interface to enable mocking the Amazon FSx service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#FSxAPI">type FSxAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/fsx/fsxiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="FSxAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/fsx/fsxiface/interface.go?s=2112:13339#L52">FSxAPI</a>
+				<a class="permalink" href="index.html#FSxAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+FSxAPI provides an interface to enable mocking the
+fsx.FSx service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon FSx.
+func myFunc(svc fsxiface.FSxAPI) bool {
+    // Make svc.AssociateFileSystemAliases request
+}
+
+func main() {
+    sess := session.New()
+    svc := fsx.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockFSxClient struct {
+    fsxiface.FSxAPI
+}
+func (m *mockFSxClient) AssociateFileSystemAliases(input *fsx.AssociateFileSystemAliasesInput) (*fsx.AssociateFileSystemAliasesOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockFSxClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type FSxAPI interface {
+    AssociateFileSystemAliases(*<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesInput">AssociateFileSystemAliasesInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesOutput">AssociateFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateFileSystemAliasesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesInput">AssociateFileSystemAliasesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesOutput">AssociateFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateFileSystemAliasesRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesInput">AssociateFileSystemAliasesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#AssociateFileSystemAliasesOutput">AssociateFileSystemAliasesOutput</a>)
+
+    CancelDataRepositoryTask(*<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskInput">CancelDataRepositoryTaskInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskOutput">CancelDataRepositoryTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelDataRepositoryTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskInput">CancelDataRepositoryTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskOutput">CancelDataRepositoryTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelDataRepositoryTaskRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskInput">CancelDataRepositoryTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CancelDataRepositoryTaskOutput">CancelDataRepositoryTaskOutput</a>)
+
+    CopyBackup(*<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupInput">CopyBackupInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupOutput">CopyBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopyBackupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupInput">CopyBackupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupOutput">CopyBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopyBackupRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupInput">CopyBackupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CopyBackupOutput">CopyBackupOutput</a>)
+
+    CreateBackup(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupInput">CreateBackupInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupOutput">CreateBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupInput">CreateBackupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupOutput">CreateBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackupRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupInput">CreateBackupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateBackupOutput">CreateBackupOutput</a>)
+
+    CreateDataRepositoryTask(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskInput">CreateDataRepositoryTaskInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskOutput">CreateDataRepositoryTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataRepositoryTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskInput">CreateDataRepositoryTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskOutput">CreateDataRepositoryTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataRepositoryTaskRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskInput">CreateDataRepositoryTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateDataRepositoryTaskOutput">CreateDataRepositoryTaskOutput</a>)
+
+    CreateFileSystem(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemInput">CreateFileSystemInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemOutput">CreateFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFileSystemWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemInput">CreateFileSystemInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemOutput">CreateFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFileSystemRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemInput">CreateFileSystemInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemOutput">CreateFileSystemOutput</a>)
+
+    CreateFileSystemFromBackup(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupInput">CreateFileSystemFromBackupInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupOutput">CreateFileSystemFromBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFileSystemFromBackupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupInput">CreateFileSystemFromBackupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupOutput">CreateFileSystemFromBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFileSystemFromBackupRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupInput">CreateFileSystemFromBackupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateFileSystemFromBackupOutput">CreateFileSystemFromBackupOutput</a>)
+
+    CreateStorageVirtualMachine(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineInput">CreateStorageVirtualMachineInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineOutput">CreateStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStorageVirtualMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineInput">CreateStorageVirtualMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineOutput">CreateStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStorageVirtualMachineRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineInput">CreateStorageVirtualMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateStorageVirtualMachineOutput">CreateStorageVirtualMachineOutput</a>)
+
+    CreateVolume(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeInput">CreateVolumeInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeOutput">CreateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeInput">CreateVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeOutput">CreateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVolumeRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeInput">CreateVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeOutput">CreateVolumeOutput</a>)
+
+    CreateVolumeFromBackup(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupInput">CreateVolumeFromBackupInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupOutput">CreateVolumeFromBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVolumeFromBackupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupInput">CreateVolumeFromBackupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupOutput">CreateVolumeFromBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVolumeFromBackupRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupInput">CreateVolumeFromBackupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#CreateVolumeFromBackupOutput">CreateVolumeFromBackupOutput</a>)
+
+    DeleteBackup(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupInput">DeleteBackupInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupOutput">DeleteBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupInput">DeleteBackupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupOutput">DeleteBackupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackupRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupInput">DeleteBackupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteBackupOutput">DeleteBackupOutput</a>)
+
+    DeleteFileSystem(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemInput">DeleteFileSystemInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemOutput">DeleteFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFileSystemWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemInput">DeleteFileSystemInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemOutput">DeleteFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFileSystemRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemInput">DeleteFileSystemInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteFileSystemOutput">DeleteFileSystemOutput</a>)
+
+    DeleteStorageVirtualMachine(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineInput">DeleteStorageVirtualMachineInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineOutput">DeleteStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStorageVirtualMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineInput">DeleteStorageVirtualMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineOutput">DeleteStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStorageVirtualMachineRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineInput">DeleteStorageVirtualMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteStorageVirtualMachineOutput">DeleteStorageVirtualMachineOutput</a>)
+
+    DeleteVolume(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeInput">DeleteVolumeInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeOutput">DeleteVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeInput">DeleteVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeOutput">DeleteVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVolumeRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeInput">DeleteVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DeleteVolumeOutput">DeleteVolumeOutput</a>)
+
+    DescribeBackups(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsInput">DescribeBackupsInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsOutput">DescribeBackupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBackupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsInput">DescribeBackupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsOutput">DescribeBackupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBackupsRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsInput">DescribeBackupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsOutput">DescribeBackupsOutput</a>)
+
+    DescribeBackupsPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsInput">DescribeBackupsInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsOutput">DescribeBackupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeBackupsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsInput">DescribeBackupsInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeBackupsOutput">DescribeBackupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeDataRepositoryTasks(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksInput">DescribeDataRepositoryTasksInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksOutput">DescribeDataRepositoryTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDataRepositoryTasksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksInput">DescribeDataRepositoryTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksOutput">DescribeDataRepositoryTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDataRepositoryTasksRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksInput">DescribeDataRepositoryTasksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksOutput">DescribeDataRepositoryTasksOutput</a>)
+
+    DescribeDataRepositoryTasksPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksInput">DescribeDataRepositoryTasksInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksOutput">DescribeDataRepositoryTasksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeDataRepositoryTasksPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksInput">DescribeDataRepositoryTasksInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeDataRepositoryTasksOutput">DescribeDataRepositoryTasksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeFileSystemAliases(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesInput">DescribeFileSystemAliasesInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesOutput">DescribeFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFileSystemAliasesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesInput">DescribeFileSystemAliasesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesOutput">DescribeFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFileSystemAliasesRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesInput">DescribeFileSystemAliasesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesOutput">DescribeFileSystemAliasesOutput</a>)
+
+    DescribeFileSystemAliasesPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesInput">DescribeFileSystemAliasesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesOutput">DescribeFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeFileSystemAliasesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesInput">DescribeFileSystemAliasesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemAliasesOutput">DescribeFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeFileSystems(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsInput">DescribeFileSystemsInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsOutput">DescribeFileSystemsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFileSystemsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsInput">DescribeFileSystemsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsOutput">DescribeFileSystemsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFileSystemsRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsInput">DescribeFileSystemsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsOutput">DescribeFileSystemsOutput</a>)
+
+    DescribeFileSystemsPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsInput">DescribeFileSystemsInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsOutput">DescribeFileSystemsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeFileSystemsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsInput">DescribeFileSystemsInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeFileSystemsOutput">DescribeFileSystemsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeStorageVirtualMachines(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesInput">DescribeStorageVirtualMachinesInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesOutput">DescribeStorageVirtualMachinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStorageVirtualMachinesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesInput">DescribeStorageVirtualMachinesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesOutput">DescribeStorageVirtualMachinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStorageVirtualMachinesRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesInput">DescribeStorageVirtualMachinesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesOutput">DescribeStorageVirtualMachinesOutput</a>)
+
+    DescribeStorageVirtualMachinesPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesInput">DescribeStorageVirtualMachinesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesOutput">DescribeStorageVirtualMachinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeStorageVirtualMachinesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesInput">DescribeStorageVirtualMachinesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeStorageVirtualMachinesOutput">DescribeStorageVirtualMachinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeVolumes(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVolumesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVolumesRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>)
+
+    DescribeVolumesPages(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeVolumesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DisassociateFileSystemAliases(*<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesInput">DisassociateFileSystemAliasesInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesOutput">DisassociateFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFileSystemAliasesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesInput">DisassociateFileSystemAliasesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesOutput">DisassociateFileSystemAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFileSystemAliasesRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesInput">DisassociateFileSystemAliasesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#DisassociateFileSystemAliasesOutput">DisassociateFileSystemAliasesOutput</a>)
+
+    ListTagsForResource(*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">fsx</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    TagResource(*<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateFileSystem(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemInput">UpdateFileSystemInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemOutput">UpdateFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFileSystemWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemInput">UpdateFileSystemInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemOutput">UpdateFileSystemOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFileSystemRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemInput">UpdateFileSystemInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateFileSystemOutput">UpdateFileSystemOutput</a>)
+
+    UpdateStorageVirtualMachine(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineInput">UpdateStorageVirtualMachineInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineOutput">UpdateStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStorageVirtualMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineInput">UpdateStorageVirtualMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineOutput">UpdateStorageVirtualMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStorageVirtualMachineRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineInput">UpdateStorageVirtualMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateStorageVirtualMachineOutput">UpdateStorageVirtualMachineOutput</a>)
+
+    UpdateVolume(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVolumeRequest(*<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">fsx</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>machinelearningiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package machinelearningiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/machinelearning/machinelearningiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package machinelearningiface provides an interface to enable mocking the Amazon Machine Learning service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#MachineLearningAPI">type MachineLearningAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/machinelearning/machinelearningiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="MachineLearningAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/machinelearning/machinelearningiface/interface.go?s=2254:15301#L52">MachineLearningAPI</a>
+				<a class="permalink" href="index.html#MachineLearningAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+MachineLearningAPI provides an interface to enable mocking the
+machinelearning.MachineLearning service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Machine Learning.
+func myFunc(svc machinelearningiface.MachineLearningAPI) bool {
+    // Make svc.AddTags request
+}
+
+func main() {
+    sess := session.New()
+    svc := machinelearning.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockMachineLearningClient struct {
+    machinelearningiface.MachineLearningAPI
+}
+func (m *mockMachineLearningClient) AddTags(input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockMachineLearningClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type MachineLearningAPI interface {
+    AddTags(*<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>)
+
+    CreateBatchPrediction(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionInput">CreateBatchPredictionInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionOutput">CreateBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBatchPredictionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionInput">CreateBatchPredictionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionOutput">CreateBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBatchPredictionRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionInput">CreateBatchPredictionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateBatchPredictionOutput">CreateBatchPredictionOutput</a>)
+
+    CreateDataSourceFromRDS(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSInput">CreateDataSourceFromRDSInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSOutput">CreateDataSourceFromRDSOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromRDSWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSInput">CreateDataSourceFromRDSInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSOutput">CreateDataSourceFromRDSOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromRDSRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSInput">CreateDataSourceFromRDSInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRDSOutput">CreateDataSourceFromRDSOutput</a>)
+
+    CreateDataSourceFromRedshift(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftInput">CreateDataSourceFromRedshiftInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftOutput">CreateDataSourceFromRedshiftOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromRedshiftWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftInput">CreateDataSourceFromRedshiftInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftOutput">CreateDataSourceFromRedshiftOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromRedshiftRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftInput">CreateDataSourceFromRedshiftInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromRedshiftOutput">CreateDataSourceFromRedshiftOutput</a>)
+
+    CreateDataSourceFromS3(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Input">CreateDataSourceFromS3Input</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Output">CreateDataSourceFromS3Output</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromS3WithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Input">CreateDataSourceFromS3Input</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Output">CreateDataSourceFromS3Output</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDataSourceFromS3Request(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Input">CreateDataSourceFromS3Input</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateDataSourceFromS3Output">CreateDataSourceFromS3Output</a>)
+
+    CreateEvaluation(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationInput">CreateEvaluationInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationOutput">CreateEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEvaluationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationInput">CreateEvaluationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationOutput">CreateEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEvaluationRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationInput">CreateEvaluationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateEvaluationOutput">CreateEvaluationOutput</a>)
+
+    CreateMLModel(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelInput">CreateMLModelInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelOutput">CreateMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMLModelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelInput">CreateMLModelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelOutput">CreateMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMLModelRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelInput">CreateMLModelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateMLModelOutput">CreateMLModelOutput</a>)
+
+    CreateRealtimeEndpoint(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointInput">CreateRealtimeEndpointInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointOutput">CreateRealtimeEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRealtimeEndpointWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointInput">CreateRealtimeEndpointInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointOutput">CreateRealtimeEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRealtimeEndpointRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointInput">CreateRealtimeEndpointInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#CreateRealtimeEndpointOutput">CreateRealtimeEndpointOutput</a>)
+
+    DeleteBatchPrediction(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionInput">DeleteBatchPredictionInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionOutput">DeleteBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBatchPredictionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionInput">DeleteBatchPredictionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionOutput">DeleteBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBatchPredictionRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionInput">DeleteBatchPredictionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteBatchPredictionOutput">DeleteBatchPredictionOutput</a>)
+
+    DeleteDataSource(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceInput">DeleteDataSourceInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceOutput">DeleteDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDataSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceInput">DeleteDataSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceOutput">DeleteDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDataSourceRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceInput">DeleteDataSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteDataSourceOutput">DeleteDataSourceOutput</a>)
+
+    DeleteEvaluation(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationInput">DeleteEvaluationInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationOutput">DeleteEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEvaluationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationInput">DeleteEvaluationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationOutput">DeleteEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEvaluationRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationInput">DeleteEvaluationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteEvaluationOutput">DeleteEvaluationOutput</a>)
+
+    DeleteMLModel(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelInput">DeleteMLModelInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelOutput">DeleteMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMLModelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelInput">DeleteMLModelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelOutput">DeleteMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMLModelRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelInput">DeleteMLModelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteMLModelOutput">DeleteMLModelOutput</a>)
+
+    DeleteRealtimeEndpoint(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointInput">DeleteRealtimeEndpointInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointOutput">DeleteRealtimeEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRealtimeEndpointWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointInput">DeleteRealtimeEndpointInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointOutput">DeleteRealtimeEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRealtimeEndpointRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointInput">DeleteRealtimeEndpointInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteRealtimeEndpointOutput">DeleteRealtimeEndpointOutput</a>)
+
+    DeleteTags(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsInput">DeleteTagsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsOutput">DeleteTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsInput">DeleteTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsOutput">DeleteTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTagsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsInput">DeleteTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DeleteTagsOutput">DeleteTagsOutput</a>)
+
+    DescribeBatchPredictions(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsOutput">DescribeBatchPredictionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBatchPredictionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsOutput">DescribeBatchPredictionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBatchPredictionsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsOutput">DescribeBatchPredictionsOutput</a>)
+
+    DescribeBatchPredictionsPages(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsOutput">DescribeBatchPredictionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeBatchPredictionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsOutput">DescribeBatchPredictionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeDataSources(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesOutput">DescribeDataSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDataSourcesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesOutput">DescribeDataSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDataSourcesRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesOutput">DescribeDataSourcesOutput</a>)
+
+    DescribeDataSourcesPages(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesOutput">DescribeDataSourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeDataSourcesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesOutput">DescribeDataSourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeEvaluations(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsOutput">DescribeEvaluationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEvaluationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsOutput">DescribeEvaluationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEvaluationsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsOutput">DescribeEvaluationsOutput</a>)
+
+    DescribeEvaluationsPages(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsOutput">DescribeEvaluationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeEvaluationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsOutput">DescribeEvaluationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeMLModels(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsOutput">DescribeMLModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMLModelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsOutput">DescribeMLModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMLModelsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsOutput">DescribeMLModelsOutput</a>)
+
+    DescribeMLModelsPages(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsOutput">DescribeMLModelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeMLModelsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>, func(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsOutput">DescribeMLModelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeTags(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTagsRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>)
+
+    GetBatchPrediction(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionInput">GetBatchPredictionInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionOutput">GetBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBatchPredictionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionInput">GetBatchPredictionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionOutput">GetBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBatchPredictionRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionInput">GetBatchPredictionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetBatchPredictionOutput">GetBatchPredictionOutput</a>)
+
+    GetDataSource(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceInput">GetDataSourceInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceOutput">GetDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDataSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceInput">GetDataSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceOutput">GetDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDataSourceRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceInput">GetDataSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetDataSourceOutput">GetDataSourceOutput</a>)
+
+    GetEvaluation(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationInput">GetEvaluationInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationOutput">GetEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvaluationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationInput">GetEvaluationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationOutput">GetEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvaluationRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationInput">GetEvaluationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetEvaluationOutput">GetEvaluationOutput</a>)
+
+    GetMLModel(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelInput">GetMLModelInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelOutput">GetMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMLModelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelInput">GetMLModelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelOutput">GetMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMLModelRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelInput">GetMLModelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#GetMLModelOutput">GetMLModelOutput</a>)
+
+    Predict(*<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictInput">PredictInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictOutput">PredictOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PredictWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictInput">PredictInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictOutput">PredictOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PredictRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictInput">PredictInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#PredictOutput">PredictOutput</a>)
+
+    UpdateBatchPrediction(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionInput">UpdateBatchPredictionInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionOutput">UpdateBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBatchPredictionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionInput">UpdateBatchPredictionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionOutput">UpdateBatchPredictionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBatchPredictionRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionInput">UpdateBatchPredictionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateBatchPredictionOutput">UpdateBatchPredictionOutput</a>)
+
+    UpdateDataSource(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceInput">UpdateDataSourceInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceOutput">UpdateDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDataSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceInput">UpdateDataSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceOutput">UpdateDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDataSourceRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceInput">UpdateDataSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateDataSourceOutput">UpdateDataSourceOutput</a>)
+
+    UpdateEvaluation(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationInput">UpdateEvaluationInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationOutput">UpdateEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateEvaluationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationInput">UpdateEvaluationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationOutput">UpdateEvaluationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateEvaluationRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationInput">UpdateEvaluationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateEvaluationOutput">UpdateEvaluationOutput</a>)
+
+    UpdateMLModel(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelInput">UpdateMLModelInput</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelOutput">UpdateMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMLModelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelInput">UpdateMLModelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelOutput">UpdateMLModelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMLModelRequest(*<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelInput">UpdateMLModelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#UpdateMLModelOutput">UpdateMLModelOutput</a>)
+
+    WaitUntilBatchPredictionAvailable(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilBatchPredictionAvailableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeBatchPredictionsInput">DescribeBatchPredictionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilDataSourceAvailable(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilDataSourceAvailableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeDataSourcesInput">DescribeDataSourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilEvaluationAvailable(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilEvaluationAvailableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeEvaluationsInput">DescribeEvaluationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilMLModelAvailable(*<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilMLModelAvailableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">machinelearning</a>.<a href="../index.html#DescribeMLModelsInput">DescribeMLModelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

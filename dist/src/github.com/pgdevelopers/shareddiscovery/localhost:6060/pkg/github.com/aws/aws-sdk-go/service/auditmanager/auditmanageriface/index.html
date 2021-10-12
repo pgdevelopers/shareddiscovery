@@ -1,0 +1,485 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>auditmanageriface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package auditmanageriface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/auditmanager/auditmanageriface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package auditmanageriface provides an interface to enable mocking the AWS Audit Manager service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AuditManagerAPI">type AuditManagerAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/auditmanager/auditmanageriface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AuditManagerAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/auditmanager/auditmanageriface/interface.go?s=2322:27359#L52">AuditManagerAPI</a>
+				<a class="permalink" href="index.html#AuditManagerAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+AuditManagerAPI provides an interface to enable mocking the
+auditmanager.AuditManager service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Audit Manager.
+func myFunc(svc auditmanageriface.AuditManagerAPI) bool {
+    // Make svc.AssociateAssessmentReportEvidenceFolder request
+}
+
+func main() {
+    sess := session.New()
+    svc := auditmanager.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockAuditManagerClient struct {
+    auditmanageriface.AuditManagerAPI
+}
+func (m *mockAuditManagerClient) AssociateAssessmentReportEvidenceFolder(input *auditmanager.AssociateAssessmentReportEvidenceFolderInput) (*auditmanager.AssociateAssessmentReportEvidenceFolderOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockAuditManagerClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type AuditManagerAPI interface {
+    AssociateAssessmentReportEvidenceFolder(*<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderInput">AssociateAssessmentReportEvidenceFolderInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderOutput">AssociateAssessmentReportEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateAssessmentReportEvidenceFolderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderInput">AssociateAssessmentReportEvidenceFolderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderOutput">AssociateAssessmentReportEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateAssessmentReportEvidenceFolderRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderInput">AssociateAssessmentReportEvidenceFolderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#AssociateAssessmentReportEvidenceFolderOutput">AssociateAssessmentReportEvidenceFolderOutput</a>)
+
+    BatchAssociateAssessmentReportEvidence(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceInput">BatchAssociateAssessmentReportEvidenceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceOutput">BatchAssociateAssessmentReportEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchAssociateAssessmentReportEvidenceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceInput">BatchAssociateAssessmentReportEvidenceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceOutput">BatchAssociateAssessmentReportEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchAssociateAssessmentReportEvidenceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceInput">BatchAssociateAssessmentReportEvidenceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchAssociateAssessmentReportEvidenceOutput">BatchAssociateAssessmentReportEvidenceOutput</a>)
+
+    BatchCreateDelegationByAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentInput">BatchCreateDelegationByAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentOutput">BatchCreateDelegationByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchCreateDelegationByAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentInput">BatchCreateDelegationByAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentOutput">BatchCreateDelegationByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchCreateDelegationByAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentInput">BatchCreateDelegationByAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchCreateDelegationByAssessmentOutput">BatchCreateDelegationByAssessmentOutput</a>)
+
+    BatchDeleteDelegationByAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentInput">BatchDeleteDelegationByAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentOutput">BatchDeleteDelegationByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteDelegationByAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentInput">BatchDeleteDelegationByAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentOutput">BatchDeleteDelegationByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteDelegationByAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentInput">BatchDeleteDelegationByAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDeleteDelegationByAssessmentOutput">BatchDeleteDelegationByAssessmentOutput</a>)
+
+    BatchDisassociateAssessmentReportEvidence(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceInput">BatchDisassociateAssessmentReportEvidenceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceOutput">BatchDisassociateAssessmentReportEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDisassociateAssessmentReportEvidenceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceInput">BatchDisassociateAssessmentReportEvidenceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceOutput">BatchDisassociateAssessmentReportEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDisassociateAssessmentReportEvidenceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceInput">BatchDisassociateAssessmentReportEvidenceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchDisassociateAssessmentReportEvidenceOutput">BatchDisassociateAssessmentReportEvidenceOutput</a>)
+
+    BatchImportEvidenceToAssessmentControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlInput">BatchImportEvidenceToAssessmentControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlOutput">BatchImportEvidenceToAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchImportEvidenceToAssessmentControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlInput">BatchImportEvidenceToAssessmentControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlOutput">BatchImportEvidenceToAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchImportEvidenceToAssessmentControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlInput">BatchImportEvidenceToAssessmentControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#BatchImportEvidenceToAssessmentControlOutput">BatchImportEvidenceToAssessmentControlOutput</a>)
+
+    CreateAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentInput">CreateAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentOutput">CreateAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentInput">CreateAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentOutput">CreateAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentInput">CreateAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentOutput">CreateAssessmentOutput</a>)
+
+    CreateAssessmentFramework(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkInput">CreateAssessmentFrameworkInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkOutput">CreateAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentFrameworkWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkInput">CreateAssessmentFrameworkInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkOutput">CreateAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentFrameworkRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkInput">CreateAssessmentFrameworkInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentFrameworkOutput">CreateAssessmentFrameworkOutput</a>)
+
+    CreateAssessmentReport(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportInput">CreateAssessmentReportInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportOutput">CreateAssessmentReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentReportWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportInput">CreateAssessmentReportInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportOutput">CreateAssessmentReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssessmentReportRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportInput">CreateAssessmentReportInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateAssessmentReportOutput">CreateAssessmentReportOutput</a>)
+
+    CreateControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlInput">CreateControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlOutput">CreateControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlInput">CreateControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlOutput">CreateControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlInput">CreateControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#CreateControlOutput">CreateControlOutput</a>)
+
+    DeleteAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentInput">DeleteAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentOutput">DeleteAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentInput">DeleteAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentOutput">DeleteAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentInput">DeleteAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentOutput">DeleteAssessmentOutput</a>)
+
+    DeleteAssessmentFramework(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkInput">DeleteAssessmentFrameworkInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkOutput">DeleteAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentFrameworkWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkInput">DeleteAssessmentFrameworkInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkOutput">DeleteAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentFrameworkRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkInput">DeleteAssessmentFrameworkInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentFrameworkOutput">DeleteAssessmentFrameworkOutput</a>)
+
+    DeleteAssessmentReport(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportInput">DeleteAssessmentReportInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportOutput">DeleteAssessmentReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentReportWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportInput">DeleteAssessmentReportInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportOutput">DeleteAssessmentReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssessmentReportRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportInput">DeleteAssessmentReportInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteAssessmentReportOutput">DeleteAssessmentReportOutput</a>)
+
+    DeleteControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlInput">DeleteControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlOutput">DeleteControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlInput">DeleteControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlOutput">DeleteControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlInput">DeleteControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeleteControlOutput">DeleteControlOutput</a>)
+
+    DeregisterAccount(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountInput">DeregisterAccountInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountOutput">DeregisterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountInput">DeregisterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountOutput">DeregisterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterAccountRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountInput">DeregisterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterAccountOutput">DeregisterAccountOutput</a>)
+
+    DeregisterOrganizationAdminAccount(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountInput">DeregisterOrganizationAdminAccountInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountOutput">DeregisterOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountInput">DeregisterOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountOutput">DeregisterOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterOrganizationAdminAccountRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountInput">DeregisterOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DeregisterOrganizationAdminAccountOutput">DeregisterOrganizationAdminAccountOutput</a>)
+
+    DisassociateAssessmentReportEvidenceFolder(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderInput">DisassociateAssessmentReportEvidenceFolderInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderOutput">DisassociateAssessmentReportEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateAssessmentReportEvidenceFolderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderInput">DisassociateAssessmentReportEvidenceFolderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderOutput">DisassociateAssessmentReportEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateAssessmentReportEvidenceFolderRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderInput">DisassociateAssessmentReportEvidenceFolderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#DisassociateAssessmentReportEvidenceFolderOutput">DisassociateAssessmentReportEvidenceFolderOutput</a>)
+
+    GetAccountStatus(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusInput">GetAccountStatusInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusOutput">GetAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusInput">GetAccountStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusOutput">GetAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountStatusRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusInput">GetAccountStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAccountStatusOutput">GetAccountStatusOutput</a>)
+
+    GetAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentInput">GetAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentOutput">GetAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentInput">GetAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentOutput">GetAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentInput">GetAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentOutput">GetAssessmentOutput</a>)
+
+    GetAssessmentFramework(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkInput">GetAssessmentFrameworkInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkOutput">GetAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentFrameworkWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkInput">GetAssessmentFrameworkInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkOutput">GetAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentFrameworkRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkInput">GetAssessmentFrameworkInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentFrameworkOutput">GetAssessmentFrameworkOutput</a>)
+
+    GetAssessmentReportUrl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlInput">GetAssessmentReportUrlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlOutput">GetAssessmentReportUrlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentReportUrlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlInput">GetAssessmentReportUrlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlOutput">GetAssessmentReportUrlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssessmentReportUrlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlInput">GetAssessmentReportUrlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetAssessmentReportUrlOutput">GetAssessmentReportUrlOutput</a>)
+
+    GetChangeLogs(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsInput">GetChangeLogsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsOutput">GetChangeLogsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeLogsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsInput">GetChangeLogsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsOutput">GetChangeLogsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeLogsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsInput">GetChangeLogsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsOutput">GetChangeLogsOutput</a>)
+
+    GetChangeLogsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsInput">GetChangeLogsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsOutput">GetChangeLogsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetChangeLogsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsInput">GetChangeLogsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetChangeLogsOutput">GetChangeLogsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlInput">GetControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlOutput">GetControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlInput">GetControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlOutput">GetControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlInput">GetControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetControlOutput">GetControlOutput</a>)
+
+    GetDelegations(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsInput">GetDelegationsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsOutput">GetDelegationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDelegationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsInput">GetDelegationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsOutput">GetDelegationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDelegationsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsInput">GetDelegationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsOutput">GetDelegationsOutput</a>)
+
+    GetDelegationsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsInput">GetDelegationsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsOutput">GetDelegationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetDelegationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsInput">GetDelegationsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetDelegationsOutput">GetDelegationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetEvidence(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceInput">GetEvidenceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceOutput">GetEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceInput">GetEvidenceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceOutput">GetEvidenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceInput">GetEvidenceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceOutput">GetEvidenceOutput</a>)
+
+    GetEvidenceByEvidenceFolder(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderInput">GetEvidenceByEvidenceFolderInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderOutput">GetEvidenceByEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceByEvidenceFolderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderInput">GetEvidenceByEvidenceFolderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderOutput">GetEvidenceByEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceByEvidenceFolderRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderInput">GetEvidenceByEvidenceFolderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderOutput">GetEvidenceByEvidenceFolderOutput</a>)
+
+    GetEvidenceByEvidenceFolderPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderInput">GetEvidenceByEvidenceFolderInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderOutput">GetEvidenceByEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetEvidenceByEvidenceFolderPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderInput">GetEvidenceByEvidenceFolderInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceByEvidenceFolderOutput">GetEvidenceByEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetEvidenceFolder(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderInput">GetEvidenceFolderInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderOutput">GetEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFolderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderInput">GetEvidenceFolderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderOutput">GetEvidenceFolderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFolderRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderInput">GetEvidenceFolderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFolderOutput">GetEvidenceFolderOutput</a>)
+
+    GetEvidenceFoldersByAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentInput">GetEvidenceFoldersByAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentOutput">GetEvidenceFoldersByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFoldersByAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentInput">GetEvidenceFoldersByAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentOutput">GetEvidenceFoldersByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFoldersByAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentInput">GetEvidenceFoldersByAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentOutput">GetEvidenceFoldersByAssessmentOutput</a>)
+
+    GetEvidenceFoldersByAssessmentPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentInput">GetEvidenceFoldersByAssessmentInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentOutput">GetEvidenceFoldersByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetEvidenceFoldersByAssessmentPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentInput">GetEvidenceFoldersByAssessmentInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentOutput">GetEvidenceFoldersByAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetEvidenceFoldersByAssessmentControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlInput">GetEvidenceFoldersByAssessmentControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlOutput">GetEvidenceFoldersByAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFoldersByAssessmentControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlInput">GetEvidenceFoldersByAssessmentControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlOutput">GetEvidenceFoldersByAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEvidenceFoldersByAssessmentControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlInput">GetEvidenceFoldersByAssessmentControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlOutput">GetEvidenceFoldersByAssessmentControlOutput</a>)
+
+    GetEvidenceFoldersByAssessmentControlPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlInput">GetEvidenceFoldersByAssessmentControlInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlOutput">GetEvidenceFoldersByAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetEvidenceFoldersByAssessmentControlPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlInput">GetEvidenceFoldersByAssessmentControlInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetEvidenceFoldersByAssessmentControlOutput">GetEvidenceFoldersByAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetOrganizationAdminAccount(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountInput">GetOrganizationAdminAccountInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountOutput">GetOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountInput">GetOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountOutput">GetOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOrganizationAdminAccountRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountInput">GetOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetOrganizationAdminAccountOutput">GetOrganizationAdminAccountOutput</a>)
+
+    GetServicesInScope(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeInput">GetServicesInScopeInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeOutput">GetServicesInScopeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetServicesInScopeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeInput">GetServicesInScopeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeOutput">GetServicesInScopeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetServicesInScopeRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeInput">GetServicesInScopeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetServicesInScopeOutput">GetServicesInScopeOutput</a>)
+
+    GetSettings(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsInput">GetSettingsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsOutput">GetSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsInput">GetSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsOutput">GetSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSettingsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsInput">GetSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#GetSettingsOutput">GetSettingsOutput</a>)
+
+    ListAssessmentFrameworks(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksInput">ListAssessmentFrameworksInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksOutput">ListAssessmentFrameworksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentFrameworksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksInput">ListAssessmentFrameworksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksOutput">ListAssessmentFrameworksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentFrameworksRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksInput">ListAssessmentFrameworksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksOutput">ListAssessmentFrameworksOutput</a>)
+
+    ListAssessmentFrameworksPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksInput">ListAssessmentFrameworksInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksOutput">ListAssessmentFrameworksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssessmentFrameworksPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksInput">ListAssessmentFrameworksInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentFrameworksOutput">ListAssessmentFrameworksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAssessmentReports(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsInput">ListAssessmentReportsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsOutput">ListAssessmentReportsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentReportsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsInput">ListAssessmentReportsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsOutput">ListAssessmentReportsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentReportsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsInput">ListAssessmentReportsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsOutput">ListAssessmentReportsOutput</a>)
+
+    ListAssessmentReportsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsInput">ListAssessmentReportsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsOutput">ListAssessmentReportsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssessmentReportsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsInput">ListAssessmentReportsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentReportsOutput">ListAssessmentReportsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAssessments(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsInput">ListAssessmentsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsOutput">ListAssessmentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsInput">ListAssessmentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsOutput">ListAssessmentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssessmentsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsInput">ListAssessmentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsOutput">ListAssessmentsOutput</a>)
+
+    ListAssessmentsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsInput">ListAssessmentsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsOutput">ListAssessmentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssessmentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsInput">ListAssessmentsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListAssessmentsOutput">ListAssessmentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListControls(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsInput">ListControlsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsOutput">ListControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListControlsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsInput">ListControlsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsOutput">ListControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListControlsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsInput">ListControlsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsOutput">ListControlsOutput</a>)
+
+    ListControlsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsInput">ListControlsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsOutput">ListControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListControlsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsInput">ListControlsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListControlsOutput">ListControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListKeywordsForDataSource(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceInput">ListKeywordsForDataSourceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceOutput">ListKeywordsForDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListKeywordsForDataSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceInput">ListKeywordsForDataSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceOutput">ListKeywordsForDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListKeywordsForDataSourceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceInput">ListKeywordsForDataSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceOutput">ListKeywordsForDataSourceOutput</a>)
+
+    ListKeywordsForDataSourcePages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceInput">ListKeywordsForDataSourceInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceOutput">ListKeywordsForDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListKeywordsForDataSourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceInput">ListKeywordsForDataSourceInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListKeywordsForDataSourceOutput">ListKeywordsForDataSourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListNotifications(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListNotificationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListNotificationsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>)
+
+    ListNotificationsPages(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListNotificationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, func(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    RegisterAccount(*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountInput">RegisterAccountInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountOutput">RegisterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountInput">RegisterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountOutput">RegisterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterAccountRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountInput">RegisterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterAccountOutput">RegisterAccountOutput</a>)
+
+    RegisterOrganizationAdminAccount(*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountInput">RegisterOrganizationAdminAccountInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountOutput">RegisterOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountInput">RegisterOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountOutput">RegisterOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterOrganizationAdminAccountRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountInput">RegisterOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#RegisterOrganizationAdminAccountOutput">RegisterOrganizationAdminAccountOutput</a>)
+
+    TagResource(*<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateAssessment(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentInput">UpdateAssessmentInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentOutput">UpdateAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentInput">UpdateAssessmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentOutput">UpdateAssessmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentInput">UpdateAssessmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentOutput">UpdateAssessmentOutput</a>)
+
+    UpdateAssessmentControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlInput">UpdateAssessmentControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlOutput">UpdateAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlInput">UpdateAssessmentControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlOutput">UpdateAssessmentControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlInput">UpdateAssessmentControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlOutput">UpdateAssessmentControlOutput</a>)
+
+    UpdateAssessmentControlSetStatus(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusInput">UpdateAssessmentControlSetStatusInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusOutput">UpdateAssessmentControlSetStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentControlSetStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusInput">UpdateAssessmentControlSetStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusOutput">UpdateAssessmentControlSetStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentControlSetStatusRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusInput">UpdateAssessmentControlSetStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentControlSetStatusOutput">UpdateAssessmentControlSetStatusOutput</a>)
+
+    UpdateAssessmentFramework(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkInput">UpdateAssessmentFrameworkInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkOutput">UpdateAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentFrameworkWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkInput">UpdateAssessmentFrameworkInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkOutput">UpdateAssessmentFrameworkOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentFrameworkRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkInput">UpdateAssessmentFrameworkInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentFrameworkOutput">UpdateAssessmentFrameworkOutput</a>)
+
+    UpdateAssessmentStatus(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusInput">UpdateAssessmentStatusInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusOutput">UpdateAssessmentStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusInput">UpdateAssessmentStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusOutput">UpdateAssessmentStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAssessmentStatusRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusInput">UpdateAssessmentStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateAssessmentStatusOutput">UpdateAssessmentStatusOutput</a>)
+
+    UpdateControl(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlInput">UpdateControlInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlOutput">UpdateControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlInput">UpdateControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlOutput">UpdateControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateControlRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlInput">UpdateControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateControlOutput">UpdateControlOutput</a>)
+
+    UpdateSettings(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsInput">UpdateSettingsInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsOutput">UpdateSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsInput">UpdateSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsOutput">UpdateSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSettingsRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsInput">UpdateSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#UpdateSettingsOutput">UpdateSettingsOutput</a>)
+
+    ValidateAssessmentReportIntegrity(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityInput">ValidateAssessmentReportIntegrityInput</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityOutput">ValidateAssessmentReportIntegrityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ValidateAssessmentReportIntegrityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityInput">ValidateAssessmentReportIntegrityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityOutput">ValidateAssessmentReportIntegrityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ValidateAssessmentReportIntegrityRequest(*<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityInput">ValidateAssessmentReportIntegrityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">auditmanager</a>.<a href="../index.html#ValidateAssessmentReportIntegrityOutput">ValidateAssessmentReportIntegrityOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

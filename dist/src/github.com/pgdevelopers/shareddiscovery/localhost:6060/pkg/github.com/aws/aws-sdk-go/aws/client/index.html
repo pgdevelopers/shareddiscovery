@@ -1,0 +1,674 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>client - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package client
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/client&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#Client">type Client</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(cfg aws.Config, info metadata.ClientInfo, handlers request.Handlers, options ...func(*Client)) *Client</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Client.AddDebugHandlers">func (c *Client) AddDebugHandlers()</a></dd>
+				
+					
+					<dd>    <a href="index.html#Client.NewRequest">func (c *Client) NewRequest(operation *request.Operation, params interface{}, data interface{}) *request.Request</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigNoResolveEndpointProvider">type ConfigNoResolveEndpointProvider</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigProvider">type ConfigProvider</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DefaultRetryer">type DefaultRetryer</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DefaultRetryer.MaxRetries">func (d DefaultRetryer) MaxRetries() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#DefaultRetryer.RetryRules">func (d DefaultRetryer) RetryRules(r *request.Request) time.Duration</a></dd>
+				
+					
+					<dd>    <a href="index.html#DefaultRetryer.ShouldRetry">func (d DefaultRetryer) ShouldRetry(r *request.Request) bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NoOpRetryer">type NoOpRetryer</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#NoOpRetryer.MaxRetries">func (d NoOpRetryer) MaxRetries() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#NoOpRetryer.RetryRules">func (d NoOpRetryer) RetryRules(_ *request.Request) time.Duration</a></dd>
+				
+					
+					<dd>    <a href="index.html#NoOpRetryer.ShouldRetry">func (d NoOpRetryer) ShouldRetry(_ *request.Request) bool</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go">client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/default_retryer.go">default_retryer.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/logger.go">logger.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/no_op_retryer.go">no_op_retryer.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultRetryerMaxNumRetries sets maximum number of retries</span>
+    <span id="DefaultRetryerMaxNumRetries">DefaultRetryerMaxNumRetries</span> = 3
+
+    <span class="comment">// DefaultRetryerMinRetryDelay sets minimum retry delay</span>
+    <span id="DefaultRetryerMinRetryDelay">DefaultRetryerMinRetryDelay</span> = 30 * <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Millisecond">Millisecond</a>
+
+    <span class="comment">// DefaultRetryerMinThrottleDelay sets minimum delay when throttled</span>
+    <span id="DefaultRetryerMinThrottleDelay">DefaultRetryerMinThrottleDelay</span> = 500 * <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Millisecond">Millisecond</a>
+
+    <span class="comment">// DefaultRetryerMaxRetryDelay sets maximum retry delay</span>
+    <span id="DefaultRetryerMaxRetryDelay">DefaultRetryerMaxRetryDelay</span> = 300 * <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Second">Second</a>
+
+    <span class="comment">// DefaultRetryerMaxThrottleDelay sets maximum delay when throttled</span>
+    <span id="DefaultRetryerMaxThrottleDelay">DefaultRetryerMaxThrottleDelay</span> = 300 * <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Second">Second</a>
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+LogHTTPRequestHandler is a SDK request handler to log the HTTP request sent
+to a service. Will include the HTTP request body if the LogLevel of the
+request matches LogDebugWithHTTPBody.
+</p>
+
+				<pre>var <span id="LogHTTPRequestHandler">LogHTTPRequestHandler</span> = <a href="../request/index.html">request</a>.<a href="../request/index.html#NamedHandler">NamedHandler</a>{
+    <a href="../request/index.html#NamedHandler.Name">Name</a>: &#34;awssdk.client.LogRequest&#34;,
+    <a href="../request/index.html#NamedHandler.Fn">Fn</a>:   logRequest,
+}</pre>
+			
+				<p>
+LogHTTPRequestHeaderHandler is a SDK request handler to log the HTTP request sent
+to a service. Will only log the HTTP request&#39;s headers. The request payload
+will not be read.
+</p>
+
+				<pre>var <span id="LogHTTPRequestHeaderHandler">LogHTTPRequestHeaderHandler</span> = <a href="../request/index.html">request</a>.<a href="../request/index.html#NamedHandler">NamedHandler</a>{
+    <a href="../request/index.html#NamedHandler.Name">Name</a>: &#34;awssdk.client.LogRequestHeader&#34;,
+    <a href="../request/index.html#NamedHandler.Fn">Fn</a>:   logRequestHeader,
+}</pre>
+			
+				<p>
+LogHTTPResponseHandler is a SDK request handler to log the HTTP response
+received from a service. Will include the HTTP response body if the LogLevel
+of the request matches LogDebugWithHTTPBody.
+</p>
+
+				<pre>var <span id="LogHTTPResponseHandler">LogHTTPResponseHandler</span> = <a href="../request/index.html">request</a>.<a href="../request/index.html#NamedHandler">NamedHandler</a>{
+    <a href="../request/index.html#NamedHandler.Name">Name</a>: &#34;awssdk.client.LogResponse&#34;,
+    <a href="../request/index.html#NamedHandler.Fn">Fn</a>:   logResponse,
+}</pre>
+			
+				<p>
+LogHTTPResponseHeaderHandler is a SDK request handler to log the HTTP
+response received from a service. Will only log the HTTP response&#39;s headers.
+The response payload will not be read.
+</p>
+
+				<pre>var <span id="LogHTTPResponseHeaderHandler">LogHTTPResponseHeaderHandler</span> = <a href="../request/index.html">request</a>.<a href="../request/index.html#NamedHandler">NamedHandler</a>{
+    <a href="../request/index.html#NamedHandler.Name">Name</a>: &#34;awssdk.client.LogResponseHeader&#34;,
+    <a href="../request/index.html#NamedHandler.Fn">Fn</a>:   logResponseHeader,
+}</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="Client">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=1293:1402#L32">Client</a>
+				<a class="permalink" href="index.html#Client">¶</a>
+				
+				
+			</h2>
+			<p>
+A Client implements the base client request and response handling
+used by all service clients.
+</p>
+
+			<pre>type Client struct {
+    <a href="../request/index.html">request</a>.<a href="../request/index.html#Retryer">Retryer</a>
+    <a href="metadata/index.html">metadata</a>.<a href="metadata/index.html#ClientInfo">ClientInfo</a>
+
+<span id="Client.Config"></span>    Config   <a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>
+<span id="Client.Handlers"></span>    Handlers <a href="../request/index.html">request</a>.<a href="../request/index.html#Handlers">Handlers</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=1470:1581#L41">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(cfg <a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>, info <a href="metadata/index.html">metadata</a>.<a href="metadata/index.html#ClientInfo">ClientInfo</a>, handlers <a href="../request/index.html">request</a>.<a href="../request/index.html#Handlers">Handlers</a>, options ...func(*<a href="index.html#Client">Client</a>)) *<a href="index.html#Client">Client</a></pre>
+				<p>
+New will return a pointer to a new initialized service client.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Client.AddDebugHandlers">func (*Client) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=2698:2733#L80">AddDebugHandlers</a>
+					<a class="permalink" href="index.html#Client.AddDebugHandlers">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Client">Client</a>) AddDebugHandlers()</pre>
+				<p>
+AddDebugHandlers injects debug logging handlers into the service to log request
+debug information.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Client.NewRequest">func (*Client) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=2383:2495#L74">NewRequest</a>
+					<a class="permalink" href="index.html#Client.NewRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Client">Client</a>) NewRequest(operation *<a href="../request/index.html">request</a>.<a href="../request/index.html#Operation">Operation</a>, params interface{}, data interface{}) *<a href="../request/index.html">request</a>.<a href="../request/index.html#Request">Request</a></pre>
+				<p>
+NewRequest returns a new Request pointer for the service API
+operation and parameters.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=224:657#L2">Config</a>
+				<a class="permalink" href="index.html#Config">¶</a>
+				
+				
+			</h2>
+			<p>
+A Config provides configuration to a service client instance.
+</p>
+
+			<pre>type Config struct {
+<span id="Config.Config"></span>    Config        *<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>
+<span id="Config.Handlers"></span>    Handlers      <a href="../request/index.html">request</a>.<a href="../request/index.html#Handlers">Handlers</a>
+<span id="Config.PartitionID"></span>    PartitionID   <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Config.Endpoint"></span>    Endpoint      <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Config.SigningRegion"></span>    SigningRegion <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Config.SigningName"></span>    SigningName   <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// States that the signing name did not come from a modeled source but</span>
+    <span class="comment">// was derived based on other data. Used by service client constructors</span>
+    <span class="comment">// to determine if the signin name can be overridden based on metadata the</span>
+    <span class="comment">// service has.</span>
+<span id="Config.SigningNameDerived"></span>    SigningNameDerived <a href="../../../../../builtin/index.html#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigNoResolveEndpointProvider">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=1081:1190#L26">ConfigNoResolveEndpointProvider</a>
+				<a class="permalink" href="index.html#ConfigNoResolveEndpointProvider">¶</a>
+				
+				
+			</h2>
+			<p>
+ConfigNoResolveEndpointProvider same as ConfigProvider except it will not
+resolve the endpoint automatically. The service client&#39;s endpoint must be
+provided via the aws.Config.Endpoint field.
+</p>
+
+			<pre>type ConfigNoResolveEndpointProvider interface {
+    ClientConfigNoResolveEndpoint(cfgs ...*<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>) <a href="index.html#Config">Config</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigProvider">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/client.go?s=783:878#L19">ConfigProvider</a>
+				<a class="permalink" href="index.html#ConfigProvider">¶</a>
+				
+				
+			</h2>
+			<p>
+ConfigProvider provides a generic way for a service client to receive
+the ClientConfig without circular dependencies.
+</p>
+
+			<pre>type ConfigProvider interface {
+    ClientConfig(serviceName <a href="../../../../../builtin/index.html#string">string</a>, cfgs ...*<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>) <a href="index.html#Config">Config</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DefaultRetryer">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/default_retryer.go?s=338:1050#L6">DefaultRetryer</a>
+				<a class="permalink" href="index.html#DefaultRetryer">¶</a>
+				
+				
+			</h2>
+			<p>
+DefaultRetryer implements basic retry logic using exponential backoff for
+most services. If you want to implement custom retry logic, you can implement the
+request.Retryer interface.
+</p>
+
+			<pre>type DefaultRetryer struct {
+    <span class="comment">// Num max Retries is the number of max retries that will be performed.</span>
+    <span class="comment">// By default, this is zero.</span>
+<span id="DefaultRetryer.NumMaxRetries"></span>    NumMaxRetries <a href="../../../../../builtin/index.html#int">int</a>
+
+<span id="DefaultRetryer.MinRetryDelay"></span>    <span class="comment">// MinRetryDelay is the minimum retry delay after which retry will be performed.</span>
+    <span class="comment">// If not set, the value is 0ns.</span>
+    MinRetryDelay <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+
+    <span class="comment">// MinThrottleRetryDelay is the minimum retry delay when throttled.</span>
+    <span class="comment">// If not set, the value is 0ns.</span>
+<span id="DefaultRetryer.MinThrottleDelay"></span>    MinThrottleDelay <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+
+<span id="DefaultRetryer.MaxRetryDelay"></span>    <span class="comment">// MaxRetryDelay is the maximum retry delay before which retry must be performed.</span>
+    <span class="comment">// If not set, the value is 0ns.</span>
+    MaxRetryDelay <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+
+<span id="DefaultRetryer.MaxThrottleDelay"></span>    <span class="comment">// MaxThrottleDelay is the maximum retry delay when throttled.</span>
+    <span class="comment">// If not set, the value is 0ns.</span>
+    MaxThrottleDelay <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DefaultRetryer.MaxRetries">func (DefaultRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/default_retryer.go?s=1737:1777#L47">MaxRetries</a>
+					<a class="permalink" href="index.html#DefaultRetryer.MaxRetries">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#DefaultRetryer">DefaultRetryer</a>) MaxRetries() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+MaxRetries returns the number of maximum returns the service will use to make
+an individual API request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultRetryer.RetryRules">func (DefaultRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/default_retryer.go?s=2336:2404#L68">RetryRules</a>
+					<a class="permalink" href="index.html#DefaultRetryer.RetryRules">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#DefaultRetryer">DefaultRetryer</a>) RetryRules(r *<a href="../request/index.html">request</a>.<a href="../request/index.html#Request">Request</a>) <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a></pre>
+				<p>
+RetryRules returns the delay duration before retrying this request again
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultRetryer.ShouldRetry">func (DefaultRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/default_retryer.go?s=3680:3740#L121">ShouldRetry</a>
+					<a class="permalink" href="index.html#DefaultRetryer.ShouldRetry">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#DefaultRetryer">DefaultRetryer</a>) ShouldRetry(r *<a href="../request/index.html">request</a>.<a href="../request/index.html#Request">Request</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+ShouldRetry returns true if the request should be retried.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NoOpRetryer">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/no_op_retryer.go?s=204:229#L1">NoOpRetryer</a>
+				<a class="permalink" href="index.html#NoOpRetryer">¶</a>
+				
+				
+			</h2>
+			<p>
+NoOpRetryer provides a retryer that performs no retries.
+It should be used when we do not want retries to be performed.
+</p>
+
+			<pre>type NoOpRetryer struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NoOpRetryer.MaxRetries">func (NoOpRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/no_op_retryer.go?s=386:423#L5">MaxRetries</a>
+					<a class="permalink" href="index.html#NoOpRetryer.MaxRetries">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#NoOpRetryer">NoOpRetryer</a>) MaxRetries() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+MaxRetries returns the number of maximum returns the service will use to make
+an individual API; For NoOpRetryer the MaxRetries will always be zero.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoOpRetryer.RetryRules">func (NoOpRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/no_op_retryer.go?s=742:807#L16">RetryRules</a>
+					<a class="permalink" href="index.html#NoOpRetryer.RetryRules">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#NoOpRetryer">NoOpRetryer</a>) RetryRules(_ *<a href="../request/index.html">request</a>.<a href="../request/index.html#Request">Request</a>) <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a></pre>
+				<p>
+RetryRules returns the delay duration before retrying this request again;
+since NoOpRetryer does not retry, RetryRules always returns 0.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoOpRetryer.ShouldRetry">func (NoOpRetryer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/client/no_op_retryer.go?s=522:579#L10">ShouldRetry</a>
+					<a class="permalink" href="index.html#NoOpRetryer.ShouldRetry">¶</a>
+					
+					
+				</h3>
+				<pre>func (d <a href="index.html#NoOpRetryer">NoOpRetryer</a>) ShouldRetry(_ *<a href="../request/index.html">request</a>.<a href="../request/index.html#Request">Request</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+ShouldRetry will always return false for NoOpRetryer, as it should never retry.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="metadata/index.html">metadata</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,1973 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>forecastqueryservice - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package forecastqueryservice
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/forecastqueryservice&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package forecastqueryservice provides the client and types for making API
+requests to Amazon Forecast Query Service.
+</p>
+<p>
+Provides APIs for creating and managing Amazon Forecast resources.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26">https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26</a> for more information on this service.
+</p>
+<p>
+See forecastqueryservice package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/forecastqueryservice/">https://docs.aws.amazon.com/sdk-for-go/api/service/forecastqueryservice/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon Forecast Query Service with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon Forecast Query Service client ForecastQueryService for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/forecastqueryservice/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/forecastqueryservice/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DataPoint">type DataPoint</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DataPoint.GoString">func (s DataPoint) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.SetTimestamp">func (s *DataPoint) SetTimestamp(v string) *DataPoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.SetValue">func (s *DataPoint) SetValue(v float64) *DataPoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.String">func (s DataPoint) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Forecast">type Forecast</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Forecast.GoString">func (s Forecast) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Forecast.SetPredictions">func (s *Forecast) SetPredictions(v map[string][]*DataPoint) *Forecast</a></dd>
+				
+					
+					<dd>    <a href="index.html#Forecast.String">func (s Forecast) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ForecastQueryService">type ForecastQueryService</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *ForecastQueryService</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ForecastQueryService.QueryForecast">func (c *ForecastQueryService) QueryForecast(input *QueryForecastInput) (*QueryForecastOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForecastQueryService.QueryForecastRequest">func (c *ForecastQueryService) QueryForecastRequest(input *QueryForecastInput) (req *request.Request, output *QueryForecastOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForecastQueryService.QueryForecastWithContext">func (c *ForecastQueryService) QueryForecastWithContext(ctx aws.Context, input *QueryForecastInput, opts ...request.Option) (*QueryForecastOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidInputException">type InvalidInputException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Code">func (s *InvalidInputException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Error">func (s *InvalidInputException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.GoString">func (s InvalidInputException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Message">func (s *InvalidInputException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.OrigErr">func (s *InvalidInputException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.RequestID">func (s *InvalidInputException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.StatusCode">func (s *InvalidInputException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.String">func (s InvalidInputException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidNextTokenException">type InvalidNextTokenException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.Code">func (s *InvalidNextTokenException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.Error">func (s *InvalidNextTokenException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.GoString">func (s InvalidNextTokenException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.Message">func (s *InvalidNextTokenException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.OrigErr">func (s *InvalidNextTokenException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.RequestID">func (s *InvalidNextTokenException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.StatusCode">func (s *InvalidNextTokenException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidNextTokenException.String">func (s InvalidNextTokenException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LimitExceededException">type LimitExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Code">func (s *LimitExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Error">func (s *LimitExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.GoString">func (s LimitExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Message">func (s *LimitExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.OrigErr">func (s *LimitExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.RequestID">func (s *LimitExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.StatusCode">func (s *LimitExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.String">func (s LimitExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#QueryForecastInput">type QueryForecastInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.GoString">func (s QueryForecastInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.SetEndDate">func (s *QueryForecastInput) SetEndDate(v string) *QueryForecastInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.SetFilters">func (s *QueryForecastInput) SetFilters(v map[string]*string) *QueryForecastInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.SetForecastArn">func (s *QueryForecastInput) SetForecastArn(v string) *QueryForecastInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.SetNextToken">func (s *QueryForecastInput) SetNextToken(v string) *QueryForecastInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.SetStartDate">func (s *QueryForecastInput) SetStartDate(v string) *QueryForecastInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.String">func (s QueryForecastInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastInput.Validate">func (s *QueryForecastInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#QueryForecastOutput">type QueryForecastOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#QueryForecastOutput.GoString">func (s QueryForecastOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastOutput.SetForecast">func (s *QueryForecastOutput) SetForecast(v *Forecast) *QueryForecastOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#QueryForecastOutput.String">func (s QueryForecastOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceInUseException">type ResourceInUseException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Code">func (s *ResourceInUseException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Error">func (s *ResourceInUseException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.GoString">func (s ResourceInUseException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Message">func (s *ResourceInUseException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.OrigErr">func (s *ResourceInUseException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.RequestID">func (s *ResourceInUseException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.StatusCode">func (s *ResourceInUseException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.String">func (s ResourceInUseException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInvalidInputException for service response error code</span>
+    <span class="comment">// &#34;InvalidInputException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The value is invalid or is too long.</span>
+    <span id="ErrCodeInvalidInputException">ErrCodeInvalidInputException</span> = &#34;InvalidInputException&#34;
+
+    <span class="comment">// ErrCodeInvalidNextTokenException for service response error code</span>
+    <span class="comment">// &#34;InvalidNextTokenException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The token is not valid. Tokens expire after 24 hours.</span>
+    <span id="ErrCodeInvalidNextTokenException">ErrCodeInvalidNextTokenException</span> = &#34;InvalidNextTokenException&#34;
+
+    <span class="comment">// ErrCodeLimitExceededException for service response error code</span>
+    <span class="comment">// &#34;LimitExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The limit on the number of requests per second has been exceeded.</span>
+    <span id="ErrCodeLimitExceededException">ErrCodeLimitExceededException</span> = &#34;LimitExceededException&#34;
+
+    <span class="comment">// ErrCodeResourceInUseException for service response error code</span>
+    <span class="comment">// &#34;ResourceInUseException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The specified resource is in use.</span>
+    <span id="ErrCodeResourceInUseException">ErrCodeResourceInUseException</span> = &#34;ResourceInUseException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// We can&#39;t find that resource. Check the information that you&#39;ve provided and</span>
+    <span class="comment">// try again.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;forecastquery&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = <a href="index.html#ServiceName">ServiceName</a>     <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;forecastquery&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="DataPoint">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=4460:4653#L111">DataPoint</a>
+				<a class="permalink" href="index.html#DataPoint">¶</a>
+				
+				
+			</h2>
+			<p>
+The forecast value for a specific date. Part of the Forecast object.
+</p>
+
+			<pre>type DataPoint struct {
+
+    <span class="comment">// The timestamp of the specific forecast.</span>
+<span id="DataPoint.Timestamp"></span>    Timestamp *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The forecast value.</span>
+<span id="DataPoint.Value"></span>    Value *<a href="../../../../../builtin/index.html#float64">float64</a> `type:&#34;double&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DataPoint.GoString">func (DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=5221:5257#L135">GoString</a>
+					<a class="permalink" href="index.html#DataPoint.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DataPoint">DataPoint</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.SetTimestamp">func (*DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=5332:5385#L140">SetTimestamp</a>
+					<a class="permalink" href="index.html#DataPoint.SetTimestamp">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DataPoint">DataPoint</a>) SetTimestamp(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DataPoint">DataPoint</a></pre>
+				<p>
+SetTimestamp sets the Timestamp field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.SetValue">func (*DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=5461:5511#L146">SetValue</a>
+					<a class="permalink" href="index.html#DataPoint.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DataPoint">DataPoint</a>) SetValue(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#DataPoint">DataPoint</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.String">func (DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=4903:4937#L126">String</a>
+					<a class="permalink" href="index.html#DataPoint.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DataPoint">DataPoint</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Forecast">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=5634:5887#L153">Forecast</a>
+				<a class="permalink" href="index.html#Forecast">¶</a>
+				
+				
+			</h2>
+			<p>
+Provides information about a forecast. Returned as part of the QueryForecast
+response.
+</p>
+
+			<pre>type Forecast struct {
+
+    <span class="comment">// The forecast.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The string of the string-to-array map is one of the following values:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * p10</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * p50</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * p90</span>
+<span id="Forecast.Predictions"></span>    Predictions map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="index.html#DataPoint">DataPoint</a> `type:&#34;map&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Forecast.GoString">func (Forecast) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=6454:6489#L182">GoString</a>
+					<a class="permalink" href="index.html#Forecast.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Forecast">Forecast</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Forecast.SetPredictions">func (*Forecast) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=6568:6638#L187">SetPredictions</a>
+					<a class="permalink" href="index.html#Forecast.SetPredictions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Forecast">Forecast</a>) SetPredictions(v map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="index.html#DataPoint">DataPoint</a>) *<a href="index.html#Forecast">Forecast</a></pre>
+				<p>
+SetPredictions sets the Predictions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Forecast.String">func (Forecast) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=6137:6170#L173">String</a>
+					<a class="permalink" href="index.html#Forecast.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Forecast">Forecast</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ForecastQueryService">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/service.go?s=745:797#L11">ForecastQueryService</a>
+				<a class="permalink" href="index.html#ForecastQueryService">¶</a>
+				
+				
+			</h2>
+			<p>
+ForecastQueryService provides the API operation methods for making requests to
+Amazon Forecast Query Service. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+ForecastQueryService methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type ForecastQueryService struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/service.go?s=1803:1879#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#ForecastQueryService">ForecastQueryService</a></pre>
+				<p>
+New creates a new instance of the ForecastQueryService client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a ForecastQueryService client from just a session.
+svc := forecastqueryservice.New(mySession)
+
+// Create a ForecastQueryService client with additional configuration
+svc := forecastqueryservice.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ForecastQueryService.QueryForecast">func (*ForecastQueryService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=3458:3559#L89">QueryForecast</a>
+					<a class="permalink" href="index.html#ForecastQueryService.QueryForecast">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ForecastQueryService">ForecastQueryService</a>) QueryForecast(input *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) (*<a href="index.html#QueryForecastOutput">QueryForecastOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+QueryForecast API operation for Amazon Forecast Query Service.
+</p>
+<p>
+Retrieves a forecast for a single item, filtered by the supplied criteria.
+</p>
+<p>
+The criteria is a key-value pair. The key is either item_id (or the equivalent
+non-timestamp, non-target field) from the TARGET_TIME_SERIES dataset, or
+one of the forecast dimensions specified as part of the FeaturizationConfig
+object.
+</p>
+<p>
+By default, QueryForecast returns the complete date range for the filtered
+forecast. You can request a specific date range.
+</p>
+<p>
+To get the full forecast, use the CreateForecastExportJob (<a href="https://docs.aws.amazon.com/en_us/forecast/latest/dg/API_CreateForecastExportJob.html">https://docs.aws.amazon.com/en_us/forecast/latest/dg/API_CreateForecastExportJob.html</a>)
+operation.
+</p>
+<p>
+The forecasts generated by Amazon Forecast are in the same timezone as the
+dataset that was used to create the predictor.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Forecast Query Service&#39;s
+API operation QueryForecast for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+We can&#39;t find that resource. Check the information that you&#39;ve provided and
+try again.
+
+* ResourceInUseException
+The specified resource is in use.
+
+* InvalidInputException
+The value is invalid or is too long.
+
+* LimitExceededException
+The limit on the number of requests per second has been exceeded.
+
+* InvalidNextTokenException
+The token is not valid. Tokens expire after 24 hours.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26/QueryForecast">https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26/QueryForecast</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForecastQueryService.QueryForecastRequest">func (*ForecastQueryService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=1337:1467#L30">QueryForecastRequest</a>
+					<a class="permalink" href="index.html#ForecastQueryService.QueryForecastRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ForecastQueryService">ForecastQueryService</a>) QueryForecastRequest(input *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#QueryForecastOutput">QueryForecastOutput</a>)</pre>
+				<p>
+QueryForecastRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the QueryForecast operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See QueryForecast for more information on using the QueryForecast
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the QueryForecastRequest method.
+req, resp := client.QueryForecastRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26/QueryForecast">https://docs.aws.amazon.com/goto/WebAPI/forecastquery-2018-06-26/QueryForecast</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForecastQueryService.QueryForecastWithContext">func (*ForecastQueryService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=4114:4267#L103">QueryForecastWithContext</a>
+					<a class="permalink" href="index.html#ForecastQueryService.QueryForecastWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ForecastQueryService">ForecastQueryService</a>) QueryForecastWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#QueryForecastInput">QueryForecastInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#QueryForecastOutput">QueryForecastOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+QueryForecastWithContext is the same as QueryForecast with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See QueryForecast for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidInputException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=6713:6926#L193">InvalidInputException</a>
+				<a class="permalink" href="index.html#InvalidInputException">¶</a>
+				
+				
+			</h2>
+			<p>
+The value is invalid or is too long.
+</p>
+
+			<pre>type InvalidInputException struct {
+<span id="InvalidInputException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidInputException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidInputException.Code">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=7749:7794#L225">Code</a>
+					<a class="permalink" href="index.html#InvalidInputException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.Error">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=8119:8165#L242">Error</a>
+					<a class="permalink" href="index.html#InvalidInputException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.GoString">func (InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=7506:7554#L214">GoString</a>
+					<a class="permalink" href="index.html#InvalidInputException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidInputException">InvalidInputException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.Message">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=7876:7924#L230">Message</a>
+					<a class="permalink" href="index.html#InvalidInputException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.OrigErr">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=8054:8101#L238">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidInputException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.RequestID">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=8457:8507#L252">RequestID</a>
+					<a class="permalink" href="index.html#InvalidInputException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.StatusCode">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=8302:8350#L247">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidInputException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.String">func (InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=7176:7222#L205">String</a>
+					<a class="permalink" href="index.html#InvalidInputException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidInputException">InvalidInputException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidNextTokenException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=8603:8820#L257">InvalidNextTokenException</a>
+				<a class="permalink" href="index.html#InvalidNextTokenException">¶</a>
+				
+				
+			</h2>
+			<p>
+The token is not valid. Tokens expire after 24 hours.
+</p>
+
+			<pre>type InvalidNextTokenException struct {
+<span id="InvalidNextTokenException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidNextTokenException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidNextTokenException.Code">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=9659:9708#L289">Code</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.Error">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=10045:10095#L306">Error</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.GoString">func (InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=9404:9456#L278">GoString</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.Message">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=9794:9846#L294">Message</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.OrigErr">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=9976:10027#L302">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.RequestID">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=10391:10445#L316">RequestID</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.StatusCode">func (*InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=10232:10284#L311">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidNextTokenException.String">func (InvalidNextTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=9070:9120#L269">String</a>
+					<a class="permalink" href="index.html#InvalidNextTokenException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidNextTokenException">InvalidNextTokenException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LimitExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=10553:10767#L321">LimitExceededException</a>
+				<a class="permalink" href="index.html#LimitExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+The limit on the number of requests per second has been exceeded.
+</p>
+
+			<pre>type LimitExceededException struct {
+<span id="LimitExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="LimitExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LimitExceededException.Code">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11594:11640#L353">Code</a>
+					<a class="permalink" href="index.html#LimitExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Error">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11968:12015#L370">Error</a>
+					<a class="permalink" href="index.html#LimitExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.GoString">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11348:11397#L342">GoString</a>
+					<a class="permalink" href="index.html#LimitExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Message">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11723:11772#L358">Message</a>
+					<a class="permalink" href="index.html#LimitExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.OrigErr">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11902:11950#L366">OrigErr</a>
+					<a class="permalink" href="index.html#LimitExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.RequestID">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=12308:12359#L380">RequestID</a>
+					<a class="permalink" href="index.html#LimitExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.StatusCode">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=12152:12201#L375">StatusCode</a>
+					<a class="permalink" href="index.html#LimitExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.String">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=11017:11064#L333">String</a>
+					<a class="permalink" href="index.html#LimitExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="QueryForecastInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=12398:13719#L384">QueryForecastInput</a>
+				<a class="permalink" href="index.html#QueryForecastInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type QueryForecastInput struct {
+
+    <span class="comment">// The end date for the forecast. Specify the date using this format: yyyy-MM-dd&#39;T&#39;HH:mm:ss</span>
+    <span class="comment">// (ISO 8601 format). For example, 2015-01-01T20:00:00.</span>
+<span id="QueryForecastInput.EndDate"></span>    EndDate *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The filtering criteria to apply when retrieving the forecast. For example,</span>
+    <span class="comment">// to get the forecast for client_21 in the electricity usage dataset, specify</span>
+    <span class="comment">// the following:</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;item_id&#34; : &#34;client_21&#34;}</span>
+    <span class="comment">//</span>
+    <span class="comment">// To get the full forecast, use the CreateForecastExportJob (https://docs.aws.amazon.com/en_us/forecast/latest/dg/API_CreateForecastExportJob.html)</span>
+    <span class="comment">// operation.</span>
+    <span class="comment">//</span>
+<span id="QueryForecastInput.Filters"></span>    <span class="comment">// Filters is a required field</span>
+    Filters map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;map&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the forecast to query.</span>
+    <span class="comment">//</span>
+<span id="QueryForecastInput.ForecastArn"></span>    <span class="comment">// ForecastArn is a required field</span>
+    ForecastArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// If the result of the previous request was truncated, the response includes</span>
+    <span class="comment">// a NextToken. To retrieve the next set of results, use the token in the next</span>
+    <span class="comment">// request. Tokens expire after 24 hours.</span>
+<span id="QueryForecastInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The start date for the forecast. Specify the date using this format: yyyy-MM-dd&#39;T&#39;HH:mm:ss</span>
+    <span class="comment">// (ISO 8601 format). For example, 2015-01-01T08:00:00.</span>
+<span id="QueryForecastInput.StartDate"></span>    StartDate *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="QueryForecastInput.GoString">func (QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=14296:14341#L432">GoString</a>
+					<a class="permalink" href="index.html#QueryForecastInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#QueryForecastInput">QueryForecastInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.SetEndDate">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15087:15156#L459">SetEndDate</a>
+					<a class="permalink" href="index.html#QueryForecastInput.SetEndDate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) SetEndDate(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#QueryForecastInput">QueryForecastInput</a></pre>
+				<p>
+SetEndDate sets the EndDate field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.SetFilters">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15234:15315#L465">SetFilters</a>
+					<a class="permalink" href="index.html#QueryForecastInput.SetFilters">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) SetFilters(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#QueryForecastInput">QueryForecastInput</a></pre>
+				<p>
+SetFilters sets the Filters field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.SetForecastArn">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15400:15473#L471">SetForecastArn</a>
+					<a class="permalink" href="index.html#QueryForecastInput.SetForecastArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) SetForecastArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#QueryForecastInput">QueryForecastInput</a></pre>
+				<p>
+SetForecastArn sets the ForecastArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.SetNextToken">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15559:15630#L477">SetNextToken</a>
+					<a class="permalink" href="index.html#QueryForecastInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#QueryForecastInput">QueryForecastInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.SetStartDate">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15714:15785#L483">SetStartDate</a>
+					<a class="permalink" href="index.html#QueryForecastInput.SetStartDate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) SetStartDate(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#QueryForecastInput">QueryForecastInput</a></pre>
+				<p>
+SetStartDate sets the StartDate field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.String">func (QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=13969:14012#L423">String</a>
+					<a class="permalink" href="index.html#QueryForecastInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#QueryForecastInput">QueryForecastInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastInput.Validate">func (*QueryForecastInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=14442:14487#L437">Validate</a>
+					<a class="permalink" href="index.html#QueryForecastInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastInput">QueryForecastInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="QueryForecastOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=15819:15943#L488">QueryForecastOutput</a>
+				<a class="permalink" href="index.html#QueryForecastOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type QueryForecastOutput struct {
+
+    <span class="comment">// The forecast.</span>
+<span id="QueryForecastOutput.Forecast"></span>    Forecast *<a href="index.html#Forecast">Forecast</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="QueryForecastOutput.GoString">func (QueryForecastOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=16521:16567#L509">GoString</a>
+					<a class="permalink" href="index.html#QueryForecastOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#QueryForecastOutput">QueryForecastOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastOutput.SetForecast">func (*QueryForecastOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=16640:16715#L514">SetForecast</a>
+					<a class="permalink" href="index.html#QueryForecastOutput.SetForecast">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#QueryForecastOutput">QueryForecastOutput</a>) SetForecast(v *<a href="index.html#Forecast">Forecast</a>) *<a href="index.html#QueryForecastOutput">QueryForecastOutput</a></pre>
+				<p>
+SetForecast sets the Forecast field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QueryForecastOutput.String">func (QueryForecastOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=16193:16237#L500">String</a>
+					<a class="permalink" href="index.html#QueryForecastOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#QueryForecastOutput">QueryForecastOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceInUseException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=16784:16998#L520">ResourceInUseException</a>
+				<a class="permalink" href="index.html#ResourceInUseException">¶</a>
+				
+				
+			</h2>
+			<p>
+The specified resource is in use.
+</p>
+
+			<pre>type ResourceInUseException struct {
+<span id="ResourceInUseException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceInUseException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceInUseException.Code">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=17825:17871#L552">Code</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.Error">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=18199:18246#L569">Error</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.GoString">func (ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=17579:17628#L541">GoString</a>
+					<a class="permalink" href="index.html#ResourceInUseException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceInUseException">ResourceInUseException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.Message">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=17954:18003#L557">Message</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.OrigErr">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=18133:18181#L565">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceInUseException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.RequestID">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=18539:18590#L579">RequestID</a>
+					<a class="permalink" href="index.html#ResourceInUseException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.StatusCode">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=18383:18432#L574">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceInUseException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.String">func (ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=17248:17295#L532">String</a>
+					<a class="permalink" href="index.html#ResourceInUseException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceInUseException">ResourceInUseException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=18722:18939#L585">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+We can&#39;t find that resource. Check the information that you&#39;ve provided and
+try again.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=19778:19827#L617">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=20164:20214#L634">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=19523:19575#L606">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=19913:19965#L622">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=20095:20146#L630">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=20510:20564#L644">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=20351:20403#L639">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/forecastqueryservice/api.go?s=19189:19239#L597">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="forecastqueryserviceiface/index.html">forecastqueryserviceiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package forecastqueryserviceiface provides an interface to enable mocking the Amazon Forecast Query Service service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

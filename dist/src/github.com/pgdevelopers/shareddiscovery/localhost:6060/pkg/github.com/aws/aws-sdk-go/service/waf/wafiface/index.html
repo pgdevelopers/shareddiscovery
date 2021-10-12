@@ -1,0 +1,556 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>wafiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package wafiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/waf/wafiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package wafiface provides an interface to enable mocking the AWS WAF service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#WAFAPI">type WAFAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/waf/wafiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="WAFAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/waf/wafiface/interface.go?s=2074:27107#L52">WAFAPI</a>
+				<a class="permalink" href="index.html#WAFAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+WAFAPI provides an interface to enable mocking the
+waf.WAF service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS WAF.
+func myFunc(svc wafiface.WAFAPI) bool {
+    // Make svc.CreateByteMatchSet request
+}
+
+func main() {
+    sess := session.New()
+    svc := waf.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockWAFClient struct {
+    wafiface.WAFAPI
+}
+func (m *mockWAFClient) CreateByteMatchSet(input *waf.CreateByteMatchSetInput) (*waf.CreateByteMatchSetOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockWAFClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type WAFAPI interface {
+    CreateByteMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetInput">CreateByteMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetOutput">CreateByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateByteMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetInput">CreateByteMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetOutput">CreateByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateByteMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetInput">CreateByteMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateByteMatchSetOutput">CreateByteMatchSetOutput</a>)
+
+    CreateGeoMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetInput">CreateGeoMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetOutput">CreateGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGeoMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetInput">CreateGeoMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetOutput">CreateGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGeoMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetInput">CreateGeoMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateGeoMatchSetOutput">CreateGeoMatchSetOutput</a>)
+
+    CreateIPSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetInput">CreateIPSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetOutput">CreateIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateIPSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetInput">CreateIPSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetOutput">CreateIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateIPSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetInput">CreateIPSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateIPSetOutput">CreateIPSetOutput</a>)
+
+    CreateRateBasedRule(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleInput">CreateRateBasedRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleOutput">CreateRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRateBasedRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleInput">CreateRateBasedRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleOutput">CreateRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRateBasedRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleInput">CreateRateBasedRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRateBasedRuleOutput">CreateRateBasedRuleOutput</a>)
+
+    CreateRegexMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetInput">CreateRegexMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetOutput">CreateRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRegexMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetInput">CreateRegexMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetOutput">CreateRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRegexMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetInput">CreateRegexMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexMatchSetOutput">CreateRegexMatchSetOutput</a>)
+
+    CreateRegexPatternSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetInput">CreateRegexPatternSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetOutput">CreateRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRegexPatternSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetInput">CreateRegexPatternSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetOutput">CreateRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRegexPatternSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetInput">CreateRegexPatternSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRegexPatternSetOutput">CreateRegexPatternSetOutput</a>)
+
+    CreateRule(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>)
+
+    CreateRuleGroup(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleGroupRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>)
+
+    CreateSizeConstraintSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetInput">CreateSizeConstraintSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetOutput">CreateSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSizeConstraintSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetInput">CreateSizeConstraintSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetOutput">CreateSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSizeConstraintSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetInput">CreateSizeConstraintSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateSizeConstraintSetOutput">CreateSizeConstraintSetOutput</a>)
+
+    CreateSqlInjectionMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetInput">CreateSqlInjectionMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetOutput">CreateSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSqlInjectionMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetInput">CreateSqlInjectionMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetOutput">CreateSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSqlInjectionMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetInput">CreateSqlInjectionMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateSqlInjectionMatchSetOutput">CreateSqlInjectionMatchSetOutput</a>)
+
+    CreateWebACL(*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLInput">CreateWebACLInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLOutput">CreateWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWebACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLInput">CreateWebACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLOutput">CreateWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWebACLRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLInput">CreateWebACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLOutput">CreateWebACLOutput</a>)
+
+    CreateWebACLMigrationStack(*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackInput">CreateWebACLMigrationStackInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackOutput">CreateWebACLMigrationStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWebACLMigrationStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackInput">CreateWebACLMigrationStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackOutput">CreateWebACLMigrationStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWebACLMigrationStackRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackInput">CreateWebACLMigrationStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateWebACLMigrationStackOutput">CreateWebACLMigrationStackOutput</a>)
+
+    CreateXssMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetInput">CreateXssMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetOutput">CreateXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateXssMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetInput">CreateXssMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetOutput">CreateXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateXssMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetInput">CreateXssMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#CreateXssMatchSetOutput">CreateXssMatchSetOutput</a>)
+
+    DeleteByteMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetInput">DeleteByteMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetOutput">DeleteByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteByteMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetInput">DeleteByteMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetOutput">DeleteByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteByteMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetInput">DeleteByteMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteByteMatchSetOutput">DeleteByteMatchSetOutput</a>)
+
+    DeleteGeoMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetInput">DeleteGeoMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetOutput">DeleteGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGeoMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetInput">DeleteGeoMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetOutput">DeleteGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGeoMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetInput">DeleteGeoMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteGeoMatchSetOutput">DeleteGeoMatchSetOutput</a>)
+
+    DeleteIPSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetInput">DeleteIPSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetOutput">DeleteIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIPSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetInput">DeleteIPSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetOutput">DeleteIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIPSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetInput">DeleteIPSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteIPSetOutput">DeleteIPSetOutput</a>)
+
+    DeleteLoggingConfiguration(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationInput">DeleteLoggingConfigurationInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationOutput">DeleteLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLoggingConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationInput">DeleteLoggingConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationOutput">DeleteLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLoggingConfigurationRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationInput">DeleteLoggingConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteLoggingConfigurationOutput">DeleteLoggingConfigurationOutput</a>)
+
+    DeletePermissionPolicy(*<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyInput">DeletePermissionPolicyInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyOutput">DeletePermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePermissionPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyInput">DeletePermissionPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyOutput">DeletePermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePermissionPolicyRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyInput">DeletePermissionPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeletePermissionPolicyOutput">DeletePermissionPolicyOutput</a>)
+
+    DeleteRateBasedRule(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleInput">DeleteRateBasedRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleOutput">DeleteRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRateBasedRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleInput">DeleteRateBasedRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleOutput">DeleteRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRateBasedRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleInput">DeleteRateBasedRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRateBasedRuleOutput">DeleteRateBasedRuleOutput</a>)
+
+    DeleteRegexMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetInput">DeleteRegexMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetOutput">DeleteRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegexMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetInput">DeleteRegexMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetOutput">DeleteRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegexMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetInput">DeleteRegexMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexMatchSetOutput">DeleteRegexMatchSetOutput</a>)
+
+    DeleteRegexPatternSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetInput">DeleteRegexPatternSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetOutput">DeleteRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegexPatternSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetInput">DeleteRegexPatternSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetOutput">DeleteRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegexPatternSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetInput">DeleteRegexPatternSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRegexPatternSetOutput">DeleteRegexPatternSetOutput</a>)
+
+    DeleteRule(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>)
+
+    DeleteRuleGroup(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleGroupRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>)
+
+    DeleteSizeConstraintSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetInput">DeleteSizeConstraintSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetOutput">DeleteSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSizeConstraintSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetInput">DeleteSizeConstraintSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetOutput">DeleteSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSizeConstraintSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetInput">DeleteSizeConstraintSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteSizeConstraintSetOutput">DeleteSizeConstraintSetOutput</a>)
+
+    DeleteSqlInjectionMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetInput">DeleteSqlInjectionMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetOutput">DeleteSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSqlInjectionMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetInput">DeleteSqlInjectionMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetOutput">DeleteSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSqlInjectionMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetInput">DeleteSqlInjectionMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteSqlInjectionMatchSetOutput">DeleteSqlInjectionMatchSetOutput</a>)
+
+    DeleteWebACL(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLInput">DeleteWebACLInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLOutput">DeleteWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWebACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLInput">DeleteWebACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLOutput">DeleteWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWebACLRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLInput">DeleteWebACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteWebACLOutput">DeleteWebACLOutput</a>)
+
+    DeleteXssMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetInput">DeleteXssMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetOutput">DeleteXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteXssMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetInput">DeleteXssMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetOutput">DeleteXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteXssMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetInput">DeleteXssMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#DeleteXssMatchSetOutput">DeleteXssMatchSetOutput</a>)
+
+    GetByteMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetInput">GetByteMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetOutput">GetByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetByteMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetInput">GetByteMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetOutput">GetByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetByteMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetInput">GetByteMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetByteMatchSetOutput">GetByteMatchSetOutput</a>)
+
+    GetChangeToken(*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenInput">GetChangeTokenInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenOutput">GetChangeTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenInput">GetChangeTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenOutput">GetChangeTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeTokenRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenInput">GetChangeTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenOutput">GetChangeTokenOutput</a>)
+
+    GetChangeTokenStatus(*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusInput">GetChangeTokenStatusInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusOutput">GetChangeTokenStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeTokenStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusInput">GetChangeTokenStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusOutput">GetChangeTokenStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetChangeTokenStatusRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusInput">GetChangeTokenStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetChangeTokenStatusOutput">GetChangeTokenStatusOutput</a>)
+
+    GetGeoMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetInput">GetGeoMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetOutput">GetGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGeoMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetInput">GetGeoMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetOutput">GetGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGeoMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetInput">GetGeoMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetGeoMatchSetOutput">GetGeoMatchSetOutput</a>)
+
+    GetIPSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetInput">GetIPSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetOutput">GetIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIPSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetInput">GetIPSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetOutput">GetIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIPSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetInput">GetIPSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetIPSetOutput">GetIPSetOutput</a>)
+
+    GetLoggingConfiguration(*<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationInput">GetLoggingConfigurationInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationOutput">GetLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLoggingConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationInput">GetLoggingConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationOutput">GetLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLoggingConfigurationRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationInput">GetLoggingConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetLoggingConfigurationOutput">GetLoggingConfigurationOutput</a>)
+
+    GetPermissionPolicy(*<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyInput">GetPermissionPolicyInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyOutput">GetPermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPermissionPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyInput">GetPermissionPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyOutput">GetPermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPermissionPolicyRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyInput">GetPermissionPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetPermissionPolicyOutput">GetPermissionPolicyOutput</a>)
+
+    GetRateBasedRule(*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleInput">GetRateBasedRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleOutput">GetRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRateBasedRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleInput">GetRateBasedRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleOutput">GetRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRateBasedRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleInput">GetRateBasedRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleOutput">GetRateBasedRuleOutput</a>)
+
+    GetRateBasedRuleManagedKeys(*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysInput">GetRateBasedRuleManagedKeysInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysOutput">GetRateBasedRuleManagedKeysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRateBasedRuleManagedKeysWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysInput">GetRateBasedRuleManagedKeysInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysOutput">GetRateBasedRuleManagedKeysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRateBasedRuleManagedKeysRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysInput">GetRateBasedRuleManagedKeysInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRateBasedRuleManagedKeysOutput">GetRateBasedRuleManagedKeysOutput</a>)
+
+    GetRegexMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetInput">GetRegexMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetOutput">GetRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegexMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetInput">GetRegexMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetOutput">GetRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegexMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetInput">GetRegexMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRegexMatchSetOutput">GetRegexMatchSetOutput</a>)
+
+    GetRegexPatternSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetInput">GetRegexPatternSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetOutput">GetRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegexPatternSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetInput">GetRegexPatternSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetOutput">GetRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegexPatternSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetInput">GetRegexPatternSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRegexPatternSetOutput">GetRegexPatternSetOutput</a>)
+
+    GetRule(*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleInput">GetRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleOutput">GetRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRuleInput">GetRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleOutput">GetRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleInput">GetRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRuleOutput">GetRuleOutput</a>)
+
+    GetRuleGroup(*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupInput">GetRuleGroupInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupOutput">GetRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupInput">GetRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupOutput">GetRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRuleGroupRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupInput">GetRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetRuleGroupOutput">GetRuleGroupOutput</a>)
+
+    GetSampledRequests(*<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsInput">GetSampledRequestsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsOutput">GetSampledRequestsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSampledRequestsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsInput">GetSampledRequestsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsOutput">GetSampledRequestsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSampledRequestsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsInput">GetSampledRequestsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSampledRequestsOutput">GetSampledRequestsOutput</a>)
+
+    GetSizeConstraintSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetInput">GetSizeConstraintSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetOutput">GetSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSizeConstraintSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetInput">GetSizeConstraintSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetOutput">GetSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSizeConstraintSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetInput">GetSizeConstraintSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSizeConstraintSetOutput">GetSizeConstraintSetOutput</a>)
+
+    GetSqlInjectionMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetInput">GetSqlInjectionMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetOutput">GetSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSqlInjectionMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetInput">GetSqlInjectionMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetOutput">GetSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSqlInjectionMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetInput">GetSqlInjectionMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetSqlInjectionMatchSetOutput">GetSqlInjectionMatchSetOutput</a>)
+
+    GetWebACL(*<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLInput">GetWebACLInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLOutput">GetWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWebACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLInput">GetWebACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLOutput">GetWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWebACLRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLInput">GetWebACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetWebACLOutput">GetWebACLOutput</a>)
+
+    GetXssMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetInput">GetXssMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetOutput">GetXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetXssMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetInput">GetXssMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetOutput">GetXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetXssMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetInput">GetXssMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#GetXssMatchSetOutput">GetXssMatchSetOutput</a>)
+
+    ListActivatedRulesInRuleGroup(*<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupInput">ListActivatedRulesInRuleGroupInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupOutput">ListActivatedRulesInRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActivatedRulesInRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupInput">ListActivatedRulesInRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupOutput">ListActivatedRulesInRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActivatedRulesInRuleGroupRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupInput">ListActivatedRulesInRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListActivatedRulesInRuleGroupOutput">ListActivatedRulesInRuleGroupOutput</a>)
+
+    ListByteMatchSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsInput">ListByteMatchSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsOutput">ListByteMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListByteMatchSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsInput">ListByteMatchSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsOutput">ListByteMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListByteMatchSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsInput">ListByteMatchSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListByteMatchSetsOutput">ListByteMatchSetsOutput</a>)
+
+    ListGeoMatchSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsInput">ListGeoMatchSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsOutput">ListGeoMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGeoMatchSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsInput">ListGeoMatchSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsOutput">ListGeoMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGeoMatchSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsInput">ListGeoMatchSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListGeoMatchSetsOutput">ListGeoMatchSetsOutput</a>)
+
+    ListIPSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsInput">ListIPSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsOutput">ListIPSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIPSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsInput">ListIPSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsOutput">ListIPSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIPSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsInput">ListIPSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListIPSetsOutput">ListIPSetsOutput</a>)
+
+    ListLoggingConfigurations(*<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsInput">ListLoggingConfigurationsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsOutput">ListLoggingConfigurationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLoggingConfigurationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsInput">ListLoggingConfigurationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsOutput">ListLoggingConfigurationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLoggingConfigurationsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsInput">ListLoggingConfigurationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListLoggingConfigurationsOutput">ListLoggingConfigurationsOutput</a>)
+
+    ListRateBasedRules(*<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesInput">ListRateBasedRulesInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesOutput">ListRateBasedRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRateBasedRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesInput">ListRateBasedRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesOutput">ListRateBasedRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRateBasedRulesRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesInput">ListRateBasedRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRateBasedRulesOutput">ListRateBasedRulesOutput</a>)
+
+    ListRegexMatchSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsInput">ListRegexMatchSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsOutput">ListRegexMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRegexMatchSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsInput">ListRegexMatchSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsOutput">ListRegexMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRegexMatchSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsInput">ListRegexMatchSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRegexMatchSetsOutput">ListRegexMatchSetsOutput</a>)
+
+    ListRegexPatternSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsInput">ListRegexPatternSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsOutput">ListRegexPatternSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRegexPatternSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsInput">ListRegexPatternSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsOutput">ListRegexPatternSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRegexPatternSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsInput">ListRegexPatternSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRegexPatternSetsOutput">ListRegexPatternSetsOutput</a>)
+
+    ListRuleGroups(*<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleGroupsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>)
+
+    ListRules(*<a href="../index.html">waf</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRulesRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>)
+
+    ListSizeConstraintSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsInput">ListSizeConstraintSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsOutput">ListSizeConstraintSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSizeConstraintSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsInput">ListSizeConstraintSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsOutput">ListSizeConstraintSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSizeConstraintSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsInput">ListSizeConstraintSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSizeConstraintSetsOutput">ListSizeConstraintSetsOutput</a>)
+
+    ListSqlInjectionMatchSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsInput">ListSqlInjectionMatchSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsOutput">ListSqlInjectionMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSqlInjectionMatchSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsInput">ListSqlInjectionMatchSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsOutput">ListSqlInjectionMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSqlInjectionMatchSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsInput">ListSqlInjectionMatchSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSqlInjectionMatchSetsOutput">ListSqlInjectionMatchSetsOutput</a>)
+
+    ListSubscribedRuleGroups(*<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsInput">ListSubscribedRuleGroupsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsOutput">ListSubscribedRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSubscribedRuleGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsInput">ListSubscribedRuleGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsOutput">ListSubscribedRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSubscribedRuleGroupsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsInput">ListSubscribedRuleGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListSubscribedRuleGroupsOutput">ListSubscribedRuleGroupsOutput</a>)
+
+    ListTagsForResource(*<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListWebACLs(*<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsInput">ListWebACLsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsOutput">ListWebACLsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebACLsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsInput">ListWebACLsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsOutput">ListWebACLsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebACLsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsInput">ListWebACLsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListWebACLsOutput">ListWebACLsOutput</a>)
+
+    ListXssMatchSets(*<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsInput">ListXssMatchSetsInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsOutput">ListXssMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListXssMatchSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsInput">ListXssMatchSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsOutput">ListXssMatchSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListXssMatchSetsRequest(*<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsInput">ListXssMatchSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#ListXssMatchSetsOutput">ListXssMatchSetsOutput</a>)
+
+    PutLoggingConfiguration(*<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationInput">PutLoggingConfigurationInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationOutput">PutLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLoggingConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationInput">PutLoggingConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationOutput">PutLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLoggingConfigurationRequest(*<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationInput">PutLoggingConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#PutLoggingConfigurationOutput">PutLoggingConfigurationOutput</a>)
+
+    PutPermissionPolicy(*<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyInput">PutPermissionPolicyInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyOutput">PutPermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPermissionPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyInput">PutPermissionPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyOutput">PutPermissionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPermissionPolicyRequest(*<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyInput">PutPermissionPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#PutPermissionPolicyOutput">PutPermissionPolicyOutput</a>)
+
+    TagResource(*<a href="../index.html">waf</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">waf</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateByteMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetInput">UpdateByteMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetOutput">UpdateByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateByteMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetInput">UpdateByteMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetOutput">UpdateByteMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateByteMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetInput">UpdateByteMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateByteMatchSetOutput">UpdateByteMatchSetOutput</a>)
+
+    UpdateGeoMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetInput">UpdateGeoMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetOutput">UpdateGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateGeoMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetInput">UpdateGeoMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetOutput">UpdateGeoMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateGeoMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetInput">UpdateGeoMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateGeoMatchSetOutput">UpdateGeoMatchSetOutput</a>)
+
+    UpdateIPSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetInput">UpdateIPSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetOutput">UpdateIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIPSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetInput">UpdateIPSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetOutput">UpdateIPSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIPSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetInput">UpdateIPSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateIPSetOutput">UpdateIPSetOutput</a>)
+
+    UpdateRateBasedRule(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleInput">UpdateRateBasedRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleOutput">UpdateRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRateBasedRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleInput">UpdateRateBasedRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleOutput">UpdateRateBasedRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRateBasedRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleInput">UpdateRateBasedRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRateBasedRuleOutput">UpdateRateBasedRuleOutput</a>)
+
+    UpdateRegexMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetInput">UpdateRegexMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetOutput">UpdateRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRegexMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetInput">UpdateRegexMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetOutput">UpdateRegexMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRegexMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetInput">UpdateRegexMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexMatchSetOutput">UpdateRegexMatchSetOutput</a>)
+
+    UpdateRegexPatternSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetInput">UpdateRegexPatternSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetOutput">UpdateRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRegexPatternSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetInput">UpdateRegexPatternSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetOutput">UpdateRegexPatternSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRegexPatternSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetInput">UpdateRegexPatternSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRegexPatternSetOutput">UpdateRegexPatternSetOutput</a>)
+
+    UpdateRule(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleInput">UpdateRuleInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleOutput">UpdateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleInput">UpdateRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleOutput">UpdateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleInput">UpdateRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleOutput">UpdateRuleOutput</a>)
+
+    UpdateRuleGroup(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleGroupRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>)
+
+    UpdateSizeConstraintSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetInput">UpdateSizeConstraintSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetOutput">UpdateSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSizeConstraintSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetInput">UpdateSizeConstraintSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetOutput">UpdateSizeConstraintSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSizeConstraintSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetInput">UpdateSizeConstraintSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateSizeConstraintSetOutput">UpdateSizeConstraintSetOutput</a>)
+
+    UpdateSqlInjectionMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetInput">UpdateSqlInjectionMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetOutput">UpdateSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSqlInjectionMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetInput">UpdateSqlInjectionMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetOutput">UpdateSqlInjectionMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSqlInjectionMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetInput">UpdateSqlInjectionMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateSqlInjectionMatchSetOutput">UpdateSqlInjectionMatchSetOutput</a>)
+
+    UpdateWebACL(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLInput">UpdateWebACLInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLOutput">UpdateWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWebACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLInput">UpdateWebACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLOutput">UpdateWebACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWebACLRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLInput">UpdateWebACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateWebACLOutput">UpdateWebACLOutput</a>)
+
+    UpdateXssMatchSet(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetInput">UpdateXssMatchSetInput</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetOutput">UpdateXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateXssMatchSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetInput">UpdateXssMatchSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetOutput">UpdateXssMatchSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateXssMatchSetRequest(*<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetInput">UpdateXssMatchSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">waf</a>.<a href="../index.html#UpdateXssMatchSetOutput">UpdateXssMatchSetOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

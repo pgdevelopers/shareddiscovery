@@ -1,0 +1,419 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>cloudwatchiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cloudwatchiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/cloudwatch/cloudwatchiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package cloudwatchiface provides an interface to enable mocking the Amazon CloudWatch service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CloudWatchAPI">type CloudWatchAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudwatch/cloudwatchiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CloudWatchAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudwatch/cloudwatchiface/interface.go?s=2182:17382#L52">CloudWatchAPI</a>
+				<a class="permalink" href="index.html#CloudWatchAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CloudWatchAPI provides an interface to enable mocking the
+cloudwatch.CloudWatch service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon CloudWatch.
+func myFunc(svc cloudwatchiface.CloudWatchAPI) bool {
+    // Make svc.DeleteAlarms request
+}
+
+func main() {
+    sess := session.New()
+    svc := cloudwatch.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCloudWatchClient struct {
+    cloudwatchiface.CloudWatchAPI
+}
+func (m *mockCloudWatchClient) DeleteAlarms(input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCloudWatchClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CloudWatchAPI interface {
+    DeleteAlarms(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsInput">DeleteAlarmsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsOutput">DeleteAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAlarmsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsInput">DeleteAlarmsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsOutput">DeleteAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAlarmsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsInput">DeleteAlarmsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAlarmsOutput">DeleteAlarmsOutput</a>)
+
+    DeleteAnomalyDetector(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorInput">DeleteAnomalyDetectorInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorOutput">DeleteAnomalyDetectorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAnomalyDetectorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorInput">DeleteAnomalyDetectorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorOutput">DeleteAnomalyDetectorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAnomalyDetectorRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorInput">DeleteAnomalyDetectorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteAnomalyDetectorOutput">DeleteAnomalyDetectorOutput</a>)
+
+    DeleteDashboards(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsInput">DeleteDashboardsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsOutput">DeleteDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDashboardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsInput">DeleteDashboardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsOutput">DeleteDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDashboardsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsInput">DeleteDashboardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteDashboardsOutput">DeleteDashboardsOutput</a>)
+
+    DeleteInsightRules(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesInput">DeleteInsightRulesInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesOutput">DeleteInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInsightRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesInput">DeleteInsightRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesOutput">DeleteInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInsightRulesRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesInput">DeleteInsightRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteInsightRulesOutput">DeleteInsightRulesOutput</a>)
+
+    DeleteMetricStream(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamInput">DeleteMetricStreamInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamOutput">DeleteMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMetricStreamWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamInput">DeleteMetricStreamInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamOutput">DeleteMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMetricStreamRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamInput">DeleteMetricStreamInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DeleteMetricStreamOutput">DeleteMetricStreamOutput</a>)
+
+    DescribeAlarmHistory(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryInput">DescribeAlarmHistoryInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryOutput">DescribeAlarmHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmHistoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryInput">DescribeAlarmHistoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryOutput">DescribeAlarmHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmHistoryRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryInput">DescribeAlarmHistoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryOutput">DescribeAlarmHistoryOutput</a>)
+
+    DescribeAlarmHistoryPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryInput">DescribeAlarmHistoryInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryOutput">DescribeAlarmHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeAlarmHistoryPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryInput">DescribeAlarmHistoryInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmHistoryOutput">DescribeAlarmHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeAlarms(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsOutput">DescribeAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsOutput">DescribeAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsOutput">DescribeAlarmsOutput</a>)
+
+    DescribeAlarmsPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsOutput">DescribeAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeAlarmsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsOutput">DescribeAlarmsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeAlarmsForMetric(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricInput">DescribeAlarmsForMetricInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricOutput">DescribeAlarmsForMetricOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmsForMetricWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricInput">DescribeAlarmsForMetricInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricOutput">DescribeAlarmsForMetricOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlarmsForMetricRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricInput">DescribeAlarmsForMetricInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsForMetricOutput">DescribeAlarmsForMetricOutput</a>)
+
+    DescribeAnomalyDetectors(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsInput">DescribeAnomalyDetectorsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsOutput">DescribeAnomalyDetectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAnomalyDetectorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsInput">DescribeAnomalyDetectorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsOutput">DescribeAnomalyDetectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAnomalyDetectorsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsInput">DescribeAnomalyDetectorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAnomalyDetectorsOutput">DescribeAnomalyDetectorsOutput</a>)
+
+    DescribeInsightRules(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesInput">DescribeInsightRulesInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesOutput">DescribeInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInsightRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesInput">DescribeInsightRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesOutput">DescribeInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInsightRulesRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesInput">DescribeInsightRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesOutput">DescribeInsightRulesOutput</a>)
+
+    DescribeInsightRulesPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesInput">DescribeInsightRulesInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesOutput">DescribeInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeInsightRulesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesInput">DescribeInsightRulesInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeInsightRulesOutput">DescribeInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DisableAlarmActions(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsInput">DisableAlarmActionsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsOutput">DisableAlarmActionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableAlarmActionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsInput">DisableAlarmActionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsOutput">DisableAlarmActionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableAlarmActionsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsInput">DisableAlarmActionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableAlarmActionsOutput">DisableAlarmActionsOutput</a>)
+
+    DisableInsightRules(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesInput">DisableInsightRulesInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesOutput">DisableInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableInsightRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesInput">DisableInsightRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesOutput">DisableInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableInsightRulesRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesInput">DisableInsightRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DisableInsightRulesOutput">DisableInsightRulesOutput</a>)
+
+    EnableAlarmActions(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsInput">EnableAlarmActionsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsOutput">EnableAlarmActionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAlarmActionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsInput">EnableAlarmActionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsOutput">EnableAlarmActionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAlarmActionsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsInput">EnableAlarmActionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableAlarmActionsOutput">EnableAlarmActionsOutput</a>)
+
+    EnableInsightRules(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesInput">EnableInsightRulesInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesOutput">EnableInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableInsightRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesInput">EnableInsightRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesOutput">EnableInsightRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableInsightRulesRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesInput">EnableInsightRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#EnableInsightRulesOutput">EnableInsightRulesOutput</a>)
+
+    GetDashboard(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardInput">GetDashboardInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardOutput">GetDashboardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDashboardWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardInput">GetDashboardInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardOutput">GetDashboardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDashboardRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardInput">GetDashboardInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetDashboardOutput">GetDashboardOutput</a>)
+
+    GetInsightRuleReport(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportInput">GetInsightRuleReportInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportOutput">GetInsightRuleReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightRuleReportWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportInput">GetInsightRuleReportInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportOutput">GetInsightRuleReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightRuleReportRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportInput">GetInsightRuleReportInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetInsightRuleReportOutput">GetInsightRuleReportOutput</a>)
+
+    GetMetricData(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataInput">GetMetricDataInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataOutput">GetMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricDataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataInput">GetMetricDataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataOutput">GetMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricDataRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataInput">GetMetricDataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataOutput">GetMetricDataOutput</a>)
+
+    GetMetricDataPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataInput">GetMetricDataInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataOutput">GetMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetMetricDataPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataInput">GetMetricDataInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricDataOutput">GetMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetMetricStatistics(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsInput">GetMetricStatisticsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsOutput">GetMetricStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricStatisticsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsInput">GetMetricStatisticsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsOutput">GetMetricStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricStatisticsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsInput">GetMetricStatisticsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStatisticsOutput">GetMetricStatisticsOutput</a>)
+
+    GetMetricStream(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamInput">GetMetricStreamInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamOutput">GetMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricStreamWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamInput">GetMetricStreamInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamOutput">GetMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricStreamRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamInput">GetMetricStreamInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricStreamOutput">GetMetricStreamOutput</a>)
+
+    GetMetricWidgetImage(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageInput">GetMetricWidgetImageInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageOutput">GetMetricWidgetImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricWidgetImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageInput">GetMetricWidgetImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageOutput">GetMetricWidgetImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricWidgetImageRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageInput">GetMetricWidgetImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#GetMetricWidgetImageOutput">GetMetricWidgetImageOutput</a>)
+
+    ListDashboards(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsInput">ListDashboardsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsOutput">ListDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDashboardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsInput">ListDashboardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsOutput">ListDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDashboardsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsInput">ListDashboardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsOutput">ListDashboardsOutput</a>)
+
+    ListDashboardsPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsInput">ListDashboardsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsOutput">ListDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDashboardsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsInput">ListDashboardsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListDashboardsOutput">ListDashboardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListMetricStreams(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsInput">ListMetricStreamsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsOutput">ListMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMetricStreamsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsInput">ListMetricStreamsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsOutput">ListMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMetricStreamsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsInput">ListMetricStreamsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsOutput">ListMetricStreamsOutput</a>)
+
+    ListMetricStreamsPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsInput">ListMetricStreamsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsOutput">ListMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMetricStreamsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsInput">ListMetricStreamsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricStreamsOutput">ListMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListMetrics(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsInput">ListMetricsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsOutput">ListMetricsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMetricsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsInput">ListMetricsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsOutput">ListMetricsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMetricsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsInput">ListMetricsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsOutput">ListMetricsOutput</a>)
+
+    ListMetricsPages(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsInput">ListMetricsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsOutput">ListMetricsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMetricsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsInput">ListMetricsInput</a>, func(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListMetricsOutput">ListMetricsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutAnomalyDetector(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorInput">PutAnomalyDetectorInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorOutput">PutAnomalyDetectorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAnomalyDetectorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorInput">PutAnomalyDetectorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorOutput">PutAnomalyDetectorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAnomalyDetectorRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorInput">PutAnomalyDetectorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutAnomalyDetectorOutput">PutAnomalyDetectorOutput</a>)
+
+    PutCompositeAlarm(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmInput">PutCompositeAlarmInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmOutput">PutCompositeAlarmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutCompositeAlarmWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmInput">PutCompositeAlarmInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmOutput">PutCompositeAlarmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutCompositeAlarmRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmInput">PutCompositeAlarmInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutCompositeAlarmOutput">PutCompositeAlarmOutput</a>)
+
+    PutDashboard(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardInput">PutDashboardInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardOutput">PutDashboardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutDashboardWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardInput">PutDashboardInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardOutput">PutDashboardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutDashboardRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardInput">PutDashboardInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutDashboardOutput">PutDashboardOutput</a>)
+
+    PutInsightRule(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleInput">PutInsightRuleInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleOutput">PutInsightRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInsightRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleInput">PutInsightRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleOutput">PutInsightRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInsightRuleRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleInput">PutInsightRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutInsightRuleOutput">PutInsightRuleOutput</a>)
+
+    PutMetricAlarm(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmInput">PutMetricAlarmInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmOutput">PutMetricAlarmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricAlarmWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmInput">PutMetricAlarmInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmOutput">PutMetricAlarmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricAlarmRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmInput">PutMetricAlarmInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricAlarmOutput">PutMetricAlarmOutput</a>)
+
+    PutMetricData(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataInput">PutMetricDataInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataOutput">PutMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricDataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataInput">PutMetricDataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataOutput">PutMetricDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricDataRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataInput">PutMetricDataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricDataOutput">PutMetricDataOutput</a>)
+
+    PutMetricStream(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamInput">PutMetricStreamInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamOutput">PutMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricStreamWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamInput">PutMetricStreamInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamOutput">PutMetricStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricStreamRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamInput">PutMetricStreamInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#PutMetricStreamOutput">PutMetricStreamOutput</a>)
+
+    SetAlarmState(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateInput">SetAlarmStateInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateOutput">SetAlarmStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetAlarmStateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateInput">SetAlarmStateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateOutput">SetAlarmStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetAlarmStateRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateInput">SetAlarmStateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#SetAlarmStateOutput">SetAlarmStateOutput</a>)
+
+    StartMetricStreams(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsInput">StartMetricStreamsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsOutput">StartMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartMetricStreamsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsInput">StartMetricStreamsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsOutput">StartMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartMetricStreamsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsInput">StartMetricStreamsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#StartMetricStreamsOutput">StartMetricStreamsOutput</a>)
+
+    StopMetricStreams(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsInput">StopMetricStreamsInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsOutput">StopMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopMetricStreamsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsInput">StopMetricStreamsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsOutput">StopMetricStreamsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopMetricStreamsRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsInput">StopMetricStreamsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#StopMetricStreamsOutput">StopMetricStreamsOutput</a>)
+
+    TagResource(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    WaitUntilAlarmExists(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilAlarmExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilCompositeAlarmExists(*<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilCompositeAlarmExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatch</a>.<a href="../index.html#DescribeAlarmsInput">DescribeAlarmsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

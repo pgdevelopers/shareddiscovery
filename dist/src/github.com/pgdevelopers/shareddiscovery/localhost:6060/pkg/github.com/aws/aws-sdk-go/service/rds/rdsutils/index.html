@@ -1,0 +1,498 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>rdsutils - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package rdsutils
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/rds/rdsutils&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package rdsutils is used to generate authentication tokens used to
+connect to a givent Amazon Relational Database Service (RDS) database.
+</p>
+<p>
+Before using the authentication please visit the docs here to ensure
+the database has the proper policies to allow for IAM token authentication.
+<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html#UsingWithRDS.IAMDBAuth.Availability">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html#UsingWithRDS.IAMDBAuth.Availability</a>
+</p>
+<p>
+When building the connection string, there are two required parameters that are needed to be set on the query.
+</p>
+<pre>* tls
+* allowCleartextPasswords must be set to true
+
+Example creating a basic auth token with the builder:
+v := url.Values{}
+v.Add(&#34;tls&#34;, &#34;tls_profile_name&#34;)
+v.Add(&#34;allowCleartextPasswords&#34;, &#34;true&#34;)
+b := rdsutils.NewConnectionStringBuilder(endpoint, region, user, dbname, creds)
+connectStr, err := b.WithTCPFormat().WithParams(v).Build()
+</pre>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BuildAuthToken">func BuildAuthToken(endpoint, region, dbUser string, creds *credentials.Credentials) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ConnectionFormat">type ConnectionFormat</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConnectionStringBuilder">type ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewConnectionStringBuilder">func NewConnectionStringBuilder(endpoint, region, dbUser, dbName string, creds *credentials.Credentials) ConnectionStringBuilder</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.Build">func (b ConnectionStringBuilder) Build() (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithDBName">func (b ConnectionStringBuilder) WithDBName(dbName string) ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithEndpoint">func (b ConnectionStringBuilder) WithEndpoint(endpoint string) ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithFormat">func (b ConnectionStringBuilder) WithFormat(f ConnectionFormat) ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithParams">func (b ConnectionStringBuilder) WithParams(params url.Values) ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithRegion">func (b ConnectionStringBuilder) WithRegion(region string) ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithTCPFormat">func (b ConnectionStringBuilder) WithTCPFormat() ConnectionStringBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionStringBuilder.WithUser">func (b ConnectionStringBuilder) WithUser(user string) ConnectionStringBuilder</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go">builder.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/connect.go">connect.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/doc.go">doc.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ErrNoConnectionFormat will be returned during build if no format had been
+specified
+</p>
+
+				<pre>var <span id="ErrNoConnectionFormat">ErrNoConnectionFormat</span> = <a href="../../../aws/awserr/index.html">awserr</a>.<a href="../../../aws/awserr/index.html#New">New</a>(&#34;NoConnectionFormat&#34;, &#34;No connection format was specified&#34;, <a href="../../../../../../builtin/index.html#nil">nil</a>)</pre>
+			
+		
+		
+			
+			
+			<h2 id="BuildAuthToken">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/connect.go?s=1248:1348#L26">BuildAuthToken</a>
+				<a class="permalink" href="index.html#BuildAuthToken">¶</a>
+				
+				
+			</h2>
+			<pre>func BuildAuthToken(endpoint, region, dbUser <a href="../../../../../../builtin/index.html#string">string</a>, creds *<a href="../../../aws/credentials/index.html">credentials</a>.<a href="../../../aws/credentials/index.html#Credentials">Credentials</a>) (<a href="../../../../../../builtin/index.html#string">string</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+			<p>
+BuildAuthToken will return an authorization token used as the password for a DB
+connection.
+</p>
+<p>
+* endpoint - Endpoint consists of the port needed to connect to the DB. &lt;host&gt;:&lt;port&gt;
+* region - Region is the location of where the DB is
+* dbUser - User account within the database to sign in with
+* creds - Credentials to be signed with
+</p>
+<p>
+The following example shows how to use BuildAuthToken to create an authentication
+token for connecting to a MySQL database in RDS.
+</p>
+<pre>authToken, err := BuildAuthToken(dbEndpoint, awsRegion, dbUser, awsCreds)
+
+// Create the MySQL DNS string for the DB connection
+// user:password@protocol(endpoint)/dbname?&lt;params&gt;
+connectStr = fmt.Sprintf(&#34;%s:%s@tcp(%s)/%s?allowCleartextPasswords=true&amp;tls=rds&#34;,
+   dbUser, authToken, dbEndpoint, dbName,
+)
+
+// Use db to perform SQL operations on database
+db, err := sql.Open(&#34;mysql&#34;, connectStr)
+</pre>
+<p>
+See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html</a>
+for more information on using IAM database authentication with RDS.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ConnectionFormat">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=228:256#L3">ConnectionFormat</a>
+				<a class="permalink" href="index.html#ConnectionFormat">¶</a>
+				
+				
+			</h2>
+			<p>
+ConnectionFormat is the type of connection that will be
+used to connect to the database
+</p>
+
+			<pre>type ConnectionFormat <a href="../../../../../../builtin/index.html#string">string</a></pre>
+
+			
+				<p>
+ConnectionFormat enums
+</p>
+
+				<pre>const (
+    <span id="NoConnectionFormat">NoConnectionFormat</span> <a href="index.html#ConnectionFormat">ConnectionFormat</a> = &#34;&#34;
+    <span id="TCPFormat">TCPFormat</span>          <a href="index.html#ConnectionFormat">ConnectionFormat</a> = &#34;tcp&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConnectionStringBuilder">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=795:996#L18">ConnectionStringBuilder</a>
+				<a class="permalink" href="index.html#ConnectionStringBuilder">¶</a>
+				
+				
+			</h2>
+			<p>
+ConnectionStringBuilder is a builder that will construct a connection
+string with the provided parameters. params field is required to have
+a tls specification and allowCleartextPasswords must be set to true.
+</p>
+
+			<pre>type ConnectionStringBuilder struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewConnectionStringBuilder">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=1067:1195#L30">NewConnectionStringBuilder</a>
+					<a class="permalink" href="index.html#NewConnectionStringBuilder">¶</a>
+					
+					
+				</h3>
+				<pre>func NewConnectionStringBuilder(endpoint, region, dbUser, dbName <a href="../../../../../../builtin/index.html#string">string</a>, creds *<a href="../../../aws/credentials/index.html">credentials</a>.<a href="../../../aws/credentials/index.html#Credentials">Credentials</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+NewConnectionStringBuilder will return an ConnectionStringBuilder
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ConnectionStringBuilder.Build">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=3233:3289#L99">Build</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.Build">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) Build() (<a href="../../../../../../builtin/index.html#string">string</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Build will return a new connection string that can be used to open a connection
+to the desired database.
+</p>
+<pre>Example:
+b := rdsutils.NewConnectionStringBuilder(endpoint, region, user, dbname, creds)
+connectStr, err := b.WithTCPFormat().Build()
+if err != nil {
+	panic(err)
+}
+const dbType = &#34;mysql&#34;
+db, err := sql.Open(dbType, connectStr)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithDBName">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=1928:2010#L59">WithDBName</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithDBName">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithDBName(dbName <a href="../../../../../../builtin/index.html#string">string</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithDBName will return a builder with the given database name
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithEndpoint">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=1400:1486#L41">WithEndpoint</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithEndpoint">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithEndpoint(endpoint <a href="../../../../../../builtin/index.html#string">string</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithEndpoint will return a builder with the given endpoint
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithFormat">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=2558:2645#L78">WithFormat</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithFormat(f <a href="index.html#ConnectionFormat">ConnectionFormat</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithFormat will return a builder with the given connection format
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithParams">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=2368:2454#L72">WithParams</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithParams">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithParams(params <a href="../../../../../../net/url/index.html">url</a>.<a href="../../../../../../net/url/index.html#Values">Values</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithParams will return a builder with the given params. The parameters
+will be included in the connection query string
+</p>
+<pre>Example:
+v := url.Values{}
+v.Add(&#34;tls&#34;, &#34;rds&#34;)
+b := rdsutils.NewConnectionBuilder(endpoint, region, user, dbname, creds)
+connectStr, err := b.WithParams(v).WithTCPFormat().Build()
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithRegion">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=1583:1665#L47">WithRegion</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithRegion">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithRegion(region <a href="../../../../../../builtin/index.html#string">string</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithRegion will return a builder with the given region
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithTCPFormat">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=2758:2830#L84">WithTCPFormat</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithTCPFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithTCPFormat() <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithTCPFormat will set the format to TCP and return the modified builder
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionStringBuilder.WithUser">func (ConnectionStringBuilder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rds/rdsutils/builder.go?s=1754:1832#L53">WithUser</a>
+					<a class="permalink" href="index.html#ConnectionStringBuilder.WithUser">¶</a>
+					
+					
+				</h3>
+				<pre>func (b <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a>) WithUser(user <a href="../../../../../../builtin/index.html#string">string</a>) <a href="index.html#ConnectionStringBuilder">ConnectionStringBuilder</a></pre>
+				<p>
+WithUser will return a builder with the given user
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

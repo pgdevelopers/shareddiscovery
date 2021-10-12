@@ -1,0 +1,472 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>personalizeiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package personalizeiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/personalize/personalizeiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package personalizeiface provides an interface to enable mocking the Amazon Personalize service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#PersonalizeAPI">type PersonalizeAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalize/personalizeiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="PersonalizeAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalize/personalizeiface/interface.go?s=2244:23028#L52">PersonalizeAPI</a>
+				<a class="permalink" href="index.html#PersonalizeAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+PersonalizeAPI provides an interface to enable mocking the
+personalize.Personalize service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Personalize.
+func myFunc(svc personalizeiface.PersonalizeAPI) bool {
+    // Make svc.CreateBatchInferenceJob request
+}
+
+func main() {
+    sess := session.New()
+    svc := personalize.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockPersonalizeClient struct {
+    personalizeiface.PersonalizeAPI
+}
+func (m *mockPersonalizeClient) CreateBatchInferenceJob(input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockPersonalizeClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type PersonalizeAPI interface {
+    CreateBatchInferenceJob(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobInput">CreateBatchInferenceJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobOutput">CreateBatchInferenceJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBatchInferenceJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobInput">CreateBatchInferenceJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobOutput">CreateBatchInferenceJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBatchInferenceJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobInput">CreateBatchInferenceJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateBatchInferenceJobOutput">CreateBatchInferenceJobOutput</a>)
+
+    CreateCampaign(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignInput">CreateCampaignInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignOutput">CreateCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCampaignWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignInput">CreateCampaignInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignOutput">CreateCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCampaignRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignInput">CreateCampaignInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateCampaignOutput">CreateCampaignOutput</a>)
+
+    CreateDataset(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>)
+
+    CreateDatasetExportJob(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobInput">CreateDatasetExportJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobOutput">CreateDatasetExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetExportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobInput">CreateDatasetExportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobOutput">CreateDatasetExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetExportJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobInput">CreateDatasetExportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetExportJobOutput">CreateDatasetExportJobOutput</a>)
+
+    CreateDatasetGroup(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupInput">CreateDatasetGroupInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupOutput">CreateDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupInput">CreateDatasetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupOutput">CreateDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetGroupRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupInput">CreateDatasetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetGroupOutput">CreateDatasetGroupOutput</a>)
+
+    CreateDatasetImportJob(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobInput">CreateDatasetImportJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobOutput">CreateDatasetImportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetImportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobInput">CreateDatasetImportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobOutput">CreateDatasetImportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetImportJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobInput">CreateDatasetImportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateDatasetImportJobOutput">CreateDatasetImportJobOutput</a>)
+
+    CreateEventTracker(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerInput">CreateEventTrackerInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerOutput">CreateEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventTrackerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerInput">CreateEventTrackerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerOutput">CreateEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventTrackerRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerInput">CreateEventTrackerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateEventTrackerOutput">CreateEventTrackerOutput</a>)
+
+    CreateFilter(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterInput">CreateFilterInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterOutput">CreateFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterInput">CreateFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterOutput">CreateFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFilterRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterInput">CreateFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateFilterOutput">CreateFilterOutput</a>)
+
+    CreateSchema(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaInput">CreateSchemaInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaOutput">CreateSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSchemaWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaInput">CreateSchemaInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaOutput">CreateSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSchemaRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaInput">CreateSchemaInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSchemaOutput">CreateSchemaOutput</a>)
+
+    CreateSolution(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionInput">CreateSolutionInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionOutput">CreateSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSolutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionInput">CreateSolutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionOutput">CreateSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSolutionRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionInput">CreateSolutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionOutput">CreateSolutionOutput</a>)
+
+    CreateSolutionVersion(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionInput">CreateSolutionVersionInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionOutput">CreateSolutionVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSolutionVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionInput">CreateSolutionVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionOutput">CreateSolutionVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSolutionVersionRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionInput">CreateSolutionVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#CreateSolutionVersionOutput">CreateSolutionVersionOutput</a>)
+
+    DeleteCampaign(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignInput">DeleteCampaignInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignOutput">DeleteCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCampaignWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignInput">DeleteCampaignInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignOutput">DeleteCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCampaignRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignInput">DeleteCampaignInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteCampaignOutput">DeleteCampaignOutput</a>)
+
+    DeleteDataset(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>)
+
+    DeleteDatasetGroup(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupInput">DeleteDatasetGroupInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupOutput">DeleteDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupInput">DeleteDatasetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupOutput">DeleteDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetGroupRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupInput">DeleteDatasetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteDatasetGroupOutput">DeleteDatasetGroupOutput</a>)
+
+    DeleteEventTracker(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerInput">DeleteEventTrackerInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerOutput">DeleteEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventTrackerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerInput">DeleteEventTrackerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerOutput">DeleteEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventTrackerRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerInput">DeleteEventTrackerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteEventTrackerOutput">DeleteEventTrackerOutput</a>)
+
+    DeleteFilter(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterInput">DeleteFilterInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterOutput">DeleteFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterInput">DeleteFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterOutput">DeleteFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFilterRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterInput">DeleteFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteFilterOutput">DeleteFilterOutput</a>)
+
+    DeleteSchema(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaInput">DeleteSchemaInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaOutput">DeleteSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSchemaWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaInput">DeleteSchemaInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaOutput">DeleteSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSchemaRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaInput">DeleteSchemaInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSchemaOutput">DeleteSchemaOutput</a>)
+
+    DeleteSolution(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionInput">DeleteSolutionInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionOutput">DeleteSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSolutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionInput">DeleteSolutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionOutput">DeleteSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSolutionRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionInput">DeleteSolutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DeleteSolutionOutput">DeleteSolutionOutput</a>)
+
+    DescribeAlgorithm(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmInput">DescribeAlgorithmInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmOutput">DescribeAlgorithmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlgorithmWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmInput">DescribeAlgorithmInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmOutput">DescribeAlgorithmOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAlgorithmRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmInput">DescribeAlgorithmInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeAlgorithmOutput">DescribeAlgorithmOutput</a>)
+
+    DescribeBatchInferenceJob(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobInput">DescribeBatchInferenceJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobOutput">DescribeBatchInferenceJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBatchInferenceJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobInput">DescribeBatchInferenceJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobOutput">DescribeBatchInferenceJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBatchInferenceJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobInput">DescribeBatchInferenceJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeBatchInferenceJobOutput">DescribeBatchInferenceJobOutput</a>)
+
+    DescribeCampaign(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignInput">DescribeCampaignInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignOutput">DescribeCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCampaignWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignInput">DescribeCampaignInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignOutput">DescribeCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCampaignRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignInput">DescribeCampaignInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeCampaignOutput">DescribeCampaignOutput</a>)
+
+    DescribeDataset(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>)
+
+    DescribeDatasetExportJob(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobInput">DescribeDatasetExportJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobOutput">DescribeDatasetExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetExportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobInput">DescribeDatasetExportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobOutput">DescribeDatasetExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetExportJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobInput">DescribeDatasetExportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetExportJobOutput">DescribeDatasetExportJobOutput</a>)
+
+    DescribeDatasetGroup(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupInput">DescribeDatasetGroupInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupOutput">DescribeDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupInput">DescribeDatasetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupOutput">DescribeDatasetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetGroupRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupInput">DescribeDatasetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetGroupOutput">DescribeDatasetGroupOutput</a>)
+
+    DescribeDatasetImportJob(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobInput">DescribeDatasetImportJobInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobOutput">DescribeDatasetImportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetImportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobInput">DescribeDatasetImportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobOutput">DescribeDatasetImportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetImportJobRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobInput">DescribeDatasetImportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeDatasetImportJobOutput">DescribeDatasetImportJobOutput</a>)
+
+    DescribeEventTracker(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerInput">DescribeEventTrackerInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerOutput">DescribeEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventTrackerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerInput">DescribeEventTrackerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerOutput">DescribeEventTrackerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventTrackerRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerInput">DescribeEventTrackerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeEventTrackerOutput">DescribeEventTrackerOutput</a>)
+
+    DescribeFeatureTransformation(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationInput">DescribeFeatureTransformationInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationOutput">DescribeFeatureTransformationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFeatureTransformationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationInput">DescribeFeatureTransformationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationOutput">DescribeFeatureTransformationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFeatureTransformationRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationInput">DescribeFeatureTransformationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFeatureTransformationOutput">DescribeFeatureTransformationOutput</a>)
+
+    DescribeFilter(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterInput">DescribeFilterInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterOutput">DescribeFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterInput">DescribeFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterOutput">DescribeFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFilterRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterInput">DescribeFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeFilterOutput">DescribeFilterOutput</a>)
+
+    DescribeRecipe(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRecipeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRecipeRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>)
+
+    DescribeSchema(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaInput">DescribeSchemaInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaOutput">DescribeSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSchemaWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaInput">DescribeSchemaInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaOutput">DescribeSchemaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSchemaRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaInput">DescribeSchemaInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSchemaOutput">DescribeSchemaOutput</a>)
+
+    DescribeSolution(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionInput">DescribeSolutionInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionOutput">DescribeSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSolutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionInput">DescribeSolutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionOutput">DescribeSolutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSolutionRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionInput">DescribeSolutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionOutput">DescribeSolutionOutput</a>)
+
+    DescribeSolutionVersion(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionInput">DescribeSolutionVersionInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionOutput">DescribeSolutionVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSolutionVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionInput">DescribeSolutionVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionOutput">DescribeSolutionVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSolutionVersionRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionInput">DescribeSolutionVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#DescribeSolutionVersionOutput">DescribeSolutionVersionOutput</a>)
+
+    GetSolutionMetrics(*<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsInput">GetSolutionMetricsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsOutput">GetSolutionMetricsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSolutionMetricsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsInput">GetSolutionMetricsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsOutput">GetSolutionMetricsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSolutionMetricsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsInput">GetSolutionMetricsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#GetSolutionMetricsOutput">GetSolutionMetricsOutput</a>)
+
+    ListBatchInferenceJobs(*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsInput">ListBatchInferenceJobsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsOutput">ListBatchInferenceJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListBatchInferenceJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsInput">ListBatchInferenceJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsOutput">ListBatchInferenceJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListBatchInferenceJobsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsInput">ListBatchInferenceJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsOutput">ListBatchInferenceJobsOutput</a>)
+
+    ListBatchInferenceJobsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsInput">ListBatchInferenceJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsOutput">ListBatchInferenceJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListBatchInferenceJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsInput">ListBatchInferenceJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListBatchInferenceJobsOutput">ListBatchInferenceJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListCampaigns(*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsInput">ListCampaignsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsOutput">ListCampaignsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCampaignsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsInput">ListCampaignsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsOutput">ListCampaignsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCampaignsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsInput">ListCampaignsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsOutput">ListCampaignsOutput</a>)
+
+    ListCampaignsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsInput">ListCampaignsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsOutput">ListCampaignsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCampaignsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsInput">ListCampaignsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListCampaignsOutput">ListCampaignsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasetExportJobs(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsInput">ListDatasetExportJobsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsOutput">ListDatasetExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetExportJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsInput">ListDatasetExportJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsOutput">ListDatasetExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetExportJobsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsInput">ListDatasetExportJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsOutput">ListDatasetExportJobsOutput</a>)
+
+    ListDatasetExportJobsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsInput">ListDatasetExportJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsOutput">ListDatasetExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetExportJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsInput">ListDatasetExportJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetExportJobsOutput">ListDatasetExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasetGroups(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsInput">ListDatasetGroupsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsOutput">ListDatasetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsInput">ListDatasetGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsOutput">ListDatasetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetGroupsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsInput">ListDatasetGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsOutput">ListDatasetGroupsOutput</a>)
+
+    ListDatasetGroupsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsInput">ListDatasetGroupsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsOutput">ListDatasetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetGroupsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsInput">ListDatasetGroupsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetGroupsOutput">ListDatasetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasetImportJobs(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsInput">ListDatasetImportJobsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsOutput">ListDatasetImportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetImportJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsInput">ListDatasetImportJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsOutput">ListDatasetImportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetImportJobsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsInput">ListDatasetImportJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsOutput">ListDatasetImportJobsOutput</a>)
+
+    ListDatasetImportJobsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsInput">ListDatasetImportJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsOutput">ListDatasetImportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetImportJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsInput">ListDatasetImportJobsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetImportJobsOutput">ListDatasetImportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasets(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>)
+
+    ListDatasetsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListEventTrackers(*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersInput">ListEventTrackersInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersOutput">ListEventTrackersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventTrackersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersInput">ListEventTrackersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersOutput">ListEventTrackersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventTrackersRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersInput">ListEventTrackersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersOutput">ListEventTrackersOutput</a>)
+
+    ListEventTrackersPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersInput">ListEventTrackersInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersOutput">ListEventTrackersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListEventTrackersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersInput">ListEventTrackersInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListEventTrackersOutput">ListEventTrackersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFilters(*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersInput">ListFiltersInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersOutput">ListFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFiltersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersInput">ListFiltersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersOutput">ListFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFiltersRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersInput">ListFiltersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersOutput">ListFiltersOutput</a>)
+
+    ListFiltersPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersInput">ListFiltersInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersOutput">ListFiltersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFiltersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersInput">ListFiltersInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListFiltersOutput">ListFiltersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRecipes(*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipesRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>)
+
+    ListRecipesPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRecipesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSchemas(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasInput">ListSchemasInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasOutput">ListSchemasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSchemasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasInput">ListSchemasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasOutput">ListSchemasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSchemasRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasInput">ListSchemasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasOutput">ListSchemasOutput</a>)
+
+    ListSchemasPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasInput">ListSchemasInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasOutput">ListSchemasOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSchemasPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasInput">ListSchemasInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSchemasOutput">ListSchemasOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSolutionVersions(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsInput">ListSolutionVersionsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsOutput">ListSolutionVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSolutionVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsInput">ListSolutionVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsOutput">ListSolutionVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSolutionVersionsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsInput">ListSolutionVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsOutput">ListSolutionVersionsOutput</a>)
+
+    ListSolutionVersionsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsInput">ListSolutionVersionsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsOutput">ListSolutionVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSolutionVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsInput">ListSolutionVersionsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionVersionsOutput">ListSolutionVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSolutions(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsInput">ListSolutionsInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsOutput">ListSolutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSolutionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsInput">ListSolutionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsOutput">ListSolutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSolutionsRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsInput">ListSolutionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsOutput">ListSolutionsOutput</a>)
+
+    ListSolutionsPages(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsInput">ListSolutionsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsOutput">ListSolutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSolutionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsInput">ListSolutionsInput</a>, func(*<a href="../index.html">personalize</a>.<a href="../index.html#ListSolutionsOutput">ListSolutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    StopSolutionVersionCreation(*<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationInput">StopSolutionVersionCreationInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationOutput">StopSolutionVersionCreationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopSolutionVersionCreationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationInput">StopSolutionVersionCreationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationOutput">StopSolutionVersionCreationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopSolutionVersionCreationRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationInput">StopSolutionVersionCreationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#StopSolutionVersionCreationOutput">StopSolutionVersionCreationOutput</a>)
+
+    UpdateCampaign(*<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignInput">UpdateCampaignInput</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignOutput">UpdateCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCampaignWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignInput">UpdateCampaignInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignOutput">UpdateCampaignOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCampaignRequest(*<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignInput">UpdateCampaignInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">personalize</a>.<a href="../index.html#UpdateCampaignOutput">UpdateCampaignOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

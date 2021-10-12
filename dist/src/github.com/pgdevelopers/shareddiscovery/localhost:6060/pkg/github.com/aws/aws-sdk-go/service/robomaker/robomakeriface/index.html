@@ -1,0 +1,509 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>robomakeriface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package robomakeriface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/robomaker/robomakeriface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package robomakeriface provides an interface to enable mocking the AWS RoboMaker service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#RoboMakerAPI">type RoboMakerAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/robomaker/robomakeriface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="RoboMakerAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/robomaker/robomakeriface/interface.go?s=2178:26990#L52">RoboMakerAPI</a>
+				<a class="permalink" href="index.html#RoboMakerAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+RoboMakerAPI provides an interface to enable mocking the
+robomaker.RoboMaker service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS RoboMaker.
+func myFunc(svc robomakeriface.RoboMakerAPI) bool {
+    // Make svc.BatchDeleteWorlds request
+}
+
+func main() {
+    sess := session.New()
+    svc := robomaker.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockRoboMakerClient struct {
+    robomakeriface.RoboMakerAPI
+}
+func (m *mockRoboMakerClient) BatchDeleteWorlds(input *robomaker.BatchDeleteWorldsInput) (*robomaker.BatchDeleteWorldsOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockRoboMakerClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type RoboMakerAPI interface {
+    BatchDeleteWorlds(*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsInput">BatchDeleteWorldsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsOutput">BatchDeleteWorldsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteWorldsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsInput">BatchDeleteWorldsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsOutput">BatchDeleteWorldsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteWorldsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsInput">BatchDeleteWorldsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDeleteWorldsOutput">BatchDeleteWorldsOutput</a>)
+
+    BatchDescribeSimulationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobInput">BatchDescribeSimulationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobOutput">BatchDescribeSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDescribeSimulationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobInput">BatchDescribeSimulationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobOutput">BatchDescribeSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDescribeSimulationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobInput">BatchDescribeSimulationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#BatchDescribeSimulationJobOutput">BatchDescribeSimulationJobOutput</a>)
+
+    CancelDeploymentJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobInput">CancelDeploymentJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobOutput">CancelDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelDeploymentJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobInput">CancelDeploymentJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobOutput">CancelDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelDeploymentJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobInput">CancelDeploymentJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelDeploymentJobOutput">CancelDeploymentJobOutput</a>)
+
+    CancelSimulationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobInput">CancelSimulationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobOutput">CancelSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelSimulationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobInput">CancelSimulationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobOutput">CancelSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelSimulationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobInput">CancelSimulationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobOutput">CancelSimulationJobOutput</a>)
+
+    CancelSimulationJobBatch(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchInput">CancelSimulationJobBatchInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchOutput">CancelSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelSimulationJobBatchWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchInput">CancelSimulationJobBatchInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchOutput">CancelSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelSimulationJobBatchRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchInput">CancelSimulationJobBatchInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelSimulationJobBatchOutput">CancelSimulationJobBatchOutput</a>)
+
+    CancelWorldExportJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobInput">CancelWorldExportJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobOutput">CancelWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelWorldExportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobInput">CancelWorldExportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobOutput">CancelWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelWorldExportJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobInput">CancelWorldExportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldExportJobOutput">CancelWorldExportJobOutput</a>)
+
+    CancelWorldGenerationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobInput">CancelWorldGenerationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobOutput">CancelWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelWorldGenerationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobInput">CancelWorldGenerationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobOutput">CancelWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelWorldGenerationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobInput">CancelWorldGenerationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CancelWorldGenerationJobOutput">CancelWorldGenerationJobOutput</a>)
+
+    CreateDeploymentJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobInput">CreateDeploymentJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobOutput">CreateDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobInput">CreateDeploymentJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobOutput">CreateDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobInput">CreateDeploymentJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateDeploymentJobOutput">CreateDeploymentJobOutput</a>)
+
+    CreateFleet(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFleetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFleetRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>)
+
+    CreateRobot(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotInput">CreateRobotInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotOutput">CreateRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotInput">CreateRobotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotOutput">CreateRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotInput">CreateRobotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotOutput">CreateRobotOutput</a>)
+
+    CreateRobotApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationInput">CreateRobotApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationOutput">CreateRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationInput">CreateRobotApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationOutput">CreateRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationInput">CreateRobotApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationOutput">CreateRobotApplicationOutput</a>)
+
+    CreateRobotApplicationVersion(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionInput">CreateRobotApplicationVersionInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionOutput">CreateRobotApplicationVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotApplicationVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionInput">CreateRobotApplicationVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionOutput">CreateRobotApplicationVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRobotApplicationVersionRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionInput">CreateRobotApplicationVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateRobotApplicationVersionOutput">CreateRobotApplicationVersionOutput</a>)
+
+    CreateSimulationApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationInput">CreateSimulationApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationOutput">CreateSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationInput">CreateSimulationApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationOutput">CreateSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationInput">CreateSimulationApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationOutput">CreateSimulationApplicationOutput</a>)
+
+    CreateSimulationApplicationVersion(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionInput">CreateSimulationApplicationVersionInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionOutput">CreateSimulationApplicationVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationApplicationVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionInput">CreateSimulationApplicationVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionOutput">CreateSimulationApplicationVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationApplicationVersionRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionInput">CreateSimulationApplicationVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationApplicationVersionOutput">CreateSimulationApplicationVersionOutput</a>)
+
+    CreateSimulationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobInput">CreateSimulationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobOutput">CreateSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobInput">CreateSimulationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobOutput">CreateSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSimulationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobInput">CreateSimulationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateSimulationJobOutput">CreateSimulationJobOutput</a>)
+
+    CreateWorldExportJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobInput">CreateWorldExportJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobOutput">CreateWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldExportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobInput">CreateWorldExportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobOutput">CreateWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldExportJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobInput">CreateWorldExportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldExportJobOutput">CreateWorldExportJobOutput</a>)
+
+    CreateWorldGenerationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobInput">CreateWorldGenerationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobOutput">CreateWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldGenerationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobInput">CreateWorldGenerationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobOutput">CreateWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldGenerationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobInput">CreateWorldGenerationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldGenerationJobOutput">CreateWorldGenerationJobOutput</a>)
+
+    CreateWorldTemplate(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateInput">CreateWorldTemplateInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateOutput">CreateWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateInput">CreateWorldTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateOutput">CreateWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorldTemplateRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateInput">CreateWorldTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#CreateWorldTemplateOutput">CreateWorldTemplateOutput</a>)
+
+    DeleteFleet(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFleetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFleetRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>)
+
+    DeleteRobot(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotInput">DeleteRobotInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotOutput">DeleteRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRobotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotInput">DeleteRobotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotOutput">DeleteRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRobotRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotInput">DeleteRobotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotOutput">DeleteRobotOutput</a>)
+
+    DeleteRobotApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationInput">DeleteRobotApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationOutput">DeleteRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRobotApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationInput">DeleteRobotApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationOutput">DeleteRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRobotApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationInput">DeleteRobotApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteRobotApplicationOutput">DeleteRobotApplicationOutput</a>)
+
+    DeleteSimulationApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationInput">DeleteSimulationApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationOutput">DeleteSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSimulationApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationInput">DeleteSimulationApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationOutput">DeleteSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSimulationApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationInput">DeleteSimulationApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteSimulationApplicationOutput">DeleteSimulationApplicationOutput</a>)
+
+    DeleteWorldTemplate(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateInput">DeleteWorldTemplateInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateOutput">DeleteWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorldTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateInput">DeleteWorldTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateOutput">DeleteWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorldTemplateRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateInput">DeleteWorldTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeleteWorldTemplateOutput">DeleteWorldTemplateOutput</a>)
+
+    DeregisterRobot(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotInput">DeregisterRobotInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotOutput">DeregisterRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterRobotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotInput">DeregisterRobotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotOutput">DeregisterRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterRobotRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotInput">DeregisterRobotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DeregisterRobotOutput">DeregisterRobotOutput</a>)
+
+    DescribeDeploymentJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobInput">DescribeDeploymentJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobOutput">DescribeDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeploymentJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobInput">DescribeDeploymentJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobOutput">DescribeDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeploymentJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobInput">DescribeDeploymentJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeDeploymentJobOutput">DescribeDeploymentJobOutput</a>)
+
+    DescribeFleet(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetInput">DescribeFleetInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetOutput">DescribeFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFleetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetInput">DescribeFleetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetOutput">DescribeFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFleetRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetInput">DescribeFleetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeFleetOutput">DescribeFleetOutput</a>)
+
+    DescribeRobot(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotInput">DescribeRobotInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotOutput">DescribeRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRobotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotInput">DescribeRobotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotOutput">DescribeRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRobotRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotInput">DescribeRobotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotOutput">DescribeRobotOutput</a>)
+
+    DescribeRobotApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationInput">DescribeRobotApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationOutput">DescribeRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRobotApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationInput">DescribeRobotApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationOutput">DescribeRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRobotApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationInput">DescribeRobotApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeRobotApplicationOutput">DescribeRobotApplicationOutput</a>)
+
+    DescribeSimulationApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationInput">DescribeSimulationApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationOutput">DescribeSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationInput">DescribeSimulationApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationOutput">DescribeSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationInput">DescribeSimulationApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationApplicationOutput">DescribeSimulationApplicationOutput</a>)
+
+    DescribeSimulationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobInput">DescribeSimulationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobOutput">DescribeSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobInput">DescribeSimulationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobOutput">DescribeSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobInput">DescribeSimulationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobOutput">DescribeSimulationJobOutput</a>)
+
+    DescribeSimulationJobBatch(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchInput">DescribeSimulationJobBatchInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchOutput">DescribeSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationJobBatchWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchInput">DescribeSimulationJobBatchInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchOutput">DescribeSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSimulationJobBatchRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchInput">DescribeSimulationJobBatchInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeSimulationJobBatchOutput">DescribeSimulationJobBatchOutput</a>)
+
+    DescribeWorld(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldInput">DescribeWorldInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldOutput">DescribeWorldOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldInput">DescribeWorldInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldOutput">DescribeWorldOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldInput">DescribeWorldInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldOutput">DescribeWorldOutput</a>)
+
+    DescribeWorldExportJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobInput">DescribeWorldExportJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobOutput">DescribeWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldExportJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobInput">DescribeWorldExportJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobOutput">DescribeWorldExportJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldExportJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobInput">DescribeWorldExportJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldExportJobOutput">DescribeWorldExportJobOutput</a>)
+
+    DescribeWorldGenerationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobInput">DescribeWorldGenerationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobOutput">DescribeWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldGenerationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobInput">DescribeWorldGenerationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobOutput">DescribeWorldGenerationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldGenerationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobInput">DescribeWorldGenerationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldGenerationJobOutput">DescribeWorldGenerationJobOutput</a>)
+
+    DescribeWorldTemplate(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateInput">DescribeWorldTemplateInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateOutput">DescribeWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateInput">DescribeWorldTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateOutput">DescribeWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWorldTemplateRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateInput">DescribeWorldTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#DescribeWorldTemplateOutput">DescribeWorldTemplateOutput</a>)
+
+    GetWorldTemplateBody(*<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyInput">GetWorldTemplateBodyInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyOutput">GetWorldTemplateBodyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWorldTemplateBodyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyInput">GetWorldTemplateBodyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyOutput">GetWorldTemplateBodyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWorldTemplateBodyRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyInput">GetWorldTemplateBodyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#GetWorldTemplateBodyOutput">GetWorldTemplateBodyOutput</a>)
+
+    ListDeploymentJobs(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsInput">ListDeploymentJobsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsOutput">ListDeploymentJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsInput">ListDeploymentJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsOutput">ListDeploymentJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentJobsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsInput">ListDeploymentJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsOutput">ListDeploymentJobsOutput</a>)
+
+    ListDeploymentJobsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsInput">ListDeploymentJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsOutput">ListDeploymentJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDeploymentJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsInput">ListDeploymentJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListDeploymentJobsOutput">ListDeploymentJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFleets(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFleetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFleetsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>)
+
+    ListFleetsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFleetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRobotApplications(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsInput">ListRobotApplicationsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsOutput">ListRobotApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRobotApplicationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsInput">ListRobotApplicationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsOutput">ListRobotApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRobotApplicationsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsInput">ListRobotApplicationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsOutput">ListRobotApplicationsOutput</a>)
+
+    ListRobotApplicationsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsInput">ListRobotApplicationsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsOutput">ListRobotApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRobotApplicationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsInput">ListRobotApplicationsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotApplicationsOutput">ListRobotApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRobots(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsInput">ListRobotsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsOutput">ListRobotsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRobotsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsInput">ListRobotsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsOutput">ListRobotsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRobotsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsInput">ListRobotsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsOutput">ListRobotsOutput</a>)
+
+    ListRobotsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsInput">ListRobotsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsOutput">ListRobotsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRobotsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsInput">ListRobotsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListRobotsOutput">ListRobotsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSimulationApplications(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsInput">ListSimulationApplicationsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsOutput">ListSimulationApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationApplicationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsInput">ListSimulationApplicationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsOutput">ListSimulationApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationApplicationsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsInput">ListSimulationApplicationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsOutput">ListSimulationApplicationsOutput</a>)
+
+    ListSimulationApplicationsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsInput">ListSimulationApplicationsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsOutput">ListSimulationApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSimulationApplicationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsInput">ListSimulationApplicationsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationApplicationsOutput">ListSimulationApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSimulationJobBatches(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesInput">ListSimulationJobBatchesInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesOutput">ListSimulationJobBatchesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationJobBatchesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesInput">ListSimulationJobBatchesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesOutput">ListSimulationJobBatchesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationJobBatchesRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesInput">ListSimulationJobBatchesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesOutput">ListSimulationJobBatchesOutput</a>)
+
+    ListSimulationJobBatchesPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesInput">ListSimulationJobBatchesInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesOutput">ListSimulationJobBatchesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSimulationJobBatchesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesInput">ListSimulationJobBatchesInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobBatchesOutput">ListSimulationJobBatchesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSimulationJobs(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsInput">ListSimulationJobsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsOutput">ListSimulationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsInput">ListSimulationJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsOutput">ListSimulationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSimulationJobsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsInput">ListSimulationJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsOutput">ListSimulationJobsOutput</a>)
+
+    ListSimulationJobsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsInput">ListSimulationJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsOutput">ListSimulationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSimulationJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsInput">ListSimulationJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListSimulationJobsOutput">ListSimulationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListWorldExportJobs(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsInput">ListWorldExportJobsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsOutput">ListWorldExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldExportJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsInput">ListWorldExportJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsOutput">ListWorldExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldExportJobsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsInput">ListWorldExportJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsOutput">ListWorldExportJobsOutput</a>)
+
+    ListWorldExportJobsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsInput">ListWorldExportJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsOutput">ListWorldExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorldExportJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsInput">ListWorldExportJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldExportJobsOutput">ListWorldExportJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWorldGenerationJobs(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsInput">ListWorldGenerationJobsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsOutput">ListWorldGenerationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldGenerationJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsInput">ListWorldGenerationJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsOutput">ListWorldGenerationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldGenerationJobsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsInput">ListWorldGenerationJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsOutput">ListWorldGenerationJobsOutput</a>)
+
+    ListWorldGenerationJobsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsInput">ListWorldGenerationJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsOutput">ListWorldGenerationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorldGenerationJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsInput">ListWorldGenerationJobsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldGenerationJobsOutput">ListWorldGenerationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWorldTemplates(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesInput">ListWorldTemplatesInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesOutput">ListWorldTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldTemplatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesInput">ListWorldTemplatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesOutput">ListWorldTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldTemplatesRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesInput">ListWorldTemplatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesOutput">ListWorldTemplatesOutput</a>)
+
+    ListWorldTemplatesPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesInput">ListWorldTemplatesInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesOutput">ListWorldTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorldTemplatesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesInput">ListWorldTemplatesInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldTemplatesOutput">ListWorldTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWorlds(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsInput">ListWorldsInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsOutput">ListWorldsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsInput">ListWorldsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsOutput">ListWorldsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorldsRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsInput">ListWorldsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsOutput">ListWorldsOutput</a>)
+
+    ListWorldsPages(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsInput">ListWorldsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsOutput">ListWorldsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorldsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsInput">ListWorldsInput</a>, func(*<a href="../index.html">robomaker</a>.<a href="../index.html#ListWorldsOutput">ListWorldsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    RegisterRobot(*<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotInput">RegisterRobotInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotOutput">RegisterRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterRobotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotInput">RegisterRobotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotOutput">RegisterRobotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterRobotRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotInput">RegisterRobotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#RegisterRobotOutput">RegisterRobotOutput</a>)
+
+    RestartSimulationJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobInput">RestartSimulationJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobOutput">RestartSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RestartSimulationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobInput">RestartSimulationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobOutput">RestartSimulationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RestartSimulationJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobInput">RestartSimulationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#RestartSimulationJobOutput">RestartSimulationJobOutput</a>)
+
+    StartSimulationJobBatch(*<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchInput">StartSimulationJobBatchInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchOutput">StartSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSimulationJobBatchWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchInput">StartSimulationJobBatchInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchOutput">StartSimulationJobBatchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSimulationJobBatchRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchInput">StartSimulationJobBatchInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#StartSimulationJobBatchOutput">StartSimulationJobBatchOutput</a>)
+
+    SyncDeploymentJob(*<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobInput">SyncDeploymentJobInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobOutput">SyncDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SyncDeploymentJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobInput">SyncDeploymentJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobOutput">SyncDeploymentJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SyncDeploymentJobRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobInput">SyncDeploymentJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#SyncDeploymentJobOutput">SyncDeploymentJobOutput</a>)
+
+    TagResource(*<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateRobotApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationInput">UpdateRobotApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationOutput">UpdateRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRobotApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationInput">UpdateRobotApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationOutput">UpdateRobotApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRobotApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationInput">UpdateRobotApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateRobotApplicationOutput">UpdateRobotApplicationOutput</a>)
+
+    UpdateSimulationApplication(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationInput">UpdateSimulationApplicationInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationOutput">UpdateSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSimulationApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationInput">UpdateSimulationApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationOutput">UpdateSimulationApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSimulationApplicationRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationInput">UpdateSimulationApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateSimulationApplicationOutput">UpdateSimulationApplicationOutput</a>)
+
+    UpdateWorldTemplate(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateInput">UpdateWorldTemplateInput</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateOutput">UpdateWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorldTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateInput">UpdateWorldTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateOutput">UpdateWorldTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorldTemplateRequest(*<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateInput">UpdateWorldTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">robomaker</a>.<a href="../index.html#UpdateWorldTemplateOutput">UpdateWorldTemplateOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>gluedatabrewiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package gluedatabrewiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/gluedatabrew/gluedatabrewiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package gluedatabrewiface provides an interface to enable mocking the AWS Glue DataBrew service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#GlueDataBrewAPI">type GlueDataBrewAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/gluedatabrew/gluedatabrewiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="GlueDataBrewAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/gluedatabrew/gluedatabrewiface/interface.go?s=2262:17686#L52">GlueDataBrewAPI</a>
+				<a class="permalink" href="index.html#GlueDataBrewAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+GlueDataBrewAPI provides an interface to enable mocking the
+gluedatabrew.GlueDataBrew service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Glue DataBrew.
+func myFunc(svc gluedatabrewiface.GlueDataBrewAPI) bool {
+    // Make svc.BatchDeleteRecipeVersion request
+}
+
+func main() {
+    sess := session.New()
+    svc := gluedatabrew.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockGlueDataBrewClient struct {
+    gluedatabrewiface.GlueDataBrewAPI
+}
+func (m *mockGlueDataBrewClient) BatchDeleteRecipeVersion(input *gluedatabrew.BatchDeleteRecipeVersionInput) (*gluedatabrew.BatchDeleteRecipeVersionOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockGlueDataBrewClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type GlueDataBrewAPI interface {
+    BatchDeleteRecipeVersion(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionInput">BatchDeleteRecipeVersionInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionOutput">BatchDeleteRecipeVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteRecipeVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionInput">BatchDeleteRecipeVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionOutput">BatchDeleteRecipeVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteRecipeVersionRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionInput">BatchDeleteRecipeVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#BatchDeleteRecipeVersionOutput">BatchDeleteRecipeVersionOutput</a>)
+
+    CreateDataset(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>)
+
+    CreateProfileJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobInput">CreateProfileJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobOutput">CreateProfileJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProfileJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobInput">CreateProfileJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobOutput">CreateProfileJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProfileJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobInput">CreateProfileJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProfileJobOutput">CreateProfileJobOutput</a>)
+
+    CreateProject(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>)
+
+    CreateRecipe(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeInput">CreateRecipeInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeOutput">CreateRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRecipeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeInput">CreateRecipeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeOutput">CreateRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRecipeRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeInput">CreateRecipeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeOutput">CreateRecipeOutput</a>)
+
+    CreateRecipeJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobInput">CreateRecipeJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobOutput">CreateRecipeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRecipeJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobInput">CreateRecipeJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobOutput">CreateRecipeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRecipeJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobInput">CreateRecipeJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateRecipeJobOutput">CreateRecipeJobOutput</a>)
+
+    CreateSchedule(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleInput">CreateScheduleInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleOutput">CreateScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateScheduleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleInput">CreateScheduleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleOutput">CreateScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateScheduleRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleInput">CreateScheduleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#CreateScheduleOutput">CreateScheduleOutput</a>)
+
+    DeleteDataset(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>)
+
+    DeleteJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobInput">DeleteJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobOutput">DeleteJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobInput">DeleteJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobOutput">DeleteJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobInput">DeleteJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteJobOutput">DeleteJobOutput</a>)
+
+    DeleteProject(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>)
+
+    DeleteRecipeVersion(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionInput">DeleteRecipeVersionInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionOutput">DeleteRecipeVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRecipeVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionInput">DeleteRecipeVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionOutput">DeleteRecipeVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRecipeVersionRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionInput">DeleteRecipeVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteRecipeVersionOutput">DeleteRecipeVersionOutput</a>)
+
+    DeleteSchedule(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleInput">DeleteScheduleInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleOutput">DeleteScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteScheduleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleInput">DeleteScheduleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleOutput">DeleteScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteScheduleRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleInput">DeleteScheduleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DeleteScheduleOutput">DeleteScheduleOutput</a>)
+
+    DescribeDataset(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>)
+
+    DescribeJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobInput">DescribeJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobOutput">DescribeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobInput">DescribeJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobOutput">DescribeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobInput">DescribeJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobOutput">DescribeJobOutput</a>)
+
+    DescribeJobRun(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunInput">DescribeJobRunInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunOutput">DescribeJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeJobRunWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunInput">DescribeJobRunInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunOutput">DescribeJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeJobRunRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunInput">DescribeJobRunInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeJobRunOutput">DescribeJobRunOutput</a>)
+
+    DescribeProject(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectInput">DescribeProjectInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectOutput">DescribeProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectInput">DescribeProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectOutput">DescribeProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectInput">DescribeProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeProjectOutput">DescribeProjectOutput</a>)
+
+    DescribeRecipe(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRecipeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRecipeRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeInput">DescribeRecipeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeRecipeOutput">DescribeRecipeOutput</a>)
+
+    DescribeSchedule(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleInput">DescribeScheduleInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleOutput">DescribeScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeScheduleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleInput">DescribeScheduleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleOutput">DescribeScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeScheduleRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleInput">DescribeScheduleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#DescribeScheduleOutput">DescribeScheduleOutput</a>)
+
+    ListDatasets(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>)
+
+    ListDatasetsPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListJobRuns(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsInput">ListJobRunsInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsOutput">ListJobRunsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListJobRunsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsInput">ListJobRunsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsOutput">ListJobRunsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListJobRunsRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsInput">ListJobRunsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsOutput">ListJobRunsOutput</a>)
+
+    ListJobRunsPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsInput">ListJobRunsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsOutput">ListJobRunsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListJobRunsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsInput">ListJobRunsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobRunsOutput">ListJobRunsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListJobs(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsInput">ListJobsInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsOutput">ListJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsInput">ListJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsOutput">ListJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListJobsRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsInput">ListJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsOutput">ListJobsOutput</a>)
+
+    ListJobsPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsInput">ListJobsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsOutput">ListJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsInput">ListJobsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListJobsOutput">ListJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListProjects(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsInput">ListProjectsInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsOutput">ListProjectsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListProjectsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsInput">ListProjectsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsOutput">ListProjectsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListProjectsRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsInput">ListProjectsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsOutput">ListProjectsOutput</a>)
+
+    ListProjectsPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsInput">ListProjectsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsOutput">ListProjectsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListProjectsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsInput">ListProjectsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListProjectsOutput">ListProjectsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRecipeVersions(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsInput">ListRecipeVersionsInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsOutput">ListRecipeVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipeVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsInput">ListRecipeVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsOutput">ListRecipeVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipeVersionsRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsInput">ListRecipeVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsOutput">ListRecipeVersionsOutput</a>)
+
+    ListRecipeVersionsPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsInput">ListRecipeVersionsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsOutput">ListRecipeVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRecipeVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsInput">ListRecipeVersionsInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipeVersionsOutput">ListRecipeVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRecipes(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRecipesRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>)
+
+    ListRecipesPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRecipesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesInput">ListRecipesInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListRecipesOutput">ListRecipesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSchedules(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesInput">ListSchedulesInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesOutput">ListSchedulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSchedulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesInput">ListSchedulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesOutput">ListSchedulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSchedulesRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesInput">ListSchedulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesOutput">ListSchedulesOutput</a>)
+
+    ListSchedulesPages(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesInput">ListSchedulesInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesOutput">ListSchedulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSchedulesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesInput">ListSchedulesInput</a>, func(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListSchedulesOutput">ListSchedulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PublishRecipe(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeInput">PublishRecipeInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeOutput">PublishRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishRecipeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeInput">PublishRecipeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeOutput">PublishRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishRecipeRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeInput">PublishRecipeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#PublishRecipeOutput">PublishRecipeOutput</a>)
+
+    SendProjectSessionAction(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionInput">SendProjectSessionActionInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionOutput">SendProjectSessionActionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendProjectSessionActionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionInput">SendProjectSessionActionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionOutput">SendProjectSessionActionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendProjectSessionActionRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionInput">SendProjectSessionActionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#SendProjectSessionActionOutput">SendProjectSessionActionOutput</a>)
+
+    StartJobRun(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunInput">StartJobRunInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunOutput">StartJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartJobRunWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunInput">StartJobRunInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunOutput">StartJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartJobRunRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunInput">StartJobRunInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartJobRunOutput">StartJobRunOutput</a>)
+
+    StartProjectSession(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionInput">StartProjectSessionInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionOutput">StartProjectSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartProjectSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionInput">StartProjectSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionOutput">StartProjectSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartProjectSessionRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionInput">StartProjectSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StartProjectSessionOutput">StartProjectSessionOutput</a>)
+
+    StopJobRun(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunInput">StopJobRunInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunOutput">StopJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopJobRunWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunInput">StopJobRunInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunOutput">StopJobRunOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopJobRunRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunInput">StopJobRunInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#StopJobRunOutput">StopJobRunOutput</a>)
+
+    TagResource(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateDataset(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatasetRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>)
+
+    UpdateProfileJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobInput">UpdateProfileJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobOutput">UpdateProfileJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateProfileJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobInput">UpdateProfileJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobOutput">UpdateProfileJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateProfileJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobInput">UpdateProfileJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProfileJobOutput">UpdateProfileJobOutput</a>)
+
+    UpdateProject(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectInput">UpdateProjectInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectOutput">UpdateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectInput">UpdateProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectOutput">UpdateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateProjectRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectInput">UpdateProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateProjectOutput">UpdateProjectOutput</a>)
+
+    UpdateRecipe(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeInput">UpdateRecipeInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeOutput">UpdateRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRecipeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeInput">UpdateRecipeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeOutput">UpdateRecipeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRecipeRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeInput">UpdateRecipeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeOutput">UpdateRecipeOutput</a>)
+
+    UpdateRecipeJob(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobInput">UpdateRecipeJobInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobOutput">UpdateRecipeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRecipeJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobInput">UpdateRecipeJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobOutput">UpdateRecipeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRecipeJobRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobInput">UpdateRecipeJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateRecipeJobOutput">UpdateRecipeJobOutput</a>)
+
+    UpdateSchedule(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleInput">UpdateScheduleInput</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleOutput">UpdateScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateScheduleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleInput">UpdateScheduleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleOutput">UpdateScheduleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateScheduleRequest(*<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleInput">UpdateScheduleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">gluedatabrew</a>.<a href="../index.html#UpdateScheduleOutput">UpdateScheduleOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

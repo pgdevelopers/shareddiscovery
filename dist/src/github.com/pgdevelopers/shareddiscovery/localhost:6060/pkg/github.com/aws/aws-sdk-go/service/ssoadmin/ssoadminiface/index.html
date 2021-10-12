@@ -1,0 +1,402 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>ssoadminiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package ssoadminiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/ssoadmin/ssoadminiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package ssoadminiface provides an interface to enable mocking the AWS Single Sign-On Admin service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#SSOAdminAPI">type SSOAdminAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssoadmin/ssoadminiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="SSOAdminAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssoadmin/ssoadminiface/interface.go?s=2252:20307#L52">SSOAdminAPI</a>
+				<a class="permalink" href="index.html#SSOAdminAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+SSOAdminAPI provides an interface to enable mocking the
+ssoadmin.SSOAdmin service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Single Sign-On Admin.
+func myFunc(svc ssoadminiface.SSOAdminAPI) bool {
+    // Make svc.AttachManagedPolicyToPermissionSet request
+}
+
+func main() {
+    sess := session.New()
+    svc := ssoadmin.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockSSOAdminClient struct {
+    ssoadminiface.SSOAdminAPI
+}
+func (m *mockSSOAdminClient) AttachManagedPolicyToPermissionSet(input *ssoadmin.AttachManagedPolicyToPermissionSetInput) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockSSOAdminClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type SSOAdminAPI interface {
+    AttachManagedPolicyToPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetInput">AttachManagedPolicyToPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetOutput">AttachManagedPolicyToPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachManagedPolicyToPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetInput">AttachManagedPolicyToPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetOutput">AttachManagedPolicyToPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachManagedPolicyToPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetInput">AttachManagedPolicyToPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#AttachManagedPolicyToPermissionSetOutput">AttachManagedPolicyToPermissionSetOutput</a>)
+
+    CreateAccountAssignment(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentInput">CreateAccountAssignmentInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentOutput">CreateAccountAssignmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccountAssignmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentInput">CreateAccountAssignmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentOutput">CreateAccountAssignmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccountAssignmentRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentInput">CreateAccountAssignmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateAccountAssignmentOutput">CreateAccountAssignmentOutput</a>)
+
+    CreateInstanceAccessControlAttributeConfiguration(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationInput">CreateInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationOutput">CreateInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInstanceAccessControlAttributeConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationInput">CreateInstanceAccessControlAttributeConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationOutput">CreateInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInstanceAccessControlAttributeConfigurationRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationInput">CreateInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreateInstanceAccessControlAttributeConfigurationOutput">CreateInstanceAccessControlAttributeConfigurationOutput</a>)
+
+    CreatePermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetInput">CreatePermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetOutput">CreatePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetInput">CreatePermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetOutput">CreatePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetInput">CreatePermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#CreatePermissionSetOutput">CreatePermissionSetOutput</a>)
+
+    DeleteAccountAssignment(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentInput">DeleteAccountAssignmentInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentOutput">DeleteAccountAssignmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAccountAssignmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentInput">DeleteAccountAssignmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentOutput">DeleteAccountAssignmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAccountAssignmentRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentInput">DeleteAccountAssignmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteAccountAssignmentOutput">DeleteAccountAssignmentOutput</a>)
+
+    DeleteInlinePolicyFromPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetInput">DeleteInlinePolicyFromPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetOutput">DeleteInlinePolicyFromPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInlinePolicyFromPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetInput">DeleteInlinePolicyFromPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetOutput">DeleteInlinePolicyFromPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInlinePolicyFromPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetInput">DeleteInlinePolicyFromPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInlinePolicyFromPermissionSetOutput">DeleteInlinePolicyFromPermissionSetOutput</a>)
+
+    DeleteInstanceAccessControlAttributeConfiguration(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationInput">DeleteInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationOutput">DeleteInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInstanceAccessControlAttributeConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationInput">DeleteInstanceAccessControlAttributeConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationOutput">DeleteInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInstanceAccessControlAttributeConfigurationRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationInput">DeleteInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeleteInstanceAccessControlAttributeConfigurationOutput">DeleteInstanceAccessControlAttributeConfigurationOutput</a>)
+
+    DeletePermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetInput">DeletePermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetOutput">DeletePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetInput">DeletePermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetOutput">DeletePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetInput">DeletePermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DeletePermissionSetOutput">DeletePermissionSetOutput</a>)
+
+    DescribeAccountAssignmentCreationStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusInput">DescribeAccountAssignmentCreationStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusOutput">DescribeAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountAssignmentCreationStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusInput">DescribeAccountAssignmentCreationStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusOutput">DescribeAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountAssignmentCreationStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusInput">DescribeAccountAssignmentCreationStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentCreationStatusOutput">DescribeAccountAssignmentCreationStatusOutput</a>)
+
+    DescribeAccountAssignmentDeletionStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusInput">DescribeAccountAssignmentDeletionStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusOutput">DescribeAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountAssignmentDeletionStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusInput">DescribeAccountAssignmentDeletionStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusOutput">DescribeAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountAssignmentDeletionStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusInput">DescribeAccountAssignmentDeletionStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeAccountAssignmentDeletionStatusOutput">DescribeAccountAssignmentDeletionStatusOutput</a>)
+
+    DescribeInstanceAccessControlAttributeConfiguration(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationInput">DescribeInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationOutput">DescribeInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstanceAccessControlAttributeConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationInput">DescribeInstanceAccessControlAttributeConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationOutput">DescribeInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstanceAccessControlAttributeConfigurationRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationInput">DescribeInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribeInstanceAccessControlAttributeConfigurationOutput">DescribeInstanceAccessControlAttributeConfigurationOutput</a>)
+
+    DescribePermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetInput">DescribePermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetOutput">DescribePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetInput">DescribePermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetOutput">DescribePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetInput">DescribePermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetOutput">DescribePermissionSetOutput</a>)
+
+    DescribePermissionSetProvisioningStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusInput">DescribePermissionSetProvisioningStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusOutput">DescribePermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionSetProvisioningStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusInput">DescribePermissionSetProvisioningStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusOutput">DescribePermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionSetProvisioningStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusInput">DescribePermissionSetProvisioningStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DescribePermissionSetProvisioningStatusOutput">DescribePermissionSetProvisioningStatusOutput</a>)
+
+    DetachManagedPolicyFromPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetInput">DetachManagedPolicyFromPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetOutput">DetachManagedPolicyFromPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachManagedPolicyFromPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetInput">DetachManagedPolicyFromPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetOutput">DetachManagedPolicyFromPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachManagedPolicyFromPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetInput">DetachManagedPolicyFromPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#DetachManagedPolicyFromPermissionSetOutput">DetachManagedPolicyFromPermissionSetOutput</a>)
+
+    GetInlinePolicyForPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetInput">GetInlinePolicyForPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetOutput">GetInlinePolicyForPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInlinePolicyForPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetInput">GetInlinePolicyForPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetOutput">GetInlinePolicyForPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInlinePolicyForPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetInput">GetInlinePolicyForPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#GetInlinePolicyForPermissionSetOutput">GetInlinePolicyForPermissionSetOutput</a>)
+
+    ListAccountAssignmentCreationStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusInput">ListAccountAssignmentCreationStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusOutput">ListAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentCreationStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusInput">ListAccountAssignmentCreationStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusOutput">ListAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentCreationStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusInput">ListAccountAssignmentCreationStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusOutput">ListAccountAssignmentCreationStatusOutput</a>)
+
+    ListAccountAssignmentCreationStatusPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusInput">ListAccountAssignmentCreationStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusOutput">ListAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountAssignmentCreationStatusPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusInput">ListAccountAssignmentCreationStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentCreationStatusOutput">ListAccountAssignmentCreationStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccountAssignmentDeletionStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusInput">ListAccountAssignmentDeletionStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusOutput">ListAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentDeletionStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusInput">ListAccountAssignmentDeletionStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusOutput">ListAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentDeletionStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusInput">ListAccountAssignmentDeletionStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusOutput">ListAccountAssignmentDeletionStatusOutput</a>)
+
+    ListAccountAssignmentDeletionStatusPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusInput">ListAccountAssignmentDeletionStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusOutput">ListAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountAssignmentDeletionStatusPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusInput">ListAccountAssignmentDeletionStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentDeletionStatusOutput">ListAccountAssignmentDeletionStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccountAssignments(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsInput">ListAccountAssignmentsInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsOutput">ListAccountAssignmentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsInput">ListAccountAssignmentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsOutput">ListAccountAssignmentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountAssignmentsRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsInput">ListAccountAssignmentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsOutput">ListAccountAssignmentsOutput</a>)
+
+    ListAccountAssignmentsPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsInput">ListAccountAssignmentsInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsOutput">ListAccountAssignmentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountAssignmentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsInput">ListAccountAssignmentsInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountAssignmentsOutput">ListAccountAssignmentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccountsForProvisionedPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetInput">ListAccountsForProvisionedPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetOutput">ListAccountsForProvisionedPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsForProvisionedPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetInput">ListAccountsForProvisionedPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetOutput">ListAccountsForProvisionedPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsForProvisionedPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetInput">ListAccountsForProvisionedPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetOutput">ListAccountsForProvisionedPermissionSetOutput</a>)
+
+    ListAccountsForProvisionedPermissionSetPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetInput">ListAccountsForProvisionedPermissionSetInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetOutput">ListAccountsForProvisionedPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountsForProvisionedPermissionSetPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetInput">ListAccountsForProvisionedPermissionSetInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListAccountsForProvisionedPermissionSetOutput">ListAccountsForProvisionedPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListInstances(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesInput">ListInstancesInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesOutput">ListInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesInput">ListInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesOutput">ListInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInstancesRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesInput">ListInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesOutput">ListInstancesOutput</a>)
+
+    ListInstancesPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesInput">ListInstancesInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesOutput">ListInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListInstancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesInput">ListInstancesInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListInstancesOutput">ListInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListManagedPoliciesInPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetInput">ListManagedPoliciesInPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetOutput">ListManagedPoliciesInPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListManagedPoliciesInPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetInput">ListManagedPoliciesInPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetOutput">ListManagedPoliciesInPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListManagedPoliciesInPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetInput">ListManagedPoliciesInPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetOutput">ListManagedPoliciesInPermissionSetOutput</a>)
+
+    ListManagedPoliciesInPermissionSetPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetInput">ListManagedPoliciesInPermissionSetInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetOutput">ListManagedPoliciesInPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListManagedPoliciesInPermissionSetPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetInput">ListManagedPoliciesInPermissionSetInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListManagedPoliciesInPermissionSetOutput">ListManagedPoliciesInPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPermissionSetProvisioningStatus(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusInput">ListPermissionSetProvisioningStatusInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusOutput">ListPermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetProvisioningStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusInput">ListPermissionSetProvisioningStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusOutput">ListPermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetProvisioningStatusRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusInput">ListPermissionSetProvisioningStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusOutput">ListPermissionSetProvisioningStatusOutput</a>)
+
+    ListPermissionSetProvisioningStatusPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusInput">ListPermissionSetProvisioningStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusOutput">ListPermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPermissionSetProvisioningStatusPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusInput">ListPermissionSetProvisioningStatusInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetProvisioningStatusOutput">ListPermissionSetProvisioningStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPermissionSets(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsInput">ListPermissionSetsInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsOutput">ListPermissionSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsInput">ListPermissionSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsOutput">ListPermissionSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetsRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsInput">ListPermissionSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsOutput">ListPermissionSetsOutput</a>)
+
+    ListPermissionSetsPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsInput">ListPermissionSetsInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsOutput">ListPermissionSetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPermissionSetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsInput">ListPermissionSetsInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsOutput">ListPermissionSetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPermissionSetsProvisionedToAccount(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountInput">ListPermissionSetsProvisionedToAccountInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountOutput">ListPermissionSetsProvisionedToAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetsProvisionedToAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountInput">ListPermissionSetsProvisionedToAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountOutput">ListPermissionSetsProvisionedToAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPermissionSetsProvisionedToAccountRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountInput">ListPermissionSetsProvisionedToAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountOutput">ListPermissionSetsProvisionedToAccountOutput</a>)
+
+    ListPermissionSetsProvisionedToAccountPages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountInput">ListPermissionSetsProvisionedToAccountInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountOutput">ListPermissionSetsProvisionedToAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPermissionSetsProvisionedToAccountPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountInput">ListPermissionSetsProvisionedToAccountInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListPermissionSetsProvisionedToAccountOutput">ListPermissionSetsProvisionedToAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ProvisionPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetInput">ProvisionPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetOutput">ProvisionPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ProvisionPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetInput">ProvisionPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetOutput">ProvisionPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ProvisionPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetInput">ProvisionPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#ProvisionPermissionSetOutput">ProvisionPermissionSetOutput</a>)
+
+    PutInlinePolicyToPermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetInput">PutInlinePolicyToPermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetOutput">PutInlinePolicyToPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInlinePolicyToPermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetInput">PutInlinePolicyToPermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetOutput">PutInlinePolicyToPermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInlinePolicyToPermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetInput">PutInlinePolicyToPermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#PutInlinePolicyToPermissionSetOutput">PutInlinePolicyToPermissionSetOutput</a>)
+
+    TagResource(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateInstanceAccessControlAttributeConfiguration(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationInput">UpdateInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationOutput">UpdateInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInstanceAccessControlAttributeConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationInput">UpdateInstanceAccessControlAttributeConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationOutput">UpdateInstanceAccessControlAttributeConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInstanceAccessControlAttributeConfigurationRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationInput">UpdateInstanceAccessControlAttributeConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdateInstanceAccessControlAttributeConfigurationOutput">UpdateInstanceAccessControlAttributeConfigurationOutput</a>)
+
+    UpdatePermissionSet(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetInput">UpdatePermissionSetInput</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetOutput">UpdatePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePermissionSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetInput">UpdatePermissionSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetOutput">UpdatePermissionSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePermissionSetRequest(*<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetInput">UpdatePermissionSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ssoadmin</a>.<a href="../index.html#UpdatePermissionSetOutput">UpdatePermissionSetOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

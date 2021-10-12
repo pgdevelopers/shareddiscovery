@@ -1,0 +1,332 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>cloudtrailiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cloudtrailiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/cloudtrail/cloudtrailiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package cloudtrailiface provides an interface to enable mocking the AWS CloudTrail service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CloudTrailAPI">type CloudTrailAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudtrail/cloudtrailiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CloudTrailAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudtrail/cloudtrailiface/interface.go?s=2156:8966#L52">CloudTrailAPI</a>
+				<a class="permalink" href="index.html#CloudTrailAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CloudTrailAPI provides an interface to enable mocking the
+cloudtrail.CloudTrail service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS CloudTrail.
+func myFunc(svc cloudtrailiface.CloudTrailAPI) bool {
+    // Make svc.AddTags request
+}
+
+func main() {
+    sess := session.New()
+    svc := cloudtrail.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCloudTrailClient struct {
+    cloudtrailiface.CloudTrailAPI
+}
+func (m *mockCloudTrailClient) AddTags(input *cloudtrail.AddTagsInput) (*cloudtrail.AddTagsOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCloudTrailClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CloudTrailAPI interface {
+    AddTags(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>)
+
+    CreateTrail(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailInput">CreateTrailInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailOutput">CreateTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTrailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailInput">CreateTrailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailOutput">CreateTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTrailRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailInput">CreateTrailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#CreateTrailOutput">CreateTrailOutput</a>)
+
+    DeleteTrail(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailInput">DeleteTrailInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailOutput">DeleteTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTrailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailInput">DeleteTrailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailOutput">DeleteTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTrailRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailInput">DeleteTrailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#DeleteTrailOutput">DeleteTrailOutput</a>)
+
+    DescribeTrails(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsInput">DescribeTrailsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsOutput">DescribeTrailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTrailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsInput">DescribeTrailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsOutput">DescribeTrailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTrailsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsInput">DescribeTrailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#DescribeTrailsOutput">DescribeTrailsOutput</a>)
+
+    GetEventSelectors(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsInput">GetEventSelectorsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsOutput">GetEventSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEventSelectorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsInput">GetEventSelectorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsOutput">GetEventSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEventSelectorsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsInput">GetEventSelectorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetEventSelectorsOutput">GetEventSelectorsOutput</a>)
+
+    GetInsightSelectors(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsInput">GetInsightSelectorsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsOutput">GetInsightSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightSelectorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsInput">GetInsightSelectorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsOutput">GetInsightSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightSelectorsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsInput">GetInsightSelectorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetInsightSelectorsOutput">GetInsightSelectorsOutput</a>)
+
+    GetTrail(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailInput">GetTrailInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailOutput">GetTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTrailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailInput">GetTrailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailOutput">GetTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTrailRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailInput">GetTrailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailOutput">GetTrailOutput</a>)
+
+    GetTrailStatus(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusInput">GetTrailStatusInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusOutput">GetTrailStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTrailStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusInput">GetTrailStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusOutput">GetTrailStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTrailStatusRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusInput">GetTrailStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#GetTrailStatusOutput">GetTrailStatusOutput</a>)
+
+    ListPublicKeys(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysInput">ListPublicKeysInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysOutput">ListPublicKeysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPublicKeysWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysInput">ListPublicKeysInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysOutput">ListPublicKeysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPublicKeysRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysInput">ListPublicKeysInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysOutput">ListPublicKeysOutput</a>)
+
+    ListPublicKeysPages(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysInput">ListPublicKeysInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysOutput">ListPublicKeysOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPublicKeysPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysInput">ListPublicKeysInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListPublicKeysOutput">ListPublicKeysOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTags(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>)
+
+    ListTagsPages(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTrails(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsInput">ListTrailsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsOutput">ListTrailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTrailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsInput">ListTrailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsOutput">ListTrailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTrailsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsInput">ListTrailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsOutput">ListTrailsOutput</a>)
+
+    ListTrailsPages(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsInput">ListTrailsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsOutput">ListTrailsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTrailsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsInput">ListTrailsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#ListTrailsOutput">ListTrailsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    LookupEvents(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsInput">LookupEventsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsOutput">LookupEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LookupEventsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsInput">LookupEventsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsOutput">LookupEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LookupEventsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsInput">LookupEventsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsOutput">LookupEventsOutput</a>)
+
+    LookupEventsPages(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsInput">LookupEventsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsOutput">LookupEventsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    LookupEventsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsInput">LookupEventsInput</a>, func(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#LookupEventsOutput">LookupEventsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PutEventSelectors(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsInput">PutEventSelectorsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsOutput">PutEventSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutEventSelectorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsInput">PutEventSelectorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsOutput">PutEventSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutEventSelectorsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsInput">PutEventSelectorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutEventSelectorsOutput">PutEventSelectorsOutput</a>)
+
+    PutInsightSelectors(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsInput">PutInsightSelectorsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsOutput">PutInsightSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInsightSelectorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsInput">PutInsightSelectorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsOutput">PutInsightSelectorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutInsightSelectorsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsInput">PutInsightSelectorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#PutInsightSelectorsOutput">PutInsightSelectorsOutput</a>)
+
+    RemoveTags(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>)
+
+    StartLogging(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingInput">StartLoggingInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingOutput">StartLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLoggingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingInput">StartLoggingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingOutput">StartLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLoggingRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingInput">StartLoggingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#StartLoggingOutput">StartLoggingOutput</a>)
+
+    StopLogging(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingInput">StopLoggingInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingOutput">StopLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopLoggingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingInput">StopLoggingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingOutput">StopLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopLoggingRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingInput">StopLoggingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#StopLoggingOutput">StopLoggingOutput</a>)
+
+    UpdateTrail(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailInput">UpdateTrailInput</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailOutput">UpdateTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTrailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailInput">UpdateTrailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailOutput">UpdateTrailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTrailRequest(*<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailInput">UpdateTrailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudtrail</a>.<a href="../index.html#UpdateTrailOutput">UpdateTrailOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

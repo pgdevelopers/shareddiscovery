@@ -1,0 +1,361 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>route53recoverycontrolconfigiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package route53recoverycontrolconfigiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/route53recoverycontrolconfig/route53recoverycontrolconfigiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package route53recoverycontrolconfigiface provides an interface to enable mocking the AWS Route53 Recovery Control Config service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Route53RecoveryControlConfigAPI">type Route53RecoveryControlConfigAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycontrolconfig/route53recoverycontrolconfigiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Route53RecoveryControlConfigAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycontrolconfig/route53recoverycontrolconfigiface/interface.go?s=2510:15368#L52">Route53RecoveryControlConfigAPI</a>
+				<a class="permalink" href="index.html#Route53RecoveryControlConfigAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+Route53RecoveryControlConfigAPI provides an interface to enable mocking the
+route53recoverycontrolconfig.Route53RecoveryControlConfig service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Route53 Recovery Control Config.
+func myFunc(svc route53recoverycontrolconfigiface.Route53RecoveryControlConfigAPI) bool {
+    // Make svc.CreateCluster request
+}
+
+func main() {
+    sess := session.New()
+    svc := route53recoverycontrolconfig.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockRoute53RecoveryControlConfigClient struct {
+    route53recoverycontrolconfigiface.Route53RecoveryControlConfigAPI
+}
+func (m *mockRoute53RecoveryControlConfigClient) CreateCluster(input *route53recoverycontrolconfig.CreateClusterInput) (*route53recoverycontrolconfig.CreateClusterOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockRoute53RecoveryControlConfigClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type Route53RecoveryControlConfigAPI interface {
+    CreateCluster(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>)
+
+    CreateControlPanel(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelInput">CreateControlPanelInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelOutput">CreateControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateControlPanelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelInput">CreateControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelOutput">CreateControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateControlPanelRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelInput">CreateControlPanelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateControlPanelOutput">CreateControlPanelOutput</a>)
+
+    CreateRoutingControl(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlInput">CreateRoutingControlInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlOutput">CreateRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRoutingControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlInput">CreateRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlOutput">CreateRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRoutingControlRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlInput">CreateRoutingControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateRoutingControlOutput">CreateRoutingControlOutput</a>)
+
+    CreateSafetyRule(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleInput">CreateSafetyRuleInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleOutput">CreateSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSafetyRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleInput">CreateSafetyRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleOutput">CreateSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSafetyRuleRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleInput">CreateSafetyRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#CreateSafetyRuleOutput">CreateSafetyRuleOutput</a>)
+
+    DeleteCluster(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>)
+
+    DeleteControlPanel(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelInput">DeleteControlPanelInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelOutput">DeleteControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteControlPanelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelInput">DeleteControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelOutput">DeleteControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteControlPanelRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelInput">DeleteControlPanelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteControlPanelOutput">DeleteControlPanelOutput</a>)
+
+    DeleteRoutingControl(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlInput">DeleteRoutingControlInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlOutput">DeleteRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRoutingControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlInput">DeleteRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlOutput">DeleteRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRoutingControlRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlInput">DeleteRoutingControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteRoutingControlOutput">DeleteRoutingControlOutput</a>)
+
+    DeleteSafetyRule(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleInput">DeleteSafetyRuleInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleOutput">DeleteSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSafetyRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleInput">DeleteSafetyRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleOutput">DeleteSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSafetyRuleRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleInput">DeleteSafetyRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DeleteSafetyRuleOutput">DeleteSafetyRuleOutput</a>)
+
+    DescribeCluster(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterOutput">DescribeClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterOutput">DescribeClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClusterRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterOutput">DescribeClusterOutput</a>)
+
+    DescribeControlPanel(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelOutput">DescribeControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeControlPanelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelOutput">DescribeControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeControlPanelRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelOutput">DescribeControlPanelOutput</a>)
+
+    DescribeRoutingControl(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlOutput">DescribeRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRoutingControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlOutput">DescribeRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRoutingControlRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlOutput">DescribeRoutingControlOutput</a>)
+
+    DescribeSafetyRule(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleInput">DescribeSafetyRuleInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleOutput">DescribeSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSafetyRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleInput">DescribeSafetyRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleOutput">DescribeSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSafetyRuleRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleInput">DescribeSafetyRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeSafetyRuleOutput">DescribeSafetyRuleOutput</a>)
+
+    ListAssociatedRoute53HealthChecks(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksInput">ListAssociatedRoute53HealthChecksInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksOutput">ListAssociatedRoute53HealthChecksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssociatedRoute53HealthChecksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksInput">ListAssociatedRoute53HealthChecksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksOutput">ListAssociatedRoute53HealthChecksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssociatedRoute53HealthChecksRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksInput">ListAssociatedRoute53HealthChecksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksOutput">ListAssociatedRoute53HealthChecksOutput</a>)
+
+    ListAssociatedRoute53HealthChecksPages(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksInput">ListAssociatedRoute53HealthChecksInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksOutput">ListAssociatedRoute53HealthChecksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssociatedRoute53HealthChecksPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksInput">ListAssociatedRoute53HealthChecksInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListAssociatedRoute53HealthChecksOutput">ListAssociatedRoute53HealthChecksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListClusters(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClustersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClustersRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>)
+
+    ListClustersPages(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListClustersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListControlPanels(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsInput">ListControlPanelsInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsOutput">ListControlPanelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListControlPanelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsInput">ListControlPanelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsOutput">ListControlPanelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListControlPanelsRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsInput">ListControlPanelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsOutput">ListControlPanelsOutput</a>)
+
+    ListControlPanelsPages(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsInput">ListControlPanelsInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsOutput">ListControlPanelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListControlPanelsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsInput">ListControlPanelsInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListControlPanelsOutput">ListControlPanelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRoutingControls(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsInput">ListRoutingControlsInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsOutput">ListRoutingControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRoutingControlsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsInput">ListRoutingControlsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsOutput">ListRoutingControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRoutingControlsRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsInput">ListRoutingControlsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsOutput">ListRoutingControlsOutput</a>)
+
+    ListRoutingControlsPages(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsInput">ListRoutingControlsInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsOutput">ListRoutingControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRoutingControlsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsInput">ListRoutingControlsInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListRoutingControlsOutput">ListRoutingControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListSafetyRules(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesInput">ListSafetyRulesInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesOutput">ListSafetyRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSafetyRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesInput">ListSafetyRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesOutput">ListSafetyRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListSafetyRulesRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesInput">ListSafetyRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesOutput">ListSafetyRulesOutput</a>)
+
+    ListSafetyRulesPages(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesInput">ListSafetyRulesInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesOutput">ListSafetyRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListSafetyRulesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesInput">ListSafetyRulesInput</a>, func(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#ListSafetyRulesOutput">ListSafetyRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    UpdateControlPanel(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelInput">UpdateControlPanelInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelOutput">UpdateControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateControlPanelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelInput">UpdateControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelOutput">UpdateControlPanelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateControlPanelRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelInput">UpdateControlPanelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateControlPanelOutput">UpdateControlPanelOutput</a>)
+
+    UpdateRoutingControl(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlInput">UpdateRoutingControlInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlOutput">UpdateRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRoutingControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlInput">UpdateRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlOutput">UpdateRoutingControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRoutingControlRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlInput">UpdateRoutingControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateRoutingControlOutput">UpdateRoutingControlOutput</a>)
+
+    UpdateSafetyRule(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleInput">UpdateSafetyRuleInput</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleOutput">UpdateSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSafetyRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleInput">UpdateSafetyRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleOutput">UpdateSafetyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSafetyRuleRequest(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleInput">UpdateSafetyRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#UpdateSafetyRuleOutput">UpdateSafetyRuleOutput</a>)
+
+    WaitUntilClusterCreated(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilClusterCreatedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilClusterDeleted(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilClusterDeletedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeClusterInput">DescribeClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilControlPanelCreated(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilControlPanelCreatedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilControlPanelDeleted(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilControlPanelDeletedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeControlPanelInput">DescribeControlPanelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilRoutingControlCreated(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilRoutingControlCreatedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilRoutingControlDeleted(*<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilRoutingControlDeletedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">route53recoverycontrolconfig</a>.<a href="../index.html#DescribeRoutingControlInput">DescribeRoutingControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

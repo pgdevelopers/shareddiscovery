@@ -1,0 +1,395 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>worklinkiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package worklinkiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/worklink/worklinkiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package worklinkiface provides an interface to enable mocking the Amazon WorkLink service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#WorkLinkAPI">type WorkLinkAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/worklink/worklinkiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="WorkLinkAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/worklink/worklinkiface/interface.go?s=2158:17211#L52">WorkLinkAPI</a>
+				<a class="permalink" href="index.html#WorkLinkAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+WorkLinkAPI provides an interface to enable mocking the
+worklink.WorkLink service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon WorkLink.
+func myFunc(svc worklinkiface.WorkLinkAPI) bool {
+    // Make svc.AssociateDomain request
+}
+
+func main() {
+    sess := session.New()
+    svc := worklink.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockWorkLinkClient struct {
+    worklinkiface.WorkLinkAPI
+}
+func (m *mockWorkLinkClient) AssociateDomain(input *worklink.AssociateDomainInput) (*worklink.AssociateDomainOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockWorkLinkClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type WorkLinkAPI interface {
+    AssociateDomain(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainInput">AssociateDomainInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainOutput">AssociateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainInput">AssociateDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainOutput">AssociateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateDomainRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainInput">AssociateDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateDomainOutput">AssociateDomainOutput</a>)
+
+    AssociateWebsiteAuthorizationProvider(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderInput">AssociateWebsiteAuthorizationProviderInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderOutput">AssociateWebsiteAuthorizationProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateWebsiteAuthorizationProviderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderInput">AssociateWebsiteAuthorizationProviderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderOutput">AssociateWebsiteAuthorizationProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateWebsiteAuthorizationProviderRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderInput">AssociateWebsiteAuthorizationProviderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteAuthorizationProviderOutput">AssociateWebsiteAuthorizationProviderOutput</a>)
+
+    AssociateWebsiteCertificateAuthority(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityInput">AssociateWebsiteCertificateAuthorityInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityOutput">AssociateWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateWebsiteCertificateAuthorityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityInput">AssociateWebsiteCertificateAuthorityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityOutput">AssociateWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateWebsiteCertificateAuthorityRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityInput">AssociateWebsiteCertificateAuthorityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#AssociateWebsiteCertificateAuthorityOutput">AssociateWebsiteCertificateAuthorityOutput</a>)
+
+    CreateFleet(*<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFleetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFleetRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetInput">CreateFleetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#CreateFleetOutput">CreateFleetOutput</a>)
+
+    DeleteFleet(*<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFleetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFleetRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetInput">DeleteFleetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DeleteFleetOutput">DeleteFleetOutput</a>)
+
+    DescribeAuditStreamConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationInput">DescribeAuditStreamConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationOutput">DescribeAuditStreamConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAuditStreamConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationInput">DescribeAuditStreamConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationOutput">DescribeAuditStreamConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAuditStreamConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationInput">DescribeAuditStreamConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeAuditStreamConfigurationOutput">DescribeAuditStreamConfigurationOutput</a>)
+
+    DescribeCompanyNetworkConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationInput">DescribeCompanyNetworkConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationOutput">DescribeCompanyNetworkConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCompanyNetworkConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationInput">DescribeCompanyNetworkConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationOutput">DescribeCompanyNetworkConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCompanyNetworkConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationInput">DescribeCompanyNetworkConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeCompanyNetworkConfigurationOutput">DescribeCompanyNetworkConfigurationOutput</a>)
+
+    DescribeDevice(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceInput">DescribeDeviceInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceOutput">DescribeDeviceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeviceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceInput">DescribeDeviceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceOutput">DescribeDeviceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeviceRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceInput">DescribeDeviceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDeviceOutput">DescribeDeviceOutput</a>)
+
+    DescribeDevicePolicyConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationInput">DescribeDevicePolicyConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationOutput">DescribeDevicePolicyConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDevicePolicyConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationInput">DescribeDevicePolicyConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationOutput">DescribeDevicePolicyConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDevicePolicyConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationInput">DescribeDevicePolicyConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDevicePolicyConfigurationOutput">DescribeDevicePolicyConfigurationOutput</a>)
+
+    DescribeDomain(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>)
+
+    DescribeFleetMetadata(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataInput">DescribeFleetMetadataInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataOutput">DescribeFleetMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFleetMetadataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataInput">DescribeFleetMetadataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataOutput">DescribeFleetMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFleetMetadataRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataInput">DescribeFleetMetadataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeFleetMetadataOutput">DescribeFleetMetadataOutput</a>)
+
+    DescribeIdentityProviderConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationInput">DescribeIdentityProviderConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationOutput">DescribeIdentityProviderConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityProviderConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationInput">DescribeIdentityProviderConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationOutput">DescribeIdentityProviderConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityProviderConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationInput">DescribeIdentityProviderConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeIdentityProviderConfigurationOutput">DescribeIdentityProviderConfigurationOutput</a>)
+
+    DescribeWebsiteCertificateAuthority(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityInput">DescribeWebsiteCertificateAuthorityInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityOutput">DescribeWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWebsiteCertificateAuthorityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityInput">DescribeWebsiteCertificateAuthorityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityOutput">DescribeWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeWebsiteCertificateAuthorityRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityInput">DescribeWebsiteCertificateAuthorityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DescribeWebsiteCertificateAuthorityOutput">DescribeWebsiteCertificateAuthorityOutput</a>)
+
+    DisassociateDomain(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainInput">DisassociateDomainInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainOutput">DisassociateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainInput">DisassociateDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainOutput">DisassociateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateDomainRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainInput">DisassociateDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateDomainOutput">DisassociateDomainOutput</a>)
+
+    DisassociateWebsiteAuthorizationProvider(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderInput">DisassociateWebsiteAuthorizationProviderInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderOutput">DisassociateWebsiteAuthorizationProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateWebsiteAuthorizationProviderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderInput">DisassociateWebsiteAuthorizationProviderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderOutput">DisassociateWebsiteAuthorizationProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateWebsiteAuthorizationProviderRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderInput">DisassociateWebsiteAuthorizationProviderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteAuthorizationProviderOutput">DisassociateWebsiteAuthorizationProviderOutput</a>)
+
+    DisassociateWebsiteCertificateAuthority(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityInput">DisassociateWebsiteCertificateAuthorityInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityOutput">DisassociateWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateWebsiteCertificateAuthorityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityInput">DisassociateWebsiteCertificateAuthorityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityOutput">DisassociateWebsiteCertificateAuthorityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateWebsiteCertificateAuthorityRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityInput">DisassociateWebsiteCertificateAuthorityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#DisassociateWebsiteCertificateAuthorityOutput">DisassociateWebsiteCertificateAuthorityOutput</a>)
+
+    ListDevices(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesInput">ListDevicesInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesOutput">ListDevicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDevicesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesInput">ListDevicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesOutput">ListDevicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDevicesRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesInput">ListDevicesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesOutput">ListDevicesOutput</a>)
+
+    ListDevicesPages(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesInput">ListDevicesInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesOutput">ListDevicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDevicesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesInput">ListDevicesInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDevicesOutput">ListDevicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDomains(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>)
+
+    ListDomainsPages(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDomainsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFleets(*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFleetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFleetsRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>)
+
+    ListFleetsPages(*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFleetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsInput">ListFleetsInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListFleetsOutput">ListFleetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListWebsiteAuthorizationProviders(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersInput">ListWebsiteAuthorizationProvidersInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersOutput">ListWebsiteAuthorizationProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebsiteAuthorizationProvidersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersInput">ListWebsiteAuthorizationProvidersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersOutput">ListWebsiteAuthorizationProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebsiteAuthorizationProvidersRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersInput">ListWebsiteAuthorizationProvidersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersOutput">ListWebsiteAuthorizationProvidersOutput</a>)
+
+    ListWebsiteAuthorizationProvidersPages(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersInput">ListWebsiteAuthorizationProvidersInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersOutput">ListWebsiteAuthorizationProvidersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWebsiteAuthorizationProvidersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersInput">ListWebsiteAuthorizationProvidersInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteAuthorizationProvidersOutput">ListWebsiteAuthorizationProvidersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWebsiteCertificateAuthorities(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesInput">ListWebsiteCertificateAuthoritiesInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesOutput">ListWebsiteCertificateAuthoritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebsiteCertificateAuthoritiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesInput">ListWebsiteCertificateAuthoritiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesOutput">ListWebsiteCertificateAuthoritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebsiteCertificateAuthoritiesRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesInput">ListWebsiteCertificateAuthoritiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesOutput">ListWebsiteCertificateAuthoritiesOutput</a>)
+
+    ListWebsiteCertificateAuthoritiesPages(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesInput">ListWebsiteCertificateAuthoritiesInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesOutput">ListWebsiteCertificateAuthoritiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWebsiteCertificateAuthoritiesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesInput">ListWebsiteCertificateAuthoritiesInput</a>, func(*<a href="../index.html">worklink</a>.<a href="../index.html#ListWebsiteCertificateAuthoritiesOutput">ListWebsiteCertificateAuthoritiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    RestoreDomainAccess(*<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessInput">RestoreDomainAccessInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessOutput">RestoreDomainAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RestoreDomainAccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessInput">RestoreDomainAccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessOutput">RestoreDomainAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RestoreDomainAccessRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessInput">RestoreDomainAccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#RestoreDomainAccessOutput">RestoreDomainAccessOutput</a>)
+
+    RevokeDomainAccess(*<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessInput">RevokeDomainAccessInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessOutput">RevokeDomainAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RevokeDomainAccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessInput">RevokeDomainAccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessOutput">RevokeDomainAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RevokeDomainAccessRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessInput">RevokeDomainAccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#RevokeDomainAccessOutput">RevokeDomainAccessOutput</a>)
+
+    SignOutUser(*<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserInput">SignOutUserInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserOutput">SignOutUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SignOutUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserInput">SignOutUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserOutput">SignOutUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SignOutUserRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserInput">SignOutUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#SignOutUserOutput">SignOutUserOutput</a>)
+
+    TagResource(*<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateAuditStreamConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationInput">UpdateAuditStreamConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationOutput">UpdateAuditStreamConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAuditStreamConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationInput">UpdateAuditStreamConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationOutput">UpdateAuditStreamConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAuditStreamConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationInput">UpdateAuditStreamConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateAuditStreamConfigurationOutput">UpdateAuditStreamConfigurationOutput</a>)
+
+    UpdateCompanyNetworkConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationInput">UpdateCompanyNetworkConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationOutput">UpdateCompanyNetworkConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCompanyNetworkConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationInput">UpdateCompanyNetworkConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationOutput">UpdateCompanyNetworkConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCompanyNetworkConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationInput">UpdateCompanyNetworkConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateCompanyNetworkConfigurationOutput">UpdateCompanyNetworkConfigurationOutput</a>)
+
+    UpdateDevicePolicyConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationInput">UpdateDevicePolicyConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationOutput">UpdateDevicePolicyConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDevicePolicyConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationInput">UpdateDevicePolicyConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationOutput">UpdateDevicePolicyConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDevicePolicyConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationInput">UpdateDevicePolicyConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDevicePolicyConfigurationOutput">UpdateDevicePolicyConfigurationOutput</a>)
+
+    UpdateDomainMetadata(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataInput">UpdateDomainMetadataInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataOutput">UpdateDomainMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDomainMetadataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataInput">UpdateDomainMetadataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataOutput">UpdateDomainMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDomainMetadataRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataInput">UpdateDomainMetadataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateDomainMetadataOutput">UpdateDomainMetadataOutput</a>)
+
+    UpdateFleetMetadata(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataInput">UpdateFleetMetadataInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataOutput">UpdateFleetMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFleetMetadataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataInput">UpdateFleetMetadataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataOutput">UpdateFleetMetadataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFleetMetadataRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataInput">UpdateFleetMetadataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateFleetMetadataOutput">UpdateFleetMetadataOutput</a>)
+
+    UpdateIdentityProviderConfiguration(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationInput">UpdateIdentityProviderConfigurationInput</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationOutput">UpdateIdentityProviderConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIdentityProviderConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationInput">UpdateIdentityProviderConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationOutput">UpdateIdentityProviderConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIdentityProviderConfigurationRequest(*<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationInput">UpdateIdentityProviderConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">worklink</a>.<a href="../index.html#UpdateIdentityProviderConfigurationOutput">UpdateIdentityProviderConfigurationOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,3135 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>route53recoverycluster - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package route53recoverycluster
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/route53recoverycluster&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package route53recoverycluster provides the client and types for making API
+requests to Route53 Recovery Cluster.
+</p>
+<p>
+Welcome to the Amazon Route 53 Application Recovery Controller API Reference
+Guide for Recovery Control Data Plane .
+</p>
+<p>
+Recovery control in Route 53 Application Recovery Controller includes extremely
+reliable routing controls that enable you to recover applications by rerouting
+traffic, for example, across Availability Zones or AWS Regions. Routing controls
+are simple on/off switches hosted on a cluster. A cluster is a set of five
+redundant regional endpoints against which you can execute API calls to update
+or get the state of routing controls. You use routing controls to failover
+traffic to recover your application across Availability Zones or Regions.
+</p>
+<p>
+This API guide includes information about how to get and update routing control
+states in Route 53 Application Recovery Controller.
+</p>
+<p>
+For more information about Route 53 Application Recovery Controller, see
+the following:
+</p>
+<pre>* You can create clusters, routing controls, and control panels by using
+the control plane API for Recovery Control. For more information, see
+Amazon Route 53 Application Recovery Controller Recovery Control API Reference
+(<a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/">https://docs.aws.amazon.com/recovery-cluster/latest/api/</a>).
+
+* Route 53 Application Recovery Controller also provides continuous readiness
+checks to ensure that your applications are scaled to handle failover
+traffic. For more information about the related API actions, see Amazon
+Route 53 Application Recovery Controller Recovery Readiness API Reference
+(<a href="https://docs.aws.amazon.com/recovery-readiness/latest/api/">https://docs.aws.amazon.com/recovery-readiness/latest/api/</a>).
+
+* For more information about creating resilient applications and preparing
+for recovery readiness with Route 53 Application Recovery Controller,
+see the Amazon Route 53 Application Recovery Controller Developer Guide
+(r53recovery/latest/dg/).
+</pre>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02</a> for more information on this service.
+</p>
+<p>
+See route53recoverycluster package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/route53recoverycluster/">https://docs.aws.amazon.com/sdk-for-go/api/service/route53recoverycluster/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Route53 Recovery Cluster with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Route53 Recovery Cluster client Route53RecoveryCluster for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/route53recoverycluster/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/route53recoverycluster/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#RoutingControlState_Values">func RoutingControlState_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#ValidationExceptionReason_Values">func ValidationExceptionReason_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AccessDeniedException">type AccessDeniedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Code">func (s *AccessDeniedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Error">func (s *AccessDeniedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.GoString">func (s AccessDeniedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Message">func (s *AccessDeniedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.OrigErr">func (s *AccessDeniedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.RequestID">func (s *AccessDeniedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.StatusCode">func (s *AccessDeniedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.String">func (s AccessDeniedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ConflictException">type ConflictException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ConflictException.Code">func (s *ConflictException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Error">func (s *ConflictException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.GoString">func (s ConflictException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Message">func (s *ConflictException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.OrigErr">func (s *ConflictException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.RequestID">func (s *ConflictException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.StatusCode">func (s *ConflictException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.String">func (s ConflictException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EndpointTemporarilyUnavailableException">type EndpointTemporarilyUnavailableException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.Code">func (s *EndpointTemporarilyUnavailableException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.Error">func (s *EndpointTemporarilyUnavailableException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.GoString">func (s EndpointTemporarilyUnavailableException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.Message">func (s *EndpointTemporarilyUnavailableException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.OrigErr">func (s *EndpointTemporarilyUnavailableException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.RequestID">func (s *EndpointTemporarilyUnavailableException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.StatusCode">func (s *EndpointTemporarilyUnavailableException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointTemporarilyUnavailableException.String">func (s EndpointTemporarilyUnavailableException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRoutingControlStateInput">type GetRoutingControlStateInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateInput.GoString">func (s GetRoutingControlStateInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateInput.SetRoutingControlArn">func (s *GetRoutingControlStateInput) SetRoutingControlArn(v string) *GetRoutingControlStateInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateInput.String">func (s GetRoutingControlStateInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateInput.Validate">func (s *GetRoutingControlStateInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRoutingControlStateOutput">type GetRoutingControlStateOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateOutput.GoString">func (s GetRoutingControlStateOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateOutput.SetRoutingControlArn">func (s *GetRoutingControlStateOutput) SetRoutingControlArn(v string) *GetRoutingControlStateOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateOutput.SetRoutingControlState">func (s *GetRoutingControlStateOutput) SetRoutingControlState(v string) *GetRoutingControlStateOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoutingControlStateOutput.String">func (s GetRoutingControlStateOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Route53RecoveryCluster">type Route53RecoveryCluster</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *Route53RecoveryCluster</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.GetRoutingControlState">func (c *Route53RecoveryCluster) GetRoutingControlState(input *GetRoutingControlStateInput) (*GetRoutingControlStateOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.GetRoutingControlStateRequest">func (c *Route53RecoveryCluster) GetRoutingControlStateRequest(input *GetRoutingControlStateInput) (req *request.Request, output *GetRoutingControlStateOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.GetRoutingControlStateWithContext">func (c *Route53RecoveryCluster) GetRoutingControlStateWithContext(ctx aws.Context, input *GetRoutingControlStateInput, opts ...request.Option) (*GetRoutingControlStateOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlState">func (c *Route53RecoveryCluster) UpdateRoutingControlState(input *UpdateRoutingControlStateInput) (*UpdateRoutingControlStateOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlStateRequest">func (c *Route53RecoveryCluster) UpdateRoutingControlStateRequest(input *UpdateRoutingControlStateInput) (req *request.Request, output *UpdateRoutingControlStateOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlStateWithContext">func (c *Route53RecoveryCluster) UpdateRoutingControlStateWithContext(ctx aws.Context, input *UpdateRoutingControlStateInput, opts ...request.Option) (*UpdateRoutingControlStateOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlStates">func (c *Route53RecoveryCluster) UpdateRoutingControlStates(input *UpdateRoutingControlStatesInput) (*UpdateRoutingControlStatesOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlStatesRequest">func (c *Route53RecoveryCluster) UpdateRoutingControlStatesRequest(input *UpdateRoutingControlStatesInput) (req *request.Request, output *UpdateRoutingControlStatesOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Route53RecoveryCluster.UpdateRoutingControlStatesWithContext">func (c *Route53RecoveryCluster) UpdateRoutingControlStatesWithContext(ctx aws.Context, input *UpdateRoutingControlStatesInput, opts ...request.Option) (*UpdateRoutingControlStatesOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ThrottlingException">type ThrottlingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Code">func (s *ThrottlingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Error">func (s *ThrottlingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.GoString">func (s ThrottlingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Message">func (s *ThrottlingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.OrigErr">func (s *ThrottlingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.RequestID">func (s *ThrottlingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.StatusCode">func (s *ThrottlingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.String">func (s ThrottlingException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateRoutingControlStateEntry">type UpdateRoutingControlStateEntry</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateEntry.GoString">func (s UpdateRoutingControlStateEntry) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateEntry.SetRoutingControlArn">func (s *UpdateRoutingControlStateEntry) SetRoutingControlArn(v string) *UpdateRoutingControlStateEntry</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateEntry.SetRoutingControlState">func (s *UpdateRoutingControlStateEntry) SetRoutingControlState(v string) *UpdateRoutingControlStateEntry</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateEntry.String">func (s UpdateRoutingControlStateEntry) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateEntry.Validate">func (s *UpdateRoutingControlStateEntry) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateRoutingControlStateInput">type UpdateRoutingControlStateInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateInput.GoString">func (s UpdateRoutingControlStateInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateInput.SetRoutingControlArn">func (s *UpdateRoutingControlStateInput) SetRoutingControlArn(v string) *UpdateRoutingControlStateInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateInput.SetRoutingControlState">func (s *UpdateRoutingControlStateInput) SetRoutingControlState(v string) *UpdateRoutingControlStateInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateInput.String">func (s UpdateRoutingControlStateInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateInput.Validate">func (s *UpdateRoutingControlStateInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateRoutingControlStateOutput">type UpdateRoutingControlStateOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateOutput.GoString">func (s UpdateRoutingControlStateOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStateOutput.String">func (s UpdateRoutingControlStateOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateRoutingControlStatesInput">type UpdateRoutingControlStatesInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesInput.GoString">func (s UpdateRoutingControlStatesInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesInput.SetUpdateRoutingControlStateEntries">func (s *UpdateRoutingControlStatesInput) SetUpdateRoutingControlStateEntries(v []*UpdateRoutingControlStateEntry) *UpdateRoutingControlStatesInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesInput.String">func (s UpdateRoutingControlStatesInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesInput.Validate">func (s *UpdateRoutingControlStatesInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateRoutingControlStatesOutput">type UpdateRoutingControlStatesOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesOutput.GoString">func (s UpdateRoutingControlStatesOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateRoutingControlStatesOutput.String">func (s UpdateRoutingControlStatesOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationException">type ValidationException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationException.Code">func (s *ValidationException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Error">func (s *ValidationException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.GoString">func (s ValidationException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Message">func (s *ValidationException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.OrigErr">func (s *ValidationException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.RequestID">func (s *ValidationException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.StatusCode">func (s *ValidationException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.String">func (s ValidationException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationExceptionField">type ValidationExceptionField</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationExceptionField.GoString">func (s ValidationExceptionField) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationExceptionField.SetMessage">func (s *ValidationExceptionField) SetMessage(v string) *ValidationExceptionField</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationExceptionField.SetName">func (s *ValidationExceptionField) SetName(v string) *ValidationExceptionField</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationExceptionField.String">func (s ValidationExceptionField) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// RoutingControlStateOn is a RoutingControlState enum value</span>
+    <span id="RoutingControlStateOn">RoutingControlStateOn</span> = &#34;On&#34;
+
+    <span class="comment">// RoutingControlStateOff is a RoutingControlState enum value</span>
+    <span id="RoutingControlStateOff">RoutingControlStateOff</span> = &#34;Off&#34;
+)</pre>
+			
+				<p>
+Reason the request failed validation
+</p>
+
+				<pre>const (
+    <span class="comment">// ValidationExceptionReasonUnknownOperation is a ValidationExceptionReason enum value</span>
+    <span id="ValidationExceptionReasonUnknownOperation">ValidationExceptionReasonUnknownOperation</span> = &#34;unknownOperation&#34;
+
+    <span class="comment">// ValidationExceptionReasonCannotParse is a ValidationExceptionReason enum value</span>
+    <span id="ValidationExceptionReasonCannotParse">ValidationExceptionReasonCannotParse</span> = &#34;cannotParse&#34;
+
+    <span class="comment">// ValidationExceptionReasonFieldValidationFailed is a ValidationExceptionReason enum value</span>
+    <span id="ValidationExceptionReasonFieldValidationFailed">ValidationExceptionReasonFieldValidationFailed</span> = &#34;fieldValidationFailed&#34;
+
+    <span class="comment">// ValidationExceptionReasonOther is a ValidationExceptionReason enum value</span>
+    <span id="ValidationExceptionReasonOther">ValidationExceptionReasonOther</span> = &#34;other&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessDeniedException for service response error code</span>
+    <span class="comment">// &#34;AccessDeniedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You don&#39;t have sufficient permissions to query the routing control state.</span>
+    <span id="ErrCodeAccessDeniedException">ErrCodeAccessDeniedException</span> = &#34;AccessDeniedException&#34;
+
+    <span class="comment">// ErrCodeConflictException for service response error code</span>
+    <span class="comment">// &#34;ConflictException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was a conflict with this request. Try again.</span>
+    <span id="ErrCodeConflictException">ErrCodeConflictException</span> = &#34;ConflictException&#34;
+
+    <span class="comment">// ErrCodeEndpointTemporarilyUnavailableException for service response error code</span>
+    <span class="comment">// &#34;EndpointTemporarilyUnavailableException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The cluster endpoint isn&#39;t available. Try another cluster endpoint.</span>
+    <span id="ErrCodeEndpointTemporarilyUnavailableException">ErrCodeEndpointTemporarilyUnavailableException</span> = &#34;EndpointTemporarilyUnavailableException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was an unexpected error during processing of the request.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request references a routing control that was not found.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+
+    <span class="comment">// ErrCodeThrottlingException for service response error code</span>
+    <span class="comment">// &#34;ThrottlingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request was denied because of request throttling.</span>
+    <span id="ErrCodeThrottlingException">ErrCodeThrottlingException</span> = &#34;ThrottlingException&#34;
+
+    <span class="comment">// ErrCodeValidationException for service response error code</span>
+    <span class="comment">// &#34;ValidationException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was a validation error on the request.</span>
+    <span id="ErrCodeValidationException">ErrCodeValidationException</span> = &#34;ValidationException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;Route53 Recovery Cluster&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;route53-recovery-cluster&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;Route53 Recovery Cluster&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="RoutingControlState_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=41469:41511#L1175">RoutingControlState_Values</a>
+				<a class="permalink" href="index.html#RoutingControlState_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func RoutingControlState_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+RoutingControlState_Values returns all elements of the RoutingControlState enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidationExceptionReason_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=42313:42361#L1198">ValidationExceptionReason_Values</a>
+				<a class="permalink" href="index.html#ValidationExceptionReason_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ValidationExceptionReason_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ValidationExceptionReason_Values returns all elements of the ValidationExceptionReason enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AccessDeniedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=13859:14072#L319">AccessDeniedException</a>
+				<a class="permalink" href="index.html#AccessDeniedException">¶</a>
+				
+				
+			</h2>
+			<p>
+You don&#39;t have sufficient permissions to query the routing control state.
+</p>
+
+			<pre>type AccessDeniedException struct {
+<span id="AccessDeniedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessDeniedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessDeniedException.Code">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=14895:14940#L351">Code</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Error">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15265:15311#L368">Error</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.GoString">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=14652:14700#L340">GoString</a>
+					<a class="permalink" href="index.html#AccessDeniedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Message">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15022:15070#L356">Message</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.OrigErr">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15200:15247#L364">OrigErr</a>
+					<a class="permalink" href="index.html#AccessDeniedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.RequestID">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15603:15653#L378">RequestID</a>
+					<a class="permalink" href="index.html#AccessDeniedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.StatusCode">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15448:15496#L373">StatusCode</a>
+					<a class="permalink" href="index.html#AccessDeniedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.String">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=14322:14368#L331">String</a>
+					<a class="permalink" href="index.html#AccessDeniedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConflictException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=15746:16314#L383">ConflictException</a>
+				<a class="permalink" href="index.html#ConflictException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was a conflict with this request. Try again.
+</p>
+
+			<pre>type ConflictException struct {
+<span id="ConflictException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+    <span class="comment">// Description of the ConflictException error</span>
+<span id="ConflictException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Identifier of the resource in use</span>
+    <span class="comment">//</span>
+<span id="ConflictException.ResourceId"></span>    <span class="comment">// ResourceId is a required field</span>
+    ResourceId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Type of the resource in use</span>
+    <span class="comment">//</span>
+<span id="ConflictException.ResourceType"></span>    <span class="comment">// ResourceType is a required field</span>
+    ResourceType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceType&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ConflictException.Code">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17121:17162#L426">Code</a>
+					<a class="permalink" href="index.html#ConflictException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Error">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17475:17517#L443">Error</a>
+					<a class="permalink" href="index.html#ConflictException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.GoString">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=16890:16934#L415">GoString</a>
+					<a class="permalink" href="index.html#ConflictException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Message">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17240:17284#L431">Message</a>
+					<a class="permalink" href="index.html#ConflictException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.OrigErr">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17414:17457#L439">OrigErr</a>
+					<a class="permalink" href="index.html#ConflictException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.RequestID">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17821:17867#L453">RequestID</a>
+					<a class="permalink" href="index.html#ConflictException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.StatusCode">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17670:17714#L448">StatusCode</a>
+					<a class="permalink" href="index.html#ConflictException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.String">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=16564:16606#L406">String</a>
+					<a class="permalink" href="index.html#ConflictException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EndpointTemporarilyUnavailableException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=17977:18208#L458">EndpointTemporarilyUnavailableException</a>
+				<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException">¶</a>
+				
+				
+			</h2>
+			<p>
+The cluster endpoint isn&#39;t available. Try another cluster endpoint.
+</p>
+
+			<pre>type EndpointTemporarilyUnavailableException struct {
+<span id="EndpointTemporarilyUnavailableException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="EndpointTemporarilyUnavailableException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.Code">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19103:19166#L490">Code</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.Error">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19545:19609#L507">Error</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.GoString">func (EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=18806:18872#L479">GoString</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.Message">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19266:19332#L495">Message</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.OrigErr">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19462:19527#L503">OrigErr</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.RequestID">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19919:19987#L517">RequestID</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.StatusCode">func (*EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=19746:19812#L512">StatusCode</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointTemporarilyUnavailableException.String">func (EndpointTemporarilyUnavailableException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=18458:18522#L470">String</a>
+					<a class="permalink" href="index.html#EndpointTemporarilyUnavailableException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndpointTemporarilyUnavailableException">EndpointTemporarilyUnavailableException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRoutingControlStateInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=20026:20315#L521">GetRoutingControlStateInput</a>
+				<a class="permalink" href="index.html#GetRoutingControlStateInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRoutingControlStateInput struct {
+
+    <span class="comment">// The Amazon Resource Number (ARN) for the routing control that you want to</span>
+    <span class="comment">// get the state for.</span>
+    <span class="comment">//</span>
+<span id="GetRoutingControlStateInput.RoutingControlArn"></span>    <span class="comment">// RoutingControlArn is a required field</span>
+    RoutingControlArn *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRoutingControlStateInput.GoString">func (GetRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=20901:20955#L545">GoString</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateInput.SetRoutingControlArn">func (*GetRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=21580:21677#L566">SetRoutingControlArn</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateInput.SetRoutingControlArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) SetRoutingControlArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a></pre>
+				<p>
+SetRoutingControlArn sets the RoutingControlArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateInput.String">func (GetRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=20565:20617#L536">String</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateInput.Validate">func (*GetRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=21056:21110#L550">Validate</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRoutingControlStateOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=21719:22137#L571">GetRoutingControlStateOutput</a>
+				<a class="permalink" href="index.html#GetRoutingControlStateOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRoutingControlStateOutput struct {
+
+    <span class="comment">// The Amazon Resource Number (ARN) of the response.</span>
+    <span class="comment">//</span>
+<span id="GetRoutingControlStateOutput.RoutingControlArn"></span>    <span class="comment">// RoutingControlArn is a required field</span>
+    RoutingControlArn *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The state of the routing control.</span>
+    <span class="comment">//</span>
+<span id="GetRoutingControlStateOutput.RoutingControlState"></span>    <span class="comment">// RoutingControlState is a required field</span>
+    RoutingControlState *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;RoutingControlState&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRoutingControlStateOutput.GoString">func (GetRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=22724:22779#L599">GoString</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateOutput.SetRoutingControlArn">func (*GetRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=22870:22969#L604">SetRoutingControlArn</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateOutput.SetRoutingControlArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>) SetRoutingControlArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a></pre>
+				<p>
+SetRoutingControlArn sets the RoutingControlArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateOutput.SetRoutingControlState">func (*GetRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=23081:23182#L610">SetRoutingControlState</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateOutput.SetRoutingControlState">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>) SetRoutingControlState(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a></pre>
+				<p>
+SetRoutingControlState sets the RoutingControlState field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoutingControlStateOutput.String">func (GetRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=22387:22440#L590">String</a>
+					<a class="permalink" href="index.html#GetRoutingControlStateOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=23293:23646#L616">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was an unexpected error during processing of the request.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Advice to clients on when the call can be safely retried</span>
+<span id="InternalServerException.RetryAfterSeconds"></span>    RetryAfterSeconds *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;retryAfterSeconds&#34; type:&#34;integer&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=24477:24524#L651">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=24855:24903#L668">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=24228:24278#L640">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=24608:24658#L656">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=24788:24837#L664">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=25213:25265#L678">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=25056:25106#L673">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=23896:23944#L631">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=25368:25933#L683">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+The request references a routing control that was not found.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Hypothetical resource identifier that was not found</span>
+    <span class="comment">//</span>
+<span id="ResourceNotFoundException.ResourceId"></span>    <span class="comment">// ResourceId is a required field</span>
+    ResourceId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Hypothetical resource type that was not found</span>
+    <span class="comment">//</span>
+<span id="ResourceNotFoundException.ResourceType"></span>    <span class="comment">// ResourceType is a required field</span>
+    ResourceType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceType&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=26772:26821#L725">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=27158:27208#L742">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=26517:26569#L714">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=26907:26959#L730">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=27089:27140#L738">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=27520:27574#L752">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=27361:27413#L747">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=26183:26233#L705">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Route53RecoveryCluster">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/service.go?s=746:800#L11">Route53RecoveryCluster</a>
+				<a class="permalink" href="index.html#Route53RecoveryCluster">¶</a>
+				
+				
+			</h2>
+			<p>
+Route53RecoveryCluster provides the API operation methods for making requests to
+Route53 Recovery Cluster. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+Route53RecoveryCluster methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type Route53RecoveryCluster struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/service.go?s=1849:1927#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a></pre>
+				<p>
+New creates a new instance of the Route53RecoveryCluster client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a Route53RecoveryCluster client from just a session.
+svc := route53recoverycluster.New(mySession)
+
+// Create a Route53RecoveryCluster client with additional configuration
+svc := route53recoverycluster.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Route53RecoveryCluster.GetRoutingControlState">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=3837:3967#L89">GetRoutingControlState</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.GetRoutingControlState">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) GetRoutingControlState(input *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) (*<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRoutingControlState API operation for Route53 Recovery Cluster.
+</p>
+<p>
+Get the state for a routing control. A routing control is a simple on/off
+switch that you can use to route traffic to cells. When the state is On,
+traffic flows to a cell. When it&#39;s off, traffic does not flow.
+</p>
+<p>
+Before you can create a routing control, you first must create a cluster
+to host the control. For more information, see CreateCluster (<a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster.html">https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster.html</a>).
+Access one of the endpoints for the cluster to get or update the routing
+control state to redirect traffic.
+</p>
+<p>
+For more information about working with routing controls, see Routing control
+(<a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html</a>)
+in the Route 53 Application Recovery Controller Developer Guide.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Route53 Recovery Cluster&#39;s
+API operation GetRoutingControlState for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* AccessDeniedException
+You don&#39;t have sufficient permissions to query the routing control state.
+
+* InternalServerException
+There was an unexpected error during processing of the request.
+
+* ResourceNotFoundException
+The request references a routing control that was not found.
+
+* ValidationException
+There was a validation error on the request.
+
+* ThrottlingException
+The request was denied because of request throttling.
+
+* EndpointTemporarilyUnavailableException
+The cluster endpoint isn&#39;t available. Try another cluster endpoint.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.GetRoutingControlStateRequest">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=1485:1644#L31">GetRoutingControlStateRequest</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.GetRoutingControlStateRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) GetRoutingControlStateRequest(input *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>)</pre>
+				<p>
+GetRoutingControlStateRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetRoutingControlState operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetRoutingControlState for more information on using the GetRoutingControlState
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetRoutingControlStateRequest method.
+req, resp := client.GetRoutingControlStateRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.GetRoutingControlStateWithContext">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=4558:4740#L103">GetRoutingControlStateWithContext</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.GetRoutingControlStateWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) GetRoutingControlStateWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetRoutingControlStateInput">GetRoutingControlStateInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetRoutingControlStateOutput">GetRoutingControlStateOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRoutingControlStateWithContext is the same as GetRoutingControlState with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetRoutingControlState for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlState">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=8248:8387#L193">UpdateRoutingControlState</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlState">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlState(input *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) (*<a href="index.html#UpdateRoutingControlStateOutput">UpdateRoutingControlStateOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateRoutingControlState API operation for Route53 Recovery Cluster.
+</p>
+<p>
+Set the state of the routing control to reroute traffic. You can set the
+value to be On or Off. When the state is On, traffic flows to a cell. When
+it&#39;s off, traffic does not flow.
+</p>
+<p>
+For more information about working with routing controls, see Routing control
+(<a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html</a>)
+in the Route 53 Application Recovery Controller Developer Guide.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Route53 Recovery Cluster&#39;s
+API operation UpdateRoutingControlState for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* AccessDeniedException
+You don&#39;t have sufficient permissions to query the routing control state.
+
+* InternalServerException
+There was an unexpected error during processing of the request.
+
+* ResourceNotFoundException
+The request references a routing control that was not found.
+
+* ValidationException
+There was a validation error on the request.
+
+* ThrottlingException
+The request was denied because of request throttling.
+
+* EndpointTemporarilyUnavailableException
+The cluster endpoint isn&#39;t available. Try another cluster endpoint.
+
+* ConflictException
+There was a conflict with this request. Try again.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlStateRequest">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=6045:6213#L136">UpdateRoutingControlStateRequest</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlStateRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlStateRequest(input *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#UpdateRoutingControlStateOutput">UpdateRoutingControlStateOutput</a>)</pre>
+				<p>
+UpdateRoutingControlStateRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the UpdateRoutingControlState operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See UpdateRoutingControlState for more information on using the UpdateRoutingControlState
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the UpdateRoutingControlStateRequest method.
+req, resp := client.UpdateRoutingControlStateRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlStateWithContext">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=8990:9181#L207">UpdateRoutingControlStateWithContext</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlStateWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlStateWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#UpdateRoutingControlStateOutput">UpdateRoutingControlStateOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateRoutingControlStateWithContext is the same as UpdateRoutingControlState with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See UpdateRoutingControlState for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlStates">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=12705:12847#L297">UpdateRoutingControlStates</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlStates">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlStates(input *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) (*<a href="index.html#UpdateRoutingControlStatesOutput">UpdateRoutingControlStatesOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateRoutingControlStates API operation for Route53 Recovery Cluster.
+</p>
+<p>
+Set multiple routing control states. You can set the value for each state
+to be On or Off. When the state is On, traffic flows to a cell. When it&#39;s
+off, traffic does not flow.
+</p>
+<p>
+For more information about working with routing controls, see Routing control
+(<a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html</a>)
+in the Route 53 Application Recovery Controller Developer Guide.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Route53 Recovery Cluster&#39;s
+API operation UpdateRoutingControlStates for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* AccessDeniedException
+You don&#39;t have sufficient permissions to query the routing control state.
+
+* InternalServerException
+There was an unexpected error during processing of the request.
+
+* ResourceNotFoundException
+The request references a routing control that was not found.
+
+* ValidationException
+There was a validation error on the request.
+
+* ThrottlingException
+The request was denied because of request throttling.
+
+* EndpointTemporarilyUnavailableException
+The cluster endpoint isn&#39;t available. Try another cluster endpoint.
+
+* ConflictException
+There was a conflict with this request. Try again.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlStatesRequest">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=10498:10669#L240">UpdateRoutingControlStatesRequest</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlStatesRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlStatesRequest(input *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#UpdateRoutingControlStatesOutput">UpdateRoutingControlStatesOutput</a>)</pre>
+				<p>
+UpdateRoutingControlStatesRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the UpdateRoutingControlStates operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See UpdateRoutingControlStates for more information on using the UpdateRoutingControlStates
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the UpdateRoutingControlStatesRequest method.
+req, resp := client.UpdateRoutingControlStatesRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates">https://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Route53RecoveryCluster.UpdateRoutingControlStatesWithContext">func (*Route53RecoveryCluster) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=13454:13648#L311">UpdateRoutingControlStatesWithContext</a>
+					<a class="permalink" href="index.html#Route53RecoveryCluster.UpdateRoutingControlStatesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#Route53RecoveryCluster">Route53RecoveryCluster</a>) UpdateRoutingControlStatesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#UpdateRoutingControlStatesOutput">UpdateRoutingControlStatesOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateRoutingControlStatesWithContext is the same as UpdateRoutingControlStates with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See UpdateRoutingControlStates for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ThrottlingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=27670:28019#L757">ThrottlingException</a>
+				<a class="permalink" href="index.html#ThrottlingException">¶</a>
+				
+				
+			</h2>
+			<p>
+The request was denied because of request throttling.
+</p>
+
+			<pre>type ThrottlingException struct {
+<span id="ThrottlingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ThrottlingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Advice to clients on when the call can be safely retried</span>
+<span id="ThrottlingException.RetryAfterSeconds"></span>    RetryAfterSeconds *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;retryAfterSeconds&#34; type:&#34;integer&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ThrottlingException.Code">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=28834:28877#L792">Code</a>
+					<a class="permalink" href="index.html#ThrottlingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Error">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=29196:29240#L809">Error</a>
+					<a class="permalink" href="index.html#ThrottlingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.GoString">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=28597:28643#L781">GoString</a>
+					<a class="permalink" href="index.html#ThrottlingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Message">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=28957:29003#L797">Message</a>
+					<a class="permalink" href="index.html#ThrottlingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.OrigErr">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=29133:29178#L805">OrigErr</a>
+					<a class="permalink" href="index.html#ThrottlingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.RequestID">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=29546:29594#L819">RequestID</a>
+					<a class="permalink" href="index.html#ThrottlingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.StatusCode">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=29393:29439#L814">StatusCode</a>
+					<a class="permalink" href="index.html#ThrottlingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.String">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=28269:28313#L772">String</a>
+					<a class="permalink" href="index.html#ThrottlingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateRoutingControlStateEntry">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=29661:30136#L824">UpdateRoutingControlStateEntry</a>
+				<a class="permalink" href="index.html#UpdateRoutingControlStateEntry">¶</a>
+				
+				
+			</h2>
+			<p>
+A routing control state.
+</p>
+
+			<pre>type UpdateRoutingControlStateEntry struct {
+
+    <span class="comment">// The Amazon Resource Number (ARN) for the routing control state entry.</span>
+    <span class="comment">//</span>
+<span id="UpdateRoutingControlStateEntry.RoutingControlArn"></span>    <span class="comment">// RoutingControlArn is a required field</span>
+    RoutingControlArn *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The routing control state in a set of routing control state entries.</span>
+    <span class="comment">//</span>
+<span id="UpdateRoutingControlStateEntry.RoutingControlState"></span>    <span class="comment">// RoutingControlState is a required field</span>
+    RoutingControlState *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;RoutingControlState&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateRoutingControlStateEntry.GoString">func (UpdateRoutingControlStateEntry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=30725:30782#L852">GoString</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateEntry.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateEntry.SetRoutingControlArn">func (*UpdateRoutingControlStateEntry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=31523:31626#L876">SetRoutingControlArn</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateEntry.SetRoutingControlArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) SetRoutingControlArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a></pre>
+				<p>
+SetRoutingControlArn sets the RoutingControlArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateEntry.SetRoutingControlState">func (*UpdateRoutingControlStateEntry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=31738:31843#L882">SetRoutingControlState</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateEntry.SetRoutingControlState">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) SetRoutingControlState(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a></pre>
+				<p>
+SetRoutingControlState sets the RoutingControlState field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateEntry.String">func (UpdateRoutingControlStateEntry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=30386:30441#L843">String</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateEntry.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateEntry.Validate">func (*UpdateRoutingControlStateEntry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=30883:30940#L857">Validate</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateEntry.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateRoutingControlStateInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=31887:32396#L887">UpdateRoutingControlStateInput</a>
+				<a class="permalink" href="index.html#UpdateRoutingControlStateInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateRoutingControlStateInput struct {
+
+    <span class="comment">// The Amazon Resource Number (ARN) for the routing control that you want to</span>
+    <span class="comment">// update the state for.</span>
+    <span class="comment">//</span>
+<span id="UpdateRoutingControlStateInput.RoutingControlArn"></span>    <span class="comment">// RoutingControlArn is a required field</span>
+    RoutingControlArn *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The state of the routing control. You can set the value to be On or Off.</span>
+    <span class="comment">//</span>
+<span id="UpdateRoutingControlStateInput.RoutingControlState"></span>    <span class="comment">// RoutingControlState is a required field</span>
+    RoutingControlState *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;RoutingControlState&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateRoutingControlStateInput.GoString">func (UpdateRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=32985:33042#L916">GoString</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateInput.SetRoutingControlArn">func (*UpdateRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=33783:33886#L940">SetRoutingControlArn</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateInput.SetRoutingControlArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) SetRoutingControlArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a></pre>
+				<p>
+SetRoutingControlArn sets the RoutingControlArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateInput.SetRoutingControlState">func (*UpdateRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=33998:34103#L946">SetRoutingControlState</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateInput.SetRoutingControlState">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) SetRoutingControlState(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a></pre>
+				<p>
+SetRoutingControlState sets the RoutingControlState field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateInput.String">func (UpdateRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=32646:32701#L907">String</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateInput.Validate">func (*UpdateRoutingControlStateInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=33143:33200#L921">Validate</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStateInput">UpdateRoutingControlStateInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateRoutingControlStateOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=34147:34225#L951">UpdateRoutingControlStateOutput</a>
+				<a class="permalink" href="index.html#UpdateRoutingControlStateOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateRoutingControlStateOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateRoutingControlStateOutput.GoString">func (UpdateRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=34815:34873#L969">GoString</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateOutput">UpdateRoutingControlStateOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStateOutput.String">func (UpdateRoutingControlStateOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=34475:34531#L960">String</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStateOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStateOutput">UpdateRoutingControlStateOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateRoutingControlStatesInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=34898:35198#L973">UpdateRoutingControlStatesInput</a>
+				<a class="permalink" href="index.html#UpdateRoutingControlStatesInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateRoutingControlStatesInput struct {
+
+    <span class="comment">// A set of routing control entries that you want to update.</span>
+    <span class="comment">//</span>
+<span id="UpdateRoutingControlStatesInput.UpdateRoutingControlStateEntries"></span>    <span class="comment">// UpdateRoutingControlStateEntries is a required field</span>
+    UpdateRoutingControlStateEntries []*<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a> `type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateRoutingControlStatesInput.GoString">func (UpdateRoutingControlStatesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=35788:35846#L996">GoString</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStatesInput.SetUpdateRoutingControlStateEntries">func (*UpdateRoutingControlStatesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=36713:36860#L1024">SetUpdateRoutingControlStateEntries</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesInput.SetUpdateRoutingControlStateEntries">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) SetUpdateRoutingControlStateEntries(v []*<a href="index.html#UpdateRoutingControlStateEntry">UpdateRoutingControlStateEntry</a>) *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a></pre>
+				<p>
+SetUpdateRoutingControlStateEntries sets the UpdateRoutingControlStateEntries field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStatesInput.String">func (UpdateRoutingControlStatesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=35448:35504#L987">String</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStatesInput.Validate">func (*UpdateRoutingControlStatesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=35947:36005#L1001">Validate</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateRoutingControlStatesInput">UpdateRoutingControlStatesInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateRoutingControlStatesOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=36916:36995#L1029">UpdateRoutingControlStatesOutput</a>
+				<a class="permalink" href="index.html#UpdateRoutingControlStatesOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateRoutingControlStatesOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateRoutingControlStatesOutput.GoString">func (UpdateRoutingControlStatesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=37586:37645#L1047">GoString</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStatesOutput">UpdateRoutingControlStatesOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateRoutingControlStatesOutput.String">func (UpdateRoutingControlStatesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=37245:37302#L1038">String</a>
+					<a class="permalink" href="index.html#UpdateRoutingControlStatesOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateRoutingControlStatesOutput">UpdateRoutingControlStatesOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=37718:38183#L1052">ValidationException</a>
+				<a class="permalink" href="index.html#ValidationException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was a validation error on the request.
+</p>
+
+			<pre>type ValidationException struct {
+<span id="ValidationException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+    <span class="comment">// The fields that caused the error, if applicable</span>
+<span id="ValidationException.Fields"></span>    Fields []*<a href="index.html#ValidationExceptionField">ValidationExceptionField</a> `locationName:&#34;fields&#34; type:&#34;list&#34;`
+
+<span id="ValidationException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+<span id="ValidationException.Reason"></span>    <span class="comment">// Reason the request failed validation</span>
+    Reason *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reason&#34; type:&#34;string&#34; enum:&#34;ValidationExceptionReason&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationException.Code">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=38998:39041#L1090">Code</a>
+					<a class="permalink" href="index.html#ValidationException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Error">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39360:39404#L1107">Error</a>
+					<a class="permalink" href="index.html#ValidationException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.GoString">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=38761:38807#L1079">GoString</a>
+					<a class="permalink" href="index.html#ValidationException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Message">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39121:39167#L1095">Message</a>
+					<a class="permalink" href="index.html#ValidationException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.OrigErr">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39297:39342#L1103">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.RequestID">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39710:39758#L1117">RequestID</a>
+					<a class="permalink" href="index.html#ValidationException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.StatusCode">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39557:39603#L1112">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.String">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=38433:38477#L1070">String</a>
+					<a class="permalink" href="index.html#ValidationException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationExceptionField">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=39845:40222#L1122">ValidationExceptionField</a>
+				<a class="permalink" href="index.html#ValidationExceptionField">¶</a>
+				
+				
+			</h2>
+			<p>
+There was a validation error on the request.
+</p>
+
+			<pre>type ValidationExceptionField struct {
+
+    <span class="comment">// Information about the validation exception.</span>
+    <span class="comment">//</span>
+<span id="ValidationExceptionField.Message"></span>    <span class="comment">// Message is a required field</span>
+    Message *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The field that had the validation exception.</span>
+    <span class="comment">//</span>
+<span id="ValidationExceptionField.Name"></span>    <span class="comment">// Name is a required field</span>
+    Name *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;name&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationExceptionField.GoString">func (ValidationExceptionField) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=40805:40856#L1150">GoString</a>
+					<a class="permalink" href="index.html#ValidationExceptionField.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationExceptionField">ValidationExceptionField</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationExceptionField.SetMessage">func (*ValidationExceptionField) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=40927:41008#L1155">SetMessage</a>
+					<a class="permalink" href="index.html#ValidationExceptionField.SetMessage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationExceptionField">ValidationExceptionField</a>) SetMessage(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ValidationExceptionField">ValidationExceptionField</a></pre>
+				<p>
+SetMessage sets the Message field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationExceptionField.SetName">func (*ValidationExceptionField) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=41080:41158#L1161">SetName</a>
+					<a class="permalink" href="index.html#ValidationExceptionField.SetName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationExceptionField">ValidationExceptionField</a>) SetName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ValidationExceptionField">ValidationExceptionField</a></pre>
+				<p>
+SetName sets the Name field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationExceptionField.String">func (ValidationExceptionField) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/route53recoverycluster/api.go?s=40472:40521#L1141">String</a>
+					<a class="permalink" href="index.html#ValidationExceptionField.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationExceptionField">ValidationExceptionField</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="route53recoveryclusteriface/index.html">route53recoveryclusteriface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package route53recoveryclusteriface provides an interface to enable mocking the Route53 Recovery Cluster service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>accessanalyzeriface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package accessanalyzeriface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/accessanalyzer/accessanalyzeriface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package accessanalyzeriface provides an interface to enable mocking the Access Analyzer service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AccessAnalyzerAPI">type AccessAnalyzerAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/accessanalyzer/accessanalyzeriface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AccessAnalyzerAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/accessanalyzer/accessanalyzeriface/interface.go?s=2258:15372#L52">AccessAnalyzerAPI</a>
+				<a class="permalink" href="index.html#AccessAnalyzerAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+AccessAnalyzerAPI provides an interface to enable mocking the
+accessanalyzer.AccessAnalyzer service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Access Analyzer.
+func myFunc(svc accessanalyzeriface.AccessAnalyzerAPI) bool {
+    // Make svc.ApplyArchiveRule request
+}
+
+func main() {
+    sess := session.New()
+    svc := accessanalyzer.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockAccessAnalyzerClient struct {
+    accessanalyzeriface.AccessAnalyzerAPI
+}
+func (m *mockAccessAnalyzerClient) ApplyArchiveRule(input *accessanalyzer.ApplyArchiveRuleInput) (*accessanalyzer.ApplyArchiveRuleOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockAccessAnalyzerClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type AccessAnalyzerAPI interface {
+    ApplyArchiveRule(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleInput">ApplyArchiveRuleInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleOutput">ApplyArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ApplyArchiveRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleInput">ApplyArchiveRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleOutput">ApplyArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ApplyArchiveRuleRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleInput">ApplyArchiveRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ApplyArchiveRuleOutput">ApplyArchiveRuleOutput</a>)
+
+    CancelPolicyGeneration(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationInput">CancelPolicyGenerationInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationOutput">CancelPolicyGenerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelPolicyGenerationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationInput">CancelPolicyGenerationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationOutput">CancelPolicyGenerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelPolicyGenerationRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationInput">CancelPolicyGenerationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CancelPolicyGenerationOutput">CancelPolicyGenerationOutput</a>)
+
+    CreateAccessPreview(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewInput">CreateAccessPreviewInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewOutput">CreateAccessPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccessPreviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewInput">CreateAccessPreviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewOutput">CreateAccessPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccessPreviewRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewInput">CreateAccessPreviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAccessPreviewOutput">CreateAccessPreviewOutput</a>)
+
+    CreateAnalyzer(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerInput">CreateAnalyzerInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerOutput">CreateAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAnalyzerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerInput">CreateAnalyzerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerOutput">CreateAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAnalyzerRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerInput">CreateAnalyzerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateAnalyzerOutput">CreateAnalyzerOutput</a>)
+
+    CreateArchiveRule(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleInput">CreateArchiveRuleInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleOutput">CreateArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateArchiveRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleInput">CreateArchiveRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleOutput">CreateArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateArchiveRuleRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleInput">CreateArchiveRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#CreateArchiveRuleOutput">CreateArchiveRuleOutput</a>)
+
+    DeleteAnalyzer(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerInput">DeleteAnalyzerInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerOutput">DeleteAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAnalyzerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerInput">DeleteAnalyzerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerOutput">DeleteAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAnalyzerRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerInput">DeleteAnalyzerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteAnalyzerOutput">DeleteAnalyzerOutput</a>)
+
+    DeleteArchiveRule(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleInput">DeleteArchiveRuleInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleOutput">DeleteArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteArchiveRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleInput">DeleteArchiveRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleOutput">DeleteArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteArchiveRuleRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleInput">DeleteArchiveRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#DeleteArchiveRuleOutput">DeleteArchiveRuleOutput</a>)
+
+    GetAccessPreview(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewInput">GetAccessPreviewInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewOutput">GetAccessPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccessPreviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewInput">GetAccessPreviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewOutput">GetAccessPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccessPreviewRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewInput">GetAccessPreviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAccessPreviewOutput">GetAccessPreviewOutput</a>)
+
+    GetAnalyzedResource(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceInput">GetAnalyzedResourceInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceOutput">GetAnalyzedResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnalyzedResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceInput">GetAnalyzedResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceOutput">GetAnalyzedResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnalyzedResourceRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceInput">GetAnalyzedResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzedResourceOutput">GetAnalyzedResourceOutput</a>)
+
+    GetAnalyzer(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerInput">GetAnalyzerInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerOutput">GetAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnalyzerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerInput">GetAnalyzerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerOutput">GetAnalyzerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnalyzerRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerInput">GetAnalyzerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetAnalyzerOutput">GetAnalyzerOutput</a>)
+
+    GetArchiveRule(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleInput">GetArchiveRuleInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleOutput">GetArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetArchiveRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleInput">GetArchiveRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleOutput">GetArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetArchiveRuleRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleInput">GetArchiveRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetArchiveRuleOutput">GetArchiveRuleOutput</a>)
+
+    GetFinding(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingInput">GetFindingInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingOutput">GetFindingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingInput">GetFindingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingOutput">GetFindingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingInput">GetFindingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetFindingOutput">GetFindingOutput</a>)
+
+    GetGeneratedPolicy(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyInput">GetGeneratedPolicyInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyOutput">GetGeneratedPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGeneratedPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyInput">GetGeneratedPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyOutput">GetGeneratedPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGeneratedPolicyRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyInput">GetGeneratedPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#GetGeneratedPolicyOutput">GetGeneratedPolicyOutput</a>)
+
+    ListAccessPreviewFindings(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsInput">ListAccessPreviewFindingsInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsOutput">ListAccessPreviewFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccessPreviewFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsInput">ListAccessPreviewFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsOutput">ListAccessPreviewFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccessPreviewFindingsRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsInput">ListAccessPreviewFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsOutput">ListAccessPreviewFindingsOutput</a>)
+
+    ListAccessPreviewFindingsPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsInput">ListAccessPreviewFindingsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsOutput">ListAccessPreviewFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccessPreviewFindingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsInput">ListAccessPreviewFindingsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewFindingsOutput">ListAccessPreviewFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccessPreviews(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsInput">ListAccessPreviewsInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsOutput">ListAccessPreviewsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccessPreviewsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsInput">ListAccessPreviewsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsOutput">ListAccessPreviewsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccessPreviewsRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsInput">ListAccessPreviewsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsOutput">ListAccessPreviewsOutput</a>)
+
+    ListAccessPreviewsPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsInput">ListAccessPreviewsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsOutput">ListAccessPreviewsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccessPreviewsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsInput">ListAccessPreviewsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAccessPreviewsOutput">ListAccessPreviewsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAnalyzedResources(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesInput">ListAnalyzedResourcesInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesOutput">ListAnalyzedResourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnalyzedResourcesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesInput">ListAnalyzedResourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesOutput">ListAnalyzedResourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnalyzedResourcesRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesInput">ListAnalyzedResourcesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesOutput">ListAnalyzedResourcesOutput</a>)
+
+    ListAnalyzedResourcesPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesInput">ListAnalyzedResourcesInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesOutput">ListAnalyzedResourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAnalyzedResourcesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesInput">ListAnalyzedResourcesInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzedResourcesOutput">ListAnalyzedResourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAnalyzers(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersInput">ListAnalyzersInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersOutput">ListAnalyzersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnalyzersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersInput">ListAnalyzersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersOutput">ListAnalyzersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnalyzersRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersInput">ListAnalyzersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersOutput">ListAnalyzersOutput</a>)
+
+    ListAnalyzersPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersInput">ListAnalyzersInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersOutput">ListAnalyzersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAnalyzersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersInput">ListAnalyzersInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListAnalyzersOutput">ListAnalyzersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListArchiveRules(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesInput">ListArchiveRulesInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesOutput">ListArchiveRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListArchiveRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesInput">ListArchiveRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesOutput">ListArchiveRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListArchiveRulesRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesInput">ListArchiveRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesOutput">ListArchiveRulesOutput</a>)
+
+    ListArchiveRulesPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesInput">ListArchiveRulesInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesOutput">ListArchiveRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListArchiveRulesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesInput">ListArchiveRulesInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListArchiveRulesOutput">ListArchiveRulesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFindings(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>)
+
+    ListFindingsPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFindingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPolicyGenerations(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsInput">ListPolicyGenerationsInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsOutput">ListPolicyGenerationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPolicyGenerationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsInput">ListPolicyGenerationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsOutput">ListPolicyGenerationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPolicyGenerationsRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsInput">ListPolicyGenerationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsOutput">ListPolicyGenerationsOutput</a>)
+
+    ListPolicyGenerationsPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsInput">ListPolicyGenerationsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsOutput">ListPolicyGenerationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPolicyGenerationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsInput">ListPolicyGenerationsInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListPolicyGenerationsOutput">ListPolicyGenerationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    StartPolicyGeneration(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationInput">StartPolicyGenerationInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationOutput">StartPolicyGenerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPolicyGenerationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationInput">StartPolicyGenerationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationOutput">StartPolicyGenerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPolicyGenerationRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationInput">StartPolicyGenerationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartPolicyGenerationOutput">StartPolicyGenerationOutput</a>)
+
+    StartResourceScan(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanInput">StartResourceScanInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanOutput">StartResourceScanOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartResourceScanWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanInput">StartResourceScanInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanOutput">StartResourceScanOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartResourceScanRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanInput">StartResourceScanInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#StartResourceScanOutput">StartResourceScanOutput</a>)
+
+    TagResource(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateArchiveRule(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleInput">UpdateArchiveRuleInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleOutput">UpdateArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateArchiveRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleInput">UpdateArchiveRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleOutput">UpdateArchiveRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateArchiveRuleRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleInput">UpdateArchiveRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateArchiveRuleOutput">UpdateArchiveRuleOutput</a>)
+
+    UpdateFindings(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>)
+
+    ValidatePolicy(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyInput">ValidatePolicyInput</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyOutput">ValidatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ValidatePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyInput">ValidatePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyOutput">ValidatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ValidatePolicyRequest(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyInput">ValidatePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyOutput">ValidatePolicyOutput</a>)
+
+    ValidatePolicyPages(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyInput">ValidatePolicyInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyOutput">ValidatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ValidatePolicyPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyInput">ValidatePolicyInput</a>, func(*<a href="../index.html">accessanalyzer</a>.<a href="../index.html#ValidatePolicyOutput">ValidatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

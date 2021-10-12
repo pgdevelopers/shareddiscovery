@@ -1,0 +1,343 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>cognitoidentityiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cognitoidentityiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/cognitoidentity/cognitoidentityiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package cognitoidentityiface provides an interface to enable mocking the Amazon Cognito Identity service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CognitoIdentityAPI">type CognitoIdentityAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cognitoidentity/cognitoidentityiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CognitoIdentityAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cognitoidentity/cognitoidentityiface/interface.go?s=2286:11891#L52">CognitoIdentityAPI</a>
+				<a class="permalink" href="index.html#CognitoIdentityAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CognitoIdentityAPI provides an interface to enable mocking the
+cognitoidentity.CognitoIdentity service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Cognito Identity.
+func myFunc(svc cognitoidentityiface.CognitoIdentityAPI) bool {
+    // Make svc.CreateIdentityPool request
+}
+
+func main() {
+    sess := session.New()
+    svc := cognitoidentity.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCognitoIdentityClient struct {
+    cognitoidentityiface.CognitoIdentityAPI
+}
+func (m *mockCognitoIdentityClient) CreateIdentityPool(input *cognitoidentity.CreateIdentityPoolInput) (*cognitoidentity.IdentityPool, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCognitoIdentityClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CognitoIdentityAPI interface {
+    CreateIdentityPool(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#CreateIdentityPoolInput">CreateIdentityPoolInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateIdentityPoolWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#CreateIdentityPoolInput">CreateIdentityPoolInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateIdentityPoolRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#CreateIdentityPoolInput">CreateIdentityPoolInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>)
+
+    DeleteIdentities(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesInput">DeleteIdentitiesInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesOutput">DeleteIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentitiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesInput">DeleteIdentitiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesOutput">DeleteIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentitiesRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesInput">DeleteIdentitiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentitiesOutput">DeleteIdentitiesOutput</a>)
+
+    DeleteIdentityPool(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolInput">DeleteIdentityPoolInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolOutput">DeleteIdentityPoolOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityPoolWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolInput">DeleteIdentityPoolInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolOutput">DeleteIdentityPoolOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityPoolRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolInput">DeleteIdentityPoolInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DeleteIdentityPoolOutput">DeleteIdentityPoolOutput</a>)
+
+    DescribeIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityInput">DescribeIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityDescription">IdentityDescription</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityInput">DescribeIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityDescription">IdentityDescription</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityInput">DescribeIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityDescription">IdentityDescription</a>)
+
+    DescribeIdentityPool(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityPoolInput">DescribeIdentityPoolInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityPoolWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityPoolInput">DescribeIdentityPoolInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeIdentityPoolRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#DescribeIdentityPoolInput">DescribeIdentityPoolInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>)
+
+    GetCredentialsForIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityInput">GetCredentialsForIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityOutput">GetCredentialsForIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCredentialsForIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityInput">GetCredentialsForIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityOutput">GetCredentialsForIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCredentialsForIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityInput">GetCredentialsForIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetCredentialsForIdentityOutput">GetCredentialsForIdentityOutput</a>)
+
+    GetId(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdInput">GetIdInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdOutput">GetIdOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdInput">GetIdInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdOutput">GetIdOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdInput">GetIdInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdOutput">GetIdOutput</a>)
+
+    GetIdentityPoolRoles(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesInput">GetIdentityPoolRolesInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesOutput">GetIdentityPoolRolesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityPoolRolesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesInput">GetIdentityPoolRolesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesOutput">GetIdentityPoolRolesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityPoolRolesRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesInput">GetIdentityPoolRolesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetIdentityPoolRolesOutput">GetIdentityPoolRolesOutput</a>)
+
+    GetOpenIdToken(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenInput">GetOpenIdTokenInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenOutput">GetOpenIdTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOpenIdTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenInput">GetOpenIdTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenOutput">GetOpenIdTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOpenIdTokenRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenInput">GetOpenIdTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenOutput">GetOpenIdTokenOutput</a>)
+
+    GetOpenIdTokenForDeveloperIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityInput">GetOpenIdTokenForDeveloperIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityOutput">GetOpenIdTokenForDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOpenIdTokenForDeveloperIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityInput">GetOpenIdTokenForDeveloperIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityOutput">GetOpenIdTokenForDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOpenIdTokenForDeveloperIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityInput">GetOpenIdTokenForDeveloperIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetOpenIdTokenForDeveloperIdentityOutput">GetOpenIdTokenForDeveloperIdentityOutput</a>)
+
+    GetPrincipalTagAttributeMap(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapInput">GetPrincipalTagAttributeMapInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapOutput">GetPrincipalTagAttributeMapOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPrincipalTagAttributeMapWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapInput">GetPrincipalTagAttributeMapInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapOutput">GetPrincipalTagAttributeMapOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPrincipalTagAttributeMapRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapInput">GetPrincipalTagAttributeMapInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#GetPrincipalTagAttributeMapOutput">GetPrincipalTagAttributeMapOutput</a>)
+
+    ListIdentities(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentitiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentitiesRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>)
+
+    ListIdentityPools(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsInput">ListIdentityPoolsInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsOutput">ListIdentityPoolsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentityPoolsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsInput">ListIdentityPoolsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsOutput">ListIdentityPoolsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentityPoolsRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsInput">ListIdentityPoolsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsOutput">ListIdentityPoolsOutput</a>)
+
+    ListIdentityPoolsPages(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsInput">ListIdentityPoolsInput</a>, func(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsOutput">ListIdentityPoolsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListIdentityPoolsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsInput">ListIdentityPoolsInput</a>, func(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListIdentityPoolsOutput">ListIdentityPoolsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    LookupDeveloperIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityInput">LookupDeveloperIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityOutput">LookupDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LookupDeveloperIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityInput">LookupDeveloperIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityOutput">LookupDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LookupDeveloperIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityInput">LookupDeveloperIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#LookupDeveloperIdentityOutput">LookupDeveloperIdentityOutput</a>)
+
+    MergeDeveloperIdentities(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesInput">MergeDeveloperIdentitiesInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesOutput">MergeDeveloperIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    MergeDeveloperIdentitiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesInput">MergeDeveloperIdentitiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesOutput">MergeDeveloperIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    MergeDeveloperIdentitiesRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesInput">MergeDeveloperIdentitiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#MergeDeveloperIdentitiesOutput">MergeDeveloperIdentitiesOutput</a>)
+
+    SetIdentityPoolRoles(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesInput">SetIdentityPoolRolesInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesOutput">SetIdentityPoolRolesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityPoolRolesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesInput">SetIdentityPoolRolesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesOutput">SetIdentityPoolRolesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityPoolRolesRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesInput">SetIdentityPoolRolesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetIdentityPoolRolesOutput">SetIdentityPoolRolesOutput</a>)
+
+    SetPrincipalTagAttributeMap(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapInput">SetPrincipalTagAttributeMapInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapOutput">SetPrincipalTagAttributeMapOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetPrincipalTagAttributeMapWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapInput">SetPrincipalTagAttributeMapInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapOutput">SetPrincipalTagAttributeMapOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetPrincipalTagAttributeMapRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapInput">SetPrincipalTagAttributeMapInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#SetPrincipalTagAttributeMapOutput">SetPrincipalTagAttributeMapOutput</a>)
+
+    TagResource(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UnlinkDeveloperIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityInput">UnlinkDeveloperIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityOutput">UnlinkDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnlinkDeveloperIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityInput">UnlinkDeveloperIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityOutput">UnlinkDeveloperIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnlinkDeveloperIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityInput">UnlinkDeveloperIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkDeveloperIdentityOutput">UnlinkDeveloperIdentityOutput</a>)
+
+    UnlinkIdentity(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityInput">UnlinkIdentityInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityOutput">UnlinkIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnlinkIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityInput">UnlinkIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityOutput">UnlinkIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnlinkIdentityRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityInput">UnlinkIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UnlinkIdentityOutput">UnlinkIdentityOutput</a>)
+
+    UntagResource(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateIdentityPool(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIdentityPoolWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateIdentityPoolRequest(*<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cognitoidentity</a>.<a href="../index.html#IdentityPool">IdentityPool</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,3233 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>sso - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package sso
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/sso&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package sso provides the client and types for making API
+requests to AWS Single Sign-On.
+</p>
+<p>
+AWS Single Sign-On Portal is a web service that makes it easy for you to
+assign user access to AWS SSO resources such as the user portal. Users can
+get AWS account applications and roles assigned to them and get federated
+into the application.
+</p>
+<p>
+For general information about AWS SSO, see What is AWS Single Sign-On? (<a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html</a>)
+in the AWS SSO User Guide.
+</p>
+<p>
+This API reference guide describes the AWS SSO Portal operations that you
+can call programatically and includes detailed information on data types
+and errors.
+</p>
+<p>
+AWS provides SDKs that consist of libraries and sample code for various programming
+languages and platforms, such as Java, Ruby, .Net, iOS, or Android. The SDKs
+provide a convenient way to create programmatic access to AWS SSO and other
+AWS services. For more information about the AWS SDKs, including how to download
+and install them, see Tools for Amazon Web Services (<a href="http://aws.amazon.com/tools/">http://aws.amazon.com/tools/</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10</a> for more information on this service.
+</p>
+<p>
+See sso package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/sso/">https://docs.aws.amazon.com/sdk-for-go/api/service/sso/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS Single Sign-On with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS Single Sign-On client SSO for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/sso/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/sso/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AccountInfo">type AccountInfo</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccountInfo.GoString">func (s AccountInfo) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccountInfo.SetAccountId">func (s *AccountInfo) SetAccountId(v string) *AccountInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccountInfo.SetAccountName">func (s *AccountInfo) SetAccountName(v string) *AccountInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccountInfo.SetEmailAddress">func (s *AccountInfo) SetEmailAddress(v string) *AccountInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccountInfo.String">func (s AccountInfo) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRoleCredentialsInput">type GetRoleCredentialsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.GoString">func (s GetRoleCredentialsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.SetAccessToken">func (s *GetRoleCredentialsInput) SetAccessToken(v string) *GetRoleCredentialsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.SetAccountId">func (s *GetRoleCredentialsInput) SetAccountId(v string) *GetRoleCredentialsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.SetRoleName">func (s *GetRoleCredentialsInput) SetRoleName(v string) *GetRoleCredentialsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.String">func (s GetRoleCredentialsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsInput.Validate">func (s *GetRoleCredentialsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRoleCredentialsOutput">type GetRoleCredentialsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsOutput.GoString">func (s GetRoleCredentialsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsOutput.SetRoleCredentials">func (s *GetRoleCredentialsOutput) SetRoleCredentials(v *RoleCredentials) *GetRoleCredentialsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRoleCredentialsOutput.String">func (s GetRoleCredentialsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidRequestException">type InvalidRequestException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Code">func (s *InvalidRequestException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Error">func (s *InvalidRequestException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.GoString">func (s InvalidRequestException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Message">func (s *InvalidRequestException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.OrigErr">func (s *InvalidRequestException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.RequestID">func (s *InvalidRequestException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.StatusCode">func (s *InvalidRequestException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.String">func (s InvalidRequestException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListAccountRolesInput">type ListAccountRolesInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.GoString">func (s ListAccountRolesInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.SetAccessToken">func (s *ListAccountRolesInput) SetAccessToken(v string) *ListAccountRolesInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.SetAccountId">func (s *ListAccountRolesInput) SetAccountId(v string) *ListAccountRolesInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.SetMaxResults">func (s *ListAccountRolesInput) SetMaxResults(v int64) *ListAccountRolesInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.SetNextToken">func (s *ListAccountRolesInput) SetNextToken(v string) *ListAccountRolesInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.String">func (s ListAccountRolesInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesInput.Validate">func (s *ListAccountRolesInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListAccountRolesOutput">type ListAccountRolesOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesOutput.GoString">func (s ListAccountRolesOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesOutput.SetNextToken">func (s *ListAccountRolesOutput) SetNextToken(v string) *ListAccountRolesOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesOutput.SetRoleList">func (s *ListAccountRolesOutput) SetRoleList(v []*RoleInfo) *ListAccountRolesOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountRolesOutput.String">func (s ListAccountRolesOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListAccountsInput">type ListAccountsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.GoString">func (s ListAccountsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.SetAccessToken">func (s *ListAccountsInput) SetAccessToken(v string) *ListAccountsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.SetMaxResults">func (s *ListAccountsInput) SetMaxResults(v int64) *ListAccountsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.SetNextToken">func (s *ListAccountsInput) SetNextToken(v string) *ListAccountsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.String">func (s ListAccountsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsInput.Validate">func (s *ListAccountsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListAccountsOutput">type ListAccountsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListAccountsOutput.GoString">func (s ListAccountsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsOutput.SetAccountList">func (s *ListAccountsOutput) SetAccountList(v []*AccountInfo) *ListAccountsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsOutput.SetNextToken">func (s *ListAccountsOutput) SetNextToken(v string) *ListAccountsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListAccountsOutput.String">func (s ListAccountsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LogoutInput">type LogoutInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LogoutInput.GoString">func (s LogoutInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LogoutInput.SetAccessToken">func (s *LogoutInput) SetAccessToken(v string) *LogoutInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#LogoutInput.String">func (s LogoutInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LogoutInput.Validate">func (s *LogoutInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LogoutOutput">type LogoutOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LogoutOutput.GoString">func (s LogoutOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LogoutOutput.String">func (s LogoutOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RoleCredentials">type RoleCredentials</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.GoString">func (s RoleCredentials) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.SetAccessKeyId">func (s *RoleCredentials) SetAccessKeyId(v string) *RoleCredentials</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.SetExpiration">func (s *RoleCredentials) SetExpiration(v int64) *RoleCredentials</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.SetSecretAccessKey">func (s *RoleCredentials) SetSecretAccessKey(v string) *RoleCredentials</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.SetSessionToken">func (s *RoleCredentials) SetSessionToken(v string) *RoleCredentials</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleCredentials.String">func (s RoleCredentials) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RoleInfo">type RoleInfo</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RoleInfo.GoString">func (s RoleInfo) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleInfo.SetAccountId">func (s *RoleInfo) SetAccountId(v string) *RoleInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleInfo.SetRoleName">func (s *RoleInfo) SetRoleName(v string) *RoleInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#RoleInfo.String">func (s RoleInfo) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SSO">type SSO</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *SSO</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SSO.GetRoleCredentials">func (c *SSO) GetRoleCredentials(input *GetRoleCredentialsInput) (*GetRoleCredentialsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.GetRoleCredentialsRequest">func (c *SSO) GetRoleCredentialsRequest(input *GetRoleCredentialsInput) (req *request.Request, output *GetRoleCredentialsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.GetRoleCredentialsWithContext">func (c *SSO) GetRoleCredentialsWithContext(ctx aws.Context, input *GetRoleCredentialsInput, opts ...request.Option) (*GetRoleCredentialsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountRoles">func (c *SSO) ListAccountRoles(input *ListAccountRolesInput) (*ListAccountRolesOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountRolesPages">func (c *SSO) ListAccountRolesPages(input *ListAccountRolesInput, fn func(*ListAccountRolesOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountRolesPagesWithContext">func (c *SSO) ListAccountRolesPagesWithContext(ctx aws.Context, input *ListAccountRolesInput, fn func(*ListAccountRolesOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountRolesRequest">func (c *SSO) ListAccountRolesRequest(input *ListAccountRolesInput) (req *request.Request, output *ListAccountRolesOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountRolesWithContext">func (c *SSO) ListAccountRolesWithContext(ctx aws.Context, input *ListAccountRolesInput, opts ...request.Option) (*ListAccountRolesOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccounts">func (c *SSO) ListAccounts(input *ListAccountsInput) (*ListAccountsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountsPages">func (c *SSO) ListAccountsPages(input *ListAccountsInput, fn func(*ListAccountsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountsPagesWithContext">func (c *SSO) ListAccountsPagesWithContext(ctx aws.Context, input *ListAccountsInput, fn func(*ListAccountsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountsRequest">func (c *SSO) ListAccountsRequest(input *ListAccountsInput) (req *request.Request, output *ListAccountsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.ListAccountsWithContext">func (c *SSO) ListAccountsWithContext(ctx aws.Context, input *ListAccountsInput, opts ...request.Option) (*ListAccountsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.Logout">func (c *SSO) Logout(input *LogoutInput) (*LogoutOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.LogoutRequest">func (c *SSO) LogoutRequest(input *LogoutInput) (req *request.Request, output *LogoutOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSO.LogoutWithContext">func (c *SSO) LogoutWithContext(ctx aws.Context, input *LogoutInput, opts ...request.Option) (*LogoutOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TooManyRequestsException">type TooManyRequestsException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.Code">func (s *TooManyRequestsException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.Error">func (s *TooManyRequestsException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.GoString">func (s TooManyRequestsException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.Message">func (s *TooManyRequestsException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.OrigErr">func (s *TooManyRequestsException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.RequestID">func (s *TooManyRequestsException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.StatusCode">func (s *TooManyRequestsException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#TooManyRequestsException.String">func (s TooManyRequestsException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UnauthorizedException">type UnauthorizedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.Code">func (s *UnauthorizedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.Error">func (s *UnauthorizedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.GoString">func (s UnauthorizedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.Message">func (s *UnauthorizedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.OrigErr">func (s *UnauthorizedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.RequestID">func (s *UnauthorizedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.StatusCode">func (s *UnauthorizedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedException.String">func (s UnauthorizedException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInvalidRequestException for service response error code</span>
+    <span class="comment">// &#34;InvalidRequestException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that a problem occurred with the input to the request. For example,</span>
+    <span class="comment">// a required parameter might be missing or out of range.</span>
+    <span id="ErrCodeInvalidRequestException">ErrCodeInvalidRequestException</span> = &#34;InvalidRequestException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The specified resource doesn&#39;t exist.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+
+    <span class="comment">// ErrCodeTooManyRequestsException for service response error code</span>
+    <span class="comment">// &#34;TooManyRequestsException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the request is being made too frequently and is more than</span>
+    <span class="comment">// what the server can handle.</span>
+    <span id="ErrCodeTooManyRequestsException">ErrCodeTooManyRequestsException</span> = &#34;TooManyRequestsException&#34;
+
+    <span class="comment">// ErrCodeUnauthorizedException for service response error code</span>
+    <span class="comment">// &#34;UnauthorizedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the request is not authorized. This can happen due to an invalid</span>
+    <span class="comment">// access token in the request.</span>
+    <span id="ErrCodeUnauthorizedException">ErrCodeUnauthorizedException</span> = &#34;UnauthorizedException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;SSO&#34;        <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;portal.sso&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;SSO&#34;        <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AccountInfo">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=18709:19177#L493">AccountInfo</a>
+				<a class="permalink" href="index.html#AccountInfo">¶</a>
+				
+				
+			</h2>
+			<p>
+Provides information about your AWS account.
+</p>
+
+			<pre>type AccountInfo struct {
+
+    <span class="comment">// The identifier of the AWS account that is assigned to the user.</span>
+<span id="AccountInfo.AccountId"></span>    AccountId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;accountId&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The display name of the AWS account that is assigned to the user.</span>
+<span id="AccountInfo.AccountName"></span>    AccountName *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;accountName&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The email address of the AWS account that is assigned to the user.</span>
+<span id="AccountInfo.EmailAddress"></span>    EmailAddress *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;emailAddress&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccountInfo.GoString">func (AccountInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=19747:19785#L520">GoString</a>
+					<a class="permalink" href="index.html#AccountInfo.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccountInfo">AccountInfo</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccountInfo.SetAccountId">func (*AccountInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=19860:19917#L525">SetAccountId</a>
+					<a class="permalink" href="index.html#AccountInfo.SetAccountId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccountInfo">AccountInfo</a>) SetAccountId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#AccountInfo">AccountInfo</a></pre>
+				<p>
+SetAccountId sets the AccountId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccountInfo.SetAccountName">func (*AccountInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=20005:20064#L531">SetAccountName</a>
+					<a class="permalink" href="index.html#AccountInfo.SetAccountName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccountInfo">AccountInfo</a>) SetAccountName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#AccountInfo">AccountInfo</a></pre>
+				<p>
+SetAccountName sets the AccountName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccountInfo.SetEmailAddress">func (*AccountInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=20156:20216#L537">SetEmailAddress</a>
+					<a class="permalink" href="index.html#AccountInfo.SetEmailAddress">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccountInfo">AccountInfo</a>) SetEmailAddress(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#AccountInfo">AccountInfo</a></pre>
+				<p>
+SetEmailAddress sets the EmailAddress field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccountInfo.String">func (AccountInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=19427:19463#L511">String</a>
+					<a class="permalink" href="index.html#AccountInfo.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccountInfo">AccountInfo</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRoleCredentialsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=20253:21301#L542">GetRoleCredentialsInput</a>
+				<a class="permalink" href="index.html#GetRoleCredentialsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRoleCredentialsInput struct {
+
+    <span class="comment">// The token issued by the CreateToken API call. For more information, see CreateToken</span>
+    <span class="comment">// (https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html)</span>
+    <span class="comment">// in the AWS SSO OIDC API Reference Guide.</span>
+    <span class="comment">//</span>
+<span id="GetRoleCredentialsInput.AccessToken"></span>    <span class="comment">// AccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by GetRoleCredentialsInput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// AccessToken is a required field</span>
+    AccessToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; locationName:&#34;x-amz-sso_bearer_token&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// The identifier for the AWS account that is assigned to the user.</span>
+    <span class="comment">//</span>
+<span id="GetRoleCredentialsInput.AccountId"></span>    <span class="comment">// AccountId is a required field</span>
+    AccountId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;account_id&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The friendly name of the role that is assigned to the user.</span>
+    <span class="comment">//</span>
+<span id="GetRoleCredentialsInput.RoleName"></span>    <span class="comment">// RoleName is a required field</span>
+    RoleName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;role_name&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRoleCredentialsInput.GoString">func (GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=21883:21933#L581">GoString</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsInput.SetAccessToken">func (*GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=22564:22647#L605">SetAccessToken</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.SetAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) SetAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a></pre>
+				<p>
+SetAccessToken sets the AccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsInput.SetAccountId">func (*GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=22733:22814#L611">SetAccountId</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.SetAccountId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) SetAccountId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a></pre>
+				<p>
+SetAccountId sets the AccountId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsInput.SetRoleName">func (*GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=22896:22976#L617">SetRoleName</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.SetRoleName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) SetRoleName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a></pre>
+				<p>
+SetRoleName sets the RoleName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsInput.String">func (GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=21551:21599#L572">String</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsInput.Validate">func (*GetRoleCredentialsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=22034:22084#L586">Validate</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRoleCredentialsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=23009:23228#L622">GetRoleCredentialsOutput</a>
+				<a class="permalink" href="index.html#GetRoleCredentialsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRoleCredentialsOutput struct {
+
+    <span class="comment">// The credentials for the role that is assigned to the user.</span>
+<span id="GetRoleCredentialsOutput.RoleCredentials"></span>    RoleCredentials *<a href="index.html#RoleCredentials">RoleCredentials</a> `locationName:&#34;roleCredentials&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRoleCredentialsOutput.GoString">func (GetRoleCredentialsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=23811:23862#L643">GoString</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsOutput.SetRoleCredentials">func (*GetRoleCredentialsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=23949:24048#L648">SetRoleCredentials</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsOutput.SetRoleCredentials">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>) SetRoleCredentials(v *<a href="index.html#RoleCredentials">RoleCredentials</a>) *<a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a></pre>
+				<p>
+SetRoleCredentials sets the RoleCredentials field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRoleCredentialsOutput.String">func (GetRoleCredentialsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=23478:23527#L634">String</a>
+					<a class="permalink" href="index.html#GetRoleCredentialsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidRequestException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=24226:24441#L655">InvalidRequestException</a>
+				<a class="permalink" href="index.html#InvalidRequestException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that a problem occurred with the input to the request. For example,
+a required parameter might be missing or out of range.
+</p>
+
+			<pre>type InvalidRequestException struct {
+<span id="InvalidRequestException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidRequestException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidRequestException.Code">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25272:25319#L687">Code</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.Error">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25650:25698#L704">Error</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.GoString">func (InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25023:25073#L676">GoString</a>
+					<a class="permalink" href="index.html#InvalidRequestException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidRequestException">InvalidRequestException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.Message">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25403:25453#L692">Message</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.OrigErr">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25583:25632#L700">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidRequestException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.RequestID">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25992:26044#L714">RequestID</a>
+					<a class="permalink" href="index.html#InvalidRequestException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.StatusCode">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=25835:25885#L709">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidRequestException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.String">func (InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=24691:24739#L667">String</a>
+					<a class="permalink" href="index.html#InvalidRequestException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidRequestException">InvalidRequestException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListAccountRolesInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=26083:27257#L718">ListAccountRolesInput</a>
+				<a class="permalink" href="index.html#ListAccountRolesInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListAccountRolesInput struct {
+
+    <span class="comment">// The token issued by the CreateToken API call. For more information, see CreateToken</span>
+    <span class="comment">// (https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html)</span>
+    <span class="comment">// in the AWS SSO OIDC API Reference Guide.</span>
+    <span class="comment">//</span>
+<span id="ListAccountRolesInput.AccessToken"></span>    <span class="comment">// AccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by ListAccountRolesInput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// AccessToken is a required field</span>
+    AccessToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; locationName:&#34;x-amz-sso_bearer_token&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// The identifier for the AWS account that is assigned to the user.</span>
+    <span class="comment">//</span>
+<span id="ListAccountRolesInput.AccountId"></span>    <span class="comment">// AccountId is a required field</span>
+    AccountId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;account_id&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The number of items that clients can request per page.</span>
+<span id="ListAccountRolesInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;max_result&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The page token from the previous response output when you request subsequent</span>
+    <span class="comment">// pages.</span>
+<span id="ListAccountRolesInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;next_token&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListAccountRolesInput.GoString">func (ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=27837:27885#L759">GoString</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.SetAccessToken">func (*ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=28540:28619#L783">SetAccessToken</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.SetAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) SetAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a></pre>
+				<p>
+SetAccessToken sets the AccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.SetAccountId">func (*ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=28705:28782#L789">SetAccountId</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.SetAccountId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) SetAccountId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a></pre>
+				<p>
+SetAccountId sets the AccountId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.SetMaxResults">func (*ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=28868:28945#L795">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.SetNextToken">func (*ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=29030:29107#L801">SetNextToken</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.String">func (ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=27507:27553#L750">String</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesInput.Validate">func (*ListAccountRolesInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=27986:28034#L764">Validate</a>
+					<a class="permalink" href="index.html#ListAccountRolesInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListAccountRolesOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=29141:29507#L806">ListAccountRolesOutput</a>
+				<a class="permalink" href="index.html#ListAccountRolesOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListAccountRolesOutput struct {
+
+    <span class="comment">// The page token client that is used to retrieve the list of accounts.</span>
+<span id="ListAccountRolesOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;nextToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A paginated response with the list of roles and the next token if more results</span>
+    <span class="comment">// are available.</span>
+<span id="ListAccountRolesOutput.RoleList"></span>    RoleList []*<a href="index.html#RoleInfo">RoleInfo</a> `locationName:&#34;roleList&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListAccountRolesOutput.GoString">func (ListAccountRolesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=30088:30137#L831">GoString</a>
+					<a class="permalink" href="index.html#ListAccountRolesOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesOutput.SetNextToken">func (*ListAccountRolesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=30212:30291#L836">SetNextToken</a>
+					<a class="permalink" href="index.html#ListAccountRolesOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesOutput.SetRoleList">func (*ListAccountRolesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=30373:30456#L842">SetRoleList</a>
+					<a class="permalink" href="index.html#ListAccountRolesOutput.SetRoleList">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>) SetRoleList(v []*<a href="index.html#RoleInfo">RoleInfo</a>) *<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a></pre>
+				<p>
+SetRoleList sets the RoleList field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountRolesOutput.String">func (ListAccountRolesOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=29757:29804#L822">String</a>
+					<a class="permalink" href="index.html#ListAccountRolesOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListAccountsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=30488:31468#L847">ListAccountsInput</a>
+				<a class="permalink" href="index.html#ListAccountsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListAccountsInput struct {
+
+    <span class="comment">// The token issued by the CreateToken API call. For more information, see CreateToken</span>
+    <span class="comment">// (https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html)</span>
+    <span class="comment">// in the AWS SSO OIDC API Reference Guide.</span>
+    <span class="comment">//</span>
+<span id="ListAccountsInput.AccessToken"></span>    <span class="comment">// AccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by ListAccountsInput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// AccessToken is a required field</span>
+    AccessToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; locationName:&#34;x-amz-sso_bearer_token&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// This is the number of items clients can request per page.</span>
+<span id="ListAccountsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;max_result&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// (Optional) When requesting subsequent pages, this is the page token from</span>
+    <span class="comment">// the previous response output.</span>
+<span id="ListAccountsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;next_token&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListAccountsInput.GoString">func (ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=32044:32088#L883">GoString</a>
+					<a class="permalink" href="index.html#ListAccountsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountsInput">ListAccountsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsInput.SetAccessToken">func (*ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=32645:32716#L904">SetAccessToken</a>
+					<a class="permalink" href="index.html#ListAccountsInput.SetAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) SetAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountsInput">ListAccountsInput</a></pre>
+				<p>
+SetAccessToken sets the AccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsInput.SetMaxResults">func (*ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=32804:32873#L910">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListAccountsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListAccountsInput">ListAccountsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsInput.SetNextToken">func (*ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=32958:33027#L916">SetNextToken</a>
+					<a class="permalink" href="index.html#ListAccountsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountsInput">ListAccountsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsInput.String">func (ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=31718:31760#L874">String</a>
+					<a class="permalink" href="index.html#ListAccountsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountsInput">ListAccountsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsInput.Validate">func (*ListAccountsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=32189:32233#L888">Validate</a>
+					<a class="permalink" href="index.html#ListAccountsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListAccountsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=33061:33446#L921">ListAccountsOutput</a>
+				<a class="permalink" href="index.html#ListAccountsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListAccountsOutput struct {
+
+    <span class="comment">// A paginated response with the list of account information and the next token</span>
+    <span class="comment">// if more results are available.</span>
+<span id="ListAccountsOutput.AccountList"></span>    AccountList []*<a href="index.html#AccountInfo">AccountInfo</a> `locationName:&#34;accountList&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The page token client that is used to retrieve the list of accounts.</span>
+<span id="ListAccountsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;nextToken&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListAccountsOutput.GoString">func (ListAccountsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=34023:34068#L946">GoString</a>
+					<a class="permalink" href="index.html#ListAccountsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountsOutput">ListAccountsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsOutput.SetAccountList">func (*ListAccountsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=34147:34228#L951">SetAccountList</a>
+					<a class="permalink" href="index.html#ListAccountsOutput.SetAccountList">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>) SetAccountList(v []*<a href="index.html#AccountInfo">AccountInfo</a>) *<a href="index.html#ListAccountsOutput">ListAccountsOutput</a></pre>
+				<p>
+SetAccountList sets the AccountList field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsOutput.SetNextToken">func (*ListAccountsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=34313:34384#L957">SetNextToken</a>
+					<a class="permalink" href="index.html#ListAccountsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListAccountsOutput">ListAccountsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListAccountsOutput.String">func (ListAccountsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=33696:33739#L937">String</a>
+					<a class="permalink" href="index.html#ListAccountsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListAccountsOutput">ListAccountsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogoutInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=34418:35034#L962">LogoutInput</a>
+				<a class="permalink" href="index.html#LogoutInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type LogoutInput struct {
+
+    <span class="comment">// The token issued by the CreateToken API call. For more information, see CreateToken</span>
+    <span class="comment">// (https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/API_CreateToken.html)</span>
+    <span class="comment">// in the AWS SSO OIDC API Reference Guide.</span>
+    <span class="comment">//</span>
+<span id="LogoutInput.AccessToken"></span>    <span class="comment">// AccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by LogoutInput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// AccessToken is a required field</span>
+    AccessToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; locationName:&#34;x-amz-sso_bearer_token&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LogoutInput.GoString">func (LogoutInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=35604:35642#L991">GoString</a>
+					<a class="permalink" href="index.html#LogoutInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LogoutInput">LogoutInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogoutInput.SetAccessToken">func (*LogoutInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=36071:36130#L1009">SetAccessToken</a>
+					<a class="permalink" href="index.html#LogoutInput.SetAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LogoutInput">LogoutInput</a>) SetAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#LogoutInput">LogoutInput</a></pre>
+				<p>
+SetAccessToken sets the AccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogoutInput.String">func (LogoutInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=35284:35320#L982">String</a>
+					<a class="permalink" href="index.html#LogoutInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LogoutInput">LogoutInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogoutInput.Validate">func (*LogoutInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=35743:35781#L996">Validate</a>
+					<a class="permalink" href="index.html#LogoutInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LogoutInput">LogoutInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogoutOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=36166:36225#L1014">LogoutOutput</a>
+				<a class="permalink" href="index.html#LogoutOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type LogoutOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LogoutOutput.GoString">func (LogoutOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=36796:36835#L1032">GoString</a>
+					<a class="permalink" href="index.html#LogoutOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LogoutOutput">LogoutOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogoutOutput.String">func (LogoutOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=36475:36512#L1023">String</a>
+					<a class="permalink" href="index.html#LogoutOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LogoutOutput">LogoutOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=36901:37118#L1037">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+The specified resource doesn&#39;t exist.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=37957:38006#L1069">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38343:38393#L1086">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=37702:37754#L1058">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38092:38144#L1074">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38274:38325#L1082">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38689:38743#L1096">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38530:38582#L1091">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=37368:37418#L1049">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RoleCredentials">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=38867:40463#L1102">RoleCredentials</a>
+				<a class="permalink" href="index.html#RoleCredentials">¶</a>
+				
+				
+			</h2>
+			<p>
+Provides information about the role credentials that are assigned to the
+user.
+</p>
+
+			<pre>type RoleCredentials struct {
+
+    <span class="comment">// The identifier used for the temporary security credentials. For more information,</span>
+    <span class="comment">// see Using Temporary Security Credentials to Request Access to AWS Resources</span>
+    <span class="comment">// (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html)</span>
+    <span class="comment">// in the AWS IAM User Guide.</span>
+<span id="RoleCredentials.AccessKeyId"></span>    AccessKeyId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;accessKeyId&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The date on which temporary security credentials expire.</span>
+<span id="RoleCredentials.Expiration"></span>    Expiration *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;expiration&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The key that is used to sign the request. For more information, see Using</span>
+    <span class="comment">// Temporary Security Credentials to Request Access to AWS Resources (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html)</span>
+    <span class="comment">// in the AWS IAM User Guide.</span>
+    <span class="comment">//</span>
+<span id="RoleCredentials.SecretAccessKey"></span>    <span class="comment">// SecretAccessKey is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by RoleCredentials&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    SecretAccessKey *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;secretAccessKey&#34; type:&#34;string&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// The token used for temporary credentials. For more information, see Using</span>
+    <span class="comment">// Temporary Security Credentials to Request Access to AWS Resources (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html)</span>
+    <span class="comment">// in the AWS IAM User Guide.</span>
+    <span class="comment">//</span>
+<span id="RoleCredentials.SessionToken"></span>    <span class="comment">// SessionToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by RoleCredentials&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    SessionToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;sessionToken&#34; type:&#34;string&#34; sensitive:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RoleCredentials.GoString">func (RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41037:41079#L1147">GoString</a>
+					<a class="permalink" href="index.html#RoleCredentials.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RoleCredentials">RoleCredentials</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleCredentials.SetAccessKeyId">func (*RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41158:41225#L1152">SetAccessKeyId</a>
+					<a class="permalink" href="index.html#RoleCredentials.SetAccessKeyId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleCredentials">RoleCredentials</a>) SetAccessKeyId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RoleCredentials">RoleCredentials</a></pre>
+				<p>
+SetAccessKeyId sets the AccessKeyId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleCredentials.SetExpiration">func (*RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41313:41378#L1158">SetExpiration</a>
+					<a class="permalink" href="index.html#RoleCredentials.SetExpiration">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleCredentials">RoleCredentials</a>) SetExpiration(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#RoleCredentials">RoleCredentials</a></pre>
+				<p>
+SetExpiration sets the Expiration field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleCredentials.SetSecretAccessKey">func (*RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41475:41546#L1164">SetSecretAccessKey</a>
+					<a class="permalink" href="index.html#RoleCredentials.SetSecretAccessKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleCredentials">RoleCredentials</a>) SetSecretAccessKey(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RoleCredentials">RoleCredentials</a></pre>
+				<p>
+SetSecretAccessKey sets the SecretAccessKey field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleCredentials.SetSessionToken">func (*RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41642:41710#L1170">SetSessionToken</a>
+					<a class="permalink" href="index.html#RoleCredentials.SetSessionToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleCredentials">RoleCredentials</a>) SetSessionToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RoleCredentials">RoleCredentials</a></pre>
+				<p>
+SetSessionToken sets the SessionToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleCredentials.String">func (RoleCredentials) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=40713:40753#L1138">String</a>
+					<a class="permalink" href="index.html#RoleCredentials.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RoleCredentials">RoleCredentials</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RoleInfo">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=41816:42115#L1176">RoleInfo</a>
+				<a class="permalink" href="index.html#RoleInfo">¶</a>
+				
+				
+			</h2>
+			<p>
+Provides information about the role that is assigned to the user.
+</p>
+
+			<pre>type RoleInfo struct {
+
+    <span class="comment">// The identifier of the AWS account assigned to the user.</span>
+<span id="RoleInfo.AccountId"></span>    AccountId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;accountId&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The friendly name of the role that is assigned to the user.</span>
+<span id="RoleInfo.RoleName"></span>    RoleName *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;roleName&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RoleInfo.GoString">func (RoleInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=42682:42717#L1200">GoString</a>
+					<a class="permalink" href="index.html#RoleInfo.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RoleInfo">RoleInfo</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleInfo.SetAccountId">func (*RoleInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=42792:42843#L1205">SetAccountId</a>
+					<a class="permalink" href="index.html#RoleInfo.SetAccountId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleInfo">RoleInfo</a>) SetAccountId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RoleInfo">RoleInfo</a></pre>
+				<p>
+SetAccountId sets the AccountId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleInfo.SetRoleName">func (*RoleInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=42925:42975#L1211">SetRoleName</a>
+					<a class="permalink" href="index.html#RoleInfo.SetRoleName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RoleInfo">RoleInfo</a>) SetRoleName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RoleInfo">RoleInfo</a></pre>
+				<p>
+SetRoleName sets the RoleName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RoleInfo.String">func (RoleInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=42365:42398#L1191">String</a>
+					<a class="permalink" href="index.html#RoleInfo.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RoleInfo">RoleInfo</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SSO">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/service.go?s=684:719#L11">SSO</a>
+				<a class="permalink" href="index.html#SSO">¶</a>
+				
+				
+			</h2>
+			<p>
+SSO provides the API operation methods for making requests to
+AWS Single Sign-On. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+SSO methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type SSO struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/service.go?s=1631:1690#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#SSO">SSO</a></pre>
+				<p>
+New creates a new instance of the SSO client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a SSO client from just a session.
+svc := sso.New(mySession)
+
+// Create a SSO client with additional configuration
+svc := sso.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SSO.GetRoleCredentials">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=3065:3164#L78">GetRoleCredentials</a>
+					<a class="permalink" href="index.html#SSO.GetRoleCredentials">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) GetRoleCredentials(input *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) (*<a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRoleCredentials API operation for AWS Single Sign-On.
+</p>
+<p>
+Returns the STS short-term credentials for a given role name that is assigned
+to the user.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Single Sign-On&#39;s
+API operation GetRoleCredentials for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that a problem occurred with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* UnauthorizedException
+Indicates that the request is not authorized. This can happen due to an invalid
+access token in the request.
+
+* TooManyRequestsException
+Indicates that the request is being made too frequently and is more than
+what the server can handle.
+
+* ResourceNotFoundException
+The specified resource doesn&#39;t exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/GetRoleCredentials">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/GetRoleCredentials</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.GetRoleCredentialsRequest">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=1455:1583#L32">GetRoleCredentialsRequest</a>
+					<a class="permalink" href="index.html#SSO.GetRoleCredentialsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) GetRoleCredentialsRequest(input *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>)</pre>
+				<p>
+GetRoleCredentialsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetRoleCredentials operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetRoleCredentials for more information on using the GetRoleCredentials
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetRoleCredentialsRequest method.
+req, resp := client.GetRoleCredentialsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/GetRoleCredentials">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/GetRoleCredentials</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.GetRoleCredentialsWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=3739:3890#L92">GetRoleCredentialsWithContext</a>
+					<a class="permalink" href="index.html#SSO.GetRoleCredentialsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) GetRoleCredentialsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetRoleCredentialsInput">GetRoleCredentialsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetRoleCredentialsOutput">GetRoleCredentialsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRoleCredentialsWithContext is the same as GetRoleCredentials with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetRoleCredentials for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountRoles">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=6834:6927#L176">ListAccountRoles</a>
+					<a class="permalink" href="index.html#SSO.ListAccountRoles">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountRoles(input *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) (*<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListAccountRoles API operation for AWS Single Sign-On.
+</p>
+<p>
+Lists all roles that are assigned to the user for a given AWS account.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Single Sign-On&#39;s
+API operation ListAccountRoles for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that a problem occurred with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* UnauthorizedException
+Indicates that the request is not authorized. This can happen due to an invalid
+access token in the request.
+
+* TooManyRequestsException
+Indicates that the request is being made too frequently and is more than
+what the server can handle.
+
+* ResourceNotFoundException
+The specified resource doesn&#39;t exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccountRoles">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccountRoles</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountRolesPages">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=8456:8572#L214">ListAccountRolesPages</a>
+					<a class="permalink" href="index.html#SSO.ListAccountRolesPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountRolesPages(input *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>, fn func(*<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListAccountRolesPages iterates over the pages of a ListAccountRoles operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListAccountRoles method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListAccountRoles operation.
+pageNum := 0
+err := client.ListAccountRolesPages(params,
+    func(page *sso.ListAccountRolesOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountRolesPagesWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=9070:9238#L225">ListAccountRolesPagesWithContext</a>
+					<a class="permalink" href="index.html#SSO.ListAccountRolesPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountRolesPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>, fn func(*<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListAccountRolesPagesWithContext same as ListAccountRolesPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountRolesRequest">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=5089:5211#L125">ListAccountRolesRequest</a>
+					<a class="permalink" href="index.html#SSO.ListAccountRolesRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountRolesRequest(input *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>)</pre>
+				<p>
+ListAccountRolesRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListAccountRoles operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListAccountRoles for more information on using the ListAccountRoles
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListAccountRolesRequest method.
+req, resp := client.ListAccountRolesRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccountRoles">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccountRoles</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountRolesWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=7494:7639#L190">ListAccountRolesWithContext</a>
+					<a class="permalink" href="index.html#SSO.ListAccountRolesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountRolesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListAccountRolesInput">ListAccountRolesInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListAccountRolesOutput">ListAccountRolesOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListAccountRolesWithContext is the same as ListAccountRoles with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListAccountRoles for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccounts">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=12662:12743#L329">ListAccounts</a>
+					<a class="permalink" href="index.html#SSO.ListAccounts">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccounts(input *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) (*<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListAccounts API operation for AWS Single Sign-On.
+</p>
+<p>
+Lists all AWS accounts assigned to the user. These AWS accounts are assigned
+by the administrator of the account. For more information, see Assign User
+Access (<a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/useraccess.html#assignusers">https://docs.aws.amazon.com/singlesignon/latest/userguide/useraccess.html#assignusers</a>)
+in the AWS SSO User Guide. This operation returns a paginated response.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Single Sign-On&#39;s
+API operation ListAccounts for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that a problem occurred with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* UnauthorizedException
+Indicates that the request is not authorized. This can happen due to an invalid
+access token in the request.
+
+* TooManyRequestsException
+Indicates that the request is being made too frequently and is more than
+what the server can handle.
+
+* ResourceNotFoundException
+The specified resource doesn&#39;t exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccounts">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccounts</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountsPages">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=14216:14320#L367">ListAccountsPages</a>
+					<a class="permalink" href="index.html#SSO.ListAccountsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountsPages(input *<a href="index.html#ListAccountsInput">ListAccountsInput</a>, fn func(*<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListAccountsPages iterates over the pages of a ListAccounts operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListAccounts method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListAccounts operation.
+pageNum := 0
+err := client.ListAccountsPages(params,
+    func(page *sso.ListAccountsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountsPagesWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=14806:14962#L378">ListAccountsPagesWithContext</a>
+					<a class="permalink" href="index.html#SSO.ListAccountsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListAccountsInput">ListAccountsInput</a>, fn func(*<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListAccountsPagesWithContext same as ListAccountsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountsRequest">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=10693:10803#L275">ListAccountsRequest</a>
+					<a class="permalink" href="index.html#SSO.ListAccountsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountsRequest(input *<a href="index.html#ListAccountsInput">ListAccountsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>)</pre>
+				<p>
+ListAccountsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListAccounts operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListAccounts for more information on using the ListAccounts
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListAccountsRequest method.
+req, resp := client.ListAccountsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccounts">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/ListAccounts</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.ListAccountsWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=13294:13427#L343">ListAccountsWithContext</a>
+					<a class="permalink" href="index.html#SSO.ListAccountsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) ListAccountsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListAccountsInput">ListAccountsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListAccountsWithContext is the same as ListAccounts with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListAccounts for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.Logout">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=17842:17905#L471">Logout</a>
+					<a class="permalink" href="index.html#SSO.Logout">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) Logout(input *<a href="index.html#LogoutInput">LogoutInput</a>) (*<a href="index.html#LogoutOutput">LogoutOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Logout API operation for AWS Single Sign-On.
+</p>
+<p>
+Removes the client- and server-side session that is associated with the user.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Single Sign-On&#39;s
+API operation Logout for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that a problem occurred with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* UnauthorizedException
+Indicates that the request is not authorized. This can happen due to an invalid
+access token in the request.
+
+* TooManyRequestsException
+Indicates that the request is being made too frequently and is more than
+what the server can handle.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/Logout">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/Logout</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.LogoutRequest">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=16351:16443#L428">LogoutRequest</a>
+					<a class="permalink" href="index.html#SSO.LogoutRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) LogoutRequest(input *<a href="index.html#LogoutInput">LogoutInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#LogoutOutput">LogoutOutput</a>)</pre>
+				<p>
+LogoutRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the Logout operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See Logout for more information on using the Logout
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the LogoutRequest method.
+req, resp := client.LogoutRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/Logout">https://docs.aws.amazon.com/goto/WebAPI/sso-2019-06-10/Logout</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSO.LogoutWithContext">func (*SSO) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=18432:18547#L485">LogoutWithContext</a>
+					<a class="permalink" href="index.html#SSO.LogoutWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSO">SSO</a>) LogoutWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#LogoutInput">LogoutInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#LogoutOutput">LogoutOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+LogoutWithContext is the same as Logout with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See Logout for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TooManyRequestsException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=43115:43331#L1218">TooManyRequestsException</a>
+				<a class="permalink" href="index.html#TooManyRequestsException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the request is being made too frequently and is more than
+what the server can handle.
+</p>
+
+			<pre>type TooManyRequestsException struct {
+<span id="TooManyRequestsException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="TooManyRequestsException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TooManyRequestsException.Code">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44166:44214#L1250">Code</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.Error">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44548:44597#L1267">Error</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.GoString">func (TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=43914:43965#L1239">GoString</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.Message">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44299:44350#L1255">Message</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.OrigErr">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44480:44530#L1263">OrigErr</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.RequestID">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44892:44945#L1277">RequestID</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.StatusCode">func (*TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=44734:44785#L1272">StatusCode</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TooManyRequestsException.String">func (TooManyRequestsException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=43581:43630#L1230">String</a>
+					<a class="permalink" href="index.html#TooManyRequestsException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TooManyRequestsException">TooManyRequestsException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UnauthorizedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=45099:45312#L1283">UnauthorizedException</a>
+				<a class="permalink" href="index.html#UnauthorizedException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the request is not authorized. This can happen due to an invalid
+access token in the request.
+</p>
+
+			<pre>type UnauthorizedException struct {
+<span id="UnauthorizedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="UnauthorizedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UnauthorizedException.Code">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46135:46180#L1315">Code</a>
+					<a class="permalink" href="index.html#UnauthorizedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.Error">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46505:46551#L1332">Error</a>
+					<a class="permalink" href="index.html#UnauthorizedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.GoString">func (UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=45892:45940#L1304">GoString</a>
+					<a class="permalink" href="index.html#UnauthorizedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnauthorizedException">UnauthorizedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.Message">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46262:46310#L1320">Message</a>
+					<a class="permalink" href="index.html#UnauthorizedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.OrigErr">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46440:46487#L1328">OrigErr</a>
+					<a class="permalink" href="index.html#UnauthorizedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.RequestID">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46843:46893#L1342">RequestID</a>
+					<a class="permalink" href="index.html#UnauthorizedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.StatusCode">func (*UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=46688:46736#L1337">StatusCode</a>
+					<a class="permalink" href="index.html#UnauthorizedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedException">UnauthorizedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedException.String">func (UnauthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sso/api.go?s=45562:45608#L1295">String</a>
+					<a class="permalink" href="index.html#UnauthorizedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnauthorizedException">UnauthorizedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="ssoiface/index.html">ssoiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package ssoiface provides an interface to enable mocking the AWS Single Sign-On service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>sesiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package sesiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/ses/sesiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package sesiface provides an interface to enable mocking the Amazon Simple Email Service service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#SESAPI">type SESAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ses/sesiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="SESAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ses/sesiface/interface.go?s=2118:30100#L52">SESAPI</a>
+				<a class="permalink" href="index.html#SESAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+SESAPI provides an interface to enable mocking the
+ses.SES service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Simple Email Service.
+func myFunc(svc sesiface.SESAPI) bool {
+    // Make svc.CloneReceiptRuleSet request
+}
+
+func main() {
+    sess := session.New()
+    svc := ses.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockSESClient struct {
+    sesiface.SESAPI
+}
+func (m *mockSESClient) CloneReceiptRuleSet(input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockSESClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type SESAPI interface {
+    CloneReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetInput">CloneReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetOutput">CloneReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetInput">CloneReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetOutput">CloneReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetInput">CloneReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CloneReceiptRuleSetOutput">CloneReceiptRuleSetOutput</a>)
+
+    CreateConfigurationSet(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetInput">CreateConfigurationSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetOutput">CreateConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetInput">CreateConfigurationSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetOutput">CreateConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetInput">CreateConfigurationSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetOutput">CreateConfigurationSetOutput</a>)
+
+    CreateConfigurationSetEventDestination(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationInput">CreateConfigurationSetEventDestinationInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationOutput">CreateConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetEventDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationInput">CreateConfigurationSetEventDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationOutput">CreateConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetEventDestinationRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationInput">CreateConfigurationSetEventDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetEventDestinationOutput">CreateConfigurationSetEventDestinationOutput</a>)
+
+    CreateConfigurationSetTrackingOptions(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsInput">CreateConfigurationSetTrackingOptionsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsOutput">CreateConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetTrackingOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsInput">CreateConfigurationSetTrackingOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsOutput">CreateConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConfigurationSetTrackingOptionsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsInput">CreateConfigurationSetTrackingOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateConfigurationSetTrackingOptionsOutput">CreateConfigurationSetTrackingOptionsOutput</a>)
+
+    CreateCustomVerificationEmailTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateInput">CreateCustomVerificationEmailTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateOutput">CreateCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomVerificationEmailTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateInput">CreateCustomVerificationEmailTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateOutput">CreateCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomVerificationEmailTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateInput">CreateCustomVerificationEmailTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateCustomVerificationEmailTemplateOutput">CreateCustomVerificationEmailTemplateOutput</a>)
+
+    CreateReceiptFilter(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterInput">CreateReceiptFilterInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterOutput">CreateReceiptFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterInput">CreateReceiptFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterOutput">CreateReceiptFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptFilterRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterInput">CreateReceiptFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptFilterOutput">CreateReceiptFilterOutput</a>)
+
+    CreateReceiptRule(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleInput">CreateReceiptRuleInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleOutput">CreateReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleInput">CreateReceiptRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleOutput">CreateReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptRuleRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleInput">CreateReceiptRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleOutput">CreateReceiptRuleOutput</a>)
+
+    CreateReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetInput">CreateReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetOutput">CreateReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetInput">CreateReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetOutput">CreateReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetInput">CreateReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateReceiptRuleSetOutput">CreateReceiptRuleSetOutput</a>)
+
+    CreateTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateInput">CreateTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateOutput">CreateTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateInput">CreateTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateOutput">CreateTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateInput">CreateTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#CreateTemplateOutput">CreateTemplateOutput</a>)
+
+    DeleteConfigurationSet(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetInput">DeleteConfigurationSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetOutput">DeleteConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetInput">DeleteConfigurationSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetOutput">DeleteConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetInput">DeleteConfigurationSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetOutput">DeleteConfigurationSetOutput</a>)
+
+    DeleteConfigurationSetEventDestination(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationInput">DeleteConfigurationSetEventDestinationInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationOutput">DeleteConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetEventDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationInput">DeleteConfigurationSetEventDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationOutput">DeleteConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetEventDestinationRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationInput">DeleteConfigurationSetEventDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetEventDestinationOutput">DeleteConfigurationSetEventDestinationOutput</a>)
+
+    DeleteConfigurationSetTrackingOptions(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsInput">DeleteConfigurationSetTrackingOptionsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsOutput">DeleteConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetTrackingOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsInput">DeleteConfigurationSetTrackingOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsOutput">DeleteConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConfigurationSetTrackingOptionsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsInput">DeleteConfigurationSetTrackingOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteConfigurationSetTrackingOptionsOutput">DeleteConfigurationSetTrackingOptionsOutput</a>)
+
+    DeleteCustomVerificationEmailTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateInput">DeleteCustomVerificationEmailTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateOutput">DeleteCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomVerificationEmailTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateInput">DeleteCustomVerificationEmailTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateOutput">DeleteCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomVerificationEmailTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateInput">DeleteCustomVerificationEmailTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteCustomVerificationEmailTemplateOutput">DeleteCustomVerificationEmailTemplateOutput</a>)
+
+    DeleteIdentity(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityInput">DeleteIdentityInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityOutput">DeleteIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityInput">DeleteIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityOutput">DeleteIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityInput">DeleteIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityOutput">DeleteIdentityOutput</a>)
+
+    DeleteIdentityPolicy(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyInput">DeleteIdentityPolicyInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyOutput">DeleteIdentityPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyInput">DeleteIdentityPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyOutput">DeleteIdentityPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteIdentityPolicyRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyInput">DeleteIdentityPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteIdentityPolicyOutput">DeleteIdentityPolicyOutput</a>)
+
+    DeleteReceiptFilter(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterInput">DeleteReceiptFilterInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterOutput">DeleteReceiptFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterInput">DeleteReceiptFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterOutput">DeleteReceiptFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptFilterRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterInput">DeleteReceiptFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptFilterOutput">DeleteReceiptFilterOutput</a>)
+
+    DeleteReceiptRule(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleInput">DeleteReceiptRuleInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleOutput">DeleteReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleInput">DeleteReceiptRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleOutput">DeleteReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptRuleRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleInput">DeleteReceiptRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleOutput">DeleteReceiptRuleOutput</a>)
+
+    DeleteReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetInput">DeleteReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetOutput">DeleteReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetInput">DeleteReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetOutput">DeleteReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetInput">DeleteReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteReceiptRuleSetOutput">DeleteReceiptRuleSetOutput</a>)
+
+    DeleteTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateInput">DeleteTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateOutput">DeleteTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateInput">DeleteTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateOutput">DeleteTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateInput">DeleteTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteTemplateOutput">DeleteTemplateOutput</a>)
+
+    DeleteVerifiedEmailAddress(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressInput">DeleteVerifiedEmailAddressInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressOutput">DeleteVerifiedEmailAddressOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVerifiedEmailAddressWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressInput">DeleteVerifiedEmailAddressInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressOutput">DeleteVerifiedEmailAddressOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVerifiedEmailAddressRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressInput">DeleteVerifiedEmailAddressInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DeleteVerifiedEmailAddressOutput">DeleteVerifiedEmailAddressOutput</a>)
+
+    DescribeActiveReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetInput">DescribeActiveReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetOutput">DescribeActiveReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActiveReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetInput">DescribeActiveReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetOutput">DescribeActiveReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActiveReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetInput">DescribeActiveReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeActiveReceiptRuleSetOutput">DescribeActiveReceiptRuleSetOutput</a>)
+
+    DescribeConfigurationSet(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetInput">DescribeConfigurationSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetOutput">DescribeConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeConfigurationSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetInput">DescribeConfigurationSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetOutput">DescribeConfigurationSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeConfigurationSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetInput">DescribeConfigurationSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeConfigurationSetOutput">DescribeConfigurationSetOutput</a>)
+
+    DescribeReceiptRule(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleInput">DescribeReceiptRuleInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleOutput">DescribeReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReceiptRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleInput">DescribeReceiptRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleOutput">DescribeReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReceiptRuleRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleInput">DescribeReceiptRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleOutput">DescribeReceiptRuleOutput</a>)
+
+    DescribeReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetInput">DescribeReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetOutput">DescribeReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetInput">DescribeReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetOutput">DescribeReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetInput">DescribeReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#DescribeReceiptRuleSetOutput">DescribeReceiptRuleSetOutput</a>)
+
+    GetAccountSendingEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledInput">GetAccountSendingEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledOutput">GetAccountSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountSendingEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledInput">GetAccountSendingEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledOutput">GetAccountSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountSendingEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledInput">GetAccountSendingEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetAccountSendingEnabledOutput">GetAccountSendingEnabledOutput</a>)
+
+    GetCustomVerificationEmailTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateInput">GetCustomVerificationEmailTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateOutput">GetCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCustomVerificationEmailTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateInput">GetCustomVerificationEmailTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateOutput">GetCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCustomVerificationEmailTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateInput">GetCustomVerificationEmailTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetCustomVerificationEmailTemplateOutput">GetCustomVerificationEmailTemplateOutput</a>)
+
+    GetIdentityDkimAttributes(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesInput">GetIdentityDkimAttributesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesOutput">GetIdentityDkimAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityDkimAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesInput">GetIdentityDkimAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesOutput">GetIdentityDkimAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityDkimAttributesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesInput">GetIdentityDkimAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityDkimAttributesOutput">GetIdentityDkimAttributesOutput</a>)
+
+    GetIdentityMailFromDomainAttributes(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesInput">GetIdentityMailFromDomainAttributesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesOutput">GetIdentityMailFromDomainAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityMailFromDomainAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesInput">GetIdentityMailFromDomainAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesOutput">GetIdentityMailFromDomainAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityMailFromDomainAttributesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesInput">GetIdentityMailFromDomainAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityMailFromDomainAttributesOutput">GetIdentityMailFromDomainAttributesOutput</a>)
+
+    GetIdentityNotificationAttributes(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesInput">GetIdentityNotificationAttributesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesOutput">GetIdentityNotificationAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityNotificationAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesInput">GetIdentityNotificationAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesOutput">GetIdentityNotificationAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityNotificationAttributesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesInput">GetIdentityNotificationAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityNotificationAttributesOutput">GetIdentityNotificationAttributesOutput</a>)
+
+    GetIdentityPolicies(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesInput">GetIdentityPoliciesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesOutput">GetIdentityPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityPoliciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesInput">GetIdentityPoliciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesOutput">GetIdentityPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityPoliciesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesInput">GetIdentityPoliciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityPoliciesOutput">GetIdentityPoliciesOutput</a>)
+
+    GetIdentityVerificationAttributes(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesInput">GetIdentityVerificationAttributesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesOutput">GetIdentityVerificationAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityVerificationAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesInput">GetIdentityVerificationAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesOutput">GetIdentityVerificationAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetIdentityVerificationAttributesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesInput">GetIdentityVerificationAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesOutput">GetIdentityVerificationAttributesOutput</a>)
+
+    GetSendQuota(*<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaInput">GetSendQuotaInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaOutput">GetSendQuotaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSendQuotaWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaInput">GetSendQuotaInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaOutput">GetSendQuotaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSendQuotaRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaInput">GetSendQuotaInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetSendQuotaOutput">GetSendQuotaOutput</a>)
+
+    GetSendStatistics(*<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsInput">GetSendStatisticsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsOutput">GetSendStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSendStatisticsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsInput">GetSendStatisticsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsOutput">GetSendStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSendStatisticsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsInput">GetSendStatisticsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetSendStatisticsOutput">GetSendStatisticsOutput</a>)
+
+    GetTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateInput">GetTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateOutput">GetTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateInput">GetTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateOutput">GetTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateInput">GetTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetTemplateOutput">GetTemplateOutput</a>)
+
+    ListConfigurationSets(*<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsInput">ListConfigurationSetsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsOutput">ListConfigurationSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListConfigurationSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsInput">ListConfigurationSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsOutput">ListConfigurationSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListConfigurationSetsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsInput">ListConfigurationSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListConfigurationSetsOutput">ListConfigurationSetsOutput</a>)
+
+    ListCustomVerificationEmailTemplates(*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesInput">ListCustomVerificationEmailTemplatesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesOutput">ListCustomVerificationEmailTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCustomVerificationEmailTemplatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesInput">ListCustomVerificationEmailTemplatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesOutput">ListCustomVerificationEmailTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCustomVerificationEmailTemplatesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesInput">ListCustomVerificationEmailTemplatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesOutput">ListCustomVerificationEmailTemplatesOutput</a>)
+
+    ListCustomVerificationEmailTemplatesPages(*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesInput">ListCustomVerificationEmailTemplatesInput</a>, func(*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesOutput">ListCustomVerificationEmailTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCustomVerificationEmailTemplatesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesInput">ListCustomVerificationEmailTemplatesInput</a>, func(*<a href="../index.html">ses</a>.<a href="../index.html#ListCustomVerificationEmailTemplatesOutput">ListCustomVerificationEmailTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListIdentities(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentitiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentitiesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>)
+
+    ListIdentitiesPages(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>, func(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListIdentitiesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesInput">ListIdentitiesInput</a>, func(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentitiesOutput">ListIdentitiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListIdentityPolicies(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesInput">ListIdentityPoliciesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesOutput">ListIdentityPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentityPoliciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesInput">ListIdentityPoliciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesOutput">ListIdentityPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListIdentityPoliciesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesInput">ListIdentityPoliciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListIdentityPoliciesOutput">ListIdentityPoliciesOutput</a>)
+
+    ListReceiptFilters(*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersInput">ListReceiptFiltersInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersOutput">ListReceiptFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceiptFiltersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersInput">ListReceiptFiltersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersOutput">ListReceiptFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceiptFiltersRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersInput">ListReceiptFiltersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptFiltersOutput">ListReceiptFiltersOutput</a>)
+
+    ListReceiptRuleSets(*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsInput">ListReceiptRuleSetsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsOutput">ListReceiptRuleSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceiptRuleSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsInput">ListReceiptRuleSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsOutput">ListReceiptRuleSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceiptRuleSetsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsInput">ListReceiptRuleSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListReceiptRuleSetsOutput">ListReceiptRuleSetsOutput</a>)
+
+    ListTemplates(*<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesInput">ListTemplatesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesOutput">ListTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTemplatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesInput">ListTemplatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesOutput">ListTemplatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTemplatesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesInput">ListTemplatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListTemplatesOutput">ListTemplatesOutput</a>)
+
+    ListVerifiedEmailAddresses(*<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesInput">ListVerifiedEmailAddressesInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesOutput">ListVerifiedEmailAddressesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVerifiedEmailAddressesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesInput">ListVerifiedEmailAddressesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesOutput">ListVerifiedEmailAddressesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVerifiedEmailAddressesRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesInput">ListVerifiedEmailAddressesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ListVerifiedEmailAddressesOutput">ListVerifiedEmailAddressesOutput</a>)
+
+    PutConfigurationSetDeliveryOptions(*<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsInput">PutConfigurationSetDeliveryOptionsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsOutput">PutConfigurationSetDeliveryOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutConfigurationSetDeliveryOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsInput">PutConfigurationSetDeliveryOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsOutput">PutConfigurationSetDeliveryOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutConfigurationSetDeliveryOptionsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsInput">PutConfigurationSetDeliveryOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#PutConfigurationSetDeliveryOptionsOutput">PutConfigurationSetDeliveryOptionsOutput</a>)
+
+    PutIdentityPolicy(*<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyInput">PutIdentityPolicyInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyOutput">PutIdentityPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutIdentityPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyInput">PutIdentityPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyOutput">PutIdentityPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutIdentityPolicyRequest(*<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyInput">PutIdentityPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#PutIdentityPolicyOutput">PutIdentityPolicyOutput</a>)
+
+    ReorderReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetInput">ReorderReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetOutput">ReorderReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ReorderReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetInput">ReorderReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetOutput">ReorderReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ReorderReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetInput">ReorderReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#ReorderReceiptRuleSetOutput">ReorderReceiptRuleSetOutput</a>)
+
+    SendBounce(*<a href="../index.html">ses</a>.<a href="../index.html#SendBounceInput">SendBounceInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendBounceOutput">SendBounceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendBounceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendBounceInput">SendBounceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendBounceOutput">SendBounceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendBounceRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendBounceInput">SendBounceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendBounceOutput">SendBounceOutput</a>)
+
+    SendBulkTemplatedEmail(*<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailInput">SendBulkTemplatedEmailInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailOutput">SendBulkTemplatedEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendBulkTemplatedEmailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailInput">SendBulkTemplatedEmailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailOutput">SendBulkTemplatedEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendBulkTemplatedEmailRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailInput">SendBulkTemplatedEmailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendBulkTemplatedEmailOutput">SendBulkTemplatedEmailOutput</a>)
+
+    SendCustomVerificationEmail(*<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailInput">SendCustomVerificationEmailInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailOutput">SendCustomVerificationEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendCustomVerificationEmailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailInput">SendCustomVerificationEmailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailOutput">SendCustomVerificationEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendCustomVerificationEmailRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailInput">SendCustomVerificationEmailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendCustomVerificationEmailOutput">SendCustomVerificationEmailOutput</a>)
+
+    SendEmail(*<a href="../index.html">ses</a>.<a href="../index.html#SendEmailInput">SendEmailInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendEmailOutput">SendEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendEmailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendEmailInput">SendEmailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendEmailOutput">SendEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendEmailRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendEmailInput">SendEmailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendEmailOutput">SendEmailOutput</a>)
+
+    SendRawEmail(*<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailInput">SendRawEmailInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailOutput">SendRawEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendRawEmailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailInput">SendRawEmailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailOutput">SendRawEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendRawEmailRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailInput">SendRawEmailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendRawEmailOutput">SendRawEmailOutput</a>)
+
+    SendTemplatedEmail(*<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailInput">SendTemplatedEmailInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailOutput">SendTemplatedEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTemplatedEmailWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailInput">SendTemplatedEmailInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailOutput">SendTemplatedEmailOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTemplatedEmailRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailInput">SendTemplatedEmailInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SendTemplatedEmailOutput">SendTemplatedEmailOutput</a>)
+
+    SetActiveReceiptRuleSet(*<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetInput">SetActiveReceiptRuleSetInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetOutput">SetActiveReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetActiveReceiptRuleSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetInput">SetActiveReceiptRuleSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetOutput">SetActiveReceiptRuleSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetActiveReceiptRuleSetRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetInput">SetActiveReceiptRuleSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetActiveReceiptRuleSetOutput">SetActiveReceiptRuleSetOutput</a>)
+
+    SetIdentityDkimEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledInput">SetIdentityDkimEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledOutput">SetIdentityDkimEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityDkimEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledInput">SetIdentityDkimEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledOutput">SetIdentityDkimEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityDkimEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledInput">SetIdentityDkimEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityDkimEnabledOutput">SetIdentityDkimEnabledOutput</a>)
+
+    SetIdentityFeedbackForwardingEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledInput">SetIdentityFeedbackForwardingEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledOutput">SetIdentityFeedbackForwardingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityFeedbackForwardingEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledInput">SetIdentityFeedbackForwardingEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledOutput">SetIdentityFeedbackForwardingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityFeedbackForwardingEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledInput">SetIdentityFeedbackForwardingEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityFeedbackForwardingEnabledOutput">SetIdentityFeedbackForwardingEnabledOutput</a>)
+
+    SetIdentityHeadersInNotificationsEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledInput">SetIdentityHeadersInNotificationsEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledOutput">SetIdentityHeadersInNotificationsEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityHeadersInNotificationsEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledInput">SetIdentityHeadersInNotificationsEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledOutput">SetIdentityHeadersInNotificationsEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityHeadersInNotificationsEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledInput">SetIdentityHeadersInNotificationsEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityHeadersInNotificationsEnabledOutput">SetIdentityHeadersInNotificationsEnabledOutput</a>)
+
+    SetIdentityMailFromDomain(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainInput">SetIdentityMailFromDomainInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainOutput">SetIdentityMailFromDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityMailFromDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainInput">SetIdentityMailFromDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainOutput">SetIdentityMailFromDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityMailFromDomainRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainInput">SetIdentityMailFromDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityMailFromDomainOutput">SetIdentityMailFromDomainOutput</a>)
+
+    SetIdentityNotificationTopic(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicInput">SetIdentityNotificationTopicInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicOutput">SetIdentityNotificationTopicOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityNotificationTopicWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicInput">SetIdentityNotificationTopicInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicOutput">SetIdentityNotificationTopicOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIdentityNotificationTopicRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicInput">SetIdentityNotificationTopicInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetIdentityNotificationTopicOutput">SetIdentityNotificationTopicOutput</a>)
+
+    SetReceiptRulePosition(*<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionInput">SetReceiptRulePositionInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionOutput">SetReceiptRulePositionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetReceiptRulePositionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionInput">SetReceiptRulePositionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionOutput">SetReceiptRulePositionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetReceiptRulePositionRequest(*<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionInput">SetReceiptRulePositionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#SetReceiptRulePositionOutput">SetReceiptRulePositionOutput</a>)
+
+    TestRenderTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateInput">TestRenderTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateOutput">TestRenderTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestRenderTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateInput">TestRenderTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateOutput">TestRenderTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestRenderTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateInput">TestRenderTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#TestRenderTemplateOutput">TestRenderTemplateOutput</a>)
+
+    UpdateAccountSendingEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledInput">UpdateAccountSendingEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledOutput">UpdateAccountSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAccountSendingEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledInput">UpdateAccountSendingEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledOutput">UpdateAccountSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAccountSendingEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledInput">UpdateAccountSendingEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateAccountSendingEnabledOutput">UpdateAccountSendingEnabledOutput</a>)
+
+    UpdateConfigurationSetEventDestination(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationInput">UpdateConfigurationSetEventDestinationInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationOutput">UpdateConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetEventDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationInput">UpdateConfigurationSetEventDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationOutput">UpdateConfigurationSetEventDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetEventDestinationRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationInput">UpdateConfigurationSetEventDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetEventDestinationOutput">UpdateConfigurationSetEventDestinationOutput</a>)
+
+    UpdateConfigurationSetReputationMetricsEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledInput">UpdateConfigurationSetReputationMetricsEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledOutput">UpdateConfigurationSetReputationMetricsEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetReputationMetricsEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledInput">UpdateConfigurationSetReputationMetricsEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledOutput">UpdateConfigurationSetReputationMetricsEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetReputationMetricsEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledInput">UpdateConfigurationSetReputationMetricsEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetReputationMetricsEnabledOutput">UpdateConfigurationSetReputationMetricsEnabledOutput</a>)
+
+    UpdateConfigurationSetSendingEnabled(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledInput">UpdateConfigurationSetSendingEnabledInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledOutput">UpdateConfigurationSetSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetSendingEnabledWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledInput">UpdateConfigurationSetSendingEnabledInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledOutput">UpdateConfigurationSetSendingEnabledOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetSendingEnabledRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledInput">UpdateConfigurationSetSendingEnabledInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetSendingEnabledOutput">UpdateConfigurationSetSendingEnabledOutput</a>)
+
+    UpdateConfigurationSetTrackingOptions(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsInput">UpdateConfigurationSetTrackingOptionsInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsOutput">UpdateConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetTrackingOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsInput">UpdateConfigurationSetTrackingOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsOutput">UpdateConfigurationSetTrackingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConfigurationSetTrackingOptionsRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsInput">UpdateConfigurationSetTrackingOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateConfigurationSetTrackingOptionsOutput">UpdateConfigurationSetTrackingOptionsOutput</a>)
+
+    UpdateCustomVerificationEmailTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateInput">UpdateCustomVerificationEmailTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateOutput">UpdateCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCustomVerificationEmailTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateInput">UpdateCustomVerificationEmailTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateOutput">UpdateCustomVerificationEmailTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCustomVerificationEmailTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateInput">UpdateCustomVerificationEmailTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateCustomVerificationEmailTemplateOutput">UpdateCustomVerificationEmailTemplateOutput</a>)
+
+    UpdateReceiptRule(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleInput">UpdateReceiptRuleInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleOutput">UpdateReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateReceiptRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleInput">UpdateReceiptRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleOutput">UpdateReceiptRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateReceiptRuleRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleInput">UpdateReceiptRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateReceiptRuleOutput">UpdateReceiptRuleOutput</a>)
+
+    UpdateTemplate(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateInput">UpdateTemplateInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateOutput">UpdateTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTemplateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateInput">UpdateTemplateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateOutput">UpdateTemplateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTemplateRequest(*<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateInput">UpdateTemplateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#UpdateTemplateOutput">UpdateTemplateOutput</a>)
+
+    VerifyDomainDkim(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimInput">VerifyDomainDkimInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimOutput">VerifyDomainDkimOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyDomainDkimWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimInput">VerifyDomainDkimInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimOutput">VerifyDomainDkimOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyDomainDkimRequest(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimInput">VerifyDomainDkimInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainDkimOutput">VerifyDomainDkimOutput</a>)
+
+    VerifyDomainIdentity(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityInput">VerifyDomainIdentityInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityOutput">VerifyDomainIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyDomainIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityInput">VerifyDomainIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityOutput">VerifyDomainIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyDomainIdentityRequest(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityInput">VerifyDomainIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyDomainIdentityOutput">VerifyDomainIdentityOutput</a>)
+
+    VerifyEmailAddress(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressInput">VerifyEmailAddressInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressOutput">VerifyEmailAddressOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyEmailAddressWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressInput">VerifyEmailAddressInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressOutput">VerifyEmailAddressOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyEmailAddressRequest(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressInput">VerifyEmailAddressInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailAddressOutput">VerifyEmailAddressOutput</a>)
+
+    VerifyEmailIdentity(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityInput">VerifyEmailIdentityInput</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityOutput">VerifyEmailIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyEmailIdentityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityInput">VerifyEmailIdentityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityOutput">VerifyEmailIdentityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    VerifyEmailIdentityRequest(*<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityInput">VerifyEmailIdentityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ses</a>.<a href="../index.html#VerifyEmailIdentityOutput">VerifyEmailIdentityOutput</a>)
+
+    WaitUntilIdentityExists(*<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesInput">GetIdentityVerificationAttributesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilIdentityExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ses</a>.<a href="../index.html#GetIdentityVerificationAttributesInput">GetIdentityVerificationAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

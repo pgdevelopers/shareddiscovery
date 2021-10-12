@@ -1,0 +1,457 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>codedeployiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package codedeployiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/codedeploy/codedeployiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package codedeployiface provides an interface to enable mocking the AWS CodeDeploy service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CodeDeployAPI">type CodeDeployAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codedeploy/codedeployiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CodeDeployAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codedeploy/codedeployiface/interface.go?s=2240:23259#L52">CodeDeployAPI</a>
+				<a class="permalink" href="index.html#CodeDeployAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CodeDeployAPI provides an interface to enable mocking the
+codedeploy.CodeDeploy service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS CodeDeploy.
+func myFunc(svc codedeployiface.CodeDeployAPI) bool {
+    // Make svc.AddTagsToOnPremisesInstances request
+}
+
+func main() {
+    sess := session.New()
+    svc := codedeploy.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCodeDeployClient struct {
+    codedeployiface.CodeDeployAPI
+}
+func (m *mockCodeDeployClient) AddTagsToOnPremisesInstances(input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCodeDeployClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CodeDeployAPI interface {
+    AddTagsToOnPremisesInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesInput">AddTagsToOnPremisesInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesOutput">AddTagsToOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsToOnPremisesInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesInput">AddTagsToOnPremisesInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesOutput">AddTagsToOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsToOnPremisesInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesInput">AddTagsToOnPremisesInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#AddTagsToOnPremisesInstancesOutput">AddTagsToOnPremisesInstancesOutput</a>)
+
+    BatchGetApplicationRevisions(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsInput">BatchGetApplicationRevisionsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsOutput">BatchGetApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetApplicationRevisionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsInput">BatchGetApplicationRevisionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsOutput">BatchGetApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetApplicationRevisionsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsInput">BatchGetApplicationRevisionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationRevisionsOutput">BatchGetApplicationRevisionsOutput</a>)
+
+    BatchGetApplications(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsInput">BatchGetApplicationsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsOutput">BatchGetApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetApplicationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsInput">BatchGetApplicationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsOutput">BatchGetApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetApplicationsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsInput">BatchGetApplicationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetApplicationsOutput">BatchGetApplicationsOutput</a>)
+
+    BatchGetDeploymentGroups(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsInput">BatchGetDeploymentGroupsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsOutput">BatchGetDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsInput">BatchGetDeploymentGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsOutput">BatchGetDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentGroupsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsInput">BatchGetDeploymentGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentGroupsOutput">BatchGetDeploymentGroupsOutput</a>)
+
+    BatchGetDeploymentInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesInput">BatchGetDeploymentInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesOutput">BatchGetDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesInput">BatchGetDeploymentInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesOutput">BatchGetDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesInput">BatchGetDeploymentInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentInstancesOutput">BatchGetDeploymentInstancesOutput</a>)
+
+    BatchGetDeploymentTargets(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsInput">BatchGetDeploymentTargetsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsOutput">BatchGetDeploymentTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsInput">BatchGetDeploymentTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsOutput">BatchGetDeploymentTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentTargetsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsInput">BatchGetDeploymentTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentTargetsOutput">BatchGetDeploymentTargetsOutput</a>)
+
+    BatchGetDeployments(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsInput">BatchGetDeploymentsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsOutput">BatchGetDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsInput">BatchGetDeploymentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsOutput">BatchGetDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetDeploymentsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsInput">BatchGetDeploymentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetDeploymentsOutput">BatchGetDeploymentsOutput</a>)
+
+    BatchGetOnPremisesInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesInput">BatchGetOnPremisesInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesOutput">BatchGetOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetOnPremisesInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesInput">BatchGetOnPremisesInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesOutput">BatchGetOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetOnPremisesInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesInput">BatchGetOnPremisesInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#BatchGetOnPremisesInstancesOutput">BatchGetOnPremisesInstancesOutput</a>)
+
+    ContinueDeployment(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentInput">ContinueDeploymentInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentOutput">ContinueDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ContinueDeploymentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentInput">ContinueDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentOutput">ContinueDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ContinueDeploymentRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentInput">ContinueDeploymentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ContinueDeploymentOutput">ContinueDeploymentOutput</a>)
+
+    CreateApplication(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationInput">CreateApplicationInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationOutput">CreateApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationInput">CreateApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationOutput">CreateApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateApplicationRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationInput">CreateApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateApplicationOutput">CreateApplicationOutput</a>)
+
+    CreateDeployment(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>)
+
+    CreateDeploymentConfig(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigInput">CreateDeploymentConfigInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigOutput">CreateDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigInput">CreateDeploymentConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigOutput">CreateDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentConfigRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigInput">CreateDeploymentConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentConfigOutput">CreateDeploymentConfigOutput</a>)
+
+    CreateDeploymentGroup(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupInput">CreateDeploymentGroupInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupOutput">CreateDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupInput">CreateDeploymentGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupOutput">CreateDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentGroupRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupInput">CreateDeploymentGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#CreateDeploymentGroupOutput">CreateDeploymentGroupOutput</a>)
+
+    DeleteApplication(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationInput">DeleteApplicationInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationOutput">DeleteApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationInput">DeleteApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationOutput">DeleteApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteApplicationRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationInput">DeleteApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteApplicationOutput">DeleteApplicationOutput</a>)
+
+    DeleteDeploymentConfig(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigInput">DeleteDeploymentConfigInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigOutput">DeleteDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDeploymentConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigInput">DeleteDeploymentConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigOutput">DeleteDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDeploymentConfigRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigInput">DeleteDeploymentConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentConfigOutput">DeleteDeploymentConfigOutput</a>)
+
+    DeleteDeploymentGroup(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupInput">DeleteDeploymentGroupInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupOutput">DeleteDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDeploymentGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupInput">DeleteDeploymentGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupOutput">DeleteDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDeploymentGroupRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupInput">DeleteDeploymentGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteDeploymentGroupOutput">DeleteDeploymentGroupOutput</a>)
+
+    DeleteGitHubAccountToken(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenInput">DeleteGitHubAccountTokenInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenOutput">DeleteGitHubAccountTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGitHubAccountTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenInput">DeleteGitHubAccountTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenOutput">DeleteGitHubAccountTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGitHubAccountTokenRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenInput">DeleteGitHubAccountTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteGitHubAccountTokenOutput">DeleteGitHubAccountTokenOutput</a>)
+
+    DeleteResourcesByExternalId(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdInput">DeleteResourcesByExternalIdInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdOutput">DeleteResourcesByExternalIdOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteResourcesByExternalIdWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdInput">DeleteResourcesByExternalIdInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdOutput">DeleteResourcesByExternalIdOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteResourcesByExternalIdRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdInput">DeleteResourcesByExternalIdInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeleteResourcesByExternalIdOutput">DeleteResourcesByExternalIdOutput</a>)
+
+    DeregisterOnPremisesInstance(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceInput">DeregisterOnPremisesInstanceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceOutput">DeregisterOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterOnPremisesInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceInput">DeregisterOnPremisesInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceOutput">DeregisterOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterOnPremisesInstanceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceInput">DeregisterOnPremisesInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#DeregisterOnPremisesInstanceOutput">DeregisterOnPremisesInstanceOutput</a>)
+
+    GetApplication(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationInput">GetApplicationInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationOutput">GetApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationInput">GetApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationOutput">GetApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetApplicationRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationInput">GetApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationOutput">GetApplicationOutput</a>)
+
+    GetApplicationRevision(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionInput">GetApplicationRevisionInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionOutput">GetApplicationRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetApplicationRevisionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionInput">GetApplicationRevisionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionOutput">GetApplicationRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetApplicationRevisionRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionInput">GetApplicationRevisionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetApplicationRevisionOutput">GetApplicationRevisionOutput</a>)
+
+    GetDeployment(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInput">GetDeploymentInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentOutput">GetDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInput">GetDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentOutput">GetDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInput">GetDeploymentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentOutput">GetDeploymentOutput</a>)
+
+    GetDeploymentConfig(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigInput">GetDeploymentConfigInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigOutput">GetDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigInput">GetDeploymentConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigOutput">GetDeploymentConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentConfigRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigInput">GetDeploymentConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentConfigOutput">GetDeploymentConfigOutput</a>)
+
+    GetDeploymentGroup(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupInput">GetDeploymentGroupInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupOutput">GetDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupInput">GetDeploymentGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupOutput">GetDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentGroupRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupInput">GetDeploymentGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentGroupOutput">GetDeploymentGroupOutput</a>)
+
+    GetDeploymentInstance(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceInput">GetDeploymentInstanceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceOutput">GetDeploymentInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceInput">GetDeploymentInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceOutput">GetDeploymentInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentInstanceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceInput">GetDeploymentInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInstanceOutput">GetDeploymentInstanceOutput</a>)
+
+    GetDeploymentTarget(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetInput">GetDeploymentTargetInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetOutput">GetDeploymentTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetInput">GetDeploymentTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetOutput">GetDeploymentTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDeploymentTargetRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetInput">GetDeploymentTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentTargetOutput">GetDeploymentTargetOutput</a>)
+
+    GetOnPremisesInstance(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceInput">GetOnPremisesInstanceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceOutput">GetOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOnPremisesInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceInput">GetOnPremisesInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceOutput">GetOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetOnPremisesInstanceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceInput">GetOnPremisesInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetOnPremisesInstanceOutput">GetOnPremisesInstanceOutput</a>)
+
+    ListApplicationRevisions(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsInput">ListApplicationRevisionsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsOutput">ListApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApplicationRevisionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsInput">ListApplicationRevisionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsOutput">ListApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApplicationRevisionsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsInput">ListApplicationRevisionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsOutput">ListApplicationRevisionsOutput</a>)
+
+    ListApplicationRevisionsPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsInput">ListApplicationRevisionsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsOutput">ListApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListApplicationRevisionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsInput">ListApplicationRevisionsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationRevisionsOutput">ListApplicationRevisionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListApplications(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsInput">ListApplicationsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsOutput">ListApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApplicationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsInput">ListApplicationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsOutput">ListApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApplicationsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsInput">ListApplicationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsOutput">ListApplicationsOutput</a>)
+
+    ListApplicationsPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsInput">ListApplicationsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsOutput">ListApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListApplicationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsInput">ListApplicationsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListApplicationsOutput">ListApplicationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDeploymentConfigs(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsInput">ListDeploymentConfigsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsOutput">ListDeploymentConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentConfigsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsInput">ListDeploymentConfigsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsOutput">ListDeploymentConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentConfigsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsInput">ListDeploymentConfigsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsOutput">ListDeploymentConfigsOutput</a>)
+
+    ListDeploymentConfigsPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsInput">ListDeploymentConfigsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsOutput">ListDeploymentConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDeploymentConfigsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsInput">ListDeploymentConfigsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentConfigsOutput">ListDeploymentConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDeploymentGroups(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsInput">ListDeploymentGroupsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsOutput">ListDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsInput">ListDeploymentGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsOutput">ListDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentGroupsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsInput">ListDeploymentGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsOutput">ListDeploymentGroupsOutput</a>)
+
+    ListDeploymentGroupsPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsInput">ListDeploymentGroupsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsOutput">ListDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDeploymentGroupsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsInput">ListDeploymentGroupsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentGroupsOutput">ListDeploymentGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDeploymentInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesInput">ListDeploymentInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesOutput">ListDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesInput">ListDeploymentInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesOutput">ListDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesInput">ListDeploymentInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesOutput">ListDeploymentInstancesOutput</a>)
+
+    ListDeploymentInstancesPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesInput">ListDeploymentInstancesInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesOutput">ListDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDeploymentInstancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesInput">ListDeploymentInstancesInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentInstancesOutput">ListDeploymentInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDeploymentTargets(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsInput">ListDeploymentTargetsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsOutput">ListDeploymentTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsInput">ListDeploymentTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsOutput">ListDeploymentTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentTargetsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsInput">ListDeploymentTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentTargetsOutput">ListDeploymentTargetsOutput</a>)
+
+    ListDeployments(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsInput">ListDeploymentsInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsOutput">ListDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsInput">ListDeploymentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsOutput">ListDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDeploymentsRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsInput">ListDeploymentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsOutput">ListDeploymentsOutput</a>)
+
+    ListDeploymentsPages(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsInput">ListDeploymentsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsOutput">ListDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDeploymentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsInput">ListDeploymentsInput</a>, func(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListDeploymentsOutput">ListDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListGitHubAccountTokenNames(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesInput">ListGitHubAccountTokenNamesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesOutput">ListGitHubAccountTokenNamesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGitHubAccountTokenNamesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesInput">ListGitHubAccountTokenNamesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesOutput">ListGitHubAccountTokenNamesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGitHubAccountTokenNamesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesInput">ListGitHubAccountTokenNamesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListGitHubAccountTokenNamesOutput">ListGitHubAccountTokenNamesOutput</a>)
+
+    ListOnPremisesInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesInput">ListOnPremisesInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesOutput">ListOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOnPremisesInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesInput">ListOnPremisesInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesOutput">ListOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOnPremisesInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesInput">ListOnPremisesInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListOnPremisesInstancesOutput">ListOnPremisesInstancesOutput</a>)
+
+    ListTagsForResource(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutLifecycleEventHookExecutionStatus(*<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusInput">PutLifecycleEventHookExecutionStatusInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusOutput">PutLifecycleEventHookExecutionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecycleEventHookExecutionStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusInput">PutLifecycleEventHookExecutionStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusOutput">PutLifecycleEventHookExecutionStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecycleEventHookExecutionStatusRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusInput">PutLifecycleEventHookExecutionStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#PutLifecycleEventHookExecutionStatusOutput">PutLifecycleEventHookExecutionStatusOutput</a>)
+
+    RegisterApplicationRevision(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionInput">RegisterApplicationRevisionInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionOutput">RegisterApplicationRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterApplicationRevisionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionInput">RegisterApplicationRevisionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionOutput">RegisterApplicationRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterApplicationRevisionRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionInput">RegisterApplicationRevisionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterApplicationRevisionOutput">RegisterApplicationRevisionOutput</a>)
+
+    RegisterOnPremisesInstance(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceInput">RegisterOnPremisesInstanceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceOutput">RegisterOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterOnPremisesInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceInput">RegisterOnPremisesInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceOutput">RegisterOnPremisesInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterOnPremisesInstanceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceInput">RegisterOnPremisesInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RegisterOnPremisesInstanceOutput">RegisterOnPremisesInstanceOutput</a>)
+
+    RemoveTagsFromOnPremisesInstances(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesInput">RemoveTagsFromOnPremisesInstancesInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesOutput">RemoveTagsFromOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsFromOnPremisesInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesInput">RemoveTagsFromOnPremisesInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesOutput">RemoveTagsFromOnPremisesInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsFromOnPremisesInstancesRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesInput">RemoveTagsFromOnPremisesInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#RemoveTagsFromOnPremisesInstancesOutput">RemoveTagsFromOnPremisesInstancesOutput</a>)
+
+    SkipWaitTimeForInstanceTermination(*<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationInput">SkipWaitTimeForInstanceTerminationInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationOutput">SkipWaitTimeForInstanceTerminationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SkipWaitTimeForInstanceTerminationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationInput">SkipWaitTimeForInstanceTerminationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationOutput">SkipWaitTimeForInstanceTerminationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SkipWaitTimeForInstanceTerminationRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationInput">SkipWaitTimeForInstanceTerminationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#SkipWaitTimeForInstanceTerminationOutput">SkipWaitTimeForInstanceTerminationOutput</a>)
+
+    StopDeployment(*<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentInput">StopDeploymentInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentOutput">StopDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopDeploymentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentInput">StopDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentOutput">StopDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopDeploymentRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentInput">StopDeploymentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#StopDeploymentOutput">StopDeploymentOutput</a>)
+
+    TagResource(*<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateApplication(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationInput">UpdateApplicationInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationOutput">UpdateApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateApplicationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationInput">UpdateApplicationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationOutput">UpdateApplicationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateApplicationRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationInput">UpdateApplicationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateApplicationOutput">UpdateApplicationOutput</a>)
+
+    UpdateDeploymentGroup(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupInput">UpdateDeploymentGroupInput</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupOutput">UpdateDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDeploymentGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupInput">UpdateDeploymentGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupOutput">UpdateDeploymentGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDeploymentGroupRequest(*<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupInput">UpdateDeploymentGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#UpdateDeploymentGroupOutput">UpdateDeploymentGroupOutput</a>)
+
+    WaitUntilDeploymentSuccessful(*<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInput">GetDeploymentInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilDeploymentSuccessfulWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codedeploy</a>.<a href="../index.html#GetDeploymentInput">GetDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

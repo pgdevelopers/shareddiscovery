@@ -1,0 +1,424 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>appmeshiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package appmeshiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/appmesh/appmeshiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package appmeshiface provides an interface to enable mocking the AWS App Mesh service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AppMeshAPI">type AppMeshAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/appmesh/appmeshiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AppMeshAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/appmesh/appmeshiface/interface.go?s=2148:17196#L52">AppMeshAPI</a>
+				<a class="permalink" href="index.html#AppMeshAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+AppMeshAPI provides an interface to enable mocking the
+appmesh.AppMesh service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS App Mesh.
+func myFunc(svc appmeshiface.AppMeshAPI) bool {
+    // Make svc.CreateGatewayRoute request
+}
+
+func main() {
+    sess := session.New()
+    svc := appmesh.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockAppMeshClient struct {
+    appmeshiface.AppMeshAPI
+}
+func (m *mockAppMeshClient) CreateGatewayRoute(input *appmesh.CreateGatewayRouteInput) (*appmesh.CreateGatewayRouteOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockAppMeshClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type AppMeshAPI interface {
+    CreateGatewayRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteInput">CreateGatewayRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteOutput">CreateGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGatewayRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteInput">CreateGatewayRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteOutput">CreateGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGatewayRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteInput">CreateGatewayRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateGatewayRouteOutput">CreateGatewayRouteOutput</a>)
+
+    CreateMesh(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshInput">CreateMeshInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshOutput">CreateMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMeshWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshInput">CreateMeshInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshOutput">CreateMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMeshRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshInput">CreateMeshInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateMeshOutput">CreateMeshOutput</a>)
+
+    CreateRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteInput">CreateRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteOutput">CreateRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteInput">CreateRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteOutput">CreateRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteInput">CreateRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateRouteOutput">CreateRouteOutput</a>)
+
+    CreateVirtualGateway(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayInput">CreateVirtualGatewayInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayOutput">CreateVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualGatewayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayInput">CreateVirtualGatewayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayOutput">CreateVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualGatewayRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayInput">CreateVirtualGatewayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualGatewayOutput">CreateVirtualGatewayOutput</a>)
+
+    CreateVirtualNode(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeInput">CreateVirtualNodeInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeOutput">CreateVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualNodeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeInput">CreateVirtualNodeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeOutput">CreateVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualNodeRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeInput">CreateVirtualNodeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualNodeOutput">CreateVirtualNodeOutput</a>)
+
+    CreateVirtualRouter(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterInput">CreateVirtualRouterInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterOutput">CreateVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualRouterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterInput">CreateVirtualRouterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterOutput">CreateVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualRouterRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterInput">CreateVirtualRouterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualRouterOutput">CreateVirtualRouterOutput</a>)
+
+    CreateVirtualService(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceInput">CreateVirtualServiceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceOutput">CreateVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceInput">CreateVirtualServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceOutput">CreateVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateVirtualServiceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceInput">CreateVirtualServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#CreateVirtualServiceOutput">CreateVirtualServiceOutput</a>)
+
+    DeleteGatewayRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteInput">DeleteGatewayRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteOutput">DeleteGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGatewayRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteInput">DeleteGatewayRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteOutput">DeleteGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGatewayRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteInput">DeleteGatewayRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteGatewayRouteOutput">DeleteGatewayRouteOutput</a>)
+
+    DeleteMesh(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshInput">DeleteMeshInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshOutput">DeleteMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMeshWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshInput">DeleteMeshInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshOutput">DeleteMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMeshRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshInput">DeleteMeshInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteMeshOutput">DeleteMeshOutput</a>)
+
+    DeleteRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteInput">DeleteRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteOutput">DeleteRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteInput">DeleteRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteOutput">DeleteRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteInput">DeleteRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteRouteOutput">DeleteRouteOutput</a>)
+
+    DeleteVirtualGateway(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayInput">DeleteVirtualGatewayInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayOutput">DeleteVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualGatewayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayInput">DeleteVirtualGatewayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayOutput">DeleteVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualGatewayRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayInput">DeleteVirtualGatewayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualGatewayOutput">DeleteVirtualGatewayOutput</a>)
+
+    DeleteVirtualNode(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeInput">DeleteVirtualNodeInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeOutput">DeleteVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualNodeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeInput">DeleteVirtualNodeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeOutput">DeleteVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualNodeRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeInput">DeleteVirtualNodeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualNodeOutput">DeleteVirtualNodeOutput</a>)
+
+    DeleteVirtualRouter(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterInput">DeleteVirtualRouterInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterOutput">DeleteVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualRouterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterInput">DeleteVirtualRouterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterOutput">DeleteVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualRouterRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterInput">DeleteVirtualRouterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualRouterOutput">DeleteVirtualRouterOutput</a>)
+
+    DeleteVirtualService(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceInput">DeleteVirtualServiceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceOutput">DeleteVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceInput">DeleteVirtualServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceOutput">DeleteVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteVirtualServiceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceInput">DeleteVirtualServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DeleteVirtualServiceOutput">DeleteVirtualServiceOutput</a>)
+
+    DescribeGatewayRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteInput">DescribeGatewayRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteOutput">DescribeGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeGatewayRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteInput">DescribeGatewayRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteOutput">DescribeGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeGatewayRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteInput">DescribeGatewayRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeGatewayRouteOutput">DescribeGatewayRouteOutput</a>)
+
+    DescribeMesh(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshInput">DescribeMeshInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshOutput">DescribeMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMeshWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshInput">DescribeMeshInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshOutput">DescribeMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMeshRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshInput">DescribeMeshInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeMeshOutput">DescribeMeshOutput</a>)
+
+    DescribeRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteInput">DescribeRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteOutput">DescribeRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteInput">DescribeRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteOutput">DescribeRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteInput">DescribeRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeRouteOutput">DescribeRouteOutput</a>)
+
+    DescribeVirtualGateway(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayInput">DescribeVirtualGatewayInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayOutput">DescribeVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualGatewayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayInput">DescribeVirtualGatewayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayOutput">DescribeVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualGatewayRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayInput">DescribeVirtualGatewayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualGatewayOutput">DescribeVirtualGatewayOutput</a>)
+
+    DescribeVirtualNode(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeInput">DescribeVirtualNodeInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeOutput">DescribeVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualNodeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeInput">DescribeVirtualNodeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeOutput">DescribeVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualNodeRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeInput">DescribeVirtualNodeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualNodeOutput">DescribeVirtualNodeOutput</a>)
+
+    DescribeVirtualRouter(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterInput">DescribeVirtualRouterInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterOutput">DescribeVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualRouterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterInput">DescribeVirtualRouterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterOutput">DescribeVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualRouterRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterInput">DescribeVirtualRouterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualRouterOutput">DescribeVirtualRouterOutput</a>)
+
+    DescribeVirtualService(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceInput">DescribeVirtualServiceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceOutput">DescribeVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceInput">DescribeVirtualServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceOutput">DescribeVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVirtualServiceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceInput">DescribeVirtualServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#DescribeVirtualServiceOutput">DescribeVirtualServiceOutput</a>)
+
+    ListGatewayRoutes(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesInput">ListGatewayRoutesInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesOutput">ListGatewayRoutesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGatewayRoutesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesInput">ListGatewayRoutesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesOutput">ListGatewayRoutesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListGatewayRoutesRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesInput">ListGatewayRoutesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesOutput">ListGatewayRoutesOutput</a>)
+
+    ListGatewayRoutesPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesInput">ListGatewayRoutesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesOutput">ListGatewayRoutesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListGatewayRoutesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesInput">ListGatewayRoutesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListGatewayRoutesOutput">ListGatewayRoutesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListMeshes(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesInput">ListMeshesInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesOutput">ListMeshesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMeshesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesInput">ListMeshesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesOutput">ListMeshesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMeshesRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesInput">ListMeshesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesOutput">ListMeshesOutput</a>)
+
+    ListMeshesPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesInput">ListMeshesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesOutput">ListMeshesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMeshesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesInput">ListMeshesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListMeshesOutput">ListMeshesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRoutes(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesInput">ListRoutesInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesOutput">ListRoutesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRoutesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesInput">ListRoutesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesOutput">ListRoutesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRoutesRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesInput">ListRoutesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesOutput">ListRoutesOutput</a>)
+
+    ListRoutesPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesInput">ListRoutesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesOutput">ListRoutesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRoutesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesInput">ListRoutesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListRoutesOutput">ListRoutesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListVirtualGateways(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysInput">ListVirtualGatewaysInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysOutput">ListVirtualGatewaysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualGatewaysWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysInput">ListVirtualGatewaysInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysOutput">ListVirtualGatewaysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualGatewaysRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysInput">ListVirtualGatewaysInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysOutput">ListVirtualGatewaysOutput</a>)
+
+    ListVirtualGatewaysPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysInput">ListVirtualGatewaysInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysOutput">ListVirtualGatewaysOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVirtualGatewaysPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysInput">ListVirtualGatewaysInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualGatewaysOutput">ListVirtualGatewaysOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListVirtualNodes(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesInput">ListVirtualNodesInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesOutput">ListVirtualNodesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualNodesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesInput">ListVirtualNodesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesOutput">ListVirtualNodesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualNodesRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesInput">ListVirtualNodesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesOutput">ListVirtualNodesOutput</a>)
+
+    ListVirtualNodesPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesInput">ListVirtualNodesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesOutput">ListVirtualNodesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVirtualNodesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesInput">ListVirtualNodesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualNodesOutput">ListVirtualNodesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListVirtualRouters(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersInput">ListVirtualRoutersInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersOutput">ListVirtualRoutersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualRoutersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersInput">ListVirtualRoutersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersOutput">ListVirtualRoutersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualRoutersRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersInput">ListVirtualRoutersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersOutput">ListVirtualRoutersOutput</a>)
+
+    ListVirtualRoutersPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersInput">ListVirtualRoutersInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersOutput">ListVirtualRoutersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVirtualRoutersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersInput">ListVirtualRoutersInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualRoutersOutput">ListVirtualRoutersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListVirtualServices(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesInput">ListVirtualServicesInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesOutput">ListVirtualServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualServicesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesInput">ListVirtualServicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesOutput">ListVirtualServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVirtualServicesRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesInput">ListVirtualServicesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesOutput">ListVirtualServicesOutput</a>)
+
+    ListVirtualServicesPages(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesInput">ListVirtualServicesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesOutput">ListVirtualServicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVirtualServicesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesInput">ListVirtualServicesInput</a>, func(*<a href="../index.html">appmesh</a>.<a href="../index.html#ListVirtualServicesOutput">ListVirtualServicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    TagResource(*<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateGatewayRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteInput">UpdateGatewayRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteOutput">UpdateGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateGatewayRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteInput">UpdateGatewayRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteOutput">UpdateGatewayRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateGatewayRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteInput">UpdateGatewayRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateGatewayRouteOutput">UpdateGatewayRouteOutput</a>)
+
+    UpdateMesh(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshInput">UpdateMeshInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshOutput">UpdateMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMeshWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshInput">UpdateMeshInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshOutput">UpdateMeshOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMeshRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshInput">UpdateMeshInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateMeshOutput">UpdateMeshOutput</a>)
+
+    UpdateRoute(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteInput">UpdateRouteInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteOutput">UpdateRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRouteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteInput">UpdateRouteInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteOutput">UpdateRouteOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRouteRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteInput">UpdateRouteInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateRouteOutput">UpdateRouteOutput</a>)
+
+    UpdateVirtualGateway(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayInput">UpdateVirtualGatewayInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayOutput">UpdateVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualGatewayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayInput">UpdateVirtualGatewayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayOutput">UpdateVirtualGatewayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualGatewayRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayInput">UpdateVirtualGatewayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualGatewayOutput">UpdateVirtualGatewayOutput</a>)
+
+    UpdateVirtualNode(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeInput">UpdateVirtualNodeInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeOutput">UpdateVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualNodeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeInput">UpdateVirtualNodeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeOutput">UpdateVirtualNodeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualNodeRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeInput">UpdateVirtualNodeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualNodeOutput">UpdateVirtualNodeOutput</a>)
+
+    UpdateVirtualRouter(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterInput">UpdateVirtualRouterInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterOutput">UpdateVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualRouterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterInput">UpdateVirtualRouterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterOutput">UpdateVirtualRouterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualRouterRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterInput">UpdateVirtualRouterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualRouterOutput">UpdateVirtualRouterOutput</a>)
+
+    UpdateVirtualService(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceInput">UpdateVirtualServiceInput</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceOutput">UpdateVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceInput">UpdateVirtualServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceOutput">UpdateVirtualServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVirtualServiceRequest(*<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceInput">UpdateVirtualServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">appmesh</a>.<a href="../index.html#UpdateVirtualServiceOutput">UpdateVirtualServiceOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>mediastoreiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package mediastoreiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/mediastore/mediastoreiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package mediastoreiface provides an interface to enable mocking the AWS Elemental MediaStore service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#MediaStoreAPI">type MediaStoreAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/mediastore/mediastoreiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="MediaStoreAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/mediastore/mediastoreiface/interface.go?s=2208:9981#L52">MediaStoreAPI</a>
+				<a class="permalink" href="index.html#MediaStoreAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+MediaStoreAPI provides an interface to enable mocking the
+mediastore.MediaStore service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Elemental MediaStore.
+func myFunc(svc mediastoreiface.MediaStoreAPI) bool {
+    // Make svc.CreateContainer request
+}
+
+func main() {
+    sess := session.New()
+    svc := mediastore.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockMediaStoreClient struct {
+    mediastoreiface.MediaStoreAPI
+}
+func (m *mockMediaStoreClient) CreateContainer(input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockMediaStoreClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type MediaStoreAPI interface {
+    CreateContainer(*<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerInput">CreateContainerInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerOutput">CreateContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateContainerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerInput">CreateContainerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerOutput">CreateContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateContainerRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerInput">CreateContainerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#CreateContainerOutput">CreateContainerOutput</a>)
+
+    DeleteContainer(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerInput">DeleteContainerInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerOutput">DeleteContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContainerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerInput">DeleteContainerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerOutput">DeleteContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContainerRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerInput">DeleteContainerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerOutput">DeleteContainerOutput</a>)
+
+    DeleteContainerPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyInput">DeleteContainerPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyOutput">DeleteContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContainerPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyInput">DeleteContainerPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyOutput">DeleteContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContainerPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyInput">DeleteContainerPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteContainerPolicyOutput">DeleteContainerPolicyOutput</a>)
+
+    DeleteCorsPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyInput">DeleteCorsPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyOutput">DeleteCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCorsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyInput">DeleteCorsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyOutput">DeleteCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCorsPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyInput">DeleteCorsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteCorsPolicyOutput">DeleteCorsPolicyOutput</a>)
+
+    DeleteLifecyclePolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLifecyclePolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>)
+
+    DeleteMetricPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyInput">DeleteMetricPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyOutput">DeleteMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMetricPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyInput">DeleteMetricPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyOutput">DeleteMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMetricPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyInput">DeleteMetricPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DeleteMetricPolicyOutput">DeleteMetricPolicyOutput</a>)
+
+    DescribeContainer(*<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerInput">DescribeContainerInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerOutput">DescribeContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeContainerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerInput">DescribeContainerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerOutput">DescribeContainerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeContainerRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerInput">DescribeContainerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#DescribeContainerOutput">DescribeContainerOutput</a>)
+
+    GetContainerPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyInput">GetContainerPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyOutput">GetContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContainerPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyInput">GetContainerPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyOutput">GetContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContainerPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyInput">GetContainerPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetContainerPolicyOutput">GetContainerPolicyOutput</a>)
+
+    GetCorsPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyInput">GetCorsPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyOutput">GetCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCorsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyInput">GetCorsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyOutput">GetCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCorsPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyInput">GetCorsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetCorsPolicyOutput">GetCorsPolicyOutput</a>)
+
+    GetLifecyclePolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>)
+
+    GetMetricPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyInput">GetMetricPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyOutput">GetMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyInput">GetMetricPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyOutput">GetMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMetricPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyInput">GetMetricPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#GetMetricPolicyOutput">GetMetricPolicyOutput</a>)
+
+    ListContainers(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersInput">ListContainersInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersOutput">ListContainersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContainersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersInput">ListContainersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersOutput">ListContainersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContainersRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersInput">ListContainersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersOutput">ListContainersOutput</a>)
+
+    ListContainersPages(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersInput">ListContainersInput</a>, func(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersOutput">ListContainersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListContainersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersInput">ListContainersInput</a>, func(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListContainersOutput">ListContainersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutContainerPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyInput">PutContainerPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyOutput">PutContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutContainerPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyInput">PutContainerPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyOutput">PutContainerPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutContainerPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyInput">PutContainerPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutContainerPolicyOutput">PutContainerPolicyOutput</a>)
+
+    PutCorsPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyInput">PutCorsPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyOutput">PutCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutCorsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyInput">PutCorsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyOutput">PutCorsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutCorsPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyInput">PutCorsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutCorsPolicyOutput">PutCorsPolicyOutput</a>)
+
+    PutLifecyclePolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecyclePolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>)
+
+    PutMetricPolicy(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyInput">PutMetricPolicyInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyOutput">PutMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyInput">PutMetricPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyOutput">PutMetricPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutMetricPolicyRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyInput">PutMetricPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#PutMetricPolicyOutput">PutMetricPolicyOutput</a>)
+
+    StartAccessLogging(*<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingInput">StartAccessLoggingInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingOutput">StartAccessLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartAccessLoggingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingInput">StartAccessLoggingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingOutput">StartAccessLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartAccessLoggingRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingInput">StartAccessLoggingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#StartAccessLoggingOutput">StartAccessLoggingOutput</a>)
+
+    StopAccessLogging(*<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingInput">StopAccessLoggingInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingOutput">StopAccessLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopAccessLoggingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingInput">StopAccessLoggingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingOutput">StopAccessLoggingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopAccessLoggingRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingInput">StopAccessLoggingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#StopAccessLoggingOutput">StopAccessLoggingOutput</a>)
+
+    TagResource(*<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">mediastore</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,4341 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>ssooidc - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package ssooidc
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/ssooidc&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package ssooidc provides the client and types for making API
+requests to AWS SSO OIDC.
+</p>
+<p>
+AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables
+a client (such as AWS CLI or a native application) to register with AWS SSO.
+The service also enables the client to fetch the user’s access token upon
+successful authentication and authorization with AWS SSO. This service conforms
+with the OAuth 2.0 based implementation of the device authorization grant
+standard (<a href="https://tools.ietf.org/html/rfc8628">https://tools.ietf.org/html/rfc8628</a> (<a href="https://tools.ietf.org/html/rfc8628">https://tools.ietf.org/html/rfc8628</a>)).
+</p>
+<p>
+For general information about AWS SSO, see What is AWS Single Sign-On? (<a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html</a>)
+in the AWS SSO User Guide.
+</p>
+<p>
+This API reference guide describes the AWS SSO OIDC operations that you can
+call programatically and includes detailed information on data types and
+errors.
+</p>
+<p>
+AWS provides SDKs that consist of libraries and sample code for various programming
+languages and platforms such as Java, Ruby, .Net, iOS, and Android. The SDKs
+provide a convenient way to create programmatic access to AWS SSO and other
+AWS services. For more information about the AWS SDKs, including how to download
+and install them, see Tools for Amazon Web Services (<a href="http://aws.amazon.com/tools/">http://aws.amazon.com/tools/</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10</a> for more information on this service.
+</p>
+<p>
+See ssooidc package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/ssooidc/">https://docs.aws.amazon.com/sdk-for-go/api/service/ssooidc/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS SSO OIDC with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS SSO OIDC client SSOOIDC for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/ssooidc/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/ssooidc/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AccessDeniedException">type AccessDeniedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Code">func (s *AccessDeniedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Error">func (s *AccessDeniedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.GoString">func (s AccessDeniedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Message">func (s *AccessDeniedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.OrigErr">func (s *AccessDeniedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.RequestID">func (s *AccessDeniedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.StatusCode">func (s *AccessDeniedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.String">func (s AccessDeniedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#AuthorizationPendingException">type AuthorizationPendingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.Code">func (s *AuthorizationPendingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.Error">func (s *AuthorizationPendingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.GoString">func (s AuthorizationPendingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.Message">func (s *AuthorizationPendingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.OrigErr">func (s *AuthorizationPendingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.RequestID">func (s *AuthorizationPendingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.StatusCode">func (s *AuthorizationPendingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AuthorizationPendingException.String">func (s AuthorizationPendingException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CreateTokenInput">type CreateTokenInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.GoString">func (s CreateTokenInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetClientId">func (s *CreateTokenInput) SetClientId(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetClientSecret">func (s *CreateTokenInput) SetClientSecret(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetCode">func (s *CreateTokenInput) SetCode(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetDeviceCode">func (s *CreateTokenInput) SetDeviceCode(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetGrantType">func (s *CreateTokenInput) SetGrantType(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetRedirectUri">func (s *CreateTokenInput) SetRedirectUri(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetRefreshToken">func (s *CreateTokenInput) SetRefreshToken(v string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.SetScope">func (s *CreateTokenInput) SetScope(v []*string) *CreateTokenInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.String">func (s CreateTokenInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenInput.Validate">func (s *CreateTokenInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CreateTokenOutput">type CreateTokenOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.GoString">func (s CreateTokenOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.SetAccessToken">func (s *CreateTokenOutput) SetAccessToken(v string) *CreateTokenOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.SetExpiresIn">func (s *CreateTokenOutput) SetExpiresIn(v int64) *CreateTokenOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.SetIdToken">func (s *CreateTokenOutput) SetIdToken(v string) *CreateTokenOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.SetRefreshToken">func (s *CreateTokenOutput) SetRefreshToken(v string) *CreateTokenOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.SetTokenType">func (s *CreateTokenOutput) SetTokenType(v string) *CreateTokenOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateTokenOutput.String">func (s CreateTokenOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExpiredTokenException">type ExpiredTokenException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.Code">func (s *ExpiredTokenException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.Error">func (s *ExpiredTokenException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.GoString">func (s ExpiredTokenException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.Message">func (s *ExpiredTokenException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.OrigErr">func (s *ExpiredTokenException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.RequestID">func (s *ExpiredTokenException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.StatusCode">func (s *ExpiredTokenException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExpiredTokenException.String">func (s ExpiredTokenException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidClientException">type InvalidClientException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.Code">func (s *InvalidClientException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.Error">func (s *InvalidClientException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.GoString">func (s InvalidClientException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.Message">func (s *InvalidClientException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.OrigErr">func (s *InvalidClientException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.RequestID">func (s *InvalidClientException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.StatusCode">func (s *InvalidClientException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientException.String">func (s InvalidClientException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidClientMetadataException">type InvalidClientMetadataException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.Code">func (s *InvalidClientMetadataException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.Error">func (s *InvalidClientMetadataException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.GoString">func (s InvalidClientMetadataException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.Message">func (s *InvalidClientMetadataException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.OrigErr">func (s *InvalidClientMetadataException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.RequestID">func (s *InvalidClientMetadataException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.StatusCode">func (s *InvalidClientMetadataException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidClientMetadataException.String">func (s InvalidClientMetadataException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidGrantException">type InvalidGrantException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.Code">func (s *InvalidGrantException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.Error">func (s *InvalidGrantException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.GoString">func (s InvalidGrantException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.Message">func (s *InvalidGrantException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.OrigErr">func (s *InvalidGrantException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.RequestID">func (s *InvalidGrantException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.StatusCode">func (s *InvalidGrantException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidGrantException.String">func (s InvalidGrantException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidRequestException">type InvalidRequestException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Code">func (s *InvalidRequestException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Error">func (s *InvalidRequestException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.GoString">func (s InvalidRequestException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.Message">func (s *InvalidRequestException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.OrigErr">func (s *InvalidRequestException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.RequestID">func (s *InvalidRequestException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.StatusCode">func (s *InvalidRequestException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidRequestException.String">func (s InvalidRequestException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidScopeException">type InvalidScopeException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.Code">func (s *InvalidScopeException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.Error">func (s *InvalidScopeException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.GoString">func (s InvalidScopeException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.Message">func (s *InvalidScopeException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.OrigErr">func (s *InvalidScopeException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.RequestID">func (s *InvalidScopeException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.StatusCode">func (s *InvalidScopeException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidScopeException.String">func (s InvalidScopeException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RegisterClientInput">type RegisterClientInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.GoString">func (s RegisterClientInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.SetClientName">func (s *RegisterClientInput) SetClientName(v string) *RegisterClientInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.SetClientType">func (s *RegisterClientInput) SetClientType(v string) *RegisterClientInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.SetScopes">func (s *RegisterClientInput) SetScopes(v []*string) *RegisterClientInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.String">func (s RegisterClientInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientInput.Validate">func (s *RegisterClientInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RegisterClientOutput">type RegisterClientOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.GoString">func (s RegisterClientOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetAuthorizationEndpoint">func (s *RegisterClientOutput) SetAuthorizationEndpoint(v string) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetClientId">func (s *RegisterClientOutput) SetClientId(v string) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetClientIdIssuedAt">func (s *RegisterClientOutput) SetClientIdIssuedAt(v int64) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetClientSecret">func (s *RegisterClientOutput) SetClientSecret(v string) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetClientSecretExpiresAt">func (s *RegisterClientOutput) SetClientSecretExpiresAt(v int64) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.SetTokenEndpoint">func (s *RegisterClientOutput) SetTokenEndpoint(v string) *RegisterClientOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#RegisterClientOutput.String">func (s RegisterClientOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SSOOIDC">type SSOOIDC</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *SSOOIDC</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.CreateToken">func (c *SSOOIDC) CreateToken(input *CreateTokenInput) (*CreateTokenOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.CreateTokenRequest">func (c *SSOOIDC) CreateTokenRequest(input *CreateTokenInput) (req *request.Request, output *CreateTokenOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.CreateTokenWithContext">func (c *SSOOIDC) CreateTokenWithContext(ctx aws.Context, input *CreateTokenInput, opts ...request.Option) (*CreateTokenOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.RegisterClient">func (c *SSOOIDC) RegisterClient(input *RegisterClientInput) (*RegisterClientOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.RegisterClientRequest">func (c *SSOOIDC) RegisterClientRequest(input *RegisterClientInput) (req *request.Request, output *RegisterClientOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.RegisterClientWithContext">func (c *SSOOIDC) RegisterClientWithContext(ctx aws.Context, input *RegisterClientInput, opts ...request.Option) (*RegisterClientOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.StartDeviceAuthorization">func (c *SSOOIDC) StartDeviceAuthorization(input *StartDeviceAuthorizationInput) (*StartDeviceAuthorizationOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.StartDeviceAuthorizationRequest">func (c *SSOOIDC) StartDeviceAuthorizationRequest(input *StartDeviceAuthorizationInput) (req *request.Request, output *StartDeviceAuthorizationOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SSOOIDC.StartDeviceAuthorizationWithContext">func (c *SSOOIDC) StartDeviceAuthorizationWithContext(ctx aws.Context, input *StartDeviceAuthorizationInput, opts ...request.Option) (*StartDeviceAuthorizationOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SlowDownException">type SlowDownException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SlowDownException.Code">func (s *SlowDownException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.Error">func (s *SlowDownException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.GoString">func (s SlowDownException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.Message">func (s *SlowDownException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.OrigErr">func (s *SlowDownException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.RequestID">func (s *SlowDownException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.StatusCode">func (s *SlowDownException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#SlowDownException.String">func (s SlowDownException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartDeviceAuthorizationInput">type StartDeviceAuthorizationInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.GoString">func (s StartDeviceAuthorizationInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.SetClientId">func (s *StartDeviceAuthorizationInput) SetClientId(v string) *StartDeviceAuthorizationInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.SetClientSecret">func (s *StartDeviceAuthorizationInput) SetClientSecret(v string) *StartDeviceAuthorizationInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.SetStartUrl">func (s *StartDeviceAuthorizationInput) SetStartUrl(v string) *StartDeviceAuthorizationInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.String">func (s StartDeviceAuthorizationInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationInput.Validate">func (s *StartDeviceAuthorizationInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartDeviceAuthorizationOutput">type StartDeviceAuthorizationOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.GoString">func (s StartDeviceAuthorizationOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetDeviceCode">func (s *StartDeviceAuthorizationOutput) SetDeviceCode(v string) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetExpiresIn">func (s *StartDeviceAuthorizationOutput) SetExpiresIn(v int64) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetInterval">func (s *StartDeviceAuthorizationOutput) SetInterval(v int64) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetUserCode">func (s *StartDeviceAuthorizationOutput) SetUserCode(v string) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetVerificationUri">func (s *StartDeviceAuthorizationOutput) SetVerificationUri(v string) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.SetVerificationUriComplete">func (s *StartDeviceAuthorizationOutput) SetVerificationUriComplete(v string) *StartDeviceAuthorizationOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartDeviceAuthorizationOutput.String">func (s StartDeviceAuthorizationOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UnauthorizedClientException">type UnauthorizedClientException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.Code">func (s *UnauthorizedClientException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.Error">func (s *UnauthorizedClientException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.GoString">func (s UnauthorizedClientException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.Message">func (s *UnauthorizedClientException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.OrigErr">func (s *UnauthorizedClientException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.RequestID">func (s *UnauthorizedClientException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.StatusCode">func (s *UnauthorizedClientException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnauthorizedClientException.String">func (s UnauthorizedClientException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UnsupportedGrantTypeException">type UnsupportedGrantTypeException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.Code">func (s *UnsupportedGrantTypeException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.Error">func (s *UnsupportedGrantTypeException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.GoString">func (s UnsupportedGrantTypeException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.Message">func (s *UnsupportedGrantTypeException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.OrigErr">func (s *UnsupportedGrantTypeException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.RequestID">func (s *UnsupportedGrantTypeException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.StatusCode">func (s *UnsupportedGrantTypeException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#UnsupportedGrantTypeException.String">func (s UnsupportedGrantTypeException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessDeniedException for service response error code</span>
+    <span class="comment">// &#34;AccessDeniedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You do not have sufficient access to perform this action.</span>
+    <span id="ErrCodeAccessDeniedException">ErrCodeAccessDeniedException</span> = &#34;AccessDeniedException&#34;
+
+    <span class="comment">// ErrCodeAuthorizationPendingException for service response error code</span>
+    <span class="comment">// &#34;AuthorizationPendingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that a request to authorize a client with an access user session</span>
+    <span class="comment">// token is pending.</span>
+    <span id="ErrCodeAuthorizationPendingException">ErrCodeAuthorizationPendingException</span> = &#34;AuthorizationPendingException&#34;
+
+    <span class="comment">// ErrCodeExpiredTokenException for service response error code</span>
+    <span class="comment">// &#34;ExpiredTokenException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the token issued by the service is expired and is no longer</span>
+    <span class="comment">// valid.</span>
+    <span id="ErrCodeExpiredTokenException">ErrCodeExpiredTokenException</span> = &#34;ExpiredTokenException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that an error from the service occurred while trying to process</span>
+    <span class="comment">// a request.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeInvalidClientException for service response error code</span>
+    <span class="comment">// &#34;InvalidClientException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the clientId or clientSecret in the request is invalid. For</span>
+    <span class="comment">// example, this can occur when a client sends an incorrect clientId or an expired</span>
+    <span class="comment">// clientSecret.</span>
+    <span id="ErrCodeInvalidClientException">ErrCodeInvalidClientException</span> = &#34;InvalidClientException&#34;
+
+    <span class="comment">// ErrCodeInvalidClientMetadataException for service response error code</span>
+    <span class="comment">// &#34;InvalidClientMetadataException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the client information sent in the request during registration</span>
+    <span class="comment">// is invalid.</span>
+    <span id="ErrCodeInvalidClientMetadataException">ErrCodeInvalidClientMetadataException</span> = &#34;InvalidClientMetadataException&#34;
+
+    <span class="comment">// ErrCodeInvalidGrantException for service response error code</span>
+    <span class="comment">// &#34;InvalidGrantException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that a request contains an invalid grant. This can occur if a client</span>
+    <span class="comment">// makes a CreateToken request with an invalid grant type.</span>
+    <span id="ErrCodeInvalidGrantException">ErrCodeInvalidGrantException</span> = &#34;InvalidGrantException&#34;
+
+    <span class="comment">// ErrCodeInvalidRequestException for service response error code</span>
+    <span class="comment">// &#34;InvalidRequestException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that something is wrong with the input to the request. For example,</span>
+    <span class="comment">// a required parameter might be missing or out of range.</span>
+    <span id="ErrCodeInvalidRequestException">ErrCodeInvalidRequestException</span> = &#34;InvalidRequestException&#34;
+
+    <span class="comment">// ErrCodeInvalidScopeException for service response error code</span>
+    <span class="comment">// &#34;InvalidScopeException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the scope provided in the request is invalid.</span>
+    <span id="ErrCodeInvalidScopeException">ErrCodeInvalidScopeException</span> = &#34;InvalidScopeException&#34;
+
+    <span class="comment">// ErrCodeSlowDownException for service response error code</span>
+    <span class="comment">// &#34;SlowDownException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the client is making the request too frequently and is more</span>
+    <span class="comment">// than the service can handle.</span>
+    <span id="ErrCodeSlowDownException">ErrCodeSlowDownException</span> = &#34;SlowDownException&#34;
+
+    <span class="comment">// ErrCodeUnauthorizedClientException for service response error code</span>
+    <span class="comment">// &#34;UnauthorizedClientException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the client is not currently authorized to make the request.</span>
+    <span class="comment">// This can happen when a clientId is not issued for a public client.</span>
+    <span id="ErrCodeUnauthorizedClientException">ErrCodeUnauthorizedClientException</span> = &#34;UnauthorizedClientException&#34;
+
+    <span class="comment">// ErrCodeUnsupportedGrantTypeException for service response error code</span>
+    <span class="comment">// &#34;UnsupportedGrantTypeException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the grant type in the request is not supported by the service.</span>
+    <span id="ErrCodeUnsupportedGrantTypeException">ErrCodeUnsupportedGrantTypeException</span> = &#34;UnsupportedGrantTypeException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;SSO OIDC&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;oidc&#34;     <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;SSO OIDC&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AccessDeniedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=12725:13069#L319">AccessDeniedException</a>
+				<a class="permalink" href="index.html#AccessDeniedException">¶</a>
+				
+				
+			</h2>
+			<p>
+You do not have sufficient access to perform this action.
+</p>
+
+			<pre>type AccessDeniedException struct {
+<span id="AccessDeniedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessDeniedException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="AccessDeniedException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="AccessDeniedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessDeniedException.Code">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=13892:13937#L355">Code</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Error">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14262:14308#L372">Error</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.GoString">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=13649:13697#L344">GoString</a>
+					<a class="permalink" href="index.html#AccessDeniedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Message">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14019:14067#L360">Message</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.OrigErr">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14197:14244#L368">OrigErr</a>
+					<a class="permalink" href="index.html#AccessDeniedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.RequestID">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14616:14666#L382">RequestID</a>
+					<a class="permalink" href="index.html#AccessDeniedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.StatusCode">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14461:14509#L377">StatusCode</a>
+					<a class="permalink" href="index.html#AccessDeniedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.String">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=13319:13365#L335">String</a>
+					<a class="permalink" href="index.html#AccessDeniedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="AuthorizationPendingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=14804:15156#L388">AuthorizationPendingException</a>
+				<a class="permalink" href="index.html#AuthorizationPendingException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that a request to authorize a client with an access user session
+token is pending.
+</p>
+
+			<pre>type AuthorizationPendingException struct {
+<span id="AuthorizationPendingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AuthorizationPendingException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="AuthorizationPendingException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="AuthorizationPendingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AuthorizationPendingException.Code">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16011:16064#L424">Code</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.Error">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16413:16467#L441">Error</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.GoString">func (AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=15744:15800#L413">GoString</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.Message">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16154:16210#L429">Message</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.OrigErr">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16340:16395#L437">OrigErr</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.RequestID">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16783:16841#L451">RequestID</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.StatusCode">func (*AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16620:16676#L446">StatusCode</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AuthorizationPendingException.String">func (AuthorizationPendingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=15406:15460#L404">String</a>
+					<a class="permalink" href="index.html#AuthorizationPendingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AuthorizationPendingException">AuthorizationPendingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CreateTokenInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=16880:18857#L455">CreateTokenInput</a>
+				<a class="permalink" href="index.html#CreateTokenInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CreateTokenInput struct {
+
+    <span class="comment">// The unique identifier string for each client. This value should come from</span>
+    <span class="comment">// the persisted result of the RegisterClient API.</span>
+    <span class="comment">//</span>
+<span id="CreateTokenInput.ClientId"></span>    <span class="comment">// ClientId is a required field</span>
+    ClientId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A secret string generated for the client. This value should come from the</span>
+    <span class="comment">// persisted result of the RegisterClient API.</span>
+    <span class="comment">//</span>
+<span id="CreateTokenInput.ClientSecret"></span>    <span class="comment">// ClientSecret is a required field</span>
+    ClientSecret *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientSecret&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The authorization code received from the authorization service. This parameter</span>
+    <span class="comment">// is required to perform an authorization grant request to get access to a</span>
+    <span class="comment">// token.</span>
+<span id="CreateTokenInput.Code"></span>    Code *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;code&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Used only when calling this API for the device code grant type. This short-term</span>
+    <span class="comment">// code is used to identify this authentication attempt. This should come from</span>
+    <span class="comment">// an in-memory reference to the result of the StartDeviceAuthorization API.</span>
+    <span class="comment">//</span>
+<span id="CreateTokenInput.DeviceCode"></span>    <span class="comment">// DeviceCode is a required field</span>
+    DeviceCode *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;deviceCode&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Supports grant types for authorization code, refresh token, and device code</span>
+    <span class="comment">// request.</span>
+    <span class="comment">//</span>
+<span id="CreateTokenInput.GrantType"></span>    <span class="comment">// GrantType is a required field</span>
+    GrantType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;grantType&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The location of the application that will receive the authorization code.</span>
+    <span class="comment">// Users authorize the service to send the request to this location.</span>
+<span id="CreateTokenInput.RedirectUri"></span>    RedirectUri *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;redirectUri&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The token used to obtain an access token in the event that the access token</span>
+    <span class="comment">// is invalid or expired. This token is not issued by the service.</span>
+<span id="CreateTokenInput.RefreshToken"></span>    RefreshToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;refreshToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The list of scopes that is defined by the client. Upon authorization, this</span>
+    <span class="comment">// list is used to restrict permissions when granting an access token.</span>
+<span id="CreateTokenInput.Scope"></span>    Scope []*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;scope&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CreateTokenInput.GoString">func (CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=19432:19475#L515">GoString</a>
+					<a class="permalink" href="index.html#CreateTokenInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateTokenInput">CreateTokenInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetClientId">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20180:20246#L542">SetClientId</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetClientId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetClientId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetClientId sets the ClientId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetClientSecret">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20335:20405#L548">SetClientSecret</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetClientSecret">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetClientSecret(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetClientSecret sets the ClientSecret field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetCode">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20482:20544#L554">SetCode</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetCode sets the Code field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetDeviceCode">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20625:20693#L560">SetDeviceCode</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetDeviceCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetDeviceCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetDeviceCode sets the DeviceCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetGrantType">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20778:20845#L566">SetGrantType</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetGrantType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetGrantType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetGrantType sets the GrantType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetRedirectUri">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=20933:21002#L572">SetRedirectUri</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetRedirectUri">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetRedirectUri(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetRedirectUri sets the RedirectUri field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetRefreshToken">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=21094:21164#L578">SetRefreshToken</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetRefreshToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetRefreshToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetRefreshToken sets the RefreshToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.SetScope">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=21243:21309#L584">SetScope</a>
+					<a class="permalink" href="index.html#CreateTokenInput.SetScope">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) SetScope(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenInput">CreateTokenInput</a></pre>
+				<p>
+SetScope sets the Scope field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.String">func (CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=19107:19148#L506">String</a>
+					<a class="permalink" href="index.html#CreateTokenInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateTokenInput">CreateTokenInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenInput.Validate">func (*CreateTokenInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=19576:19619#L520">Validate</a>
+					<a class="permalink" href="index.html#CreateTokenInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CreateTokenOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=21338:22159#L589">CreateTokenOutput</a>
+				<a class="permalink" href="index.html#CreateTokenOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CreateTokenOutput struct {
+
+    <span class="comment">// An opaque token to access AWS SSO resources assigned to a user.</span>
+<span id="CreateTokenOutput.AccessToken"></span>    AccessToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;accessToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Indicates the time in seconds when an access token will expire.</span>
+<span id="CreateTokenOutput.ExpiresIn"></span>    ExpiresIn *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;expiresIn&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The identifier of the user that associated with the access token, if present.</span>
+<span id="CreateTokenOutput.IdToken"></span>    IdToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;idToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A token that, if present, can be used to refresh a previously issued access</span>
+    <span class="comment">// token that might have expired.</span>
+<span id="CreateTokenOutput.RefreshToken"></span>    RefreshToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;refreshToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Used to notify the client that the returned token is an access token. The</span>
+    <span class="comment">// supported type is BearerToken.</span>
+<span id="CreateTokenOutput.TokenType"></span>    TokenType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tokenType&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CreateTokenOutput.GoString">func (CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=22735:22779#L624">GoString</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.SetAccessToken">func (*CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=22858:22929#L629">SetAccessToken</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.SetAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) SetAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a></pre>
+				<p>
+SetAccessToken sets the AccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.SetExpiresIn">func (*CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=23015:23083#L635">SetExpiresIn</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.SetExpiresIn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) SetExpiresIn(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a></pre>
+				<p>
+SetExpiresIn sets the ExpiresIn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.SetIdToken">func (*CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=23163:23230#L641">SetIdToken</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.SetIdToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) SetIdToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a></pre>
+				<p>
+SetIdToken sets the IdToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.SetRefreshToken">func (*CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=23318:23390#L647">SetRefreshToken</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.SetRefreshToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) SetRefreshToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a></pre>
+				<p>
+SetRefreshToken sets the RefreshToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.SetTokenType">func (*CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=23477:23546#L653">SetTokenType</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.SetTokenType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) SetTokenType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a></pre>
+				<p>
+SetTokenType sets the TokenType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateTokenOutput.String">func (CreateTokenOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=22409:22451#L615">String</a>
+					<a class="permalink" href="index.html#CreateTokenOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateTokenOutput">CreateTokenOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExpiredTokenException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=23668:24012#L660">ExpiredTokenException</a>
+				<a class="permalink" href="index.html#ExpiredTokenException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the token issued by the service is expired and is no longer
+valid.
+</p>
+
+			<pre>type ExpiredTokenException struct {
+<span id="ExpiredTokenException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ExpiredTokenException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="ExpiredTokenException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="ExpiredTokenException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExpiredTokenException.Code">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=24835:24880#L696">Code</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.Error">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=25205:25251#L713">Error</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.GoString">func (ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=24592:24640#L685">GoString</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.Message">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=24962:25010#L701">Message</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.OrigErr">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=25140:25187#L709">OrigErr</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.RequestID">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=25559:25609#L723">RequestID</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.StatusCode">func (*ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=25404:25452#L718">StatusCode</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExpiredTokenException.String">func (ExpiredTokenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=24262:24308#L676">String</a>
+					<a class="permalink" href="index.html#ExpiredTokenException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExpiredTokenException">ExpiredTokenException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=25739:26085#L729">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that an error from the service occurred while trying to process
+a request.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InternalServerException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=26916:26963#L765">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27294:27342#L782">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=26667:26717#L754">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27047:27097#L770">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27227:27276#L778">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27652:27704#L792">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27495:27545#L787">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=26335:26383#L745">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidClientException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=27921:28266#L799">InvalidClientException</a>
+				<a class="permalink" href="index.html#InvalidClientException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the clientId or clientSecret in the request is invalid. For
+example, this can occur when a client sends an incorrect clientId or an expired
+clientSecret.
+</p>
+
+			<pre>type InvalidClientException struct {
+<span id="InvalidClientException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidClientException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InvalidClientException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InvalidClientException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidClientException.Code">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29093:29139#L835">Code</a>
+					<a class="permalink" href="index.html#InvalidClientException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.Error">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29467:29514#L852">Error</a>
+					<a class="permalink" href="index.html#InvalidClientException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.GoString">func (InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=28847:28896#L824">GoString</a>
+					<a class="permalink" href="index.html#InvalidClientException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidClientException">InvalidClientException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.Message">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29222:29271#L840">Message</a>
+					<a class="permalink" href="index.html#InvalidClientException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.OrigErr">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29401:29449#L848">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidClientException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.RequestID">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29823:29874#L862">RequestID</a>
+					<a class="permalink" href="index.html#InvalidClientException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.StatusCode">func (*InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=29667:29716#L857">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidClientException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientException">InvalidClientException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientException.String">func (InvalidClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=28516:28563#L815">String</a>
+					<a class="permalink" href="index.html#InvalidClientException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidClientException">InvalidClientException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidClientMetadataException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=30009:30362#L868">InvalidClientMetadataException</a>
+				<a class="permalink" href="index.html#InvalidClientMetadataException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the client information sent in the request during registration
+is invalid.
+</p>
+
+			<pre>type InvalidClientMetadataException struct {
+<span id="InvalidClientMetadataException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidClientMetadataException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InvalidClientMetadataException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InvalidClientMetadataException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidClientMetadataException.Code">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31221:31275#L904">Code</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.Error">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31627:31682#L921">Error</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.GoString">func (InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=30951:31008#L893">GoString</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.Message">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31366:31423#L909">Message</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.OrigErr">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31553:31609#L917">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.RequestID">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31999:32058#L931">RequestID</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.StatusCode">func (*InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=31835:31892#L926">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidClientMetadataException.String">func (InvalidClientMetadataException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=30612:30667#L884">String</a>
+					<a class="permalink" href="index.html#InvalidClientMetadataException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidClientMetadataException">InvalidClientMetadataException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidGrantException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=32238:32582#L937">InvalidGrantException</a>
+				<a class="permalink" href="index.html#InvalidGrantException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that a request contains an invalid grant. This can occur if a client
+makes a CreateToken request with an invalid grant type.
+</p>
+
+			<pre>type InvalidGrantException struct {
+<span id="InvalidGrantException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidGrantException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InvalidGrantException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InvalidGrantException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidGrantException.Code">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33405:33450#L973">Code</a>
+					<a class="permalink" href="index.html#InvalidGrantException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.Error">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33775:33821#L990">Error</a>
+					<a class="permalink" href="index.html#InvalidGrantException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.GoString">func (InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33162:33210#L962">GoString</a>
+					<a class="permalink" href="index.html#InvalidGrantException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidGrantException">InvalidGrantException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.Message">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33532:33580#L978">Message</a>
+					<a class="permalink" href="index.html#InvalidGrantException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.OrigErr">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33710:33757#L986">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidGrantException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.RequestID">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=34129:34179#L1000">RequestID</a>
+					<a class="permalink" href="index.html#InvalidGrantException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.StatusCode">func (*InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=33974:34022#L995">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidGrantException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidGrantException">InvalidGrantException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidGrantException.String">func (InvalidGrantException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=32832:32878#L953">String</a>
+					<a class="permalink" href="index.html#InvalidGrantException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidGrantException">InvalidGrantException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidRequestException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=34357:34703#L1006">InvalidRequestException</a>
+				<a class="permalink" href="index.html#InvalidRequestException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that something is wrong with the input to the request. For example,
+a required parameter might be missing or out of range.
+</p>
+
+			<pre>type InvalidRequestException struct {
+<span id="InvalidRequestException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidRequestException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InvalidRequestException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InvalidRequestException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidRequestException.Code">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=35534:35581#L1042">Code</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.Error">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=35912:35960#L1059">Error</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.GoString">func (InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=35285:35335#L1031">GoString</a>
+					<a class="permalink" href="index.html#InvalidRequestException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidRequestException">InvalidRequestException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.Message">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=35665:35715#L1047">Message</a>
+					<a class="permalink" href="index.html#InvalidRequestException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.OrigErr">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=35845:35894#L1055">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidRequestException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.RequestID">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=36270:36322#L1069">RequestID</a>
+					<a class="permalink" href="index.html#InvalidRequestException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.StatusCode">func (*InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=36113:36163#L1064">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidRequestException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidRequestException">InvalidRequestException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidRequestException.String">func (InvalidRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=34953:35001#L1022">String</a>
+					<a class="permalink" href="index.html#InvalidRequestException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidRequestException">InvalidRequestException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidScopeException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=36425:36769#L1074">InvalidScopeException</a>
+				<a class="permalink" href="index.html#InvalidScopeException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the scope provided in the request is invalid.
+</p>
+
+			<pre>type InvalidScopeException struct {
+<span id="InvalidScopeException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidScopeException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="InvalidScopeException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="InvalidScopeException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidScopeException.Code">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37592:37637#L1110">Code</a>
+					<a class="permalink" href="index.html#InvalidScopeException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.Error">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37962:38008#L1127">Error</a>
+					<a class="permalink" href="index.html#InvalidScopeException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.GoString">func (InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37349:37397#L1099">GoString</a>
+					<a class="permalink" href="index.html#InvalidScopeException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidScopeException">InvalidScopeException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.Message">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37719:37767#L1115">Message</a>
+					<a class="permalink" href="index.html#InvalidScopeException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.OrigErr">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37897:37944#L1123">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidScopeException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.RequestID">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=38316:38366#L1137">RequestID</a>
+					<a class="permalink" href="index.html#InvalidScopeException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.StatusCode">func (*InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=38161:38209#L1132">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidScopeException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidScopeException">InvalidScopeException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidScopeException.String">func (InvalidScopeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=37019:37065#L1090">String</a>
+					<a class="permalink" href="index.html#InvalidScopeException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidScopeException">InvalidScopeException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RegisterClientInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=38405:39090#L1141">RegisterClientInput</a>
+				<a class="permalink" href="index.html#RegisterClientInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type RegisterClientInput struct {
+
+    <span class="comment">// The friendly name of the client.</span>
+    <span class="comment">//</span>
+<span id="RegisterClientInput.ClientName"></span>    <span class="comment">// ClientName is a required field</span>
+    ClientName *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientName&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The type of client. The service supports only public as a client type. Anything</span>
+    <span class="comment">// other than public will be rejected by the service.</span>
+    <span class="comment">//</span>
+<span id="RegisterClientInput.ClientType"></span>    <span class="comment">// ClientType is a required field</span>
+    ClientType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientType&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The list of scopes that are defined by the client. Upon authorization, this</span>
+    <span class="comment">// list is used to restrict permissions when granting an access token.</span>
+<span id="RegisterClientInput.Scopes"></span>    Scopes []*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;scopes&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RegisterClientInput.GoString">func (RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=39668:39714#L1174">GoString</a>
+					<a class="permalink" href="index.html#RegisterClientInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RegisterClientInput">RegisterClientInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientInput.SetClientName">func (*RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=40247:40321#L1195">SetClientName</a>
+					<a class="permalink" href="index.html#RegisterClientInput.SetClientName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) SetClientName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientInput">RegisterClientInput</a></pre>
+				<p>
+SetClientName sets the ClientName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientInput.SetClientType">func (*RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=40408:40482#L1201">SetClientType</a>
+					<a class="permalink" href="index.html#RegisterClientInput.SetClientType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) SetClientType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientInput">RegisterClientInput</a></pre>
+				<p>
+SetClientType sets the ClientType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientInput.SetScopes">func (*RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=40561:40634#L1207">SetScopes</a>
+					<a class="permalink" href="index.html#RegisterClientInput.SetScopes">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) SetScopes(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientInput">RegisterClientInput</a></pre>
+				<p>
+SetScopes sets the Scopes field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientInput.String">func (RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=39340:39384#L1165">String</a>
+					<a class="permalink" href="index.html#RegisterClientInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RegisterClientInput">RegisterClientInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientInput.Validate">func (*RegisterClientInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=39815:39861#L1179">Validate</a>
+					<a class="permalink" href="index.html#RegisterClientInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RegisterClientOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=40664:41726#L1212">RegisterClientOutput</a>
+				<a class="permalink" href="index.html#RegisterClientOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type RegisterClientOutput struct {
+
+    <span class="comment">// The endpoint where the client can request authorization.</span>
+<span id="RegisterClientOutput.AuthorizationEndpoint"></span>    AuthorizationEndpoint *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;authorizationEndpoint&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The unique identifier string for each client. This client uses this identifier</span>
+    <span class="comment">// to get authenticated by the service in subsequent calls.</span>
+<span id="RegisterClientOutput.ClientId"></span>    ClientId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientId&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Indicates the time at which the clientId and clientSecret were issued.</span>
+<span id="RegisterClientOutput.ClientIdIssuedAt"></span>    ClientIdIssuedAt *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;clientIdIssuedAt&#34; type:&#34;long&#34;`
+
+    <span class="comment">// A secret string generated for the client. The client will use this string</span>
+    <span class="comment">// to get authenticated by the service in subsequent calls.</span>
+<span id="RegisterClientOutput.ClientSecret"></span>    ClientSecret *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientSecret&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Indicates the time at which the clientId and clientSecret will become invalid.</span>
+<span id="RegisterClientOutput.ClientSecretExpiresAt"></span>    ClientSecretExpiresAt *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;clientSecretExpiresAt&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The endpoint where the client can get an access token.</span>
+<span id="RegisterClientOutput.TokenEndpoint"></span>    TokenEndpoint *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tokenEndpoint&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RegisterClientOutput.GoString">func (RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=42305:42352#L1250">GoString</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetAuthorizationEndpoint">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=42451:42538#L1255">SetAuthorizationEndpoint</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetAuthorizationEndpoint">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetAuthorizationEndpoint(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetAuthorizationEndpoint sets the AuthorizationEndpoint field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetClientId">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=42632:42706#L1261">SetClientId</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetClientId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetClientId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetClientId sets the ClientId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetClientIdIssuedAt">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=42803:42884#L1267">SetClientIdIssuedAt</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetClientIdIssuedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetClientIdIssuedAt(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetClientIdIssuedAt sets the ClientIdIssuedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetClientSecret">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=42981:43059#L1273">SetClientSecret</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetClientSecret">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetClientSecret(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetClientSecret sets the ClientSecret field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetClientSecretExpiresAt">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=43170:43256#L1279">SetClientSecretExpiresAt</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetClientSecretExpiresAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetClientSecretExpiresAt(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetClientSecretExpiresAt sets the ClientSecretExpiresAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.SetTokenEndpoint">func (*RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=43360:43439#L1285">SetTokenEndpoint</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.SetTokenEndpoint">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) SetTokenEndpoint(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a></pre>
+				<p>
+SetTokenEndpoint sets the TokenEndpoint field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RegisterClientOutput.String">func (RegisterClientOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=41976:42021#L1241">String</a>
+					<a class="permalink" href="index.html#RegisterClientOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RegisterClientOutput">RegisterClientOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SSOOIDC">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/service.go?s=690:729#L11">SSOOIDC</a>
+				<a class="permalink" href="index.html#SSOOIDC">¶</a>
+				
+				
+			</h2>
+			<p>
+SSOOIDC provides the API operation methods for making requests to
+AWS SSO OIDC. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+SSOOIDC methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type SSOOIDC struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/service.go?s=1655:1718#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#SSOOIDC">SSOOIDC</a></pre>
+				<p>
+New creates a new instance of the SSOOIDC client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a SSOOIDC client from just a session.
+svc := ssooidc.New(mySession)
+
+// Create a SSOOIDC client with additional configuration
+svc := ssooidc.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SSOOIDC.CreateToken">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=4023:4105#L105">CreateToken</a>
+					<a class="permalink" href="index.html#SSOOIDC.CreateToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) CreateToken(input *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) (*<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CreateToken API operation for AWS SSO OIDC.
+</p>
+<p>
+Creates and returns an access token for the authorized client. The access
+token issued will be used to fetch short-term credentials for the assigned
+roles in the AWS account.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO OIDC&#39;s
+API operation CreateToken for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that something is wrong with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* InvalidClientException
+Indicates that the clientId or clientSecret in the request is invalid. For
+example, this can occur when a client sends an incorrect clientId or an expired
+clientSecret.
+
+* InvalidGrantException
+Indicates that a request contains an invalid grant. This can occur if a client
+makes a CreateToken request with an invalid grant type.
+
+* UnauthorizedClientException
+Indicates that the client is not currently authorized to make the request.
+This can happen when a clientId is not issued for a public client.
+
+* UnsupportedGrantTypeException
+Indicates that the grant type in the request is not supported by the service.
+
+* InvalidScopeException
+Indicates that the scope provided in the request is invalid.
+
+* AuthorizationPendingException
+Indicates that a request to authorize a client with an access user session
+token is pending.
+
+* SlowDownException
+Indicates that the client is making the request too frequently and is more
+than the service can handle.
+
+* AccessDeniedException
+You do not have sufficient access to perform this action.
+
+* ExpiredTokenException
+Indicates that the token issued by the service is expired and is no longer
+valid.
+
+* InternalServerException
+Indicates that an error from the service occurred while trying to process
+a request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.CreateTokenRequest">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=1346:1457#L31">CreateTokenRequest</a>
+					<a class="permalink" href="index.html#SSOOIDC.CreateTokenRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) CreateTokenRequest(input *<a href="index.html#CreateTokenInput">CreateTokenInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>)</pre>
+				<p>
+CreateTokenRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the CreateToken operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See CreateToken for more information on using the CreateToken
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the CreateTokenRequest method.
+req, resp := client.CreateTokenRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.CreateTokenWithContext">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=4652:4786#L119">CreateTokenWithContext</a>
+					<a class="permalink" href="index.html#SSOOIDC.CreateTokenWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) CreateTokenWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#CreateTokenInput">CreateTokenInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CreateTokenWithContext is the same as CreateToken with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See CreateToken for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.RegisterClient">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=7597:7688#L198">RegisterClient</a>
+					<a class="permalink" href="index.html#SSOOIDC.RegisterClient">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) RegisterClient(input *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) (*<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+RegisterClient API operation for AWS SSO OIDC.
+</p>
+<p>
+Registers a client with AWS SSO. This allows clients to initiate device authorization.
+The output should be persisted for reuse through many authentication requests.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO OIDC&#39;s
+API operation RegisterClient for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that something is wrong with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* InvalidScopeException
+Indicates that the scope provided in the request is invalid.
+
+* InvalidClientMetadataException
+Indicates that the client information sent in the request during registration
+is invalid.
+
+* InternalServerException
+Indicates that an error from the service occurred while trying to process
+a request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.RegisterClientRequest">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=5965:6085#L152">RegisterClientRequest</a>
+					<a class="permalink" href="index.html#SSOOIDC.RegisterClientRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) RegisterClientRequest(input *<a href="index.html#RegisterClientInput">RegisterClientInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>)</pre>
+				<p>
+RegisterClientRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the RegisterClient operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See RegisterClient for more information on using the RegisterClient
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the RegisterClientRequest method.
+req, resp := client.RegisterClientRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.RegisterClientWithContext">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=8247:8390#L212">RegisterClientWithContext</a>
+					<a class="permalink" href="index.html#SSOOIDC.RegisterClientWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) RegisterClientWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#RegisterClientInput">RegisterClientInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#RegisterClientOutput">RegisterClientOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+RegisterClientWithContext is the same as RegisterClient with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See RegisterClient for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.StartDeviceAuthorization">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=11639:11760#L297">StartDeviceAuthorization</a>
+					<a class="permalink" href="index.html#SSOOIDC.StartDeviceAuthorization">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) StartDeviceAuthorization(input *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) (*<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StartDeviceAuthorization API operation for AWS SSO OIDC.
+</p>
+<p>
+Initiates device authorization by requesting a pair of verification codes
+from the authorization service.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO OIDC&#39;s
+API operation StartDeviceAuthorization for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidRequestException
+Indicates that something is wrong with the input to the request. For example,
+a required parameter might be missing or out of range.
+
+* InvalidClientException
+Indicates that the clientId or clientSecret in the request is invalid. For
+example, this can occur when a client sends an incorrect clientId or an expired
+clientSecret.
+
+* UnauthorizedClientException
+Indicates that the client is not currently authorized to make the request.
+This can happen when a clientId is not issued for a public client.
+
+* SlowDownException
+Indicates that the client is making the request too frequently and is more
+than the service can handle.
+
+* InternalServerException
+Indicates that an error from the service occurred while trying to process
+a request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.StartDeviceAuthorizationRequest">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=9662:9812#L245">StartDeviceAuthorizationRequest</a>
+					<a class="permalink" href="index.html#SSOOIDC.StartDeviceAuthorizationRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) StartDeviceAuthorizationRequest(input *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>)</pre>
+				<p>
+StartDeviceAuthorizationRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the StartDeviceAuthorization operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See StartDeviceAuthorization for more information on using the StartDeviceAuthorization
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the StartDeviceAuthorizationRequest method.
+req, resp := client.StartDeviceAuthorizationRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization">https://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SSOOIDC.StartDeviceAuthorizationWithContext">func (*SSOOIDC) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=12359:12532#L311">StartDeviceAuthorizationWithContext</a>
+					<a class="permalink" href="index.html#SSOOIDC.StartDeviceAuthorizationWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SSOOIDC">SSOOIDC</a>) StartDeviceAuthorizationWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StartDeviceAuthorizationWithContext is the same as StartDeviceAuthorization with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See StartDeviceAuthorization for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SlowDownException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=43587:43927#L1292">SlowDownException</a>
+				<a class="permalink" href="index.html#SlowDownException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the client is making the request too frequently and is more
+than the service can handle.
+</p>
+
+			<pre>type SlowDownException struct {
+<span id="SlowDownException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="SlowDownException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="SlowDownException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="SlowDownException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SlowDownException.Code">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=44734:44775#L1328">Code</a>
+					<a class="permalink" href="index.html#SlowDownException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.Error">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=45088:45130#L1345">Error</a>
+					<a class="permalink" href="index.html#SlowDownException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.GoString">func (SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=44503:44547#L1317">GoString</a>
+					<a class="permalink" href="index.html#SlowDownException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SlowDownException">SlowDownException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.Message">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=44853:44897#L1333">Message</a>
+					<a class="permalink" href="index.html#SlowDownException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.OrigErr">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=45027:45070#L1341">OrigErr</a>
+					<a class="permalink" href="index.html#SlowDownException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.RequestID">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=45434:45480#L1355">RequestID</a>
+					<a class="permalink" href="index.html#SlowDownException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.StatusCode">func (*SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=45283:45327#L1350">StatusCode</a>
+					<a class="permalink" href="index.html#SlowDownException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SlowDownException">SlowDownException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SlowDownException.String">func (SlowDownException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=44177:44219#L1308">String</a>
+					<a class="permalink" href="index.html#SlowDownException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SlowDownException">SlowDownException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartDeviceAuthorizationInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=45519:46479#L1359">StartDeviceAuthorizationInput</a>
+				<a class="permalink" href="index.html#StartDeviceAuthorizationInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StartDeviceAuthorizationInput struct {
+
+    <span class="comment">// The unique identifier string for the client that is registered with AWS SSO.</span>
+    <span class="comment">// This value should come from the persisted result of the RegisterClient API</span>
+    <span class="comment">// operation.</span>
+    <span class="comment">//</span>
+<span id="StartDeviceAuthorizationInput.ClientId"></span>    <span class="comment">// ClientId is a required field</span>
+    ClientId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A secret string that is generated for the client. This value should come</span>
+    <span class="comment">// from the persisted result of the RegisterClient API operation.</span>
+    <span class="comment">//</span>
+<span id="StartDeviceAuthorizationInput.ClientSecret"></span>    <span class="comment">// ClientSecret is a required field</span>
+    ClientSecret *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;clientSecret&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The URL for the AWS SSO user portal. For more information, see Using the</span>
+    <span class="comment">// User Portal (https://docs.aws.amazon.com/singlesignon/latest/userguide/using-the-portal.html)</span>
+    <span class="comment">// in the AWS Single Sign-On User Guide.</span>
+    <span class="comment">//</span>
+<span id="StartDeviceAuthorizationInput.StartUrl"></span>    <span class="comment">// StartUrl is a required field</span>
+    StartUrl *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;startUrl&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.GoString">func (StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=47067:47123#L1397">GoString</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.SetClientId">func (*StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=47760:47852#L1421">SetClientId</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.SetClientId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) SetClientId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a></pre>
+				<p>
+SetClientId sets the ClientId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.SetClientSecret">func (*StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=47941:48037#L1427">SetClientSecret</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.SetClientSecret">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) SetClientSecret(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a></pre>
+				<p>
+SetClientSecret sets the ClientSecret field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.SetStartUrl">func (*StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=48122:48214#L1433">SetStartUrl</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.SetStartUrl">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) SetStartUrl(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a></pre>
+				<p>
+SetStartUrl sets the StartUrl field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.String">func (StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=46729:46783#L1388">String</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationInput.Validate">func (*StartDeviceAuthorizationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=47224:47280#L1402">Validate</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationInput">StartDeviceAuthorizationInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartDeviceAuthorizationOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=48247:49388#L1438">StartDeviceAuthorizationOutput</a>
+				<a class="permalink" href="index.html#StartDeviceAuthorizationOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StartDeviceAuthorizationOutput struct {
+
+    <span class="comment">// The short-lived code that is used by the device when polling for a session</span>
+    <span class="comment">// token.</span>
+<span id="StartDeviceAuthorizationOutput.DeviceCode"></span>    DeviceCode *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;deviceCode&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Indicates the number of seconds in which the verification code will become</span>
+    <span class="comment">// invalid.</span>
+<span id="StartDeviceAuthorizationOutput.ExpiresIn"></span>    ExpiresIn *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;expiresIn&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// Indicates the number of seconds the client must wait between attempts when</span>
+    <span class="comment">// polling for a session.</span>
+<span id="StartDeviceAuthorizationOutput.Interval"></span>    Interval *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;interval&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// A one-time user verification code. This is needed to authorize an in-use</span>
+    <span class="comment">// device.</span>
+<span id="StartDeviceAuthorizationOutput.UserCode"></span>    UserCode *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;userCode&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The URI of the verification page that takes the userCode to authorize the</span>
+    <span class="comment">// device.</span>
+<span id="StartDeviceAuthorizationOutput.VerificationUri"></span>    VerificationUri *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;verificationUri&#34; type:&#34;string&#34;`
+
+    <span class="comment">// An alternate URL that the client can use to automatically launch a browser.</span>
+    <span class="comment">// This process skips the manual step in which the user visits the verification</span>
+    <span class="comment">// page and enters their code.</span>
+<span id="StartDeviceAuthorizationOutput.VerificationUriComplete"></span>    VerificationUriComplete *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;verificationUriComplete&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.GoString">func (StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=49977:50034#L1481">GoString</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetDeviceCode">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=50111:50207#L1486">SetDeviceCode</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetDeviceCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetDeviceCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetDeviceCode sets the DeviceCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetExpiresIn">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=50292:50386#L1492">SetExpiresIn</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetExpiresIn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetExpiresIn(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetExpiresIn sets the ExpiresIn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetInterval">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=50468:50561#L1498">SetInterval</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetInterval">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetInterval(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetInterval sets the Interval field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetUserCode">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=50642:50736#L1504">SetUserCode</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetUserCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetUserCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetUserCode sets the UserCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetVerificationUri">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=50831:50932#L1510">SetVerificationUri</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetVerificationUri">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetVerificationUri(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetVerificationUri sets the VerificationUri field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.SetVerificationUriComplete">func (*StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=51050:51159#L1516">SetVerificationUriComplete</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.SetVerificationUriComplete">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) SetVerificationUriComplete(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a></pre>
+				<p>
+SetVerificationUriComplete sets the VerificationUriComplete field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartDeviceAuthorizationOutput.String">func (StartDeviceAuthorizationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=49638:49693#L1472">String</a>
+					<a class="permalink" href="index.html#StartDeviceAuthorizationOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartDeviceAuthorizationOutput">StartDeviceAuthorizationOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UnauthorizedClientException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=51355:51705#L1523">UnauthorizedClientException</a>
+				<a class="permalink" href="index.html#UnauthorizedClientException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the client is not currently authorized to make the request.
+This can happen when a clientId is not issued for a public client.
+</p>
+
+			<pre>type UnauthorizedClientException struct {
+<span id="UnauthorizedClientException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="UnauthorizedClientException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="UnauthorizedClientException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="UnauthorizedClientException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UnauthorizedClientException.Code">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=52552:52603#L1559">Code</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.Error">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=52946:52998#L1576">Error</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.GoString">func (UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=52291:52345#L1548">GoString</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.Message">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=52691:52745#L1564">Message</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.OrigErr">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=52875:52928#L1572">OrigErr</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.RequestID">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=53312:53368#L1586">RequestID</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.StatusCode">func (*UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=53151:53205#L1581">StatusCode</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnauthorizedClientException.String">func (UnauthorizedClientException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=51955:52007#L1539">String</a>
+					<a class="permalink" href="index.html#UnauthorizedClientException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnauthorizedClientException">UnauthorizedClientException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UnsupportedGrantTypeException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=53488:53840#L1591">UnsupportedGrantTypeException</a>
+				<a class="permalink" href="index.html#UnsupportedGrantTypeException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the grant type in the request is not supported by the service.
+</p>
+
+			<pre>type UnsupportedGrantTypeException struct {
+<span id="UnsupportedGrantTypeException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="UnsupportedGrantTypeException.Error_"></span>    Error_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error&#34; type:&#34;string&#34;`
+
+<span id="UnsupportedGrantTypeException.Error_description"></span>    Error_description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;error_description&#34; type:&#34;string&#34;`
+
+<span id="UnsupportedGrantTypeException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UnsupportedGrantTypeException.Code">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=54695:54748#L1627">Code</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.Error">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=55097:55151#L1644">Error</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.GoString">func (UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=54428:54484#L1616">GoString</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.Message">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=54838:54894#L1632">Message</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.OrigErr">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=55024:55079#L1640">OrigErr</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.RequestID">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=55467:55525#L1654">RequestID</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.StatusCode">func (*UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=55304:55360#L1649">StatusCode</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UnsupportedGrantTypeException.String">func (UnsupportedGrantTypeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ssooidc/api.go?s=54090:54144#L1607">String</a>
+					<a class="permalink" href="index.html#UnsupportedGrantTypeException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UnsupportedGrantTypeException">UnsupportedGrantTypeException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="ssooidciface/index.html">ssooidciface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package ssooidciface provides an interface to enable mocking the AWS SSO OIDC service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

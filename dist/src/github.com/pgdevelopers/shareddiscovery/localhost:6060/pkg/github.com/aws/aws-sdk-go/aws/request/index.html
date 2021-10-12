@@ -1,0 +1,3659 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>request - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package request
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/request&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AddToUserAgent">func AddToUserAgent(r *Request, s string)</a></dd>
+			
+				
+				<dd><a href="index.html#HandlerListLogItem">func HandlerListLogItem(item HandlerListRunItem) bool</a></dd>
+			
+				
+				<dd><a href="index.html#HandlerListStopOnError">func HandlerListStopOnError(item HandlerListRunItem) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsErrorExpiredCreds">func IsErrorExpiredCreds(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsErrorRetryable">func IsErrorRetryable(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsErrorThrottle">func IsErrorThrottle(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#MakeAddToUserAgentFreeFormHandler">func MakeAddToUserAgentFreeFormHandler(s string) func(*Request)</a></dd>
+			
+				
+				<dd><a href="index.html#MakeAddToUserAgentHandler">func MakeAddToUserAgentHandler(name, version string, extra ...string) func(*Request)</a></dd>
+			
+				
+				<dd><a href="index.html#SanitizeHostForHeader">func SanitizeHostForHeader(r *http.Request)</a></dd>
+			
+				
+				<dd><a href="index.html#WithRetryer">func WithRetryer(cfg *aws.Config, retryer Retryer) *aws.Config</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ErrInvalidParam">type ErrInvalidParam</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrInvalidParams">type ErrInvalidParams</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.Add">func (e *ErrInvalidParams) Add(err ErrInvalidParam)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.AddNested">func (e *ErrInvalidParams) AddNested(nestedCtx string, nested ErrInvalidParams)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.Code">func (e ErrInvalidParams) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.Error">func (e ErrInvalidParams) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.Len">func (e ErrInvalidParams) Len() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.Message">func (e ErrInvalidParams) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.OrigErr">func (e ErrInvalidParams) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrInvalidParams.OrigErrs">func (e ErrInvalidParams) OrigErrs() []error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ErrParamFormat">type ErrParamFormat</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewErrParamFormat">func NewErrParamFormat(field string, format, value string) *ErrParamFormat</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.AddNestedContext">func (e *ErrParamFormat) AddNestedContext(ctx string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.Code">func (e *ErrParamFormat) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.Error">func (e *ErrParamFormat) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.Field">func (e *ErrParamFormat) Field() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.Format">func (e *ErrParamFormat) Format() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.Message">func (e *ErrParamFormat) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.OrigErr">func (e *ErrParamFormat) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamFormat.SetContext">func (e *ErrParamFormat) SetContext(ctx string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ErrParamMaxLen">type ErrParamMaxLen</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewErrParamMaxLen">func NewErrParamMaxLen(field string, max int, value string) *ErrParamMaxLen</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.AddNestedContext">func (e *ErrParamMaxLen) AddNestedContext(ctx string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.Code">func (e *ErrParamMaxLen) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.Error">func (e *ErrParamMaxLen) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.Field">func (e *ErrParamMaxLen) Field() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.MaxLen">func (e *ErrParamMaxLen) MaxLen() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.Message">func (e *ErrParamMaxLen) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.OrigErr">func (e *ErrParamMaxLen) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMaxLen.SetContext">func (e *ErrParamMaxLen) SetContext(ctx string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ErrParamMinLen">type ErrParamMinLen</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewErrParamMinLen">func NewErrParamMinLen(field string, min int) *ErrParamMinLen</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.AddNestedContext">func (e *ErrParamMinLen) AddNestedContext(ctx string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.Code">func (e *ErrParamMinLen) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.Error">func (e *ErrParamMinLen) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.Field">func (e *ErrParamMinLen) Field() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.Message">func (e *ErrParamMinLen) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.MinLen">func (e *ErrParamMinLen) MinLen() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.OrigErr">func (e *ErrParamMinLen) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinLen.SetContext">func (e *ErrParamMinLen) SetContext(ctx string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ErrParamMinValue">type ErrParamMinValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewErrParamMinValue">func NewErrParamMinValue(field string, min float64) *ErrParamMinValue</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.AddNestedContext">func (e *ErrParamMinValue) AddNestedContext(ctx string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.Code">func (e *ErrParamMinValue) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.Error">func (e *ErrParamMinValue) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.Field">func (e *ErrParamMinValue) Field() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.Message">func (e *ErrParamMinValue) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.MinValue">func (e *ErrParamMinValue) MinValue() float64</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.OrigErr">func (e *ErrParamMinValue) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamMinValue.SetContext">func (e *ErrParamMinValue) SetContext(ctx string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ErrParamRequired">type ErrParamRequired</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewErrParamRequired">func NewErrParamRequired(field string) *ErrParamRequired</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.AddNestedContext">func (e *ErrParamRequired) AddNestedContext(ctx string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.Code">func (e *ErrParamRequired) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.Error">func (e *ErrParamRequired) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.Field">func (e *ErrParamRequired) Field() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.Message">func (e *ErrParamRequired) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.OrigErr">func (e *ErrParamRequired) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ErrParamRequired.SetContext">func (e *ErrParamRequired) SetContext(ctx string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HandlerList">type HandlerList</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HandlerList.Clear">func (l *HandlerList) Clear()</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.Len">func (l *HandlerList) Len() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.PushBack">func (l *HandlerList) PushBack(f func(*Request))</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.PushBackNamed">func (l *HandlerList) PushBackNamed(n NamedHandler)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.PushFront">func (l *HandlerList) PushFront(f func(*Request))</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.PushFrontNamed">func (l *HandlerList) PushFrontNamed(n NamedHandler)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.Remove">func (l *HandlerList) Remove(n NamedHandler)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.RemoveByName">func (l *HandlerList) RemoveByName(name string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.Run">func (l *HandlerList) Run(r *Request)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.SetBackNamed">func (l *HandlerList) SetBackNamed(n NamedHandler)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.SetFrontNamed">func (l *HandlerList) SetFrontNamed(n NamedHandler)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.Swap">func (l *HandlerList) Swap(name string, replace NamedHandler) bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#HandlerList.SwapNamed">func (l *HandlerList) SwapNamed(n NamedHandler) (swapped bool)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HandlerListRunItem">type HandlerListRunItem</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Handlers">type Handlers</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Handlers.Clear">func (h *Handlers) Clear()</a></dd>
+				
+					
+					<dd>    <a href="index.html#Handlers.Copy">func (h *Handlers) Copy() Handlers</a></dd>
+				
+					
+					<dd>    <a href="index.html#Handlers.IsEmpty">func (h *Handlers) IsEmpty() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NamedHandler">type NamedHandler</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Operation">type Operation</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Option">type Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithAppendUserAgent">func WithAppendUserAgent(s string) Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithGetResponseHeader">func WithGetResponseHeader(key string, val *string) Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithGetResponseHeaders">func WithGetResponseHeaders(headers *http.Header) Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithLogLevel">func WithLogLevel(l aws.LogLevelType) Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithResponseReadTimeout">func WithResponseReadTimeout(duration time.Duration) Option</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithSetRequestHeaders">func WithSetRequestHeaders(h map[string]string) Option</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Pagination">type Pagination</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Pagination.Err">func (p *Pagination) Err() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#Pagination.HasNextPage">func (p *Pagination) HasNextPage() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Pagination.Next">func (p *Pagination) Next() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Pagination.Page">func (p *Pagination) Page() interface{}</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Paginator">type Paginator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Request">type Request</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(cfg aws.Config, clientInfo metadata.ClientInfo, handlers Handlers, retryer Retryer, operation *Operation, params interface{}, data interface{}) *Request</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Request.ApplyOptions">func (r *Request) ApplyOptions(opts ...Option)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.Build">func (r *Request) Build() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.Context">func (r *Request) Context() aws.Context</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.DataFilled">func (r *Request) DataFilled() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.EachPage">func (r *Request) EachPage(fn func(data interface{}, isLastPage bool) (shouldContinue bool)) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.GetBody">func (r *Request) GetBody() io.ReadSeeker</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.HasNextPage">func (r *Request) HasNextPage() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.IsErrorExpired">func (r *Request) IsErrorExpired() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.IsErrorRetryable">func (r *Request) IsErrorRetryable() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.IsErrorThrottle">func (r *Request) IsErrorThrottle() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.IsPresigned">func (r *Request) IsPresigned() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.NextPage">func (r *Request) NextPage() *Request</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.ParamsFilled">func (r *Request) ParamsFilled() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.Presign">func (r *Request) Presign(expire time.Duration) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.PresignRequest">func (r *Request) PresignRequest(expire time.Duration) (string, http.Header, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.ResetBody">func (r *Request) ResetBody()</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.Send">func (r *Request) Send() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.SetBufferBody">func (r *Request) SetBufferBody(buf []byte)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.SetContext">func (r *Request) SetContext(ctx aws.Context)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.SetReaderBody">func (r *Request) SetReaderBody(reader io.ReadSeeker)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.SetStreamingBody">func (r *Request) SetStreamingBody(reader io.ReadCloser)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.SetStringBody">func (r *Request) SetStringBody(s string)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.Sign">func (r *Request) Sign() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#Request.WillRetry">func (r *Request) WillRetry() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Retryer">type Retryer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Validator">type Validator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Waiter">type Waiter</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Waiter.ApplyOptions">func (w *Waiter) ApplyOptions(opts ...WaiterOption)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Waiter.WaitWithContext">func (w Waiter) WaitWithContext(ctx aws.Context) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WaiterAcceptor">type WaiterAcceptor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#WaiterDelay">type WaiterDelay</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConstantWaiterDelay">func ConstantWaiterDelay(delay time.Duration) WaiterDelay</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#WaiterMatchMode">type WaiterMatchMode</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#WaiterMatchMode.String">func (m WaiterMatchMode) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WaiterOption">type WaiterOption</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithWaiterDelay">func WithWaiterDelay(delayer WaiterDelay) WaiterOption</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithWaiterLogger">func WithWaiterLogger(logger aws.Logger) WaiterOption</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithWaiterMaxAttempts">func WithWaiterMaxAttempts(max int) WaiterOption</a></dd>
+				
+					
+					<dd>    <a href="index.html#WithWaiterRequestOptions">func WithWaiterRequestOptions(opts ...Option) WaiterOption</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#WaiterState">type WaiterState</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#WaiterState.String">func (s WaiterState) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/connection_reset_error.go">connection_reset_error.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go">handlers.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/http_request.go">http_request.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/offset_reader.go">offset_reader.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go">request.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_1_8.go">request_1_8.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_context.go">request_context.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go">request_pagination.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go">retryer.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/timeout_read_closer.go">timeout_read_closer.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go">validation.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go">waiter.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ErrCodeSerialization is the serialization error code that is received</span>
+    <span class="comment">// during protocol unmarshaling.</span>
+    <span id="ErrCodeSerialization">ErrCodeSerialization</span> = &#34;SerializationError&#34;
+
+    <span class="comment">// ErrCodeRead is an error that is returned during HTTP reads.</span>
+    <span id="ErrCodeRead">ErrCodeRead</span> = &#34;ReadError&#34;
+
+    <span class="comment">// ErrCodeResponseTimeout is the connection timeout error that is received</span>
+    <span class="comment">// during body reads.</span>
+    <span id="ErrCodeResponseTimeout">ErrCodeResponseTimeout</span> = &#34;ResponseTimeout&#34;
+
+    <span class="comment">// ErrCodeInvalidPresignExpire is returned when the expire time provided to</span>
+    <span class="comment">// presign is invalid</span>
+    <span id="ErrCodeInvalidPresignExpire">ErrCodeInvalidPresignExpire</span> = &#34;InvalidPresignExpireError&#34;
+
+    <span class="comment">// CanceledErrorCode is the error code that will be returned by an</span>
+    <span class="comment">// API request that was canceled. Requests given a aws.Context may</span>
+    <span class="comment">// return this error when canceled.</span>
+    <span id="CanceledErrorCode">CanceledErrorCode</span> = &#34;RequestCanceled&#34;
+
+    <span class="comment">// ErrCodeRequestError is an error preventing the SDK from continuing to</span>
+    <span class="comment">// process the request.</span>
+    <span id="ErrCodeRequestError">ErrCodeRequestError</span> = &#34;RequestError&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// InvalidParameterErrCode is the error code for invalid parameters errors</span>
+    <span id="InvalidParameterErrCode">InvalidParameterErrCode</span> = &#34;InvalidParameter&#34;
+    <span class="comment">// ParamRequiredErrCode is the error code for required parameter errors</span>
+    <span id="ParamRequiredErrCode">ParamRequiredErrCode</span> = &#34;ParamRequiredError&#34;
+    <span class="comment">// ParamMinValueErrCode is the error code for fields with too low of a</span>
+    <span class="comment">// number value.</span>
+    <span id="ParamMinValueErrCode">ParamMinValueErrCode</span> = &#34;ParamMinValueError&#34;
+    <span class="comment">// ParamMinLenErrCode is the error code for fields without enough elements.</span>
+    <span id="ParamMinLenErrCode">ParamMinLenErrCode</span> = &#34;ParamMinLenError&#34;
+    <span class="comment">// ParamMaxLenErrCode is the error code for value being too long.</span>
+    <span id="ParamMaxLenErrCode">ParamMaxLenErrCode</span> = &#34;ParamMaxLenError&#34;
+
+    <span class="comment">// ParamFormatErrCode is the error code for a field with invalid</span>
+    <span class="comment">// format or characters.</span>
+    <span id="ParamFormatErrCode">ParamFormatErrCode</span> = &#34;ParamFormatInvalidError&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// HandlerResponseTimeout is what we use to signify the name of the</span>
+    <span class="comment">// response timeout handler.</span>
+    <span id="HandlerResponseTimeout">HandlerResponseTimeout</span> = &#34;ResponseTimeoutHandler&#34;
+)</pre>
+			
+				<p>
+WaiterResourceNotReadyErrorCode is the error code returned by a waiter when
+the waiter&#39;s max attempts have been exhausted.
+</p>
+
+				<pre>const <span id="WaiterResourceNotReadyErrorCode">WaiterResourceNotReadyErrorCode</span> = &#34;ResourceNotReady&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+NoBody is a http.NoBody reader instructing Go HTTP client to not include
+and body in the HTTP request.
+</p>
+
+				<pre>var <span id="NoBody">NoBody</span> = <a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#NoBody">NoBody</a></pre>
+			
+		
+		
+			
+			
+			<h2 id="AddToUserAgent">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=19208:19249#L624">AddToUserAgent</a>
+				<a class="permalink" href="index.html#AddToUserAgent">¶</a>
+				
+				
+			</h2>
+			<pre>func AddToUserAgent(r *<a href="index.html#Request">Request</a>, s <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+			<p>
+AddToUserAgent adds the string to the end of the request&#39;s current user agent.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HandlerListLogItem">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=7087:7140#L270">HandlerListLogItem</a>
+				<a class="permalink" href="index.html#HandlerListLogItem">¶</a>
+				
+				
+			</h2>
+			<pre>func HandlerListLogItem(item <a href="index.html#HandlerListRunItem">HandlerListRunItem</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+HandlerListLogItem logs the request handler and the state of the
+request&#39;s Error value. Always returns true to continue iterating
+request handlers in a HandlerList.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HandlerListStopOnError">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=7496:7553#L283">HandlerListStopOnError</a>
+				<a class="permalink" href="index.html#HandlerListStopOnError">¶</a>
+				
+				
+			</h2>
+			<pre>func HandlerListStopOnError(item <a href="index.html#HandlerListRunItem">HandlerListRunItem</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+HandlerListStopOnError returns false to stop the HandlerList iterating
+over request handlers if Request.Error is not nil. True otherwise
+to continue iterating.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsErrorExpiredCreds">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=6876:6916#L229">IsErrorExpiredCreds</a>
+				<a class="permalink" href="index.html#IsErrorExpiredCreds">¶</a>
+				
+				
+			</h2>
+			<pre>func IsErrorExpiredCreds(err <a href="../../../../../builtin/index.html#error">error</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+IsErrorExpiredCreds returns whether the error code is a credential expiry
+error. Returns false if error is nil.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsErrorRetryable">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=4689:4726#L147">IsErrorRetryable</a>
+				<a class="permalink" href="index.html#IsErrorRetryable">¶</a>
+				
+				
+			</h2>
+			<pre>func IsErrorRetryable(err <a href="../../../../../builtin/index.html#error">error</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+IsErrorRetryable returns whether the error is retryable, based on its Code.
+Returns false if error is nil.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsErrorThrottle">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=6606:6642#L220">IsErrorThrottle</a>
+				<a class="permalink" href="index.html#IsErrorThrottle">¶</a>
+				
+				
+			</h2>
+			<pre>func IsErrorThrottle(err <a href="../../../../../builtin/index.html#error">error</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+IsErrorThrottle returns whether the error is to be throttled based on its code.
+Returns false if error is nil.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeAddToUserAgentFreeFormHandler">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=8644:8707#L314">MakeAddToUserAgentFreeFormHandler</a>
+				<a class="permalink" href="index.html#MakeAddToUserAgentFreeFormHandler">¶</a>
+				
+				
+			</h2>
+			<pre>func MakeAddToUserAgentFreeFormHandler(s <a href="../../../../../builtin/index.html#string">string</a>) func(*<a href="index.html#Request">Request</a>)</pre>
+			<p>
+MakeAddToUserAgentFreeFormHandler adds the input to the User-Agent request header.
+The input string will be concatenated with the current request&#39;s user agent string.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeAddToUserAgentHandler">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=8204:8288#L302">MakeAddToUserAgentHandler</a>
+				<a class="permalink" href="index.html#MakeAddToUserAgentHandler">¶</a>
+				
+				
+			</h2>
+			<pre>func MakeAddToUserAgentHandler(name, version <a href="../../../../../builtin/index.html#string">string</a>, extra ...<a href="../../../../../builtin/index.html#string">string</a>) func(*<a href="index.html#Request">Request</a>)</pre>
+			<p>
+MakeAddToUserAgentHandler will add the name/version pair to the User-Agent request
+header. If the extra parameters are provided they will be added as metadata to the
+name/version pair resulting in the following format.
+&#34;name/version (extra0; extra1; ...)&#34;
+The user agent part will be concatenated with this current request&#39;s user agent string.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SanitizeHostForHeader">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=19474:19517#L633">SanitizeHostForHeader</a>
+				<a class="permalink" href="index.html#SanitizeHostForHeader">¶</a>
+				
+				
+			</h2>
+			<pre>func SanitizeHostForHeader(r *<a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Request">Request</a>)</pre>
+			<p>
+SanitizeHostForHeader removes default port from host and updates request.Host
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithRetryer">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=1282:1344#L29">WithRetryer</a>
+				<a class="permalink" href="index.html#WithRetryer">¶</a>
+				
+				
+			</h2>
+			<pre>func WithRetryer(cfg *<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>, retryer <a href="index.html#Retryer">Retryer</a>) *<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a></pre>
+			<p>
+WithRetryer sets a Retryer value to the given Config returning the Config
+value for chaining. The value must not be nil.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ErrInvalidParam">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3225:3501#L98">ErrInvalidParam</a>
+				<a class="permalink" href="index.html#ErrInvalidParam">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrInvalidParam represents an invalid parameter error type.
+</p>
+
+			<pre>type ErrInvalidParam interface {
+    <a href="../awserr/index.html">awserr</a>.<a href="../awserr/index.html#Error">Error</a>
+
+    <span class="comment">// Field name the error occurred on.</span>
+    Field() <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// SetContext updates the context of the error.</span>
+    SetContext(<a href="../../../../../builtin/index.html#string">string</a>)
+
+    <span class="comment">// AddNestedContext updates the error&#39;s context to include a nested level.</span>
+    AddNestedContext(<a href="../../../../../builtin/index.html#string">string</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrInvalidParams">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=1177:1316#L27">ErrInvalidParams</a>
+				<a class="permalink" href="index.html#ErrInvalidParams">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrInvalidParams provides wrapping of invalid parameter errors found when
+validating API operation input parameters.
+</p>
+
+			<pre>type ErrInvalidParams struct {
+<span id="ErrInvalidParams.Context"></span>    <span class="comment">// Context is the base context of the invalid parameter group.</span>
+    Context <a href="../../../../../builtin/index.html#string">string</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ErrInvalidParams.Add">func (*ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=1488:1539#L36">Add</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) Add(err <a href="index.html#ErrInvalidParam">ErrInvalidParam</a>)</pre>
+				<p>
+Add adds a new invalid parameter error to the collection of invalid
+parameters. The context of the invalid parameter will be updated to reflect
+this collection.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.AddNested">func (*ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=1852:1931#L46">AddNested</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.AddNested">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) AddNested(nestedCtx <a href="../../../../../builtin/index.html#string">string</a>, nested <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>)</pre>
+				<p>
+AddNested adds the invalid parameter errors from another ErrInvalidParams
+value into this collection. The nested errors will have their nested context
+updated and base context to reflect the merging.
+</p>
+<p>
+Use for nested validations errors.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.Code">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=2221:2260#L60">Code</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the code of the error
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.Error">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=2526:2566#L70">Error</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string formatted form of the invalid parameters.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.Len">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=2122:2157#L55">Len</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.Len">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) Len() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Len returns the number of invalid parameter errors
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.Message">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=2342:2384#L65">Message</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the message of the error
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.OrigErr">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=2815:2856#L82">OrigErr</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns the invalid parameters as a awserr.BatchedErrors value
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrInvalidParams.OrigErrs">func (ErrInvalidParams) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3000:3044#L88">OrigErrs</a>
+					<a class="permalink" href="index.html#ErrInvalidParams.OrigErrs">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#ErrInvalidParams">ErrInvalidParams</a>) OrigErrs() []<a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErrs returns a slice of the invalid parameters
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ErrParamFormat">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=7114:7176#L256">ErrParamFormat</a>
+				<a class="permalink" href="index.html#ErrParamFormat">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrParamFormat represents a invalid format parameter error.
+</p>
+
+			<pre>type ErrParamFormat struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewErrParamFormat">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=7245:7319#L262">NewErrParamFormat</a>
+					<a class="permalink" href="index.html#NewErrParamFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func NewErrParamFormat(field <a href="../../../../../builtin/index.html#string">string</a>, format, value <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ErrParamFormat">ErrParamFormat</a></pre>
+				<p>
+NewErrParamFormat creates a new invalid format parameter error.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ErrParamFormat.AddNestedContext">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4693:4747#L159">AddNestedContext</a>
+					<a class="permalink" href="index.html#ErrParamFormat.AddNestedContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) AddNestedContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+AddNestedContext prepends a context to the field&#39;s path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.Code">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3712:3751#L120">Code</a>
+					<a class="permalink" href="index.html#ErrParamFormat.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the error code for the type of invalid parameter.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.Error">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4011:4051#L130">Error</a>
+					<a class="permalink" href="index.html#ErrParamFormat.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string version of the invalid parameter error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.Field">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4290:4330#L140">Field</a>
+					<a class="permalink" href="index.html#ErrParamFormat.Field">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) Field() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Field Returns the field and context the error occurred.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.Format">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=7561:7601#L274">Format</a>
+					<a class="permalink" href="index.html#ErrParamFormat.Format">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) Format() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Format returns the field&#39;s required format.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.Message">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3846:3888#L125">Message</a>
+					<a class="permalink" href="index.html#ErrParamFormat.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the reason the parameter was invalid, and its context.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.OrigErr">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4172:4213#L135">OrigErr</a>
+					<a class="permalink" href="index.html#ErrParamFormat.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns nil, Implemented for awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamFormat.SetContext">func (*ErrParamFormat) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4562:4610#L154">SetContext</a>
+					<a class="permalink" href="index.html#ErrParamFormat.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamFormat">ErrParamFormat</a>) SetContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetContext updates the base context of the error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ErrParamMaxLen">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=6541:6597#L233">ErrParamMaxLen</a>
+				<a class="permalink" href="index.html#ErrParamMaxLen">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrParamMaxLen represents a maximum length parameter error.
+</p>
+
+			<pre>type ErrParamMaxLen struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewErrParamMaxLen">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=6666:6741#L239">NewErrParamMaxLen</a>
+					<a class="permalink" href="index.html#NewErrParamMaxLen">¶</a>
+					
+					
+				</h3>
+				<pre>func NewErrParamMaxLen(field <a href="../../../../../builtin/index.html#string">string</a>, max <a href="../../../../../builtin/index.html#int">int</a>, value <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a></pre>
+				<p>
+NewErrParamMaxLen creates a new maximum length parameter error.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ErrParamMaxLen.AddNestedContext">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4693:4747#L159">AddNestedContext</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.AddNestedContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) AddNestedContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+AddNestedContext prepends a context to the field&#39;s path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.Code">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3712:3751#L120">Code</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the error code for the type of invalid parameter.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.Error">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4011:4051#L130">Error</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string version of the invalid parameter error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.Field">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4290:4330#L140">Field</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.Field">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) Field() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Field Returns the field and context the error occurred.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.MaxLen">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=6991:7028#L251">MaxLen</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.MaxLen">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) MaxLen() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+MaxLen returns the field&#39;s required minimum length.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.Message">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3846:3888#L125">Message</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the reason the parameter was invalid, and its context.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.OrigErr">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4172:4213#L135">OrigErr</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns nil, Implemented for awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMaxLen.SetContext">func (*ErrParamMaxLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4562:4610#L154">SetContext</a>
+					<a class="permalink" href="index.html#ErrParamMaxLen.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMaxLen">ErrParamMaxLen</a>) SetContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetContext updates the base context of the error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ErrParamMinLen">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=5987:6043#L210">ErrParamMinLen</a>
+				<a class="permalink" href="index.html#ErrParamMinLen">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrParamMinLen represents a minimum length parameter error.
+</p>
+
+			<pre>type ErrParamMinLen struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewErrParamMinLen">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=6112:6173#L216">NewErrParamMinLen</a>
+					<a class="permalink" href="index.html#NewErrParamMinLen">¶</a>
+					
+					
+				</h3>
+				<pre>func NewErrParamMinLen(field <a href="../../../../../builtin/index.html#string">string</a>, min <a href="../../../../../builtin/index.html#int">int</a>) *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a></pre>
+				<p>
+NewErrParamMinLen creates a new minimum length parameter error.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ErrParamMinLen.AddNestedContext">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4693:4747#L159">AddNestedContext</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.AddNestedContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) AddNestedContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+AddNestedContext prepends a context to the field&#39;s path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.Code">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3712:3751#L120">Code</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the error code for the type of invalid parameter.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.Error">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4011:4051#L130">Error</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string version of the invalid parameter error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.Field">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4290:4330#L140">Field</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.Field">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) Field() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Field Returns the field and context the error occurred.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.Message">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3846:3888#L125">Message</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the reason the parameter was invalid, and its context.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.MinLen">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=6418:6455#L228">MinLen</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.MinLen">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) MinLen() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+MinLen returns the field&#39;s required minimum length.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.OrigErr">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4172:4213#L135">OrigErr</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns nil, Implemented for awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinLen.SetContext">func (*ErrParamMinLen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4562:4610#L154">SetContext</a>
+					<a class="permalink" href="index.html#ErrParamMinLen.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinLen">ErrParamMinLen</a>) SetContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetContext updates the base context of the error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ErrParamMinValue">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=5344:5406#L185">ErrParamMinValue</a>
+				<a class="permalink" href="index.html#ErrParamMinValue">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrParamMinValue represents a minimum value parameter error.
+</p>
+
+			<pre>type ErrParamMinValue struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewErrParamMinValue">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=5476:5545#L191">NewErrParamMinValue</a>
+					<a class="permalink" href="index.html#NewErrParamMinValue">¶</a>
+					
+					
+				</h3>
+				<pre>func NewErrParamMinValue(field <a href="../../../../../builtin/index.html#string">string</a>, min <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a></pre>
+				<p>
+NewErrParamMinValue creates a new minimum value parameter error.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ErrParamMinValue.AddNestedContext">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4693:4747#L159">AddNestedContext</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.AddNestedContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) AddNestedContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+AddNestedContext prepends a context to the field&#39;s path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.Code">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3712:3751#L120">Code</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the error code for the type of invalid parameter.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.Error">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4011:4051#L130">Error</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string version of the invalid parameter error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.Field">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4290:4330#L140">Field</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.Field">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) Field() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Field Returns the field and context the error occurred.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.Message">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3846:3888#L125">Message</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the reason the parameter was invalid, and its context.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.MinValue">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=5856:5901#L205">MinValue</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.MinValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) MinValue() <a href="../../../../../builtin/index.html#float64">float64</a></pre>
+				<p>
+MinValue returns the field&#39;s require minimum value.
+</p>
+<p>
+float64 is returned for both int and float min values.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.OrigErr">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4172:4213#L135">OrigErr</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns nil, Implemented for awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamMinValue.SetContext">func (*ErrParamMinValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4562:4610#L154">SetContext</a>
+					<a class="permalink" href="index.html#ErrParamMinValue.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamMinValue">ErrParamMinValue</a>) SetContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetContext updates the base context of the error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ErrParamRequired">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4949:4998#L169">ErrParamRequired</a>
+				<a class="permalink" href="index.html#ErrParamRequired">¶</a>
+				
+				
+			</h2>
+			<p>
+An ErrParamRequired represents an required parameter error.
+</p>
+
+			<pre>type ErrParamRequired struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewErrParamRequired">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=5063:5119#L174">NewErrParamRequired</a>
+					<a class="permalink" href="index.html#NewErrParamRequired">¶</a>
+					
+					
+				</h3>
+				<pre>func NewErrParamRequired(field <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ErrParamRequired">ErrParamRequired</a></pre>
+				<p>
+NewErrParamRequired creates a new required parameter error.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ErrParamRequired.AddNestedContext">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4693:4747#L159">AddNestedContext</a>
+					<a class="permalink" href="index.html#ErrParamRequired.AddNestedContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) AddNestedContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+AddNestedContext prepends a context to the field&#39;s path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.Code">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3712:3751#L120">Code</a>
+					<a class="permalink" href="index.html#ErrParamRequired.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the error code for the type of invalid parameter.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.Error">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4011:4051#L130">Error</a>
+					<a class="permalink" href="index.html#ErrParamRequired.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Error returns the string version of the invalid parameter error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.Field">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4290:4330#L140">Field</a>
+					<a class="permalink" href="index.html#ErrParamRequired.Field">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) Field() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Field Returns the field and context the error occurred.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.Message">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=3846:3888#L125">Message</a>
+					<a class="permalink" href="index.html#ErrParamRequired.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the reason the parameter was invalid, and its context.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.OrigErr">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4172:4213#L135">OrigErr</a>
+					<a class="permalink" href="index.html#ErrParamRequired.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr returns nil, Implemented for awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ErrParamRequired.SetContext">func (*ErrParamRequired) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=4562:4610#L154">SetContext</a>
+					<a class="permalink" href="index.html#ErrParamRequired.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#ErrParamRequired">ErrParamRequired</a>) SetContext(ctx <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetContext updates the base context of the error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HandlerList">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=2691:3274#L112">HandlerList</a>
+				<a class="permalink" href="index.html#HandlerList">¶</a>
+				
+				
+			</h2>
+			<p>
+A HandlerList manages zero or more handlers in a list.
+</p>
+
+			<pre>type HandlerList struct {
+
+    <span class="comment">// Called after each request handler in the list is called. If set</span>
+    <span class="comment">// and the func returns true the HandlerList will continue to iterate</span>
+    <span class="comment">// over the request handlers. If false is returned the HandlerList</span>
+    <span class="comment">// will stop iterating.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Should be used if extra logic to be performed between each handler</span>
+    <span class="comment">// in the list. This can be used to terminate a list&#39;s iteration</span>
+    <span class="comment">// based on a condition such as error like, HandlerListStopOnError.</span>
+    <span class="comment">// Or for logging like HandlerListLogItem.</span>
+<span id="HandlerList.AfterEachFn"></span>    AfterEachFn func(item <a href="index.html#HandlerListRunItem">HandlerListRunItem</a>) <a href="../../../../../builtin/index.html#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HandlerList.Clear">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=3704:3733#L147">Clear</a>
+					<a class="permalink" href="index.html#HandlerList.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) Clear()</pre>
+				<p>
+Clear clears the handler list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.Len">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=3812:3843#L152">Len</a>
+					<a class="permalink" href="index.html#HandlerList.Len">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) Len() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Len returns the number of handlers in the list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.PushBack">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=3931:3979#L157">PushBack</a>
+					<a class="permalink" href="index.html#HandlerList.PushBack">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) PushBack(f func(*<a href="index.html#Request">Request</a>))</pre>
+				<p>
+PushBack pushes handler f to the back of the handler list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.PushBackNamed">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=4107:4158#L162">PushBackNamed</a>
+					<a class="permalink" href="index.html#HandlerList.PushBackNamed">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) PushBackNamed(n <a href="index.html#NamedHandler">NamedHandler</a>)</pre>
+				<p>
+PushBackNamed pushes named handler f to the back of the handler list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.PushFront">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=4320:4369#L170">PushFront</a>
+					<a class="permalink" href="index.html#HandlerList.PushFront">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) PushFront(f func(*<a href="index.html#Request">Request</a>))</pre>
+				<p>
+PushFront pushes handler f to the front of the handler list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.PushFrontNamed">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=4500:4552#L175">PushFrontNamed</a>
+					<a class="permalink" href="index.html#HandlerList.PushFrontNamed">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) PushFrontNamed(n <a href="index.html#NamedHandler">NamedHandler</a>)</pre>
+				<p>
+PushFrontNamed pushes named handler f to the front of the handler list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.Remove">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=4845:4889#L188">Remove</a>
+					<a class="permalink" href="index.html#HandlerList.Remove">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) Remove(n <a href="index.html#NamedHandler">NamedHandler</a>)</pre>
+				<p>
+Remove removes a NamedHandler n
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.RemoveByName">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=4967:5014#L193">RemoveByName</a>
+					<a class="permalink" href="index.html#HandlerList.RemoveByName">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) RemoveByName(name <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+RemoveByName removes a NamedHandler by name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.Run">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=6692:6729#L255">Run</a>
+					<a class="permalink" href="index.html#HandlerList.Run">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) Run(r *<a href="index.html#Request">Request</a>)</pre>
+				<p>
+Run executes all handlers in the list with a given request object.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.SetBackNamed">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=6242:6292#L239">SetBackNamed</a>
+					<a class="permalink" href="index.html#HandlerList.SetBackNamed">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) SetBackNamed(n <a href="index.html#NamedHandler">NamedHandler</a>)</pre>
+				<p>
+SetBackNamed will replace the named handler if it exists in the handler list.
+If the handler does not exist the handler will be added to the end of the list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.SetFrontNamed">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=6518:6569#L248">SetFrontNamed</a>
+					<a class="permalink" href="index.html#HandlerList.SetFrontNamed">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) SetFrontNamed(n <a href="index.html#NamedHandler">NamedHandler</a>)</pre>
+				<p>
+SetFrontNamed will replace the named handler if it exists in the handler list.
+If the handler does not exist the handler will be added to the beginning of
+the list.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.Swap">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=5856:5922#L224">Swap</a>
+					<a class="permalink" href="index.html#HandlerList.Swap">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) Swap(name <a href="../../../../../builtin/index.html#string">string</a>, replace <a href="index.html#NamedHandler">NamedHandler</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+Swap will swap out all handlers matching the name passed in. The matched
+handlers will be swapped in. True is returned if the handlers were swapped.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HandlerList.SwapNamed">func (*HandlerList) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=5500:5562#L211">SwapNamed</a>
+					<a class="permalink" href="index.html#HandlerList.SwapNamed">¶</a>
+					
+					
+				</h3>
+				<pre>func (l *<a href="index.html#HandlerList">HandlerList</a>) SwapNamed(n <a href="index.html#NamedHandler">NamedHandler</a>) (swapped <a href="../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+SwapNamed will swap out any existing handlers with the same name as the
+passed in NamedHandler returning true if handlers were swapped. False is
+returned otherwise.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HandlerListRunItem">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=2544:2631#L105">HandlerListRunItem</a>
+				<a class="permalink" href="index.html#HandlerListRunItem">¶</a>
+				
+				
+			</h2>
+			<p>
+A HandlerListRunItem represents an entry in the HandlerList which
+is being run.
+</p>
+
+			<pre>type HandlerListRunItem struct {
+<span id="HandlerListRunItem.Index"></span>    Index   <a href="../../../../../builtin/index.html#int">int</a>
+<span id="HandlerListRunItem.Handler"></span>    Handler <a href="index.html#NamedHandler">NamedHandler</a>
+<span id="HandlerListRunItem.Request"></span>    Request *<a href="index.html#Request">Request</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Handlers">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=147:591#L1">Handlers</a>
+				<a class="permalink" href="index.html#Handlers">¶</a>
+				
+				
+			</h2>
+			<p>
+A Handlers provides a collection of request handlers for various
+stages of handling requests.
+</p>
+
+			<pre>type Handlers struct {
+<span id="Handlers.Validate"></span>    Validate         <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Build"></span>    Build            <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.BuildStream"></span>    BuildStream      <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Sign"></span>    Sign             <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Send"></span>    Send             <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.ValidateResponse"></span>    ValidateResponse <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Unmarshal"></span>    Unmarshal        <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.UnmarshalStream"></span>    UnmarshalStream  <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.UnmarshalMeta"></span>    UnmarshalMeta    <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.UnmarshalError"></span>    UnmarshalError   <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Retry"></span>    Retry            <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.AfterRetry"></span>    AfterRetry       <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.CompleteAttempt"></span>    CompleteAttempt  <a href="index.html#HandlerList">HandlerList</a>
+<span id="Handlers.Complete"></span>    Complete         <a href="index.html#HandlerList">HandlerList</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Handlers.Clear">func (*Handlers) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=1327:1353#L38">Clear</a>
+					<a class="permalink" href="index.html#Handlers.Clear">¶</a>
+					
+					
+				</h3>
+				<pre>func (h *<a href="index.html#Handlers">Handlers</a>) Clear()</pre>
+				<p>
+Clear removes callback functions for all handlers.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Handlers.Copy">func (*Handlers) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=641:675#L18">Copy</a>
+					<a class="permalink" href="index.html#Handlers.Copy">¶</a>
+					
+					
+				</h3>
+				<pre>func (h *<a href="index.html#Handlers">Handlers</a>) Copy() <a href="index.html#Handlers">Handlers</a></pre>
+				<p>
+Copy returns a copy of this handler&#39;s lists.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Handlers.IsEmpty">func (*Handlers) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=1736:1769#L56">IsEmpty</a>
+					<a class="permalink" href="index.html#Handlers.IsEmpty">¶</a>
+					
+					
+				</h3>
+				<pre>func (h *<a href="index.html#Handlers">Handlers</a>) IsEmpty() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+IsEmpty returns if there are no handlers in any of the handlerlists.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NamedHandler">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=3350:3412#L128">NamedHandler</a>
+				<a class="permalink" href="index.html#NamedHandler">¶</a>
+				
+				
+			</h2>
+			<p>
+A NamedHandler is a struct that contains a name and function callback.
+</p>
+
+			<pre>type NamedHandler struct {
+<span id="NamedHandler.Name"></span>    Name <a href="../../../../../builtin/index.html#string">string</a>
+<span id="NamedHandler.Fn"></span>    Fn   func(*<a href="index.html#Request">Request</a>)
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Operation">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=3039:3174#L88">Operation</a>
+				<a class="permalink" href="index.html#Operation">¶</a>
+				
+				
+			</h2>
+			<p>
+An Operation is the service API operation to be made.
+</p>
+
+			<pre>type Operation struct {
+<span id="Operation.Name"></span>    Name       <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Operation.HTTPMethod"></span>    HTTPMethod <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Operation.HTTPPath"></span>    HTTPPath   <a href="../../../../../builtin/index.html#string">string</a>
+    *<a href="index.html#Paginator">Paginator</a>
+
+<span id="Operation.BeforePresignFn"></span>    BeforePresignFn func(r *<a href="index.html#Request">Request</a>) <a href="../../../../../builtin/index.html#error">error</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Option">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=5067:5093#L165">Option</a>
+				<a class="permalink" href="index.html#Option">¶</a>
+				
+				
+			</h2>
+			<p>
+A Option is a functional option that can augment or modify a request when
+using a WithContext API operation method.
+</p>
+
+			<pre>type Option func(*<a href="index.html#Request">Request</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="WithAppendUserAgent">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=7691:7732#L289">WithAppendUserAgent</a>
+					<a class="permalink" href="index.html#WithAppendUserAgent">¶</a>
+					
+					
+				</h3>
+				<pre>func WithAppendUserAgent(s <a href="../../../../../builtin/index.html#string">string</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithAppendUserAgent will add a string to the user agent prefixed with a
+single white space.
+</p>
+
+				
+				
+			
+				
+				<h3 id="WithGetResponseHeader">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=5680:5738#L179">WithGetResponseHeader</a>
+					<a class="permalink" href="index.html#WithGetResponseHeader">¶</a>
+					
+					
+				</h3>
+				<pre>func WithGetResponseHeader(key <a href="../../../../../builtin/index.html#string">string</a>, val *<a href="../../../../../builtin/index.html#string">string</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithGetResponseHeader builds a request Option which will retrieve a single
+header value from the HTTP Response. If there are multiple values for the
+header key use WithGetResponseHeaders instead to access the http.Header
+map directly. The passed in val pointer must be non-nil.
+</p>
+<p>
+This Option can be used multiple times with a single API operation.
+</p>
+<pre>var id2, versionID string
+svc.PutObjectWithContext(ctx, params,
+    request.WithGetResponseHeader(&#34;x-amz-id-2&#34;, &amp;id2),
+    request.WithGetResponseHeader(&#34;x-amz-version-id&#34;, &amp;versionID),
+)
+</pre>
+
+				
+				
+			
+				
+				<h3 id="WithGetResponseHeaders">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=6202:6258#L193">WithGetResponseHeaders</a>
+					<a class="permalink" href="index.html#WithGetResponseHeaders">¶</a>
+					
+					
+				</h3>
+				<pre>func WithGetResponseHeaders(headers *<a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Header">Header</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithGetResponseHeaders builds a request Option which will retrieve the
+headers from the HTTP response and assign them to the passed in headers
+variable. The passed in headers pointer must be non-nil.
+</p>
+<pre>var headers http.Header
+svc.PutObjectWithContext(ctx, params, request.WithGetResponseHeaders(&amp;headers))
+</pre>
+
+				
+				
+			
+				
+				<h3 id="WithLogLevel">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=6603:6647#L205">WithLogLevel</a>
+					<a class="permalink" href="index.html#WithLogLevel">¶</a>
+					
+					
+				</h3>
+				<pre>func WithLogLevel(l <a href="../index.html">aws</a>.<a href="../index.html#LogLevelType">LogLevelType</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithLogLevel is a request option that will set the request to use a specific
+log level when the request is made.
+</p>
+<pre>svc.PutObjectWithContext(ctx, params, request.WithLogLevel(aws.LogDebugWithHTTPBody)
+</pre>
+
+				
+				
+			
+				
+				<h3 id="WithResponseReadTimeout">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/timeout_read_closer.go?s=1844:1903#L65">WithResponseReadTimeout</a>
+					<a class="permalink" href="index.html#WithResponseReadTimeout">¶</a>
+					
+					
+				</h3>
+				<pre>func WithResponseReadTimeout(duration <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithResponseReadTimeout is a request option that will wrap the body in a timeout read closer.
+This will allow for per read timeouts. If a timeout occurred, we will return the
+ErrCodeResponseTimeout.
+</p>
+<pre>svc.PutObjectWithContext(ctx, params, request.WithTimeoutReadCloser(30 * time.Second)
+</pre>
+
+				
+				
+			
+				
+				<h3 id="WithSetRequestHeaders">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/handlers.go?s=8996:9050#L323">WithSetRequestHeaders</a>
+					<a class="permalink" href="index.html#WithSetRequestHeaders">¶</a>
+					
+					
+				</h3>
+				<pre>func WithSetRequestHeaders(h map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>) <a href="index.html#Option">Option</a></pre>
+				<p>
+WithSetRequestHeaders updates the operation request&#39;s HTTP header to contain
+the header key value pairs provided. If the header key already exists in the
+request&#39;s HTTP header set, the existing value(s) will be replaced.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Pagination">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=987:1691#L21">Pagination</a>
+				<a class="permalink" href="index.html#Pagination">¶</a>
+				
+				
+			</h2>
+			<p>
+A Pagination provides paginating of SDK API operations which are paginatable.
+Generally you should not use this type directly, but use the &#34;Pages&#34; API
+operations method to automatically perform pagination for you. Such as,
+&#34;S3.ListObjectsPages&#34;, and &#34;S3.ListObjectsPagesWithContext&#34; methods.
+</p>
+<p>
+Pagination differs from a Paginator type in that pagination is the type that
+does the pagination between API operations, and Paginator defines the
+configuration that will be used per page request.
+</p>
+<pre>for p.Next() {
+    data := p.Page().(*s3.ListObjectsOutput)
+    // process the page&#39;s data
+    // ...
+    // break out of loop to stop fetching additional pages
+}
+
+return p.Err()
+</pre>
+<p>
+See service client API operation Pages methods for examples how the SDK will
+use the Pagination type.
+</p>
+
+			<pre>type Pagination struct {
+    <span class="comment">// Function to return a Request value for each pagination request.</span>
+    <span class="comment">// Any configuration or handlers that need to be applied to the request</span>
+    <span class="comment">// prior to getting the next page should be done here before the request</span>
+    <span class="comment">// returned.</span>
+    <span class="comment">//</span>
+<span id="Pagination.NewRequest"></span>    <span class="comment">// NewRequest should always be built from the same API operations. It is</span>
+    <span class="comment">// undefined if different API operations are returned on subsequent calls.</span>
+    NewRequest func() (*<a href="index.html#Request">Request</a>, <a href="../../../../../builtin/index.html#error">error</a>)
+<span id="Pagination.EndPageOnSameToken"></span>    <span class="comment">// EndPageOnSameToken, when enabled, will allow the paginator to stop on</span>
+    <span class="comment">// token that are the same as its previous tokens.</span>
+    EndPageOnSameToken <a href="../../../../../builtin/index.html#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Pagination.Err">func (*Pagination) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=2254:2286#L60">Err</a>
+					<a class="permalink" href="index.html#Pagination.Err">¶</a>
+					
+					
+				</h3>
+				<pre>func (p *<a href="index.html#Pagination">Pagination</a>) Err() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Err returns the error Pagination encountered when retrieving the next page.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Pagination.HasNextPage">func (*Pagination) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=1935:1974#L47">HasNextPage</a>
+					<a class="permalink" href="index.html#Pagination.HasNextPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (p *<a href="index.html#Pagination">Pagination</a>) HasNextPage() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+HasNextPage will return true if Pagination is able to determine that the API
+operation has additional pages. False will be returned if there are no more
+pages remaining.
+</p>
+<p>
+Will always return true if Next has not been called yet.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Pagination.Next">func (*Pagination) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=2971:3003#L79">Next</a>
+					<a class="permalink" href="index.html#Pagination.Next">¶</a>
+					
+					
+				</h3>
+				<pre>func (p *<a href="index.html#Pagination">Pagination</a>) Next() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+Next will attempt to retrieve the next page for the API operation. When a page
+is retrieved true will be returned. If the page cannot be retrieved, or there
+are no more pages false will be returned.
+</p>
+<p>
+Use the Page method to retrieve the current page data. The data will need
+to be cast to the API operation&#39;s output type.
+</p>
+<p>
+Use the Err method to determine if an error occurred if Page returns false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Pagination.Page">func (*Pagination) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=2488:2527#L67">Page</a>
+					<a class="permalink" href="index.html#Pagination.Page">¶</a>
+					
+					
+				</h3>
+				<pre>func (p *<a href="index.html#Pagination">Pagination</a>) Page() interface{}</pre>
+				<p>
+Page returns the current page. Page should only be called after a successful
+call to Next. It is undefined what Page will return if Page is called after
+Next returns false.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Paginator">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=3835:3960#L117">Paginator</a>
+				<a class="permalink" href="index.html#Paginator">¶</a>
+				
+				
+			</h2>
+			<p>
+A Paginator is the configuration data that defines how an API operation
+should be paginated. This type is used by the API service models to define
+the generated pagination config for service APIs.
+</p>
+<p>
+The Pagination type is what provides iterating between pages of an API. It
+is only used to store the token metadata the SDK should use for performing
+pagination.
+</p>
+
+			<pre>type Paginator struct {
+<span id="Paginator.InputTokens"></span>    InputTokens     []<a href="../../../../../builtin/index.html#string">string</a>
+<span id="Paginator.OutputTokens"></span>    OutputTokens    []<a href="../../../../../builtin/index.html#string">string</a>
+<span id="Paginator.LimitToken"></span>    LimitToken      <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Paginator.TruncationToken"></span>    TruncationToken <a href="../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Request">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=1230:2980#L36">Request</a>
+				<a class="permalink" href="index.html#Request">¶</a>
+				
+				
+			</h2>
+			<p>
+A Request is the service request to be made.
+</p>
+
+			<pre>type Request struct {
+<span id="Request.Config"></span>    Config     <a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>
+<span id="Request.ClientInfo"></span>    ClientInfo <a href="../client/metadata/index.html">metadata</a>.<a href="../client/metadata/index.html#ClientInfo">ClientInfo</a>
+<span id="Request.Handlers"></span>    Handlers   <a href="index.html#Handlers">Handlers</a>
+
+    <a href="index.html#Retryer">Retryer</a>
+<span id="Request.AttemptTime"></span>    AttemptTime  <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>
+<span id="Request.Time"></span>    Time         <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>
+<span id="Request.Operation"></span>    Operation    *<a href="index.html#Operation">Operation</a>
+<span id="Request.HTTPRequest"></span>    HTTPRequest  *<a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Request">Request</a>
+<span id="Request.HTTPResponse"></span>    HTTPResponse *<a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Response">Response</a>
+<span id="Request.Body"></span>    Body         <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadSeeker">ReadSeeker</a>
+
+<span id="Request.BodyStart"></span>    BodyStart              <a href="../../../../../builtin/index.html#int64">int64</a> <span class="comment">// offset from beginning of Body that the request body starts</span>
+<span id="Request.Params"></span>    Params                 interface{}
+<span id="Request.Error"></span>    Error                  <a href="../../../../../builtin/index.html#error">error</a>
+<span id="Request.Data"></span>    Data                   interface{}
+<span id="Request.RequestID"></span>    RequestID              <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Request.RetryCount"></span>    RetryCount             <a href="../../../../../builtin/index.html#int">int</a>
+<span id="Request.Retryable"></span>    Retryable              *<a href="../../../../../builtin/index.html#bool">bool</a>
+<span id="Request.RetryDelay"></span>    RetryDelay             <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+<span id="Request.NotHoist"></span>    NotHoist               <a href="../../../../../builtin/index.html#bool">bool</a>
+<span id="Request.SignedHeaderVals"></span>    SignedHeaderVals       <a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Header">Header</a>
+<span id="Request.LastSignedAt"></span>    LastSignedAt           <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>
+<span id="Request.DisableFollowRedirects"></span>    DisableFollowRedirects <a href="../../../../../builtin/index.html#bool">bool</a>
+
+    <span class="comment">// Additional API error codes that should be retried. IsErrorRetryable</span>
+    <span class="comment">// will consider these codes in addition to its built in cases.</span>
+<span id="Request.RetryErrorCodes"></span>    RetryErrorCodes []<a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// Additional API error codes that should be retried with throttle backoff</span>
+    <span class="comment">// delay. IsErrorThrottle will consider these codes in addition to its</span>
+    <span class="comment">// built in cases.</span>
+<span id="Request.ThrottleErrorCodes"></span>    ThrottleErrorCodes []<a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// A value greater than 0 instructs the request to be signed as Presigned URL</span>
+    <span class="comment">// You should not set this field directly. Instead use Request&#39;s</span>
+    <span class="comment">// Presign or PresignRequest methods.</span>
+<span id="Request.ExpireTime"></span>    ExpireTime <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=3657:3819#L107">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(cfg <a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>, clientInfo <a href="../client/metadata/index.html">metadata</a>.<a href="../client/metadata/index.html#ClientInfo">ClientInfo</a>, handlers <a href="index.html#Handlers">Handlers</a>,
+    retryer <a href="index.html#Retryer">Retryer</a>, operation *<a href="index.html#Operation">Operation</a>, params interface{}, data interface{}) *<a href="index.html#Request">Request</a></pre>
+				<p>
+New returns a new Request pointer for the service API operation and
+parameters.
+</p>
+<p>
+A Retryer should be provided to direct how the request is retried. If
+Retryer is nil, a default no retry value will be used. You can use
+NoOpRetryer in the Client package to disable retry behavior directly.
+</p>
+<p>
+Params is any value of input parameters to be the request payload.
+Data is pointer value to an object which the request&#39;s response
+payload will be deserialized to.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Request.ApplyOptions">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=6823:6869#L213">ApplyOptions</a>
+					<a class="permalink" href="index.html#Request.ApplyOptions">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) ApplyOptions(opts ...<a href="index.html#Option">Option</a>)</pre>
+				<p>
+ApplyOptions will apply each option to the request calling them in the order
+the were provided.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.Build">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=13211:13242#L403">Build</a>
+					<a class="permalink" href="index.html#Request.Build">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) Build() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Build will build the request&#39;s object so it can be signed and sent
+to the service. Build will also validate all the request&#39;s parameters.
+Any additional build Handlers set on this request will be run
+in the order they were set.
+</p>
+<p>
+The request will only be built once. Multiple calls to build will have
+no effect.
+</p>
+<p>
+If any Validate or Build errors occur the build will stop and the error
+which occurred will be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.Context">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=7043:7082#L221">Context</a>
+					<a class="permalink" href="index.html#Request.Context">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) Context() <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a></pre>
+				<p>
+Context will always returns a non-nil context. If Request does not have a
+context aws.BackgroundContext will be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.DataFilled">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=8955:8990#L273">DataFilled</a>
+					<a class="permalink" href="index.html#Request.DataFilled">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) DataFilled() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+DataFilled returns true if the request&#39;s data for response deserialization
+target has been set and is a valid. False is returned if data is not
+set, or is invalid.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.EachPage">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=7282:7380#L242">EachPage</a>
+					<a class="permalink" href="index.html#Request.EachPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) EachPage(fn func(data interface{}, isLastPage <a href="../../../../../builtin/index.html#bool">bool</a>) (shouldContinue <a href="../../../../../builtin/index.html#bool">bool</a>)) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+EachPage iterates over each page of a paginated request object. The fn
+parameter should be a function with the following sample signature:
+</p>
+<pre>func(page *T, lastPage bool) bool {
+    return true // return false to stop iterating
+}
+</pre>
+<p>
+Where &#34;T&#34; is the structure type matching the output structure of the given
+operation. For example, a request object generated by
+DynamoDB.ListTablesRequest() would expect to see dynamodb.ListTablesOutput
+as the structure &#34;T&#34;. The lastPage value represents whether the page is
+the last page of data or not. The return value of this function should
+return true to keep iterating or false to stop.
+</p>
+<p>
+Deprecated Use Pagination type for configurable pagination of API operations
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.GetBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=16020:16061#L499">GetBody</a>
+					<a class="permalink" href="index.html#Request.GetBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) GetBody() <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadSeeker">ReadSeeker</a></pre>
+				<p>
+GetBody will return an io.ReadSeeker of the Request&#39;s underlying
+input body with a concurrency safe wrapper.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.HasNextPage">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=5509:5545#L199">HasNextPage</a>
+					<a class="permalink" href="index.html#Request.HasNextPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) HasNextPage() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+HasNextPage returns true if this request has more pages of data available.
+</p>
+<p>
+Deprecated Use Pagination type for configurable pagination of API operations
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.IsErrorExpired">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=8764:8803#L297">IsErrorExpired</a>
+					<a class="permalink" href="index.html#Request.IsErrorExpired">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) IsErrorExpired() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+IsErrorExpired returns whether the error code is a credential expiry error.
+Returns false if the request has no Error set.
+</p>
+<p>
+Alias for the utility function IsErrorExpiredCreds
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.IsErrorRetryable">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=7219:7260#L240">IsErrorRetryable</a>
+					<a class="permalink" href="index.html#Request.IsErrorRetryable">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) IsErrorRetryable() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+IsErrorRetryable returns whether the error is retryable, based on its Code.
+Returns false if the request has no Error set.
+</p>
+<p>
+Alias for the utility function IsErrorRetryable
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.IsErrorThrottle">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=7936:7976#L262">IsErrorThrottle</a>
+					<a class="permalink" href="index.html#Request.IsErrorThrottle">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) IsErrorThrottle() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+IsErrorThrottle returns whether the error is to be throttled based on its
+code. Returns false if the request has no Error set.
+</p>
+<p>
+Alias for the utility function IsErrorThrottle
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.IsPresigned">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=11843:11879#L352">IsPresigned</a>
+					<a class="permalink" href="index.html#Request.IsPresigned">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) IsPresigned() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+IsPresigned returns true if the request represents a presigned API url.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.NextPage">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_pagination.go?s=5976:6013#L210">NextPage</a>
+					<a class="permalink" href="index.html#Request.NextPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) NextPage() *<a href="index.html#Request">Request</a></pre>
+				<p>
+NextPage returns a new Request that can be executed to return the next
+page of result data. Call .Send() on this request to execute it.
+</p>
+<p>
+Deprecated Use Pagination type for configurable pagination of API operations
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.ParamsFilled">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=8669:8706#L266">ParamsFilled</a>
+					<a class="permalink" href="index.html#Request.ParamsFilled">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) ParamsFilled() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+ParamsFilled returns if the request&#39;s parameters have been populated
+and the parameters are valid. False is returned if no parameters are
+provided or invalid.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.Presign">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=10541:10604#L320">Presign</a>
+					<a class="permalink" href="index.html#Request.Presign">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) Presign(expire <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Presign returns the request&#39;s signed URL. Error will be returned
+if the signing fails. The expire parameter is only used for presigned Amazon
+S3 API requests. All other AWS services will use a fixed expiration
+time of 15 minutes.
+</p>
+<p>
+It is invalid to create a presigned URL with a expire duration 0 or less. An
+error is returned if expire duration is 0 or less.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.PresignRequest">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=11630:11713#L346">PresignRequest</a>
+					<a class="permalink" href="index.html#Request.PresignRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) PresignRequest(expire <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../net/http/index.html">http</a>.<a href="../../../../../net/http/index.html#Header">Header</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PresignRequest behaves just like presign, with the addition of returning a
+set of headers that were signed. The expire parameter is only used for
+presigned Amazon S3 API requests. All other AWS services will use a fixed
+expiration time of 15 minutes.
+</p>
+<p>
+It is invalid to create a presigned URL with a expire duration 0 or less. An
+error is returned if expire duration is 0 or less.
+</p>
+<p>
+Returns the URL string for the API operation with signature in the query string,
+and the HTTP headers that were included in the signature. These headers must
+be included in any HTTP request made with the presigned URL.
+</p>
+<p>
+To prevent hoisting any headers to the query string set NotHoist to true on
+this Request value prior to calling PresignRequest.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.ResetBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request_1_8.go?s=821:850#L17">ResetBody</a>
+					<a class="permalink" href="index.html#Request.ResetBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) ResetBody()</pre>
+				<p>
+ResetBody rewinds the request body back to its starting position, and
+sets the HTTP Request body reference. When the body is read prior
+to being sent in the HTTP request it will need to be rewound.
+</p>
+<p>
+ResetBody will automatically be called by the SDK&#39;s build handler, but if
+the request is being used directly ResetBody must be called before the request
+is Sent.  SetStringBody, SetBufferBody, and SetReaderBody will automatically
+call ResetBody.
+</p>
+<p>
+Will also set the Go 1.8&#39;s http.Request.GetBody member to allow retrying
+PUT/POST redirects.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.Send">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=16656:16686#L516">Send</a>
+					<a class="permalink" href="index.html#Request.Send">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) Send() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Send will send the request, returning error if errors are encountered.
+</p>
+<p>
+Send will sign the request prior to sending. All Send Handlers will
+be executed in the order they were set.
+</p>
+<p>
+Canceling a request is non-deterministic. If a request has been canceled,
+then the transport will choose, randomly, one of the state channels during
+reads or getting the connection.
+</p>
+<p>
+readLoop() and getConn(req *Request, cm connectMethod)
+<a href="https://github.com/golang/go/blob/master/src/net/http/transport.go">https://github.com/golang/go/blob/master/src/net/http/transport.go</a>
+</p>
+<p>
+Send will not close the request.Request&#39;s body.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.SetBufferBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=9154:9197#L279">SetBufferBody</a>
+					<a class="permalink" href="index.html#Request.SetBufferBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) SetBufferBody(buf []<a href="../../../../../builtin/index.html#byte">byte</a>)</pre>
+				<p>
+SetBufferBody will set the request&#39;s body bytes that will be sent to
+the service API.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.SetContext">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=7982:8027#L244">SetContext</a>
+					<a class="permalink" href="index.html#Request.SetContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) SetContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>)</pre>
+				<p>
+SetContext adds a Context to the current request that can be used to cancel
+a in-flight request. The Context value must not be nil, or this method will
+panic.
+</p>
+<p>
+Unlike http.Request.WithContext, SetContext does not return a copy of the
+Request. It is not safe to use use a single Request value for multiple
+requests. A new Request should be created for each API operation request.
+</p>
+<p>
+Go 1.6 and below:
+The http.Request&#39;s Cancel field will be set to the Done() value of
+the context. This will overwrite the Cancel field&#39;s value.
+</p>
+<p>
+Go 1.7 and above:
+The http.Request.WithContext will be used to set the context on the underlying
+http.Request. This will create a shallow copy of the http.Request. The SDK
+may create sub contexts in the future for nested requests such as retries.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.SetReaderBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=9453:9506#L289">SetReaderBody</a>
+					<a class="permalink" href="index.html#Request.SetReaderBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) SetReaderBody(reader <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadSeeker">ReadSeeker</a>)</pre>
+				<p>
+SetReaderBody will set the request&#39;s body reader.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.SetStreamingBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=10029:10085#L308">SetStreamingBody</a>
+					<a class="permalink" href="index.html#Request.SetStreamingBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) SetStreamingBody(reader <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadCloser">ReadCloser</a>)</pre>
+				<p>
+SetStreamingBody set the reader to be used for the request that will stream
+bytes to the server. Request&#39;s Body must not be set to any reader.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.SetStringBody">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=9314:9355#L284">SetStringBody</a>
+					<a class="permalink" href="index.html#Request.SetStringBody">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) SetStringBody(s <a href="../../../../../builtin/index.html#string">string</a>)</pre>
+				<p>
+SetStringBody sets the body of the request to be backed by a string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.Sign">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=13762:13792#L425">Sign</a>
+					<a class="permalink" href="index.html#Request.Sign">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) Sign() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Sign will sign the request, returning error if errors are encountered.
+</p>
+<p>
+Sign will build the request prior to signing. All Sign Handlers will
+be executed in the order they were set.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Request.WillRetry">func (*Request) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/request.go?s=8167:8201#L252">WillRetry</a>
+					<a class="permalink" href="index.html#Request.WillRetry">¶</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#Request">Request</a>) WillRetry() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+WillRetry returns if the request&#39;s can be retried.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Retryer">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/retryer.go?s=570:1153#L10">Retryer</a>
+				<a class="permalink" href="index.html#Retryer">¶</a>
+				
+				
+			</h2>
+			<p>
+Retryer provides the interface drive the SDK&#39;s request retry behavior. The
+Retryer implementation is responsible for implementing exponential backoff,
+and determine if a request API error should be retried.
+</p>
+<p>
+client.DefaultRetryer is the SDK&#39;s default implementation of the Retryer. It
+uses the which uses the Request.IsErrorRetryable and Request.IsErrorThrottle
+methods to determine if the request is retried.
+</p>
+
+			<pre>type Retryer interface {
+    <span class="comment">// RetryRules return the retry delay that should be used by the SDK before</span>
+    <span class="comment">// making another request attempt for the failed request.</span>
+    RetryRules(*<a href="index.html#Request">Request</a>) <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>
+
+    <span class="comment">// ShouldRetry returns if the failed request is retryable.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Implementations may consider request attempt count when determining if a</span>
+    <span class="comment">// request is retryable, but the SDK will use MaxRetries to limit the</span>
+    <span class="comment">// number of attempts a request are made.</span>
+    ShouldRetry(*<a href="index.html#Request">Request</a>) <a href="../../../../../builtin/index.html#bool">bool</a>
+
+    <span class="comment">// MaxRetries is the number of times a request may be retried before</span>
+    <span class="comment">// failing.</span>
+    MaxRetries() <a href="../../../../../builtin/index.html#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Validator">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/validation.go?s=1003:1049#L21">Validator</a>
+				<a class="permalink" href="index.html#Validator">¶</a>
+				
+				
+			</h2>
+			<p>
+Validator provides a way for types to perform validation logic on their
+input values that external code can use to determine if a type&#39;s values
+are valid.
+</p>
+
+			<pre>type Validator interface {
+    Validate() <a href="../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Waiter">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=2369:2638#L64">Waiter</a>
+				<a class="permalink" href="index.html#Waiter">¶</a>
+				
+				
+			</h2>
+			<p>
+A Waiter provides the functionality to perform a blocking call which will
+wait for a resource state to be satisfied by a service.
+</p>
+<p>
+This type should not be used directly. The API operations provided in the
+service packages prefixed with &#34;WaitUntil&#34; should be used instead.
+</p>
+
+			<pre>type Waiter struct {
+<span id="Waiter.Name"></span>    Name      <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Waiter.Acceptors"></span>    Acceptors []<a href="index.html#WaiterAcceptor">WaiterAcceptor</a>
+<span id="Waiter.Logger"></span>    Logger    <a href="../index.html">aws</a>.<a href="../index.html#Logger">Logger</a>
+
+<span id="Waiter.MaxAttempts"></span>    MaxAttempts <a href="../../../../../builtin/index.html#int">int</a>
+<span id="Waiter.Delay"></span>    Delay       <a href="index.html#WaiterDelay">WaiterDelay</a>
+
+<span id="Waiter.RequestOptions"></span>    RequestOptions   []<a href="index.html#Option">Option</a>
+<span id="Waiter.NewRequest"></span>    NewRequest       func([]<a href="index.html#Option">Option</a>) (*<a href="index.html#Request">Request</a>, <a href="../../../../../builtin/index.html#error">error</a>)
+<span id="Waiter.SleepWithContext"></span>    SleepWithContext func(<a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>, <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>) <a href="../../../../../builtin/index.html#error">error</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Waiter.ApplyOptions">func (*Waiter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=2717:2768#L78">ApplyOptions</a>
+					<a class="permalink" href="index.html#Waiter.ApplyOptions">¶</a>
+					
+					
+				</h3>
+				<pre>func (w *<a href="index.html#Waiter">Waiter</a>) ApplyOptions(opts ...<a href="index.html#WaiterOption">WaiterOption</a>)</pre>
+				<p>
+ApplyOptions updates the waiter with the list of waiter options provided.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Waiter.WaitWithContext">func (Waiter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=5421:5475#L159">WaitWithContext</a>
+					<a class="permalink" href="index.html#Waiter.WaitWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (w <a href="index.html#Waiter">Waiter</a>) WaitWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+WaitWithContext will make requests for the API operation using NewRequest to
+build API requests. The request&#39;s response will be compared against the
+Waiter&#39;s Acceptors to determine the successful state of the resource the
+waiter is inspecting.
+</p>
+<p>
+The passed in context must not be nil. If it is nil a panic will occur. The
+Context will be used to cancel the waiter&#39;s pending requests and retry delays.
+Use aws.BackgroundContext if no context is available.
+</p>
+<p>
+The waiter will continue until the target state defined by the Acceptors,
+or the max attempts expires.
+</p>
+<p>
+Will return the WaiterResourceNotReadyErrorCode error code if the waiter&#39;s
+retryer ShouldRetry returns false. This normally will happen when the max
+wait attempts expires.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WaiterAcceptor">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=6854:6971#L206">WaiterAcceptor</a>
+				<a class="permalink" href="index.html#WaiterAcceptor">¶</a>
+				
+				
+			</h2>
+			<p>
+A WaiterAcceptor provides the information needed to wait for an API operation
+to complete.
+</p>
+
+			<pre>type WaiterAcceptor struct {
+<span id="WaiterAcceptor.State"></span>    State    <a href="index.html#WaiterState">WaiterState</a>
+<span id="WaiterAcceptor.Matcher"></span>    Matcher  <a href="index.html#WaiterMatchMode">WaiterMatchMode</a>
+<span id="WaiterAcceptor.Argument"></span>    Argument <a href="../../../../../builtin/index.html#string">string</a>
+<span id="WaiterAcceptor.Expected"></span>    Expected interface{}
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="WaiterDelay">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=1014:1062#L24">WaiterDelay</a>
+				<a class="permalink" href="index.html#WaiterDelay">¶</a>
+				
+				
+			</h2>
+			<p>
+WaiterDelay will return a delay the waiter should pause between attempts to
+check the resource state. The passed in attempt is the number of times the
+Waiter has checked the resource state.
+</p>
+<p>
+Attempt is the number of attempts the Waiter has made checking the resource
+state.
+</p>
+
+			<pre>type WaiterDelay func(attempt <a href="../../../../../builtin/index.html#int">int</a>) <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ConstantWaiterDelay">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=1236:1293#L29">ConstantWaiterDelay</a>
+					<a class="permalink" href="index.html#ConstantWaiterDelay">¶</a>
+					
+					
+				</h3>
+				<pre>func ConstantWaiterDelay(delay <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Duration">Duration</a>) <a href="index.html#WaiterDelay">WaiterDelay</a></pre>
+				<p>
+ConstantWaiterDelay returns a WaiterDelay that will always return a constant
+delay the waiter should use between attempts. It ignores the number of
+attempts made.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="WaiterMatchMode">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=3675:3699#L111">WaiterMatchMode</a>
+				<a class="permalink" href="index.html#WaiterMatchMode">¶</a>
+				
+				
+			</h2>
+			<p>
+WaiterMatchMode is the mode that the waiter will use to match the WaiterAcceptor
+definition&#39;s Expected attribute.
+</p>
+
+			<pre>type WaiterMatchMode <a href="../../../../../builtin/index.html#int">int</a></pre>
+
+			
+				<p>
+Modes the waiter will use when inspecting API response to identify target
+resource states.
+</p>
+
+				<pre>const (
+    <span id="PathAllWaiterMatch">PathAllWaiterMatch</span>  <a href="index.html#WaiterMatchMode">WaiterMatchMode</a> = <a href="../../../../../builtin/index.html#iota">iota</a> <span class="comment">// match on all paths</span>
+    <span id="PathWaiterMatch">PathWaiterMatch</span>                            <span class="comment">// match on specific path</span>
+    <span id="PathAnyWaiterMatch">PathAnyWaiterMatch</span>                         <span class="comment">// match on any path</span>
+    <span id="PathListWaiterMatch">PathListWaiterMatch</span>                        <span class="comment">// match on list of paths</span>
+    <span id="StatusWaiterMatch">StatusWaiterMatch</span>                          <span class="comment">// match on status code</span>
+    <span id="ErrorWaiterMatch">ErrorWaiterMatch</span>                           <span class="comment">// match on error</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="WaiterMatchMode.String">func (WaiterMatchMode) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=4280:4320#L125">String</a>
+					<a class="permalink" href="index.html#WaiterMatchMode.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (m <a href="index.html#WaiterMatchMode">WaiterMatchMode</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation of the waiter match mode.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WaiterOption">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=451:482#L8">WaiterOption</a>
+				<a class="permalink" href="index.html#WaiterOption">¶</a>
+				
+				
+			</h2>
+			<p>
+A WaiterOption is a function that will update the Waiter value&#39;s fields to
+configure the waiter.
+</p>
+
+			<pre>type WaiterOption func(*<a href="index.html#Waiter">Waiter</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="WithWaiterDelay">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=1432:1486#L36">WithWaiterDelay</a>
+					<a class="permalink" href="index.html#WithWaiterDelay">¶</a>
+					
+					
+				</h3>
+				<pre>func WithWaiterDelay(delayer <a href="index.html#WaiterDelay">WaiterDelay</a>) <a href="index.html#WaiterOption">WaiterOption</a></pre>
+				<p>
+WithWaiterDelay will set the Waiter to use the WaiterDelay passed in.
+</p>
+
+				
+				
+			
+				
+				<h3 id="WithWaiterLogger">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=1657:1710#L44">WithWaiterLogger</a>
+					<a class="permalink" href="index.html#WithWaiterLogger">¶</a>
+					
+					
+				</h3>
+				<pre>func WithWaiterLogger(logger <a href="../index.html">aws</a>.<a href="../index.html#Logger">Logger</a>) <a href="index.html#WaiterOption">WaiterOption</a></pre>
+				<p>
+WithWaiterLogger returns a waiter option to set the logger a waiter
+should use to log warnings and errors to.
+</p>
+
+				
+				
+			
+				
+				<h3 id="WithWaiterMaxAttempts">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=618:666#L12">WithWaiterMaxAttempts</a>
+					<a class="permalink" href="index.html#WithWaiterMaxAttempts">¶</a>
+					
+					
+				</h3>
+				<pre>func WithWaiterMaxAttempts(max <a href="../../../../../builtin/index.html#int">int</a>) <a href="index.html#WaiterOption">WaiterOption</a></pre>
+				<p>
+WithWaiterMaxAttempts returns the maximum number of times the waiter should
+attempt to check the resource for the target state.
+</p>
+
+				
+				
+			
+				
+				<h3 id="WithWaiterRequestOptions">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=1935:1993#L53">WithWaiterRequestOptions</a>
+					<a class="permalink" href="index.html#WithWaiterRequestOptions">¶</a>
+					
+					
+				</h3>
+				<pre>func WithWaiterRequestOptions(opts ...<a href="index.html#Option">Option</a>) <a href="index.html#WaiterOption">WaiterOption</a></pre>
+				<p>
+WithWaiterRequestOptions returns a waiter option setting the request
+options for each request the waiter makes. Appends to waiter&#39;s request
+options already set.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="WaiterState">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=2966:2986#L86">WaiterState</a>
+				<a class="permalink" href="index.html#WaiterState">¶</a>
+				
+				
+			</h2>
+			<p>
+WaiterState are states the waiter uses based on WaiterAcceptor definitions
+to identify if the resource state the waiter is waiting on has occurred.
+</p>
+
+			<pre>type WaiterState <a href="../../../../../builtin/index.html#int">int</a></pre>
+
+			
+				<p>
+States the waiter acceptors will use to identify target resource states.
+</p>
+
+				<pre>const (
+    <span id="SuccessWaiterState">SuccessWaiterState</span> <a href="index.html#WaiterState">WaiterState</a> = <a href="../../../../../builtin/index.html#iota">iota</a> <span class="comment">// waiter successful</span>
+    <span id="FailureWaiterState">FailureWaiterState</span>                    <span class="comment">// waiter failed</span>
+    <span id="RetryWaiterState">RetryWaiterState</span>                      <span class="comment">// waiter needs to be retried</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="WaiterState.String">func (WaiterState) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/request/waiter.go?s=3053:3089#L89">String</a>
+					<a class="permalink" href="index.html#WaiterState.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#WaiterState">WaiterState</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation of the waiter state.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

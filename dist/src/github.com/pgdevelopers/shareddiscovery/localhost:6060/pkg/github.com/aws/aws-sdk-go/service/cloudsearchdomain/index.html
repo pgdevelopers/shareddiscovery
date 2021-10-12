@@ -1,0 +1,4032 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>cloudsearchdomain - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cloudsearchdomain
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/cloudsearchdomain&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package cloudsearchdomain provides the client and types for making API
+requests to Amazon CloudSearch Domain.
+</p>
+<p>
+You use the AmazonCloudSearch2013 API to upload documents to a search domain
+and search those documents.
+</p>
+<p>
+The endpoints for submitting UploadDocuments, Search, and Suggest requests
+are domain-specific. To get the endpoints for your domain, use the Amazon
+CloudSearch configuration service DescribeDomains action. The domain endpoints
+are also displayed on the domain dashboard in the Amazon CloudSearch console.
+You submit suggest requests to the search endpoint.
+</p>
+<p>
+For more information, see the Amazon CloudSearch Developer Guide (<a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">http://docs.aws.amazon.com/cloudsearch/latest/developerguide</a>).
+</p>
+<p>
+See cloudsearchdomain package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/cloudsearchdomain/">https://docs.aws.amazon.com/sdk-for-go/api/service/cloudsearchdomain/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon CloudSearch Domain with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon CloudSearch Domain client CloudSearchDomain for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/cloudsearchdomain/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/cloudsearchdomain/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ContentType_Values">func ContentType_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#QueryParser_Values">func QueryParser_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Bucket">type Bucket</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Bucket.GoString">func (s Bucket) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Bucket.SetCount">func (s *Bucket) SetCount(v int64) *Bucket</a></dd>
+				
+					
+					<dd>    <a href="index.html#Bucket.SetValue">func (s *Bucket) SetValue(v string) *Bucket</a></dd>
+				
+					
+					<dd>    <a href="index.html#Bucket.String">func (s Bucket) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BucketInfo">type BucketInfo</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BucketInfo.GoString">func (s BucketInfo) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BucketInfo.SetBuckets">func (s *BucketInfo) SetBuckets(v []*Bucket) *BucketInfo</a></dd>
+				
+					
+					<dd>    <a href="index.html#BucketInfo.String">func (s BucketInfo) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CloudSearchDomain">type CloudSearchDomain</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *CloudSearchDomain</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.Search">func (c *CloudSearchDomain) Search(input *SearchInput) (*SearchOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.SearchRequest">func (c *CloudSearchDomain) SearchRequest(input *SearchInput) (req *request.Request, output *SearchOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.SearchWithContext">func (c *CloudSearchDomain) SearchWithContext(ctx aws.Context, input *SearchInput, opts ...request.Option) (*SearchOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.Suggest">func (c *CloudSearchDomain) Suggest(input *SuggestInput) (*SuggestOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.SuggestRequest">func (c *CloudSearchDomain) SuggestRequest(input *SuggestInput) (req *request.Request, output *SuggestOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.SuggestWithContext">func (c *CloudSearchDomain) SuggestWithContext(ctx aws.Context, input *SuggestInput, opts ...request.Option) (*SuggestOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.UploadDocuments">func (c *CloudSearchDomain) UploadDocuments(input *UploadDocumentsInput) (*UploadDocumentsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.UploadDocumentsRequest">func (c *CloudSearchDomain) UploadDocumentsRequest(input *UploadDocumentsInput) (req *request.Request, output *UploadDocumentsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloudSearchDomain.UploadDocumentsWithContext">func (c *CloudSearchDomain) UploadDocumentsWithContext(ctx aws.Context, input *UploadDocumentsInput, opts ...request.Option) (*UploadDocumentsOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DocumentServiceException">type DocumentServiceException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.Code">func (s *DocumentServiceException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.Error">func (s *DocumentServiceException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.GoString">func (s DocumentServiceException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.Message">func (s *DocumentServiceException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.OrigErr">func (s *DocumentServiceException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.RequestID">func (s *DocumentServiceException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.StatusCode">func (s *DocumentServiceException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceException.String">func (s DocumentServiceException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DocumentServiceWarning">type DocumentServiceWarning</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DocumentServiceWarning.GoString">func (s DocumentServiceWarning) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceWarning.SetMessage">func (s *DocumentServiceWarning) SetMessage(v string) *DocumentServiceWarning</a></dd>
+				
+					
+					<dd>    <a href="index.html#DocumentServiceWarning.String">func (s DocumentServiceWarning) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FieldStats">type FieldStats</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#FieldStats.GoString">func (s FieldStats) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetCount">func (s *FieldStats) SetCount(v int64) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetMax">func (s *FieldStats) SetMax(v string) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetMean">func (s *FieldStats) SetMean(v string) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetMin">func (s *FieldStats) SetMin(v string) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetMissing">func (s *FieldStats) SetMissing(v int64) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetStddev">func (s *FieldStats) SetStddev(v float64) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetSum">func (s *FieldStats) SetSum(v float64) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.SetSumOfSquares">func (s *FieldStats) SetSumOfSquares(v float64) *FieldStats</a></dd>
+				
+					
+					<dd>    <a href="index.html#FieldStats.String">func (s FieldStats) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Hit">type Hit</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Hit.GoString">func (s Hit) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hit.SetExprs">func (s *Hit) SetExprs(v map[string]*string) *Hit</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hit.SetFields">func (s *Hit) SetFields(v map[string][]*string) *Hit</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hit.SetHighlights">func (s *Hit) SetHighlights(v map[string]*string) *Hit</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hit.SetId">func (s *Hit) SetId(v string) *Hit</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hit.String">func (s Hit) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Hits">type Hits</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Hits.GoString">func (s Hits) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hits.SetCursor">func (s *Hits) SetCursor(v string) *Hits</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hits.SetFound">func (s *Hits) SetFound(v int64) *Hits</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hits.SetHit">func (s *Hits) SetHit(v []*Hit) *Hits</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hits.SetStart">func (s *Hits) SetStart(v int64) *Hits</a></dd>
+				
+					
+					<dd>    <a href="index.html#Hits.String">func (s Hits) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SearchException">type SearchException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SearchException.Code">func (s *SearchException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.Error">func (s *SearchException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.GoString">func (s SearchException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.Message">func (s *SearchException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.OrigErr">func (s *SearchException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.RequestID">func (s *SearchException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.StatusCode">func (s *SearchException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchException.String">func (s SearchException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SearchInput">type SearchInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SearchInput.GoString">func (s SearchInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetCursor">func (s *SearchInput) SetCursor(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetExpr">func (s *SearchInput) SetExpr(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetFacet">func (s *SearchInput) SetFacet(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetFilterQuery">func (s *SearchInput) SetFilterQuery(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetHighlight">func (s *SearchInput) SetHighlight(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetPartial">func (s *SearchInput) SetPartial(v bool) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetQuery">func (s *SearchInput) SetQuery(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetQueryOptions">func (s *SearchInput) SetQueryOptions(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetQueryParser">func (s *SearchInput) SetQueryParser(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetReturn">func (s *SearchInput) SetReturn(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetSize">func (s *SearchInput) SetSize(v int64) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetSort">func (s *SearchInput) SetSort(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetStart">func (s *SearchInput) SetStart(v int64) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.SetStats">func (s *SearchInput) SetStats(v string) *SearchInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.String">func (s SearchInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchInput.Validate">func (s *SearchInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SearchOutput">type SearchOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SearchOutput.GoString">func (s SearchOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchOutput.SetFacets">func (s *SearchOutput) SetFacets(v map[string]*BucketInfo) *SearchOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchOutput.SetHits">func (s *SearchOutput) SetHits(v *Hits) *SearchOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchOutput.SetStats">func (s *SearchOutput) SetStats(v map[string]*FieldStats) *SearchOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchOutput.SetStatus">func (s *SearchOutput) SetStatus(v *SearchStatus) *SearchOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchOutput.String">func (s SearchOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SearchStatus">type SearchStatus</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SearchStatus.GoString">func (s SearchStatus) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchStatus.SetRid">func (s *SearchStatus) SetRid(v string) *SearchStatus</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchStatus.SetTimems">func (s *SearchStatus) SetTimems(v int64) *SearchStatus</a></dd>
+				
+					
+					<dd>    <a href="index.html#SearchStatus.String">func (s SearchStatus) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SuggestInput">type SuggestInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SuggestInput.GoString">func (s SuggestInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestInput.SetQuery">func (s *SuggestInput) SetQuery(v string) *SuggestInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestInput.SetSize">func (s *SuggestInput) SetSize(v int64) *SuggestInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestInput.SetSuggester">func (s *SuggestInput) SetSuggester(v string) *SuggestInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestInput.String">func (s SuggestInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestInput.Validate">func (s *SuggestInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SuggestModel">type SuggestModel</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SuggestModel.GoString">func (s SuggestModel) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestModel.SetFound">func (s *SuggestModel) SetFound(v int64) *SuggestModel</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestModel.SetQuery">func (s *SuggestModel) SetQuery(v string) *SuggestModel</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestModel.SetSuggestions">func (s *SuggestModel) SetSuggestions(v []*SuggestionMatch) *SuggestModel</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestModel.String">func (s SuggestModel) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SuggestOutput">type SuggestOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SuggestOutput.GoString">func (s SuggestOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestOutput.SetStatus">func (s *SuggestOutput) SetStatus(v *SuggestStatus) *SuggestOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestOutput.SetSuggest">func (s *SuggestOutput) SetSuggest(v *SuggestModel) *SuggestOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestOutput.String">func (s SuggestOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SuggestStatus">type SuggestStatus</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SuggestStatus.GoString">func (s SuggestStatus) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestStatus.SetRid">func (s *SuggestStatus) SetRid(v string) *SuggestStatus</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestStatus.SetTimems">func (s *SuggestStatus) SetTimems(v int64) *SuggestStatus</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestStatus.String">func (s SuggestStatus) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SuggestionMatch">type SuggestionMatch</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SuggestionMatch.GoString">func (s SuggestionMatch) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestionMatch.SetId">func (s *SuggestionMatch) SetId(v string) *SuggestionMatch</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestionMatch.SetScore">func (s *SuggestionMatch) SetScore(v int64) *SuggestionMatch</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestionMatch.SetSuggestion">func (s *SuggestionMatch) SetSuggestion(v string) *SuggestionMatch</a></dd>
+				
+					
+					<dd>    <a href="index.html#SuggestionMatch.String">func (s SuggestionMatch) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UploadDocumentsInput">type UploadDocumentsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsInput.GoString">func (s UploadDocumentsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsInput.SetContentType">func (s *UploadDocumentsInput) SetContentType(v string) *UploadDocumentsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsInput.SetDocuments">func (s *UploadDocumentsInput) SetDocuments(v io.ReadSeeker) *UploadDocumentsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsInput.String">func (s UploadDocumentsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsInput.Validate">func (s *UploadDocumentsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UploadDocumentsOutput">type UploadDocumentsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.GoString">func (s UploadDocumentsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.SetAdds">func (s *UploadDocumentsOutput) SetAdds(v int64) *UploadDocumentsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.SetDeletes">func (s *UploadDocumentsOutput) SetDeletes(v int64) *UploadDocumentsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.SetStatus">func (s *UploadDocumentsOutput) SetStatus(v string) *UploadDocumentsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.SetWarnings">func (s *UploadDocumentsOutput) SetWarnings(v []*DocumentServiceWarning) *UploadDocumentsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UploadDocumentsOutput.String">func (s UploadDocumentsOutput) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ContentTypeApplicationJson is a ContentType enum value</span>
+    <span id="ContentTypeApplicationJson">ContentTypeApplicationJson</span> = &#34;application/json&#34;
+
+    <span class="comment">// ContentTypeApplicationXml is a ContentType enum value</span>
+    <span id="ContentTypeApplicationXml">ContentTypeApplicationXml</span> = &#34;application/xml&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// QueryParserSimple is a QueryParser enum value</span>
+    <span id="QueryParserSimple">QueryParserSimple</span> = &#34;simple&#34;
+
+    <span class="comment">// QueryParserStructured is a QueryParser enum value</span>
+    <span id="QueryParserStructured">QueryParserStructured</span> = &#34;structured&#34;
+
+    <span class="comment">// QueryParserLucene is a QueryParser enum value</span>
+    <span id="QueryParserLucene">QueryParserLucene</span> = &#34;lucene&#34;
+
+    <span class="comment">// QueryParserDismax is a QueryParser enum value</span>
+    <span id="QueryParserDismax">QueryParserDismax</span> = &#34;dismax&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeDocumentServiceException for service response error code</span>
+    <span class="comment">// &#34;DocumentServiceException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Information about any problems encountered while processing an upload request.</span>
+    <span id="ErrCodeDocumentServiceException">ErrCodeDocumentServiceException</span> = &#34;DocumentServiceException&#34;
+
+    <span class="comment">// ErrCodeSearchException for service response error code</span>
+    <span class="comment">// &#34;SearchException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Information about any problems encountered while processing a search request.</span>
+    <span id="ErrCodeSearchException">ErrCodeSearchException</span> = &#34;SearchException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;cloudsearchdomain&#34;  <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = <a href="index.html#ServiceName">ServiceName</a>          <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;CloudSearch Domain&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ContentType_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=64231:64265#L1689">ContentType_Values</a>
+				<a class="permalink" href="index.html#ContentType_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ContentType_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ContentType_Values returns all elements of the ContentType enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="QueryParser_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=64764:64798#L1711">QueryParser_Values</a>
+				<a class="permalink" href="index.html#QueryParser_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func QueryParser_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+QueryParser_Values returns all elements of the QueryParser enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Bucket">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=12470:12743#L295">Bucket</a>
+				<a class="permalink" href="index.html#Bucket">¶</a>
+				
+				
+			</h2>
+			<p>
+A container for facet information.
+</p>
+
+			<pre>type Bucket struct {
+
+    <span class="comment">// The number of hits that contain the facet value in the specified facet field.</span>
+<span id="Bucket.Count"></span>    Count *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;count&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The facet value being counted.</span>
+<span id="Bucket.Value"></span>    Value *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;value&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Bucket.GoString">func (Bucket) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=13308:13341#L319">GoString</a>
+					<a class="permalink" href="index.html#Bucket.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Bucket">Bucket</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Bucket.SetCount">func (*Bucket) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=13408:13450#L324">SetCount</a>
+					<a class="permalink" href="index.html#Bucket.SetCount">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Bucket">Bucket</a>) SetCount(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#Bucket">Bucket</a></pre>
+				<p>
+SetCount sets the Count field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Bucket.SetValue">func (*Bucket) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=13522:13565#L330">SetValue</a>
+					<a class="permalink" href="index.html#Bucket.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Bucket">Bucket</a>) SetValue(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Bucket">Bucket</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Bucket.String">func (Bucket) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=12993:13024#L310">String</a>
+					<a class="permalink" href="index.html#Bucket.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Bucket">Bucket</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BucketInfo">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=13654:13822#L336">BucketInfo</a>
+				<a class="permalink" href="index.html#BucketInfo">¶</a>
+				
+				
+			</h2>
+			<p>
+A container for the calculated facet values and counts.
+</p>
+
+			<pre>type BucketInfo struct {
+
+    <span class="comment">// A list of the calculated facet values and counts.</span>
+<span id="BucketInfo.Buckets"></span>    Buckets []*<a href="index.html#Bucket">Bucket</a> `locationName:&#34;buckets&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BucketInfo.GoString">func (BucketInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=14391:14428#L357">GoString</a>
+					<a class="permalink" href="index.html#BucketInfo.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BucketInfo">BucketInfo</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BucketInfo.SetBuckets">func (*BucketInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=14499:14555#L362">SetBuckets</a>
+					<a class="permalink" href="index.html#BucketInfo.SetBuckets">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BucketInfo">BucketInfo</a>) SetBuckets(v []*<a href="index.html#Bucket">Bucket</a>) *<a href="index.html#BucketInfo">BucketInfo</a></pre>
+				<p>
+SetBuckets sets the Buckets field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BucketInfo.String">func (BucketInfo) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=14072:14107#L348">String</a>
+					<a class="permalink" href="index.html#BucketInfo.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BucketInfo">BucketInfo</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CloudSearchDomain">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/service.go?s=733:782#L11">CloudSearchDomain</a>
+				<a class="permalink" href="index.html#CloudSearchDomain">¶</a>
+				
+				
+			</h2>
+			<p>
+CloudSearchDomain provides the API operation methods for making requests to
+Amazon CloudSearch Domain. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+CloudSearchDomain methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type CloudSearchDomain struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/service.go?s=1788:1861#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a></pre>
+				<p>
+New creates a new instance of the CloudSearchDomain client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a CloudSearchDomain client from just a session.
+svc := cloudsearchdomain.New(mySession)
+
+// Create a CloudSearchDomain client with additional configuration
+svc := cloudsearchdomain.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="CloudSearchDomain.Search">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=3371:3448#L84">Search</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.Search">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) Search(input *<a href="index.html#SearchInput">SearchInput</a>) (*<a href="index.html#SearchOutput">SearchOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Search API operation for Amazon CloudSearch Domain.
+</p>
+<p>
+Retrieves a list of documents that match the specified search criteria. How
+you specify the search criteria depends on which query parser you use. Amazon
+CloudSearch supports four query parsers:
+</p>
+<pre>* simple: search all text and text-array fields for the specified string.
+Search for phrases, individual terms, and prefixes.
+
+* structured: search specific fields, construct compound queries using
+Boolean operators, and use advanced features such as term boosting and
+proximity searching.
+
+* lucene: specify search criteria using the Apache Lucene query parser
+syntax.
+
+* dismax: specify search criteria using the simplified subset of the Apache
+Lucene query parser syntax defined by the DisMax query parser.
+</pre>
+<p>
+For more information, see Searching Your Data (<a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html">http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html</a>)
+in the Amazon CloudSearch Developer Guide.
+</p>
+<p>
+The endpoint for submitting Search requests is domain-specific. You submit
+search requests to a domain&#39;s search endpoint. To get the search endpoint
+for your domain, use the Amazon CloudSearch configuration service DescribeDomains
+action. A domain&#39;s endpoints are also displayed on the domain dashboard in
+the Amazon CloudSearch console.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon CloudSearch Domain&#39;s
+API operation Search for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* SearchException
+Information about any problems encountered while processing a search request.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.SearchRequest">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=1189:1295#L29">SearchRequest</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.SearchRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) SearchRequest(input *<a href="index.html#SearchInput">SearchInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#SearchOutput">SearchOutput</a>)</pre>
+				<p>
+SearchRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the Search operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See Search for more information on using the Search
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the SearchRequest method.
+req, resp := client.SearchRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.SearchWithContext">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=3975:4104#L98">SearchWithContext</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.SearchWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) SearchWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#SearchInput">SearchInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#SearchOutput">SearchOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+SearchWithContext is the same as Search with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See Search for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.Suggest">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=7110:7190#L176">Suggest</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.Suggest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) Suggest(input *<a href="index.html#SuggestInput">SuggestInput</a>) (*<a href="index.html#SuggestOutput">SuggestOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Suggest API operation for Amazon CloudSearch Domain.
+</p>
+<p>
+Retrieves autocomplete suggestions for a partial query string. You can use
+suggestions enable you to display likely matches before users finish typing.
+In Amazon CloudSearch, suggestions are based on the contents of a particular
+text field. When you request suggestions, Amazon CloudSearch finds all of
+the documents whose values in the suggester field start with the specified
+query string. The beginning of the field must match the query string to be
+considered a match.
+</p>
+<p>
+For more information about configuring suggesters and retrieving suggestions,
+see Getting Suggestions (<a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html">http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html</a>)
+in the Amazon CloudSearch Developer Guide.
+</p>
+<p>
+The endpoint for submitting Suggest requests is domain-specific. You submit
+suggest requests to a domain&#39;s search endpoint. To get the search endpoint
+for your domain, use the Amazon CloudSearch configuration service DescribeDomains
+action. A domain&#39;s endpoints are also displayed on the domain dashboard in
+the Amazon CloudSearch console.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon CloudSearch Domain&#39;s
+API operation Suggest for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* SearchException
+Information about any problems encountered while processing a search request.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.SuggestRequest">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=5131:5240#L129">SuggestRequest</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.SuggestRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) SuggestRequest(input *<a href="index.html#SuggestInput">SuggestInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#SuggestOutput">SuggestOutput</a>)</pre>
+				<p>
+SuggestRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the Suggest operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See Suggest for more information on using the Suggest
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the SuggestRequest method.
+req, resp := client.SuggestRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.SuggestWithContext">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=7721:7853#L190">SuggestWithContext</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.SuggestWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) SuggestWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#SuggestInput">SuggestInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#SuggestOutput">SuggestOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+SuggestWithContext is the same as Suggest with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See Suggest for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.UploadDocuments">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=11486:11590#L273">UploadDocuments</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.UploadDocuments">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) UploadDocuments(input *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) (*<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UploadDocuments API operation for Amazon CloudSearch Domain.
+</p>
+<p>
+Posts a batch of documents to a search domain for indexing. A document batch
+is a collection of add and delete operations that represent the documents
+you want to add, update, or delete from your domain. Batches can be described
+in either JSON or XML. Each item that you want Amazon CloudSearch to return
+as a search result (such as a product) is represented as a document. Every
+document has a unique ID and one or more fields that contain the data that
+you want to search and return in results. Individual documents cannot contain
+more than 1 MB of data. The entire batch cannot exceed 5 MB. To get the best
+possible upload performance, group add and delete operations in batches that
+are close the 5 MB limit. Submitting a large volume of single-document batches
+can overload a domain&#39;s document service.
+</p>
+<p>
+The endpoint for submitting UploadDocuments requests is domain-specific.
+To get the document endpoint for your domain, use the Amazon CloudSearch
+configuration service DescribeDomains action. A domain&#39;s endpoints are also
+displayed on the domain dashboard in the Amazon CloudSearch console.
+</p>
+<p>
+For more information about formatting your data for Amazon CloudSearch, see
+Preparing Your Data (<a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/preparing-data.html">http://docs.aws.amazon.com/cloudsearch/latest/developerguide/preparing-data.html</a>)
+in the Amazon CloudSearch Developer Guide. For more information about uploading
+data for indexing, see Uploading Data (<a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html</a>)
+in the Amazon CloudSearch Developer Guide.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon CloudSearch Domain&#39;s
+API operation UploadDocuments for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* DocumentServiceException
+Information about any problems encountered while processing an upload request.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.UploadDocumentsRequest">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=8945:9078#L221">UploadDocumentsRequest</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.UploadDocumentsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) UploadDocumentsRequest(input *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>)</pre>
+				<p>
+UploadDocumentsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the UploadDocuments operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See UploadDocuments for more information on using the UploadDocuments
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the UploadDocumentsRequest method.
+req, resp := client.UploadDocumentsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CloudSearchDomain.UploadDocumentsWithContext">func (*CloudSearchDomain) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=12153:12309#L287">UploadDocumentsWithContext</a>
+					<a class="permalink" href="index.html#CloudSearchDomain.UploadDocumentsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CloudSearchDomain">CloudSearchDomain</a>) UploadDocumentsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UploadDocumentsWithContext is the same as UploadDocuments with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See UploadDocuments for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DocumentServiceException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=14668:15077#L368">DocumentServiceException</a>
+				<a class="permalink" href="index.html#DocumentServiceException">¶</a>
+				
+				
+			</h2>
+			<p>
+Information about any problems encountered while processing an upload request.
+</p>
+
+			<pre>type DocumentServiceException struct {
+<span id="DocumentServiceException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+    <span class="comment">// The description of the errors returned by the document service.</span>
+<span id="DocumentServiceException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The return status of a document upload request, error or success.</span>
+<span id="DocumentServiceException.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;status&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DocumentServiceException.Code">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=15912:15960#L404">Code</a>
+					<a class="permalink" href="index.html#DocumentServiceException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.Error">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16294:16343#L421">Error</a>
+					<a class="permalink" href="index.html#DocumentServiceException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.GoString">func (DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=15660:15711#L393">GoString</a>
+					<a class="permalink" href="index.html#DocumentServiceException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DocumentServiceException">DocumentServiceException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.Message">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16045:16096#L409">Message</a>
+					<a class="permalink" href="index.html#DocumentServiceException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.OrigErr">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16226:16276#L417">OrigErr</a>
+					<a class="permalink" href="index.html#DocumentServiceException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.RequestID">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16654:16707#L431">RequestID</a>
+					<a class="permalink" href="index.html#DocumentServiceException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.StatusCode">func (*DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16496:16547#L426">StatusCode</a>
+					<a class="permalink" href="index.html#DocumentServiceException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceException">DocumentServiceException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceException.String">func (DocumentServiceException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=15327:15376#L384">String</a>
+					<a class="permalink" href="index.html#DocumentServiceException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DocumentServiceException">DocumentServiceException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DocumentServiceWarning">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=16859:17053#L437">DocumentServiceWarning</a>
+				<a class="permalink" href="index.html#DocumentServiceWarning">¶</a>
+				
+				
+			</h2>
+			<p>
+A warning returned by the document service when an issue is discovered while
+processing an upload request.
+</p>
+
+			<pre>type DocumentServiceWarning struct {
+
+    <span class="comment">// The description for a warning returned by the document service.</span>
+<span id="DocumentServiceWarning.Message"></span>    Message *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DocumentServiceWarning.GoString">func (DocumentServiceWarning) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=17634:17683#L458">GoString</a>
+					<a class="permalink" href="index.html#DocumentServiceWarning.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceWarning.SetMessage">func (*DocumentServiceWarning) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=17754:17831#L463">SetMessage</a>
+					<a class="permalink" href="index.html#DocumentServiceWarning.SetMessage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a>) SetMessage(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a></pre>
+				<p>
+SetMessage sets the Message field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DocumentServiceWarning.String">func (DocumentServiceWarning) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=17303:17350#L449">String</a>
+					<a class="permalink" href="index.html#DocumentServiceWarning.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FieldStats">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=17920:20145#L469">FieldStats</a>
+				<a class="permalink" href="index.html#FieldStats">¶</a>
+				
+				
+			</h2>
+			<p>
+The statistics for a field calculated in the request.
+</p>
+
+			<pre>type FieldStats struct {
+
+    <span class="comment">// The number of documents that contain a value in the specified field in the</span>
+    <span class="comment">// result set.</span>
+<span id="FieldStats.Count"></span>    Count *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;count&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The maximum value found in the specified field in the result set.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the field is numeric (int, int-array, double, or double-array), max is</span>
+    <span class="comment">// the string representation of a double-precision 64-bit floating point value.</span>
+    <span class="comment">// If the field is date or date-array, max is the string representation of a</span>
+    <span class="comment">// date with the format specified in IETF RFC3339 (http://tools.ietf.org/html/rfc3339):</span>
+    <span class="comment">// yyyy-mm-ddTHH:mm:ss.SSSZ.</span>
+<span id="FieldStats.Max"></span>    Max *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;max&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The average of the values found in the specified field in the result set.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the field is numeric (int, int-array, double, or double-array), mean is</span>
+    <span class="comment">// the string representation of a double-precision 64-bit floating point value.</span>
+    <span class="comment">// If the field is date or date-array, mean is the string representation of</span>
+    <span class="comment">// a date with the format specified in IETF RFC3339 (http://tools.ietf.org/html/rfc3339):</span>
+    <span class="comment">// yyyy-mm-ddTHH:mm:ss.SSSZ.</span>
+<span id="FieldStats.Mean"></span>    Mean *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;mean&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The minimum value found in the specified field in the result set.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the field is numeric (int, int-array, double, or double-array), min is</span>
+    <span class="comment">// the string representation of a double-precision 64-bit floating point value.</span>
+    <span class="comment">// If the field is date or date-array, min is the string representation of a</span>
+    <span class="comment">// date with the format specified in IETF RFC3339 (http://tools.ietf.org/html/rfc3339):</span>
+    <span class="comment">// yyyy-mm-ddTHH:mm:ss.SSSZ.</span>
+<span id="FieldStats.Min"></span>    Min *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;min&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The number of documents that do not contain a value in the specified field</span>
+    <span class="comment">// in the result set.</span>
+<span id="FieldStats.Missing"></span>    Missing *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;missing&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The standard deviation of the values in the specified field in the result</span>
+    <span class="comment">// set.</span>
+<span id="FieldStats.Stddev"></span>    Stddev *<a href="../../../../../builtin/index.html#float64">float64</a> `locationName:&#34;stddev&#34; type:&#34;double&#34;`
+
+    <span class="comment">// The sum of the field values across the documents in the result set. null</span>
+    <span class="comment">// for date fields.</span>
+<span id="FieldStats.Sum"></span>    Sum *<a href="../../../../../builtin/index.html#float64">float64</a> `locationName:&#34;sum&#34; type:&#34;double&#34;`
+
+    <span class="comment">// The sum of all field values in the result set squared.</span>
+<span id="FieldStats.SumOfSquares"></span>    SumOfSquares *<a href="../../../../../builtin/index.html#float64">float64</a> `locationName:&#34;sumOfSquares&#34; type:&#34;double&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FieldStats.GoString">func (FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=20714:20751#L533">GoString</a>
+					<a class="permalink" href="index.html#FieldStats.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FieldStats">FieldStats</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetCount">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=20818:20868#L538">SetCount</a>
+					<a class="permalink" href="index.html#FieldStats.SetCount">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetCount(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetCount sets the Count field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetMax">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=20936:20985#L544">SetMax</a>
+					<a class="permalink" href="index.html#FieldStats.SetMax">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetMax(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetMax sets the Max field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetMean">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21053:21103#L550">SetMean</a>
+					<a class="permalink" href="index.html#FieldStats.SetMean">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetMean(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetMean sets the Mean field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetMin">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21170:21219#L556">SetMin</a>
+					<a class="permalink" href="index.html#FieldStats.SetMin">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetMin(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetMin sets the Min field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetMissing">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21293:21345#L562">SetMissing</a>
+					<a class="permalink" href="index.html#FieldStats.SetMissing">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetMissing(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetMissing sets the Missing field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetStddev">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21421:21474#L568">SetStddev</a>
+					<a class="permalink" href="index.html#FieldStats.SetStddev">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetStddev(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetStddev sets the Stddev field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetSum">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21543:21593#L574">SetSum</a>
+					<a class="permalink" href="index.html#FieldStats.SetSum">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetSum(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetSum sets the Sum field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.SetSumOfSquares">func (*FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21677:21736#L580">SetSumOfSquares</a>
+					<a class="permalink" href="index.html#FieldStats.SetSumOfSquares">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FieldStats">FieldStats</a>) SetSumOfSquares(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#FieldStats">FieldStats</a></pre>
+				<p>
+SetSumOfSquares sets the SumOfSquares field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FieldStats.String">func (FieldStats) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=20395:20430#L524">String</a>
+					<a class="permalink" href="index.html#FieldStats.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FieldStats">FieldStats</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Hit">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=21838:22427#L586">Hit</a>
+				<a class="permalink" href="index.html#Hit">¶</a>
+				
+				
+			</h2>
+			<p>
+Information about a document that matches the search request.
+</p>
+
+			<pre>type Hit struct {
+
+    <span class="comment">// The expressions returned from a document that matches the search request.</span>
+<span id="Hit.Exprs"></span>    Exprs map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;exprs&#34; type:&#34;map&#34;`
+
+    <span class="comment">// The fields returned from a document that matches the search request.</span>
+<span id="Hit.Fields"></span>    Fields map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;fields&#34; type:&#34;map&#34;`
+
+    <span class="comment">// The highlights returned from a document that matches the search request.</span>
+<span id="Hit.Highlights"></span>    Highlights map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;highlights&#34; type:&#34;map&#34;`
+
+    <span class="comment">// The document ID of a document that matches the search request.</span>
+<span id="Hit.Id"></span>    Id *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;id&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Hit.GoString">func (Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=22989:23019#L616">GoString</a>
+					<a class="permalink" href="index.html#Hit.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Hit">Hit</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hit.SetExprs">func (*Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=23086:23135#L621">SetExprs</a>
+					<a class="permalink" href="index.html#Hit.SetExprs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hit">Hit</a>) SetExprs(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Hit">Hit</a></pre>
+				<p>
+SetExprs sets the Exprs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hit.SetFields">func (*Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=23208:23260#L627">SetFields</a>
+					<a class="permalink" href="index.html#Hit.SetFields">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hit">Hit</a>) SetFields(v map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Hit">Hit</a></pre>
+				<p>
+SetFields sets the Fields field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hit.SetHighlights">func (*Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=23342:23396#L633">SetHighlights</a>
+					<a class="permalink" href="index.html#Hit.SetHighlights">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hit">Hit</a>) SetHighlights(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Hit">Hit</a></pre>
+				<p>
+SetHighlights sets the Highlights field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hit.SetId">func (*Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=23466:23500#L639">SetId</a>
+					<a class="permalink" href="index.html#Hit.SetId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hit">Hit</a>) SetId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Hit">Hit</a></pre>
+				<p>
+SetId sets the Id field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hit.String">func (Hit) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=22677:22705#L607">String</a>
+					<a class="permalink" href="index.html#Hit.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Hit">Hit</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Hits">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=23589:24131#L645">Hits</a>
+				<a class="permalink" href="index.html#Hits">¶</a>
+				
+				
+			</h2>
+			<p>
+The collection of documents that match the search request.
+</p>
+
+			<pre>type Hits struct {
+
+    <span class="comment">// A cursor that can be used to retrieve the next set of matching documents</span>
+    <span class="comment">// when you want to page through a large result set.</span>
+<span id="Hits.Cursor"></span>    Cursor *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;cursor&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The total number of documents that match the search request.</span>
+<span id="Hits.Found"></span>    Found *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;found&#34; type:&#34;long&#34;`
+
+    <span class="comment">// A document that matches the search request.</span>
+<span id="Hits.Hit"></span>    Hit []*<a href="index.html#Hit">Hit</a> `locationName:&#34;hit&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The index of the first matching document.</span>
+<span id="Hits.Start"></span>    Start *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;start&#34; type:&#34;long&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Hits.GoString">func (Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=24694:24725#L676">GoString</a>
+					<a class="permalink" href="index.html#Hits.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Hits">Hits</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hits.SetCursor">func (*Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=24794:24834#L681">SetCursor</a>
+					<a class="permalink" href="index.html#Hits.SetCursor">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hits">Hits</a>) SetCursor(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Hits">Hits</a></pre>
+				<p>
+SetCursor sets the Cursor field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hits.SetFound">func (*Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=24907:24945#L687">SetFound</a>
+					<a class="permalink" href="index.html#Hits.SetFound">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hits">Hits</a>) SetFound(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#Hits">Hits</a></pre>
+				<p>
+SetFound sets the Found field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hits.SetHit">func (*Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=25013:25050#L693">SetHit</a>
+					<a class="permalink" href="index.html#Hits.SetHit">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hits">Hits</a>) SetHit(v []*<a href="index.html#Hit">Hit</a>) *<a href="index.html#Hits">Hits</a></pre>
+				<p>
+SetHit sets the Hit field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hits.SetStart">func (*Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=25119:25157#L699">SetStart</a>
+					<a class="permalink" href="index.html#Hits.SetStart">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Hits">Hits</a>) SetStart(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#Hits">Hits</a></pre>
+				<p>
+SetStart sets the Start field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Hits.String">func (Hits) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=24381:24410#L667">String</a>
+					<a class="permalink" href="index.html#Hits.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Hits">Hits</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SearchException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=25268:25538#L705">SearchException</a>
+				<a class="permalink" href="index.html#SearchException">¶</a>
+				
+				
+			</h2>
+			<p>
+Information about any problems encountered while processing a search request.
+</p>
+
+			<pre>type SearchException struct {
+<span id="SearchException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+    <span class="comment">// A description of the error returned by the search service.</span>
+<span id="SearchException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SearchException.Code">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26337:26376#L738">Code</a>
+					<a class="permalink" href="index.html#SearchException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.Error">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26683:26723#L755">Error</a>
+					<a class="permalink" href="index.html#SearchException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="SearchException.GoString">func (SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26112:26154#L727">GoString</a>
+					<a class="permalink" href="index.html#SearchException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchException">SearchException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.Message">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26452:26494#L743">Message</a>
+					<a class="permalink" href="index.html#SearchException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.OrigErr">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26624:26665#L751">OrigErr</a>
+					<a class="permalink" href="index.html#SearchException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.RequestID">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=27009:27053#L765">RequestID</a>
+					<a class="permalink" href="index.html#SearchException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.StatusCode">func (*SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=26860:26902#L760">StatusCode</a>
+					<a class="permalink" href="index.html#SearchException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchException">SearchException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchException.String">func (SearchException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=25788:25828#L718">String</a>
+					<a class="permalink" href="index.html#SearchException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchException">SearchException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SearchInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=27147:46295#L770">SearchInput</a>
+				<a class="permalink" href="index.html#SearchInput">¶</a>
+				
+				
+			</h2>
+			<p>
+Container for the parameters to the Search request.
+</p>
+
+			<pre>type SearchInput struct {
+
+    <span class="comment">// Retrieves a cursor value you can use to page through large result sets. Use</span>
+    <span class="comment">// the size parameter to control the number of hits to include in each response.</span>
+    <span class="comment">// You can specify either the cursor or start parameter in a request; they are</span>
+    <span class="comment">// mutually exclusive. To get the first cursor, set the cursor value to initial.</span>
+    <span class="comment">// In subsequent requests, specify the cursor value returned in the hits section</span>
+    <span class="comment">// of the response.</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information, see Paginating Results (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/paginating-results.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.Cursor"></span>    Cursor *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;cursor&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Defines one or more numeric expressions that can be used to sort results</span>
+    <span class="comment">// or specify search or filter criteria. You can also specify expressions as</span>
+    <span class="comment">// return fields.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You specify the expressions in JSON using the form {&#34;EXPRESSIONNAME&#34;:&#34;EXPRESSION&#34;}.</span>
+    <span class="comment">// You can define and use multiple expressions in a search request. For example:</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;expression1&#34;:&#34;_score*rating&#34;, &#34;expression2&#34;:&#34;(1/rank)*year&#34;}</span>
+    <span class="comment">//</span>
+    <span class="comment">// For information about the variables, operators, and functions you can use</span>
+    <span class="comment">// in expressions, see Writing Expressions (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html#writing-expressions)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.Expr"></span>    Expr *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;expr&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Specifies one or more fields for which to get facet information, and options</span>
+    <span class="comment">// that control how the facet information is returned. Each specified field</span>
+    <span class="comment">// must be facet-enabled in the domain configuration. The fields and options</span>
+    <span class="comment">// are specified in JSON using the form {&#34;FIELD&#34;:{&#34;OPTION&#34;:VALUE,&#34;OPTION:&#34;STRING&#34;},&#34;FIELD&#34;:{&#34;OPTION&#34;:VALUE,&#34;OPTION&#34;:&#34;STRING&#34;}}.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You can specify the following faceting options:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * buckets specifies an array of the facet values or ranges to count. Ranges</span>
+    <span class="comment">//    are specified using the same syntax that you use to search for a range</span>
+    <span class="comment">//    of values. For more information, see Searching for a Range of Values (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching-ranges.html)</span>
+    <span class="comment">//    in the Amazon CloudSearch Developer Guide. Buckets are returned in the</span>
+    <span class="comment">//    order they are specified in the request. The sort and size options are</span>
+    <span class="comment">//    not valid if you specify buckets.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * size specifies the maximum number of facets to include in the results.</span>
+    <span class="comment">//    By default, Amazon CloudSearch returns counts for the top 10. The size</span>
+    <span class="comment">//    parameter is only valid when you specify the sort option; it cannot be</span>
+    <span class="comment">//    used in conjunction with buckets.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * sort specifies how you want to sort the facets in the results: bucket</span>
+    <span class="comment">//    or count. Specify bucket to sort alphabetically or numerically by facet</span>
+    <span class="comment">//    value (in ascending order). Specify count to sort by the facet counts</span>
+    <span class="comment">//    computed for each facet value (in descending order). To retrieve facet</span>
+    <span class="comment">//    counts for particular values or ranges of values, use the buckets option</span>
+    <span class="comment">//    instead of sort.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If no facet options are specified, facet counts are computed for all field</span>
+    <span class="comment">// values, the facets are sorted by facet count, and the top 10 facets are returned</span>
+    <span class="comment">// in the results.</span>
+    <span class="comment">//</span>
+    <span class="comment">// To count particular buckets of values, use the buckets option. For example,</span>
+    <span class="comment">// the following request uses the buckets option to calculate and return facet</span>
+    <span class="comment">// counts by decade.</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;year&#34;:{&#34;buckets&#34;:[&#34;[1970,1979]&#34;,&#34;[1980,1989]&#34;,&#34;[1990,1999]&#34;,&#34;[2000,2009]&#34;,&#34;[2010,}&#34;]}}</span>
+    <span class="comment">//</span>
+    <span class="comment">// To sort facets by facet count, use the count option. For example, the following</span>
+    <span class="comment">// request sets the sort option to count to sort the facet values by facet count,</span>
+    <span class="comment">// with the facet values that have the most matching documents listed first.</span>
+    <span class="comment">// Setting the size option to 3 returns only the top three facet values.</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;year&#34;:{&#34;sort&#34;:&#34;count&#34;,&#34;size&#34;:3}}</span>
+    <span class="comment">//</span>
+    <span class="comment">// To sort the facets by value, use the bucket option. For example, the following</span>
+    <span class="comment">// request sets the sort option to bucket to sort the facet values numerically</span>
+    <span class="comment">// by year, with earliest year listed first.</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;year&#34;:{&#34;sort&#34;:&#34;bucket&#34;}}</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information, see Getting and Using Facet Information (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/faceting.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.Facet"></span>    Facet *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;facet&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Specifies a structured query that filters the results of a search without</span>
+    <span class="comment">// affecting how the results are scored and sorted. You use filterQuery in conjunction</span>
+    <span class="comment">// with the query parameter to filter the documents that match the constraints</span>
+    <span class="comment">// specified in the query parameter. Specifying a filter controls only which</span>
+    <span class="comment">// matching documents are included in the results, it has no effect on how they</span>
+    <span class="comment">// are scored and sorted. The filterQuery parameter supports the full structured</span>
+    <span class="comment">// query syntax.</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information about using filters, see Filtering Matching Documents</span>
+    <span class="comment">// (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/filtering-results.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.FilterQuery"></span>    FilterQuery *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;fq&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Retrieves highlights for matches in the specified text or text-array fields.</span>
+    <span class="comment">// Each specified field must be highlight enabled in the domain configuration.</span>
+    <span class="comment">// The fields and options are specified in JSON using the form {&#34;FIELD&#34;:{&#34;OPTION&#34;:VALUE,&#34;OPTION:&#34;STRING&#34;},&#34;FIELD&#34;:{&#34;OPTION&#34;:VALUE,&#34;OPTION&#34;:&#34;STRING&#34;}}.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You can specify the following highlight options:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * format: specifies the format of the data in the text field: text or</span>
+    <span class="comment">//    html. When data is returned as HTML, all non-alphanumeric characters are</span>
+    <span class="comment">//    encoded. The default is html.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * max_phrases: specifies the maximum number of occurrences of the search</span>
+    <span class="comment">//    term(s) you want to highlight. By default, the first occurrence is highlighted.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * pre_tag: specifies the string to prepend to an occurrence of a search</span>
+    <span class="comment">//    term. The default for HTML highlights is &lt;em&gt;. The default for text</span>
+    <span class="comment">//    highlights is *.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * post_tag: specifies the string to append to an occurrence of a search</span>
+    <span class="comment">//    term. The default for HTML highlights is &lt;/em&gt;. The default for</span>
+    <span class="comment">//    text highlights is *.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If no highlight options are specified for a field, the returned field text</span>
+    <span class="comment">// is treated as HTML and the first match is highlighted with emphasis tags:</span>
+    <span class="comment">// &lt;em&gt;search-term&lt;/em&gt;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// For example, the following request retrieves highlights for the actors and</span>
+    <span class="comment">// title fields.</span>
+    <span class="comment">//</span>
+    <span class="comment">// { &#34;actors&#34;: {}, &#34;title&#34;: {&#34;format&#34;: &#34;text&#34;,&#34;max_phrases&#34;: 2,&#34;pre_tag&#34;: &#34;&#34;,&#34;post_tag&#34;:</span>
+    <span class="comment">// &#34;&#34;} }</span>
+<span id="SearchInput.Highlight"></span>    Highlight *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;highlight&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Enables partial results to be returned if one or more index partitions are</span>
+    <span class="comment">// unavailable. When your search index is partitioned across multiple search</span>
+    <span class="comment">// instances, by default Amazon CloudSearch only returns results if every partition</span>
+    <span class="comment">// can be queried. This means that the failure of a single search instance can</span>
+    <span class="comment">// result in 5xx (internal server) errors. When you enable partial results,</span>
+    <span class="comment">// Amazon CloudSearch returns whatever results are available and includes the</span>
+    <span class="comment">// percentage of documents searched in the search results (percent-searched).</span>
+    <span class="comment">// This enables you to more gracefully degrade your users&#39; search experience.</span>
+    <span class="comment">// For example, rather than displaying no results, you could display the partial</span>
+    <span class="comment">// results and a message indicating that the results might be incomplete due</span>
+    <span class="comment">// to a temporary system outage.</span>
+<span id="SearchInput.Partial"></span>    Partial *<a href="../../../../../builtin/index.html#bool">bool</a> `location:&#34;querystring&#34; locationName:&#34;partial&#34; type:&#34;boolean&#34;`
+
+    <span class="comment">// Specifies the search criteria for the request. How you specify the search</span>
+    <span class="comment">// criteria depends on the query parser used for the request and the parser</span>
+    <span class="comment">// options specified in the queryOptions parameter. By default, the simple query</span>
+    <span class="comment">// parser is used to process requests. To use the structured, lucene, or dismax</span>
+    <span class="comment">// query parser, you must also specify the queryParser parameter.</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information about specifying search criteria, see Searching Your</span>
+    <span class="comment">// Data (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+    <span class="comment">//</span>
+<span id="SearchInput.Query"></span>    <span class="comment">// Query is a required field</span>
+    Query *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;q&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Configures options for the query parser specified in the queryParser parameter.</span>
+    <span class="comment">// You specify the options in JSON using the following form {&#34;OPTION1&#34;:&#34;VALUE1&#34;,&#34;OPTION2&#34;:VALUE2&#34;...&#34;OPTIONN&#34;:&#34;VALUEN&#34;}.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The options you can configure vary according to which parser you use:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * defaultOperator: The default operator used to combine individual terms</span>
+    <span class="comment">//    in the search string. For example: defaultOperator: &#39;or&#39;. For the dismax</span>
+    <span class="comment">//    parser, you specify a percentage that represents the percentage of terms</span>
+    <span class="comment">//    in the search string (rounded down) that must match, rather than a default</span>
+    <span class="comment">//    operator. A value of 0% is the equivalent to OR, and a value of 100% is</span>
+    <span class="comment">//    equivalent to AND. The percentage must be specified as a value in the</span>
+    <span class="comment">//    range 0-100 followed by the percent (%) symbol. For example, defaultOperator:</span>
+    <span class="comment">//    50%. Valid values: and, or, a percentage in the range 0%-100% (dismax).</span>
+    <span class="comment">//    Default: and (simple, structured, lucene) or 100 (dismax). Valid for:</span>
+    <span class="comment">//    simple, structured, lucene, and dismax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * fields: An array of the fields to search when no fields are specified</span>
+    <span class="comment">//    in a search. If no fields are specified in a search and this option is</span>
+    <span class="comment">//    not specified, all text and text-array fields are searched. You can specify</span>
+    <span class="comment">//    a weight for each field to control the relative importance of each field</span>
+    <span class="comment">//    when Amazon CloudSearch calculates relevance scores. To specify a field</span>
+    <span class="comment">//    weight, append a caret (^) symbol and the weight to the field name. For</span>
+    <span class="comment">//    example, to boost the importance of the title field over the description</span>
+    <span class="comment">//    field you could specify: &#34;fields&#34;:[&#34;title^5&#34;,&#34;description&#34;]. Valid values:</span>
+    <span class="comment">//    The name of any configured field and an optional numeric value greater</span>
+    <span class="comment">//    than zero. Default: All text and text-array fields. Valid for: simple,</span>
+    <span class="comment">//    structured, lucene, and dismax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * operators: An array of the operators or special characters you want</span>
+    <span class="comment">//    to disable for the simple query parser. If you disable the and, or, or</span>
+    <span class="comment">//    not operators, the corresponding operators (+, |, -) have no special meaning</span>
+    <span class="comment">//    and are dropped from the search string. Similarly, disabling prefix disables</span>
+    <span class="comment">//    the wildcard operator (*) and disabling phrase disables the ability to</span>
+    <span class="comment">//    search for phrases by enclosing phrases in double quotes. Disabling precedence</span>
+    <span class="comment">//    disables the ability to control order of precedence using parentheses.</span>
+    <span class="comment">//    Disabling near disables the ability to use the ~ operator to perform a</span>
+    <span class="comment">//    sloppy phrase search. Disabling the fuzzy operator disables the ability</span>
+    <span class="comment">//    to use the ~ operator to perform a fuzzy search. escape disables the ability</span>
+    <span class="comment">//    to use a backslash (\) to escape special characters within the search</span>
+    <span class="comment">//    string. Disabling whitespace is an advanced option that prevents the parser</span>
+    <span class="comment">//    from tokenizing on whitespace, which can be useful for Vietnamese. (It</span>
+    <span class="comment">//    prevents Vietnamese words from being split incorrectly.) For example,</span>
+    <span class="comment">//    you could disable all operators other than the phrase operator to support</span>
+    <span class="comment">//    just simple term and phrase queries: &#34;operators&#34;:[&#34;and&#34;,&#34;not&#34;,&#34;or&#34;, &#34;prefix&#34;].</span>
+    <span class="comment">//    Valid values: and, escape, fuzzy, near, not, or, phrase, precedence, prefix,</span>
+    <span class="comment">//    whitespace. Default: All operators and special characters are enabled.</span>
+    <span class="comment">//    Valid for: simple.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * phraseFields: An array of the text or text-array fields you want to</span>
+    <span class="comment">//    use for phrase searches. When the terms in the search string appear in</span>
+    <span class="comment">//    close proximity within a field, the field scores higher. You can specify</span>
+    <span class="comment">//    a weight for each field to boost that score. The phraseSlop option controls</span>
+    <span class="comment">//    how much the matches can deviate from the search string and still be boosted.</span>
+    <span class="comment">//    To specify a field weight, append a caret (^) symbol and the weight to</span>
+    <span class="comment">//    the field name. For example, to boost phrase matches in the title field</span>
+    <span class="comment">//    over the abstract field, you could specify: &#34;phraseFields&#34;:[&#34;title^3&#34;,</span>
+    <span class="comment">//    &#34;plot&#34;] Valid values: The name of any text or text-array field and an</span>
+    <span class="comment">//    optional numeric value greater than zero. Default: No fields. If you don&#39;t</span>
+    <span class="comment">//    specify any fields with phraseFields, proximity scoring is disabled even</span>
+    <span class="comment">//    if phraseSlop is specified. Valid for: dismax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * phraseSlop: An integer value that specifies how much matches can deviate</span>
+    <span class="comment">//    from the search phrase and still be boosted according to the weights specified</span>
+    <span class="comment">//    in the phraseFields option; for example, phraseSlop: 2. You must also</span>
+    <span class="comment">//    specify phraseFields to enable proximity scoring. Valid values: positive</span>
+    <span class="comment">//    integers. Default: 0. Valid for: dismax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * explicitPhraseSlop: An integer value that specifies how much a match</span>
+    <span class="comment">//    can deviate from the search phrase when the phrase is enclosed in double</span>
+    <span class="comment">//    quotes in the search string. (Phrases that exceed this proximity distance</span>
+    <span class="comment">//    are not considered a match.) For example, to specify a slop of three for</span>
+    <span class="comment">//    dismax phrase queries, you would specify &#34;explicitPhraseSlop&#34;:3. Valid</span>
+    <span class="comment">//    values: positive integers. Default: 0. Valid for: dismax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * tieBreaker: When a term in the search string is found in a document&#39;s</span>
+    <span class="comment">//    field, a score is calculated for that field based on how common the word</span>
+    <span class="comment">//    is in that field compared to other documents. If the term occurs in multiple</span>
+    <span class="comment">//    fields within a document, by default only the highest scoring field contributes</span>
+    <span class="comment">//    to the document&#39;s overall score. You can specify a tieBreaker value to</span>
+    <span class="comment">//    enable the matches in lower-scoring fields to contribute to the document&#39;s</span>
+    <span class="comment">//    score. That way, if two documents have the same max field score for a</span>
+    <span class="comment">//    particular term, the score for the document that has matches in more fields</span>
+    <span class="comment">//    will be higher. The formula for calculating the score with a tieBreaker</span>
+    <span class="comment">//    is (max field score) + (tieBreaker) * (sum of the scores for the rest</span>
+    <span class="comment">//    of the matching fields). Set tieBreaker to 0 to disregard all but the</span>
+    <span class="comment">//    highest scoring field (pure max): &#34;tieBreaker&#34;:0. Set to 1 to sum the</span>
+    <span class="comment">//    scores from all fields (pure sum): &#34;tieBreaker&#34;:1. Valid values: 0.0 to</span>
+    <span class="comment">//    1.0. Default: 0.0. Valid for: dismax.</span>
+<span id="SearchInput.QueryOptions"></span>    QueryOptions *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;q.options&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Specifies which query parser to use to process the request. If queryParser</span>
+    <span class="comment">// is not specified, Amazon CloudSearch uses the simple query parser.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Amazon CloudSearch supports four query parsers:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * simple: perform simple searches of text and text-array fields. By default,</span>
+    <span class="comment">//    the simple query parser searches all text and text-array fields. You can</span>
+    <span class="comment">//    specify which fields to search by with the queryOptions parameter. If</span>
+    <span class="comment">//    you prefix a search term with a plus sign (+) documents must contain the</span>
+    <span class="comment">//    term to be considered a match. (This is the default, unless you configure</span>
+    <span class="comment">//    the default operator with the queryOptions parameter.) You can use the</span>
+    <span class="comment">//    - (NOT), | (OR), and * (wildcard) operators to exclude particular terms,</span>
+    <span class="comment">//    find results that match any of the specified terms, or search for a prefix.</span>
+    <span class="comment">//    To search for a phrase rather than individual terms, enclose the phrase</span>
+    <span class="comment">//    in double quotes. For more information, see Searching for Text in the</span>
+    <span class="comment">//    Amazon CloudSearch Developer Guide.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * structured: perform advanced searches by combining multiple expressions</span>
+    <span class="comment">//    to define the search criteria. You can also search within particular fields,</span>
+    <span class="comment">//    search for values and ranges of values, and use advanced options such</span>
+    <span class="comment">//    as term boosting, matchall, and near. For more information, see Constructing</span>
+    <span class="comment">//    Compound Queries in the Amazon CloudSearch Developer Guide.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * lucene: search using the Apache Lucene query parser syntax. For more</span>
+    <span class="comment">//    information, see Apache Lucene Query Parser Syntax.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * dismax: search using the simplified subset of the Apache Lucene query</span>
+    <span class="comment">//    parser syntax defined by the DisMax query parser. For more information,</span>
+    <span class="comment">//    see DisMax Query Parser Syntax.</span>
+<span id="SearchInput.QueryParser"></span>    QueryParser *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;q.parser&#34; type:&#34;string&#34; enum:&#34;QueryParser&#34;`
+
+    <span class="comment">// Specifies the field and expression values to include in the response. Multiple</span>
+    <span class="comment">// fields or expressions are specified as a comma-separated list. By default,</span>
+    <span class="comment">// a search response includes all return enabled fields (_all_fields). To return</span>
+    <span class="comment">// only the document IDs for the matching documents, specify _no_fields. To</span>
+    <span class="comment">// retrieve the relevance score calculated for each document, specify _score.</span>
+<span id="SearchInput.Return"></span>    Return *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;return&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Specifies the maximum number of search hits to include in the response.</span>
+<span id="SearchInput.Size"></span>    Size *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;size&#34; type:&#34;long&#34;`
+
+    <span class="comment">// Specifies the fields or custom expressions to use to sort the search results.</span>
+    <span class="comment">// Multiple fields or expressions are specified as a comma-separated list. You</span>
+    <span class="comment">// must specify the sort direction (asc or desc) for each field; for example,</span>
+    <span class="comment">// year desc,title asc. To use a field to sort results, the field must be sort-enabled</span>
+    <span class="comment">// in the domain configuration. Array type fields cannot be used for sorting.</span>
+    <span class="comment">// If no sort parameter is specified, results are sorted by their default relevance</span>
+    <span class="comment">// scores in descending order: _score desc. You can also sort by document ID</span>
+    <span class="comment">// (_id asc) and version (_version desc).</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information, see Sorting Results (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/sorting-results.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.Sort"></span>    Sort *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;sort&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Specifies the offset of the first search hit you want to return. Note that</span>
+    <span class="comment">// the result set is zero-based; the first result is at index 0. You can specify</span>
+    <span class="comment">// either the start or cursor parameter in a request, they are mutually exclusive.</span>
+    <span class="comment">//</span>
+    <span class="comment">// For more information, see Paginating Results (http://docs.aws.amazon.com/cloudsearch/latest/developerguide/paginating-results.html)</span>
+    <span class="comment">// in the Amazon CloudSearch Developer Guide.</span>
+<span id="SearchInput.Start"></span>    Start *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;start&#34; type:&#34;long&#34;`
+
+    <span class="comment">// Specifies one or more fields for which to get statistics information. Each</span>
+    <span class="comment">// specified field must be facet-enabled in the domain configuration. The fields</span>
+    <span class="comment">// are specified in JSON using the form:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    {&#34;FIELD-A&#34;:{},&#34;FIELD-B&#34;:{}}</span>
+    <span class="comment">//</span>
+    <span class="comment">// There are currently no options supported for statistics.</span>
+<span id="SearchInput.Stats"></span>    Stats *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;stats&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SearchInput.GoString">func (SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=46865:46903#L1098">GoString</a>
+					<a class="permalink" href="index.html#SearchInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchInput">SearchInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetCursor">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47310:47364#L1116">SetCursor</a>
+					<a class="permalink" href="index.html#SearchInput.SetCursor">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetCursor(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetCursor sets the Cursor field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetExpr">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47435:47487#L1122">SetExpr</a>
+					<a class="permalink" href="index.html#SearchInput.SetExpr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetExpr(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetExpr sets the Expr field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetFacet">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47558:47611#L1128">SetFacet</a>
+					<a class="permalink" href="index.html#SearchInput.SetFacet">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetFacet(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetFacet sets the Facet field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetFilterQuery">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47695:47754#L1134">SetFilterQuery</a>
+					<a class="permalink" href="index.html#SearchInput.SetFilterQuery">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetFilterQuery(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetFilterQuery sets the FilterQuery field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetHighlight">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47840:47897#L1140">SetHighlight</a>
+					<a class="permalink" href="index.html#SearchInput.SetHighlight">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetHighlight(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetHighlight sets the Highlight field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetPartial">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47977:48030#L1146">SetPartial</a>
+					<a class="permalink" href="index.html#SearchInput.SetPartial">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetPartial(v <a href="../../../../../builtin/index.html#bool">bool</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetPartial sets the Partial field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetQuery">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48104:48157#L1152">SetQuery</a>
+					<a class="permalink" href="index.html#SearchInput.SetQuery">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetQuery(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetQuery sets the Query field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetQueryOptions">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48243:48303#L1158">SetQueryOptions</a>
+					<a class="permalink" href="index.html#SearchInput.SetQueryOptions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetQueryOptions(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetQueryOptions sets the QueryOptions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetQueryParser">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48394:48453#L1164">SetQueryParser</a>
+					<a class="permalink" href="index.html#SearchInput.SetQueryParser">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetQueryParser(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetQueryParser sets the QueryParser field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetReturn">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48533:48587#L1170">SetReturn</a>
+					<a class="permalink" href="index.html#SearchInput.SetReturn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetReturn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetReturn sets the Return field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetSize">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48658:48709#L1176">SetSize</a>
+					<a class="permalink" href="index.html#SearchInput.SetSize">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetSize(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetSize sets the Size field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetSort">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48778:48830#L1182">SetSort</a>
+					<a class="permalink" href="index.html#SearchInput.SetSort">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetSort(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetSort sets the Sort field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetStart">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=48901:48953#L1188">SetStart</a>
+					<a class="permalink" href="index.html#SearchInput.SetStart">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetStart(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetStart sets the Start field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.SetStats">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=49025:49078#L1194">SetStats</a>
+					<a class="permalink" href="index.html#SearchInput.SetStats">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) SetStats(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchInput">SearchInput</a></pre>
+				<p>
+SetStats sets the Stats field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.String">func (SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=46545:46581#L1089">String</a>
+					<a class="permalink" href="index.html#SearchInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchInput">SearchInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchInput.Validate">func (*SearchInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=47004:47042#L1103">Validate</a>
+					<a class="permalink" href="index.html#SearchInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchInput">SearchInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SearchOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=49271:49773#L1201">SearchOutput</a>
+				<a class="permalink" href="index.html#SearchOutput">¶</a>
+				
+				
+			</h2>
+			<p>
+The result of a Search request. Contains the documents that match the specified
+search criteria and any requested fields, highlights, and facet information.
+</p>
+
+			<pre>type SearchOutput struct {
+
+    <span class="comment">// The requested facet information.</span>
+<span id="SearchOutput.Facets"></span>    Facets map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="index.html#BucketInfo">BucketInfo</a> `locationName:&#34;facets&#34; type:&#34;map&#34;`
+
+    <span class="comment">// The documents that match the search criteria.</span>
+<span id="SearchOutput.Hits"></span>    Hits *<a href="index.html#Hits">Hits</a> `locationName:&#34;hits&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The requested field statistics information.</span>
+<span id="SearchOutput.Stats"></span>    Stats map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="index.html#FieldStats">FieldStats</a> `locationName:&#34;stats&#34; type:&#34;map&#34;`
+
+    <span class="comment">// The status information returned for the search request.</span>
+<span id="SearchOutput.Status"></span>    Status *<a href="index.html#SearchStatus">SearchStatus</a> `locationName:&#34;status&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SearchOutput.GoString">func (SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50344:50383#L1231">GoString</a>
+					<a class="permalink" href="index.html#SearchOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchOutput">SearchOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchOutput.SetFacets">func (*SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50452:50524#L1236">SetFacets</a>
+					<a class="permalink" href="index.html#SearchOutput.SetFacets">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchOutput">SearchOutput</a>) SetFacets(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="index.html#BucketInfo">BucketInfo</a>) *<a href="index.html#SearchOutput">SearchOutput</a></pre>
+				<p>
+SetFacets sets the Facets field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchOutput.SetHits">func (*SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50594:50647#L1242">SetHits</a>
+					<a class="permalink" href="index.html#SearchOutput.SetHits">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchOutput">SearchOutput</a>) SetHits(v *<a href="index.html#Hits">Hits</a>) *<a href="index.html#SearchOutput">SearchOutput</a></pre>
+				<p>
+SetHits sets the Hits field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchOutput.SetStats">func (*SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50717:50788#L1248">SetStats</a>
+					<a class="permalink" href="index.html#SearchOutput.SetStats">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchOutput">SearchOutput</a>) SetStats(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="index.html#FieldStats">FieldStats</a>) *<a href="index.html#SearchOutput">SearchOutput</a></pre>
+				<p>
+SetStats sets the Stats field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchOutput.SetStatus">func (*SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50861:50924#L1254">SetStatus</a>
+					<a class="permalink" href="index.html#SearchOutput.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchOutput">SearchOutput</a>) SetStatus(v *<a href="index.html#SearchStatus">SearchStatus</a>) *<a href="index.html#SearchOutput">SearchOutput</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchOutput.String">func (SearchOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=50023:50060#L1222">String</a>
+					<a class="permalink" href="index.html#SearchOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchOutput">SearchOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SearchStatus">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=51045:51314#L1261">SearchStatus</a>
+				<a class="permalink" href="index.html#SearchStatus">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the resource id (rid) and the time it took to process the request
+(timems).
+</p>
+
+			<pre>type SearchStatus struct {
+
+    <span class="comment">// The encrypted resource ID for the request.</span>
+<span id="SearchStatus.Rid"></span>    Rid *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;rid&#34; type:&#34;string&#34;`
+
+    <span class="comment">// How long it took to process the request, in milliseconds.</span>
+<span id="SearchStatus.Timems"></span>    Timems *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;timems&#34; type:&#34;long&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SearchStatus.GoString">func (SearchStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=51885:51924#L1285">GoString</a>
+					<a class="permalink" href="index.html#SearchStatus.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchStatus">SearchStatus</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchStatus.SetRid">func (*SearchStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=51987:52040#L1290">SetRid</a>
+					<a class="permalink" href="index.html#SearchStatus.SetRid">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchStatus">SearchStatus</a>) SetRid(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SearchStatus">SearchStatus</a></pre>
+				<p>
+SetRid sets the Rid field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchStatus.SetTimems">func (*SearchStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=52112:52167#L1296">SetTimems</a>
+					<a class="permalink" href="index.html#SearchStatus.SetTimems">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SearchStatus">SearchStatus</a>) SetTimems(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SearchStatus">SearchStatus</a></pre>
+				<p>
+SetTimems sets the Timems field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SearchStatus.String">func (SearchStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=51564:51601#L1276">String</a>
+					<a class="permalink" href="index.html#SearchStatus.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SearchStatus">SearchStatus</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SuggestInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=52254:52841#L1302">SuggestInput</a>
+				<a class="permalink" href="index.html#SuggestInput">¶</a>
+				
+				
+			</h2>
+			<p>
+Container for the parameters to the Suggest request.
+</p>
+
+			<pre>type SuggestInput struct {
+
+    <span class="comment">// Specifies the string for which you want to get suggestions.</span>
+    <span class="comment">//</span>
+<span id="SuggestInput.Query"></span>    <span class="comment">// Query is a required field</span>
+    Query *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;q&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Specifies the maximum number of suggestions to return.</span>
+<span id="SuggestInput.Size"></span>    Size *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;size&#34; type:&#34;long&#34;`
+
+    <span class="comment">// Specifies the name of the suggester to use to find suggested matches.</span>
+    <span class="comment">//</span>
+<span id="SuggestInput.Suggester"></span>    <span class="comment">// Suggester is a required field</span>
+    Suggester *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;suggester&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SuggestInput.GoString">func (SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=53412:53451#L1333">GoString</a>
+					<a class="permalink" href="index.html#SuggestInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestInput">SuggestInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestInput.SetQuery">func (*SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=53948:54003#L1354">SetQuery</a>
+					<a class="permalink" href="index.html#SuggestInput.SetQuery">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestInput">SuggestInput</a>) SetQuery(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestInput">SuggestInput</a></pre>
+				<p>
+SetQuery sets the Query field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestInput.SetSize">func (*SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=54073:54126#L1360">SetSize</a>
+					<a class="permalink" href="index.html#SuggestInput.SetSize">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestInput">SuggestInput</a>) SetSize(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SuggestInput">SuggestInput</a></pre>
+				<p>
+SetSize sets the Size field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestInput.SetSuggester">func (*SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=54205:54264#L1366">SetSuggester</a>
+					<a class="permalink" href="index.html#SuggestInput.SetSuggester">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestInput">SuggestInput</a>) SetSuggester(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestInput">SuggestInput</a></pre>
+				<p>
+SetSuggester sets the Suggester field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestInput.String">func (SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=53091:53128#L1324">String</a>
+					<a class="permalink" href="index.html#SuggestInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestInput">SuggestInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestInput.Validate">func (*SuggestInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=53552:53591#L1338">Validate</a>
+					<a class="permalink" href="index.html#SuggestInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestInput">SuggestInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SuggestModel">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=54373:54782#L1372">SuggestModel</a>
+				<a class="permalink" href="index.html#SuggestModel">¶</a>
+				
+				
+			</h2>
+			<p>
+Container for the suggestion information returned in a SuggestResponse.
+</p>
+
+			<pre>type SuggestModel struct {
+
+    <span class="comment">// The number of documents that were found to match the query string.</span>
+<span id="SuggestModel.Found"></span>    Found *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;found&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The query string specified in the suggest request.</span>
+<span id="SuggestModel.Query"></span>    Query *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;query&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The documents that match the query string.</span>
+<span id="SuggestModel.Suggestions"></span>    Suggestions []*<a href="index.html#SuggestionMatch">SuggestionMatch</a> `locationName:&#34;suggestions&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SuggestModel.GoString">func (SuggestModel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55353:55392#L1399">GoString</a>
+					<a class="permalink" href="index.html#SuggestModel.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestModel">SuggestModel</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestModel.SetFound">func (*SuggestModel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55459:55513#L1404">SetFound</a>
+					<a class="permalink" href="index.html#SuggestModel.SetFound">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestModel">SuggestModel</a>) SetFound(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SuggestModel">SuggestModel</a></pre>
+				<p>
+SetFound sets the Found field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestModel.SetQuery">func (*SuggestModel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55585:55640#L1410">SetQuery</a>
+					<a class="permalink" href="index.html#SuggestModel.SetQuery">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestModel">SuggestModel</a>) SetQuery(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestModel">SuggestModel</a></pre>
+				<p>
+SetQuery sets the Query field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestModel.SetSuggestions">func (*SuggestModel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55724:55797#L1416">SetSuggestions</a>
+					<a class="permalink" href="index.html#SuggestModel.SetSuggestions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestModel">SuggestModel</a>) SetSuggestions(v []*<a href="index.html#SuggestionMatch">SuggestionMatch</a>) *<a href="index.html#SuggestModel">SuggestModel</a></pre>
+				<p>
+SetSuggestions sets the Suggestions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestModel.String">func (SuggestModel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55032:55069#L1390">String</a>
+					<a class="permalink" href="index.html#SuggestModel.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestModel">SuggestModel</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SuggestOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=55879:56257#L1422">SuggestOutput</a>
+				<a class="permalink" href="index.html#SuggestOutput">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the response to a Suggest request.
+</p>
+
+			<pre>type SuggestOutput struct {
+
+    <span class="comment">// The status of a SuggestRequest. Contains the resource ID (rid) and how long</span>
+    <span class="comment">// it took to process the request (timems).</span>
+<span id="SuggestOutput.Status"></span>    Status *<a href="index.html#SuggestStatus">SuggestStatus</a> `locationName:&#34;status&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// Container for the matching search suggestion information.</span>
+<span id="SuggestOutput.Suggest"></span>    Suggest *<a href="index.html#SuggestModel">SuggestModel</a> `locationName:&#34;suggest&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SuggestOutput.GoString">func (SuggestOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=56829:56869#L1447">GoString</a>
+					<a class="permalink" href="index.html#SuggestOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestOutput">SuggestOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestOutput.SetStatus">func (*SuggestOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=56938:57004#L1452">SetStatus</a>
+					<a class="permalink" href="index.html#SuggestOutput.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestOutput">SuggestOutput</a>) SetStatus(v *<a href="index.html#SuggestStatus">SuggestStatus</a>) *<a href="index.html#SuggestOutput">SuggestOutput</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestOutput.SetSuggest">func (*SuggestOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=57080:57146#L1458">SetSuggest</a>
+					<a class="permalink" href="index.html#SuggestOutput.SetSuggest">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestOutput">SuggestOutput</a>) SetSuggest(v *<a href="index.html#SuggestModel">SuggestModel</a>) *<a href="index.html#SuggestOutput">SuggestOutput</a></pre>
+				<p>
+SetSuggest sets the Suggest field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestOutput.String">func (SuggestOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=56507:56545#L1438">String</a>
+					<a class="permalink" href="index.html#SuggestOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestOutput">SuggestOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SuggestStatus">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=57268:57538#L1465">SuggestStatus</a>
+				<a class="permalink" href="index.html#SuggestStatus">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the resource id (rid) and the time it took to process the request
+(timems).
+</p>
+
+			<pre>type SuggestStatus struct {
+
+    <span class="comment">// The encrypted resource ID for the request.</span>
+<span id="SuggestStatus.Rid"></span>    Rid *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;rid&#34; type:&#34;string&#34;`
+
+    <span class="comment">// How long it took to process the request, in milliseconds.</span>
+<span id="SuggestStatus.Timems"></span>    Timems *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;timems&#34; type:&#34;long&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SuggestStatus.GoString">func (SuggestStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=58110:58150#L1489">GoString</a>
+					<a class="permalink" href="index.html#SuggestStatus.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestStatus">SuggestStatus</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestStatus.SetRid">func (*SuggestStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=58213:58268#L1494">SetRid</a>
+					<a class="permalink" href="index.html#SuggestStatus.SetRid">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestStatus">SuggestStatus</a>) SetRid(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestStatus">SuggestStatus</a></pre>
+				<p>
+SetRid sets the Rid field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestStatus.SetTimems">func (*SuggestStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=58340:58397#L1500">SetTimems</a>
+					<a class="permalink" href="index.html#SuggestStatus.SetTimems">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestStatus">SuggestStatus</a>) SetTimems(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SuggestStatus">SuggestStatus</a></pre>
+				<p>
+SetTimems sets the Timems field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestStatus.String">func (SuggestStatus) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=57788:57826#L1480">String</a>
+					<a class="permalink" href="index.html#SuggestStatus.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestStatus">SuggestStatus</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SuggestionMatch">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=58519:58912#L1506">SuggestionMatch</a>
+				<a class="permalink" href="index.html#SuggestionMatch">¶</a>
+				
+				
+			</h2>
+			<p>
+An autocomplete suggestion that matches the query string specified in a SuggestRequest.
+</p>
+
+			<pre>type SuggestionMatch struct {
+
+    <span class="comment">// The document ID of the suggested document.</span>
+<span id="SuggestionMatch.Id"></span>    Id *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;id&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The relevance score of a suggested match.</span>
+<span id="SuggestionMatch.Score"></span>    Score *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;score&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The string that matches the query string specified in the SuggestRequest.</span>
+<span id="SuggestionMatch.Suggestion"></span>    Suggestion *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;suggestion&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SuggestionMatch.GoString">func (SuggestionMatch) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=59486:59528#L1533">GoString</a>
+					<a class="permalink" href="index.html#SuggestionMatch.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestionMatch">SuggestionMatch</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestionMatch.SetId">func (*SuggestionMatch) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=59589:59647#L1538">SetId</a>
+					<a class="permalink" href="index.html#SuggestionMatch.SetId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestionMatch">SuggestionMatch</a>) SetId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestionMatch">SuggestionMatch</a></pre>
+				<p>
+SetId sets the Id field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestionMatch.SetScore">func (*SuggestionMatch) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=59716:59776#L1544">SetScore</a>
+					<a class="permalink" href="index.html#SuggestionMatch.SetScore">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestionMatch">SuggestionMatch</a>) SetScore(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#SuggestionMatch">SuggestionMatch</a></pre>
+				<p>
+SetScore sets the Score field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestionMatch.SetSuggestion">func (*SuggestionMatch) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=59858:59924#L1550">SetSuggestion</a>
+					<a class="permalink" href="index.html#SuggestionMatch.SetSuggestion">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SuggestionMatch">SuggestionMatch</a>) SetSuggestion(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SuggestionMatch">SuggestionMatch</a></pre>
+				<p>
+SetSuggestion sets the Suggestion field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SuggestionMatch.String">func (SuggestionMatch) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=59162:59202#L1524">String</a>
+					<a class="permalink" href="index.html#SuggestionMatch.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SuggestionMatch">SuggestionMatch</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UploadDocumentsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=60023:60606#L1556">UploadDocumentsInput</a>
+				<a class="permalink" href="index.html#UploadDocumentsInput">¶</a>
+				
+				
+			</h2>
+			<p>
+Container for the parameters to the UploadDocuments request.
+</p>
+
+			<pre>type UploadDocumentsInput struct {
+
+    <span class="comment">// The format of the batch you are uploading. Amazon CloudSearch supports two</span>
+    <span class="comment">// document batch formats:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * application/json</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * application/xml</span>
+    <span class="comment">//</span>
+<span id="UploadDocumentsInput.ContentType"></span>    <span class="comment">// ContentType is a required field</span>
+    ContentType *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; locationName:&#34;Content-Type&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ContentType&#34;`
+
+    <span class="comment">// A batch of documents formatted in JSON or HTML.</span>
+    <span class="comment">//</span>
+<span id="UploadDocumentsInput.Documents"></span>    <span class="comment">// Documents is a required field</span>
+    Documents <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadSeeker">ReadSeeker</a> `locationName:&#34;documents&#34; type:&#34;blob&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UploadDocumentsInput.GoString">func (UploadDocumentsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=61185:61232#L1589">GoString</a>
+					<a class="permalink" href="index.html#UploadDocumentsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsInput.SetContentType">func (*UploadDocumentsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=61769:61846#L1610">SetContentType</a>
+					<a class="permalink" href="index.html#UploadDocumentsInput.SetContentType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) SetContentType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a></pre>
+				<p>
+SetContentType sets the ContentType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsInput.SetDocuments">func (*UploadDocumentsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=61932:62014#L1616">SetDocuments</a>
+					<a class="permalink" href="index.html#UploadDocumentsInput.SetDocuments">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) SetDocuments(v <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadSeeker">ReadSeeker</a>) *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a></pre>
+				<p>
+SetDocuments sets the Documents field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsInput.String">func (UploadDocumentsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=60856:60901#L1580">String</a>
+					<a class="permalink" href="index.html#UploadDocumentsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsInput.Validate">func (*UploadDocumentsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=61333:61380#L1594">Validate</a>
+					<a class="permalink" href="index.html#UploadDocumentsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsInput">UploadDocumentsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UploadDocumentsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=62103:62670#L1622">UploadDocumentsOutput</a>
+				<a class="permalink" href="index.html#UploadDocumentsOutput">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the response to an UploadDocuments request.
+</p>
+
+			<pre>type UploadDocumentsOutput struct {
+
+    <span class="comment">// The number of documents that were added to the search domain.</span>
+<span id="UploadDocumentsOutput.Adds"></span>    Adds *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;adds&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The number of documents that were deleted from the search domain.</span>
+<span id="UploadDocumentsOutput.Deletes"></span>    Deletes *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;deletes&#34; type:&#34;long&#34;`
+
+    <span class="comment">// The status of an UploadDocumentsRequest.</span>
+<span id="UploadDocumentsOutput.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;status&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Any warnings returned by the document service about the documents being uploaded.</span>
+<span id="UploadDocumentsOutput.Warnings"></span>    Warnings []*<a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a> `locationName:&#34;warnings&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UploadDocumentsOutput.GoString">func (UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=63250:63298#L1652">GoString</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsOutput.SetAdds">func (*UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=63363:63434#L1657">SetAdds</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.SetAdds">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) SetAdds(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a></pre>
+				<p>
+SetAdds sets the Adds field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsOutput.SetDeletes">func (*UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=63509:63583#L1663">SetDeletes</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.SetDeletes">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) SetDeletes(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a></pre>
+				<p>
+SetDeletes sets the Deletes field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsOutput.SetStatus">func (*UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=63659:63733#L1669">SetStatus</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsOutput.SetWarnings">func (*UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=63812:63907#L1675">SetWarnings</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.SetWarnings">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) SetWarnings(v []*<a href="index.html#DocumentServiceWarning">DocumentServiceWarning</a>) *<a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a></pre>
+				<p>
+SetWarnings sets the Warnings field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UploadDocumentsOutput.String">func (UploadDocumentsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudsearchdomain/api.go?s=62920:62966#L1643">String</a>
+					<a class="permalink" href="index.html#UploadDocumentsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UploadDocumentsOutput">UploadDocumentsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="cloudsearchdomainiface/index.html">cloudsearchdomainiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package cloudsearchdomainiface provides an interface to enable mocking the Amazon CloudSearch Domain service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

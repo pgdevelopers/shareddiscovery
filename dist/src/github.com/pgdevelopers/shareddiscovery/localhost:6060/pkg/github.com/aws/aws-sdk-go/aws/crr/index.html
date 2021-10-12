@@ -1,0 +1,506 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>crr - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package crr
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/crr&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#BuildEndpointKey">func BuildEndpointKey(params map[string]*string) string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Discoverer">type Discoverer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Endpoint">type Endpoint</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Endpoint.Add">func (e *Endpoint) Add(addr WeightedAddress)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.GetValidAddress">func (e *Endpoint) GetValidAddress() (WeightedAddress, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.Len">func (e *Endpoint) Len() int</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EndpointCache">type EndpointCache</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewEndpointCache">func NewEndpointCache(endpointLimit int64) *EndpointCache</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EndpointCache.Add">func (c *EndpointCache) Add(endpoint Endpoint)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointCache.Get">func (c *EndpointCache) Get(d Discoverer, endpointKey string, required bool) (WeightedAddress, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndpointCache.Has">func (c *EndpointCache) Has(endpointKey string) bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WeightedAddress">type WeightedAddress</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#WeightedAddress.HasExpired">func (e WeightedAddress) HasExpired() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WeightedAddresses">type WeightedAddresses</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go">cache.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go">endpoint.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/sync_map.go">sync_map.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="BuildEndpointKey">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=1911:1966#L69">BuildEndpointKey</a>
+				<a class="permalink" href="index.html#BuildEndpointKey">¶</a>
+				
+				
+			</h2>
+			<pre>func BuildEndpointKey(params map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+BuildEndpointKey will sort the keys in alphabetical order and then retrieve
+the values in that order. Those values are then concatenated together to form
+the endpoint key.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Discoverer">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=1669:1728#L62">Discoverer</a>
+				<a class="permalink" href="index.html#Discoverer">¶</a>
+				
+				
+			</h2>
+			<p>
+Discoverer is an interface used to discovery which endpoint hit. This
+allows for specifics about what parameters need to be used to be contained
+in the Discoverer implementor.
+</p>
+
+			<pre>type Discoverer interface {
+    Discover() (<a href="index.html#Endpoint">Endpoint</a>, <a href="../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Endpoint">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=160:231#L3">Endpoint</a>
+				<a class="permalink" href="index.html#Endpoint">¶</a>
+				
+				
+			</h2>
+			<p>
+Endpoint represents an endpoint used in endpoint discovery.
+</p>
+
+			<pre>type Endpoint struct {
+<span id="Endpoint.Key"></span>    Key       <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Endpoint.Addresses"></span>    Addresses <a href="index.html#WeightedAddresses">WeightedAddresses</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Endpoint.Add">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=754:798#L24">Add</a>
+					<a class="permalink" href="index.html#Endpoint.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#Endpoint">Endpoint</a>) Add(addr <a href="index.html#WeightedAddress">WeightedAddress</a>)</pre>
+				<p>
+Add will add a given WeightedAddress to the address list of Endpoint.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.GetValidAddress">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=1188:1248#L43">GetValidAddress</a>
+					<a class="permalink" href="index.html#Endpoint.GetValidAddress">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#Endpoint">Endpoint</a>) GetValidAddress() (<a href="index.html#WeightedAddress">WeightedAddress</a>, <a href="../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+GetValidAddress will return a non-expired weight endpoint
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.Len">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=941:969#L30">Len</a>
+					<a class="permalink" href="index.html#Endpoint.Len">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#Endpoint">Endpoint</a>) Len() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Len returns the number of valid endpoints where valid means the endpoint
+has not expired.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EndpointCache">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go?s=209:453#L1">EndpointCache</a>
+				<a class="permalink" href="index.html#EndpointCache">¶</a>
+				
+				
+			</h2>
+			<p>
+EndpointCache is an LRU cache that holds a series of endpoints
+based on some key. The datastructure makes use of a read write
+mutex to enable asynchronous use.
+</p>
+
+			<pre>type EndpointCache struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEndpointCache">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go?s=555:612#L11">NewEndpointCache</a>
+					<a class="permalink" href="index.html#NewEndpointCache">¶</a>
+					
+					
+				</h3>
+				<pre>func NewEndpointCache(endpointLimit <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#EndpointCache">EndpointCache</a></pre>
+				<p>
+NewEndpointCache will return a newly initialized cache with a limit
+of endpointLimit entries.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="EndpointCache.Add">func (*EndpointCache) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go?s=2386:2432#L66">Add</a>
+					<a class="permalink" href="index.html#EndpointCache.Add">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EndpointCache">EndpointCache</a>) Add(endpoint <a href="index.html#Endpoint">Endpoint</a>)</pre>
+				<p>
+Add is a concurrent safe operation that will allow new endpoints to be added
+to the cache. If the cache is full, the number of endpoints equal endpointLimit,
+then this will remove the oldest entry before adding the new endpoint.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointCache.Get">func (*EndpointCache) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go?s=1662:1763#L44">Get</a>
+					<a class="permalink" href="index.html#EndpointCache.Get">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EndpointCache">EndpointCache</a>) Get(d <a href="index.html#Discoverer">Discoverer</a>, endpointKey <a href="../../../../../builtin/index.html#string">string</a>, required <a href="../../../../../builtin/index.html#bool">bool</a>) (<a href="index.html#WeightedAddress">WeightedAddress</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Get will retrieve a weighted address  based off of the endpoint key. If an endpoint
+should be retrieved, due to not existing or the current endpoint has expired
+the Discoverer object that was passed in will attempt to discover a new endpoint
+and add that to the cache.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndpointCache.Has">func (*EndpointCache) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/cache.go?s=1226:1278#L33">Has</a>
+					<a class="permalink" href="index.html#EndpointCache.Has">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EndpointCache">EndpointCache</a>) Has(endpointKey <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+Has returns if the enpoint cache contains a valid entry for the endpoint key
+provided.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WeightedAddress">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=396:464#L12">WeightedAddress</a>
+				<a class="permalink" href="index.html#WeightedAddress">¶</a>
+				
+				
+			</h2>
+			<p>
+WeightedAddress represents an address with a given weight.
+</p>
+
+			<pre>type WeightedAddress struct {
+<span id="WeightedAddress.URL"></span>    URL     *<a href="../../../../../net/url/index.html">url</a>.<a href="../../../../../net/url/index.html#URL">URL</a>
+<span id="WeightedAddress.Expired"></span>    Expired <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="WeightedAddress.HasExpired">func (WeightedAddress) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=596:638#L19">HasExpired</a>
+					<a class="permalink" href="index.html#WeightedAddress.HasExpired">¶</a>
+					
+					
+				</h3>
+				<pre>func (e <a href="index.html#WeightedAddress">WeightedAddress</a>) HasExpired() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+HasExpired will return whether or not the endpoint has expired with
+the exception of a zero expiry meaning does not expire.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WeightedAddresses">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/crr/endpoint.go?s=292:332#L9">WeightedAddresses</a>
+				<a class="permalink" href="index.html#WeightedAddresses">¶</a>
+				
+				
+			</h2>
+			<p>
+WeightedAddresses represents a list of WeightedAddress.
+</p>
+
+			<pre>type WeightedAddresses []<a href="index.html#WeightedAddress">WeightedAddress</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

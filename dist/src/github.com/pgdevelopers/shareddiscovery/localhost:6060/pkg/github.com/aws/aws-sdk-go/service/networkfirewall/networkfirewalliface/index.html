@@ -1,0 +1,376 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>networkfirewalliface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package networkfirewalliface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/networkfirewall/networkfirewalliface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package networkfirewalliface provides an interface to enable mocking the AWS Network Firewall service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#NetworkFirewallAPI">type NetworkFirewallAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/networkfirewall/networkfirewalliface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="NetworkFirewallAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/networkfirewall/networkfirewalliface/interface.go?s=2312:15595#L52">NetworkFirewallAPI</a>
+				<a class="permalink" href="index.html#NetworkFirewallAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+NetworkFirewallAPI provides an interface to enable mocking the
+networkfirewall.NetworkFirewall service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Network Firewall.
+func myFunc(svc networkfirewalliface.NetworkFirewallAPI) bool {
+    // Make svc.AssociateFirewallPolicy request
+}
+
+func main() {
+    sess := session.New()
+    svc := networkfirewall.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockNetworkFirewallClient struct {
+    networkfirewalliface.NetworkFirewallAPI
+}
+func (m *mockNetworkFirewallClient) AssociateFirewallPolicy(input *networkfirewall.AssociateFirewallPolicyInput) (*networkfirewall.AssociateFirewallPolicyOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockNetworkFirewallClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type NetworkFirewallAPI interface {
+    AssociateFirewallPolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyInput">AssociateFirewallPolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyOutput">AssociateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateFirewallPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyInput">AssociateFirewallPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyOutput">AssociateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateFirewallPolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyInput">AssociateFirewallPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateFirewallPolicyOutput">AssociateFirewallPolicyOutput</a>)
+
+    AssociateSubnets(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsInput">AssociateSubnetsInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsOutput">AssociateSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateSubnetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsInput">AssociateSubnetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsOutput">AssociateSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateSubnetsRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsInput">AssociateSubnetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#AssociateSubnetsOutput">AssociateSubnetsOutput</a>)
+
+    CreateFirewall(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallInput">CreateFirewallInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallOutput">CreateFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFirewallWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallInput">CreateFirewallInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallOutput">CreateFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFirewallRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallInput">CreateFirewallInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallOutput">CreateFirewallOutput</a>)
+
+    CreateFirewallPolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyInput">CreateFirewallPolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyOutput">CreateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFirewallPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyInput">CreateFirewallPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyOutput">CreateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFirewallPolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyInput">CreateFirewallPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateFirewallPolicyOutput">CreateFirewallPolicyOutput</a>)
+
+    CreateRuleGroup(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleGroupRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupInput">CreateRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#CreateRuleGroupOutput">CreateRuleGroupOutput</a>)
+
+    DeleteFirewall(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallInput">DeleteFirewallInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallOutput">DeleteFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFirewallWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallInput">DeleteFirewallInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallOutput">DeleteFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFirewallRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallInput">DeleteFirewallInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallOutput">DeleteFirewallOutput</a>)
+
+    DeleteFirewallPolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyInput">DeleteFirewallPolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyOutput">DeleteFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFirewallPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyInput">DeleteFirewallPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyOutput">DeleteFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFirewallPolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyInput">DeleteFirewallPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteFirewallPolicyOutput">DeleteFirewallPolicyOutput</a>)
+
+    DeleteResourcePolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyInput">DeleteResourcePolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyOutput">DeleteResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteResourcePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyInput">DeleteResourcePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyOutput">DeleteResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteResourcePolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyInput">DeleteResourcePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteResourcePolicyOutput">DeleteResourcePolicyOutput</a>)
+
+    DeleteRuleGroup(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleGroupRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupInput">DeleteRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DeleteRuleGroupOutput">DeleteRuleGroupOutput</a>)
+
+    DescribeFirewall(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallInput">DescribeFirewallInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallOutput">DescribeFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFirewallWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallInput">DescribeFirewallInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallOutput">DescribeFirewallOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFirewallRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallInput">DescribeFirewallInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallOutput">DescribeFirewallOutput</a>)
+
+    DescribeFirewallPolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyInput">DescribeFirewallPolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyOutput">DescribeFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFirewallPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyInput">DescribeFirewallPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyOutput">DescribeFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeFirewallPolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyInput">DescribeFirewallPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeFirewallPolicyOutput">DescribeFirewallPolicyOutput</a>)
+
+    DescribeLoggingConfiguration(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationInput">DescribeLoggingConfigurationInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationOutput">DescribeLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoggingConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationInput">DescribeLoggingConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationOutput">DescribeLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoggingConfigurationRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationInput">DescribeLoggingConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeLoggingConfigurationOutput">DescribeLoggingConfigurationOutput</a>)
+
+    DescribeResourcePolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyInput">DescribeResourcePolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyOutput">DescribeResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeResourcePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyInput">DescribeResourcePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyOutput">DescribeResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeResourcePolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyInput">DescribeResourcePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeResourcePolicyOutput">DescribeResourcePolicyOutput</a>)
+
+    DescribeRuleGroup(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupInput">DescribeRuleGroupInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupOutput">DescribeRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupInput">DescribeRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupOutput">DescribeRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRuleGroupRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupInput">DescribeRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DescribeRuleGroupOutput">DescribeRuleGroupOutput</a>)
+
+    DisassociateSubnets(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsInput">DisassociateSubnetsInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsOutput">DisassociateSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateSubnetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsInput">DisassociateSubnetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsOutput">DisassociateSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateSubnetsRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsInput">DisassociateSubnetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#DisassociateSubnetsOutput">DisassociateSubnetsOutput</a>)
+
+    ListFirewallPolicies(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesInput">ListFirewallPoliciesInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesOutput">ListFirewallPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFirewallPoliciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesInput">ListFirewallPoliciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesOutput">ListFirewallPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFirewallPoliciesRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesInput">ListFirewallPoliciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesOutput">ListFirewallPoliciesOutput</a>)
+
+    ListFirewallPoliciesPages(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesInput">ListFirewallPoliciesInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesOutput">ListFirewallPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFirewallPoliciesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesInput">ListFirewallPoliciesInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallPoliciesOutput">ListFirewallPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFirewalls(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsInput">ListFirewallsInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsOutput">ListFirewallsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFirewallsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsInput">ListFirewallsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsOutput">ListFirewallsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFirewallsRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsInput">ListFirewallsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsOutput">ListFirewallsOutput</a>)
+
+    ListFirewallsPages(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsInput">ListFirewallsInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsOutput">ListFirewallsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFirewallsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsInput">ListFirewallsInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListFirewallsOutput">ListFirewallsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRuleGroups(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleGroupsRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>)
+
+    ListRuleGroupsPages(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRuleGroupsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsInput">ListRuleGroupsInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListRuleGroupsOutput">ListRuleGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PutResourcePolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyInput">PutResourcePolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyOutput">PutResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutResourcePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyInput">PutResourcePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyOutput">PutResourcePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutResourcePolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyInput">PutResourcePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#PutResourcePolicyOutput">PutResourcePolicyOutput</a>)
+
+    TagResource(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateFirewallDeleteProtection(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionInput">UpdateFirewallDeleteProtectionInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionOutput">UpdateFirewallDeleteProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallDeleteProtectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionInput">UpdateFirewallDeleteProtectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionOutput">UpdateFirewallDeleteProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallDeleteProtectionRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionInput">UpdateFirewallDeleteProtectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDeleteProtectionOutput">UpdateFirewallDeleteProtectionOutput</a>)
+
+    UpdateFirewallDescription(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionInput">UpdateFirewallDescriptionInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionOutput">UpdateFirewallDescriptionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallDescriptionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionInput">UpdateFirewallDescriptionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionOutput">UpdateFirewallDescriptionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallDescriptionRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionInput">UpdateFirewallDescriptionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallDescriptionOutput">UpdateFirewallDescriptionOutput</a>)
+
+    UpdateFirewallPolicy(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyInput">UpdateFirewallPolicyInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyOutput">UpdateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyInput">UpdateFirewallPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyOutput">UpdateFirewallPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallPolicyRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyInput">UpdateFirewallPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyOutput">UpdateFirewallPolicyOutput</a>)
+
+    UpdateFirewallPolicyChangeProtection(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionInput">UpdateFirewallPolicyChangeProtectionInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionOutput">UpdateFirewallPolicyChangeProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallPolicyChangeProtectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionInput">UpdateFirewallPolicyChangeProtectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionOutput">UpdateFirewallPolicyChangeProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFirewallPolicyChangeProtectionRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionInput">UpdateFirewallPolicyChangeProtectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateFirewallPolicyChangeProtectionOutput">UpdateFirewallPolicyChangeProtectionOutput</a>)
+
+    UpdateLoggingConfiguration(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationInput">UpdateLoggingConfigurationInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationOutput">UpdateLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLoggingConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationInput">UpdateLoggingConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationOutput">UpdateLoggingConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLoggingConfigurationRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationInput">UpdateLoggingConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateLoggingConfigurationOutput">UpdateLoggingConfigurationOutput</a>)
+
+    UpdateRuleGroup(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRuleGroupRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupInput">UpdateRuleGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateRuleGroupOutput">UpdateRuleGroupOutput</a>)
+
+    UpdateSubnetChangeProtection(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionInput">UpdateSubnetChangeProtectionInput</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionOutput">UpdateSubnetChangeProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSubnetChangeProtectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionInput">UpdateSubnetChangeProtectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionOutput">UpdateSubnetChangeProtectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSubnetChangeProtectionRequest(*<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionInput">UpdateSubnetChangeProtectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">networkfirewall</a>.<a href="../index.html#UpdateSubnetChangeProtectionOutput">UpdateSubnetChangeProtectionOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

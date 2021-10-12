@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>cloudwatcheventsiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cloudwatcheventsiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/cloudwatchevents/cloudwatcheventsiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package cloudwatcheventsiface provides an interface to enable mocking the Amazon CloudWatch Events service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CloudWatchEventsAPI">type CloudWatchEventsAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudwatchevents/cloudwatcheventsiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CloudWatchEventsAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/cloudwatchevents/cloudwatcheventsiface/interface.go?s=2320:22142#L52">CloudWatchEventsAPI</a>
+				<a class="permalink" href="index.html#CloudWatchEventsAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CloudWatchEventsAPI provides an interface to enable mocking the
+cloudwatchevents.CloudWatchEvents service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon CloudWatch Events.
+func myFunc(svc cloudwatcheventsiface.CloudWatchEventsAPI) bool {
+    // Make svc.ActivateEventSource request
+}
+
+func main() {
+    sess := session.New()
+    svc := cloudwatchevents.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCloudWatchEventsClient struct {
+    cloudwatcheventsiface.CloudWatchEventsAPI
+}
+func (m *mockCloudWatchEventsClient) ActivateEventSource(input *cloudwatchevents.ActivateEventSourceInput) (*cloudwatchevents.ActivateEventSourceOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCloudWatchEventsClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CloudWatchEventsAPI interface {
+    ActivateEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceInput">ActivateEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceOutput">ActivateEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ActivateEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceInput">ActivateEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceOutput">ActivateEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ActivateEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceInput">ActivateEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ActivateEventSourceOutput">ActivateEventSourceOutput</a>)
+
+    CancelReplay(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayInput">CancelReplayInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayOutput">CancelReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelReplayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayInput">CancelReplayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayOutput">CancelReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelReplayRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayInput">CancelReplayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CancelReplayOutput">CancelReplayOutput</a>)
+
+    CreateApiDestination(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationInput">CreateApiDestinationInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationOutput">CreateApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateApiDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationInput">CreateApiDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationOutput">CreateApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateApiDestinationRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationInput">CreateApiDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateApiDestinationOutput">CreateApiDestinationOutput</a>)
+
+    CreateArchive(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveInput">CreateArchiveInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveOutput">CreateArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateArchiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveInput">CreateArchiveInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveOutput">CreateArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateArchiveRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveInput">CreateArchiveInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateArchiveOutput">CreateArchiveOutput</a>)
+
+    CreateConnection(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionInput">CreateConnectionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionOutput">CreateConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionInput">CreateConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionOutput">CreateConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateConnectionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionInput">CreateConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateConnectionOutput">CreateConnectionOutput</a>)
+
+    CreateEventBus(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusInput">CreateEventBusInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusOutput">CreateEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventBusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusInput">CreateEventBusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusOutput">CreateEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventBusRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusInput">CreateEventBusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreateEventBusOutput">CreateEventBusOutput</a>)
+
+    CreatePartnerEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceInput">CreatePartnerEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceOutput">CreatePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePartnerEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceInput">CreatePartnerEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceOutput">CreatePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePartnerEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceInput">CreatePartnerEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#CreatePartnerEventSourceOutput">CreatePartnerEventSourceOutput</a>)
+
+    DeactivateEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceInput">DeactivateEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceOutput">DeactivateEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeactivateEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceInput">DeactivateEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceOutput">DeactivateEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeactivateEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceInput">DeactivateEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeactivateEventSourceOutput">DeactivateEventSourceOutput</a>)
+
+    DeauthorizeConnection(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionInput">DeauthorizeConnectionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionOutput">DeauthorizeConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeauthorizeConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionInput">DeauthorizeConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionOutput">DeauthorizeConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeauthorizeConnectionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionInput">DeauthorizeConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeauthorizeConnectionOutput">DeauthorizeConnectionOutput</a>)
+
+    DeleteApiDestination(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationInput">DeleteApiDestinationInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationOutput">DeleteApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteApiDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationInput">DeleteApiDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationOutput">DeleteApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteApiDestinationRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationInput">DeleteApiDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteApiDestinationOutput">DeleteApiDestinationOutput</a>)
+
+    DeleteArchive(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveInput">DeleteArchiveInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveOutput">DeleteArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteArchiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveInput">DeleteArchiveInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveOutput">DeleteArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteArchiveRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveInput">DeleteArchiveInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteArchiveOutput">DeleteArchiveOutput</a>)
+
+    DeleteConnection(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionInput">DeleteConnectionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionInput">DeleteConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteConnectionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionInput">DeleteConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>)
+
+    DeleteEventBus(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusInput">DeleteEventBusInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusOutput">DeleteEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventBusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusInput">DeleteEventBusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusOutput">DeleteEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventBusRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusInput">DeleteEventBusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteEventBusOutput">DeleteEventBusOutput</a>)
+
+    DeletePartnerEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceInput">DeletePartnerEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceOutput">DeletePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePartnerEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceInput">DeletePartnerEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceOutput">DeletePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePartnerEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceInput">DeletePartnerEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeletePartnerEventSourceOutput">DeletePartnerEventSourceOutput</a>)
+
+    DeleteRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>)
+
+    DescribeApiDestination(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationInput">DescribeApiDestinationInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationOutput">DescribeApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeApiDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationInput">DescribeApiDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationOutput">DescribeApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeApiDestinationRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationInput">DescribeApiDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeApiDestinationOutput">DescribeApiDestinationOutput</a>)
+
+    DescribeArchive(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveInput">DescribeArchiveInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveOutput">DescribeArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeArchiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveInput">DescribeArchiveInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveOutput">DescribeArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeArchiveRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveInput">DescribeArchiveInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeArchiveOutput">DescribeArchiveOutput</a>)
+
+    DescribeConnection(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionInput">DescribeConnectionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionOutput">DescribeConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionInput">DescribeConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionOutput">DescribeConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeConnectionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionInput">DescribeConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeConnectionOutput">DescribeConnectionOutput</a>)
+
+    DescribeEventBus(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusInput">DescribeEventBusInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusOutput">DescribeEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventBusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusInput">DescribeEventBusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusOutput">DescribeEventBusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventBusRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusInput">DescribeEventBusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventBusOutput">DescribeEventBusOutput</a>)
+
+    DescribeEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceInput">DescribeEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceOutput">DescribeEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceInput">DescribeEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceOutput">DescribeEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceInput">DescribeEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeEventSourceOutput">DescribeEventSourceOutput</a>)
+
+    DescribePartnerEventSource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceInput">DescribePartnerEventSourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceOutput">DescribePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePartnerEventSourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceInput">DescribePartnerEventSourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceOutput">DescribePartnerEventSourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePartnerEventSourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceInput">DescribePartnerEventSourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribePartnerEventSourceOutput">DescribePartnerEventSourceOutput</a>)
+
+    DescribeReplay(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayInput">DescribeReplayInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayOutput">DescribeReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReplayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayInput">DescribeReplayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayOutput">DescribeReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReplayRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayInput">DescribeReplayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeReplayOutput">DescribeReplayOutput</a>)
+
+    DescribeRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleInput">DescribeRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleOutput">DescribeRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleInput">DescribeRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleOutput">DescribeRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleInput">DescribeRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DescribeRuleOutput">DescribeRuleOutput</a>)
+
+    DisableRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleInput">DisableRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleOutput">DisableRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleInput">DisableRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleOutput">DisableRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleInput">DisableRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#DisableRuleOutput">DisableRuleOutput</a>)
+
+    EnableRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleInput">EnableRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleOutput">EnableRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleInput">EnableRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleOutput">EnableRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleInput">EnableRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#EnableRuleOutput">EnableRuleOutput</a>)
+
+    ListApiDestinations(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsInput">ListApiDestinationsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsOutput">ListApiDestinationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApiDestinationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsInput">ListApiDestinationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsOutput">ListApiDestinationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListApiDestinationsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsInput">ListApiDestinationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListApiDestinationsOutput">ListApiDestinationsOutput</a>)
+
+    ListArchives(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesInput">ListArchivesInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesOutput">ListArchivesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListArchivesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesInput">ListArchivesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesOutput">ListArchivesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListArchivesRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesInput">ListArchivesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListArchivesOutput">ListArchivesOutput</a>)
+
+    ListConnections(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsInput">ListConnectionsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsOutput">ListConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListConnectionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsInput">ListConnectionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsOutput">ListConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListConnectionsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsInput">ListConnectionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListConnectionsOutput">ListConnectionsOutput</a>)
+
+    ListEventBuses(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesInput">ListEventBusesInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesOutput">ListEventBusesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventBusesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesInput">ListEventBusesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesOutput">ListEventBusesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventBusesRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesInput">ListEventBusesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventBusesOutput">ListEventBusesOutput</a>)
+
+    ListEventSources(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesInput">ListEventSourcesInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesOutput">ListEventSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventSourcesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesInput">ListEventSourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesOutput">ListEventSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventSourcesRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesInput">ListEventSourcesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListEventSourcesOutput">ListEventSourcesOutput</a>)
+
+    ListPartnerEventSourceAccounts(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsInput">ListPartnerEventSourceAccountsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsOutput">ListPartnerEventSourceAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPartnerEventSourceAccountsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsInput">ListPartnerEventSourceAccountsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsOutput">ListPartnerEventSourceAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPartnerEventSourceAccountsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsInput">ListPartnerEventSourceAccountsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourceAccountsOutput">ListPartnerEventSourceAccountsOutput</a>)
+
+    ListPartnerEventSources(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesInput">ListPartnerEventSourcesInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesOutput">ListPartnerEventSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPartnerEventSourcesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesInput">ListPartnerEventSourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesOutput">ListPartnerEventSourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPartnerEventSourcesRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesInput">ListPartnerEventSourcesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListPartnerEventSourcesOutput">ListPartnerEventSourcesOutput</a>)
+
+    ListReplays(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysInput">ListReplaysInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysOutput">ListReplaysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReplaysWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysInput">ListReplaysInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysOutput">ListReplaysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReplaysRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysInput">ListReplaysInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListReplaysOutput">ListReplaysOutput</a>)
+
+    ListRuleNamesByTarget(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetInput">ListRuleNamesByTargetInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetOutput">ListRuleNamesByTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleNamesByTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetInput">ListRuleNamesByTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetOutput">ListRuleNamesByTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRuleNamesByTargetRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetInput">ListRuleNamesByTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRuleNamesByTargetOutput">ListRuleNamesByTargetOutput</a>)
+
+    ListRules(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRulesRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesInput">ListRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListRulesOutput">ListRulesOutput</a>)
+
+    ListTagsForResource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTargetsByRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleInput">ListTargetsByRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleOutput">ListTargetsByRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTargetsByRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleInput">ListTargetsByRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleOutput">ListTargetsByRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTargetsByRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleInput">ListTargetsByRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#ListTargetsByRuleOutput">ListTargetsByRuleOutput</a>)
+
+    PutEvents(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsInput">PutEventsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsOutput">PutEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutEventsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsInput">PutEventsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsOutput">PutEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutEventsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsInput">PutEventsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutEventsOutput">PutEventsOutput</a>)
+
+    PutPartnerEvents(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsInput">PutPartnerEventsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsOutput">PutPartnerEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPartnerEventsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsInput">PutPartnerEventsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsOutput">PutPartnerEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPartnerEventsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsInput">PutPartnerEventsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPartnerEventsOutput">PutPartnerEventsOutput</a>)
+
+    PutPermission(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionInput">PutPermissionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionOutput">PutPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionInput">PutPermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionOutput">PutPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutPermissionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionInput">PutPermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutPermissionOutput">PutPermissionOutput</a>)
+
+    PutRule(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleInput">PutRuleInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleOutput">PutRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleInput">PutRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleOutput">PutRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRuleRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleInput">PutRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutRuleOutput">PutRuleOutput</a>)
+
+    PutTargets(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsInput">PutTargetsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsOutput">PutTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsInput">PutTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsOutput">PutTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutTargetsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsInput">PutTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#PutTargetsOutput">PutTargetsOutput</a>)
+
+    RemovePermission(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemovePermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemovePermissionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>)
+
+    RemoveTargets(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsInput">RemoveTargetsInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsOutput">RemoveTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsInput">RemoveTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsOutput">RemoveTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTargetsRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsInput">RemoveTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#RemoveTargetsOutput">RemoveTargetsOutput</a>)
+
+    StartReplay(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayInput">StartReplayInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayOutput">StartReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartReplayWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayInput">StartReplayInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayOutput">StartReplayOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartReplayRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayInput">StartReplayInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#StartReplayOutput">StartReplayOutput</a>)
+
+    TagResource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    TestEventPattern(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternInput">TestEventPatternInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternOutput">TestEventPatternOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestEventPatternWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternInput">TestEventPatternInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternOutput">TestEventPatternOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestEventPatternRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternInput">TestEventPatternInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#TestEventPatternOutput">TestEventPatternOutput</a>)
+
+    UntagResource(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateApiDestination(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationInput">UpdateApiDestinationInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationOutput">UpdateApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateApiDestinationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationInput">UpdateApiDestinationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationOutput">UpdateApiDestinationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateApiDestinationRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationInput">UpdateApiDestinationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateApiDestinationOutput">UpdateApiDestinationOutput</a>)
+
+    UpdateArchive(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveInput">UpdateArchiveInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveOutput">UpdateArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateArchiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveInput">UpdateArchiveInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveOutput">UpdateArchiveOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateArchiveRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveInput">UpdateArchiveInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateArchiveOutput">UpdateArchiveOutput</a>)
+
+    UpdateConnection(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionInput">UpdateConnectionInput</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionOutput">UpdateConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionInput">UpdateConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionOutput">UpdateConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateConnectionRequest(*<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionInput">UpdateConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">cloudwatchevents</a>.<a href="../index.html#UpdateConnectionOutput">UpdateConnectionOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

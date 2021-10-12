@@ -1,0 +1,3420 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>sagemakerfeaturestoreruntime - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package sagemakerfeaturestoreruntime
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package sagemakerfeaturestoreruntime provides the client and types for making API
+requests to Amazon SageMaker Feature Store Runtime.
+</p>
+<p>
+Contains all data plane API operations and data types for the Amazon SageMaker
+Feature Store. Use this API to put, delete, and retrieve (get) features from
+a feature store.
+</p>
+<p>
+Use the following operations to configure your OnlineStore and OfflineStore
+features, and to create and manage feature groups:
+</p>
+<pre>* CreateFeatureGroup (<a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateFeatureGroup.html">https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateFeatureGroup.html</a>)
+
+* DeleteFeatureGroup (<a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteFeatureGroup.html">https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteFeatureGroup.html</a>)
+
+* DescribeFeatureGroup (<a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeFeatureGroup.html">https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeFeatureGroup.html</a>)
+
+* ListFeatureGroups (<a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListFeatureGroups.html">https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListFeatureGroups.html</a>)
+</pre>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01</a> for more information on this service.
+</p>
+<p>
+See sagemakerfeaturestoreruntime package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/sagemakerfeaturestoreruntime/">https://docs.aws.amazon.com/sdk-for-go/api/service/sagemakerfeaturestoreruntime/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon SageMaker Feature Store Runtime with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon SageMaker Feature Store Runtime client SageMakerFeatureStoreRuntime for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/sagemakerfeaturestoreruntime/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/sagemakerfeaturestoreruntime/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AccessForbidden">type AccessForbidden</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.Code">func (s *AccessForbidden) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.Error">func (s *AccessForbidden) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.GoString">func (s AccessForbidden) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.Message">func (s *AccessForbidden) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.OrigErr">func (s *AccessForbidden) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.RequestID">func (s *AccessForbidden) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.StatusCode">func (s *AccessForbidden) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessForbidden.String">func (s AccessForbidden) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BatchGetRecordError">type BatchGetRecordError</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.GoString">func (s BatchGetRecordError) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.SetErrorCode">func (s *BatchGetRecordError) SetErrorCode(v string) *BatchGetRecordError</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.SetErrorMessage">func (s *BatchGetRecordError) SetErrorMessage(v string) *BatchGetRecordError</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.SetFeatureGroupName">func (s *BatchGetRecordError) SetFeatureGroupName(v string) *BatchGetRecordError</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.SetRecordIdentifierValueAsString">func (s *BatchGetRecordError) SetRecordIdentifierValueAsString(v string) *BatchGetRecordError</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordError.String">func (s BatchGetRecordError) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BatchGetRecordIdentifier">type BatchGetRecordIdentifier</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.GoString">func (s BatchGetRecordIdentifier) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.SetFeatureGroupName">func (s *BatchGetRecordIdentifier) SetFeatureGroupName(v string) *BatchGetRecordIdentifier</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.SetFeatureNames">func (s *BatchGetRecordIdentifier) SetFeatureNames(v []*string) *BatchGetRecordIdentifier</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.SetRecordIdentifiersValueAsString">func (s *BatchGetRecordIdentifier) SetRecordIdentifiersValueAsString(v []*string) *BatchGetRecordIdentifier</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.String">func (s BatchGetRecordIdentifier) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordIdentifier.Validate">func (s *BatchGetRecordIdentifier) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BatchGetRecordInput">type BatchGetRecordInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordInput.GoString">func (s BatchGetRecordInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordInput.SetIdentifiers">func (s *BatchGetRecordInput) SetIdentifiers(v []*BatchGetRecordIdentifier) *BatchGetRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordInput.String">func (s BatchGetRecordInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordInput.Validate">func (s *BatchGetRecordInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BatchGetRecordOutput">type BatchGetRecordOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordOutput.GoString">func (s BatchGetRecordOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordOutput.SetErrors">func (s *BatchGetRecordOutput) SetErrors(v []*BatchGetRecordError) *BatchGetRecordOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordOutput.SetRecords">func (s *BatchGetRecordOutput) SetRecords(v []*BatchGetRecordResultDetail) *BatchGetRecordOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordOutput.SetUnprocessedIdentifiers">func (s *BatchGetRecordOutput) SetUnprocessedIdentifiers(v []*BatchGetRecordIdentifier) *BatchGetRecordOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordOutput.String">func (s BatchGetRecordOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BatchGetRecordResultDetail">type BatchGetRecordResultDetail</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordResultDetail.GoString">func (s BatchGetRecordResultDetail) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordResultDetail.SetFeatureGroupName">func (s *BatchGetRecordResultDetail) SetFeatureGroupName(v string) *BatchGetRecordResultDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordResultDetail.SetRecord">func (s *BatchGetRecordResultDetail) SetRecord(v []*FeatureValue) *BatchGetRecordResultDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordResultDetail.SetRecordIdentifierValueAsString">func (s *BatchGetRecordResultDetail) SetRecordIdentifierValueAsString(v string) *BatchGetRecordResultDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#BatchGetRecordResultDetail.String">func (s BatchGetRecordResultDetail) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteRecordInput">type DeleteRecordInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.GoString">func (s DeleteRecordInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.SetEventTime">func (s *DeleteRecordInput) SetEventTime(v string) *DeleteRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.SetFeatureGroupName">func (s *DeleteRecordInput) SetFeatureGroupName(v string) *DeleteRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.SetRecordIdentifierValueAsString">func (s *DeleteRecordInput) SetRecordIdentifierValueAsString(v string) *DeleteRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.String">func (s DeleteRecordInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordInput.Validate">func (s *DeleteRecordInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteRecordOutput">type DeleteRecordOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteRecordOutput.GoString">func (s DeleteRecordOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteRecordOutput.String">func (s DeleteRecordOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FeatureValue">type FeatureValue</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#FeatureValue.GoString">func (s FeatureValue) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FeatureValue.SetFeatureName">func (s *FeatureValue) SetFeatureName(v string) *FeatureValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#FeatureValue.SetValueAsString">func (s *FeatureValue) SetValueAsString(v string) *FeatureValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#FeatureValue.String">func (s FeatureValue) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FeatureValue.Validate">func (s *FeatureValue) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRecordInput">type GetRecordInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.GoString">func (s GetRecordInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.SetFeatureGroupName">func (s *GetRecordInput) SetFeatureGroupName(v string) *GetRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.SetFeatureNames">func (s *GetRecordInput) SetFeatureNames(v []*string) *GetRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.SetRecordIdentifierValueAsString">func (s *GetRecordInput) SetRecordIdentifierValueAsString(v string) *GetRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.String">func (s GetRecordInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordInput.Validate">func (s *GetRecordInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRecordOutput">type GetRecordOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRecordOutput.GoString">func (s GetRecordOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordOutput.SetRecord">func (s *GetRecordOutput) SetRecord(v []*FeatureValue) *GetRecordOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRecordOutput.String">func (s GetRecordOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalFailure">type InternalFailure</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalFailure.Code">func (s *InternalFailure) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.Error">func (s *InternalFailure) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.GoString">func (s InternalFailure) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.Message">func (s *InternalFailure) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.OrigErr">func (s *InternalFailure) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.RequestID">func (s *InternalFailure) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.StatusCode">func (s *InternalFailure) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalFailure.String">func (s InternalFailure) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutRecordInput">type PutRecordInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutRecordInput.GoString">func (s PutRecordInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRecordInput.SetFeatureGroupName">func (s *PutRecordInput) SetFeatureGroupName(v string) *PutRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRecordInput.SetRecord">func (s *PutRecordInput) SetRecord(v []*FeatureValue) *PutRecordInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRecordInput.String">func (s PutRecordInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRecordInput.Validate">func (s *PutRecordInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutRecordOutput">type PutRecordOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutRecordOutput.GoString">func (s PutRecordOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRecordOutput.String">func (s PutRecordOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFound">type ResourceNotFound</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.Code">func (s *ResourceNotFound) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.Error">func (s *ResourceNotFound) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.GoString">func (s ResourceNotFound) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.Message">func (s *ResourceNotFound) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.OrigErr">func (s *ResourceNotFound) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.RequestID">func (s *ResourceNotFound) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.StatusCode">func (s *ResourceNotFound) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFound.String">func (s ResourceNotFound) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SageMakerFeatureStoreRuntime">type SageMakerFeatureStoreRuntime</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *SageMakerFeatureStoreRuntime</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecord">func (c *SageMakerFeatureStoreRuntime) BatchGetRecord(input *BatchGetRecordInput) (*BatchGetRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecordRequest">func (c *SageMakerFeatureStoreRuntime) BatchGetRecordRequest(input *BatchGetRecordInput) (req *request.Request, output *BatchGetRecordOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecordWithContext">func (c *SageMakerFeatureStoreRuntime) BatchGetRecordWithContext(ctx aws.Context, input *BatchGetRecordInput, opts ...request.Option) (*BatchGetRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.DeleteRecord">func (c *SageMakerFeatureStoreRuntime) DeleteRecord(input *DeleteRecordInput) (*DeleteRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.DeleteRecordRequest">func (c *SageMakerFeatureStoreRuntime) DeleteRecordRequest(input *DeleteRecordInput) (req *request.Request, output *DeleteRecordOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.DeleteRecordWithContext">func (c *SageMakerFeatureStoreRuntime) DeleteRecordWithContext(ctx aws.Context, input *DeleteRecordInput, opts ...request.Option) (*DeleteRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.GetRecord">func (c *SageMakerFeatureStoreRuntime) GetRecord(input *GetRecordInput) (*GetRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.GetRecordRequest">func (c *SageMakerFeatureStoreRuntime) GetRecordRequest(input *GetRecordInput) (req *request.Request, output *GetRecordOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.GetRecordWithContext">func (c *SageMakerFeatureStoreRuntime) GetRecordWithContext(ctx aws.Context, input *GetRecordInput, opts ...request.Option) (*GetRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.PutRecord">func (c *SageMakerFeatureStoreRuntime) PutRecord(input *PutRecordInput) (*PutRecordOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.PutRecordRequest">func (c *SageMakerFeatureStoreRuntime) PutRecordRequest(input *PutRecordInput) (req *request.Request, output *PutRecordOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#SageMakerFeatureStoreRuntime.PutRecordWithContext">func (c *SageMakerFeatureStoreRuntime) PutRecordWithContext(ctx aws.Context, input *PutRecordInput, opts ...request.Option) (*PutRecordOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ServiceUnavailable">type ServiceUnavailable</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.Code">func (s *ServiceUnavailable) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.Error">func (s *ServiceUnavailable) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.GoString">func (s ServiceUnavailable) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.Message">func (s *ServiceUnavailable) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.OrigErr">func (s *ServiceUnavailable) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.RequestID">func (s *ServiceUnavailable) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.StatusCode">func (s *ServiceUnavailable) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceUnavailable.String">func (s ServiceUnavailable) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationError">type ValidationError</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationError.Code">func (s *ValidationError) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.Error">func (s *ValidationError) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.GoString">func (s ValidationError) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.Message">func (s *ValidationError) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.OrigErr">func (s *ValidationError) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.RequestID">func (s *ValidationError) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.StatusCode">func (s *ValidationError) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationError.String">func (s ValidationError) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessForbidden for service response error code</span>
+    <span class="comment">// &#34;AccessForbidden&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You do not have permission to perform an action.</span>
+    <span id="ErrCodeAccessForbidden">ErrCodeAccessForbidden</span> = &#34;AccessForbidden&#34;
+
+    <span class="comment">// ErrCodeInternalFailure for service response error code</span>
+    <span class="comment">// &#34;InternalFailure&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// An internal failure occurred. Try your request again. If the problem persists,</span>
+    <span class="comment">// contact AWS customer support.</span>
+    <span id="ErrCodeInternalFailure">ErrCodeInternalFailure</span> = &#34;InternalFailure&#34;
+
+    <span class="comment">// ErrCodeResourceNotFound for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFound&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// A resource that is required to perform an action was not found.</span>
+    <span id="ErrCodeResourceNotFound">ErrCodeResourceNotFound</span> = &#34;ResourceNotFound&#34;
+
+    <span class="comment">// ErrCodeServiceUnavailable for service response error code</span>
+    <span class="comment">// &#34;ServiceUnavailable&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The service is currently unavailable.</span>
+    <span id="ErrCodeServiceUnavailable">ErrCodeServiceUnavailable</span> = &#34;ServiceUnavailable&#34;
+
+    <span class="comment">// ErrCodeValidationError for service response error code</span>
+    <span class="comment">// &#34;ValidationError&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was an error validating your request.</span>
+    <span id="ErrCodeValidationError">ErrCodeValidationError</span> = &#34;ValidationError&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;SageMaker FeatureStore Runtime&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;featurestore-runtime.sagemaker&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;SageMaker FeatureStore Runtime&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AccessForbidden">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=14624:14831#L375">AccessForbidden</a>
+				<a class="permalink" href="index.html#AccessForbidden">¶</a>
+				
+				
+			</h2>
+			<p>
+You do not have permission to perform an action.
+</p>
+
+			<pre>type AccessForbidden struct {
+<span id="AccessForbidden.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessForbidden.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessForbidden.Code">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15630:15669#L407">Code</a>
+					<a class="permalink" href="index.html#AccessForbidden.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.Error">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15976:16016#L424">Error</a>
+					<a class="permalink" href="index.html#AccessForbidden.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.GoString">func (AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15405:15447#L396">GoString</a>
+					<a class="permalink" href="index.html#AccessForbidden.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessForbidden">AccessForbidden</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.Message">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15745:15787#L412">Message</a>
+					<a class="permalink" href="index.html#AccessForbidden.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.OrigErr">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15917:15958#L420">OrigErr</a>
+					<a class="permalink" href="index.html#AccessForbidden.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.RequestID">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=16302:16346#L434">RequestID</a>
+					<a class="permalink" href="index.html#AccessForbidden.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.StatusCode">func (*AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=16153:16195#L429">StatusCode</a>
+					<a class="permalink" href="index.html#AccessForbidden.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessForbidden">AccessForbidden</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessForbidden.String">func (AccessForbidden) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=15081:15121#L387">String</a>
+					<a class="permalink" href="index.html#AccessForbidden.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessForbidden">AccessForbidden</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BatchGetRecordError">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=16464:17540#L439">BatchGetRecordError</a>
+				<a class="permalink" href="index.html#BatchGetRecordError">¶</a>
+				
+				
+			</h2>
+			<p>
+The error that has occurred when attempting to retrieve a batch of Records.
+</p>
+
+			<pre>type BatchGetRecordError struct {
+
+    <span class="comment">// The error code of an error that has occured when attempting to retrieve a</span>
+    <span class="comment">// batch of Records. For more information on errors, see Errors (https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_GetRecord.html#API_feature_store_GetRecord_Errors).</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordError.ErrorCode"></span>    <span class="comment">// ErrorCode is a required field</span>
+    ErrorCode *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The error message of an error that has occured when attempting to retrieve</span>
+    <span class="comment">// a record in the batch.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordError.ErrorMessage"></span>    <span class="comment">// ErrorMessage is a required field</span>
+    ErrorMessage *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The name of the feature group that the record belongs to.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordError.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The value for the RecordIdentifier in string format of a Record from a FeatureGroup</span>
+    <span class="comment">// that is causing an error when attempting to be retrieved.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordError.RecordIdentifierValueAsString"></span>    <span class="comment">// RecordIdentifierValueAsString is a required field</span>
+    RecordIdentifierValueAsString *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BatchGetRecordError.GoString">func (BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=18118:18164#L480">GoString</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordError.SetErrorCode">func (*BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=18239:18312#L485">SetErrorCode</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.SetErrorCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) SetErrorCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a></pre>
+				<p>
+SetErrorCode sets the ErrorCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordError.SetErrorMessage">func (*BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=18402:18478#L491">SetErrorMessage</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.SetErrorMessage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) SetErrorMessage(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a></pre>
+				<p>
+SetErrorMessage sets the ErrorMessage field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordError.SetFeatureGroupName">func (*BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=18579:18659#L497">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordError.SetRecordIdentifierValueAsString">func (*BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=18790:18883#L503">SetRecordIdentifierValueAsString</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.SetRecordIdentifierValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) SetRecordIdentifierValueAsString(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordError">BatchGetRecordError</a></pre>
+				<p>
+SetRecordIdentifierValueAsString sets the RecordIdentifierValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordError.String">func (BatchGetRecordError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=17790:17834#L471">String</a>
+					<a class="permalink" href="index.html#BatchGetRecordError.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BatchGetRecordIdentifier">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=19026:19655#L510">BatchGetRecordIdentifier</a>
+				<a class="permalink" href="index.html#BatchGetRecordIdentifier">¶</a>
+				
+				
+			</h2>
+			<p>
+The identifier that identifies the batch of Records you are retrieving in
+a batch.
+</p>
+
+			<pre>type BatchGetRecordIdentifier struct {
+
+    <span class="comment">// A FeatureGroupName containing Records you are retrieving in a batch.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordIdentifier.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// List of names of Features to be retrieved. If not specified, the latest value</span>
+    <span class="comment">// for all the Features are returned.</span>
+<span id="BatchGetRecordIdentifier.FeatureNames"></span>    FeatureNames []*<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The value for a list of record identifiers in string format.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordIdentifier.RecordIdentifiersValueAsString"></span>    <span class="comment">// RecordIdentifiersValueAsString is a required field</span>
+    RecordIdentifiersValueAsString []*<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BatchGetRecordIdentifier.GoString">func (BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=20238:20289#L542">GoString</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordIdentifier.SetFeatureGroupName">func (*BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=21335:21425#L572">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordIdentifier.SetFeatureNames">func (*BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=21522:21611#L578">SetFeatureNames</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.SetFeatureNames">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) SetFeatureNames(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a></pre>
+				<p>
+SetFeatureNames sets the FeatureNames field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordIdentifier.SetRecordIdentifiersValueAsString">func (*BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=21739:21846#L584">SetRecordIdentifiersValueAsString</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.SetRecordIdentifiersValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) SetRecordIdentifiersValueAsString(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a></pre>
+				<p>
+SetRecordIdentifiersValueAsString sets the RecordIdentifiersValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordIdentifier.String">func (BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=19905:19954#L533">String</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordIdentifier.Validate">func (*BatchGetRecordIdentifier) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=20390:20441#L547">Validate</a>
+					<a class="permalink" href="index.html#BatchGetRecordIdentifier.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BatchGetRecordInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=21900:22241#L589">BatchGetRecordInput</a>
+				<a class="permalink" href="index.html#BatchGetRecordInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type BatchGetRecordInput struct {
+
+    <span class="comment">// A list of FeatureGroup names, with their corresponding RecordIdentifier value,</span>
+    <span class="comment">// and Feature name that have been requested to be retrieved in batch.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordInput.Identifiers"></span>    <span class="comment">// Identifiers is a required field</span>
+    Identifiers []*<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a> `min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BatchGetRecordInput.GoString">func (BatchGetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=22819:22865#L613">GoString</a>
+					<a class="permalink" href="index.html#BatchGetRecordInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordInput.SetIdentifiers">func (*BatchGetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=23682:23778#L644">SetIdentifiers</a>
+					<a class="permalink" href="index.html#BatchGetRecordInput.SetIdentifiers">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) SetIdentifiers(v []*<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a></pre>
+				<p>
+SetIdentifiers sets the Identifiers field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordInput.String">func (BatchGetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=22491:22535#L604">String</a>
+					<a class="permalink" href="index.html#BatchGetRecordInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordInput.Validate">func (*BatchGetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=22966:23012#L618">Validate</a>
+					<a class="permalink" href="index.html#BatchGetRecordInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BatchGetRecordOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=23813:24471#L649">BatchGetRecordOutput</a>
+				<a class="permalink" href="index.html#BatchGetRecordOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type BatchGetRecordOutput struct {
+
+    <span class="comment">// A list of errors that have occured when retrieving a batch of Records.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordOutput.Errors"></span>    <span class="comment">// Errors is a required field</span>
+    Errors []*<a href="index.html#BatchGetRecordError">BatchGetRecordError</a> `type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A list of Records you requested to be retrieved in batch.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordOutput.Records"></span>    <span class="comment">// Records is a required field</span>
+    Records []*<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a> `type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A unprocessed list of FeatureGroup names, with their corresponding RecordIdentifier</span>
+    <span class="comment">// value, and Feature name.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordOutput.UnprocessedIdentifiers"></span>    <span class="comment">// UnprocessedIdentifiers is a required field</span>
+    UnprocessedIdentifiers []*<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a> `type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BatchGetRecordOutput.GoString">func (BatchGetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=25050:25097#L683">GoString</a>
+					<a class="permalink" href="index.html#BatchGetRecordOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordOutput.SetErrors">func (*BatchGetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=25166:25254#L688">SetErrors</a>
+					<a class="permalink" href="index.html#BatchGetRecordOutput.SetErrors">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>) SetErrors(v []*<a href="index.html#BatchGetRecordError">BatchGetRecordError</a>) *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a></pre>
+				<p>
+SetErrors sets the Errors field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordOutput.SetRecords">func (*BatchGetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=25330:25426#L694">SetRecords</a>
+					<a class="permalink" href="index.html#BatchGetRecordOutput.SetRecords">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>) SetRecords(v []*<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a></pre>
+				<p>
+SetRecords sets the Records field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordOutput.SetUnprocessedIdentifiers">func (*BatchGetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=25533:25642#L700">SetUnprocessedIdentifiers</a>
+					<a class="permalink" href="index.html#BatchGetRecordOutput.SetUnprocessedIdentifiers">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>) SetUnprocessedIdentifiers(v []*<a href="index.html#BatchGetRecordIdentifier">BatchGetRecordIdentifier</a>) *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a></pre>
+				<p>
+SetUnprocessedIdentifiers sets the UnprocessedIdentifiers field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordOutput.String">func (BatchGetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=24721:24766#L674">String</a>
+					<a class="permalink" href="index.html#BatchGetRecordOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BatchGetRecordResultDetail">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=25750:26307#L706">BatchGetRecordResultDetail</a>
+				<a class="permalink" href="index.html#BatchGetRecordResultDetail">¶</a>
+				
+				
+			</h2>
+			<p>
+The output of Records that have been retrieved in a batch.
+</p>
+
+			<pre>type BatchGetRecordResultDetail struct {
+
+    <span class="comment">// The FeatureGroupName containing Records you retrieved in a batch.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordResultDetail.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The Record retrieved.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordResultDetail.Record"></span>    <span class="comment">// Record is a required field</span>
+    Record []*<a href="index.html#FeatureValue">FeatureValue</a> `min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The value of the record identifer in string format.</span>
+    <span class="comment">//</span>
+<span id="BatchGetRecordResultDetail.RecordIdentifierValueAsString"></span>    <span class="comment">// RecordIdentifierValueAsString is a required field</span>
+    RecordIdentifierValueAsString *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BatchGetRecordResultDetail.GoString">func (BatchGetRecordResultDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=26892:26945#L739">GoString</a>
+					<a class="permalink" href="index.html#BatchGetRecordResultDetail.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordResultDetail.SetFeatureGroupName">func (*BatchGetRecordResultDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=27034:27128#L744">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#BatchGetRecordResultDetail.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordResultDetail.SetRecord">func (*BatchGetRecordResultDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=27213:27306#L750">SetRecord</a>
+					<a class="permalink" href="index.html#BatchGetRecordResultDetail.SetRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) SetRecord(v []*<a href="index.html#FeatureValue">FeatureValue</a>) *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a></pre>
+				<p>
+SetRecord sets the Record field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordResultDetail.SetRecordIdentifierValueAsString">func (*BatchGetRecordResultDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=27426:27533#L756">SetRecordIdentifierValueAsString</a>
+					<a class="permalink" href="index.html#BatchGetRecordResultDetail.SetRecordIdentifierValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) SetRecordIdentifierValueAsString(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a></pre>
+				<p>
+SetRecordIdentifierValueAsString sets the RecordIdentifierValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BatchGetRecordResultDetail.String">func (BatchGetRecordResultDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=26557:26608#L730">String</a>
+					<a class="permalink" href="index.html#BatchGetRecordResultDetail.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BatchGetRecordResultDetail">BatchGetRecordResultDetail</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteRecordInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=27587:28432#L761">DeleteRecordInput</a>
+				<a class="permalink" href="index.html#DeleteRecordInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteRecordInput struct {
+
+    <span class="comment">// Timestamp indicating when the deletion event occurred. EventTime can be used</span>
+    <span class="comment">// to query data at a certain point in time.</span>
+    <span class="comment">//</span>
+<span id="DeleteRecordInput.EventTime"></span>    <span class="comment">// EventTime is a required field</span>
+    EventTime *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;EventTime&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The name of the feature group to delete the record from.</span>
+    <span class="comment">//</span>
+<span id="DeleteRecordInput.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;FeatureGroupName&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The value for the RecordIdentifier that uniquely identifies the record, in</span>
+    <span class="comment">// string format.</span>
+    <span class="comment">//</span>
+<span id="DeleteRecordInput.RecordIdentifierValueAsString"></span>    <span class="comment">// RecordIdentifierValueAsString is a required field</span>
+    RecordIdentifierValueAsString *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;RecordIdentifierValueAsString&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteRecordInput.GoString">func (DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=29008:29052#L796">GoString</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordInput.SetEventTime">func (*DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=29856:29925#L823">SetEventTime</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.SetEventTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) SetEventTime(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a></pre>
+				<p>
+SetEventTime sets the EventTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordInput.SetFeatureGroupName">func (*DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=30023:30099#L829">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordInput.SetRecordIdentifierValueAsString">func (*DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=30230:30319#L835">SetRecordIdentifierValueAsString</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.SetRecordIdentifierValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) SetRecordIdentifierValueAsString(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a></pre>
+				<p>
+SetRecordIdentifierValueAsString sets the RecordIdentifierValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordInput.String">func (DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=28682:28724#L787">String</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordInput.Validate">func (*DeleteRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=29153:29197#L801">Validate</a>
+					<a class="permalink" href="index.html#DeleteRecordInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteRecordOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=30373:30438#L840">DeleteRecordOutput</a>
+				<a class="permalink" href="index.html#DeleteRecordOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteRecordOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteRecordOutput.GoString">func (DeleteRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=31015:31060#L858">GoString</a>
+					<a class="permalink" href="index.html#DeleteRecordOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteRecordOutput">DeleteRecordOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteRecordOutput.String">func (DeleteRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=30688:30731#L849">String</a>
+					<a class="permalink" href="index.html#DeleteRecordOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteRecordOutput">DeleteRecordOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FeatureValue">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=31125:31630#L863">FeatureValue</a>
+				<a class="permalink" href="index.html#FeatureValue">¶</a>
+				
+				
+			</h2>
+			<p>
+The value associated with a feature.
+</p>
+
+			<pre>type FeatureValue struct {
+
+    <span class="comment">// The name of a feature that a feature value corresponds to.</span>
+    <span class="comment">//</span>
+<span id="FeatureValue.FeatureName"></span>    <span class="comment">// FeatureName is a required field</span>
+    FeatureName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The value associated with a feature, in string format. Note that features</span>
+    <span class="comment">// types can be String, Integral, or Fractional. This value represents all three</span>
+    <span class="comment">// types as a string.</span>
+    <span class="comment">//</span>
+<span id="FeatureValue.ValueAsString"></span>    <span class="comment">// ValueAsString is a required field</span>
+    ValueAsString *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FeatureValue.GoString">func (FeatureValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=32201:32240#L893">GoString</a>
+					<a class="permalink" href="index.html#FeatureValue.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FeatureValue">FeatureValue</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FeatureValue.SetFeatureName">func (*FeatureValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=32891:32952#L917">SetFeatureName</a>
+					<a class="permalink" href="index.html#FeatureValue.SetFeatureName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FeatureValue">FeatureValue</a>) SetFeatureName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FeatureValue">FeatureValue</a></pre>
+				<p>
+SetFeatureName sets the FeatureName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FeatureValue.SetValueAsString">func (*FeatureValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=33046:33109#L923">SetValueAsString</a>
+					<a class="permalink" href="index.html#FeatureValue.SetValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FeatureValue">FeatureValue</a>) SetValueAsString(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FeatureValue">FeatureValue</a></pre>
+				<p>
+SetValueAsString sets the ValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FeatureValue.String">func (FeatureValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=31880:31917#L884">String</a>
+					<a class="permalink" href="index.html#FeatureValue.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FeatureValue">FeatureValue</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FeatureValue.Validate">func (*FeatureValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=32341:32380#L898">Validate</a>
+					<a class="permalink" href="index.html#FeatureValue.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FeatureValue">FeatureValue</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRecordInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=33147:33971#L928">GetRecordInput</a>
+				<a class="permalink" href="index.html#GetRecordInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRecordInput struct {
+
+    <span class="comment">// The name of the feature group in which you want to put the records.</span>
+    <span class="comment">//</span>
+<span id="GetRecordInput.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;FeatureGroupName&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// List of names of Features to be retrieved. If not specified, the latest value</span>
+    <span class="comment">// for all the Features are returned.</span>
+<span id="GetRecordInput.FeatureNames"></span>    FeatureNames []*<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;FeatureName&#34; min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The value that corresponds to RecordIdentifier type and uniquely identifies</span>
+    <span class="comment">// the record in the FeatureGroup.</span>
+    <span class="comment">//</span>
+<span id="GetRecordInput.RecordIdentifierValueAsString"></span>    <span class="comment">// RecordIdentifierValueAsString is a required field</span>
+    RecordIdentifierValueAsString *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;RecordIdentifierValueAsString&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRecordInput.GoString">func (GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=34544:34585#L961">GoString</a>
+					<a class="permalink" href="index.html#GetRecordInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRecordInput">GetRecordInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordInput.SetFeatureGroupName">func (*GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=35431:35501#L988">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#GetRecordInput.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRecordInput">GetRecordInput</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRecordInput">GetRecordInput</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordInput.SetFeatureNames">func (*GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=35598:35667#L994">SetFeatureNames</a>
+					<a class="permalink" href="index.html#GetRecordInput.SetFeatureNames">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRecordInput">GetRecordInput</a>) SetFeatureNames(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRecordInput">GetRecordInput</a></pre>
+				<p>
+SetFeatureNames sets the FeatureNames field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordInput.SetRecordIdentifierValueAsString">func (*GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=35793:35876#L1000">SetRecordIdentifierValueAsString</a>
+					<a class="permalink" href="index.html#GetRecordInput.SetRecordIdentifierValueAsString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRecordInput">GetRecordInput</a>) SetRecordIdentifierValueAsString(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRecordInput">GetRecordInput</a></pre>
+				<p>
+SetRecordIdentifierValueAsString sets the RecordIdentifierValueAsString field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordInput.String">func (GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=34221:34260#L952">String</a>
+					<a class="permalink" href="index.html#GetRecordInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRecordInput">GetRecordInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordInput.Validate">func (*GetRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=34686:34727#L966">Validate</a>
+					<a class="permalink" href="index.html#GetRecordInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRecordInput">GetRecordInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRecordOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=35930:36094#L1005">GetRecordOutput</a>
+				<a class="permalink" href="index.html#GetRecordOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRecordOutput struct {
+
+    <span class="comment">// The record you requested. A list of FeatureValues.</span>
+<span id="GetRecordOutput.Record"></span>    Record []*<a href="index.html#FeatureValue">FeatureValue</a> `min:&#34;1&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRecordOutput.GoString">func (GetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=36668:36710#L1026">GoString</a>
+					<a class="permalink" href="index.html#GetRecordOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRecordOutput">GetRecordOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordOutput.SetRecord">func (*GetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=36779:36850#L1031">SetRecord</a>
+					<a class="permalink" href="index.html#GetRecordOutput.SetRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRecordOutput">GetRecordOutput</a>) SetRecord(v []*<a href="index.html#FeatureValue">FeatureValue</a>) *<a href="index.html#GetRecordOutput">GetRecordOutput</a></pre>
+				<p>
+SetRecord sets the Record field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRecordOutput.String">func (GetRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=36344:36384#L1017">String</a>
+					<a class="permalink" href="index.html#GetRecordOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRecordOutput">GetRecordOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalFailure">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=36995:37202#L1038">InternalFailure</a>
+				<a class="permalink" href="index.html#InternalFailure">¶</a>
+				
+				
+			</h2>
+			<p>
+An internal failure occurred. Try your request again. If the problem persists,
+contact AWS customer support.
+</p>
+
+			<pre>type InternalFailure struct {
+<span id="InternalFailure.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalFailure.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalFailure.Code">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38001:38040#L1070">Code</a>
+					<a class="permalink" href="index.html#InternalFailure.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.Error">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38347:38387#L1087">Error</a>
+					<a class="permalink" href="index.html#InternalFailure.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.GoString">func (InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=37776:37818#L1059">GoString</a>
+					<a class="permalink" href="index.html#InternalFailure.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalFailure">InternalFailure</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.Message">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38116:38158#L1075">Message</a>
+					<a class="permalink" href="index.html#InternalFailure.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.OrigErr">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38288:38329#L1083">OrigErr</a>
+					<a class="permalink" href="index.html#InternalFailure.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.RequestID">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38673:38717#L1097">RequestID</a>
+					<a class="permalink" href="index.html#InternalFailure.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.StatusCode">func (*InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38524:38566#L1092">StatusCode</a>
+					<a class="permalink" href="index.html#InternalFailure.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalFailure">InternalFailure</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalFailure.String">func (InternalFailure) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=37452:37492#L1050">String</a>
+					<a class="permalink" href="index.html#InternalFailure.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalFailure">InternalFailure</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutRecordInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=38756:39466#L1101">PutRecordInput</a>
+				<a class="permalink" href="index.html#PutRecordInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutRecordInput struct {
+
+    <span class="comment">// The name of the feature group that you want to insert the record into.</span>
+    <span class="comment">//</span>
+<span id="PutRecordInput.FeatureGroupName"></span>    <span class="comment">// FeatureGroupName is a required field</span>
+    FeatureGroupName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;FeatureGroupName&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// List of FeatureValues to be inserted. This will be a full over-write. If</span>
+    <span class="comment">// you only want to update few of the feature values, do the following:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * Use GetRecord to retrieve the latest record.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * Update the record returned from GetRecord.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * Use PutRecord to update feature values.</span>
+    <span class="comment">//</span>
+<span id="PutRecordInput.Record"></span>    <span class="comment">// Record is a required field</span>
+    Record []*<a href="index.html#FeatureValue">FeatureValue</a> `min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutRecordInput.GoString">func (PutRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=40039:40080#L1136">GoString</a>
+					<a class="permalink" href="index.html#PutRecordInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRecordInput">PutRecordInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRecordInput.SetFeatureGroupName">func (*PutRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=41098:41168#L1173">SetFeatureGroupName</a>
+					<a class="permalink" href="index.html#PutRecordInput.SetFeatureGroupName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRecordInput">PutRecordInput</a>) SetFeatureGroupName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutRecordInput">PutRecordInput</a></pre>
+				<p>
+SetFeatureGroupName sets the FeatureGroupName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRecordInput.SetRecord">func (*PutRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=41253:41322#L1179">SetRecord</a>
+					<a class="permalink" href="index.html#PutRecordInput.SetRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRecordInput">PutRecordInput</a>) SetRecord(v []*<a href="index.html#FeatureValue">FeatureValue</a>) *<a href="index.html#PutRecordInput">PutRecordInput</a></pre>
+				<p>
+SetRecord sets the Record field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRecordInput.String">func (PutRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=39716:39755#L1127">String</a>
+					<a class="permalink" href="index.html#PutRecordInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRecordInput">PutRecordInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRecordInput.Validate">func (*PutRecordInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=40181:40222#L1141">Validate</a>
+					<a class="permalink" href="index.html#PutRecordInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRecordInput">PutRecordInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutRecordOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=41352:41414#L1184">PutRecordOutput</a>
+				<a class="permalink" href="index.html#PutRecordOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutRecordOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutRecordOutput.GoString">func (PutRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=41988:42030#L1202">GoString</a>
+					<a class="permalink" href="index.html#PutRecordOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRecordOutput">PutRecordOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRecordOutput.String">func (PutRecordOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=41664:41704#L1193">String</a>
+					<a class="permalink" href="index.html#PutRecordOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRecordOutput">PutRecordOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFound">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=42122:42330#L1207">ResourceNotFound</a>
+				<a class="permalink" href="index.html#ResourceNotFound">¶</a>
+				
+				
+			</h2>
+			<p>
+A resource that is required to perform an action was not found.
+</p>
+
+			<pre>type ResourceNotFound struct {
+<span id="ResourceNotFound.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFound.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFound.Code">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43133:43173#L1239">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFound.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.Error">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43483:43524#L1256">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFound.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.GoString">func (ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=42905:42948#L1228">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFound.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFound">ResourceNotFound</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.Message">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43250:43293#L1244">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFound.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.OrigErr">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43423:43465#L1252">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFound.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.RequestID">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43811:43856#L1266">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFound.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.StatusCode">func (*ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43661:43704#L1261">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFound.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFound">ResourceNotFound</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFound.String">func (ResourceNotFound) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=42580:42621#L1219">String</a>
+					<a class="permalink" href="index.html#ResourceNotFound.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFound">ResourceNotFound</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SageMakerFeatureStoreRuntime">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/service.go?s=779:839#L11">SageMakerFeatureStoreRuntime</a>
+				<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime">¶</a>
+				
+				
+			</h2>
+			<p>
+SageMakerFeatureStoreRuntime provides the API operation methods for making requests to
+Amazon SageMaker Feature Store Runtime. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+SageMakerFeatureStoreRuntime methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type SageMakerFeatureStoreRuntime struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/service.go?s=1936:2020#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a></pre>
+				<p>
+New creates a new instance of the SageMakerFeatureStoreRuntime client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a SageMakerFeatureStoreRuntime client from just a session.
+svc := sagemakerfeaturestoreruntime.New(mySession)
+
+// Create a SageMakerFeatureStoreRuntime client with additional configuration
+svc := sagemakerfeaturestoreruntime.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.BatchGetRecord">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=2801:2913#L73">BatchGetRecord</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) BatchGetRecord(input *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) (*<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+BatchGetRecord API operation for Amazon SageMaker Feature Store Runtime.
+</p>
+<p>
+Retrieves a batch of Records from a FeatureGroup.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon SageMaker Feature Store Runtime&#39;s
+API operation BatchGetRecord for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationError
+There was an error validating your request.
+
+* InternalFailure
+An internal failure occurred. Try your request again. If the problem persists,
+contact AWS customer support.
+
+* ServiceUnavailable
+The service is currently unavailable.
+
+* AccessForbidden
+You do not have permission to perform an action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/BatchGetRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/BatchGetRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.BatchGetRecordRequest">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=1426:1567#L31">BatchGetRecordRequest</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecordRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) BatchGetRecordRequest(input *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>)</pre>
+				<p>
+BatchGetRecordRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the BatchGetRecord operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See BatchGetRecord for more information on using the BatchGetRecord
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the BatchGetRecordRequest method.
+req, resp := client.BatchGetRecordRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/BatchGetRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/BatchGetRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.BatchGetRecordWithContext">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=3472:3636#L87">BatchGetRecordWithContext</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.BatchGetRecordWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) BatchGetRecordWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#BatchGetRecordInput">BatchGetRecordInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#BatchGetRecordOutput">BatchGetRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+BatchGetRecordWithContext is the same as BatchGetRecord with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See BatchGetRecord for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.DeleteRecord">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=6438:6544#L165">DeleteRecord</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.DeleteRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) DeleteRecord(input *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) (*<a href="index.html#DeleteRecordOutput">DeleteRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteRecord API operation for Amazon SageMaker Feature Store Runtime.
+</p>
+<p>
+Deletes a Record from a FeatureGroup. A new record will show up in the OfflineStore
+when the DeleteRecord API is called. This record will have a value of True
+in the is_deleted column.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon SageMaker Feature Store Runtime&#39;s
+API operation DeleteRecord for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationError
+There was an error validating your request.
+
+* InternalFailure
+An internal failure occurred. Try your request again. If the problem persists,
+contact AWS customer support.
+
+* ServiceUnavailable
+The service is currently unavailable.
+
+* AccessForbidden
+You do not have permission to perform an action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/DeleteRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/DeleteRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.DeleteRecordRequest">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=4822:4957#L120">DeleteRecordRequest</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.DeleteRecordRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) DeleteRecordRequest(input *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DeleteRecordOutput">DeleteRecordOutput</a>)</pre>
+				<p>
+DeleteRecordRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DeleteRecord operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DeleteRecord for more information on using the DeleteRecord
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DeleteRecordRequest method.
+req, resp := client.DeleteRecordRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/DeleteRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/DeleteRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.DeleteRecordWithContext">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=7095:7253#L179">DeleteRecordWithContext</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.DeleteRecordWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) DeleteRecordWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DeleteRecordInput">DeleteRecordInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DeleteRecordOutput">DeleteRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteRecordWithContext is the same as DeleteRecord with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DeleteRecord for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.GetRecord">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=10009:10106#L259">GetRecord</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.GetRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) GetRecord(input *<a href="index.html#GetRecordInput">GetRecordInput</a>) (*<a href="index.html#GetRecordOutput">GetRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRecord API operation for Amazon SageMaker Feature Store Runtime.
+</p>
+<p>
+Use for OnlineStore serving from a FeatureStore. Only the latest records
+stored in the OnlineStore can be retrieved. If no Record with RecordIdentifierValue
+is found, then an empty result is returned.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon SageMaker Feature Store Runtime&#39;s
+API operation GetRecord for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationError
+There was an error validating your request.
+
+* ResourceNotFound
+A resource that is required to perform an action was not found.
+
+* InternalFailure
+An internal failure occurred. Try your request again. If the problem persists,
+contact AWS customer support.
+
+* ServiceUnavailable
+The service is currently unavailable.
+
+* AccessForbidden
+You do not have permission to perform an action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/GetRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/GetRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.GetRecordRequest">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=8410:8536#L212">GetRecordRequest</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.GetRecordRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) GetRecordRequest(input *<a href="index.html#GetRecordInput">GetRecordInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetRecordOutput">GetRecordOutput</a>)</pre>
+				<p>
+GetRecordRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetRecord operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetRecord for more information on using the GetRecord
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetRecordRequest method.
+req, resp := client.GetRecordRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/GetRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/GetRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.GetRecordWithContext">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=10645:10794#L273">GetRecordWithContext</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.GetRecordWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) GetRecordWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetRecordInput">GetRecordInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetRecordOutput">GetRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRecordWithContext is the same as GetRecord with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetRecord for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.PutRecord">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=13670:13767#L353">PutRecord</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.PutRecord">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) PutRecord(input *<a href="index.html#PutRecordInput">PutRecordInput</a>) (*<a href="index.html#PutRecordOutput">PutRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutRecord API operation for Amazon SageMaker Feature Store Runtime.
+</p>
+<p>
+Used for data ingestion into the FeatureStore. The PutRecord API writes to
+both the OnlineStore and OfflineStore. If the record is the latest record
+for the recordIdentifier, the record is written to both the OnlineStore and
+OfflineStore. If the record is a historic record, it is written only to the
+OfflineStore.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon SageMaker Feature Store Runtime&#39;s
+API operation PutRecord for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationError
+There was an error validating your request.
+
+* InternalFailure
+An internal failure occurred. Try your request again. If the problem persists,
+contact AWS customer support.
+
+* ServiceUnavailable
+The service is currently unavailable.
+
+* AccessForbidden
+You do not have permission to perform an action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/PutRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/PutRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.PutRecordRequest">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=11948:12074#L306">PutRecordRequest</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.PutRecordRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) PutRecordRequest(input *<a href="index.html#PutRecordInput">PutRecordInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutRecordOutput">PutRecordOutput</a>)</pre>
+				<p>
+PutRecordRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutRecord operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutRecord for more information on using the PutRecord
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutRecordRequest method.
+req, resp := client.PutRecordRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/PutRecord">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-featurestore-runtime-2020-07-01/PutRecord</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SageMakerFeatureStoreRuntime.PutRecordWithContext">func (*SageMakerFeatureStoreRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=14306:14455#L367">PutRecordWithContext</a>
+					<a class="permalink" href="index.html#SageMakerFeatureStoreRuntime.PutRecordWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#SageMakerFeatureStoreRuntime">SageMakerFeatureStoreRuntime</a>) PutRecordWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutRecordInput">PutRecordInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutRecordOutput">PutRecordOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutRecordWithContext is the same as PutRecord with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutRecord for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ServiceUnavailable">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=43936:44146#L1271">ServiceUnavailable</a>
+				<a class="permalink" href="index.html#ServiceUnavailable">¶</a>
+				
+				
+			</h2>
+			<p>
+The service is currently unavailable.
+</p>
+
+			<pre>type ServiceUnavailable struct {
+<span id="ServiceUnavailable.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ServiceUnavailable.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ServiceUnavailable.Code">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=44957:44999#L1303">Code</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.Error">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45315:45358#L1320">Error</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.GoString">func (ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=44723:44768#L1292">GoString</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.Message">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45078:45123#L1308">Message</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.OrigErr">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45253:45297#L1316">OrigErr</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.RequestID">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45647:45694#L1330">RequestID</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.StatusCode">func (*ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45495:45540#L1325">StatusCode</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceUnavailable.String">func (ServiceUnavailable) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=44396:44439#L1283">String</a>
+					<a class="permalink" href="index.html#ServiceUnavailable.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceUnavailable">ServiceUnavailable</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationError">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=45780:45987#L1335">ValidationError</a>
+				<a class="permalink" href="index.html#ValidationError">¶</a>
+				
+				
+			</h2>
+			<p>
+There was an error validating your request.
+</p>
+
+			<pre>type ValidationError struct {
+<span id="ValidationError.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ValidationError.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationError.Code">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=46786:46825#L1367">Code</a>
+					<a class="permalink" href="index.html#ValidationError.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.Error">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=47132:47172#L1384">Error</a>
+					<a class="permalink" href="index.html#ValidationError.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.GoString">func (ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=46561:46603#L1356">GoString</a>
+					<a class="permalink" href="index.html#ValidationError.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationError">ValidationError</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.Message">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=46901:46943#L1372">Message</a>
+					<a class="permalink" href="index.html#ValidationError.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.OrigErr">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=47073:47114#L1380">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationError.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.RequestID">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=47458:47502#L1394">RequestID</a>
+					<a class="permalink" href="index.html#ValidationError.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.StatusCode">func (*ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=47309:47351#L1389">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationError.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationError">ValidationError</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationError.String">func (ValidationError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sagemakerfeaturestoreruntime/api.go?s=46237:46277#L1347">String</a>
+					<a class="permalink" href="index.html#ValidationError.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationError">ValidationError</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="sagemakerfeaturestoreruntimeiface/index.html">sagemakerfeaturestoreruntimeiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package sagemakerfeaturestoreruntimeiface provides an interface to enable mocking the Amazon SageMaker Feature Store Runtime service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

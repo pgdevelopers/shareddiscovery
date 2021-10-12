@@ -1,0 +1,393 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>connectwisdomserviceiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package connectwisdomserviceiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/connectwisdomservice/connectwisdomserviceiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package connectwisdomserviceiface provides an interface to enable mocking the Amazon Connect Wisdom Service service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ConnectWisdomServiceAPI">type ConnectWisdomServiceAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/connectwisdomservice/connectwisdomserviceiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ConnectWisdomServiceAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/connectwisdomservice/connectwisdomserviceiface/interface.go?s=2378:17814#L52">ConnectWisdomServiceAPI</a>
+				<a class="permalink" href="index.html#ConnectWisdomServiceAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+ConnectWisdomServiceAPI provides an interface to enable mocking the
+connectwisdomservice.ConnectWisdomService service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Connect Wisdom Service.
+func myFunc(svc connectwisdomserviceiface.ConnectWisdomServiceAPI) bool {
+    // Make svc.CreateAssistant request
+}
+
+func main() {
+    sess := session.New()
+    svc := connectwisdomservice.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockConnectWisdomServiceClient struct {
+    connectwisdomserviceiface.ConnectWisdomServiceAPI
+}
+func (m *mockConnectWisdomServiceClient) CreateAssistant(input *connectwisdomservice.CreateAssistantInput) (*connectwisdomservice.CreateAssistantOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockConnectWisdomServiceClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type ConnectWisdomServiceAPI interface {
+    CreateAssistant(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantInput">CreateAssistantInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantOutput">CreateAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssistantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantInput">CreateAssistantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantOutput">CreateAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssistantRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantInput">CreateAssistantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantOutput">CreateAssistantOutput</a>)
+
+    CreateAssistantAssociation(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationInput">CreateAssistantAssociationInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationOutput">CreateAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssistantAssociationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationInput">CreateAssistantAssociationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationOutput">CreateAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAssistantAssociationRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationInput">CreateAssistantAssociationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateAssistantAssociationOutput">CreateAssistantAssociationOutput</a>)
+
+    CreateContent(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentInput">CreateContentInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentOutput">CreateContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentInput">CreateContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentOutput">CreateContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateContentRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentInput">CreateContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateContentOutput">CreateContentOutput</a>)
+
+    CreateKnowledgeBase(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseInput">CreateKnowledgeBaseInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseOutput">CreateKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateKnowledgeBaseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseInput">CreateKnowledgeBaseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseOutput">CreateKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateKnowledgeBaseRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseInput">CreateKnowledgeBaseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateKnowledgeBaseOutput">CreateKnowledgeBaseOutput</a>)
+
+    CreateSession(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionInput">CreateSessionInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionOutput">CreateSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionInput">CreateSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionOutput">CreateSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSessionRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionInput">CreateSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#CreateSessionOutput">CreateSessionOutput</a>)
+
+    DeleteAssistant(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantInput">DeleteAssistantInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantOutput">DeleteAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssistantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantInput">DeleteAssistantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantOutput">DeleteAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssistantRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantInput">DeleteAssistantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantOutput">DeleteAssistantOutput</a>)
+
+    DeleteAssistantAssociation(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationInput">DeleteAssistantAssociationInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationOutput">DeleteAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssistantAssociationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationInput">DeleteAssistantAssociationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationOutput">DeleteAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAssistantAssociationRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationInput">DeleteAssistantAssociationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteAssistantAssociationOutput">DeleteAssistantAssociationOutput</a>)
+
+    DeleteContent(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentInput">DeleteContentInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentOutput">DeleteContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentInput">DeleteContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentOutput">DeleteContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteContentRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentInput">DeleteContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteContentOutput">DeleteContentOutput</a>)
+
+    DeleteKnowledgeBase(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseInput">DeleteKnowledgeBaseInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseOutput">DeleteKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteKnowledgeBaseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseInput">DeleteKnowledgeBaseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseOutput">DeleteKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteKnowledgeBaseRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseInput">DeleteKnowledgeBaseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#DeleteKnowledgeBaseOutput">DeleteKnowledgeBaseOutput</a>)
+
+    GetAssistant(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantInput">GetAssistantInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantOutput">GetAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssistantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantInput">GetAssistantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantOutput">GetAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssistantRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantInput">GetAssistantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantOutput">GetAssistantOutput</a>)
+
+    GetAssistantAssociation(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationInput">GetAssistantAssociationInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationOutput">GetAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssistantAssociationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationInput">GetAssistantAssociationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationOutput">GetAssistantAssociationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAssistantAssociationRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationInput">GetAssistantAssociationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetAssistantAssociationOutput">GetAssistantAssociationOutput</a>)
+
+    GetContent(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentInput">GetContentInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentOutput">GetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentInput">GetContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentOutput">GetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentInput">GetContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentOutput">GetContentOutput</a>)
+
+    GetContentSummary(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryInput">GetContentSummaryInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryOutput">GetContentSummaryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentSummaryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryInput">GetContentSummaryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryOutput">GetContentSummaryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentSummaryRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryInput">GetContentSummaryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetContentSummaryOutput">GetContentSummaryOutput</a>)
+
+    GetKnowledgeBase(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseInput">GetKnowledgeBaseInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseOutput">GetKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetKnowledgeBaseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseInput">GetKnowledgeBaseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseOutput">GetKnowledgeBaseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetKnowledgeBaseRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseInput">GetKnowledgeBaseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetKnowledgeBaseOutput">GetKnowledgeBaseOutput</a>)
+
+    GetRecommendations(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsInput">GetRecommendationsInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsOutput">GetRecommendationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRecommendationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsInput">GetRecommendationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsOutput">GetRecommendationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRecommendationsRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsInput">GetRecommendationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetRecommendationsOutput">GetRecommendationsOutput</a>)
+
+    GetSession(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionInput">GetSessionInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionOutput">GetSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionInput">GetSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionOutput">GetSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSessionRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionInput">GetSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#GetSessionOutput">GetSessionOutput</a>)
+
+    ListAssistantAssociations(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsInput">ListAssistantAssociationsInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsOutput">ListAssistantAssociationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssistantAssociationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsInput">ListAssistantAssociationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsOutput">ListAssistantAssociationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssistantAssociationsRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsInput">ListAssistantAssociationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsOutput">ListAssistantAssociationsOutput</a>)
+
+    ListAssistantAssociationsPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsInput">ListAssistantAssociationsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsOutput">ListAssistantAssociationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssistantAssociationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsInput">ListAssistantAssociationsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantAssociationsOutput">ListAssistantAssociationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAssistants(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsInput">ListAssistantsInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsOutput">ListAssistantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssistantsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsInput">ListAssistantsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsOutput">ListAssistantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssistantsRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsInput">ListAssistantsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsOutput">ListAssistantsOutput</a>)
+
+    ListAssistantsPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsInput">ListAssistantsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsOutput">ListAssistantsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAssistantsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsInput">ListAssistantsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListAssistantsOutput">ListAssistantsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListContents(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsInput">ListContentsInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsOutput">ListContentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsInput">ListContentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsOutput">ListContentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContentsRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsInput">ListContentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsOutput">ListContentsOutput</a>)
+
+    ListContentsPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsInput">ListContentsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsOutput">ListContentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListContentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsInput">ListContentsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListContentsOutput">ListContentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListKnowledgeBases(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesInput">ListKnowledgeBasesInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesOutput">ListKnowledgeBasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListKnowledgeBasesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesInput">ListKnowledgeBasesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesOutput">ListKnowledgeBasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListKnowledgeBasesRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesInput">ListKnowledgeBasesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesOutput">ListKnowledgeBasesOutput</a>)
+
+    ListKnowledgeBasesPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesInput">ListKnowledgeBasesInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesOutput">ListKnowledgeBasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListKnowledgeBasesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesInput">ListKnowledgeBasesInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListKnowledgeBasesOutput">ListKnowledgeBasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    NotifyRecommendationsReceived(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedInput">NotifyRecommendationsReceivedInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedOutput">NotifyRecommendationsReceivedOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    NotifyRecommendationsReceivedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedInput">NotifyRecommendationsReceivedInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedOutput">NotifyRecommendationsReceivedOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    NotifyRecommendationsReceivedRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedInput">NotifyRecommendationsReceivedInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#NotifyRecommendationsReceivedOutput">NotifyRecommendationsReceivedOutput</a>)
+
+    QueryAssistant(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantInput">QueryAssistantInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantOutput">QueryAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    QueryAssistantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantInput">QueryAssistantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantOutput">QueryAssistantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    QueryAssistantRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantInput">QueryAssistantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantOutput">QueryAssistantOutput</a>)
+
+    QueryAssistantPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantInput">QueryAssistantInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantOutput">QueryAssistantOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    QueryAssistantPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantInput">QueryAssistantInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#QueryAssistantOutput">QueryAssistantOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    RemoveKnowledgeBaseTemplateUri(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriInput">RemoveKnowledgeBaseTemplateUriInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriOutput">RemoveKnowledgeBaseTemplateUriOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveKnowledgeBaseTemplateUriWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriInput">RemoveKnowledgeBaseTemplateUriInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriOutput">RemoveKnowledgeBaseTemplateUriOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveKnowledgeBaseTemplateUriRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriInput">RemoveKnowledgeBaseTemplateUriInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#RemoveKnowledgeBaseTemplateUriOutput">RemoveKnowledgeBaseTemplateUriOutput</a>)
+
+    SearchContent(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentInput">SearchContentInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentOutput">SearchContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentInput">SearchContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentOutput">SearchContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchContentRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentInput">SearchContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentOutput">SearchContentOutput</a>)
+
+    SearchContentPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentInput">SearchContentInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentOutput">SearchContentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    SearchContentPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentInput">SearchContentInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchContentOutput">SearchContentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    SearchSessions(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsInput">SearchSessionsInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsOutput">SearchSessionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchSessionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsInput">SearchSessionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsOutput">SearchSessionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchSessionsRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsInput">SearchSessionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsOutput">SearchSessionsOutput</a>)
+
+    SearchSessionsPages(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsInput">SearchSessionsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsOutput">SearchSessionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    SearchSessionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsInput">SearchSessionsInput</a>, func(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#SearchSessionsOutput">SearchSessionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    StartContentUpload(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadInput">StartContentUploadInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadOutput">StartContentUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartContentUploadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadInput">StartContentUploadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadOutput">StartContentUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartContentUploadRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadInput">StartContentUploadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#StartContentUploadOutput">StartContentUploadOutput</a>)
+
+    TagResource(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateContent(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentInput">UpdateContentInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentOutput">UpdateContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentInput">UpdateContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentOutput">UpdateContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContentRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentInput">UpdateContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateContentOutput">UpdateContentOutput</a>)
+
+    UpdateKnowledgeBaseTemplateUri(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriInput">UpdateKnowledgeBaseTemplateUriInput</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriOutput">UpdateKnowledgeBaseTemplateUriOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateKnowledgeBaseTemplateUriWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriInput">UpdateKnowledgeBaseTemplateUriInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriOutput">UpdateKnowledgeBaseTemplateUriOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateKnowledgeBaseTemplateUriRequest(*<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriInput">UpdateKnowledgeBaseTemplateUriInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">connectwisdomservice</a>.<a href="../index.html#UpdateKnowledgeBaseTemplateUriOutput">UpdateKnowledgeBaseTemplateUriOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,2236 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>apigatewaymanagementapi - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package apigatewaymanagementapi
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/apigatewaymanagementapi&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package apigatewaymanagementapi provides the client and types for making API
+requests to AmazonApiGatewayManagementApi.
+</p>
+<p>
+The Amazon API Gateway Management API allows you to directly manage runtime
+aspects of your deployed APIs. To use it, you must explicitly set the SDK&#39;s
+endpoint to point to the endpoint of your deployed API. The endpoint will
+be of the form https://{api-id}.execute-api.{region}.amazonaws.com/{stage},
+or will be the endpoint corresponding to your API&#39;s custom domain and base
+path, if applicable.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29</a> for more information on this service.
+</p>
+<p>
+See apigatewaymanagementapi package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/apigatewaymanagementapi/">https://docs.aws.amazon.com/sdk-for-go/api/service/apigatewaymanagementapi/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AmazonApiGatewayManagementApi with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AmazonApiGatewayManagementApi client ApiGatewayManagementApi for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/apigatewaymanagementapi/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/apigatewaymanagementapi/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ApiGatewayManagementApi">type ApiGatewayManagementApi</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *ApiGatewayManagementApi</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.DeleteConnection">func (c *ApiGatewayManagementApi) DeleteConnection(input *DeleteConnectionInput) (*DeleteConnectionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.DeleteConnectionRequest">func (c *ApiGatewayManagementApi) DeleteConnectionRequest(input *DeleteConnectionInput) (req *request.Request, output *DeleteConnectionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.DeleteConnectionWithContext">func (c *ApiGatewayManagementApi) DeleteConnectionWithContext(ctx aws.Context, input *DeleteConnectionInput, opts ...request.Option) (*DeleteConnectionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.GetConnection">func (c *ApiGatewayManagementApi) GetConnection(input *GetConnectionInput) (*GetConnectionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.GetConnectionRequest">func (c *ApiGatewayManagementApi) GetConnectionRequest(input *GetConnectionInput) (req *request.Request, output *GetConnectionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.GetConnectionWithContext">func (c *ApiGatewayManagementApi) GetConnectionWithContext(ctx aws.Context, input *GetConnectionInput, opts ...request.Option) (*GetConnectionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.PostToConnection">func (c *ApiGatewayManagementApi) PostToConnection(input *PostToConnectionInput) (*PostToConnectionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.PostToConnectionRequest">func (c *ApiGatewayManagementApi) PostToConnectionRequest(input *PostToConnectionInput) (req *request.Request, output *PostToConnectionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApiGatewayManagementApi.PostToConnectionWithContext">func (c *ApiGatewayManagementApi) PostToConnectionWithContext(ctx aws.Context, input *PostToConnectionInput, opts ...request.Option) (*PostToConnectionOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteConnectionInput">type DeleteConnectionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionInput.GoString">func (s DeleteConnectionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionInput.SetConnectionId">func (s *DeleteConnectionInput) SetConnectionId(v string) *DeleteConnectionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionInput.String">func (s DeleteConnectionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionInput.Validate">func (s *DeleteConnectionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteConnectionOutput">type DeleteConnectionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionOutput.GoString">func (s DeleteConnectionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteConnectionOutput.String">func (s DeleteConnectionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ForbiddenException">type ForbiddenException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.Code">func (s *ForbiddenException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.Error">func (s *ForbiddenException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.GoString">func (s ForbiddenException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.Message">func (s *ForbiddenException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.OrigErr">func (s *ForbiddenException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.RequestID">func (s *ForbiddenException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.StatusCode">func (s *ForbiddenException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ForbiddenException.String">func (s ForbiddenException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetConnectionInput">type GetConnectionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetConnectionInput.GoString">func (s GetConnectionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionInput.SetConnectionId">func (s *GetConnectionInput) SetConnectionId(v string) *GetConnectionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionInput.String">func (s GetConnectionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionInput.Validate">func (s *GetConnectionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetConnectionOutput">type GetConnectionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetConnectionOutput.GoString">func (s GetConnectionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionOutput.SetConnectedAt">func (s *GetConnectionOutput) SetConnectedAt(v time.Time) *GetConnectionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionOutput.SetIdentity">func (s *GetConnectionOutput) SetIdentity(v *Identity) *GetConnectionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionOutput.SetLastActiveAt">func (s *GetConnectionOutput) SetLastActiveAt(v time.Time) *GetConnectionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetConnectionOutput.String">func (s GetConnectionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GoneException">type GoneException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GoneException.Code">func (s *GoneException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.Error">func (s *GoneException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.GoString">func (s GoneException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.Message">func (s *GoneException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.OrigErr">func (s *GoneException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.RequestID">func (s *GoneException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.StatusCode">func (s *GoneException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#GoneException.String">func (s GoneException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Identity">type Identity</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Identity.GoString">func (s Identity) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Identity.SetSourceIp">func (s *Identity) SetSourceIp(v string) *Identity</a></dd>
+				
+					
+					<dd>    <a href="index.html#Identity.SetUserAgent">func (s *Identity) SetUserAgent(v string) *Identity</a></dd>
+				
+					
+					<dd>    <a href="index.html#Identity.String">func (s Identity) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LimitExceededException">type LimitExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Code">func (s *LimitExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Error">func (s *LimitExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.GoString">func (s LimitExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Message">func (s *LimitExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.OrigErr">func (s *LimitExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.RequestID">func (s *LimitExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.StatusCode">func (s *LimitExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.String">func (s LimitExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PayloadTooLargeException">type PayloadTooLargeException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.Code">func (s *PayloadTooLargeException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.Error">func (s *PayloadTooLargeException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.GoString">func (s PayloadTooLargeException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.Message">func (s *PayloadTooLargeException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.OrigErr">func (s *PayloadTooLargeException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.RequestID">func (s *PayloadTooLargeException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.StatusCode">func (s *PayloadTooLargeException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadTooLargeException.String">func (s PayloadTooLargeException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PostToConnectionInput">type PostToConnectionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PostToConnectionInput.GoString">func (s PostToConnectionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PostToConnectionInput.SetConnectionId">func (s *PostToConnectionInput) SetConnectionId(v string) *PostToConnectionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PostToConnectionInput.SetData">func (s *PostToConnectionInput) SetData(v []byte) *PostToConnectionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PostToConnectionInput.String">func (s PostToConnectionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PostToConnectionInput.Validate">func (s *PostToConnectionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PostToConnectionOutput">type PostToConnectionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PostToConnectionOutput.GoString">func (s PostToConnectionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PostToConnectionOutput.String">func (s PostToConnectionOutput) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeForbiddenException for service response error code</span>
+    <span class="comment">// &#34;ForbiddenException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The caller is not authorized to invoke this operation.</span>
+    <span id="ErrCodeForbiddenException">ErrCodeForbiddenException</span> = &#34;ForbiddenException&#34;
+
+    <span class="comment">// ErrCodeGoneException for service response error code</span>
+    <span class="comment">// &#34;GoneException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The connection with the provided id no longer exists.</span>
+    <span id="ErrCodeGoneException">ErrCodeGoneException</span> = &#34;GoneException&#34;
+
+    <span class="comment">// ErrCodeLimitExceededException for service response error code</span>
+    <span class="comment">// &#34;LimitExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The client is sending more than the allowed number of requests per unit of</span>
+    <span class="comment">// time or the WebSocket client side buffer is full.</span>
+    <span id="ErrCodeLimitExceededException">ErrCodeLimitExceededException</span> = &#34;LimitExceededException&#34;
+
+    <span class="comment">// ErrCodePayloadTooLargeException for service response error code</span>
+    <span class="comment">// &#34;PayloadTooLargeException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The data has exceeded the maximum size allowed.</span>
+    <span id="ErrCodePayloadTooLargeException">ErrCodePayloadTooLargeException</span> = &#34;PayloadTooLargeException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;ApiGatewayManagementApi&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;execute-api&#34;             <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;ApiGatewayManagementApi&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="ApiGatewayManagementApi">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/service.go?s=755:810#L11">ApiGatewayManagementApi</a>
+				<a class="permalink" href="index.html#ApiGatewayManagementApi">¶</a>
+				
+				
+			</h2>
+			<p>
+ApiGatewayManagementApi provides the API operation methods for making requests to
+AmazonApiGatewayManagementApi. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+ApiGatewayManagementApi methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type ApiGatewayManagementApi struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/service.go?s=1861:1940#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a></pre>
+				<p>
+New creates a new instance of the ApiGatewayManagementApi client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a ApiGatewayManagementApi client from just a session.
+svc := apigatewaymanagementapi.New(mySession)
+
+// Create a ApiGatewayManagementApi client with additional configuration
+svc := apigatewaymanagementapi.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ApiGatewayManagementApi.DeleteConnection">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=2879:2992#L72">DeleteConnection</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.DeleteConnection">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) DeleteConnection(input *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) (*<a href="index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteConnection API operation for AmazonApiGatewayManagementApi.
+</p>
+<p>
+Delete the connection with the provided id.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AmazonApiGatewayManagementApi&#39;s
+API operation DeleteConnection for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* GoneException
+The connection with the provided id no longer exists.
+
+* LimitExceededException
+The client is sending more than the allowed number of requests per unit of
+time or the WebSocket client side buffer is full.
+
+* ForbiddenException
+The caller is not authorized to invoke this operation.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.DeleteConnectionRequest">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=1440:1582#L32">DeleteConnectionRequest</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.DeleteConnectionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) DeleteConnectionRequest(input *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>)</pre>
+				<p>
+DeleteConnectionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DeleteConnection operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DeleteConnection for more information on using the DeleteConnection
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DeleteConnectionRequest method.
+req, resp := client.DeleteConnectionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.DeleteConnectionWithContext">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=3559:3724#L86">DeleteConnectionWithContext</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.DeleteConnectionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) DeleteConnectionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteConnectionWithContext is the same as DeleteConnection with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DeleteConnection for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.GetConnection">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=6239:6343#L158">GetConnection</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.GetConnection">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) GetConnection(input *<a href="index.html#GetConnectionInput">GetConnectionInput</a>) (*<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetConnection API operation for AmazonApiGatewayManagementApi.
+</p>
+<p>
+Get information about the connection with the provided id.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AmazonApiGatewayManagementApi&#39;s
+API operation GetConnection for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* GoneException
+The connection with the provided id no longer exists.
+
+* LimitExceededException
+The client is sending more than the allowed number of requests per unit of
+time or the WebSocket client side buffer is full.
+
+* ForbiddenException
+The caller is not authorized to invoke this operation.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.GetConnectionRequest">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=4914:5047#L119">GetConnectionRequest</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.GetConnectionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) GetConnectionRequest(input *<a href="index.html#GetConnectionInput">GetConnectionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>)</pre>
+				<p>
+GetConnectionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetConnection operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetConnection for more information on using the GetConnection
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetConnectionRequest method.
+req, resp := client.GetConnectionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.GetConnectionWithContext">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=6898:7054#L172">GetConnectionWithContext</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.GetConnectionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) GetConnectionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetConnectionInput">GetConnectionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetConnectionWithContext is the same as GetConnection with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetConnection for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.PostToConnection">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=9802:9915#L248">PostToConnection</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.PostToConnection">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) PostToConnection(input *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) (*<a href="index.html#PostToConnectionOutput">PostToConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PostToConnection API operation for AmazonApiGatewayManagementApi.
+</p>
+<p>
+Sends the provided data to the specified connection.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AmazonApiGatewayManagementApi&#39;s
+API operation PostToConnection for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* GoneException
+The connection with the provided id no longer exists.
+
+* LimitExceededException
+The client is sending more than the allowed number of requests per unit of
+time or the WebSocket client side buffer is full.
+
+* PayloadTooLargeException
+The data has exceeded the maximum size allowed.
+
+* ForbiddenException
+The caller is not authorized to invoke this operation.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.PostToConnectionRequest">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=8268:8410#L205">PostToConnectionRequest</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.PostToConnectionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) PostToConnectionRequest(input *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PostToConnectionOutput">PostToConnectionOutput</a>)</pre>
+				<p>
+PostToConnectionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PostToConnection operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PostToConnection for more information on using the PostToConnection
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PostToConnectionRequest method.
+req, resp := client.PostToConnectionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection">https://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApiGatewayManagementApi.PostToConnectionWithContext">func (*ApiGatewayManagementApi) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=10482:10647#L262">PostToConnectionWithContext</a>
+					<a class="permalink" href="index.html#ApiGatewayManagementApi.PostToConnectionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApiGatewayManagementApi">ApiGatewayManagementApi</a>) PostToConnectionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PostToConnectionOutput">PostToConnectionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PostToConnectionWithContext is the same as PostToConnection with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PostToConnection for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteConnectionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=10771:10974#L269">DeleteConnectionInput</a>
+				<a class="permalink" href="index.html#DeleteConnectionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteConnectionInput struct {
+
+<span id="DeleteConnectionInput.ConnectionId"></span>    <span class="comment">// ConnectionId is a required field</span>
+    ConnectionId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;connectionId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteConnectionInput.GoString">func (DeleteConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=11554:11602#L290">GoString</a>
+					<a class="permalink" href="index.html#DeleteConnectionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteConnectionInput.SetConnectionId">func (*DeleteConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=12180:12260#L311">SetConnectionId</a>
+					<a class="permalink" href="index.html#DeleteConnectionInput.SetConnectionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) SetConnectionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a></pre>
+				<p>
+SetConnectionId sets the ConnectionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteConnectionInput.String">func (DeleteConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=11224:11270#L281">String</a>
+					<a class="permalink" href="index.html#DeleteConnectionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteConnectionInput.Validate">func (*DeleteConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=11703:11751#L295">Validate</a>
+					<a class="permalink" href="index.html#DeleteConnectionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteConnectionInput">DeleteConnectionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteConnectionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=12297:12366#L316">DeleteConnectionOutput</a>
+				<a class="permalink" href="index.html#DeleteConnectionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteConnectionOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteConnectionOutput.GoString">func (DeleteConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=12947:12996#L334">GoString</a>
+					<a class="permalink" href="index.html#DeleteConnectionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteConnectionOutput.String">func (DeleteConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=12616:12663#L325">String</a>
+					<a class="permalink" href="index.html#DeleteConnectionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteConnectionOutput">DeleteConnectionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ForbiddenException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=13079:13289#L339">ForbiddenException</a>
+				<a class="permalink" href="index.html#ForbiddenException">¶</a>
+				
+				
+			</h2>
+			<p>
+The caller is not authorized to invoke this operation.
+</p>
+
+			<pre>type ForbiddenException struct {
+<span id="ForbiddenException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ForbiddenException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ForbiddenException.Code">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14100:14142#L371">Code</a>
+					<a class="permalink" href="index.html#ForbiddenException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.Error">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14458:14501#L388">Error</a>
+					<a class="permalink" href="index.html#ForbiddenException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.GoString">func (ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=13866:13911#L360">GoString</a>
+					<a class="permalink" href="index.html#ForbiddenException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ForbiddenException">ForbiddenException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.Message">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14221:14266#L376">Message</a>
+					<a class="permalink" href="index.html#ForbiddenException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.OrigErr">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14396:14440#L384">OrigErr</a>
+					<a class="permalink" href="index.html#ForbiddenException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.RequestID">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14790:14837#L398">RequestID</a>
+					<a class="permalink" href="index.html#ForbiddenException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.StatusCode">func (*ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14638:14683#L393">StatusCode</a>
+					<a class="permalink" href="index.html#ForbiddenException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ForbiddenException">ForbiddenException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ForbiddenException.String">func (ForbiddenException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=13539:13582#L351">String</a>
+					<a class="permalink" href="index.html#ForbiddenException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ForbiddenException">ForbiddenException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetConnectionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=14876:15076#L402">GetConnectionInput</a>
+				<a class="permalink" href="index.html#GetConnectionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetConnectionInput struct {
+
+<span id="GetConnectionInput.ConnectionId"></span>    <span class="comment">// ConnectionId is a required field</span>
+    ConnectionId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;connectionId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetConnectionInput.GoString">func (GetConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=15653:15698#L423">GoString</a>
+					<a class="permalink" href="index.html#GetConnectionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetConnectionInput">GetConnectionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionInput.SetConnectionId">func (*GetConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=16270:16344#L444">SetConnectionId</a>
+					<a class="permalink" href="index.html#GetConnectionInput.SetConnectionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetConnectionInput">GetConnectionInput</a>) SetConnectionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetConnectionInput">GetConnectionInput</a></pre>
+				<p>
+SetConnectionId sets the ConnectionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionInput.String">func (GetConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=15326:15369#L414">String</a>
+					<a class="permalink" href="index.html#GetConnectionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetConnectionInput">GetConnectionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionInput.Validate">func (*GetConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=15799:15844#L428">Validate</a>
+					<a class="permalink" href="index.html#GetConnectionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetConnectionInput">GetConnectionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetConnectionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=16381:16707#L449">GetConnectionOutput</a>
+				<a class="permalink" href="index.html#GetConnectionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetConnectionOutput struct {
+<span id="GetConnectionOutput.ConnectedAt"></span>    ConnectedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;connectedAt&#34; type:&#34;timestamp&#34; timestampFormat:&#34;iso8601&#34;`
+
+<span id="GetConnectionOutput.Identity"></span>    Identity *<a href="index.html#Identity">Identity</a> `locationName:&#34;identity&#34; type:&#34;structure&#34;`
+
+<span id="GetConnectionOutput.LastActiveAt"></span>    LastActiveAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastActiveAt&#34; type:&#34;timestamp&#34; timestampFormat:&#34;iso8601&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetConnectionOutput.GoString">func (GetConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=17285:17331#L473">GoString</a>
+					<a class="permalink" href="index.html#GetConnectionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetConnectionOutput">GetConnectionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionOutput.SetConnectedAt">func (*GetConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=17410:17488#L478">SetConnectedAt</a>
+					<a class="permalink" href="index.html#GetConnectionOutput.SetConnectedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>) SetConnectedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a></pre>
+				<p>
+SetConnectedAt sets the ConnectedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionOutput.SetIdentity">func (*GetConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=17572:17647#L484">SetIdentity</a>
+					<a class="permalink" href="index.html#GetConnectionOutput.SetIdentity">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>) SetIdentity(v *<a href="index.html#Identity">Identity</a>) *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a></pre>
+				<p>
+SetIdentity sets the Identity field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionOutput.SetLastActiveAt">func (*GetConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=17735:17814#L490">SetLastActiveAt</a>
+					<a class="permalink" href="index.html#GetConnectionOutput.SetLastActiveAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a>) SetLastActiveAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetConnectionOutput">GetConnectionOutput</a></pre>
+				<p>
+SetLastActiveAt sets the LastActiveAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetConnectionOutput.String">func (GetConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=16957:17001#L464">String</a>
+					<a class="permalink" href="index.html#GetConnectionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetConnectionOutput">GetConnectionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GoneException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=17908:18113#L496">GoneException</a>
+				<a class="permalink" href="index.html#GoneException">¶</a>
+				
+				
+			</h2>
+			<p>
+The connection with the provided id no longer exists.
+</p>
+
+			<pre>type GoneException struct {
+<span id="GoneException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="GoneException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GoneException.Code">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=18904:18941#L528">Code</a>
+					<a class="permalink" href="index.html#GoneException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.Error">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19242:19280#L545">Error</a>
+					<a class="permalink" href="index.html#GoneException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="GoneException.GoString">func (GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=18685:18725#L517">GoString</a>
+					<a class="permalink" href="index.html#GoneException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GoneException">GoneException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.Message">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19015:19055#L533">Message</a>
+					<a class="permalink" href="index.html#GoneException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.OrigErr">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19185:19224#L541">OrigErr</a>
+					<a class="permalink" href="index.html#GoneException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.RequestID">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19564:19606#L555">RequestID</a>
+					<a class="permalink" href="index.html#GoneException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.StatusCode">func (*GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19417:19457#L550">StatusCode</a>
+					<a class="permalink" href="index.html#GoneException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GoneException">GoneException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GoneException.String">func (GoneException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=18363:18401#L508">String</a>
+					<a class="permalink" href="index.html#GoneException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GoneException">GoneException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Identity">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=19645:20048#L559">Identity</a>
+				<a class="permalink" href="index.html#Identity">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type Identity struct {
+
+    <span class="comment">// The source IP address of the TCP connection making the request to API Gateway.</span>
+    <span class="comment">//</span>
+<span id="Identity.SourceIp"></span>    <span class="comment">// SourceIp is a required field</span>
+    SourceIp *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;sourceIp&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The User Agent of the API caller.</span>
+    <span class="comment">//</span>
+<span id="Identity.UserAgent"></span>    <span class="comment">// UserAgent is a required field</span>
+    UserAgent *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;userAgent&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Identity.GoString">func (Identity) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=20615:20650#L587">GoString</a>
+					<a class="permalink" href="index.html#Identity.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Identity">Identity</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Identity.SetSourceIp">func (*Identity) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=20723:20773#L592">SetSourceIp</a>
+					<a class="permalink" href="index.html#Identity.SetSourceIp">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Identity">Identity</a>) SetSourceIp(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Identity">Identity</a></pre>
+				<p>
+SetSourceIp sets the SourceIp field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Identity.SetUserAgent">func (*Identity) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=20856:20907#L598">SetUserAgent</a>
+					<a class="permalink" href="index.html#Identity.SetUserAgent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Identity">Identity</a>) SetUserAgent(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Identity">Identity</a></pre>
+				<p>
+SetUserAgent sets the UserAgent field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Identity.String">func (Identity) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=20298:20331#L578">String</a>
+					<a class="permalink" href="index.html#Identity.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Identity">Identity</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LimitExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=21072:21286#L605">LimitExceededException</a>
+				<a class="permalink" href="index.html#LimitExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+The client is sending more than the allowed number of requests per unit of
+time or the WebSocket client side buffer is full.
+</p>
+
+			<pre>type LimitExceededException struct {
+<span id="LimitExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="LimitExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LimitExceededException.Code">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22113:22159#L637">Code</a>
+					<a class="permalink" href="index.html#LimitExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Error">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22487:22534#L654">Error</a>
+					<a class="permalink" href="index.html#LimitExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.GoString">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=21867:21916#L626">GoString</a>
+					<a class="permalink" href="index.html#LimitExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Message">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22242:22291#L642">Message</a>
+					<a class="permalink" href="index.html#LimitExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.OrigErr">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22421:22469#L650">OrigErr</a>
+					<a class="permalink" href="index.html#LimitExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.RequestID">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22827:22878#L664">RequestID</a>
+					<a class="permalink" href="index.html#LimitExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.StatusCode">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22671:22720#L659">StatusCode</a>
+					<a class="permalink" href="index.html#LimitExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.String">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=21536:21583#L617">String</a>
+					<a class="permalink" href="index.html#LimitExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PayloadTooLargeException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=22968:23184#L669">PayloadTooLargeException</a>
+				<a class="permalink" href="index.html#PayloadTooLargeException">¶</a>
+				
+				
+			</h2>
+			<p>
+The data has exceeded the maximum size allowed.
+</p>
+
+			<pre>type PayloadTooLargeException struct {
+<span id="PayloadTooLargeException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="PayloadTooLargeException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PayloadTooLargeException.Code">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24019:24067#L701">Code</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.Error">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24401:24450#L718">Error</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.GoString">func (PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=23767:23818#L690">GoString</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.Message">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24152:24203#L706">Message</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.OrigErr">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24333:24383#L714">OrigErr</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.RequestID">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24745:24798#L728">RequestID</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.StatusCode">func (*PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24587:24638#L723">StatusCode</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadTooLargeException.String">func (PayloadTooLargeException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=23434:23483#L681">String</a>
+					<a class="permalink" href="index.html#PayloadTooLargeException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadTooLargeException">PayloadTooLargeException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PostToConnectionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=24837:25202#L732">PostToConnectionInput</a>
+				<a class="permalink" href="index.html#PostToConnectionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PostToConnectionInput struct {
+
+<span id="PostToConnectionInput.ConnectionId"></span>    <span class="comment">// ConnectionId is a required field</span>
+    ConnectionId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;connectionId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The data to be sent to the client specified by its connection id.</span>
+    <span class="comment">//</span>
+<span id="PostToConnectionInput.Data"></span>    <span class="comment">// Data is a required field</span>
+    Data []<a href="../../../../../builtin/index.html#byte">byte</a> `type:&#34;blob&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PostToConnectionInput.GoString">func (PostToConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=25782:25830#L758">GoString</a>
+					<a class="permalink" href="index.html#PostToConnectionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PostToConnectionInput.SetConnectionId">func (*PostToConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=26488:26568#L782">SetConnectionId</a>
+					<a class="permalink" href="index.html#PostToConnectionInput.SetConnectionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) SetConnectionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a></pre>
+				<p>
+SetConnectionId sets the ConnectionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PostToConnectionInput.SetData">func (*PostToConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=26645:26717#L788">SetData</a>
+					<a class="permalink" href="index.html#PostToConnectionInput.SetData">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) SetData(v []<a href="../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a></pre>
+				<p>
+SetData sets the Data field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PostToConnectionInput.String">func (PostToConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=25452:25498#L749">String</a>
+					<a class="permalink" href="index.html#PostToConnectionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PostToConnectionInput.Validate">func (*PostToConnectionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=25931:25979#L763">Validate</a>
+					<a class="permalink" href="index.html#PostToConnectionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PostToConnectionInput">PostToConnectionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PostToConnectionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=26745:26814#L793">PostToConnectionOutput</a>
+				<a class="permalink" href="index.html#PostToConnectionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PostToConnectionOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PostToConnectionOutput.GoString">func (PostToConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=27395:27444#L811">GoString</a>
+					<a class="permalink" href="index.html#PostToConnectionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PostToConnectionOutput">PostToConnectionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PostToConnectionOutput.String">func (PostToConnectionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/api.go?s=27064:27111#L802">String</a>
+					<a class="permalink" href="index.html#PostToConnectionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PostToConnectionOutput">PostToConnectionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="apigatewaymanagementapiiface/index.html">apigatewaymanagementapiiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package apigatewaymanagementapiiface provides an interface to enable mocking the AmazonApiGatewayManagementApi service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

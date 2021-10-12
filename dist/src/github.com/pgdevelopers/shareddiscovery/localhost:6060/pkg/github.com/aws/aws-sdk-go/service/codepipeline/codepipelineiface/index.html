@@ -1,0 +1,422 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>codepipelineiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package codepipelineiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package codepipelineiface provides an interface to enable mocking the AWS CodePipeline service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CodePipelineAPI">type CodePipelineAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CodePipelineAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface/interface.go?s=2220:19017#L52">CodePipelineAPI</a>
+				<a class="permalink" href="index.html#CodePipelineAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CodePipelineAPI provides an interface to enable mocking the
+codepipeline.CodePipeline service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS CodePipeline.
+func myFunc(svc codepipelineiface.CodePipelineAPI) bool {
+    // Make svc.AcknowledgeJob request
+}
+
+func main() {
+    sess := session.New()
+    svc := codepipeline.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCodePipelineClient struct {
+    codepipelineiface.CodePipelineAPI
+}
+func (m *mockCodePipelineClient) AcknowledgeJob(input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCodePipelineClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CodePipelineAPI interface {
+    AcknowledgeJob(*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobInput">AcknowledgeJobInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobOutput">AcknowledgeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcknowledgeJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobInput">AcknowledgeJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobOutput">AcknowledgeJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcknowledgeJobRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobInput">AcknowledgeJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeJobOutput">AcknowledgeJobOutput</a>)
+
+    AcknowledgeThirdPartyJob(*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobInput">AcknowledgeThirdPartyJobInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobOutput">AcknowledgeThirdPartyJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcknowledgeThirdPartyJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobInput">AcknowledgeThirdPartyJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobOutput">AcknowledgeThirdPartyJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcknowledgeThirdPartyJobRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobInput">AcknowledgeThirdPartyJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#AcknowledgeThirdPartyJobOutput">AcknowledgeThirdPartyJobOutput</a>)
+
+    CreateCustomActionType(*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeInput">CreateCustomActionTypeInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeOutput">CreateCustomActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomActionTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeInput">CreateCustomActionTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeOutput">CreateCustomActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomActionTypeRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeInput">CreateCustomActionTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#CreateCustomActionTypeOutput">CreateCustomActionTypeOutput</a>)
+
+    CreatePipeline(*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePipelineRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>)
+
+    DeleteCustomActionType(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeInput">DeleteCustomActionTypeInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeOutput">DeleteCustomActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomActionTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeInput">DeleteCustomActionTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeOutput">DeleteCustomActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomActionTypeRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeInput">DeleteCustomActionTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteCustomActionTypeOutput">DeleteCustomActionTypeOutput</a>)
+
+    DeletePipeline(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePipelineRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>)
+
+    DeleteWebhook(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookInput">DeleteWebhookInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookOutput">DeleteWebhookOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWebhookWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookInput">DeleteWebhookInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookOutput">DeleteWebhookOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWebhookRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookInput">DeleteWebhookInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeleteWebhookOutput">DeleteWebhookOutput</a>)
+
+    DeregisterWebhookWithThirdParty(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyInput">DeregisterWebhookWithThirdPartyInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyOutput">DeregisterWebhookWithThirdPartyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterWebhookWithThirdPartyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyInput">DeregisterWebhookWithThirdPartyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyOutput">DeregisterWebhookWithThirdPartyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterWebhookWithThirdPartyRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyInput">DeregisterWebhookWithThirdPartyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DeregisterWebhookWithThirdPartyOutput">DeregisterWebhookWithThirdPartyOutput</a>)
+
+    DisableStageTransition(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionInput">DisableStageTransitionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionOutput">DisableStageTransitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableStageTransitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionInput">DisableStageTransitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionOutput">DisableStageTransitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableStageTransitionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionInput">DisableStageTransitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#DisableStageTransitionOutput">DisableStageTransitionOutput</a>)
+
+    EnableStageTransition(*<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionInput">EnableStageTransitionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionOutput">EnableStageTransitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableStageTransitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionInput">EnableStageTransitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionOutput">EnableStageTransitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableStageTransitionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionInput">EnableStageTransitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#EnableStageTransitionOutput">EnableStageTransitionOutput</a>)
+
+    GetActionType(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeInput">GetActionTypeInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeOutput">GetActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetActionTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeInput">GetActionTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeOutput">GetActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetActionTypeRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeInput">GetActionTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetActionTypeOutput">GetActionTypeOutput</a>)
+
+    GetJobDetails(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsInput">GetJobDetailsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsOutput">GetJobDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetJobDetailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsInput">GetJobDetailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsOutput">GetJobDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetJobDetailsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsInput">GetJobDetailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetJobDetailsOutput">GetJobDetailsOutput</a>)
+
+    GetPipeline(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineInput">GetPipelineInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineOutput">GetPipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineInput">GetPipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineOutput">GetPipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineInput">GetPipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineOutput">GetPipelineOutput</a>)
+
+    GetPipelineExecution(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionInput">GetPipelineExecutionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionOutput">GetPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionInput">GetPipelineExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionOutput">GetPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineExecutionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionInput">GetPipelineExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineExecutionOutput">GetPipelineExecutionOutput</a>)
+
+    GetPipelineState(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateInput">GetPipelineStateInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateOutput">GetPipelineStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineStateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateInput">GetPipelineStateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateOutput">GetPipelineStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPipelineStateRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateInput">GetPipelineStateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetPipelineStateOutput">GetPipelineStateOutput</a>)
+
+    GetThirdPartyJobDetails(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsInput">GetThirdPartyJobDetailsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsOutput">GetThirdPartyJobDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetThirdPartyJobDetailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsInput">GetThirdPartyJobDetailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsOutput">GetThirdPartyJobDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetThirdPartyJobDetailsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsInput">GetThirdPartyJobDetailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#GetThirdPartyJobDetailsOutput">GetThirdPartyJobDetailsOutput</a>)
+
+    ListActionExecutions(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsInput">ListActionExecutionsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsOutput">ListActionExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActionExecutionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsInput">ListActionExecutionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsOutput">ListActionExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActionExecutionsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsInput">ListActionExecutionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsOutput">ListActionExecutionsOutput</a>)
+
+    ListActionExecutionsPages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsInput">ListActionExecutionsInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsOutput">ListActionExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListActionExecutionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsInput">ListActionExecutionsInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionExecutionsOutput">ListActionExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListActionTypes(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesInput">ListActionTypesInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesOutput">ListActionTypesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActionTypesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesInput">ListActionTypesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesOutput">ListActionTypesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActionTypesRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesInput">ListActionTypesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesOutput">ListActionTypesOutput</a>)
+
+    ListActionTypesPages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesInput">ListActionTypesInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesOutput">ListActionTypesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListActionTypesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesInput">ListActionTypesInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListActionTypesOutput">ListActionTypesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPipelineExecutions(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsInput">ListPipelineExecutionsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsOutput">ListPipelineExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelineExecutionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsInput">ListPipelineExecutionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsOutput">ListPipelineExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelineExecutionsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsInput">ListPipelineExecutionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsOutput">ListPipelineExecutionsOutput</a>)
+
+    ListPipelineExecutionsPages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsInput">ListPipelineExecutionsInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsOutput">ListPipelineExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPipelineExecutionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsInput">ListPipelineExecutionsInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelineExecutionsOutput">ListPipelineExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPipelines(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelinesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelinesRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>)
+
+    ListPipelinesPages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPipelinesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWebhooks(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksInput">ListWebhooksInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksOutput">ListWebhooksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebhooksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksInput">ListWebhooksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksOutput">ListWebhooksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWebhooksRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksInput">ListWebhooksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksOutput">ListWebhooksOutput</a>)
+
+    ListWebhooksPages(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksInput">ListWebhooksInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksOutput">ListWebhooksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWebhooksPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksInput">ListWebhooksInput</a>, func(*<a href="../index.html">codepipeline</a>.<a href="../index.html#ListWebhooksOutput">ListWebhooksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PollForJobs(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsInput">PollForJobsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsOutput">PollForJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PollForJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsInput">PollForJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsOutput">PollForJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PollForJobsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsInput">PollForJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForJobsOutput">PollForJobsOutput</a>)
+
+    PollForThirdPartyJobs(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsInput">PollForThirdPartyJobsInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsOutput">PollForThirdPartyJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PollForThirdPartyJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsInput">PollForThirdPartyJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsOutput">PollForThirdPartyJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PollForThirdPartyJobsRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsInput">PollForThirdPartyJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PollForThirdPartyJobsOutput">PollForThirdPartyJobsOutput</a>)
+
+    PutActionRevision(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionInput">PutActionRevisionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionOutput">PutActionRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutActionRevisionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionInput">PutActionRevisionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionOutput">PutActionRevisionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutActionRevisionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionInput">PutActionRevisionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutActionRevisionOutput">PutActionRevisionOutput</a>)
+
+    PutApprovalResult(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultInput">PutApprovalResultInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultOutput">PutApprovalResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutApprovalResultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultInput">PutApprovalResultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultOutput">PutApprovalResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutApprovalResultRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultInput">PutApprovalResultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutApprovalResultOutput">PutApprovalResultOutput</a>)
+
+    PutJobFailureResult(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultInput">PutJobFailureResultInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultOutput">PutJobFailureResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutJobFailureResultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultInput">PutJobFailureResultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultOutput">PutJobFailureResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutJobFailureResultRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultInput">PutJobFailureResultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobFailureResultOutput">PutJobFailureResultOutput</a>)
+
+    PutJobSuccessResult(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultInput">PutJobSuccessResultInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultOutput">PutJobSuccessResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutJobSuccessResultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultInput">PutJobSuccessResultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultOutput">PutJobSuccessResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutJobSuccessResultRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultInput">PutJobSuccessResultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutJobSuccessResultOutput">PutJobSuccessResultOutput</a>)
+
+    PutThirdPartyJobFailureResult(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultInput">PutThirdPartyJobFailureResultInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultOutput">PutThirdPartyJobFailureResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutThirdPartyJobFailureResultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultInput">PutThirdPartyJobFailureResultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultOutput">PutThirdPartyJobFailureResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutThirdPartyJobFailureResultRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultInput">PutThirdPartyJobFailureResultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobFailureResultOutput">PutThirdPartyJobFailureResultOutput</a>)
+
+    PutThirdPartyJobSuccessResult(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultInput">PutThirdPartyJobSuccessResultInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultOutput">PutThirdPartyJobSuccessResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutThirdPartyJobSuccessResultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultInput">PutThirdPartyJobSuccessResultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultOutput">PutThirdPartyJobSuccessResultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutThirdPartyJobSuccessResultRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultInput">PutThirdPartyJobSuccessResultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutThirdPartyJobSuccessResultOutput">PutThirdPartyJobSuccessResultOutput</a>)
+
+    PutWebhook(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookInput">PutWebhookInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookOutput">PutWebhookOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutWebhookWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookInput">PutWebhookInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookOutput">PutWebhookOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutWebhookRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookInput">PutWebhookInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#PutWebhookOutput">PutWebhookOutput</a>)
+
+    RegisterWebhookWithThirdParty(*<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyInput">RegisterWebhookWithThirdPartyInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyOutput">RegisterWebhookWithThirdPartyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterWebhookWithThirdPartyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyInput">RegisterWebhookWithThirdPartyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyOutput">RegisterWebhookWithThirdPartyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterWebhookWithThirdPartyRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyInput">RegisterWebhookWithThirdPartyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#RegisterWebhookWithThirdPartyOutput">RegisterWebhookWithThirdPartyOutput</a>)
+
+    RetryStageExecution(*<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionInput">RetryStageExecutionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionOutput">RetryStageExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RetryStageExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionInput">RetryStageExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionOutput">RetryStageExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RetryStageExecutionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionInput">RetryStageExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#RetryStageExecutionOutput">RetryStageExecutionOutput</a>)
+
+    StartPipelineExecution(*<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionInput">StartPipelineExecutionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionOutput">StartPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPipelineExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionInput">StartPipelineExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionOutput">StartPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPipelineExecutionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionInput">StartPipelineExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#StartPipelineExecutionOutput">StartPipelineExecutionOutput</a>)
+
+    StopPipelineExecution(*<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionInput">StopPipelineExecutionInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionOutput">StopPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopPipelineExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionInput">StopPipelineExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionOutput">StopPipelineExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopPipelineExecutionRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionInput">StopPipelineExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#StopPipelineExecutionOutput">StopPipelineExecutionOutput</a>)
+
+    TagResource(*<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateActionType(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeInput">UpdateActionTypeInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeOutput">UpdateActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateActionTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeInput">UpdateActionTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeOutput">UpdateActionTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateActionTypeRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeInput">UpdateActionTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdateActionTypeOutput">UpdateActionTypeOutput</a>)
+
+    UpdatePipeline(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePipelineRequest(*<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codepipeline</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

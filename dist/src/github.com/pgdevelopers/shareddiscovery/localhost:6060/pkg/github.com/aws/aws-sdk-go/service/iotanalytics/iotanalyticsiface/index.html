@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>iotanalyticsiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package iotanalyticsiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/iotanalytics/iotanalyticsiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package iotanalyticsiface provides an interface to enable mocking the AWS IoT Analytics service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#IoTAnalyticsAPI">type IoTAnalyticsAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotanalytics/iotanalyticsiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="IoTAnalyticsAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotanalytics/iotanalyticsiface/interface.go?s=2226:15994#L52">IoTAnalyticsAPI</a>
+				<a class="permalink" href="index.html#IoTAnalyticsAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+IoTAnalyticsAPI provides an interface to enable mocking the
+iotanalytics.IoTAnalytics service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS IoT Analytics.
+func myFunc(svc iotanalyticsiface.IoTAnalyticsAPI) bool {
+    // Make svc.BatchPutMessage request
+}
+
+func main() {
+    sess := session.New()
+    svc := iotanalytics.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockIoTAnalyticsClient struct {
+    iotanalyticsiface.IoTAnalyticsAPI
+}
+func (m *mockIoTAnalyticsClient) BatchPutMessage(input *iotanalytics.BatchPutMessageInput) (*iotanalytics.BatchPutMessageOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockIoTAnalyticsClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type IoTAnalyticsAPI interface {
+    BatchPutMessage(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageInput">BatchPutMessageInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageOutput">BatchPutMessageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchPutMessageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageInput">BatchPutMessageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageOutput">BatchPutMessageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchPutMessageRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageInput">BatchPutMessageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#BatchPutMessageOutput">BatchPutMessageOutput</a>)
+
+    CancelPipelineReprocessing(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingInput">CancelPipelineReprocessingInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingOutput">CancelPipelineReprocessingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelPipelineReprocessingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingInput">CancelPipelineReprocessingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingOutput">CancelPipelineReprocessingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelPipelineReprocessingRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingInput">CancelPipelineReprocessingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CancelPipelineReprocessingOutput">CancelPipelineReprocessingOutput</a>)
+
+    CreateChannel(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelInput">CreateChannelInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelOutput">CreateChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateChannelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelInput">CreateChannelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelOutput">CreateChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateChannelRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelInput">CreateChannelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateChannelOutput">CreateChannelOutput</a>)
+
+    CreateDataset(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetInput">CreateDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetOutput">CreateDatasetOutput</a>)
+
+    CreateDatasetContent(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentInput">CreateDatasetContentInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentOutput">CreateDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentInput">CreateDatasetContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentOutput">CreateDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatasetContentRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentInput">CreateDatasetContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatasetContentOutput">CreateDatasetContentOutput</a>)
+
+    CreateDatastore(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreInput">CreateDatastoreInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreOutput">CreateDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatastoreWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreInput">CreateDatastoreInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreOutput">CreateDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDatastoreRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreInput">CreateDatastoreInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreateDatastoreOutput">CreateDatastoreOutput</a>)
+
+    CreatePipeline(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePipelineRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineInput">CreatePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#CreatePipelineOutput">CreatePipelineOutput</a>)
+
+    DeleteChannel(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelInput">DeleteChannelInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelOutput">DeleteChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteChannelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelInput">DeleteChannelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelOutput">DeleteChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteChannelRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelInput">DeleteChannelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteChannelOutput">DeleteChannelOutput</a>)
+
+    DeleteDataset(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetInput">DeleteDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetOutput">DeleteDatasetOutput</a>)
+
+    DeleteDatasetContent(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentInput">DeleteDatasetContentInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentOutput">DeleteDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentInput">DeleteDatasetContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentOutput">DeleteDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatasetContentRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentInput">DeleteDatasetContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatasetContentOutput">DeleteDatasetContentOutput</a>)
+
+    DeleteDatastore(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreInput">DeleteDatastoreInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreOutput">DeleteDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatastoreWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreInput">DeleteDatastoreInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreOutput">DeleteDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDatastoreRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreInput">DeleteDatastoreInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeleteDatastoreOutput">DeleteDatastoreOutput</a>)
+
+    DeletePipeline(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePipelineRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineInput">DeletePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DeletePipelineOutput">DeletePipelineOutput</a>)
+
+    DescribeChannel(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelInput">DescribeChannelInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelOutput">DescribeChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeChannelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelInput">DescribeChannelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelOutput">DescribeChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeChannelRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelInput">DescribeChannelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeChannelOutput">DescribeChannelOutput</a>)
+
+    DescribeDataset(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatasetRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetInput">DescribeDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatasetOutput">DescribeDatasetOutput</a>)
+
+    DescribeDatastore(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreInput">DescribeDatastoreInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreOutput">DescribeDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatastoreWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreInput">DescribeDatastoreInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreOutput">DescribeDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDatastoreRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreInput">DescribeDatastoreInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeDatastoreOutput">DescribeDatastoreOutput</a>)
+
+    DescribeLoggingOptions(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsInput">DescribeLoggingOptionsInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsOutput">DescribeLoggingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoggingOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsInput">DescribeLoggingOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsOutput">DescribeLoggingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoggingOptionsRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsInput">DescribeLoggingOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribeLoggingOptionsOutput">DescribeLoggingOptionsOutput</a>)
+
+    DescribePipeline(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineInput">DescribePipelineInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineOutput">DescribePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineInput">DescribePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineOutput">DescribePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePipelineRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineInput">DescribePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#DescribePipelineOutput">DescribePipelineOutput</a>)
+
+    GetDatasetContent(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentInput">GetDatasetContentInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentOutput">GetDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDatasetContentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentInput">GetDatasetContentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentOutput">GetDatasetContentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDatasetContentRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentInput">GetDatasetContentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#GetDatasetContentOutput">GetDatasetContentOutput</a>)
+
+    ListChannels(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsInput">ListChannelsInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsOutput">ListChannelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListChannelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsInput">ListChannelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsOutput">ListChannelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListChannelsRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsInput">ListChannelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsOutput">ListChannelsOutput</a>)
+
+    ListChannelsPages(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsInput">ListChannelsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsOutput">ListChannelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListChannelsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsInput">ListChannelsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListChannelsOutput">ListChannelsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasetContents(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsInput">ListDatasetContentsInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsOutput">ListDatasetContentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetContentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsInput">ListDatasetContentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsOutput">ListDatasetContentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetContentsRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsInput">ListDatasetContentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsOutput">ListDatasetContentsOutput</a>)
+
+    ListDatasetContentsPages(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsInput">ListDatasetContentsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsOutput">ListDatasetContentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetContentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsInput">ListDatasetContentsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetContentsOutput">ListDatasetContentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatasets(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatasetsRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>)
+
+    ListDatasetsPages(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatasetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsInput">ListDatasetsInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatasetsOutput">ListDatasetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDatastores(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresInput">ListDatastoresInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresOutput">ListDatastoresOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatastoresWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresInput">ListDatastoresInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresOutput">ListDatastoresOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDatastoresRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresInput">ListDatastoresInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresOutput">ListDatastoresOutput</a>)
+
+    ListDatastoresPages(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresInput">ListDatastoresInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresOutput">ListDatastoresOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDatastoresPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresInput">ListDatastoresInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListDatastoresOutput">ListDatastoresOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPipelines(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelinesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPipelinesRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>)
+
+    ListPipelinesPages(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPipelinesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesInput">ListPipelinesInput</a>, func(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListPipelinesOutput">ListPipelinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutLoggingOptions(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsInput">PutLoggingOptionsInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsOutput">PutLoggingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLoggingOptionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsInput">PutLoggingOptionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsOutput">PutLoggingOptionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLoggingOptionsRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsInput">PutLoggingOptionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#PutLoggingOptionsOutput">PutLoggingOptionsOutput</a>)
+
+    RunPipelineActivity(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityInput">RunPipelineActivityInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityOutput">RunPipelineActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RunPipelineActivityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityInput">RunPipelineActivityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityOutput">RunPipelineActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RunPipelineActivityRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityInput">RunPipelineActivityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#RunPipelineActivityOutput">RunPipelineActivityOutput</a>)
+
+    SampleChannelData(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataInput">SampleChannelDataInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataOutput">SampleChannelDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SampleChannelDataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataInput">SampleChannelDataInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataOutput">SampleChannelDataOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SampleChannelDataRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataInput">SampleChannelDataInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#SampleChannelDataOutput">SampleChannelDataOutput</a>)
+
+    StartPipelineReprocessing(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingInput">StartPipelineReprocessingInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingOutput">StartPipelineReprocessingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPipelineReprocessingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingInput">StartPipelineReprocessingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingOutput">StartPipelineReprocessingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPipelineReprocessingRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingInput">StartPipelineReprocessingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#StartPipelineReprocessingOutput">StartPipelineReprocessingOutput</a>)
+
+    TagResource(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateChannel(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelInput">UpdateChannelInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelOutput">UpdateChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateChannelWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelInput">UpdateChannelInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelOutput">UpdateChannelOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateChannelRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelInput">UpdateChannelInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateChannelOutput">UpdateChannelOutput</a>)
+
+    UpdateDataset(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatasetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatasetRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetInput">UpdateDatasetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatasetOutput">UpdateDatasetOutput</a>)
+
+    UpdateDatastore(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreInput">UpdateDatastoreInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreOutput">UpdateDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatastoreWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreInput">UpdateDatastoreInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreOutput">UpdateDatastoreOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDatastoreRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreInput">UpdateDatastoreInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdateDatastoreOutput">UpdateDatastoreOutput</a>)
+
+    UpdatePipeline(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePipelineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePipelineRequest(*<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineInput">UpdatePipelineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">iotanalytics</a>.<a href="../index.html#UpdatePipelineOutput">UpdatePipelineOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

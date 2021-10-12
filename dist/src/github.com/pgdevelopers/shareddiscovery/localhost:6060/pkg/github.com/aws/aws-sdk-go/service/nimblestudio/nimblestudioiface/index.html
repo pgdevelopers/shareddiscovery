@@ -1,0 +1,455 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>nimblestudioiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package nimblestudioiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/nimblestudio/nimblestudioiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package nimblestudioiface provides an interface to enable mocking the AmazonNimbleStudio service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#NimbleStudioAPI">type NimbleStudioAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/nimblestudio/nimblestudioiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="NimbleStudioAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/nimblestudio/nimblestudioiface/interface.go?s=2212:22417#L52">NimbleStudioAPI</a>
+				<a class="permalink" href="index.html#NimbleStudioAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+NimbleStudioAPI provides an interface to enable mocking the
+nimblestudio.NimbleStudio service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AmazonNimbleStudio.
+func myFunc(svc nimblestudioiface.NimbleStudioAPI) bool {
+    // Make svc.AcceptEulas request
+}
+
+func main() {
+    sess := session.New()
+    svc := nimblestudio.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockNimbleStudioClient struct {
+    nimblestudioiface.NimbleStudioAPI
+}
+func (m *mockNimbleStudioClient) AcceptEulas(input *nimblestudio.AcceptEulasInput) (*nimblestudio.AcceptEulasOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockNimbleStudioClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type NimbleStudioAPI interface {
+    AcceptEulas(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasInput">AcceptEulasInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasOutput">AcceptEulasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptEulasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasInput">AcceptEulasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasOutput">AcceptEulasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptEulasRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasInput">AcceptEulasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#AcceptEulasOutput">AcceptEulasOutput</a>)
+
+    CreateLaunchProfile(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileInput">CreateLaunchProfileInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileOutput">CreateLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLaunchProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileInput">CreateLaunchProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileOutput">CreateLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLaunchProfileRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileInput">CreateLaunchProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateLaunchProfileOutput">CreateLaunchProfileOutput</a>)
+
+    CreateStreamingImage(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageInput">CreateStreamingImageInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageOutput">CreateStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageInput">CreateStreamingImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageOutput">CreateStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingImageRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageInput">CreateStreamingImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingImageOutput">CreateStreamingImageOutput</a>)
+
+    CreateStreamingSession(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionInput">CreateStreamingSessionInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionOutput">CreateStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionInput">CreateStreamingSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionOutput">CreateStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingSessionRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionInput">CreateStreamingSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionOutput">CreateStreamingSessionOutput</a>)
+
+    CreateStreamingSessionStream(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamInput">CreateStreamingSessionStreamInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamOutput">CreateStreamingSessionStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingSessionStreamWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamInput">CreateStreamingSessionStreamInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamOutput">CreateStreamingSessionStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamingSessionStreamRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamInput">CreateStreamingSessionStreamInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStreamingSessionStreamOutput">CreateStreamingSessionStreamOutput</a>)
+
+    CreateStudio(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioInput">CreateStudioInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioOutput">CreateStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStudioWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioInput">CreateStudioInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioOutput">CreateStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStudioRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioInput">CreateStudioInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioOutput">CreateStudioOutput</a>)
+
+    CreateStudioComponent(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentInput">CreateStudioComponentInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentOutput">CreateStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStudioComponentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentInput">CreateStudioComponentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentOutput">CreateStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStudioComponentRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentInput">CreateStudioComponentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#CreateStudioComponentOutput">CreateStudioComponentOutput</a>)
+
+    DeleteLaunchProfile(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileInput">DeleteLaunchProfileInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileOutput">DeleteLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLaunchProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileInput">DeleteLaunchProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileOutput">DeleteLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLaunchProfileRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileInput">DeleteLaunchProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileOutput">DeleteLaunchProfileOutput</a>)
+
+    DeleteLaunchProfileMember(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberInput">DeleteLaunchProfileMemberInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberOutput">DeleteLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLaunchProfileMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberInput">DeleteLaunchProfileMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberOutput">DeleteLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLaunchProfileMemberRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberInput">DeleteLaunchProfileMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteLaunchProfileMemberOutput">DeleteLaunchProfileMemberOutput</a>)
+
+    DeleteStreamingImage(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageInput">DeleteStreamingImageInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageOutput">DeleteStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamingImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageInput">DeleteStreamingImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageOutput">DeleteStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamingImageRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageInput">DeleteStreamingImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingImageOutput">DeleteStreamingImageOutput</a>)
+
+    DeleteStreamingSession(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionInput">DeleteStreamingSessionInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionOutput">DeleteStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamingSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionInput">DeleteStreamingSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionOutput">DeleteStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamingSessionRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionInput">DeleteStreamingSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStreamingSessionOutput">DeleteStreamingSessionOutput</a>)
+
+    DeleteStudio(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioInput">DeleteStudioInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioOutput">DeleteStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioInput">DeleteStudioInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioOutput">DeleteStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioInput">DeleteStudioInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioOutput">DeleteStudioOutput</a>)
+
+    DeleteStudioComponent(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentInput">DeleteStudioComponentInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentOutput">DeleteStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioComponentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentInput">DeleteStudioComponentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentOutput">DeleteStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioComponentRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentInput">DeleteStudioComponentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioComponentOutput">DeleteStudioComponentOutput</a>)
+
+    DeleteStudioMember(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberInput">DeleteStudioMemberInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberOutput">DeleteStudioMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberInput">DeleteStudioMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberOutput">DeleteStudioMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStudioMemberRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberInput">DeleteStudioMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#DeleteStudioMemberOutput">DeleteStudioMemberOutput</a>)
+
+    GetEula(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaInput">GetEulaInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaOutput">GetEulaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEulaWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaInput">GetEulaInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaOutput">GetEulaOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEulaRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaInput">GetEulaInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetEulaOutput">GetEulaOutput</a>)
+
+    GetLaunchProfile(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInput">GetLaunchProfileInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileOutput">GetLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInput">GetLaunchProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileOutput">GetLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInput">GetLaunchProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileOutput">GetLaunchProfileOutput</a>)
+
+    GetLaunchProfileDetails(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsInput">GetLaunchProfileDetailsInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsOutput">GetLaunchProfileDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileDetailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsInput">GetLaunchProfileDetailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsOutput">GetLaunchProfileDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileDetailsRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsInput">GetLaunchProfileDetailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileDetailsOutput">GetLaunchProfileDetailsOutput</a>)
+
+    GetLaunchProfileInitialization(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationInput">GetLaunchProfileInitializationInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationOutput">GetLaunchProfileInitializationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileInitializationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationInput">GetLaunchProfileInitializationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationOutput">GetLaunchProfileInitializationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileInitializationRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationInput">GetLaunchProfileInitializationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileInitializationOutput">GetLaunchProfileInitializationOutput</a>)
+
+    GetLaunchProfileMember(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberInput">GetLaunchProfileMemberInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberOutput">GetLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberInput">GetLaunchProfileMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberOutput">GetLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLaunchProfileMemberRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberInput">GetLaunchProfileMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetLaunchProfileMemberOutput">GetLaunchProfileMemberOutput</a>)
+
+    GetStreamingImage(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageInput">GetStreamingImageInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageOutput">GetStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageInput">GetStreamingImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageOutput">GetStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingImageRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageInput">GetStreamingImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingImageOutput">GetStreamingImageOutput</a>)
+
+    GetStreamingSession(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionInput">GetStreamingSessionInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionOutput">GetStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionInput">GetStreamingSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionOutput">GetStreamingSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingSessionRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionInput">GetStreamingSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionOutput">GetStreamingSessionOutput</a>)
+
+    GetStreamingSessionStream(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamInput">GetStreamingSessionStreamInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamOutput">GetStreamingSessionStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingSessionStreamWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamInput">GetStreamingSessionStreamInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamOutput">GetStreamingSessionStreamOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStreamingSessionStreamRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamInput">GetStreamingSessionStreamInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStreamingSessionStreamOutput">GetStreamingSessionStreamOutput</a>)
+
+    GetStudio(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioInput">GetStudioInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioOutput">GetStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioInput">GetStudioInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioOutput">GetStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioInput">GetStudioInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioOutput">GetStudioOutput</a>)
+
+    GetStudioComponent(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentInput">GetStudioComponentInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentOutput">GetStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioComponentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentInput">GetStudioComponentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentOutput">GetStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioComponentRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentInput">GetStudioComponentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioComponentOutput">GetStudioComponentOutput</a>)
+
+    GetStudioMember(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberInput">GetStudioMemberInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberOutput">GetStudioMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberInput">GetStudioMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberOutput">GetStudioMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetStudioMemberRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberInput">GetStudioMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#GetStudioMemberOutput">GetStudioMemberOutput</a>)
+
+    ListEulaAcceptances(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesInput">ListEulaAcceptancesInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesOutput">ListEulaAcceptancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEulaAcceptancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesInput">ListEulaAcceptancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesOutput">ListEulaAcceptancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEulaAcceptancesRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesInput">ListEulaAcceptancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesOutput">ListEulaAcceptancesOutput</a>)
+
+    ListEulaAcceptancesPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesInput">ListEulaAcceptancesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesOutput">ListEulaAcceptancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListEulaAcceptancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesInput">ListEulaAcceptancesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulaAcceptancesOutput">ListEulaAcceptancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListEulas(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasInput">ListEulasInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasOutput">ListEulasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEulasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasInput">ListEulasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasOutput">ListEulasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEulasRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasInput">ListEulasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasOutput">ListEulasOutput</a>)
+
+    ListEulasPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasInput">ListEulasInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasOutput">ListEulasOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListEulasPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasInput">ListEulasInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListEulasOutput">ListEulasOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLaunchProfileMembers(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersInput">ListLaunchProfileMembersInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersOutput">ListLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLaunchProfileMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersInput">ListLaunchProfileMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersOutput">ListLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLaunchProfileMembersRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersInput">ListLaunchProfileMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersOutput">ListLaunchProfileMembersOutput</a>)
+
+    ListLaunchProfileMembersPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersInput">ListLaunchProfileMembersInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersOutput">ListLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLaunchProfileMembersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersInput">ListLaunchProfileMembersInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfileMembersOutput">ListLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLaunchProfiles(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesInput">ListLaunchProfilesInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesOutput">ListLaunchProfilesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLaunchProfilesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesInput">ListLaunchProfilesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesOutput">ListLaunchProfilesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLaunchProfilesRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesInput">ListLaunchProfilesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesOutput">ListLaunchProfilesOutput</a>)
+
+    ListLaunchProfilesPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesInput">ListLaunchProfilesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesOutput">ListLaunchProfilesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLaunchProfilesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesInput">ListLaunchProfilesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListLaunchProfilesOutput">ListLaunchProfilesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStreamingImages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesInput">ListStreamingImagesInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesOutput">ListStreamingImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamingImagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesInput">ListStreamingImagesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesOutput">ListStreamingImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamingImagesRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesInput">ListStreamingImagesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesOutput">ListStreamingImagesOutput</a>)
+
+    ListStreamingImagesPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesInput">ListStreamingImagesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesOutput">ListStreamingImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStreamingImagesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesInput">ListStreamingImagesInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingImagesOutput">ListStreamingImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStreamingSessions(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsInput">ListStreamingSessionsInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsOutput">ListStreamingSessionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamingSessionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsInput">ListStreamingSessionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsOutput">ListStreamingSessionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamingSessionsRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsInput">ListStreamingSessionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsOutput">ListStreamingSessionsOutput</a>)
+
+    ListStreamingSessionsPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsInput">ListStreamingSessionsInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsOutput">ListStreamingSessionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStreamingSessionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsInput">ListStreamingSessionsInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStreamingSessionsOutput">ListStreamingSessionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStudioComponents(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsInput">ListStudioComponentsInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsOutput">ListStudioComponentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudioComponentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsInput">ListStudioComponentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsOutput">ListStudioComponentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudioComponentsRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsInput">ListStudioComponentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsOutput">ListStudioComponentsOutput</a>)
+
+    ListStudioComponentsPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsInput">ListStudioComponentsInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsOutput">ListStudioComponentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStudioComponentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsInput">ListStudioComponentsInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioComponentsOutput">ListStudioComponentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStudioMembers(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersInput">ListStudioMembersInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersOutput">ListStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudioMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersInput">ListStudioMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersOutput">ListStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudioMembersRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersInput">ListStudioMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersOutput">ListStudioMembersOutput</a>)
+
+    ListStudioMembersPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersInput">ListStudioMembersInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersOutput">ListStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStudioMembersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersInput">ListStudioMembersInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudioMembersOutput">ListStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStudios(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosInput">ListStudiosInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosOutput">ListStudiosOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudiosWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosInput">ListStudiosInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosOutput">ListStudiosOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStudiosRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosInput">ListStudiosInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosOutput">ListStudiosOutput</a>)
+
+    ListStudiosPages(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosInput">ListStudiosInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosOutput">ListStudiosOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStudiosPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosInput">ListStudiosInput</a>, func(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListStudiosOutput">ListStudiosOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutLaunchProfileMembers(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersInput">PutLaunchProfileMembersInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersOutput">PutLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLaunchProfileMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersInput">PutLaunchProfileMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersOutput">PutLaunchProfileMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLaunchProfileMembersRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersInput">PutLaunchProfileMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutLaunchProfileMembersOutput">PutLaunchProfileMembersOutput</a>)
+
+    PutStudioMembers(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersInput">PutStudioMembersInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersOutput">PutStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutStudioMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersInput">PutStudioMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersOutput">PutStudioMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutStudioMembersRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersInput">PutStudioMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#PutStudioMembersOutput">PutStudioMembersOutput</a>)
+
+    StartStudioSSOConfigurationRepair(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairInput">StartStudioSSOConfigurationRepairInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairOutput">StartStudioSSOConfigurationRepairOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStudioSSOConfigurationRepairWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairInput">StartStudioSSOConfigurationRepairInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairOutput">StartStudioSSOConfigurationRepairOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStudioSSOConfigurationRepairRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairInput">StartStudioSSOConfigurationRepairInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#StartStudioSSOConfigurationRepairOutput">StartStudioSSOConfigurationRepairOutput</a>)
+
+    TagResource(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateLaunchProfile(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileInput">UpdateLaunchProfileInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileOutput">UpdateLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLaunchProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileInput">UpdateLaunchProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileOutput">UpdateLaunchProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLaunchProfileRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileInput">UpdateLaunchProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileOutput">UpdateLaunchProfileOutput</a>)
+
+    UpdateLaunchProfileMember(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberInput">UpdateLaunchProfileMemberInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberOutput">UpdateLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLaunchProfileMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberInput">UpdateLaunchProfileMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberOutput">UpdateLaunchProfileMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLaunchProfileMemberRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberInput">UpdateLaunchProfileMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateLaunchProfileMemberOutput">UpdateLaunchProfileMemberOutput</a>)
+
+    UpdateStreamingImage(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageInput">UpdateStreamingImageInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageOutput">UpdateStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStreamingImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageInput">UpdateStreamingImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageOutput">UpdateStreamingImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStreamingImageRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageInput">UpdateStreamingImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStreamingImageOutput">UpdateStreamingImageOutput</a>)
+
+    UpdateStudio(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioInput">UpdateStudioInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioOutput">UpdateStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStudioWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioInput">UpdateStudioInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioOutput">UpdateStudioOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStudioRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioInput">UpdateStudioInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioOutput">UpdateStudioOutput</a>)
+
+    UpdateStudioComponent(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentInput">UpdateStudioComponentInput</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentOutput">UpdateStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStudioComponentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentInput">UpdateStudioComponentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentOutput">UpdateStudioComponentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStudioComponentRequest(*<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentInput">UpdateStudioComponentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">nimblestudio</a>.<a href="../index.html#UpdateStudioComponentOutput">UpdateStudioComponentOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

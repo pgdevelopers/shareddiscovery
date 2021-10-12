@@ -1,0 +1,440 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>licensemanageriface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package licensemanageriface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/licensemanager/licensemanageriface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package licensemanageriface provides an interface to enable mocking the AWS License Manager service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#LicenseManagerAPI">type LicenseManagerAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/licensemanager/licensemanageriface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="LicenseManagerAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/licensemanager/licensemanageriface/interface.go?s=2246:22726#L52">LicenseManagerAPI</a>
+				<a class="permalink" href="index.html#LicenseManagerAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+LicenseManagerAPI provides an interface to enable mocking the
+licensemanager.LicenseManager service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS License Manager.
+func myFunc(svc licensemanageriface.LicenseManagerAPI) bool {
+    // Make svc.AcceptGrant request
+}
+
+func main() {
+    sess := session.New()
+    svc := licensemanager.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockLicenseManagerClient struct {
+    licensemanageriface.LicenseManagerAPI
+}
+func (m *mockLicenseManagerClient) AcceptGrant(input *licensemanager.AcceptGrantInput) (*licensemanager.AcceptGrantOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockLicenseManagerClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type LicenseManagerAPI interface {
+    AcceptGrant(*<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantInput">AcceptGrantInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantOutput">AcceptGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptGrantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantInput">AcceptGrantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantOutput">AcceptGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptGrantRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantInput">AcceptGrantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#AcceptGrantOutput">AcceptGrantOutput</a>)
+
+    CheckInLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseInput">CheckInLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseOutput">CheckInLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckInLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseInput">CheckInLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseOutput">CheckInLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckInLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseInput">CheckInLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckInLicenseOutput">CheckInLicenseOutput</a>)
+
+    CheckoutBorrowLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseInput">CheckoutBorrowLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseOutput">CheckoutBorrowLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckoutBorrowLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseInput">CheckoutBorrowLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseOutput">CheckoutBorrowLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckoutBorrowLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseInput">CheckoutBorrowLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutBorrowLicenseOutput">CheckoutBorrowLicenseOutput</a>)
+
+    CheckoutLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseInput">CheckoutLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseOutput">CheckoutLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckoutLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseInput">CheckoutLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseOutput">CheckoutLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CheckoutLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseInput">CheckoutLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CheckoutLicenseOutput">CheckoutLicenseOutput</a>)
+
+    CreateGrant(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantInput">CreateGrantInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantOutput">CreateGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGrantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantInput">CreateGrantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantOutput">CreateGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGrantRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantInput">CreateGrantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantOutput">CreateGrantOutput</a>)
+
+    CreateGrantVersion(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionInput">CreateGrantVersionInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionOutput">CreateGrantVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGrantVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionInput">CreateGrantVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionOutput">CreateGrantVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGrantVersionRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionInput">CreateGrantVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateGrantVersionOutput">CreateGrantVersionOutput</a>)
+
+    CreateLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseInput">CreateLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseOutput">CreateLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseInput">CreateLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseOutput">CreateLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseInput">CreateLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseOutput">CreateLicenseOutput</a>)
+
+    CreateLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationInput">CreateLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationOutput">CreateLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationInput">CreateLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationOutput">CreateLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationInput">CreateLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConfigurationOutput">CreateLicenseConfigurationOutput</a>)
+
+    CreateLicenseConversionTaskForResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceInput">CreateLicenseConversionTaskForResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceOutput">CreateLicenseConversionTaskForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseConversionTaskForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceInput">CreateLicenseConversionTaskForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceOutput">CreateLicenseConversionTaskForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseConversionTaskForResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceInput">CreateLicenseConversionTaskForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseConversionTaskForResourceOutput">CreateLicenseConversionTaskForResourceOutput</a>)
+
+    CreateLicenseManagerReportGenerator(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorInput">CreateLicenseManagerReportGeneratorInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorOutput">CreateLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseManagerReportGeneratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorInput">CreateLicenseManagerReportGeneratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorOutput">CreateLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseManagerReportGeneratorRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorInput">CreateLicenseManagerReportGeneratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseManagerReportGeneratorOutput">CreateLicenseManagerReportGeneratorOutput</a>)
+
+    CreateLicenseVersion(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionInput">CreateLicenseVersionInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionOutput">CreateLicenseVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionInput">CreateLicenseVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionOutput">CreateLicenseVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLicenseVersionRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionInput">CreateLicenseVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateLicenseVersionOutput">CreateLicenseVersionOutput</a>)
+
+    CreateToken(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTokenRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>)
+
+    DeleteGrant(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantInput">DeleteGrantInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantOutput">DeleteGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGrantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantInput">DeleteGrantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantOutput">DeleteGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteGrantRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantInput">DeleteGrantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteGrantOutput">DeleteGrantOutput</a>)
+
+    DeleteLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseInput">DeleteLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseOutput">DeleteLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseInput">DeleteLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseOutput">DeleteLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseInput">DeleteLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseOutput">DeleteLicenseOutput</a>)
+
+    DeleteLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationInput">DeleteLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationOutput">DeleteLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationInput">DeleteLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationOutput">DeleteLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationInput">DeleteLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseConfigurationOutput">DeleteLicenseConfigurationOutput</a>)
+
+    DeleteLicenseManagerReportGenerator(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorInput">DeleteLicenseManagerReportGeneratorInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorOutput">DeleteLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseManagerReportGeneratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorInput">DeleteLicenseManagerReportGeneratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorOutput">DeleteLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLicenseManagerReportGeneratorRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorInput">DeleteLicenseManagerReportGeneratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteLicenseManagerReportGeneratorOutput">DeleteLicenseManagerReportGeneratorOutput</a>)
+
+    DeleteToken(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTokenRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>)
+
+    ExtendLicenseConsumption(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionInput">ExtendLicenseConsumptionInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionOutput">ExtendLicenseConsumptionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ExtendLicenseConsumptionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionInput">ExtendLicenseConsumptionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionOutput">ExtendLicenseConsumptionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ExtendLicenseConsumptionRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionInput">ExtendLicenseConsumptionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ExtendLicenseConsumptionOutput">ExtendLicenseConsumptionOutput</a>)
+
+    GetAccessToken(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenInput">GetAccessTokenInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenOutput">GetAccessTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccessTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenInput">GetAccessTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenOutput">GetAccessTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccessTokenRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenInput">GetAccessTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetAccessTokenOutput">GetAccessTokenOutput</a>)
+
+    GetGrant(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantInput">GetGrantInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantOutput">GetGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGrantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantInput">GetGrantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantOutput">GetGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetGrantRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantInput">GetGrantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetGrantOutput">GetGrantOutput</a>)
+
+    GetLicense(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseInput">GetLicenseInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseOutput">GetLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseInput">GetLicenseInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseOutput">GetLicenseOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseInput">GetLicenseInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseOutput">GetLicenseOutput</a>)
+
+    GetLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationInput">GetLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationOutput">GetLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationInput">GetLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationOutput">GetLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationInput">GetLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConfigurationOutput">GetLicenseConfigurationOutput</a>)
+
+    GetLicenseConversionTask(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskInput">GetLicenseConversionTaskInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskOutput">GetLicenseConversionTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseConversionTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskInput">GetLicenseConversionTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskOutput">GetLicenseConversionTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseConversionTaskRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskInput">GetLicenseConversionTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseConversionTaskOutput">GetLicenseConversionTaskOutput</a>)
+
+    GetLicenseManagerReportGenerator(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorInput">GetLicenseManagerReportGeneratorInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorOutput">GetLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseManagerReportGeneratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorInput">GetLicenseManagerReportGeneratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorOutput">GetLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseManagerReportGeneratorRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorInput">GetLicenseManagerReportGeneratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseManagerReportGeneratorOutput">GetLicenseManagerReportGeneratorOutput</a>)
+
+    GetLicenseUsage(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageInput">GetLicenseUsageInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageOutput">GetLicenseUsageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseUsageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageInput">GetLicenseUsageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageOutput">GetLicenseUsageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLicenseUsageRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageInput">GetLicenseUsageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetLicenseUsageOutput">GetLicenseUsageOutput</a>)
+
+    GetServiceSettings(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsInput">GetServiceSettingsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsOutput">GetServiceSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetServiceSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsInput">GetServiceSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsOutput">GetServiceSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetServiceSettingsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsInput">GetServiceSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#GetServiceSettingsOutput">GetServiceSettingsOutput</a>)
+
+    ListAssociationsForLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationInput">ListAssociationsForLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationOutput">ListAssociationsForLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssociationsForLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationInput">ListAssociationsForLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationOutput">ListAssociationsForLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAssociationsForLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationInput">ListAssociationsForLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListAssociationsForLicenseConfigurationOutput">ListAssociationsForLicenseConfigurationOutput</a>)
+
+    ListDistributedGrants(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsInput">ListDistributedGrantsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsOutput">ListDistributedGrantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDistributedGrantsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsInput">ListDistributedGrantsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsOutput">ListDistributedGrantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDistributedGrantsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsInput">ListDistributedGrantsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListDistributedGrantsOutput">ListDistributedGrantsOutput</a>)
+
+    ListFailuresForLicenseConfigurationOperations(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsInput">ListFailuresForLicenseConfigurationOperationsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsOutput">ListFailuresForLicenseConfigurationOperationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFailuresForLicenseConfigurationOperationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsInput">ListFailuresForLicenseConfigurationOperationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsOutput">ListFailuresForLicenseConfigurationOperationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFailuresForLicenseConfigurationOperationsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsInput">ListFailuresForLicenseConfigurationOperationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListFailuresForLicenseConfigurationOperationsOutput">ListFailuresForLicenseConfigurationOperationsOutput</a>)
+
+    ListLicenseConfigurations(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsInput">ListLicenseConfigurationsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsOutput">ListLicenseConfigurationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseConfigurationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsInput">ListLicenseConfigurationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsOutput">ListLicenseConfigurationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseConfigurationsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsInput">ListLicenseConfigurationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConfigurationsOutput">ListLicenseConfigurationsOutput</a>)
+
+    ListLicenseConversionTasks(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksInput">ListLicenseConversionTasksInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksOutput">ListLicenseConversionTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseConversionTasksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksInput">ListLicenseConversionTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksOutput">ListLicenseConversionTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseConversionTasksRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksInput">ListLicenseConversionTasksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseConversionTasksOutput">ListLicenseConversionTasksOutput</a>)
+
+    ListLicenseManagerReportGenerators(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsInput">ListLicenseManagerReportGeneratorsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsOutput">ListLicenseManagerReportGeneratorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseManagerReportGeneratorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsInput">ListLicenseManagerReportGeneratorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsOutput">ListLicenseManagerReportGeneratorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseManagerReportGeneratorsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsInput">ListLicenseManagerReportGeneratorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseManagerReportGeneratorsOutput">ListLicenseManagerReportGeneratorsOutput</a>)
+
+    ListLicenseSpecificationsForResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceInput">ListLicenseSpecificationsForResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceOutput">ListLicenseSpecificationsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseSpecificationsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceInput">ListLicenseSpecificationsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceOutput">ListLicenseSpecificationsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseSpecificationsForResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceInput">ListLicenseSpecificationsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseSpecificationsForResourceOutput">ListLicenseSpecificationsForResourceOutput</a>)
+
+    ListLicenseVersions(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsInput">ListLicenseVersionsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsOutput">ListLicenseVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsInput">ListLicenseVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsOutput">ListLicenseVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicenseVersionsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsInput">ListLicenseVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicenseVersionsOutput">ListLicenseVersionsOutput</a>)
+
+    ListLicenses(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesInput">ListLicensesInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesOutput">ListLicensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicensesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesInput">ListLicensesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesOutput">ListLicensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLicensesRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesInput">ListLicensesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListLicensesOutput">ListLicensesOutput</a>)
+
+    ListReceivedGrants(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsInput">ListReceivedGrantsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsOutput">ListReceivedGrantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceivedGrantsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsInput">ListReceivedGrantsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsOutput">ListReceivedGrantsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceivedGrantsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsInput">ListReceivedGrantsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedGrantsOutput">ListReceivedGrantsOutput</a>)
+
+    ListReceivedLicenses(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesInput">ListReceivedLicensesInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesOutput">ListReceivedLicensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceivedLicensesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesInput">ListReceivedLicensesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesOutput">ListReceivedLicensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListReceivedLicensesRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesInput">ListReceivedLicensesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListReceivedLicensesOutput">ListReceivedLicensesOutput</a>)
+
+    ListResourceInventory(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryInput">ListResourceInventoryInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryOutput">ListResourceInventoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListResourceInventoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryInput">ListResourceInventoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryOutput">ListResourceInventoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListResourceInventoryRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryInput">ListResourceInventoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListResourceInventoryOutput">ListResourceInventoryOutput</a>)
+
+    ListTagsForResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTokens(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensInput">ListTokensInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensOutput">ListTokensOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTokensWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensInput">ListTokensInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensOutput">ListTokensOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTokensRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensInput">ListTokensInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListTokensOutput">ListTokensOutput</a>)
+
+    ListUsageForLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationInput">ListUsageForLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationOutput">ListUsageForLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListUsageForLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationInput">ListUsageForLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationOutput">ListUsageForLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListUsageForLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationInput">ListUsageForLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#ListUsageForLicenseConfigurationOutput">ListUsageForLicenseConfigurationOutput</a>)
+
+    RejectGrant(*<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantInput">RejectGrantInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantOutput">RejectGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RejectGrantWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantInput">RejectGrantInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantOutput">RejectGrantOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RejectGrantRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantInput">RejectGrantInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#RejectGrantOutput">RejectGrantOutput</a>)
+
+    TagResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateLicenseConfiguration(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationInput">UpdateLicenseConfigurationInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationOutput">UpdateLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationInput">UpdateLicenseConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationOutput">UpdateLicenseConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseConfigurationRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationInput">UpdateLicenseConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseConfigurationOutput">UpdateLicenseConfigurationOutput</a>)
+
+    UpdateLicenseManagerReportGenerator(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorInput">UpdateLicenseManagerReportGeneratorInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorOutput">UpdateLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseManagerReportGeneratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorInput">UpdateLicenseManagerReportGeneratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorOutput">UpdateLicenseManagerReportGeneratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseManagerReportGeneratorRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorInput">UpdateLicenseManagerReportGeneratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseManagerReportGeneratorOutput">UpdateLicenseManagerReportGeneratorOutput</a>)
+
+    UpdateLicenseSpecificationsForResource(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceInput">UpdateLicenseSpecificationsForResourceInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceOutput">UpdateLicenseSpecificationsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseSpecificationsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceInput">UpdateLicenseSpecificationsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceOutput">UpdateLicenseSpecificationsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLicenseSpecificationsForResourceRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceInput">UpdateLicenseSpecificationsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateLicenseSpecificationsForResourceOutput">UpdateLicenseSpecificationsForResourceOutput</a>)
+
+    UpdateServiceSettings(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsInput">UpdateServiceSettingsInput</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsOutput">UpdateServiceSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServiceSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsInput">UpdateServiceSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsOutput">UpdateServiceSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServiceSettingsRequest(*<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsInput">UpdateServiceSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">licensemanager</a>.<a href="../index.html#UpdateServiceSettingsOutput">UpdateServiceSettingsOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

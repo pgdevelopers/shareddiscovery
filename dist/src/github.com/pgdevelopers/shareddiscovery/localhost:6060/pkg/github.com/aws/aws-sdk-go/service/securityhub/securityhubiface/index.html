@@ -1,0 +1,485 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>securityhubiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package securityhubiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/securityhub/securityhubiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package securityhubiface provides an interface to enable mocking the AWS SecurityHub service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#SecurityHubAPI">type SecurityHubAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/securityhub/securityhubiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="SecurityHubAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/securityhub/securityhubiface/interface.go?s=2262:25559#L52">SecurityHubAPI</a>
+				<a class="permalink" href="index.html#SecurityHubAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+SecurityHubAPI provides an interface to enable mocking the
+securityhub.SecurityHub service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS SecurityHub.
+func myFunc(svc securityhubiface.SecurityHubAPI) bool {
+    // Make svc.AcceptAdministratorInvitation request
+}
+
+func main() {
+    sess := session.New()
+    svc := securityhub.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockSecurityHubClient struct {
+    securityhubiface.SecurityHubAPI
+}
+func (m *mockSecurityHubClient) AcceptAdministratorInvitation(input *securityhub.AcceptAdministratorInvitationInput) (*securityhub.AcceptAdministratorInvitationOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockSecurityHubClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type SecurityHubAPI interface {
+    AcceptAdministratorInvitation(*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationInput">AcceptAdministratorInvitationInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationOutput">AcceptAdministratorInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptAdministratorInvitationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationInput">AcceptAdministratorInvitationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationOutput">AcceptAdministratorInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptAdministratorInvitationRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationInput">AcceptAdministratorInvitationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptAdministratorInvitationOutput">AcceptAdministratorInvitationOutput</a>)
+
+    AcceptInvitation(*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInvitationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInvitationRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>)
+
+    BatchDisableStandards(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsInput">BatchDisableStandardsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsOutput">BatchDisableStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDisableStandardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsInput">BatchDisableStandardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsOutput">BatchDisableStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDisableStandardsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsInput">BatchDisableStandardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchDisableStandardsOutput">BatchDisableStandardsOutput</a>)
+
+    BatchEnableStandards(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsInput">BatchEnableStandardsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsOutput">BatchEnableStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchEnableStandardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsInput">BatchEnableStandardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsOutput">BatchEnableStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchEnableStandardsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsInput">BatchEnableStandardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchEnableStandardsOutput">BatchEnableStandardsOutput</a>)
+
+    BatchImportFindings(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsInput">BatchImportFindingsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsOutput">BatchImportFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchImportFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsInput">BatchImportFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsOutput">BatchImportFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchImportFindingsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsInput">BatchImportFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchImportFindingsOutput">BatchImportFindingsOutput</a>)
+
+    BatchUpdateFindings(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsInput">BatchUpdateFindingsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsOutput">BatchUpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchUpdateFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsInput">BatchUpdateFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsOutput">BatchUpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchUpdateFindingsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsInput">BatchUpdateFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#BatchUpdateFindingsOutput">BatchUpdateFindingsOutput</a>)
+
+    CreateActionTarget(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetInput">CreateActionTargetInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetOutput">CreateActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateActionTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetInput">CreateActionTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetOutput">CreateActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateActionTargetRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetInput">CreateActionTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateActionTargetOutput">CreateActionTargetOutput</a>)
+
+    CreateInsight(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightInput">CreateInsightInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightOutput">CreateInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInsightWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightInput">CreateInsightInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightOutput">CreateInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInsightRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightInput">CreateInsightInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateInsightOutput">CreateInsightOutput</a>)
+
+    CreateMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersInput">CreateMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersOutput">CreateMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersInput">CreateMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersOutput">CreateMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersInput">CreateMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#CreateMembersOutput">CreateMembersOutput</a>)
+
+    DeclineInvitations(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineInvitationsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>)
+
+    DeleteActionTarget(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetInput">DeleteActionTargetInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetOutput">DeleteActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteActionTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetInput">DeleteActionTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetOutput">DeleteActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteActionTargetRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetInput">DeleteActionTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteActionTargetOutput">DeleteActionTargetOutput</a>)
+
+    DeleteInsight(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightInput">DeleteInsightInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightOutput">DeleteInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInsightWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightInput">DeleteInsightInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightOutput">DeleteInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInsightRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightInput">DeleteInsightInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInsightOutput">DeleteInsightOutput</a>)
+
+    DeleteInvitations(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInvitationsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>)
+
+    DeleteMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersInput">DeleteMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersOutput">DeleteMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersInput">DeleteMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersOutput">DeleteMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersInput">DeleteMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DeleteMembersOutput">DeleteMembersOutput</a>)
+
+    DescribeActionTargets(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsInput">DescribeActionTargetsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsOutput">DescribeActionTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActionTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsInput">DescribeActionTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsOutput">DescribeActionTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActionTargetsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsInput">DescribeActionTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsOutput">DescribeActionTargetsOutput</a>)
+
+    DescribeActionTargetsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsInput">DescribeActionTargetsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsOutput">DescribeActionTargetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeActionTargetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsInput">DescribeActionTargetsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeActionTargetsOutput">DescribeActionTargetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeHub(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubInput">DescribeHubInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubOutput">DescribeHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeHubWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubInput">DescribeHubInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubOutput">DescribeHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeHubRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubInput">DescribeHubInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeHubOutput">DescribeHubOutput</a>)
+
+    DescribeOrganizationConfiguration(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationConfigurationRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>)
+
+    DescribeProducts(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsInput">DescribeProductsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsOutput">DescribeProductsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProductsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsInput">DescribeProductsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsOutput">DescribeProductsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProductsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsInput">DescribeProductsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsOutput">DescribeProductsOutput</a>)
+
+    DescribeProductsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsInput">DescribeProductsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsOutput">DescribeProductsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeProductsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsInput">DescribeProductsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeProductsOutput">DescribeProductsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeStandards(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsInput">DescribeStandardsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsOutput">DescribeStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStandardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsInput">DescribeStandardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsOutput">DescribeStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStandardsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsInput">DescribeStandardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsOutput">DescribeStandardsOutput</a>)
+
+    DescribeStandardsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsInput">DescribeStandardsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsOutput">DescribeStandardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeStandardsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsInput">DescribeStandardsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsOutput">DescribeStandardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeStandardsControls(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsInput">DescribeStandardsControlsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsOutput">DescribeStandardsControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStandardsControlsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsInput">DescribeStandardsControlsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsOutput">DescribeStandardsControlsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStandardsControlsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsInput">DescribeStandardsControlsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsOutput">DescribeStandardsControlsOutput</a>)
+
+    DescribeStandardsControlsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsInput">DescribeStandardsControlsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsOutput">DescribeStandardsControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeStandardsControlsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsInput">DescribeStandardsControlsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#DescribeStandardsControlsOutput">DescribeStandardsControlsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DisableImportFindingsForProduct(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductInput">DisableImportFindingsForProductInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductOutput">DisableImportFindingsForProductOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableImportFindingsForProductWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductInput">DisableImportFindingsForProductInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductOutput">DisableImportFindingsForProductOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableImportFindingsForProductRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductInput">DisableImportFindingsForProductInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableImportFindingsForProductOutput">DisableImportFindingsForProductOutput</a>)
+
+    DisableOrganizationAdminAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableOrganizationAdminAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>)
+
+    DisableSecurityHub(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubInput">DisableSecurityHubInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubOutput">DisableSecurityHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableSecurityHubWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubInput">DisableSecurityHubInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubOutput">DisableSecurityHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableSecurityHubRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubInput">DisableSecurityHubInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisableSecurityHubOutput">DisableSecurityHubOutput</a>)
+
+    DisassociateFromAdministratorAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromAdministratorAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromAdministratorAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>)
+
+    DisassociateFromMasterAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromMasterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromMasterAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>)
+
+    DisassociateMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersInput">DisassociateMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersOutput">DisassociateMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersInput">DisassociateMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersOutput">DisassociateMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersInput">DisassociateMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#DisassociateMembersOutput">DisassociateMembersOutput</a>)
+
+    EnableImportFindingsForProduct(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductInput">EnableImportFindingsForProductInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductOutput">EnableImportFindingsForProductOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableImportFindingsForProductWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductInput">EnableImportFindingsForProductInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductOutput">EnableImportFindingsForProductOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableImportFindingsForProductRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductInput">EnableImportFindingsForProductInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableImportFindingsForProductOutput">EnableImportFindingsForProductOutput</a>)
+
+    EnableOrganizationAdminAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableOrganizationAdminAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>)
+
+    EnableSecurityHub(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubInput">EnableSecurityHubInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubOutput">EnableSecurityHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableSecurityHubWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubInput">EnableSecurityHubInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubOutput">EnableSecurityHubOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableSecurityHubRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubInput">EnableSecurityHubInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#EnableSecurityHubOutput">EnableSecurityHubOutput</a>)
+
+    GetAdministratorAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAdministratorAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAdministratorAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>)
+
+    GetEnabledStandards(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsInput">GetEnabledStandardsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsOutput">GetEnabledStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEnabledStandardsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsInput">GetEnabledStandardsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsOutput">GetEnabledStandardsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEnabledStandardsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsInput">GetEnabledStandardsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsOutput">GetEnabledStandardsOutput</a>)
+
+    GetEnabledStandardsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsInput">GetEnabledStandardsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsOutput">GetEnabledStandardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetEnabledStandardsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsInput">GetEnabledStandardsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetEnabledStandardsOutput">GetEnabledStandardsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetFindings(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>)
+
+    GetFindingsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetFindingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetInsightResults(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsInput">GetInsightResultsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsOutput">GetInsightResultsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightResultsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsInput">GetInsightResultsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsOutput">GetInsightResultsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightResultsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsInput">GetInsightResultsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightResultsOutput">GetInsightResultsOutput</a>)
+
+    GetInsights(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsInput">GetInsightsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsOutput">GetInsightsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsInput">GetInsightsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsOutput">GetInsightsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInsightsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsInput">GetInsightsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsOutput">GetInsightsOutput</a>)
+
+    GetInsightsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsInput">GetInsightsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsOutput">GetInsightsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetInsightsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsInput">GetInsightsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInsightsOutput">GetInsightsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetInvitationsCount(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInvitationsCountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInvitationsCountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>)
+
+    GetMasterAccount(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMasterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMasterAccountRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>)
+
+    GetMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersInput">GetMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersOutput">GetMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersInput">GetMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersOutput">GetMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersInput">GetMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#GetMembersOutput">GetMembersOutput</a>)
+
+    InviteMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersInput">InviteMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersOutput">InviteMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InviteMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersInput">InviteMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersOutput">InviteMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InviteMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersInput">InviteMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#InviteMembersOutput">InviteMembersOutput</a>)
+
+    ListEnabledProductsForImport(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportInput">ListEnabledProductsForImportInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportOutput">ListEnabledProductsForImportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEnabledProductsForImportWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportInput">ListEnabledProductsForImportInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportOutput">ListEnabledProductsForImportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEnabledProductsForImportRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportInput">ListEnabledProductsForImportInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportOutput">ListEnabledProductsForImportOutput</a>)
+
+    ListEnabledProductsForImportPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportInput">ListEnabledProductsForImportInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportOutput">ListEnabledProductsForImportOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListEnabledProductsForImportPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportInput">ListEnabledProductsForImportInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListEnabledProductsForImportOutput">ListEnabledProductsForImportOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListInvitations(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInvitationsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>)
+
+    ListInvitationsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListInvitationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListMembers(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMembersRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>)
+
+    ListMembersPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMembersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListOrganizationAdminAccounts(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationAdminAccountsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationAdminAccountsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>)
+
+    ListOrganizationAdminAccountsPages(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListOrganizationAdminAccountsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, func(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    TagResource(*<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateActionTarget(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetInput">UpdateActionTargetInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetOutput">UpdateActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateActionTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetInput">UpdateActionTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetOutput">UpdateActionTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateActionTargetRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetInput">UpdateActionTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateActionTargetOutput">UpdateActionTargetOutput</a>)
+
+    UpdateFindings(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsInput">UpdateFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateFindingsOutput">UpdateFindingsOutput</a>)
+
+    UpdateInsight(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightInput">UpdateInsightInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightOutput">UpdateInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInsightWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightInput">UpdateInsightInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightOutput">UpdateInsightOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInsightRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightInput">UpdateInsightInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateInsightOutput">UpdateInsightOutput</a>)
+
+    UpdateOrganizationConfiguration(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationConfigurationRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>)
+
+    UpdateSecurityHubConfiguration(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationInput">UpdateSecurityHubConfigurationInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationOutput">UpdateSecurityHubConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSecurityHubConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationInput">UpdateSecurityHubConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationOutput">UpdateSecurityHubConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSecurityHubConfigurationRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationInput">UpdateSecurityHubConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateSecurityHubConfigurationOutput">UpdateSecurityHubConfigurationOutput</a>)
+
+    UpdateStandardsControl(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlInput">UpdateStandardsControlInput</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlOutput">UpdateStandardsControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStandardsControlWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlInput">UpdateStandardsControlInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlOutput">UpdateStandardsControlOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStandardsControlRequest(*<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlInput">UpdateStandardsControlInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">securityhub</a>.<a href="../index.html#UpdateStandardsControlOutput">UpdateStandardsControlOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

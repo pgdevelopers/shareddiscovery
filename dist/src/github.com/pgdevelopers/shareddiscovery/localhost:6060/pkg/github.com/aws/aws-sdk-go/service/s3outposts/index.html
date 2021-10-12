@@ -1,0 +1,3006 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>s3outposts - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package s3outposts
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/s3outposts&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package s3outposts provides the client and types for making API
+requests to Amazon S3 on Outposts.
+</p>
+<p>
+Amazon S3 on Outposts provides access to S3 on Outposts operations.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25</a> for more information on this service.
+</p>
+<p>
+See s3outposts package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/s3outposts/">https://docs.aws.amazon.com/sdk-for-go/api/service/s3outposts/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon S3 on Outposts with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon S3 on Outposts client S3Outposts for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/s3outposts/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/s3outposts/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#EndpointAccessType_Values">func EndpointAccessType_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#EndpointStatus_Values">func EndpointStatus_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AccessDeniedException">type AccessDeniedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Code">func (s *AccessDeniedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Error">func (s *AccessDeniedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.GoString">func (s AccessDeniedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Message">func (s *AccessDeniedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.OrigErr">func (s *AccessDeniedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.RequestID">func (s *AccessDeniedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.StatusCode">func (s *AccessDeniedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.String">func (s AccessDeniedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ConflictException">type ConflictException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ConflictException.Code">func (s *ConflictException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Error">func (s *ConflictException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.GoString">func (s ConflictException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Message">func (s *ConflictException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.OrigErr">func (s *ConflictException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.RequestID">func (s *ConflictException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.StatusCode">func (s *ConflictException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.String">func (s ConflictException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CreateEndpointInput">type CreateEndpointInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.GoString">func (s CreateEndpointInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.SetAccessType">func (s *CreateEndpointInput) SetAccessType(v string) *CreateEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.SetCustomerOwnedIpv4Pool">func (s *CreateEndpointInput) SetCustomerOwnedIpv4Pool(v string) *CreateEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.SetOutpostId">func (s *CreateEndpointInput) SetOutpostId(v string) *CreateEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.SetSecurityGroupId">func (s *CreateEndpointInput) SetSecurityGroupId(v string) *CreateEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.SetSubnetId">func (s *CreateEndpointInput) SetSubnetId(v string) *CreateEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.String">func (s CreateEndpointInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointInput.Validate">func (s *CreateEndpointInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CreateEndpointOutput">type CreateEndpointOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CreateEndpointOutput.GoString">func (s CreateEndpointOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointOutput.SetEndpointArn">func (s *CreateEndpointOutput) SetEndpointArn(v string) *CreateEndpointOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CreateEndpointOutput.String">func (s CreateEndpointOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteEndpointInput">type DeleteEndpointInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointInput.GoString">func (s DeleteEndpointInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointInput.SetEndpointId">func (s *DeleteEndpointInput) SetEndpointId(v string) *DeleteEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointInput.SetOutpostId">func (s *DeleteEndpointInput) SetOutpostId(v string) *DeleteEndpointInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointInput.String">func (s DeleteEndpointInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointInput.Validate">func (s *DeleteEndpointInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteEndpointOutput">type DeleteEndpointOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointOutput.GoString">func (s DeleteEndpointOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteEndpointOutput.String">func (s DeleteEndpointOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Endpoint">type Endpoint</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Endpoint.GoString">func (s Endpoint) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetAccessType">func (s *Endpoint) SetAccessType(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetCidrBlock">func (s *Endpoint) SetCidrBlock(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetCreationTime">func (s *Endpoint) SetCreationTime(v time.Time) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetCustomerOwnedIpv4Pool">func (s *Endpoint) SetCustomerOwnedIpv4Pool(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetEndpointArn">func (s *Endpoint) SetEndpointArn(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetNetworkInterfaces">func (s *Endpoint) SetNetworkInterfaces(v []*NetworkInterface) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetOutpostsId">func (s *Endpoint) SetOutpostsId(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetSecurityGroupId">func (s *Endpoint) SetSecurityGroupId(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetStatus">func (s *Endpoint) SetStatus(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetSubnetId">func (s *Endpoint) SetSubnetId(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.SetVpcId">func (s *Endpoint) SetVpcId(v string) *Endpoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#Endpoint.String">func (s Endpoint) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListEndpointsInput">type ListEndpointsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListEndpointsInput.GoString">func (s ListEndpointsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsInput.SetMaxResults">func (s *ListEndpointsInput) SetMaxResults(v int64) *ListEndpointsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsInput.SetNextToken">func (s *ListEndpointsInput) SetNextToken(v string) *ListEndpointsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsInput.String">func (s ListEndpointsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsInput.Validate">func (s *ListEndpointsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListEndpointsOutput">type ListEndpointsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListEndpointsOutput.GoString">func (s ListEndpointsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsOutput.SetEndpoints">func (s *ListEndpointsOutput) SetEndpoints(v []*Endpoint) *ListEndpointsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsOutput.SetNextToken">func (s *ListEndpointsOutput) SetNextToken(v string) *ListEndpointsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListEndpointsOutput.String">func (s ListEndpointsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NetworkInterface">type NetworkInterface</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#NetworkInterface.GoString">func (s NetworkInterface) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NetworkInterface.SetNetworkInterfaceId">func (s *NetworkInterface) SetNetworkInterfaceId(v string) *NetworkInterface</a></dd>
+				
+					
+					<dd>    <a href="index.html#NetworkInterface.String">func (s NetworkInterface) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#S3Outposts">type S3Outposts</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *S3Outposts</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#S3Outposts.CreateEndpoint">func (c *S3Outposts) CreateEndpoint(input *CreateEndpointInput) (*CreateEndpointOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.CreateEndpointRequest">func (c *S3Outposts) CreateEndpointRequest(input *CreateEndpointInput) (req *request.Request, output *CreateEndpointOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.CreateEndpointWithContext">func (c *S3Outposts) CreateEndpointWithContext(ctx aws.Context, input *CreateEndpointInput, opts ...request.Option) (*CreateEndpointOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.DeleteEndpoint">func (c *S3Outposts) DeleteEndpoint(input *DeleteEndpointInput) (*DeleteEndpointOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.DeleteEndpointRequest">func (c *S3Outposts) DeleteEndpointRequest(input *DeleteEndpointInput) (req *request.Request, output *DeleteEndpointOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.DeleteEndpointWithContext">func (c *S3Outposts) DeleteEndpointWithContext(ctx aws.Context, input *DeleteEndpointInput, opts ...request.Option) (*DeleteEndpointOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.ListEndpoints">func (c *S3Outposts) ListEndpoints(input *ListEndpointsInput) (*ListEndpointsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.ListEndpointsPages">func (c *S3Outposts) ListEndpointsPages(input *ListEndpointsInput, fn func(*ListEndpointsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.ListEndpointsPagesWithContext">func (c *S3Outposts) ListEndpointsPagesWithContext(ctx aws.Context, input *ListEndpointsInput, fn func(*ListEndpointsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.ListEndpointsRequest">func (c *S3Outposts) ListEndpointsRequest(input *ListEndpointsInput) (req *request.Request, output *ListEndpointsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Outposts.ListEndpointsWithContext">func (c *S3Outposts) ListEndpointsWithContext(ctx aws.Context, input *ListEndpointsInput, opts ...request.Option) (*ListEndpointsOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationException">type ValidationException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationException.Code">func (s *ValidationException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Error">func (s *ValidationException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.GoString">func (s ValidationException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Message">func (s *ValidationException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.OrigErr">func (s *ValidationException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.RequestID">func (s *ValidationException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.StatusCode">func (s *ValidationException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.String">func (s ValidationException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// EndpointAccessTypePrivate is a EndpointAccessType enum value</span>
+    <span id="EndpointAccessTypePrivate">EndpointAccessTypePrivate</span> = &#34;Private&#34;
+
+    <span class="comment">// EndpointAccessTypeCustomerOwnedIp is a EndpointAccessType enum value</span>
+    <span id="EndpointAccessTypeCustomerOwnedIp">EndpointAccessTypeCustomerOwnedIp</span> = &#34;CustomerOwnedIp&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// EndpointStatusPending is a EndpointStatus enum value</span>
+    <span id="EndpointStatusPending">EndpointStatusPending</span> = &#34;Pending&#34;
+
+    <span class="comment">// EndpointStatusAvailable is a EndpointStatus enum value</span>
+    <span id="EndpointStatusAvailable">EndpointStatusAvailable</span> = &#34;Available&#34;
+
+    <span class="comment">// EndpointStatusDeleting is a EndpointStatus enum value</span>
+    <span id="EndpointStatusDeleting">EndpointStatusDeleting</span> = &#34;Deleting&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessDeniedException for service response error code</span>
+    <span class="comment">// &#34;AccessDeniedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Access was denied for this action.</span>
+    <span id="ErrCodeAccessDeniedException">ErrCodeAccessDeniedException</span> = &#34;AccessDeniedException&#34;
+
+    <span class="comment">// ErrCodeConflictException for service response error code</span>
+    <span class="comment">// &#34;ConflictException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was a conflict with this action, and it could not be completed.</span>
+    <span id="ErrCodeConflictException">ErrCodeConflictException</span> = &#34;ConflictException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was an exception with the internal server.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The requested resource was not found.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+
+    <span class="comment">// ErrCodeValidationException for service response error code</span>
+    <span class="comment">// &#34;ValidationException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// There was an exception validating this data.</span>
+    <span id="ErrCodeValidationException">ErrCodeValidationException</span> = &#34;ValidationException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;S3Outposts&#34;  <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;s3-outposts&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;S3Outposts&#34;  <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="EndpointAccessType_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=38427:38468#L1160">EndpointAccessType_Values</a>
+				<a class="permalink" href="index.html#EndpointAccessType_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func EndpointAccessType_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+EndpointAccessType_Values returns all elements of the EndpointAccessType enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="EndpointStatus_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=38932:38969#L1179">EndpointStatus_Values</a>
+				<a class="permalink" href="index.html#EndpointStatus_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func EndpointStatus_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+EndpointStatus_Values returns all elements of the EndpointStatus enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AccessDeniedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=14504:14717#L373">AccessDeniedException</a>
+				<a class="permalink" href="index.html#AccessDeniedException">¶</a>
+				
+				
+			</h2>
+			<p>
+Access was denied for this action.
+</p>
+
+			<pre>type AccessDeniedException struct {
+<span id="AccessDeniedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessDeniedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessDeniedException.Code">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=15540:15585#L405">Code</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Error">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=15910:15956#L422">Error</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.GoString">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=15297:15345#L394">GoString</a>
+					<a class="permalink" href="index.html#AccessDeniedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Message">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=15667:15715#L410">Message</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.OrigErr">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=15845:15892#L418">OrigErr</a>
+					<a class="permalink" href="index.html#AccessDeniedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.RequestID">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=16248:16298#L432">RequestID</a>
+					<a class="permalink" href="index.html#AccessDeniedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.StatusCode">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=16093:16141#L427">StatusCode</a>
+					<a class="permalink" href="index.html#AccessDeniedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.String">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=14967:15013#L385">String</a>
+					<a class="permalink" href="index.html#AccessDeniedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConflictException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=16410:16619#L437">ConflictException</a>
+				<a class="permalink" href="index.html#ConflictException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was a conflict with this action, and it could not be completed.
+</p>
+
+			<pre>type ConflictException struct {
+<span id="ConflictException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ConflictException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ConflictException.Code">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17426:17467#L469">Code</a>
+					<a class="permalink" href="index.html#ConflictException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Error">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17780:17822#L486">Error</a>
+					<a class="permalink" href="index.html#ConflictException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.GoString">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17195:17239#L458">GoString</a>
+					<a class="permalink" href="index.html#ConflictException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Message">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17545:17589#L474">Message</a>
+					<a class="permalink" href="index.html#ConflictException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.OrigErr">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17719:17762#L482">OrigErr</a>
+					<a class="permalink" href="index.html#ConflictException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.RequestID">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=18110:18156#L496">RequestID</a>
+					<a class="permalink" href="index.html#ConflictException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.StatusCode">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=17959:18003#L491">StatusCode</a>
+					<a class="permalink" href="index.html#ConflictException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.String">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=16869:16911#L449">String</a>
+					<a class="permalink" href="index.html#ConflictException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CreateEndpointInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=18195:19241#L500">CreateEndpointInput</a>
+				<a class="permalink" href="index.html#CreateEndpointInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CreateEndpointInput struct {
+
+    <span class="comment">// The type of access for the on-premise network connectivity for the Outpost</span>
+    <span class="comment">// endpoint. To access the endpoint from an on-premises network, you must specify</span>
+    <span class="comment">// the access type and provide the customer owned IPv4 pool.</span>
+<span id="CreateEndpointInput.AccessType"></span>    AccessType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;EndpointAccessType&#34;`
+
+    <span class="comment">// The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will</span>
+    <span class="comment">// be allocated from this pool for the endpoint.</span>
+<span id="CreateEndpointInput.CustomerOwnedIpv4Pool"></span>    CustomerOwnedIpv4Pool *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The ID of the AWS Outposts.</span>
+    <span class="comment">//</span>
+<span id="CreateEndpointInput.OutpostId"></span>    <span class="comment">// OutpostId is a required field</span>
+    OutpostId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The ID of the security group to use with the endpoint.</span>
+    <span class="comment">//</span>
+<span id="CreateEndpointInput.SecurityGroupId"></span>    <span class="comment">// SecurityGroupId is a required field</span>
+    SecurityGroupId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The ID of the subnet in the selected VPC. The endpoint subnet must belong</span>
+    <span class="comment">// to the Outpost that has the Amazon S3 on Outposts provisioned.</span>
+    <span class="comment">//</span>
+<span id="CreateEndpointInput.SubnetId"></span>    <span class="comment">// SubnetId is a required field</span>
+    SubnetId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CreateEndpointInput.GoString">func (CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=19819:19865#L543">GoString</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.SetAccessType">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=20494:20568#L567">SetAccessType</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.SetAccessType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) SetAccessType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a></pre>
+				<p>
+SetAccessType sets the AccessType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.SetCustomerOwnedIpv4Pool">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=20677:20762#L573">SetCustomerOwnedIpv4Pool</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.SetCustomerOwnedIpv4Pool">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) SetCustomerOwnedIpv4Pool(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a></pre>
+				<p>
+SetCustomerOwnedIpv4Pool sets the CustomerOwnedIpv4Pool field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.SetOutpostId">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=20858:20931#L579">SetOutpostId</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.SetOutpostId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) SetOutpostId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a></pre>
+				<p>
+SetOutpostId sets the OutpostId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.SetSecurityGroupId">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=21027:21106#L585">SetSecurityGroupId</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.SetSecurityGroupId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) SetSecurityGroupId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a></pre>
+				<p>
+SetSecurityGroupId sets the SecurityGroupId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.SetSubnetId">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=21194:21266#L591">SetSubnetId</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.SetSubnetId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) SetSubnetId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a></pre>
+				<p>
+SetSubnetId sets the SubnetId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.String">func (CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=19491:19535#L534">String</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointInput.Validate">func (*CreateEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=19966:20012#L548">Validate</a>
+					<a class="permalink" href="index.html#CreateEndpointInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CreateEndpointOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=21299:21456#L596">CreateEndpointOutput</a>
+				<a class="permalink" href="index.html#CreateEndpointOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CreateEndpointOutput struct {
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the endpoint.</span>
+<span id="CreateEndpointOutput.EndpointArn"></span>    EndpointArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CreateEndpointOutput.GoString">func (CreateEndpointOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=22035:22082#L617">GoString</a>
+					<a class="permalink" href="index.html#CreateEndpointOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointOutput.SetEndpointArn">func (*CreateEndpointOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=22161:22238#L622">SetEndpointArn</a>
+					<a class="permalink" href="index.html#CreateEndpointOutput.SetEndpointArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>) SetEndpointArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a></pre>
+				<p>
+SetEndpointArn sets the EndpointArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CreateEndpointOutput.String">func (CreateEndpointOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=21706:21751#L608">String</a>
+					<a class="permalink" href="index.html#CreateEndpointOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteEndpointInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=22274:22679#L627">DeleteEndpointInput</a>
+				<a class="permalink" href="index.html#DeleteEndpointInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteEndpointInput struct {
+
+    <span class="comment">// The ID of the endpoint.</span>
+    <span class="comment">//</span>
+<span id="DeleteEndpointInput.EndpointId"></span>    <span class="comment">// EndpointId is a required field</span>
+    EndpointId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;endpointId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The ID of the AWS Outposts.</span>
+    <span class="comment">//</span>
+<span id="DeleteEndpointInput.OutpostId"></span>    <span class="comment">// OutpostId is a required field</span>
+    OutpostId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;outpostId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteEndpointInput.GoString">func (DeleteEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=23257:23303#L655">GoString</a>
+					<a class="permalink" href="index.html#DeleteEndpointInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteEndpointInput.SetEndpointId">func (*DeleteEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=23834:23908#L676">SetEndpointId</a>
+					<a class="permalink" href="index.html#DeleteEndpointInput.SetEndpointId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) SetEndpointId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a></pre>
+				<p>
+SetEndpointId sets the EndpointId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteEndpointInput.SetOutpostId">func (*DeleteEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=23993:24066#L682">SetOutpostId</a>
+					<a class="permalink" href="index.html#DeleteEndpointInput.SetOutpostId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) SetOutpostId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a></pre>
+				<p>
+SetOutpostId sets the OutpostId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteEndpointInput.String">func (DeleteEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=22929:22973#L646">String</a>
+					<a class="permalink" href="index.html#DeleteEndpointInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteEndpointInput.Validate">func (*DeleteEndpointInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=23404:23450#L660">Validate</a>
+					<a class="permalink" href="index.html#DeleteEndpointInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteEndpointOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=24100:24167#L687">DeleteEndpointOutput</a>
+				<a class="permalink" href="index.html#DeleteEndpointOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteEndpointOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteEndpointOutput.GoString">func (DeleteEndpointOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=24746:24793#L705">GoString</a>
+					<a class="permalink" href="index.html#DeleteEndpointOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteEndpointOutput">DeleteEndpointOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteEndpointOutput.String">func (DeleteEndpointOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=24417:24462#L696">String</a>
+					<a class="permalink" href="index.html#DeleteEndpointOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteEndpointOutput">DeleteEndpointOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Endpoint">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=25243:26241#L714">Endpoint</a>
+				<a class="permalink" href="index.html#Endpoint">¶</a>
+				
+				
+			</h2>
+			<p>
+Amazon S3 on Outposts Access Points simplify managing data access at scale
+for shared datasets in S3 on Outposts. S3 on Outposts uses endpoints to connect
+to Outposts buckets so that you can perform actions within your virtual private
+cloud (VPC). For more information, see Accessing S3 on Outposts using VPC
+only access points (<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html</a>).
+</p>
+
+			<pre>type Endpoint struct {
+<span id="Endpoint.AccessType"></span>    AccessType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;EndpointAccessType&#34;`
+
+    <span class="comment">// The VPC CIDR committed by this endpoint.</span>
+<span id="Endpoint.CidrBlock"></span>    CidrBlock *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The time the endpoint was created.</span>
+<span id="Endpoint.CreationTime"></span>    CreationTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The ID of the customer-owned IPv4 pool used for the endpoint.</span>
+<span id="Endpoint.CustomerOwnedIpv4Pool"></span>    CustomerOwnedIpv4Pool *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the endpoint.</span>
+<span id="Endpoint.EndpointArn"></span>    EndpointArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The network interface of the endpoint.</span>
+<span id="Endpoint.NetworkInterfaces"></span>    NetworkInterfaces []*<a href="index.html#NetworkInterface">NetworkInterface</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The ID of the AWS Outposts.</span>
+<span id="Endpoint.OutpostsId"></span>    OutpostsId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The ID of the security group used for the endpoint.</span>
+<span id="Endpoint.SecurityGroupId"></span>    SecurityGroupId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The status of the endpoint.</span>
+<span id="Endpoint.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;EndpointStatus&#34;`
+
+    <span class="comment">// The ID of the subnet used for the endpoint.</span>
+<span id="Endpoint.SubnetId"></span>    SubnetId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The ID of the VPC used for the endpoint.</span>
+<span id="Endpoint.VpcId"></span>    VpcId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Endpoint.GoString">func (Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=26808:26843#L764">GoString</a>
+					<a class="permalink" href="index.html#Endpoint.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Endpoint">Endpoint</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetAccessType">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=26920:26972#L769">SetAccessType</a>
+					<a class="permalink" href="index.html#Endpoint.SetAccessType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetAccessType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetAccessType sets the AccessType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetCidrBlock">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27057:27108#L775">SetCidrBlock</a>
+					<a class="permalink" href="index.html#Endpoint.SetCidrBlock">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetCidrBlock(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetCidrBlock sets the CidrBlock field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetCreationTime">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27198:27255#L781">SetCreationTime</a>
+					<a class="permalink" href="index.html#Endpoint.SetCreationTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetCreationTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetCreationTime sets the CreationTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetCustomerOwnedIpv4Pool">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27366:27429#L787">SetCustomerOwnedIpv4Pool</a>
+					<a class="permalink" href="index.html#Endpoint.SetCustomerOwnedIpv4Pool">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetCustomerOwnedIpv4Pool(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetCustomerOwnedIpv4Pool sets the CustomerOwnedIpv4Pool field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetEndpointArn">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27529:27582#L793">SetEndpointArn</a>
+					<a class="permalink" href="index.html#Endpoint.SetEndpointArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetEndpointArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetEndpointArn sets the EndpointArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetNetworkInterfaces">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27684:27756#L799">SetNetworkInterfaces</a>
+					<a class="permalink" href="index.html#Endpoint.SetNetworkInterfaces">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetNetworkInterfaces(v []*<a href="index.html#NetworkInterface">NetworkInterface</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetNetworkInterfaces sets the NetworkInterfaces field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetOutpostsId">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27849:27901#L805">SetOutpostsId</a>
+					<a class="permalink" href="index.html#Endpoint.SetOutpostsId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetOutpostsId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetOutpostsId sets the OutpostsId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetSecurityGroupId">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=27998:28055#L811">SetSecurityGroupId</a>
+					<a class="permalink" href="index.html#Endpoint.SetSecurityGroupId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetSecurityGroupId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetSecurityGroupId sets the SecurityGroupId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetStatus">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=28139:28187#L817">SetStatus</a>
+					<a class="permalink" href="index.html#Endpoint.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetSubnetId">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=28266:28316#L823">SetSubnetId</a>
+					<a class="permalink" href="index.html#Endpoint.SetSubnetId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetSubnetId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetSubnetId sets the SubnetId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.SetVpcId">func (*Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=28391:28438#L829">SetVpcId</a>
+					<a class="permalink" href="index.html#Endpoint.SetVpcId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Endpoint">Endpoint</a>) SetVpcId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Endpoint">Endpoint</a></pre>
+				<p>
+SetVpcId sets the VpcId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Endpoint.String">func (Endpoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=26491:26524#L755">String</a>
+					<a class="permalink" href="index.html#Endpoint.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Endpoint">Endpoint</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=28520:28735#L835">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was an exception with the internal server.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=29566:29613#L867">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=29944:29992#L884">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=29317:29367#L856">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=29697:29747#L872">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=29877:29926#L880">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=30286:30338#L894">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=30129:30179#L889">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=28985:29033#L847">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListEndpointsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=30377:30734#L898">ListEndpointsInput</a>
+				<a class="permalink" href="index.html#ListEndpointsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListEndpointsInput struct {
+
+    <span class="comment">// The max number of endpoints that can be returned on the request.</span>
+<span id="ListEndpointsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;maxResults&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The next endpoint requested in the list.</span>
+<span id="ListEndpointsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;nextToken&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListEndpointsInput.GoString">func (ListEndpointsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=31311:31356#L922">GoString</a>
+					<a class="permalink" href="index.html#ListEndpointsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsInput.SetMaxResults">func (*ListEndpointsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=31819:31890#L940">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListEndpointsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsInput.SetNextToken">func (*ListEndpointsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=31975:32046#L946">SetNextToken</a>
+					<a class="permalink" href="index.html#ListEndpointsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsInput.String">func (ListEndpointsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=30984:31027#L913">String</a>
+					<a class="permalink" href="index.html#ListEndpointsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsInput.Validate">func (*ListEndpointsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=31457:31502#L927">Validate</a>
+					<a class="permalink" href="index.html#ListEndpointsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListEndpointsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=32080:32336#L951">ListEndpointsOutput</a>
+				<a class="permalink" href="index.html#ListEndpointsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListEndpointsOutput struct {
+
+    <span class="comment">// Returns an array of endpoints associated with AWS Outposts.</span>
+<span id="ListEndpointsOutput.Endpoints"></span>    Endpoints []*<a href="index.html#Endpoint">Endpoint</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The next endpoint returned in the list.</span>
+<span id="ListEndpointsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListEndpointsOutput.GoString">func (ListEndpointsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=32914:32960#L975">GoString</a>
+					<a class="permalink" href="index.html#ListEndpointsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsOutput.SetEndpoints">func (*ListEndpointsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=33035:33113#L980">SetEndpoints</a>
+					<a class="permalink" href="index.html#ListEndpointsOutput.SetEndpoints">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>) SetEndpoints(v []*<a href="index.html#Endpoint">Endpoint</a>) *<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a></pre>
+				<p>
+SetEndpoints sets the Endpoints field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsOutput.SetNextToken">func (*ListEndpointsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=33196:33269#L986">SetNextToken</a>
+					<a class="permalink" href="index.html#ListEndpointsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListEndpointsOutput.String">func (ListEndpointsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=32586:32630#L966">String</a>
+					<a class="permalink" href="index.html#ListEndpointsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NetworkInterface">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=33347:33493#L992">NetworkInterface</a>
+				<a class="permalink" href="index.html#NetworkInterface">¶</a>
+				
+				
+			</h2>
+			<p>
+The container for the network interface.
+</p>
+
+			<pre>type NetworkInterface struct {
+
+    <span class="comment">// The ID for the network interface.</span>
+<span id="NetworkInterface.NetworkInterfaceId"></span>    NetworkInterfaceId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NetworkInterface.GoString">func (NetworkInterface) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=34068:34111#L1013">GoString</a>
+					<a class="permalink" href="index.html#NetworkInterface.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NetworkInterface">NetworkInterface</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkInterface.SetNetworkInterfaceId">func (*NetworkInterface) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=34204:34280#L1018">SetNetworkInterfaceId</a>
+					<a class="permalink" href="index.html#NetworkInterface.SetNetworkInterfaceId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NetworkInterface">NetworkInterface</a>) SetNetworkInterfaceId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#NetworkInterface">NetworkInterface</a></pre>
+				<p>
+SetNetworkInterfaceId sets the NetworkInterfaceId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkInterface.String">func (NetworkInterface) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=33743:33784#L1004">String</a>
+					<a class="permalink" href="index.html#NetworkInterface.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NetworkInterface">NetworkInterface</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=34364:34581#L1024">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+The requested resource was not found.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35420:35469#L1056">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35806:35856#L1073">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35165:35217#L1045">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35555:35607#L1061">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35737:35788#L1069">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=36152:36206#L1083">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=35993:36045#L1078">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=34831:34881#L1036">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="S3Outposts">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/service.go?s=708:750#L11">S3Outposts</a>
+				<a class="permalink" href="index.html#S3Outposts">¶</a>
+				
+				
+			</h2>
+			<p>
+S3Outposts provides the API operation methods for making requests to
+Amazon S3 on Outposts. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+S3Outposts methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type S3Outposts struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/service.go?s=1700:1766#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#S3Outposts">S3Outposts</a></pre>
+				<p>
+New creates a new instance of the S3Outposts client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a S3Outposts client from just a session.
+svc := s3outposts.New(mySession)
+
+// Create a S3Outposts client with additional configuration
+svc := s3outposts.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="S3Outposts.CreateEndpoint">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=3531:3625#L90">CreateEndpoint</a>
+					<a class="permalink" href="index.html#S3Outposts.CreateEndpoint">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) CreateEndpoint(input *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) (*<a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CreateEndpoint API operation for Amazon S3 on Outposts.
+</p>
+<p>
+Amazon S3 on Outposts Access Points simplify managing data access at scale
+for shared datasets in S3 on Outposts. S3 on Outposts uses endpoints to connect
+to Outposts buckets so that you can perform actions within your virtual private
+cloud (VPC). For more information, see Accessing S3 on Outposts using VPC
+only access points (<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html</a>).
+</p>
+<p>
+This action creates an endpoint and associates it with the specified Outposts.
+</p>
+<p>
+It can take up to 5 minutes for this action to complete.
+</p>
+<p>
+Related actions include:
+</p>
+<pre>* DeleteEndpoint (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html</a>)
+
+* ListEndpoints (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html</a>)
+</pre>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon S3 on Outposts&#39;s
+API operation CreateEndpoint for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+There was an exception with the internal server.
+
+* ValidationException
+There was an exception validating this data.
+
+* AccessDeniedException
+Access was denied for this action.
+
+* ResourceNotFoundException
+The requested resource was not found.
+
+* ConflictException
+There was a conflict with this action, and it could not be completed.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.CreateEndpointRequest">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=1396:1519#L32">CreateEndpointRequest</a>
+					<a class="permalink" href="index.html#S3Outposts.CreateEndpointRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) CreateEndpointRequest(input *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>)</pre>
+				<p>
+CreateEndpointRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the CreateEndpoint operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See CreateEndpoint for more information on using the CreateEndpoint
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the CreateEndpointRequest method.
+req, resp := client.CreateEndpointRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.CreateEndpointWithContext">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=4184:4330#L104">CreateEndpointWithContext</a>
+					<a class="permalink" href="index.html#S3Outposts.CreateEndpointWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) CreateEndpointWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#CreateEndpointInput">CreateEndpointInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#CreateEndpointOutput">CreateEndpointOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CreateEndpointWithContext is the same as CreateEndpoint with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See CreateEndpoint for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.DeleteEndpoint">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=7601:7695#L193">DeleteEndpoint</a>
+					<a class="permalink" href="index.html#S3Outposts.DeleteEndpoint">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) DeleteEndpoint(input *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) (*<a href="index.html#DeleteEndpointOutput">DeleteEndpointOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteEndpoint API operation for Amazon S3 on Outposts.
+</p>
+<p>
+Amazon S3 on Outposts Access Points simplify managing data access at scale
+for shared datasets in S3 on Outposts. S3 on Outposts uses endpoints to connect
+to Outposts buckets so that you can perform actions within your virtual private
+cloud (VPC). For more information, see Accessing S3 on Outposts using VPC
+only access points (<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html</a>).
+</p>
+<p>
+This action deletes an endpoint.
+</p>
+<p>
+It can take up to 5 minutes for this action to complete.
+</p>
+<p>
+Related actions include:
+</p>
+<pre>* CreateEndpoint (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html</a>)
+
+* ListEndpoints (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html</a>)
+</pre>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon S3 on Outposts&#39;s
+API operation DeleteEndpoint for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+There was an exception with the internal server.
+
+* AccessDeniedException
+Access was denied for this action.
+
+* ResourceNotFoundException
+The requested resource was not found.
+
+* ValidationException
+There was an exception validating this data.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.DeleteEndpointRequest">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=5514:5637#L137">DeleteEndpointRequest</a>
+					<a class="permalink" href="index.html#S3Outposts.DeleteEndpointRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) DeleteEndpointRequest(input *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DeleteEndpointOutput">DeleteEndpointOutput</a>)</pre>
+				<p>
+DeleteEndpointRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DeleteEndpoint operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DeleteEndpoint for more information on using the DeleteEndpoint
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DeleteEndpointRequest method.
+req, resp := client.DeleteEndpointRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.DeleteEndpointWithContext">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=8254:8400#L207">DeleteEndpointWithContext</a>
+					<a class="permalink" href="index.html#S3Outposts.DeleteEndpointWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) DeleteEndpointWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DeleteEndpointInput">DeleteEndpointInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DeleteEndpointOutput">DeleteEndpointOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteEndpointWithContext is the same as DeleteEndpoint with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DeleteEndpoint for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.ListEndpoints">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=11696:11787#L299">ListEndpoints</a>
+					<a class="permalink" href="index.html#S3Outposts.ListEndpoints">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) ListEndpoints(input *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) (*<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListEndpoints API operation for Amazon S3 on Outposts.
+</p>
+<p>
+Amazon S3 on Outposts Access Points simplify managing data access at scale
+for shared datasets in S3 on Outposts. S3 on Outposts uses endpoints to connect
+to Outposts buckets so that you can perform actions within your virtual private
+cloud (VPC). For more information, see Accessing S3 on Outposts using VPC
+only access points (<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html</a>).
+</p>
+<p>
+This action lists endpoints associated with the Outposts.
+</p>
+<p>
+Related actions include:
+</p>
+<pre>* CreateEndpoint (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html</a>)
+
+* DeleteEndpoint (<a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html</a>)
+</pre>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon S3 on Outposts&#39;s
+API operation ListEndpoints for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+There was an exception with the internal server.
+
+* ResourceNotFoundException
+The requested resource was not found.
+
+* AccessDeniedException
+Access was denied for this action.
+
+* ValidationException
+There was an exception validating this data.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.ListEndpointsPages">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=13288:13402#L337">ListEndpointsPages</a>
+					<a class="permalink" href="index.html#S3Outposts.ListEndpointsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) ListEndpointsPages(input *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>, fn func(*<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListEndpointsPages iterates over the pages of a ListEndpoints operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListEndpoints method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListEndpoints operation.
+pageNum := 0
+err := client.ListEndpointsPages(params,
+    func(page *s3outposts.ListEndpointsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.ListEndpointsPagesWithContext">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=13891:14057#L348">ListEndpointsPagesWithContext</a>
+					<a class="permalink" href="index.html#S3Outposts.ListEndpointsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) ListEndpointsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>, fn func(*<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListEndpointsPagesWithContext same as ListEndpointsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.ListEndpointsRequest">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=9575:9695#L240">ListEndpointsRequest</a>
+					<a class="permalink" href="index.html#S3Outposts.ListEndpointsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) ListEndpointsRequest(input *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>)</pre>
+				<p>
+ListEndpointsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListEndpoints operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListEndpoints for more information on using the ListEndpoints
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListEndpointsRequest method.
+req, resp := client.ListEndpointsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints">https://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Outposts.ListEndpointsWithContext">func (*S3Outposts) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=12342:12485#L313">ListEndpointsWithContext</a>
+					<a class="permalink" href="index.html#S3Outposts.ListEndpointsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#S3Outposts">S3Outposts</a>) ListEndpointsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListEndpointsInput">ListEndpointsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListEndpointsOutput">ListEndpointsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListEndpointsWithContext is the same as ListEndpoints with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListEndpoints for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=36293:36504#L1088">ValidationException</a>
+				<a class="permalink" href="index.html#ValidationException">¶</a>
+				
+				
+			</h2>
+			<p>
+There was an exception validating this data.
+</p>
+
+			<pre>type ValidationException struct {
+<span id="ValidationException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ValidationException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationException.Code">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37319:37362#L1120">Code</a>
+					<a class="permalink" href="index.html#ValidationException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Error">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37681:37725#L1137">Error</a>
+					<a class="permalink" href="index.html#ValidationException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.GoString">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37082:37128#L1109">GoString</a>
+					<a class="permalink" href="index.html#ValidationException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Message">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37442:37488#L1125">Message</a>
+					<a class="permalink" href="index.html#ValidationException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.OrigErr">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37618:37663#L1133">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.RequestID">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=38015:38063#L1147">RequestID</a>
+					<a class="permalink" href="index.html#ValidationException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.StatusCode">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=37862:37908#L1142">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.String">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3outposts/api.go?s=36754:36798#L1100">String</a>
+					<a class="permalink" href="index.html#ValidationException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="s3outpostsiface/index.html">s3outpostsiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package s3outpostsiface provides an interface to enable mocking the Amazon S3 on Outposts service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

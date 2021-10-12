@@ -1,0 +1,4332 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>qldbsession - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package qldbsession
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/qldbsession&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package qldbsession provides the client and types for making API
+requests to Amazon QLDB Session.
+</p>
+<h3 id="hdr-The_transactional_data_APIs_for_Amazon_QLDB">The transactional data APIs for Amazon QLDB</h3>
+<p>
+Instead of interacting directly with this API, we recommend using the QLDB
+driver or the QLDB shell to execute data transactions on a ledger.
+</p>
+<pre>* If you are working with an AWS SDK, use the QLDB driver. The driver
+provides a high-level abstraction layer above this QLDB Session data plane
+and manages SendCommand API calls for you. For information and a list
+of supported programming languages, see Getting started with the driver
+(<a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html</a>)
+in the Amazon QLDB Developer Guide.
+
+* If you are working with the AWS Command Line Interface (AWS CLI), use
+the QLDB shell. The shell is a command line interface that uses the QLDB
+driver to interact with a ledger. For information, see Accessing Amazon
+QLDB using the QLDB shell (<a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html</a>).
+</pre>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11">https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11</a> for more information on this service.
+</p>
+<p>
+See qldbsession package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/qldbsession/">https://docs.aws.amazon.com/sdk-for-go/api/service/qldbsession/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon QLDB Session with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon QLDB Session client QLDBSession for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/qldbsession/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/qldbsession/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AbortTransactionRequest">type AbortTransactionRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AbortTransactionRequest.GoString">func (s AbortTransactionRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AbortTransactionRequest.String">func (s AbortTransactionRequest) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#AbortTransactionResult">type AbortTransactionResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AbortTransactionResult.GoString">func (s AbortTransactionResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AbortTransactionResult.SetTimingInformation">func (s *AbortTransactionResult) SetTimingInformation(v *TimingInformation) *AbortTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#AbortTransactionResult.String">func (s AbortTransactionResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BadRequestException">type BadRequestException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#BadRequestException.Code">func (s *BadRequestException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.Error">func (s *BadRequestException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.GoString">func (s BadRequestException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.Message">func (s *BadRequestException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.OrigErr">func (s *BadRequestException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.RequestID">func (s *BadRequestException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.StatusCode">func (s *BadRequestException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#BadRequestException.String">func (s BadRequestException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CapacityExceededException">type CapacityExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.Code">func (s *CapacityExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.Error">func (s *CapacityExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.GoString">func (s CapacityExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.Message">func (s *CapacityExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.OrigErr">func (s *CapacityExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.RequestID">func (s *CapacityExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.StatusCode">func (s *CapacityExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#CapacityExceededException.String">func (s CapacityExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CommitTransactionRequest">type CommitTransactionRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CommitTransactionRequest.GoString">func (s CommitTransactionRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionRequest.SetCommitDigest">func (s *CommitTransactionRequest) SetCommitDigest(v []byte) *CommitTransactionRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionRequest.SetTransactionId">func (s *CommitTransactionRequest) SetTransactionId(v string) *CommitTransactionRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionRequest.String">func (s CommitTransactionRequest) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionRequest.Validate">func (s *CommitTransactionRequest) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CommitTransactionResult">type CommitTransactionResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.GoString">func (s CommitTransactionResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.SetCommitDigest">func (s *CommitTransactionResult) SetCommitDigest(v []byte) *CommitTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.SetConsumedIOs">func (s *CommitTransactionResult) SetConsumedIOs(v *IOUsage) *CommitTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.SetTimingInformation">func (s *CommitTransactionResult) SetTimingInformation(v *TimingInformation) *CommitTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.SetTransactionId">func (s *CommitTransactionResult) SetTransactionId(v string) *CommitTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#CommitTransactionResult.String">func (s CommitTransactionResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EndSessionRequest">type EndSessionRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EndSessionRequest.GoString">func (s EndSessionRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndSessionRequest.String">func (s EndSessionRequest) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EndSessionResult">type EndSessionResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EndSessionResult.GoString">func (s EndSessionResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndSessionResult.SetTimingInformation">func (s *EndSessionResult) SetTimingInformation(v *TimingInformation) *EndSessionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#EndSessionResult.String">func (s EndSessionResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExecuteStatementRequest">type ExecuteStatementRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.GoString">func (s ExecuteStatementRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.SetParameters">func (s *ExecuteStatementRequest) SetParameters(v []*ValueHolder) *ExecuteStatementRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.SetStatement">func (s *ExecuteStatementRequest) SetStatement(v string) *ExecuteStatementRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.SetTransactionId">func (s *ExecuteStatementRequest) SetTransactionId(v string) *ExecuteStatementRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.String">func (s ExecuteStatementRequest) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementRequest.Validate">func (s *ExecuteStatementRequest) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExecuteStatementResult">type ExecuteStatementResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementResult.GoString">func (s ExecuteStatementResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementResult.SetConsumedIOs">func (s *ExecuteStatementResult) SetConsumedIOs(v *IOUsage) *ExecuteStatementResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementResult.SetFirstPage">func (s *ExecuteStatementResult) SetFirstPage(v *Page) *ExecuteStatementResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementResult.SetTimingInformation">func (s *ExecuteStatementResult) SetTimingInformation(v *TimingInformation) *ExecuteStatementResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExecuteStatementResult.String">func (s ExecuteStatementResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FetchPageRequest">type FetchPageRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#FetchPageRequest.GoString">func (s FetchPageRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageRequest.SetNextPageToken">func (s *FetchPageRequest) SetNextPageToken(v string) *FetchPageRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageRequest.SetTransactionId">func (s *FetchPageRequest) SetTransactionId(v string) *FetchPageRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageRequest.String">func (s FetchPageRequest) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageRequest.Validate">func (s *FetchPageRequest) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FetchPageResult">type FetchPageResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#FetchPageResult.GoString">func (s FetchPageResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageResult.SetConsumedIOs">func (s *FetchPageResult) SetConsumedIOs(v *IOUsage) *FetchPageResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageResult.SetPage">func (s *FetchPageResult) SetPage(v *Page) *FetchPageResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageResult.SetTimingInformation">func (s *FetchPageResult) SetTimingInformation(v *TimingInformation) *FetchPageResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#FetchPageResult.String">func (s FetchPageResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IOUsage">type IOUsage</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#IOUsage.GoString">func (s IOUsage) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#IOUsage.SetReadIOs">func (s *IOUsage) SetReadIOs(v int64) *IOUsage</a></dd>
+				
+					
+					<dd>    <a href="index.html#IOUsage.SetWriteIOs">func (s *IOUsage) SetWriteIOs(v int64) *IOUsage</a></dd>
+				
+					
+					<dd>    <a href="index.html#IOUsage.String">func (s IOUsage) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidSessionException">type InvalidSessionException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.Code">func (s *InvalidSessionException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.Error">func (s *InvalidSessionException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.GoString">func (s InvalidSessionException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.Message">func (s *InvalidSessionException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.OrigErr">func (s *InvalidSessionException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.RequestID">func (s *InvalidSessionException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.StatusCode">func (s *InvalidSessionException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidSessionException.String">func (s InvalidSessionException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LimitExceededException">type LimitExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Code">func (s *LimitExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Error">func (s *LimitExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.GoString">func (s LimitExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Message">func (s *LimitExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.OrigErr">func (s *LimitExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.RequestID">func (s *LimitExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.StatusCode">func (s *LimitExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.String">func (s LimitExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OccConflictException">type OccConflictException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#OccConflictException.Code">func (s *OccConflictException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.Error">func (s *OccConflictException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.GoString">func (s OccConflictException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.Message">func (s *OccConflictException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.OrigErr">func (s *OccConflictException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.RequestID">func (s *OccConflictException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.StatusCode">func (s *OccConflictException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#OccConflictException.String">func (s OccConflictException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Page">type Page</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Page.GoString">func (s Page) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Page.SetNextPageToken">func (s *Page) SetNextPageToken(v string) *Page</a></dd>
+				
+					
+					<dd>    <a href="index.html#Page.SetValues">func (s *Page) SetValues(v []*ValueHolder) *Page</a></dd>
+				
+					
+					<dd>    <a href="index.html#Page.String">func (s Page) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#QLDBSession">type QLDBSession</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *QLDBSession</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#QLDBSession.SendCommand">func (c *QLDBSession) SendCommand(input *SendCommandInput) (*SendCommandOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#QLDBSession.SendCommandRequest">func (c *QLDBSession) SendCommandRequest(input *SendCommandInput) (req *request.Request, output *SendCommandOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#QLDBSession.SendCommandWithContext">func (c *QLDBSession) SendCommandWithContext(ctx aws.Context, input *SendCommandInput, opts ...request.Option) (*SendCommandOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RateExceededException">type RateExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RateExceededException.Code">func (s *RateExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.Error">func (s *RateExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.GoString">func (s RateExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.Message">func (s *RateExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.OrigErr">func (s *RateExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.RequestID">func (s *RateExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.StatusCode">func (s *RateExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#RateExceededException.String">func (s RateExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SendCommandInput">type SendCommandInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.GoString">func (s SendCommandInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetAbortTransaction">func (s *SendCommandInput) SetAbortTransaction(v *AbortTransactionRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetCommitTransaction">func (s *SendCommandInput) SetCommitTransaction(v *CommitTransactionRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetEndSession">func (s *SendCommandInput) SetEndSession(v *EndSessionRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetExecuteStatement">func (s *SendCommandInput) SetExecuteStatement(v *ExecuteStatementRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetFetchPage">func (s *SendCommandInput) SetFetchPage(v *FetchPageRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetSessionToken">func (s *SendCommandInput) SetSessionToken(v string) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetStartSession">func (s *SendCommandInput) SetStartSession(v *StartSessionRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.SetStartTransaction">func (s *SendCommandInput) SetStartTransaction(v *StartTransactionRequest) *SendCommandInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.String">func (s SendCommandInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandInput.Validate">func (s *SendCommandInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SendCommandOutput">type SendCommandOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.GoString">func (s SendCommandOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetAbortTransaction">func (s *SendCommandOutput) SetAbortTransaction(v *AbortTransactionResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetCommitTransaction">func (s *SendCommandOutput) SetCommitTransaction(v *CommitTransactionResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetEndSession">func (s *SendCommandOutput) SetEndSession(v *EndSessionResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetExecuteStatement">func (s *SendCommandOutput) SetExecuteStatement(v *ExecuteStatementResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetFetchPage">func (s *SendCommandOutput) SetFetchPage(v *FetchPageResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetStartSession">func (s *SendCommandOutput) SetStartSession(v *StartSessionResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.SetStartTransaction">func (s *SendCommandOutput) SetStartTransaction(v *StartTransactionResult) *SendCommandOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#SendCommandOutput.String">func (s SendCommandOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartSessionRequest">type StartSessionRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartSessionRequest.GoString">func (s StartSessionRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionRequest.SetLedgerName">func (s *StartSessionRequest) SetLedgerName(v string) *StartSessionRequest</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionRequest.String">func (s StartSessionRequest) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionRequest.Validate">func (s *StartSessionRequest) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartSessionResult">type StartSessionResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartSessionResult.GoString">func (s StartSessionResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionResult.SetSessionToken">func (s *StartSessionResult) SetSessionToken(v string) *StartSessionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionResult.SetTimingInformation">func (s *StartSessionResult) SetTimingInformation(v *TimingInformation) *StartSessionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartSessionResult.String">func (s StartSessionResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartTransactionRequest">type StartTransactionRequest</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartTransactionRequest.GoString">func (s StartTransactionRequest) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartTransactionRequest.String">func (s StartTransactionRequest) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartTransactionResult">type StartTransactionResult</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartTransactionResult.GoString">func (s StartTransactionResult) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartTransactionResult.SetTimingInformation">func (s *StartTransactionResult) SetTimingInformation(v *TimingInformation) *StartTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartTransactionResult.SetTransactionId">func (s *StartTransactionResult) SetTransactionId(v string) *StartTransactionResult</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartTransactionResult.String">func (s StartTransactionResult) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TimingInformation">type TimingInformation</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TimingInformation.GoString">func (s TimingInformation) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TimingInformation.SetProcessingTimeMilliseconds">func (s *TimingInformation) SetProcessingTimeMilliseconds(v int64) *TimingInformation</a></dd>
+				
+					
+					<dd>    <a href="index.html#TimingInformation.String">func (s TimingInformation) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValueHolder">type ValueHolder</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValueHolder.GoString">func (s ValueHolder) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValueHolder.SetIonBinary">func (s *ValueHolder) SetIonBinary(v []byte) *ValueHolder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValueHolder.SetIonText">func (s *ValueHolder) SetIonText(v string) *ValueHolder</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValueHolder.String">func (s ValueHolder) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValueHolder.Validate">func (s *ValueHolder) Validate() error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeBadRequestException for service response error code</span>
+    <span class="comment">// &#34;BadRequestException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned if the request is malformed or contains an error such as an invalid</span>
+    <span class="comment">// parameter value or a missing required parameter.</span>
+    <span id="ErrCodeBadRequestException">ErrCodeBadRequestException</span> = &#34;BadRequestException&#34;
+
+    <span class="comment">// ErrCodeCapacityExceededException for service response error code</span>
+    <span class="comment">// &#34;CapacityExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned when the request exceeds the processing capacity of the ledger.</span>
+    <span id="ErrCodeCapacityExceededException">ErrCodeCapacityExceededException</span> = &#34;CapacityExceededException&#34;
+
+    <span class="comment">// ErrCodeInvalidSessionException for service response error code</span>
+    <span class="comment">// &#34;InvalidSessionException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned if the session doesn&#39;t exist anymore because it timed out or expired.</span>
+    <span id="ErrCodeInvalidSessionException">ErrCodeInvalidSessionException</span> = &#34;InvalidSessionException&#34;
+
+    <span class="comment">// ErrCodeLimitExceededException for service response error code</span>
+    <span class="comment">// &#34;LimitExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned if a resource limit such as number of active sessions is exceeded.</span>
+    <span id="ErrCodeLimitExceededException">ErrCodeLimitExceededException</span> = &#34;LimitExceededException&#34;
+
+    <span class="comment">// ErrCodeOccConflictException for service response error code</span>
+    <span class="comment">// &#34;OccConflictException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned when a transaction cannot be written to the journal due to a failure</span>
+    <span class="comment">// in the verification phase of optimistic concurrency control (OCC).</span>
+    <span id="ErrCodeOccConflictException">ErrCodeOccConflictException</span> = &#34;OccConflictException&#34;
+
+    <span class="comment">// ErrCodeRateExceededException for service response error code</span>
+    <span class="comment">// &#34;RateExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Returned when the rate of requests exceeds the allowed throughput.</span>
+    <span id="ErrCodeRateExceededException">ErrCodeRateExceededException</span> = &#34;RateExceededException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;QLDB Session&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;session.qldb&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;QLDB Session&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AbortTransactionRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=4877:4947#L116">AbortTransactionRequest</a>
+				<a class="permalink" href="index.html#AbortTransactionRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the transaction to abort.
+</p>
+
+			<pre>type AbortTransactionRequest struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AbortTransactionRequest.GoString">func (AbortTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=5529:5579#L134">GoString</a>
+					<a class="permalink" href="index.html#AbortTransactionRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AbortTransactionRequest">AbortTransactionRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AbortTransactionRequest.String">func (AbortTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=5197:5245#L125">String</a>
+					<a class="permalink" href="index.html#AbortTransactionRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AbortTransactionRequest">AbortTransactionRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="AbortTransactionResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=5656:5849#L139">AbortTransactionResult</a>
+				<a class="permalink" href="index.html#AbortTransactionResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the aborted transaction.
+</p>
+
+			<pre>type AbortTransactionResult struct {
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="AbortTransactionResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AbortTransactionResult.GoString">func (AbortTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=6430:6479#L160">GoString</a>
+					<a class="permalink" href="index.html#AbortTransactionResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AbortTransactionResult">AbortTransactionResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AbortTransactionResult.SetTimingInformation">func (*AbortTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=6570:6669#L165">SetTimingInformation</a>
+					<a class="permalink" href="index.html#AbortTransactionResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AbortTransactionResult">AbortTransactionResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#AbortTransactionResult">AbortTransactionResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AbortTransactionResult.String">func (AbortTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=6099:6146#L151">String</a>
+					<a class="permalink" href="index.html#AbortTransactionResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AbortTransactionResult">AbortTransactionResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BadRequestException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=6842:7105#L172">BadRequestException</a>
+				<a class="permalink" href="index.html#BadRequestException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned if the request is malformed or contains an error such as an invalid
+parameter value or a missing required parameter.
+</p>
+
+			<pre>type BadRequestException struct {
+<span id="BadRequestException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="BadRequestException.Code_"></span>    Code_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Code&#34; type:&#34;string&#34;`
+
+<span id="BadRequestException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BadRequestException.Code">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=7920:7963#L206">Code</a>
+					<a class="permalink" href="index.html#BadRequestException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.Error">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8282:8326#L223">Error</a>
+					<a class="permalink" href="index.html#BadRequestException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.GoString">func (BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=7683:7729#L195">GoString</a>
+					<a class="permalink" href="index.html#BadRequestException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BadRequestException">BadRequestException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.Message">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8043:8089#L211">Message</a>
+					<a class="permalink" href="index.html#BadRequestException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.OrigErr">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8219:8264#L219">OrigErr</a>
+					<a class="permalink" href="index.html#BadRequestException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.RequestID">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8632:8680#L233">RequestID</a>
+					<a class="permalink" href="index.html#BadRequestException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.StatusCode">func (*BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8479:8525#L228">StatusCode</a>
+					<a class="permalink" href="index.html#BadRequestException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#BadRequestException">BadRequestException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BadRequestException.String">func (BadRequestException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=7355:7399#L186">String</a>
+					<a class="permalink" href="index.html#BadRequestException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#BadRequestException">BadRequestException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CapacityExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=8795:9012#L238">CapacityExceededException</a>
+				<a class="permalink" href="index.html#CapacityExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned when the request exceeds the processing capacity of the ledger.
+</p>
+
+			<pre>type CapacityExceededException struct {
+<span id="CapacityExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="CapacityExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CapacityExceededException.Code">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=9851:9900#L270">Code</a>
+					<a class="permalink" href="index.html#CapacityExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.Error">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=10237:10287#L287">Error</a>
+					<a class="permalink" href="index.html#CapacityExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.GoString">func (CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=9596:9648#L259">GoString</a>
+					<a class="permalink" href="index.html#CapacityExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CapacityExceededException">CapacityExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.Message">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=9986:10038#L275">Message</a>
+					<a class="permalink" href="index.html#CapacityExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.OrigErr">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=10168:10219#L283">OrigErr</a>
+					<a class="permalink" href="index.html#CapacityExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.RequestID">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=10583:10637#L297">RequestID</a>
+					<a class="permalink" href="index.html#CapacityExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.StatusCode">func (*CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=10424:10476#L292">StatusCode</a>
+					<a class="permalink" href="index.html#CapacityExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CapacityExceededException">CapacityExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CapacityExceededException.String">func (CapacityExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=9262:9312#L250">String</a>
+					<a class="permalink" href="index.html#CapacityExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CapacityExceededException">CapacityExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CommitTransactionRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=10730:11678#L302">CommitTransactionRequest</a>
+				<a class="permalink" href="index.html#CommitTransactionRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the transaction to commit.
+</p>
+
+			<pre>type CommitTransactionRequest struct {
+
+    <span class="comment">// Specifies the commit digest for the transaction to commit. For every active</span>
+    <span class="comment">// transaction, the commit digest must be passed. QLDB validates CommitDigest</span>
+    <span class="comment">// and rejects the commit with an error if the digest computed on the client</span>
+    <span class="comment">// does not match the digest computed by QLDB.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The purpose of the CommitDigest parameter is to ensure that QLDB commits</span>
+    <span class="comment">// a transaction if and only if the server has processed the exact set of statements</span>
+    <span class="comment">// sent by the client, in the same order that client sent them, and with no</span>
+    <span class="comment">// duplicates.</span>
+<span id="CommitTransactionRequest.CommitDigest"></span>    <span class="comment">// CommitDigest is automatically base64 encoded/decoded by the SDK.</span>
+    <span class="comment">//</span>
+    <span class="comment">// CommitDigest is a required field</span>
+    CommitDigest []<a href="../../../../../builtin/index.html#byte">byte</a> `type:&#34;blob&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Specifies the transaction ID of the transaction to commit.</span>
+    <span class="comment">//</span>
+<span id="CommitTransactionRequest.TransactionId"></span>    <span class="comment">// TransactionId is a required field</span>
+    TransactionId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;22&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CommitTransactionRequest.GoString">func (CommitTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=12261:12312#L339">GoString</a>
+					<a class="permalink" href="index.html#CommitTransactionRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionRequest.SetCommitDigest">func (*CommitTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=12999:13085#L363">SetCommitDigest</a>
+					<a class="permalink" href="index.html#CommitTransactionRequest.SetCommitDigest">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) SetCommitDigest(v []<a href="../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a></pre>
+				<p>
+SetCommitDigest sets the CommitDigest field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionRequest.SetTransactionId">func (*CommitTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=13179:13266#L369">SetTransactionId</a>
+					<a class="permalink" href="index.html#CommitTransactionRequest.SetTransactionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) SetTransactionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a></pre>
+				<p>
+SetTransactionId sets the TransactionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionRequest.String">func (CommitTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=11928:11977#L330">String</a>
+					<a class="permalink" href="index.html#CommitTransactionRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionRequest.Validate">func (*CommitTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=12413:12464#L344">Validate</a>
+					<a class="permalink" href="index.html#CommitTransactionRequest.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CommitTransactionResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=13358:13927#L375">CommitTransactionResult</a>
+				<a class="permalink" href="index.html#CommitTransactionResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the committed transaction.
+</p>
+
+			<pre>type CommitTransactionResult struct {
+
+    <span class="comment">// The commit digest of the committed transaction.</span>
+<span id="CommitTransactionResult.CommitDigest"></span>    <span class="comment">// CommitDigest is automatically base64 encoded/decoded by the SDK.</span>
+    CommitDigest []<a href="../../../../../builtin/index.html#byte">byte</a> `type:&#34;blob&#34;`
+
+    <span class="comment">// Contains metrics about the number of I/O requests that were consumed.</span>
+<span id="CommitTransactionResult.ConsumedIOs"></span>    ConsumedIOs *<a href="index.html#IOUsage">IOUsage</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="CommitTransactionResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The transaction ID of the committed transaction.</span>
+<span id="CommitTransactionResult.TransactionId"></span>    TransactionId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;22&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CommitTransactionResult.GoString">func (CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=14509:14559#L406">GoString</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionResult.SetCommitDigest">func (*CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=14640:14724#L411">SetCommitDigest</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.SetCommitDigest">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) SetCommitDigest(v []<a href="../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a></pre>
+				<p>
+SetCommitDigest sets the CommitDigest field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionResult.SetConsumedIOs">func (*CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=14814:14899#L417">SetConsumedIOs</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.SetConsumedIOs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) SetConsumedIOs(v *<a href="index.html#IOUsage">IOUsage</a>) *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a></pre>
+				<p>
+SetConsumedIOs sets the ConsumedIOs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionResult.SetTimingInformation">func (*CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=15000:15101#L423">SetTimingInformation</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionResult.SetTransactionId">func (*CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=15200:15285#L429">SetTransactionId</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.SetTransactionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) SetTransactionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a></pre>
+				<p>
+SetTransactionId sets the TransactionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CommitTransactionResult.String">func (CommitTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=14177:14225#L397">String</a>
+					<a class="permalink" href="index.html#CommitTransactionResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EndSessionRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=15366:15430#L435">EndSessionRequest</a>
+				<a class="permalink" href="index.html#EndSessionRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Specifies a request to end the session.
+</p>
+
+			<pre>type EndSessionRequest struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EndSessionRequest.GoString">func (EndSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=16006:16050#L453">GoString</a>
+					<a class="permalink" href="index.html#EndSessionRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndSessionRequest">EndSessionRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndSessionRequest.String">func (EndSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=15680:15722#L444">String</a>
+					<a class="permalink" href="index.html#EndSessionRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndSessionRequest">EndSessionRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EndSessionResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=16121:16308#L458">EndSessionResult</a>
+				<a class="permalink" href="index.html#EndSessionResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the ended session.
+</p>
+
+			<pre>type EndSessionResult struct {
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="EndSessionResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EndSessionResult.GoString">func (EndSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=16883:16926#L479">GoString</a>
+					<a class="permalink" href="index.html#EndSessionResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndSessionResult">EndSessionResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndSessionResult.SetTimingInformation">func (*EndSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=17017:17104#L484">SetTimingInformation</a>
+					<a class="permalink" href="index.html#EndSessionResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EndSessionResult">EndSessionResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#EndSessionResult">EndSessionResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EndSessionResult.String">func (EndSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=16558:16599#L470">String</a>
+					<a class="permalink" href="index.html#EndSessionResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EndSessionResult">EndSessionResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExecuteStatementRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=17192:17679#L490">ExecuteStatementRequest</a>
+				<a class="permalink" href="index.html#ExecuteStatementRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Specifies a request to execute a statement.
+</p>
+
+			<pre>type ExecuteStatementRequest struct {
+
+    <span class="comment">// Specifies the parameters for the parameterized statement in the request.</span>
+<span id="ExecuteStatementRequest.Parameters"></span>    Parameters []*<a href="index.html#ValueHolder">ValueHolder</a> `type:&#34;list&#34;`
+
+    <span class="comment">// Specifies the statement of the request.</span>
+    <span class="comment">//</span>
+<span id="ExecuteStatementRequest.Statement"></span>    <span class="comment">// Statement is a required field</span>
+    Statement *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Specifies the transaction ID of the request.</span>
+    <span class="comment">//</span>
+<span id="ExecuteStatementRequest.TransactionId"></span>    <span class="comment">// TransactionId is a required field</span>
+    TransactionId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;22&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExecuteStatementRequest.GoString">func (ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=18261:18311#L521">GoString</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementRequest.SetParameters">func (*ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=19350:19440#L558">SetParameters</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.SetParameters">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) SetParameters(v []*<a href="index.html#ValueHolder">ValueHolder</a>) *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a></pre>
+				<p>
+SetParameters sets the Parameters field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementRequest.SetStatement">func (*ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=19524:19605#L564">SetStatement</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.SetStatement">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) SetStatement(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a></pre>
+				<p>
+SetStatement sets the Statement field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementRequest.SetTransactionId">func (*ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=19697:19782#L570">SetTransactionId</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.SetTransactionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) SetTransactionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a></pre>
+				<p>
+SetTransactionId sets the TransactionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementRequest.String">func (ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=17929:17977#L512">String</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementRequest.Validate">func (*ExecuteStatementRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=18412:18462#L526">Validate</a>
+					<a class="permalink" href="index.html#ExecuteStatementRequest.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExecuteStatementResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=19871:20269#L576">ExecuteStatementResult</a>
+				<a class="permalink" href="index.html#ExecuteStatementResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the executed statement.
+</p>
+
+			<pre>type ExecuteStatementResult struct {
+
+    <span class="comment">// Contains metrics about the number of I/O requests that were consumed.</span>
+<span id="ExecuteStatementResult.ConsumedIOs"></span>    ConsumedIOs *<a href="index.html#IOUsage">IOUsage</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the first fetched page.</span>
+<span id="ExecuteStatementResult.FirstPage"></span>    FirstPage *<a href="index.html#Page">Page</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="ExecuteStatementResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExecuteStatementResult.GoString">func (ExecuteStatementResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=20850:20899#L603">GoString</a>
+					<a class="permalink" href="index.html#ExecuteStatementResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementResult.SetConsumedIOs">func (*ExecuteStatementResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=20978:21061#L608">SetConsumedIOs</a>
+					<a class="permalink" href="index.html#ExecuteStatementResult.SetConsumedIOs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) SetConsumedIOs(v *<a href="index.html#IOUsage">IOUsage</a>) *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a></pre>
+				<p>
+SetConsumedIOs sets the ConsumedIOs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementResult.SetFirstPage">func (*ExecuteStatementResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=21146:21224#L614">SetFirstPage</a>
+					<a class="permalink" href="index.html#ExecuteStatementResult.SetFirstPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) SetFirstPage(v *<a href="index.html#Page">Page</a>) *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a></pre>
+				<p>
+SetFirstPage sets the FirstPage field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementResult.SetTimingInformation">func (*ExecuteStatementResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=21323:21422#L620">SetTimingInformation</a>
+					<a class="permalink" href="index.html#ExecuteStatementResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExecuteStatementResult.String">func (ExecuteStatementResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=20519:20566#L594">String</a>
+					<a class="permalink" href="index.html#ExecuteStatementResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FetchPageRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=21515:21912#L626">FetchPageRequest</a>
+				<a class="permalink" href="index.html#FetchPageRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Specifies the details of the page to be fetched.
+</p>
+
+			<pre>type FetchPageRequest struct {
+
+    <span class="comment">// Specifies the next page token of the page to be fetched.</span>
+    <span class="comment">//</span>
+<span id="FetchPageRequest.NextPageToken"></span>    <span class="comment">// NextPageToken is a required field</span>
+    NextPageToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;4&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Specifies the transaction ID of the page to be fetched.</span>
+    <span class="comment">//</span>
+<span id="FetchPageRequest.TransactionId"></span>    <span class="comment">// TransactionId is a required field</span>
+    TransactionId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;22&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FetchPageRequest.GoString">func (FetchPageRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=22487:22530#L654">GoString</a>
+					<a class="permalink" href="index.html#FetchPageRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FetchPageRequest">FetchPageRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageRequest.SetNextPageToken">func (*FetchPageRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=23333:23404#L681">SetNextPageToken</a>
+					<a class="permalink" href="index.html#FetchPageRequest.SetNextPageToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageRequest">FetchPageRequest</a>) SetNextPageToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FetchPageRequest">FetchPageRequest</a></pre>
+				<p>
+SetNextPageToken sets the NextPageToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageRequest.SetTransactionId">func (*FetchPageRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=23500:23571#L687">SetTransactionId</a>
+					<a class="permalink" href="index.html#FetchPageRequest.SetTransactionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageRequest">FetchPageRequest</a>) SetTransactionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#FetchPageRequest">FetchPageRequest</a></pre>
+				<p>
+SetTransactionId sets the TransactionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageRequest.String">func (FetchPageRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=22162:22203#L645">String</a>
+					<a class="permalink" href="index.html#FetchPageRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FetchPageRequest">FetchPageRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageRequest.Validate">func (*FetchPageRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=22631:22674#L659">Validate</a>
+					<a class="permalink" href="index.html#FetchPageRequest.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageRequest">FetchPageRequest</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FetchPageResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=23648:24024#L693">FetchPageResult</a>
+				<a class="permalink" href="index.html#FetchPageResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the page that was fetched.
+</p>
+
+			<pre>type FetchPageResult struct {
+
+    <span class="comment">// Contains metrics about the number of I/O requests that were consumed.</span>
+<span id="FetchPageResult.ConsumedIOs"></span>    ConsumedIOs *<a href="index.html#IOUsage">IOUsage</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains details of the fetched page.</span>
+<span id="FetchPageResult.Page"></span>    Page *<a href="index.html#Page">Page</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="FetchPageResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FetchPageResult.GoString">func (FetchPageResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=24598:24640#L720">GoString</a>
+					<a class="permalink" href="index.html#FetchPageResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FetchPageResult">FetchPageResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageResult.SetConsumedIOs">func (*FetchPageResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=24719:24788#L725">SetConsumedIOs</a>
+					<a class="permalink" href="index.html#FetchPageResult.SetConsumedIOs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageResult">FetchPageResult</a>) SetConsumedIOs(v *<a href="index.html#IOUsage">IOUsage</a>) *<a href="index.html#FetchPageResult">FetchPageResult</a></pre>
+				<p>
+SetConsumedIOs sets the ConsumedIOs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageResult.SetPage">func (*FetchPageResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=24863:24922#L731">SetPage</a>
+					<a class="permalink" href="index.html#FetchPageResult.SetPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageResult">FetchPageResult</a>) SetPage(v *<a href="index.html#Page">Page</a>) *<a href="index.html#FetchPageResult">FetchPageResult</a></pre>
+				<p>
+SetPage sets the Page field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageResult.SetTimingInformation">func (*FetchPageResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=25016:25101#L737">SetTimingInformation</a>
+					<a class="permalink" href="index.html#FetchPageResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#FetchPageResult">FetchPageResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#FetchPageResult">FetchPageResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FetchPageResult.String">func (FetchPageResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=24274:24314#L711">String</a>
+					<a class="permalink" href="index.html#FetchPageResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#FetchPageResult">FetchPageResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IOUsage">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=25204:25440#L743">IOUsage</a>
+				<a class="permalink" href="index.html#IOUsage">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains I/O usage metrics for a command that was invoked.
+</p>
+
+			<pre>type IOUsage struct {
+
+    <span class="comment">// The number of read I/O requests that the command made.</span>
+<span id="IOUsage.ReadIOs"></span>    ReadIOs *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;long&#34;`
+
+    <span class="comment">// The number of write I/O requests that the command made.</span>
+<span id="IOUsage.WriteIOs"></span>    WriteIOs *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;long&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="IOUsage.GoString">func (IOUsage) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=26006:26040#L767">GoString</a>
+					<a class="permalink" href="index.html#IOUsage.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#IOUsage">IOUsage</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IOUsage.SetReadIOs">func (*IOUsage) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=26111:26157#L772">SetReadIOs</a>
+					<a class="permalink" href="index.html#IOUsage.SetReadIOs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#IOUsage">IOUsage</a>) SetReadIOs(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#IOUsage">IOUsage</a></pre>
+				<p>
+SetReadIOs sets the ReadIOs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IOUsage.SetWriteIOs">func (*IOUsage) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=26237:26284#L778">SetWriteIOs</a>
+					<a class="permalink" href="index.html#IOUsage.SetWriteIOs">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#IOUsage">IOUsage</a>) SetWriteIOs(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#IOUsage">IOUsage</a></pre>
+				<p>
+SetWriteIOs sets the WriteIOs field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IOUsage.String">func (IOUsage) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=25690:25722#L758">String</a>
+					<a class="permalink" href="index.html#IOUsage.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#IOUsage">IOUsage</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidSessionException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=26399:26666#L784">InvalidSessionException</a>
+				<a class="permalink" href="index.html#InvalidSessionException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned if the session doesn&#39;t exist anymore because it timed out or expired.
+</p>
+
+			<pre>type InvalidSessionException struct {
+<span id="InvalidSessionException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidSessionException.Code_"></span>    Code_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Code&#34; type:&#34;string&#34;`
+
+<span id="InvalidSessionException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidSessionException.Code">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=27497:27544#L818">Code</a>
+					<a class="permalink" href="index.html#InvalidSessionException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.Error">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=27875:27923#L835">Error</a>
+					<a class="permalink" href="index.html#InvalidSessionException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.GoString">func (InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=27248:27298#L807">GoString</a>
+					<a class="permalink" href="index.html#InvalidSessionException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidSessionException">InvalidSessionException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.Message">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=27628:27678#L823">Message</a>
+					<a class="permalink" href="index.html#InvalidSessionException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.OrigErr">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=27808:27857#L831">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidSessionException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.RequestID">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=28233:28285#L845">RequestID</a>
+					<a class="permalink" href="index.html#InvalidSessionException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.StatusCode">func (*InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=28076:28126#L840">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidSessionException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidSessionException">InvalidSessionException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidSessionException.String">func (InvalidSessionException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=26916:26964#L798">String</a>
+					<a class="permalink" href="index.html#InvalidSessionException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidSessionException">InvalidSessionException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LimitExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=28403:28617#L850">LimitExceededException</a>
+				<a class="permalink" href="index.html#LimitExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned if a resource limit such as number of active sessions is exceeded.
+</p>
+
+			<pre>type LimitExceededException struct {
+<span id="LimitExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="LimitExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LimitExceededException.Code">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=29444:29490#L882">Code</a>
+					<a class="permalink" href="index.html#LimitExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Error">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=29818:29865#L899">Error</a>
+					<a class="permalink" href="index.html#LimitExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.GoString">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=29198:29247#L871">GoString</a>
+					<a class="permalink" href="index.html#LimitExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Message">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=29573:29622#L887">Message</a>
+					<a class="permalink" href="index.html#LimitExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.OrigErr">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=29752:29800#L895">OrigErr</a>
+					<a class="permalink" href="index.html#LimitExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.RequestID">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=30158:30209#L909">RequestID</a>
+					<a class="permalink" href="index.html#LimitExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.StatusCode">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=30002:30051#L904">StatusCode</a>
+					<a class="permalink" href="index.html#LimitExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.String">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=28867:28914#L862">String</a>
+					<a class="permalink" href="index.html#LimitExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OccConflictException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=30399:30611#L915">OccConflictException</a>
+				<a class="permalink" href="index.html#OccConflictException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned when a transaction cannot be written to the journal due to a failure
+in the verification phase of optimistic concurrency control (OCC).
+</p>
+
+			<pre>type OccConflictException struct {
+<span id="OccConflictException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="OccConflictException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OccConflictException.Code">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31430:31474#L947">Code</a>
+					<a class="permalink" href="index.html#OccConflictException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.Error">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31796:31841#L964">Error</a>
+					<a class="permalink" href="index.html#OccConflictException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.GoString">func (OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31190:31237#L936">GoString</a>
+					<a class="permalink" href="index.html#OccConflictException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OccConflictException">OccConflictException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.Message">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31555:31602#L952">Message</a>
+					<a class="permalink" href="index.html#OccConflictException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.OrigErr">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31732:31778#L960">OrigErr</a>
+					<a class="permalink" href="index.html#OccConflictException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.RequestID">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=32132:32181#L974">RequestID</a>
+					<a class="permalink" href="index.html#OccConflictException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.StatusCode">func (*OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=31978:32025#L969">StatusCode</a>
+					<a class="permalink" href="index.html#OccConflictException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OccConflictException">OccConflictException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OccConflictException.String">func (OccConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=30861:30906#L927">String</a>
+					<a class="permalink" href="index.html#OccConflictException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OccConflictException">OccConflictException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Page">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=32261:32497#L979">Page</a>
+				<a class="permalink" href="index.html#Page">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains details of the fetched page.
+</p>
+
+			<pre>type Page struct {
+
+    <span class="comment">// The token of the next page.</span>
+<span id="Page.NextPageToken"></span>    NextPageToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;4&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A structure that contains values in multiple encoding formats.</span>
+<span id="Page.Values"></span>    Values []*<a href="index.html#ValueHolder">ValueHolder</a> `type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Page.GoString">func (Page) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=33060:33091#L1003">GoString</a>
+					<a class="permalink" href="index.html#Page.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Page">Page</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Page.SetNextPageToken">func (*Page) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=33174:33221#L1008">SetNextPageToken</a>
+					<a class="permalink" href="index.html#Page.SetNextPageToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Page">Page</a>) SetNextPageToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Page">Page</a></pre>
+				<p>
+SetNextPageToken sets the NextPageToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Page.SetValues">func (*Page) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=33303:33351#L1014">SetValues</a>
+					<a class="permalink" href="index.html#Page.SetValues">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Page">Page</a>) SetValues(v []*<a href="index.html#ValueHolder">ValueHolder</a>) *<a href="index.html#Page">Page</a></pre>
+				<p>
+SetValues sets the Values field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Page.String">func (Page) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=32747:32776#L994">String</a>
+					<a class="permalink" href="index.html#Page.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Page">Page</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="QLDBSession">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/service.go?s=708:751#L11">QLDBSession</a>
+				<a class="permalink" href="index.html#QLDBSession">¶</a>
+				
+				
+			</h2>
+			<p>
+QLDBSession provides the API operation methods for making requests to
+Amazon QLDB Session. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+QLDBSession methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type QLDBSession struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/service.go?s=1709:1776#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#QLDBSession">QLDBSession</a></pre>
+				<p>
+New creates a new instance of the QLDBSession client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a QLDBSession client from just a session.
+svc := qldbsession.New(mySession)
+
+// Create a QLDBSession client with additional configuration
+svc := qldbsession.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="QLDBSession.SendCommand">func (*QLDBSession) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=3934:4020#L94">SendCommand</a>
+					<a class="permalink" href="index.html#QLDBSession.SendCommand">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#QLDBSession">QLDBSession</a>) SendCommand(input *<a href="index.html#SendCommandInput">SendCommandInput</a>) (*<a href="index.html#SendCommandOutput">SendCommandOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+SendCommand API operation for Amazon QLDB Session.
+</p>
+<p>
+Sends a command to an Amazon QLDB ledger.
+</p>
+<p>
+Instead of interacting directly with this API, we recommend using the QLDB
+driver or the QLDB shell to execute data transactions on a ledger.
+</p>
+<pre>* If you are working with an AWS SDK, use the QLDB driver. The driver
+provides a high-level abstraction layer above this QLDB Session data plane
+and manages SendCommand API calls for you. For information and a list
+of supported programming languages, see Getting started with the driver
+(<a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html</a>)
+in the Amazon QLDB Developer Guide.
+
+* If you are working with the AWS Command Line Interface (AWS CLI), use
+the QLDB shell. The shell is a command line interface that uses the QLDB
+driver to interact with a ledger. For information, see Accessing Amazon
+QLDB using the QLDB shell (<a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html</a>).
+</pre>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon QLDB Session&#39;s
+API operation SendCommand for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* BadRequestException
+Returned if the request is malformed or contains an error such as an invalid
+parameter value or a missing required parameter.
+
+* InvalidSessionException
+Returned if the session doesn&#39;t exist anymore because it timed out or expired.
+
+* OccConflictException
+Returned when a transaction cannot be written to the journal due to a failure
+in the verification phase of optimistic concurrency control (OCC).
+
+* RateExceededException
+Returned when the rate of requests exceeds the allowed throughput.
+
+* LimitExceededException
+Returned if a resource limit such as number of active sessions is exceeded.
+
+* CapacityExceededException
+Returned when the request exceeds the processing capacity of the ledger.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11/SendCommand">https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11/SendCommand</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QLDBSession.SendCommandRequest">func (*QLDBSession) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=1309:1424#L30">SendCommandRequest</a>
+					<a class="permalink" href="index.html#QLDBSession.SendCommandRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#QLDBSession">QLDBSession</a>) SendCommandRequest(input *<a href="index.html#SendCommandInput">SendCommandInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#SendCommandOutput">SendCommandOutput</a>)</pre>
+				<p>
+SendCommandRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the SendCommand operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See SendCommand for more information on using the SendCommand
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the SendCommandRequest method.
+req, resp := client.SendCommandRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11/SendCommand">https://docs.aws.amazon.com/goto/WebAPI/qldb-session-2019-07-11/SendCommand</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QLDBSession.SendCommandWithContext">func (*QLDBSession) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=4567:4705#L108">SendCommandWithContext</a>
+					<a class="permalink" href="index.html#QLDBSession.SendCommandWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#QLDBSession">QLDBSession</a>) SendCommandWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#SendCommandInput">SendCommandInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#SendCommandOutput">SendCommandOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+SendCommandWithContext is the same as SendCommand with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See SendCommand for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RateExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=33451:33664#L1020">RateExceededException</a>
+				<a class="permalink" href="index.html#RateExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+Returned when the rate of requests exceeds the allowed throughput.
+</p>
+
+			<pre>type RateExceededException struct {
+<span id="RateExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="RateExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RateExceededException.Code">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=34487:34532#L1052">Code</a>
+					<a class="permalink" href="index.html#RateExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.Error">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=34857:34903#L1069">Error</a>
+					<a class="permalink" href="index.html#RateExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.GoString">func (RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=34244:34292#L1041">GoString</a>
+					<a class="permalink" href="index.html#RateExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RateExceededException">RateExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.Message">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=34614:34662#L1057">Message</a>
+					<a class="permalink" href="index.html#RateExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.OrigErr">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=34792:34839#L1065">OrigErr</a>
+					<a class="permalink" href="index.html#RateExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.RequestID">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=35195:35245#L1079">RequestID</a>
+					<a class="permalink" href="index.html#RateExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.StatusCode">func (*RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=35040:35088#L1074">StatusCode</a>
+					<a class="permalink" href="index.html#RateExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RateExceededException">RateExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RateExceededException.String">func (RateExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=33914:33960#L1032">String</a>
+					<a class="permalink" href="index.html#RateExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RateExceededException">RateExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SendCommandInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=35284:36465#L1083">SendCommandInput</a>
+				<a class="permalink" href="index.html#SendCommandInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SendCommandInput struct {
+
+    <span class="comment">// Command to abort the current transaction.</span>
+<span id="SendCommandInput.AbortTransaction"></span>    AbortTransaction *<a href="index.html#AbortTransactionRequest">AbortTransactionRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Command to commit the specified transaction.</span>
+<span id="SendCommandInput.CommitTransaction"></span>    CommitTransaction *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Command to end the current session.</span>
+<span id="SendCommandInput.EndSession"></span>    EndSession *<a href="index.html#EndSessionRequest">EndSessionRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Command to execute a statement in the specified transaction.</span>
+<span id="SendCommandInput.ExecuteStatement"></span>    ExecuteStatement *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Command to fetch a page.</span>
+<span id="SendCommandInput.FetchPage"></span>    FetchPage *<a href="index.html#FetchPageRequest">FetchPageRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Specifies the session token for the current command. A session token is constant</span>
+    <span class="comment">// throughout the life of the session.</span>
+    <span class="comment">//</span>
+    <span class="comment">// To obtain a session token, run the StartSession command. This SessionToken</span>
+    <span class="comment">// is required for every subsequent command that is issued during the current</span>
+    <span class="comment">// session.</span>
+<span id="SendCommandInput.SessionToken"></span>    SessionToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;4&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Command to start a new session. A session token is obtained as part of the</span>
+    <span class="comment">// response.</span>
+<span id="SendCommandInput.StartSession"></span>    StartSession *<a href="index.html#StartSessionRequest">StartSessionRequest</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Command to start a new transaction.</span>
+<span id="SendCommandInput.StartTransaction"></span>    StartTransaction *<a href="index.html#StartTransactionRequest">StartTransactionRequest</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SendCommandInput.GoString">func (SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=37040:37083#L1131">GoString</a>
+					<a class="permalink" href="index.html#SendCommandInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SendCommandInput">SendCommandInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetAbortTransaction">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=38229:38321#L1169">SetAbortTransaction</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetAbortTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetAbortTransaction(v *<a href="index.html#AbortTransactionRequest">AbortTransactionRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetAbortTransaction sets the AbortTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetCommitTransaction">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=38427:38521#L1175">SetCommitTransaction</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetCommitTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetCommitTransaction(v *<a href="index.html#CommitTransactionRequest">CommitTransactionRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetCommitTransaction sets the CommitTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetEndSession">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=38614:38694#L1181">SetEndSession</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetEndSession">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetEndSession(v *<a href="index.html#EndSessionRequest">EndSessionRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetEndSession sets the EndSession field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetExecuteStatement">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=38792:38884#L1187">SetExecuteStatement</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetExecuteStatement">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetExecuteStatement(v *<a href="index.html#ExecuteStatementRequest">ExecuteStatementRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetExecuteStatement sets the ExecuteStatement field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetFetchPage">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=38974:39052#L1193">SetFetchPage</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetFetchPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetFetchPage(v *<a href="index.html#FetchPageRequest">FetchPageRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetFetchPage sets the FetchPage field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetSessionToken">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=39141:39211#L1199">SetSessionToken</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetSessionToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetSessionToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetSessionToken sets the SessionToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetStartSession">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=39304:39388#L1205">SetStartSession</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetStartSession">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetStartSession(v *<a href="index.html#StartSessionRequest">StartSessionRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetStartSession sets the StartSession field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.SetStartTransaction">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=39488:39580#L1211">SetStartTransaction</a>
+					<a class="permalink" href="index.html#SendCommandInput.SetStartTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) SetStartTransaction(v *<a href="index.html#StartTransactionRequest">StartTransactionRequest</a>) *<a href="index.html#SendCommandInput">SendCommandInput</a></pre>
+				<p>
+SetStartTransaction sets the StartTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.String">func (SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=36715:36756#L1122">String</a>
+					<a class="permalink" href="index.html#SendCommandInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SendCommandInput">SendCommandInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandInput.Validate">func (*SendCommandInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=37184:37227#L1136">Validate</a>
+					<a class="permalink" href="index.html#SendCommandInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandInput">SendCommandInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SendCommandOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=39620:40581#L1216">SendCommandOutput</a>
+				<a class="permalink" href="index.html#SendCommandOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type SendCommandOutput struct {
+
+    <span class="comment">// Contains the details of the aborted transaction.</span>
+<span id="SendCommandOutput.AbortTransaction"></span>    AbortTransaction *<a href="index.html#AbortTransactionResult">AbortTransactionResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the committed transaction.</span>
+<span id="SendCommandOutput.CommitTransaction"></span>    CommitTransaction *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the ended session.</span>
+<span id="SendCommandOutput.EndSession"></span>    EndSession *<a href="index.html#EndSessionResult">EndSessionResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the executed statement.</span>
+<span id="SendCommandOutput.ExecuteStatement"></span>    ExecuteStatement *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the fetched page.</span>
+<span id="SendCommandOutput.FetchPage"></span>    FetchPage *<a href="index.html#FetchPageResult">FetchPageResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the started session that includes a session token.</span>
+    <span class="comment">// This SessionToken is required for every subsequent command that is issued</span>
+    <span class="comment">// during the current session.</span>
+<span id="SendCommandOutput.StartSession"></span>    StartSession *<a href="index.html#StartSessionResult">StartSessionResult</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// Contains the details of the started transaction.</span>
+<span id="SendCommandOutput.StartTransaction"></span>    StartTransaction *<a href="index.html#StartTransactionResult">StartTransactionResult</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SendCommandOutput.GoString">func (SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=41157:41201#L1257">GoString</a>
+					<a class="permalink" href="index.html#SendCommandOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SendCommandOutput">SendCommandOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetAbortTransaction">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=41290:41383#L1262">SetAbortTransaction</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetAbortTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetAbortTransaction(v *<a href="index.html#AbortTransactionResult">AbortTransactionResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetAbortTransaction sets the AbortTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetCommitTransaction">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=41489:41584#L1268">SetCommitTransaction</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetCommitTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetCommitTransaction(v *<a href="index.html#CommitTransactionResult">CommitTransactionResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetCommitTransaction sets the CommitTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetEndSession">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=41677:41758#L1274">SetEndSession</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetEndSession">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetEndSession(v *<a href="index.html#EndSessionResult">EndSessionResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetEndSession sets the EndSession field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetExecuteStatement">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=41856:41949#L1280">SetExecuteStatement</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetExecuteStatement">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetExecuteStatement(v *<a href="index.html#ExecuteStatementResult">ExecuteStatementResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetExecuteStatement sets the ExecuteStatement field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetFetchPage">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=42039:42118#L1286">SetFetchPage</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetFetchPage">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetFetchPage(v *<a href="index.html#FetchPageResult">FetchPageResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetFetchPage sets the FetchPage field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetStartSession">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=42207:42292#L1292">SetStartSession</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetStartSession">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetStartSession(v *<a href="index.html#StartSessionResult">StartSessionResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetStartSession sets the StartSession field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.SetStartTransaction">func (*SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=42392:42485#L1298">SetStartTransaction</a>
+					<a class="permalink" href="index.html#SendCommandOutput.SetStartTransaction">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SendCommandOutput">SendCommandOutput</a>) SetStartTransaction(v *<a href="index.html#StartTransactionResult">StartTransactionResult</a>) *<a href="index.html#SendCommandOutput">SendCommandOutput</a></pre>
+				<p>
+SetStartTransaction sets the StartTransaction field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SendCommandOutput.String">func (SendCommandOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=40831:40873#L1248">String</a>
+					<a class="permalink" href="index.html#SendCommandOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SendCommandOutput">SendCommandOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartSessionRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=42572:42797#L1304">StartSessionRequest</a>
+				<a class="permalink" href="index.html#StartSessionRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Specifies a request to start a new session.
+</p>
+
+			<pre>type StartSessionRequest struct {
+
+    <span class="comment">// The name of the ledger to start a new session against.</span>
+    <span class="comment">//</span>
+<span id="StartSessionRequest.LedgerName"></span>    <span class="comment">// LedgerName is a required field</span>
+    LedgerName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartSessionRequest.GoString">func (StartSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=43375:43421#L1327">GoString</a>
+					<a class="permalink" href="index.html#StartSessionRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartSessionRequest">StartSessionRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionRequest.SetLedgerName">func (*StartSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=43981:44055#L1348">SetLedgerName</a>
+					<a class="permalink" href="index.html#StartSessionRequest.SetLedgerName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartSessionRequest">StartSessionRequest</a>) SetLedgerName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartSessionRequest">StartSessionRequest</a></pre>
+				<p>
+SetLedgerName sets the LedgerName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionRequest.String">func (StartSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=43047:43091#L1318">String</a>
+					<a class="permalink" href="index.html#StartSessionRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartSessionRequest">StartSessionRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionRequest.Validate">func (*StartSessionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=43522:43568#L1332">Validate</a>
+					<a class="permalink" href="index.html#StartSessionRequest.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartSessionRequest">StartSessionRequest</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartSessionResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=44138:44522#L1354">StartSessionResult</a>
+				<a class="permalink" href="index.html#StartSessionResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the started session.
+</p>
+
+			<pre>type StartSessionResult struct {
+
+    <span class="comment">// Session token of the started session. This SessionToken is required for every</span>
+    <span class="comment">// subsequent command that is issued during the current session.</span>
+<span id="StartSessionResult.SessionToken"></span>    SessionToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;4&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="StartSessionResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartSessionResult.GoString">func (StartSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=45099:45144#L1379">GoString</a>
+					<a class="permalink" href="index.html#StartSessionResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartSessionResult">StartSessionResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionResult.SetSessionToken">func (*StartSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=45225:45299#L1384">SetSessionToken</a>
+					<a class="permalink" href="index.html#StartSessionResult.SetSessionToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartSessionResult">StartSessionResult</a>) SetSessionToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartSessionResult">StartSessionResult</a></pre>
+				<p>
+SetSessionToken sets the SessionToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionResult.SetTimingInformation">func (*StartSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=45402:45493#L1390">SetTimingInformation</a>
+					<a class="permalink" href="index.html#StartSessionResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartSessionResult">StartSessionResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#StartSessionResult">StartSessionResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartSessionResult.String">func (StartSessionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=44772:44815#L1370">String</a>
+					<a class="permalink" href="index.html#StartSessionResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartSessionResult">StartSessionResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartTransactionRequest">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=45581:45651#L1396">StartTransactionRequest</a>
+				<a class="permalink" href="index.html#StartTransactionRequest">¶</a>
+				
+				
+			</h2>
+			<p>
+Specifies a request to start a transaction.
+</p>
+
+			<pre>type StartTransactionRequest struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartTransactionRequest.GoString">func (StartTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=46233:46283#L1414">GoString</a>
+					<a class="permalink" href="index.html#StartTransactionRequest.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartTransactionRequest">StartTransactionRequest</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartTransactionRequest.String">func (StartTransactionRequest) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=45901:45949#L1405">String</a>
+					<a class="permalink" href="index.html#StartTransactionRequest.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartTransactionRequest">StartTransactionRequest</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartTransactionResult">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=46360:46653#L1419">StartTransactionResult</a>
+				<a class="permalink" href="index.html#StartTransactionResult">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains the details of the started transaction.
+</p>
+
+			<pre>type StartTransactionResult struct {
+
+    <span class="comment">// Contains server-side performance information for the command.</span>
+<span id="StartTransactionResult.TimingInformation"></span>    TimingInformation *<a href="index.html#TimingInformation">TimingInformation</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The transaction ID of the started transaction.</span>
+<span id="StartTransactionResult.TransactionId"></span>    TransactionId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;22&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartTransactionResult.GoString">func (StartTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=47234:47283#L1443">GoString</a>
+					<a class="permalink" href="index.html#StartTransactionResult.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartTransactionResult">StartTransactionResult</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartTransactionResult.SetTimingInformation">func (*StartTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=47374:47473#L1448">SetTimingInformation</a>
+					<a class="permalink" href="index.html#StartTransactionResult.SetTimingInformation">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartTransactionResult">StartTransactionResult</a>) SetTimingInformation(v *<a href="index.html#TimingInformation">TimingInformation</a>) *<a href="index.html#StartTransactionResult">StartTransactionResult</a></pre>
+				<p>
+SetTimingInformation sets the TimingInformation field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartTransactionResult.SetTransactionId">func (*StartTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=47572:47655#L1454">SetTransactionId</a>
+					<a class="permalink" href="index.html#StartTransactionResult.SetTransactionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartTransactionResult">StartTransactionResult</a>) SetTransactionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartTransactionResult">StartTransactionResult</a></pre>
+				<p>
+SetTransactionId sets the TransactionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartTransactionResult.String">func (StartTransactionResult) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=46903:46950#L1434">String</a>
+					<a class="permalink" href="index.html#StartTransactionResult.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartTransactionResult">StartTransactionResult</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TimingInformation">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=47895:48105#L1462">TimingInformation</a>
+				<a class="permalink" href="index.html#TimingInformation">¶</a>
+				
+				
+			</h2>
+			<p>
+Contains server-side performance information for a command. Amazon QLDB captures
+timing information between the times when it receives the request and when
+it sends the corresponding response.
+</p>
+
+			<pre>type TimingInformation struct {
+
+    <span class="comment">// The amount of time that QLDB spent on processing the command, measured in</span>
+    <span class="comment">// milliseconds.</span>
+<span id="TimingInformation.ProcessingTimeMilliseconds"></span>    ProcessingTimeMilliseconds *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;long&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TimingInformation.GoString">func (TimingInformation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=48681:48725#L1484">GoString</a>
+					<a class="permalink" href="index.html#TimingInformation.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TimingInformation">TimingInformation</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TimingInformation.SetProcessingTimeMilliseconds">func (*TimingInformation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=48834:48919#L1489">SetProcessingTimeMilliseconds</a>
+					<a class="permalink" href="index.html#TimingInformation.SetProcessingTimeMilliseconds">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TimingInformation">TimingInformation</a>) SetProcessingTimeMilliseconds(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#TimingInformation">TimingInformation</a></pre>
+				<p>
+SetProcessingTimeMilliseconds sets the ProcessingTimeMilliseconds field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TimingInformation.String">func (TimingInformation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=48355:48397#L1475">String</a>
+					<a class="permalink" href="index.html#TimingInformation.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TimingInformation">TimingInformation</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValueHolder">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=49040:49388#L1495">ValueHolder</a>
+				<a class="permalink" href="index.html#ValueHolder">¶</a>
+				
+				
+			</h2>
+			<p>
+A structure that can contain a value in multiple encoding formats.
+</p>
+
+			<pre>type ValueHolder struct {
+
+    <span class="comment">// An Amazon Ion binary value contained in a ValueHolder structure.</span>
+<span id="ValueHolder.IonBinary"></span>    <span class="comment">// IonBinary is automatically base64 encoded/decoded by the SDK.</span>
+    IonBinary []<a href="../../../../../builtin/index.html#byte">byte</a> `min:&#34;1&#34; type:&#34;blob&#34;`
+
+    <span class="comment">// An Amazon Ion plaintext value contained in a ValueHolder structure.</span>
+<span id="ValueHolder.IonText"></span>    IonText *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValueHolder.GoString">func (ValueHolder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=49958:49996#L1520">GoString</a>
+					<a class="permalink" href="index.html#ValueHolder.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValueHolder">ValueHolder</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValueHolder.SetIonBinary">func (*ValueHolder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=50552:50609#L1541">SetIonBinary</a>
+					<a class="permalink" href="index.html#ValueHolder.SetIonBinary">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValueHolder">ValueHolder</a>) SetIonBinary(v []<a href="../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#ValueHolder">ValueHolder</a></pre>
+				<p>
+SetIonBinary sets the IonBinary field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValueHolder.SetIonText">func (*ValueHolder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=50688:50743#L1547">SetIonText</a>
+					<a class="permalink" href="index.html#ValueHolder.SetIonText">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValueHolder">ValueHolder</a>) SetIonText(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ValueHolder">ValueHolder</a></pre>
+				<p>
+SetIonText sets the IonText field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValueHolder.String">func (ValueHolder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=49638:49674#L1511">String</a>
+					<a class="permalink" href="index.html#ValueHolder.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValueHolder">ValueHolder</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValueHolder.Validate">func (*ValueHolder) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/qldbsession/api.go?s=50097:50135#L1525">Validate</a>
+					<a class="permalink" href="index.html#ValueHolder.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValueHolder">ValueHolder</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="qldbsessioniface/index.html">qldbsessioniface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package qldbsessioniface provides an interface to enable mocking the Amazon QLDB Session service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,1743 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>marketplaceentitlementservice - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package marketplaceentitlementservice
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/marketplaceentitlementservice&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package marketplaceentitlementservice provides the client and types for making API
+requests to AWS Marketplace Entitlement Service.
+</p>
+<p>
+This reference provides descriptions of the AWS Marketplace Entitlement Service
+API.
+</p>
+<p>
+AWS Marketplace Entitlement Service is used to determine the entitlement
+of a customer to a given product. An entitlement represents capacity in a
+product owned by the customer. For example, a customer might own some number
+of users or seats in an SaaS application or some amount of data capacity
+in a multi-tenant database.
+</p>
+<p>
+Getting Entitlement Records
+</p>
+<pre>* GetEntitlements- Gets the entitlements for a Marketplace product.
+</pre>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11">https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11</a> for more information on this service.
+</p>
+<p>
+See marketplaceentitlementservice package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/marketplaceentitlementservice/">https://docs.aws.amazon.com/sdk-for-go/api/service/marketplaceentitlementservice/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS Marketplace Entitlement Service with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS Marketplace Entitlement Service client MarketplaceEntitlementService for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/marketplaceentitlementservice/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/marketplaceentitlementservice/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#GetEntitlementFilterName_Values">func GetEntitlementFilterName_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Entitlement">type Entitlement</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Entitlement.GoString">func (s Entitlement) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.SetCustomerIdentifier">func (s *Entitlement) SetCustomerIdentifier(v string) *Entitlement</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.SetDimension">func (s *Entitlement) SetDimension(v string) *Entitlement</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.SetExpirationDate">func (s *Entitlement) SetExpirationDate(v time.Time) *Entitlement</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.SetProductCode">func (s *Entitlement) SetProductCode(v string) *Entitlement</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.SetValue">func (s *Entitlement) SetValue(v *EntitlementValue) *Entitlement</a></dd>
+				
+					
+					<dd>    <a href="index.html#Entitlement.String">func (s Entitlement) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EntitlementValue">type EntitlementValue</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.GoString">func (s EntitlementValue) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.SetBooleanValue">func (s *EntitlementValue) SetBooleanValue(v bool) *EntitlementValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.SetDoubleValue">func (s *EntitlementValue) SetDoubleValue(v float64) *EntitlementValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.SetIntegerValue">func (s *EntitlementValue) SetIntegerValue(v int64) *EntitlementValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.SetStringValue">func (s *EntitlementValue) SetStringValue(v string) *EntitlementValue</a></dd>
+				
+					
+					<dd>    <a href="index.html#EntitlementValue.String">func (s EntitlementValue) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetEntitlementsInput">type GetEntitlementsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.GoString">func (s GetEntitlementsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.SetFilter">func (s *GetEntitlementsInput) SetFilter(v map[string][]*string) *GetEntitlementsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.SetMaxResults">func (s *GetEntitlementsInput) SetMaxResults(v int64) *GetEntitlementsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.SetNextToken">func (s *GetEntitlementsInput) SetNextToken(v string) *GetEntitlementsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.SetProductCode">func (s *GetEntitlementsInput) SetProductCode(v string) *GetEntitlementsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.String">func (s GetEntitlementsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsInput.Validate">func (s *GetEntitlementsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetEntitlementsOutput">type GetEntitlementsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsOutput.GoString">func (s GetEntitlementsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsOutput.SetEntitlements">func (s *GetEntitlementsOutput) SetEntitlements(v []*Entitlement) *GetEntitlementsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsOutput.SetNextToken">func (s *GetEntitlementsOutput) SetNextToken(v string) *GetEntitlementsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEntitlementsOutput.String">func (s GetEntitlementsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServiceErrorException">type InternalServiceErrorException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.Code">func (s *InternalServiceErrorException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.Error">func (s *InternalServiceErrorException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.GoString">func (s InternalServiceErrorException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.Message">func (s *InternalServiceErrorException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.OrigErr">func (s *InternalServiceErrorException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.RequestID">func (s *InternalServiceErrorException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.StatusCode">func (s *InternalServiceErrorException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceErrorException.String">func (s InternalServiceErrorException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidParameterException">type InvalidParameterException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.Code">func (s *InvalidParameterException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.Error">func (s *InvalidParameterException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.GoString">func (s InvalidParameterException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.Message">func (s *InvalidParameterException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.OrigErr">func (s *InvalidParameterException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.RequestID">func (s *InvalidParameterException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.StatusCode">func (s *InvalidParameterException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidParameterException.String">func (s InvalidParameterException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MarketplaceEntitlementService">type MarketplaceEntitlementService</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *MarketplaceEntitlementService</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MarketplaceEntitlementService.GetEntitlements">func (c *MarketplaceEntitlementService) GetEntitlements(input *GetEntitlementsInput) (*GetEntitlementsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#MarketplaceEntitlementService.GetEntitlementsRequest">func (c *MarketplaceEntitlementService) GetEntitlementsRequest(input *GetEntitlementsInput) (req *request.Request, output *GetEntitlementsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#MarketplaceEntitlementService.GetEntitlementsWithContext">func (c *MarketplaceEntitlementService) GetEntitlementsWithContext(ctx aws.Context, input *GetEntitlementsInput, opts ...request.Option) (*GetEntitlementsOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ThrottlingException">type ThrottlingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Code">func (s *ThrottlingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Error">func (s *ThrottlingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.GoString">func (s ThrottlingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Message">func (s *ThrottlingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.OrigErr">func (s *ThrottlingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.RequestID">func (s *ThrottlingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.StatusCode">func (s *ThrottlingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.String">func (s ThrottlingException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// GetEntitlementFilterNameCustomerIdentifier is a GetEntitlementFilterName enum value</span>
+    <span id="GetEntitlementFilterNameCustomerIdentifier">GetEntitlementFilterNameCustomerIdentifier</span> = &#34;CUSTOMER_IDENTIFIER&#34;
+
+    <span class="comment">// GetEntitlementFilterNameDimension is a GetEntitlementFilterName enum value</span>
+    <span id="GetEntitlementFilterNameDimension">GetEntitlementFilterNameDimension</span> = &#34;DIMENSION&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInternalServiceErrorException for service response error code</span>
+    <span class="comment">// &#34;InternalServiceErrorException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// An internal error has occurred. Retry your request. If the problem persists,</span>
+    <span class="comment">// post a message with details on the AWS forums.</span>
+    <span id="ErrCodeInternalServiceErrorException">ErrCodeInternalServiceErrorException</span> = &#34;InternalServiceErrorException&#34;
+
+    <span class="comment">// ErrCodeInvalidParameterException for service response error code</span>
+    <span class="comment">// &#34;InvalidParameterException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// One or more parameters in your request was invalid.</span>
+    <span id="ErrCodeInvalidParameterException">ErrCodeInvalidParameterException</span> = &#34;InvalidParameterException&#34;
+
+    <span class="comment">// ErrCodeThrottlingException for service response error code</span>
+    <span class="comment">// &#34;ThrottlingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The calls to the GetEntitlements API are throttled.</span>
+    <span id="ErrCodeThrottlingException">ErrCodeThrottlingException</span> = &#34;ThrottlingException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;entitlement.marketplace&#34;         <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = <a href="index.html#ServiceName">ServiceName</a>                       <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;Marketplace Entitlement Service&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="GetEntitlementFilterName_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=19652:19699#L567">GetEntitlementFilterName_Values</a>
+				<a class="permalink" href="index.html#GetEntitlementFilterName_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func GetEntitlementFilterName_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+GetEntitlementFilterName_Values returns all elements of the GetEntitlementFilterName enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Entitlement">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=4018:5320#L95">Entitlement</a>
+				<a class="permalink" href="index.html#Entitlement">¶</a>
+				
+				
+			</h2>
+			<p>
+An entitlement represents capacity in a product owned by the customer. For
+example, a customer might own some number of users or seats in an SaaS application
+or some amount of data capacity in a multi-tenant database.
+</p>
+
+			<pre>type Entitlement struct {
+
+    <span class="comment">// The customer identifier is a handle to each unique customer in an application.</span>
+    <span class="comment">// Customer identifiers are obtained through the ResolveCustomer operation in</span>
+    <span class="comment">// AWS Marketplace Metering Service.</span>
+<span id="Entitlement.CustomerIdentifier"></span>    CustomerIdentifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The dimension for which the given entitlement applies. Dimensions represent</span>
+    <span class="comment">// categories of capacity in a product and are specified when the product is</span>
+    <span class="comment">// listed in AWS Marketplace.</span>
+<span id="Entitlement.Dimension"></span>    Dimension *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The expiration date represents the minimum date through which this entitlement</span>
+    <span class="comment">// is expected to remain valid. For contractual products listed on AWS Marketplace,</span>
+    <span class="comment">// the expiration date is the date at which the customer will renew or cancel</span>
+    <span class="comment">// their contract. Customers who are opting to renew their contract will still</span>
+    <span class="comment">// have entitlements with an expiration date.</span>
+<span id="Entitlement.ExpirationDate"></span>    ExpirationDate *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The product code for which the given entitlement applies. Product codes are</span>
+    <span class="comment">// provided by AWS Marketplace when the product listing is created.</span>
+<span id="Entitlement.ProductCode"></span>    ProductCode *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The EntitlementValue represents the amount of capacity that the customer</span>
+    <span class="comment">// is entitled to for the product.</span>
+<span id="Entitlement.Value"></span>    Value *<a href="index.html#EntitlementValue">EntitlementValue</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Entitlement.GoString">func (Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=5890:5928#L138">GoString</a>
+					<a class="permalink" href="index.html#Entitlement.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Entitlement">Entitlement</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.SetCustomerIdentifier">func (*Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6021:6087#L143">SetCustomerIdentifier</a>
+					<a class="permalink" href="index.html#Entitlement.SetCustomerIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Entitlement">Entitlement</a>) SetCustomerIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Entitlement">Entitlement</a></pre>
+				<p>
+SetCustomerIdentifier sets the CustomerIdentifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.SetDimension">func (*Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6180:6237#L149">SetDimension</a>
+					<a class="permalink" href="index.html#Entitlement.SetDimension">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Entitlement">Entitlement</a>) SetDimension(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Entitlement">Entitlement</a></pre>
+				<p>
+SetDimension sets the Dimension field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.SetExpirationDate">func (*Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6331:6396#L155">SetExpirationDate</a>
+					<a class="permalink" href="index.html#Entitlement.SetExpirationDate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Entitlement">Entitlement</a>) SetExpirationDate(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#Entitlement">Entitlement</a></pre>
+				<p>
+SetExpirationDate sets the ExpirationDate field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.SetProductCode">func (*Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6489:6548#L161">SetProductCode</a>
+					<a class="permalink" href="index.html#Entitlement.SetProductCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Entitlement">Entitlement</a>) SetProductCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Entitlement">Entitlement</a></pre>
+				<p>
+SetProductCode sets the ProductCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.SetValue">func (*Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6626:6690#L167">SetValue</a>
+					<a class="permalink" href="index.html#Entitlement.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Entitlement">Entitlement</a>) SetValue(v *<a href="index.html#EntitlementValue">EntitlementValue</a>) *<a href="index.html#Entitlement">Entitlement</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entitlement.String">func (Entitlement) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=5570:5606#L129">String</a>
+					<a class="permalink" href="index.html#Entitlement.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Entitlement">Entitlement</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EntitlementValue">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=6830:7635#L174">EntitlementValue</a>
+				<a class="permalink" href="index.html#EntitlementValue">¶</a>
+				
+				
+			</h2>
+			<p>
+The EntitlementValue represents the amount of capacity that the customer
+is entitled to for the product.
+</p>
+
+			<pre>type EntitlementValue struct {
+
+    <span class="comment">// The BooleanValue field will be populated with a boolean value when the entitlement</span>
+    <span class="comment">// is a boolean type. Otherwise, the field will not be set.</span>
+<span id="EntitlementValue.BooleanValue"></span>    BooleanValue *<a href="../../../../../builtin/index.html#bool">bool</a> `type:&#34;boolean&#34;`
+
+    <span class="comment">// The DoubleValue field will be populated with a double value when the entitlement</span>
+    <span class="comment">// is a double type. Otherwise, the field will not be set.</span>
+<span id="EntitlementValue.DoubleValue"></span>    DoubleValue *<a href="../../../../../builtin/index.html#float64">float64</a> `type:&#34;double&#34;`
+
+    <span class="comment">// The IntegerValue field will be populated with an integer value when the entitlement</span>
+    <span class="comment">// is an integer type. Otherwise, the field will not be set.</span>
+<span id="EntitlementValue.IntegerValue"></span>    IntegerValue *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// The StringValue field will be populated with a string value when the entitlement</span>
+    <span class="comment">// is a string type. Otherwise, the field will not be set.</span>
+<span id="EntitlementValue.StringValue"></span>    StringValue *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EntitlementValue.GoString">func (EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=8210:8253#L208">GoString</a>
+					<a class="permalink" href="index.html#EntitlementValue.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EntitlementValue">EntitlementValue</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EntitlementValue.SetBooleanValue">func (*EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=8334:8402#L213">SetBooleanValue</a>
+					<a class="permalink" href="index.html#EntitlementValue.SetBooleanValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EntitlementValue">EntitlementValue</a>) SetBooleanValue(v <a href="../../../../../builtin/index.html#bool">bool</a>) *<a href="index.html#EntitlementValue">EntitlementValue</a></pre>
+				<p>
+SetBooleanValue sets the BooleanValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EntitlementValue.SetDoubleValue">func (*EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=8493:8563#L219">SetDoubleValue</a>
+					<a class="permalink" href="index.html#EntitlementValue.SetDoubleValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EntitlementValue">EntitlementValue</a>) SetDoubleValue(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#EntitlementValue">EntitlementValue</a></pre>
+				<p>
+SetDoubleValue sets the DoubleValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EntitlementValue.SetIntegerValue">func (*EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=8655:8724#L225">SetIntegerValue</a>
+					<a class="permalink" href="index.html#EntitlementValue.SetIntegerValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EntitlementValue">EntitlementValue</a>) SetIntegerValue(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#EntitlementValue">EntitlementValue</a></pre>
+				<p>
+SetIntegerValue sets the IntegerValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EntitlementValue.SetStringValue">func (*EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=8815:8884#L231">SetStringValue</a>
+					<a class="permalink" href="index.html#EntitlementValue.SetStringValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EntitlementValue">EntitlementValue</a>) SetStringValue(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#EntitlementValue">EntitlementValue</a></pre>
+				<p>
+SetStringValue sets the StringValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EntitlementValue.String">func (EntitlementValue) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=7885:7926#L199">String</a>
+					<a class="permalink" href="index.html#EntitlementValue.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EntitlementValue">EntitlementValue</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetEntitlementsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=9005:10008#L237">GetEntitlementsInput</a>
+				<a class="permalink" href="index.html#GetEntitlementsInput">¶</a>
+				
+				
+			</h2>
+			<p>
+The GetEntitlementsRequest contains parameters for the GetEntitlements operation.
+</p>
+
+			<pre>type GetEntitlementsInput struct {
+
+<span id="GetEntitlementsInput.Filter"></span>    <span class="comment">// Filter is used to return entitlements for a specific customer or for a specific</span>
+    <span class="comment">// dimension. Filters are described as keys mapped to a lists of values. Filtered</span>
+    <span class="comment">// requests are unioned for each value in the value list, and then intersected</span>
+    <span class="comment">// for each filter key.</span>
+    Filter map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34;`
+
+    <span class="comment">// The maximum number of items to retrieve from the GetEntitlements operation.</span>
+    <span class="comment">// For pagination, use the NextToken field in subsequent calls to GetEntitlements.</span>
+<span id="GetEntitlementsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// For paginated calls to GetEntitlements, pass the NextToken from the previous</span>
+    <span class="comment">// GetEntitlementsResult.</span>
+<span id="GetEntitlementsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// Product code is used to uniquely identify a product in AWS Marketplace. The</span>
+    <span class="comment">// product code will be provided by AWS Marketplace when the product listing</span>
+    <span class="comment">// is created.</span>
+    <span class="comment">//</span>
+<span id="GetEntitlementsInput.ProductCode"></span>    <span class="comment">// ProductCode is a required field</span>
+    ProductCode *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetEntitlementsInput.GoString">func (GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=10587:10634#L276">GoString</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.SetFilter">func (*GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=11193:11279#L297">SetFilter</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.SetFilter">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) SetFilter(v map[<a href="../../../../../builtin/index.html#string">string</a>][]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a></pre>
+				<p>
+SetFilter sets the Filter field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.SetMaxResults">func (*GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=11361:11436#L303">SetMaxResults</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.SetNextToken">func (*GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=11521:11596#L309">SetNextToken</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.SetProductCode">func (*GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=11684:11761#L315">SetProductCode</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.SetProductCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) SetProductCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a></pre>
+				<p>
+SetProductCode sets the ProductCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.String">func (GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=10258:10303#L267">String</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsInput.Validate">func (*GetEntitlementsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=10735:10782#L281">Validate</a>
+					<a class="permalink" href="index.html#GetEntitlementsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetEntitlementsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=11880:12410#L321">GetEntitlementsOutput</a>
+				<a class="permalink" href="index.html#GetEntitlementsOutput">¶</a>
+				
+				
+			</h2>
+			<p>
+The GetEntitlementsRequest contains results from the GetEntitlements operation.
+</p>
+
+			<pre>type GetEntitlementsOutput struct {
+
+    <span class="comment">// The set of entitlements found through the GetEntitlements operation. If the</span>
+    <span class="comment">// result contains an empty set of entitlements, NextToken might still be present</span>
+    <span class="comment">// and should be used.</span>
+<span id="GetEntitlementsOutput.Entitlements"></span>    Entitlements []*<a href="index.html#Entitlement">Entitlement</a> `type:&#34;list&#34;`
+
+    <span class="comment">// For paginated results, use NextToken in subsequent calls to GetEntitlements.</span>
+    <span class="comment">// If the result contains an empty set of entitlements, NextToken might still</span>
+    <span class="comment">// be present and should be used.</span>
+<span id="GetEntitlementsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetEntitlementsOutput.GoString">func (GetEntitlementsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=12990:13038#L349">GoString</a>
+					<a class="permalink" href="index.html#GetEntitlementsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsOutput.SetEntitlements">func (*GetEntitlementsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=13119:13207#L354">SetEntitlements</a>
+					<a class="permalink" href="index.html#GetEntitlementsOutput.SetEntitlements">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>) SetEntitlements(v []*<a href="index.html#Entitlement">Entitlement</a>) *<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a></pre>
+				<p>
+SetEntitlements sets the Entitlements field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsOutput.SetNextToken">func (*GetEntitlementsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=13293:13370#L360">SetNextToken</a>
+					<a class="permalink" href="index.html#GetEntitlementsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEntitlementsOutput.String">func (GetEntitlementsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=12660:12706#L340">String</a>
+					<a class="permalink" href="index.html#GetEntitlementsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServiceErrorException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=13534:13755#L367">InternalServiceErrorException</a>
+				<a class="permalink" href="index.html#InternalServiceErrorException">¶</a>
+				
+				
+			</h2>
+			<p>
+An internal error has occurred. Retry your request. If the problem persists,
+post a message with details on the AWS forums.
+</p>
+
+			<pre>type InternalServiceErrorException struct {
+<span id="InternalServiceErrorException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServiceErrorException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServiceErrorException.Code">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=14610:14663#L399">Code</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.Error">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=15012:15066#L416">Error</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.GoString">func (InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=14343:14399#L388">GoString</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.Message">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=14753:14809#L404">Message</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.OrigErr">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=14939:14994#L412">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.RequestID">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=15366:15424#L426">RequestID</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.StatusCode">func (*InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=15203:15259#L421">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceErrorException.String">func (InternalServiceErrorException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=14005:14059#L379">String</a>
+					<a class="permalink" href="index.html#InternalServiceErrorException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServiceErrorException">InternalServiceErrorException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidParameterException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=15518:15735#L431">InvalidParameterException</a>
+				<a class="permalink" href="index.html#InvalidParameterException">¶</a>
+				
+				
+			</h2>
+			<p>
+One or more parameters in your request was invalid.
+</p>
+
+			<pre>type InvalidParameterException struct {
+<span id="InvalidParameterException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidParameterException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidParameterException.Code">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=16574:16623#L463">Code</a>
+					<a class="permalink" href="index.html#InvalidParameterException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.Error">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=16960:17010#L480">Error</a>
+					<a class="permalink" href="index.html#InvalidParameterException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.GoString">func (InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=16319:16371#L452">GoString</a>
+					<a class="permalink" href="index.html#InvalidParameterException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidParameterException">InvalidParameterException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.Message">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=16709:16761#L468">Message</a>
+					<a class="permalink" href="index.html#InvalidParameterException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.OrigErr">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=16891:16942#L476">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidParameterException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.RequestID">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=17306:17360#L490">RequestID</a>
+					<a class="permalink" href="index.html#InvalidParameterException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.StatusCode">func (*InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=17147:17199#L485">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidParameterException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidParameterException">InvalidParameterException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidParameterException.String">func (InvalidParameterException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=15985:16035#L443">String</a>
+					<a class="permalink" href="index.html#InvalidParameterException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidParameterException">InvalidParameterException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MarketplaceEntitlementService">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/service.go?s=778:839#L11">MarketplaceEntitlementService</a>
+				<a class="permalink" href="index.html#MarketplaceEntitlementService">¶</a>
+				
+				
+			</h2>
+			<p>
+MarketplaceEntitlementService provides the API operation methods for making requests to
+AWS Marketplace Entitlement Service. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+MarketplaceEntitlementService methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type MarketplaceEntitlementService struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/service.go?s=1944:2029#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#MarketplaceEntitlementService">MarketplaceEntitlementService</a></pre>
+				<p>
+New creates a new instance of the MarketplaceEntitlementService client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a MarketplaceEntitlementService client from just a session.
+svc := marketplaceentitlementservice.New(mySession)
+
+// Create a MarketplaceEntitlementService client with additional configuration
+svc := marketplaceentitlementservice.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="MarketplaceEntitlementService.GetEntitlements">func (*MarketplaceEntitlementService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=2821:2937#L71">GetEntitlements</a>
+					<a class="permalink" href="index.html#MarketplaceEntitlementService.GetEntitlements">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MarketplaceEntitlementService">MarketplaceEntitlementService</a>) GetEntitlements(input *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) (*<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetEntitlements API operation for AWS Marketplace Entitlement Service.
+</p>
+<p>
+GetEntitlements retrieves entitlement values for a given product. The results
+can be filtered based on customer identifier or product dimensions.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Marketplace Entitlement Service&#39;s
+API operation GetEntitlements for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidParameterException
+One or more parameters in your request was invalid.
+
+* ThrottlingException
+The calls to the GetEntitlements API are throttled.
+
+* InternalServiceErrorException
+An internal error has occurred. Retry your request. If the problem persists,
+post a message with details on the AWS forums.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11/GetEntitlements">https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11/GetEntitlements</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MarketplaceEntitlementService.GetEntitlementsRequest">func (*MarketplaceEntitlementService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=1382:1527#L31">GetEntitlementsRequest</a>
+					<a class="permalink" href="index.html#MarketplaceEntitlementService.GetEntitlementsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MarketplaceEntitlementService">MarketplaceEntitlementService</a>) GetEntitlementsRequest(input *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>)</pre>
+				<p>
+GetEntitlementsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetEntitlements operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetEntitlements for more information on using the GetEntitlements
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetEntitlementsRequest method.
+req, resp := client.GetEntitlementsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11/GetEntitlements">https://docs.aws.amazon.com/goto/WebAPI/entitlement.marketplace-2017-01-11/GetEntitlements</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MarketplaceEntitlementService.GetEntitlementsWithContext">func (*MarketplaceEntitlementService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=3500:3668#L85">GetEntitlementsWithContext</a>
+					<a class="permalink" href="index.html#MarketplaceEntitlementService.GetEntitlementsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#MarketplaceEntitlementService">MarketplaceEntitlementService</a>) GetEntitlementsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetEntitlementsInput">GetEntitlementsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetEntitlementsOutput">GetEntitlementsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetEntitlementsWithContext is the same as GetEntitlements with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetEntitlements for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ThrottlingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=17454:17665#L495">ThrottlingException</a>
+				<a class="permalink" href="index.html#ThrottlingException">¶</a>
+				
+				
+			</h2>
+			<p>
+The calls to the GetEntitlements API are throttled.
+</p>
+
+			<pre>type ThrottlingException struct {
+<span id="ThrottlingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ThrottlingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ThrottlingException.Code">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=18480:18523#L527">Code</a>
+					<a class="permalink" href="index.html#ThrottlingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Error">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=18842:18886#L544">Error</a>
+					<a class="permalink" href="index.html#ThrottlingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.GoString">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=18243:18289#L516">GoString</a>
+					<a class="permalink" href="index.html#ThrottlingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Message">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=18603:18649#L532">Message</a>
+					<a class="permalink" href="index.html#ThrottlingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.OrigErr">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=18779:18824#L540">OrigErr</a>
+					<a class="permalink" href="index.html#ThrottlingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.RequestID">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=19176:19224#L554">RequestID</a>
+					<a class="permalink" href="index.html#ThrottlingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.StatusCode">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=19023:19069#L549">StatusCode</a>
+					<a class="permalink" href="index.html#ThrottlingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.String">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/marketplaceentitlementservice/api.go?s=17915:17959#L507">String</a>
+					<a class="permalink" href="index.html#ThrottlingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="marketplaceentitlementserviceiface/index.html">marketplaceentitlementserviceiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package marketplaceentitlementserviceiface provides an interface to enable mocking the AWS Marketplace Entitlement Service service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

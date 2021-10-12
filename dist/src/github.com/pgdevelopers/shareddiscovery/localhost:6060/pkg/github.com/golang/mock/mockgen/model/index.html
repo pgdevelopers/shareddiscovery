@@ -1,0 +1,863 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>model - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package model
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/golang/mock/mockgen/model&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package model contains the data model necessary for generating mock implementations.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ArrayType">type ArrayType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ArrayType.String">func (at *ArrayType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ChanDir">type ChanDir</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ChanType">type ChanType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ChanType.String">func (ct *ChanType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FuncType">type FuncType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#FuncType.String">func (ft *FuncType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Interface">type Interface</a></dd>
+				
+					
+					<dd>    <a href="index.html#InterfaceFromInterfaceType">func InterfaceFromInterfaceType(it reflect.Type) (*Interface, error)</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Interface.AddMethod">func (intf *Interface) AddMethod(m *Method)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Interface.Print">func (intf *Interface) Print(w io.Writer)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MapType">type MapType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MapType.String">func (mt *MapType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Method">type Method</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Method.Print">func (m *Method) Print(w io.Writer)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NamedType">type NamedType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#NamedType.String">func (nt *NamedType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Package">type Package</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Package.Imports">func (pkg *Package) Imports() map[string]bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#Package.Print">func (pkg *Package) Print(w io.Writer)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Parameter">type Parameter</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Parameter.Print">func (p *Parameter) Print(w io.Writer)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PointerType">type PointerType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PointerType.String">func (pt *PointerType) String(pm map[string]string, pkgOverride string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PredeclaredType">type PredeclaredType</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PredeclaredType.String">func (pt PredeclaredType) String(map[string]string, string) string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Type">type Type</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go">model.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ErrorInterface represent built-in error interface.
+</p>
+
+				<pre>var <span id="ErrorInterface">ErrorInterface</span> = <a href="index.html#Interface">Interface</a>{
+    <a href="index.html#Interface.Name">Name</a>: &#34;error&#34;,
+    <a href="index.html#Interface.Methods">Methods</a>: []*<a href="index.html#Method">Method</a>{
+        {
+            <a href="index.html#Name">Name</a>: &#34;Error&#34;,
+            <a href="index.html#Out">Out</a>: []*<a href="index.html#Parameter">Parameter</a>{
+                {
+                    <a href="index.html#Name">Name</a>: &#34;&#34;,
+                    <a href="index.html#Type">Type</a>: <a href="index.html#PredeclaredType">PredeclaredType</a>(&#34;string&#34;),
+                },
+            },
+        },
+    },
+}</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ArrayType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=4061:4141#L154">ArrayType</a>
+				<a class="permalink" href="index.html#ArrayType">¶</a>
+				
+				
+			</h2>
+			<p>
+ArrayType is an array or slice type.
+</p>
+
+			<pre>type ArrayType struct {
+<span id="ArrayType.Len"></span>    Len  <a href="../../../../../builtin/index.html#int">int</a> <span class="comment">// -1 for slices, &gt;= 0 for arrays</span>
+<span id="ArrayType.Type"></span>    Type <a href="index.html#Type">Type</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ArrayType.String">func (*ArrayType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=4143:4219#L159">String</a>
+					<a class="permalink" href="index.html#ArrayType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (at *<a href="index.html#ArrayType">ArrayType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ChanDir">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=4863:4879#L189">ChanDir</a>
+				<a class="permalink" href="index.html#ChanDir">¶</a>
+				
+				
+			</h2>
+			<p>
+ChanDir is a channel direction.
+</p>
+
+			<pre>type ChanDir <a href="../../../../../builtin/index.html#int">int</a></pre>
+
+			
+				<p>
+Constants for channel directions.
+</p>
+
+				<pre>const (
+    <span id="RecvDir">RecvDir</span> <a href="index.html#ChanDir">ChanDir</a> = 1
+    <span id="SendDir">SendDir</span> <a href="index.html#ChanDir">ChanDir</a> = 2
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ChanType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=4446:4508#L170">ChanType</a>
+				<a class="permalink" href="index.html#ChanType">¶</a>
+				
+				
+			</h2>
+			<p>
+ChanType is a channel type.
+</p>
+
+			<pre>type ChanType struct {
+<span id="ChanType.Dir"></span>    Dir  <a href="index.html#ChanDir">ChanDir</a> <span class="comment">// 0, 1 or 2</span>
+<span id="ChanType.Type"></span>    Type <a href="index.html#Type">Type</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ChanType.String">func (*ChanType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=4510:4585#L175">String</a>
+					<a class="permalink" href="index.html#ChanType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (ct *<a href="index.html#ChanType">ChanType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FuncType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=5003:5085#L198">FuncType</a>
+				<a class="permalink" href="index.html#FuncType">¶</a>
+				
+				
+			</h2>
+			<p>
+FuncType is a function type.
+</p>
+
+			<pre>type FuncType struct {
+<span id="FuncType.In"></span>    In, Out  []*<a href="index.html#Parameter">Parameter</a>
+<span id="FuncType.Variadic"></span>    Variadic *<a href="index.html#Parameter">Parameter</a> <span class="comment">// may be nil</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FuncType.String">func (*FuncType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=5087:5162#L203">String</a>
+					<a class="permalink" href="index.html#FuncType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (ft *<a href="index.html#FuncType">FuncType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Interface">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=1499:1559#L45">Interface</a>
+				<a class="permalink" href="index.html#Interface">¶</a>
+				
+				
+			</h2>
+			<p>
+Interface is a Go interface.
+</p>
+
+			<pre>type Interface struct {
+<span id="Interface.Name"></span>    Name    <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Interface.Methods"></span>    Methods []*<a href="index.html#Method">Method</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InterfaceFromInterfaceType">func <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=7482:7550#L294">InterfaceFromInterfaceType</a>
+					<a class="permalink" href="index.html#InterfaceFromInterfaceType">¶</a>
+					
+					
+				</h3>
+				<pre>func InterfaceFromInterfaceType(it <a href="../../../../../reflect/index.html">reflect</a>.<a href="../../../../../reflect/index.html#Type">Type</a>) (*<a href="index.html#Interface">Interface</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+InterfaceFromInterfaceType returns a pointer to an interface for the
+given reflection interface type.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Interface.AddMethod">func (*Interface) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=1940:1983#L65">AddMethod</a>
+					<a class="permalink" href="index.html#Interface.AddMethod">¶</a>
+					
+					
+				</h3>
+				<pre>func (intf *<a href="index.html#Interface">Interface</a>) AddMethod(m *<a href="index.html#Method">Method</a>)</pre>
+				<p>
+AddMethod adds a new method, de-duplicating by method name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Interface.Print">func (*Interface) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=1613:1654#L51">Print</a>
+					<a class="permalink" href="index.html#Interface.Print">¶</a>
+					
+					
+				</h3>
+				<pre>func (intf *<a href="index.html#Interface">Interface</a>) Print(w <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#Writer">Writer</a>)</pre>
+				<p>
+Print writes the interface name and its methods.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MapType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=5968:6008#L237">MapType</a>
+				<a class="permalink" href="index.html#MapType">¶</a>
+				
+				
+			</h2>
+			<p>
+MapType is a map type.
+</p>
+
+			<pre>type MapType struct {
+<span id="MapType.Key"></span>    Key, Value <a href="index.html#Type">Type</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MapType.String">func (*MapType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=6010:6084#L241">String</a>
+					<a class="permalink" href="index.html#MapType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (mt *<a href="index.html#MapType">MapType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Method">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=2152:2249#L75">Method</a>
+				<a class="permalink" href="index.html#Method">¶</a>
+				
+				
+			</h2>
+			<p>
+Method is a single method of an interface.
+</p>
+
+			<pre>type Method struct {
+<span id="Method.Name"></span>    Name     <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Method.In"></span>    In, Out  []*<a href="index.html#Parameter">Parameter</a>
+<span id="Method.Variadic"></span>    Variadic *<a href="index.html#Parameter">Parameter</a> <span class="comment">// may be nil</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Method.Print">func (*Method) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=2302:2337#L82">Print</a>
+					<a class="permalink" href="index.html#Method.Print">¶</a>
+					
+					
+				</h3>
+				<pre>func (m *<a href="index.html#Method">Method</a>) Print(w <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#Writer">Writer</a>)</pre>
+				<p>
+Print writes the method name and its signature.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NamedType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=6329:6402#L251">NamedType</a>
+				<a class="permalink" href="index.html#NamedType">¶</a>
+				
+				
+			</h2>
+			<p>
+NamedType is an exported type in a package.
+</p>
+
+			<pre>type NamedType struct {
+<span id="NamedType.Package"></span>    Package <a href="../../../../../builtin/index.html#string">string</a> <span class="comment">// may be empty</span>
+<span id="NamedType.Type"></span>    Type    <a href="../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NamedType.String">func (*NamedType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=6404:6480#L256">String</a>
+					<a class="permalink" href="index.html#NamedType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (nt *<a href="index.html#NamedType">NamedType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Package">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=911:1018#L20">Package</a>
+				<a class="permalink" href="index.html#Package">¶</a>
+				
+				
+			</h2>
+			<p>
+Package is a Go package. It may be a subset.
+</p>
+
+			<pre>type Package struct {
+<span id="Package.Name"></span>    Name       <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Package.PkgPath"></span>    PkgPath    <a href="../../../../../builtin/index.html#string">string</a>
+<span id="Package.Interfaces"></span>    Interfaces []*<a href="index.html#Interface">Interface</a>
+<span id="Package.DotImports"></span>    DotImports []<a href="../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Package.Imports">func (*Package) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=1312:1357#L36">Imports</a>
+					<a class="permalink" href="index.html#Package.Imports">¶</a>
+					
+					
+				</h3>
+				<pre>func (pkg *<a href="index.html#Package">Package</a>) Imports() map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+Imports returns the imports needed by the Package as a set of import paths.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Package.Print">func (*Package) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=1082:1120#L28">Print</a>
+					<a class="permalink" href="index.html#Package.Print">¶</a>
+					
+					
+				</h3>
+				<pre>func (pkg *<a href="index.html#Package">Package</a>) Print(w <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#Writer">Writer</a>)</pre>
+				<p>
+Print writes the package name and its exported interfaces.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Parameter">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=2974:3039#L115">Parameter</a>
+				<a class="permalink" href="index.html#Parameter">¶</a>
+				
+				
+			</h2>
+			<p>
+Parameter is an argument or return parameter of a method.
+</p>
+
+			<pre>type Parameter struct {
+<span id="Parameter.Name"></span>    Name <a href="../../../../../builtin/index.html#string">string</a> <span class="comment">// may be empty</span>
+<span id="Parameter.Type"></span>    Type <a href="index.html#Type">Type</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Parameter.Print">func (*Parameter) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=3077:3115#L121">Print</a>
+					<a class="permalink" href="index.html#Parameter.Print">¶</a>
+					
+					
+				</h3>
+				<pre>func (p *<a href="index.html#Parameter">Parameter</a>) Print(w <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#Writer">Writer</a>)</pre>
+				<p>
+Print writes a method parameter.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PointerType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=6787:6825#L275">PointerType</a>
+				<a class="permalink" href="index.html#PointerType">¶</a>
+				
+				
+			</h2>
+			<p>
+PointerType is a pointer to another type.
+</p>
+
+			<pre>type PointerType struct {
+<span id="PointerType.Type"></span>    Type <a href="index.html#Type">Type</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PointerType.String">func (*PointerType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=6827:6905#L279">String</a>
+					<a class="permalink" href="index.html#PointerType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (pt *<a href="index.html#PointerType">PointerType</a>) String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PredeclaredType">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=7094:7121#L285">PredeclaredType</a>
+				<a class="permalink" href="index.html#PredeclaredType">¶</a>
+				
+				
+			</h2>
+			<p>
+PredeclaredType is a predeclared type such as &#34;int&#34;.
+</p>
+
+			<pre>type PredeclaredType <a href="../../../../../builtin/index.html#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PredeclaredType.String">func (PredeclaredType) <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=7123:7189#L287">String</a>
+					<a class="permalink" href="index.html#PredeclaredType.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (pt <a href="index.html#PredeclaredType">PredeclaredType</a>) String(map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Type">type <a href="http://localhost:6060/src/github.com/golang/mock/mockgen/model/model.go?s=3252:3364#L130">Type</a>
+				<a class="permalink" href="index.html#Type">¶</a>
+				
+				
+			</h2>
+			<p>
+Type is a Go type.
+</p>
+
+			<pre>type Type interface {
+    String(pm map[<a href="../../../../../builtin/index.html#string">string</a>]<a href="../../../../../builtin/index.html#string">string</a>, pkgOverride <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#string">string</a>
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

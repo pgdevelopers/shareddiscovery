@@ -1,0 +1,637 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>ec2metadata - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package ec2metadata
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/ec2metadata&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package ec2metadata provides the client for making API calls to the
+EC2 Metadata service.
+</p>
+<p>
+This package&#39;s client can be disabled completely by setting the environment
+variable &#34;AWS_EC2_METADATA_DISABLED=true&#34;. This environment variable set to
+true instructs the SDK to disable the EC2 Metadata client. The client cannot
+be used while the environment variable is set to true, (case insensitive).
+</p>
+<p>
+The endpoint of the EC2 IMDS client can be configured via the environment
+variable, AWS_EC2_METADATA_SERVICE_ENDPOINT when creating the client with a
+Session. See aws/session#Options.EC2IMDSEndpoint for more details.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#EC2IAMInfo">type EC2IAMInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EC2InstanceIdentityDocument">type EC2InstanceIdentityDocument</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EC2Metadata">type EC2Metadata</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *EC2Metadata</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewClient">func NewClient(cfg aws.Config, handlers request.Handlers, endpoint, signingRegion string, opts ...func(*client.Client)) *EC2Metadata</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.Available">func (c *EC2Metadata) Available() bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.AvailableWithContext">func (c *EC2Metadata) AvailableWithContext(ctx aws.Context) bool</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetDynamicData">func (c *EC2Metadata) GetDynamicData(p string) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetDynamicDataWithContext">func (c *EC2Metadata) GetDynamicDataWithContext(ctx aws.Context, p string) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetInstanceIdentityDocument">func (c *EC2Metadata) GetInstanceIdentityDocument() (EC2InstanceIdentityDocument, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetInstanceIdentityDocumentWithContext">func (c *EC2Metadata) GetInstanceIdentityDocumentWithContext(ctx aws.Context) (EC2InstanceIdentityDocument, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetMetadata">func (c *EC2Metadata) GetMetadata(p string) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetMetadataWithContext">func (c *EC2Metadata) GetMetadataWithContext(ctx aws.Context, p string) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetUserData">func (c *EC2Metadata) GetUserData() (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.GetUserDataWithContext">func (c *EC2Metadata) GetUserDataWithContext(ctx aws.Context) (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.IAMInfo">func (c *EC2Metadata) IAMInfo() (EC2IAMInfo, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.IAMInfoWithContext">func (c *EC2Metadata) IAMInfoWithContext(ctx aws.Context) (EC2IAMInfo, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.Region">func (c *EC2Metadata) Region() (string, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EC2Metadata.RegionWithContext">func (c *EC2Metadata) RegionWithContext(ctx aws.Context) (string, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/service.go">service.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/token_provider.go">token_provider.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ServiceName is the name of the service.</span>
+    <span id="ServiceName">ServiceName</span> = &#34;ec2metadata&#34;
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="EC2IAMInfo">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=7481:7618#L215">EC2IAMInfo</a>
+				<a class="permalink" href="index.html#EC2IAMInfo">¶</a>
+				
+				
+			</h2>
+			<p>
+An EC2IAMInfo provides the shape for unmarshaling
+an IAM info from the metadata API
+</p>
+
+			<pre>type EC2IAMInfo struct {
+<span id="EC2IAMInfo.Code"></span>    Code               <a href="../../../../../builtin/index.html#string">string</a>
+<span id="EC2IAMInfo.LastUpdated"></span>    LastUpdated        <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>
+<span id="EC2IAMInfo.InstanceProfileArn"></span>    InstanceProfileArn <a href="../../../../../builtin/index.html#string">string</a>
+<span id="EC2IAMInfo.InstanceProfileID"></span>    InstanceProfileID  <a href="../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EC2InstanceIdentityDocument">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=7723:8613#L224">EC2InstanceIdentityDocument</a>
+				<a class="permalink" href="index.html#EC2InstanceIdentityDocument">¶</a>
+				
+				
+			</h2>
+			<p>
+An EC2InstanceIdentityDocument provides the shape for unmarshaling
+an instance identity document
+</p>
+
+			<pre>type EC2InstanceIdentityDocument struct {
+<span id="EC2InstanceIdentityDocument.DevpayProductCodes"></span>    DevpayProductCodes      []<a href="../../../../../builtin/index.html#string">string</a>  `json:&#34;devpayProductCodes&#34;`
+<span id="EC2InstanceIdentityDocument.MarketplaceProductCodes"></span>    MarketplaceProductCodes []<a href="../../../../../builtin/index.html#string">string</a>  `json:&#34;marketplaceProductCodes&#34;`
+<span id="EC2InstanceIdentityDocument.AvailabilityZone"></span>    AvailabilityZone        <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;availabilityZone&#34;`
+<span id="EC2InstanceIdentityDocument.PrivateIP"></span>    PrivateIP               <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;privateIp&#34;`
+<span id="EC2InstanceIdentityDocument.Version"></span>    Version                 <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;version&#34;`
+<span id="EC2InstanceIdentityDocument.Region"></span>    Region                  <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;region&#34;`
+<span id="EC2InstanceIdentityDocument.InstanceID"></span>    InstanceID              <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;instanceId&#34;`
+<span id="EC2InstanceIdentityDocument.BillingProducts"></span>    BillingProducts         []<a href="../../../../../builtin/index.html#string">string</a>  `json:&#34;billingProducts&#34;`
+<span id="EC2InstanceIdentityDocument.InstanceType"></span>    InstanceType            <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;instanceType&#34;`
+<span id="EC2InstanceIdentityDocument.AccountID"></span>    AccountID               <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;accountId&#34;`
+<span id="EC2InstanceIdentityDocument.PendingTime"></span>    PendingTime             <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `json:&#34;pendingTime&#34;`
+<span id="EC2InstanceIdentityDocument.ImageID"></span>    ImageID                 <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;imageId&#34;`
+<span id="EC2InstanceIdentityDocument.KernelID"></span>    KernelID                <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;kernelId&#34;`
+<span id="EC2InstanceIdentityDocument.RamdiskID"></span>    RamdiskID               <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;ramdiskId&#34;`
+<span id="EC2InstanceIdentityDocument.Architecture"></span>    Architecture            <a href="../../../../../builtin/index.html#string">string</a>    `json:&#34;architecture&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EC2Metadata">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/service.go?s=1692:1735#L43">EC2Metadata</a>
+				<a class="permalink" href="index.html#EC2Metadata">¶</a>
+				
+				
+			</h2>
+			<p>
+A EC2Metadata is an EC2 Metadata service Client.
+</p>
+
+			<pre>type EC2Metadata struct {
+    *<a href="../client/index.html">client</a>.<a href="../client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/service.go?s=2149:2216#L57">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../client/index.html">client</a>.<a href="../client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>) *<a href="index.html#EC2Metadata">EC2Metadata</a></pre>
+				<p>
+New creates a new instance of the EC2Metadata client with a session.
+This client is safe to use across multiple goroutines.
+</p>
+<p>
+Example:
+</p>
+<pre>// Create a EC2Metadata client from just a session.
+svc := ec2metadata.New(mySession)
+
+// Create a EC2Metadata client with additional configuration
+svc := ec2metadata.New(mySession, aws.NewConfig().WithLogLevel(aws.LogDebugHTTPBody))
+</pre>
+
+				
+				
+			
+				
+				<h3 id="NewClient">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/service.go?s=2896:3028#L72">NewClient</a>
+					<a class="permalink" href="index.html#NewClient">¶</a>
+					
+					
+				</h3>
+				<pre>func NewClient(cfg <a href="../index.html">aws</a>.<a href="../index.html#Config">Config</a>, handlers <a href="../request/index.html">request</a>.<a href="../request/index.html#Handlers">Handlers</a>, endpoint, signingRegion <a href="../../../../../builtin/index.html#string">string</a>, opts ...func(*<a href="../client/index.html">client</a>.<a href="../client/index.html#Client">Client</a>)) *<a href="index.html#EC2Metadata">EC2Metadata</a></pre>
+				<p>
+NewClient returns a new EC2Metadata client. Should be used to create
+a client when not using a session. Generally using just New with a session
+is preferred.
+</p>
+<p>
+Will remove the URL path from the endpoint provided to ensure the EC2 IMDS
+client is able to communicate with the EC2 IMDS API.
+</p>
+<p>
+If an unmodified HTTP client is provided from the stdlib default, or no client
+the EC2RoleProvider&#39;s EC2Metadata HTTP client&#39;s timeout will be shortened.
+To disable this set Config.EC2MetadataDisableTimeoutOverride to false. Enabled by default.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="EC2Metadata.Available">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=6906:6944#L198">Available</a>
+					<a class="permalink" href="index.html#EC2Metadata.Available">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) Available() <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+Available returns if the application has access to the EC2 Metadata service.
+Can be used to determine if application is running within an EC2 Instance and
+the metadata service is available.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.AvailableWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=7216:7280#L205">AvailableWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.AvailableWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) AvailableWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+				<p>
+AvailableWithContext returns if the application has access to the EC2 Metadata service.
+Can be used to determine if application is running within an EC2 Instance and
+the metadata service is available.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetDynamicData">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=3252:3314#L95">GetDynamicData</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetDynamicData">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetDynamicData(p <a href="../../../../../builtin/index.html#string">string</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetDynamicData uses the path provided to request information from the EC2
+instance metadata service for dynamic data. The content will be returned
+as a string, or error if the request failed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetDynamicDataWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=3596:3686#L102">GetDynamicDataWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetDynamicDataWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetDynamicDataWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>, p <a href="../../../../../builtin/index.html#string">string</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetDynamicDataWithContext uses the path provided to request information from the EC2
+instance metadata service for dynamic data. The content will be returned
+as a string, or error if the request failed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetInstanceIdentityDocument">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=4132:4220#L120">GetInstanceIdentityDocument</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetInstanceIdentityDocument">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetInstanceIdentityDocument() (<a href="index.html#EC2InstanceIdentityDocument">EC2InstanceIdentityDocument</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetInstanceIdentityDocument retrieves an identity document describing an
+instance. Error is returned if the request fails or is unable to parse
+the response.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetInstanceIdentityDocumentWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=4478:4592#L127">GetInstanceIdentityDocumentWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetInstanceIdentityDocumentWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetInstanceIdentityDocumentWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) (<a href="index.html#EC2InstanceIdentityDocument">EC2InstanceIdentityDocument</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetInstanceIdentityDocumentWithContext retrieves an identity document describing an
+instance. Error is returned if the request fails or is unable to parse
+the response.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetMetadata">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=1550:1609#L44">GetMetadata</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetMetadata">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetMetadata(p <a href="../../../../../builtin/index.html#string">string</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetMetadata uses the path provided to request information from the EC2
+instance metadata service. The content will be returned as a string, or
+error if the request failed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetMetadataWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=1868:1955#L51">GetMetadataWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetMetadataWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetMetadataWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>, p <a href="../../../../../builtin/index.html#string">string</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetMetadataWithContext uses the path provided to request information from the EC2
+instance metadata service. The content will be returned as a string, or
+error if the request failed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetUserData">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=2412:2463#L70">GetUserData</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetUserData">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetUserData() (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetUserData returns the userdata that was configured for the service. If
+there is no user-data setup for the EC2 instance a &#34;NotFoundError&#34; error
+code will be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.GetUserDataWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=2716:2793#L77">GetUserDataWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.GetUserDataWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) GetUserDataWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetUserDataWithContext returns the userdata that was configured for the service. If
+there is no user-data setup for the EC2 instance a &#34;NotFoundError&#34; error
+code will be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.IAMInfo">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=5168:5219#L146">IAMInfo</a>
+					<a class="permalink" href="index.html#EC2Metadata.IAMInfo">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) IAMInfo() (<a href="index.html#EC2IAMInfo">EC2IAMInfo</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+IAMInfo retrieves IAM info from the metadata API
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.IAMInfoWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=5342:5419#L151">IAMInfoWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.IAMInfoWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) IAMInfoWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) (<a href="index.html#EC2IAMInfo">EC2IAMInfo</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+IAMInfoWithContext retrieves IAM info from the metadata API
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.Region">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=6068:6114#L176">Region</a>
+					<a class="permalink" href="index.html#EC2Metadata.Region">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) Region() (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Region returns the region the instance is running in.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EC2Metadata.RegionWithContext">func (*EC2Metadata) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/ec2metadata/api.go?s=6241:6313#L181">RegionWithContext</a>
+					<a class="permalink" href="index.html#EC2Metadata.RegionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EC2Metadata">EC2Metadata</a>) RegionWithContext(ctx <a href="../index.html">aws</a>.<a href="../index.html#Context">Context</a>) (<a href="../../../../../builtin/index.html#string">string</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+RegionWithContext returns the region the instance is running in.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

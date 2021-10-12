@@ -1,0 +1,519 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>lambdaiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package lambdaiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/lambda/lambdaiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package lambdaiface provides an interface to enable mocking the AWS Lambda service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#LambdaAPI">type LambdaAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/lambda/lambdaiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="LambdaAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/lambda/lambdaiface/interface.go?s=2156:26981#L52">LambdaAPI</a>
+				<a class="permalink" href="index.html#LambdaAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+LambdaAPI provides an interface to enable mocking the
+lambda.Lambda service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Lambda.
+func myFunc(svc lambdaiface.LambdaAPI) bool {
+    // Make svc.AddLayerVersionPermission request
+}
+
+func main() {
+    sess := session.New()
+    svc := lambda.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockLambdaClient struct {
+    lambdaiface.LambdaAPI
+}
+func (m *mockLambdaClient) AddLayerVersionPermission(input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockLambdaClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type LambdaAPI interface {
+    AddLayerVersionPermission(*<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionInput">AddLayerVersionPermissionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionOutput">AddLayerVersionPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddLayerVersionPermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionInput">AddLayerVersionPermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionOutput">AddLayerVersionPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddLayerVersionPermissionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionInput">AddLayerVersionPermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AddLayerVersionPermissionOutput">AddLayerVersionPermissionOutput</a>)
+
+    AddPermission(*<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionInput">AddPermissionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionOutput">AddPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddPermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionInput">AddPermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionOutput">AddPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddPermissionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionInput">AddPermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AddPermissionOutput">AddPermissionOutput</a>)
+
+    CreateAlias(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateAliasInput">CreateAliasInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAliasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#CreateAliasInput">CreateAliasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAliasRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateAliasInput">CreateAliasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>)
+
+    CreateCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigInput">CreateCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigOutput">CreateCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigInput">CreateCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigOutput">CreateCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigInput">CreateCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#CreateCodeSigningConfigOutput">CreateCodeSigningConfigOutput</a>)
+
+    CreateEventSourceMapping(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateEventSourceMappingInput">CreateEventSourceMappingInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventSourceMappingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#CreateEventSourceMappingInput">CreateEventSourceMappingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateEventSourceMappingRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateEventSourceMappingInput">CreateEventSourceMappingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>)
+
+    CreateFunction(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateFunctionInput">CreateFunctionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFunctionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#CreateFunctionInput">CreateFunctionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFunctionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#CreateFunctionInput">CreateFunctionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>)
+
+    DeleteAlias(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasInput">DeleteAliasInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasOutput">DeleteAliasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAliasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasInput">DeleteAliasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasOutput">DeleteAliasOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAliasRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasInput">DeleteAliasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteAliasOutput">DeleteAliasOutput</a>)
+
+    DeleteCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigInput">DeleteCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigOutput">DeleteCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigInput">DeleteCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigOutput">DeleteCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigInput">DeleteCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteCodeSigningConfigOutput">DeleteCodeSigningConfigOutput</a>)
+
+    DeleteEventSourceMapping(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteEventSourceMappingInput">DeleteEventSourceMappingInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventSourceMappingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteEventSourceMappingInput">DeleteEventSourceMappingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteEventSourceMappingRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteEventSourceMappingInput">DeleteEventSourceMappingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>)
+
+    DeleteFunction(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionInput">DeleteFunctionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionOutput">DeleteFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionInput">DeleteFunctionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionOutput">DeleteFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionInput">DeleteFunctionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionOutput">DeleteFunctionOutput</a>)
+
+    DeleteFunctionCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigInput">DeleteFunctionCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigOutput">DeleteFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigInput">DeleteFunctionCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigOutput">DeleteFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigInput">DeleteFunctionCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionCodeSigningConfigOutput">DeleteFunctionCodeSigningConfigOutput</a>)
+
+    DeleteFunctionConcurrency(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyInput">DeleteFunctionConcurrencyInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyOutput">DeleteFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionConcurrencyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyInput">DeleteFunctionConcurrencyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyOutput">DeleteFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionConcurrencyRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyInput">DeleteFunctionConcurrencyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionConcurrencyOutput">DeleteFunctionConcurrencyOutput</a>)
+
+    DeleteFunctionEventInvokeConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigInput">DeleteFunctionEventInvokeConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigOutput">DeleteFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionEventInvokeConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigInput">DeleteFunctionEventInvokeConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigOutput">DeleteFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFunctionEventInvokeConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigInput">DeleteFunctionEventInvokeConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteFunctionEventInvokeConfigOutput">DeleteFunctionEventInvokeConfigOutput</a>)
+
+    DeleteLayerVersion(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionInput">DeleteLayerVersionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionOutput">DeleteLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLayerVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionInput">DeleteLayerVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionOutput">DeleteLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLayerVersionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionInput">DeleteLayerVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteLayerVersionOutput">DeleteLayerVersionOutput</a>)
+
+    DeleteProvisionedConcurrencyConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigInput">DeleteProvisionedConcurrencyConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigOutput">DeleteProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProvisionedConcurrencyConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigInput">DeleteProvisionedConcurrencyConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigOutput">DeleteProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProvisionedConcurrencyConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigInput">DeleteProvisionedConcurrencyConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#DeleteProvisionedConcurrencyConfigOutput">DeleteProvisionedConcurrencyConfigOutput</a>)
+
+    GetAccountSettings(*<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsInput">GetAccountSettingsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsOutput">GetAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsInput">GetAccountSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsOutput">GetAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAccountSettingsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsInput">GetAccountSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetAccountSettingsOutput">GetAccountSettingsOutput</a>)
+
+    GetAlias(*<a href="../index.html">lambda</a>.<a href="../index.html#GetAliasInput">GetAliasInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAliasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetAliasInput">GetAliasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAliasRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetAliasInput">GetAliasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>)
+
+    GetCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigInput">GetCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigOutput">GetCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigInput">GetCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigOutput">GetCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigInput">GetCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetCodeSigningConfigOutput">GetCodeSigningConfigOutput</a>)
+
+    GetEventSourceMapping(*<a href="../index.html">lambda</a>.<a href="../index.html#GetEventSourceMappingInput">GetEventSourceMappingInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEventSourceMappingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetEventSourceMappingInput">GetEventSourceMappingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetEventSourceMappingRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetEventSourceMappingInput">GetEventSourceMappingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>)
+
+    GetFunction(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionInput">GetFunctionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionOutput">GetFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionInput">GetFunctionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionOutput">GetFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionInput">GetFunctionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionOutput">GetFunctionOutput</a>)
+
+    GetFunctionCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigInput">GetFunctionCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigOutput">GetFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigInput">GetFunctionCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigOutput">GetFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigInput">GetFunctionCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionCodeSigningConfigOutput">GetFunctionCodeSigningConfigOutput</a>)
+
+    GetFunctionConcurrency(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyInput">GetFunctionConcurrencyInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyOutput">GetFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionConcurrencyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyInput">GetFunctionConcurrencyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyOutput">GetFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionConcurrencyRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyInput">GetFunctionConcurrencyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConcurrencyOutput">GetFunctionConcurrencyOutput</a>)
+
+    GetFunctionConfiguration(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionConfigurationRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>)
+
+    GetFunctionEventInvokeConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigInput">GetFunctionEventInvokeConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigOutput">GetFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionEventInvokeConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigInput">GetFunctionEventInvokeConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigOutput">GetFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFunctionEventInvokeConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigInput">GetFunctionEventInvokeConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionEventInvokeConfigOutput">GetFunctionEventInvokeConfigOutput</a>)
+
+    GetLayerVersion(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionInput">GetLayerVersionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionOutput">GetLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionInput">GetLayerVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionOutput">GetLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionInput">GetLayerVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionOutput">GetLayerVersionOutput</a>)
+
+    GetLayerVersionByArn(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnInput">GetLayerVersionByArnInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnOutput">GetLayerVersionByArnOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionByArnWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnInput">GetLayerVersionByArnInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnOutput">GetLayerVersionByArnOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionByArnRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnInput">GetLayerVersionByArnInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionByArnOutput">GetLayerVersionByArnOutput</a>)
+
+    GetLayerVersionPolicy(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyInput">GetLayerVersionPolicyInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyOutput">GetLayerVersionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyInput">GetLayerVersionPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyOutput">GetLayerVersionPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLayerVersionPolicyRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyInput">GetLayerVersionPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetLayerVersionPolicyOutput">GetLayerVersionPolicyOutput</a>)
+
+    GetPolicy(*<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyInput">GetPolicyInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyOutput">GetPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyInput">GetPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyOutput">GetPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPolicyRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyInput">GetPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetPolicyOutput">GetPolicyOutput</a>)
+
+    GetProvisionedConcurrencyConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigInput">GetProvisionedConcurrencyConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigOutput">GetProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetProvisionedConcurrencyConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigInput">GetProvisionedConcurrencyConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigOutput">GetProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetProvisionedConcurrencyConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigInput">GetProvisionedConcurrencyConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetProvisionedConcurrencyConfigOutput">GetProvisionedConcurrencyConfigOutput</a>)
+
+    Invoke(*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeInput">InvokeInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeOutput">InvokeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InvokeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#InvokeInput">InvokeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeOutput">InvokeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InvokeRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeInput">InvokeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#InvokeOutput">InvokeOutput</a>)
+
+    InvokeAsync(*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncInput">InvokeAsyncInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncOutput">InvokeAsyncOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InvokeAsyncWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncInput">InvokeAsyncInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncOutput">InvokeAsyncOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InvokeAsyncRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncInput">InvokeAsyncInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#InvokeAsyncOutput">InvokeAsyncOutput</a>)
+
+    ListAliases(*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesInput">ListAliasesInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesOutput">ListAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAliasesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesInput">ListAliasesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesOutput">ListAliasesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAliasesRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesInput">ListAliasesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesOutput">ListAliasesOutput</a>)
+
+    ListAliasesPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesInput">ListAliasesInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesOutput">ListAliasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAliasesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesInput">ListAliasesInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListAliasesOutput">ListAliasesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListCodeSigningConfigs(*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsInput">ListCodeSigningConfigsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsOutput">ListCodeSigningConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCodeSigningConfigsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsInput">ListCodeSigningConfigsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsOutput">ListCodeSigningConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCodeSigningConfigsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsInput">ListCodeSigningConfigsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsOutput">ListCodeSigningConfigsOutput</a>)
+
+    ListCodeSigningConfigsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsInput">ListCodeSigningConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsOutput">ListCodeSigningConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCodeSigningConfigsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsInput">ListCodeSigningConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListCodeSigningConfigsOutput">ListCodeSigningConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListEventSourceMappings(*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsInput">ListEventSourceMappingsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsOutput">ListEventSourceMappingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventSourceMappingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsInput">ListEventSourceMappingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsOutput">ListEventSourceMappingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListEventSourceMappingsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsInput">ListEventSourceMappingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsOutput">ListEventSourceMappingsOutput</a>)
+
+    ListEventSourceMappingsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsInput">ListEventSourceMappingsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsOutput">ListEventSourceMappingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListEventSourceMappingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsInput">ListEventSourceMappingsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListEventSourceMappingsOutput">ListEventSourceMappingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFunctionEventInvokeConfigs(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsInput">ListFunctionEventInvokeConfigsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsOutput">ListFunctionEventInvokeConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionEventInvokeConfigsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsInput">ListFunctionEventInvokeConfigsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsOutput">ListFunctionEventInvokeConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionEventInvokeConfigsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsInput">ListFunctionEventInvokeConfigsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsOutput">ListFunctionEventInvokeConfigsOutput</a>)
+
+    ListFunctionEventInvokeConfigsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsInput">ListFunctionEventInvokeConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsOutput">ListFunctionEventInvokeConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFunctionEventInvokeConfigsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsInput">ListFunctionEventInvokeConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionEventInvokeConfigsOutput">ListFunctionEventInvokeConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFunctions(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsInput">ListFunctionsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsOutput">ListFunctionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsInput">ListFunctionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsOutput">ListFunctionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsInput">ListFunctionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsOutput">ListFunctionsOutput</a>)
+
+    ListFunctionsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsInput">ListFunctionsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsOutput">ListFunctionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFunctionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsInput">ListFunctionsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsOutput">ListFunctionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFunctionsByCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigInput">ListFunctionsByCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigOutput">ListFunctionsByCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionsByCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigInput">ListFunctionsByCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigOutput">ListFunctionsByCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFunctionsByCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigInput">ListFunctionsByCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigOutput">ListFunctionsByCodeSigningConfigOutput</a>)
+
+    ListFunctionsByCodeSigningConfigPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigInput">ListFunctionsByCodeSigningConfigInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigOutput">ListFunctionsByCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFunctionsByCodeSigningConfigPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigInput">ListFunctionsByCodeSigningConfigInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListFunctionsByCodeSigningConfigOutput">ListFunctionsByCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLayerVersions(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsInput">ListLayerVersionsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsOutput">ListLayerVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLayerVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsInput">ListLayerVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsOutput">ListLayerVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLayerVersionsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsInput">ListLayerVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsOutput">ListLayerVersionsOutput</a>)
+
+    ListLayerVersionsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsInput">ListLayerVersionsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsOutput">ListLayerVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLayerVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsInput">ListLayerVersionsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayerVersionsOutput">ListLayerVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLayers(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersInput">ListLayersInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersOutput">ListLayersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLayersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersInput">ListLayersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersOutput">ListLayersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLayersRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersInput">ListLayersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersOutput">ListLayersOutput</a>)
+
+    ListLayersPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersInput">ListLayersInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersOutput">ListLayersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLayersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersInput">ListLayersInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListLayersOutput">ListLayersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListProvisionedConcurrencyConfigs(*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsInput">ListProvisionedConcurrencyConfigsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsOutput">ListProvisionedConcurrencyConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListProvisionedConcurrencyConfigsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsInput">ListProvisionedConcurrencyConfigsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsOutput">ListProvisionedConcurrencyConfigsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListProvisionedConcurrencyConfigsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsInput">ListProvisionedConcurrencyConfigsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsOutput">ListProvisionedConcurrencyConfigsOutput</a>)
+
+    ListProvisionedConcurrencyConfigsPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsInput">ListProvisionedConcurrencyConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsOutput">ListProvisionedConcurrencyConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListProvisionedConcurrencyConfigsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsInput">ListProvisionedConcurrencyConfigsInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListProvisionedConcurrencyConfigsOutput">ListProvisionedConcurrencyConfigsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTags(*<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>)
+
+    ListVersionsByFunction(*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionInput">ListVersionsByFunctionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionOutput">ListVersionsByFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVersionsByFunctionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionInput">ListVersionsByFunctionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionOutput">ListVersionsByFunctionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVersionsByFunctionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionInput">ListVersionsByFunctionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionOutput">ListVersionsByFunctionOutput</a>)
+
+    ListVersionsByFunctionPages(*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionInput">ListVersionsByFunctionInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionOutput">ListVersionsByFunctionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVersionsByFunctionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionInput">ListVersionsByFunctionInput</a>, func(*<a href="../index.html">lambda</a>.<a href="../index.html#ListVersionsByFunctionOutput">ListVersionsByFunctionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PublishLayerVersion(*<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionInput">PublishLayerVersionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionOutput">PublishLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishLayerVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionInput">PublishLayerVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionOutput">PublishLayerVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishLayerVersionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionInput">PublishLayerVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PublishLayerVersionOutput">PublishLayerVersionOutput</a>)
+
+    PublishVersion(*<a href="../index.html">lambda</a>.<a href="../index.html#PublishVersionInput">PublishVersionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PublishVersionInput">PublishVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PublishVersionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PublishVersionInput">PublishVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>)
+
+    PutFunctionCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigInput">PutFunctionCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigOutput">PutFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigInput">PutFunctionCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigOutput">PutFunctionCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigInput">PutFunctionCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionCodeSigningConfigOutput">PutFunctionCodeSigningConfigOutput</a>)
+
+    PutFunctionConcurrency(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyInput">PutFunctionConcurrencyInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyOutput">PutFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionConcurrencyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyInput">PutFunctionConcurrencyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyOutput">PutFunctionConcurrencyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionConcurrencyRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyInput">PutFunctionConcurrencyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionConcurrencyOutput">PutFunctionConcurrencyOutput</a>)
+
+    PutFunctionEventInvokeConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigInput">PutFunctionEventInvokeConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigOutput">PutFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionEventInvokeConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigInput">PutFunctionEventInvokeConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigOutput">PutFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFunctionEventInvokeConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigInput">PutFunctionEventInvokeConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutFunctionEventInvokeConfigOutput">PutFunctionEventInvokeConfigOutput</a>)
+
+    PutProvisionedConcurrencyConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigInput">PutProvisionedConcurrencyConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigOutput">PutProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutProvisionedConcurrencyConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigInput">PutProvisionedConcurrencyConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigOutput">PutProvisionedConcurrencyConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutProvisionedConcurrencyConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigInput">PutProvisionedConcurrencyConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#PutProvisionedConcurrencyConfigOutput">PutProvisionedConcurrencyConfigOutput</a>)
+
+    RemoveLayerVersionPermission(*<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionInput">RemoveLayerVersionPermissionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionOutput">RemoveLayerVersionPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveLayerVersionPermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionInput">RemoveLayerVersionPermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionOutput">RemoveLayerVersionPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveLayerVersionPermissionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionInput">RemoveLayerVersionPermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#RemoveLayerVersionPermissionOutput">RemoveLayerVersionPermissionOutput</a>)
+
+    RemovePermission(*<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemovePermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemovePermissionRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionInput">RemovePermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#RemovePermissionOutput">RemovePermissionOutput</a>)
+
+    TagResource(*<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateAlias(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateAliasInput">UpdateAliasInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAliasWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateAliasInput">UpdateAliasInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAliasRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateAliasInput">UpdateAliasInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#AliasConfiguration">AliasConfiguration</a>)
+
+    UpdateCodeSigningConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigInput">UpdateCodeSigningConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigOutput">UpdateCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCodeSigningConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigInput">UpdateCodeSigningConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigOutput">UpdateCodeSigningConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCodeSigningConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigInput">UpdateCodeSigningConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateCodeSigningConfigOutput">UpdateCodeSigningConfigOutput</a>)
+
+    UpdateEventSourceMapping(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateEventSourceMappingInput">UpdateEventSourceMappingInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateEventSourceMappingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateEventSourceMappingInput">UpdateEventSourceMappingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateEventSourceMappingRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateEventSourceMappingInput">UpdateEventSourceMappingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#EventSourceMappingConfiguration">EventSourceMappingConfiguration</a>)
+
+    UpdateFunctionCode(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionCodeInput">UpdateFunctionCodeInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionCodeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionCodeInput">UpdateFunctionCodeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionCodeRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionCodeInput">UpdateFunctionCodeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>)
+
+    UpdateFunctionConfiguration(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionConfigurationInput">UpdateFunctionConfigurationInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionConfigurationInput">UpdateFunctionConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionConfigurationRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionConfigurationInput">UpdateFunctionConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#FunctionConfiguration">FunctionConfiguration</a>)
+
+    UpdateFunctionEventInvokeConfig(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigInput">UpdateFunctionEventInvokeConfigInput</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigOutput">UpdateFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionEventInvokeConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigInput">UpdateFunctionEventInvokeConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigOutput">UpdateFunctionEventInvokeConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFunctionEventInvokeConfigRequest(*<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigInput">UpdateFunctionEventInvokeConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#UpdateFunctionEventInvokeConfigOutput">UpdateFunctionEventInvokeConfigOutput</a>)
+
+    WaitUntilFunctionActive(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilFunctionActiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilFunctionExists(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionInput">GetFunctionInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilFunctionExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionInput">GetFunctionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilFunctionUpdated(*<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilFunctionUpdatedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">lambda</a>.<a href="../index.html#GetFunctionConfigurationInput">GetFunctionConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

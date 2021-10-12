@@ -1,0 +1,4347 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>iotsecuretunneling - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package iotsecuretunneling
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/iotsecuretunneling&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package iotsecuretunneling provides the client and types for making API
+requests to AWS IoT Secure Tunneling.
+</p>
+<p>
+AWS IoT Secure Tunnling enables you to create remote connections to devices
+deployed in the field.
+</p>
+<p>
+For more information about how AWS IoT Secure Tunneling works, see AWS IoT
+Secure Tunneling (<a href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05</a> for more information on this service.
+</p>
+<p>
+See iotsecuretunneling package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/iotsecuretunneling/">https://docs.aws.amazon.com/sdk-for-go/api/service/iotsecuretunneling/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS IoT Secure Tunneling with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS IoT Secure Tunneling client IoTSecureTunneling for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/iotsecuretunneling/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/iotsecuretunneling/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ConnectionStatus_Values">func ConnectionStatus_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#TunnelStatus_Values">func TunnelStatus_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CloseTunnelInput">type CloseTunnelInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CloseTunnelInput.GoString">func (s CloseTunnelInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloseTunnelInput.SetDelete">func (s *CloseTunnelInput) SetDelete(v bool) *CloseTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloseTunnelInput.SetTunnelId">func (s *CloseTunnelInput) SetTunnelId(v string) *CloseTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloseTunnelInput.String">func (s CloseTunnelInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloseTunnelInput.Validate">func (s *CloseTunnelInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CloseTunnelOutput">type CloseTunnelOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CloseTunnelOutput.GoString">func (s CloseTunnelOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#CloseTunnelOutput.String">func (s CloseTunnelOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ConnectionState">type ConnectionState</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ConnectionState.GoString">func (s ConnectionState) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionState.SetLastUpdatedAt">func (s *ConnectionState) SetLastUpdatedAt(v time.Time) *ConnectionState</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionState.SetStatus">func (s *ConnectionState) SetStatus(v string) *ConnectionState</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConnectionState.String">func (s ConnectionState) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeTunnelInput">type DescribeTunnelInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelInput.GoString">func (s DescribeTunnelInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelInput.SetTunnelId">func (s *DescribeTunnelInput) SetTunnelId(v string) *DescribeTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelInput.String">func (s DescribeTunnelInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelInput.Validate">func (s *DescribeTunnelInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeTunnelOutput">type DescribeTunnelOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelOutput.GoString">func (s DescribeTunnelOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelOutput.SetTunnel">func (s *DescribeTunnelOutput) SetTunnel(v *Tunnel) *DescribeTunnelOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeTunnelOutput.String">func (s DescribeTunnelOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DestinationConfig">type DestinationConfig</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DestinationConfig.GoString">func (s DestinationConfig) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DestinationConfig.SetServices">func (s *DestinationConfig) SetServices(v []*string) *DestinationConfig</a></dd>
+				
+					
+					<dd>    <a href="index.html#DestinationConfig.SetThingName">func (s *DestinationConfig) SetThingName(v string) *DestinationConfig</a></dd>
+				
+					
+					<dd>    <a href="index.html#DestinationConfig.String">func (s DestinationConfig) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DestinationConfig.Validate">func (s *DestinationConfig) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IoTSecureTunneling">type IoTSecureTunneling</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *IoTSecureTunneling</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.CloseTunnel">func (c *IoTSecureTunneling) CloseTunnel(input *CloseTunnelInput) (*CloseTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.CloseTunnelRequest">func (c *IoTSecureTunneling) CloseTunnelRequest(input *CloseTunnelInput) (req *request.Request, output *CloseTunnelOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.CloseTunnelWithContext">func (c *IoTSecureTunneling) CloseTunnelWithContext(ctx aws.Context, input *CloseTunnelInput, opts ...request.Option) (*CloseTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.DescribeTunnel">func (c *IoTSecureTunneling) DescribeTunnel(input *DescribeTunnelInput) (*DescribeTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.DescribeTunnelRequest">func (c *IoTSecureTunneling) DescribeTunnelRequest(input *DescribeTunnelInput) (req *request.Request, output *DescribeTunnelOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.DescribeTunnelWithContext">func (c *IoTSecureTunneling) DescribeTunnelWithContext(ctx aws.Context, input *DescribeTunnelInput, opts ...request.Option) (*DescribeTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTagsForResource">func (c *IoTSecureTunneling) ListTagsForResource(input *ListTagsForResourceInput) (*ListTagsForResourceOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTagsForResourceRequest">func (c *IoTSecureTunneling) ListTagsForResourceRequest(input *ListTagsForResourceInput) (req *request.Request, output *ListTagsForResourceOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTagsForResourceWithContext">func (c *IoTSecureTunneling) ListTagsForResourceWithContext(ctx aws.Context, input *ListTagsForResourceInput, opts ...request.Option) (*ListTagsForResourceOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTunnels">func (c *IoTSecureTunneling) ListTunnels(input *ListTunnelsInput) (*ListTunnelsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTunnelsPages">func (c *IoTSecureTunneling) ListTunnelsPages(input *ListTunnelsInput, fn func(*ListTunnelsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTunnelsPagesWithContext">func (c *IoTSecureTunneling) ListTunnelsPagesWithContext(ctx aws.Context, input *ListTunnelsInput, fn func(*ListTunnelsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTunnelsRequest">func (c *IoTSecureTunneling) ListTunnelsRequest(input *ListTunnelsInput) (req *request.Request, output *ListTunnelsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.ListTunnelsWithContext">func (c *IoTSecureTunneling) ListTunnelsWithContext(ctx aws.Context, input *ListTunnelsInput, opts ...request.Option) (*ListTunnelsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.OpenTunnel">func (c *IoTSecureTunneling) OpenTunnel(input *OpenTunnelInput) (*OpenTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.OpenTunnelRequest">func (c *IoTSecureTunneling) OpenTunnelRequest(input *OpenTunnelInput) (req *request.Request, output *OpenTunnelOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.OpenTunnelWithContext">func (c *IoTSecureTunneling) OpenTunnelWithContext(ctx aws.Context, input *OpenTunnelInput, opts ...request.Option) (*OpenTunnelOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.TagResource">func (c *IoTSecureTunneling) TagResource(input *TagResourceInput) (*TagResourceOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.TagResourceRequest">func (c *IoTSecureTunneling) TagResourceRequest(input *TagResourceInput) (req *request.Request, output *TagResourceOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.TagResourceWithContext">func (c *IoTSecureTunneling) TagResourceWithContext(ctx aws.Context, input *TagResourceInput, opts ...request.Option) (*TagResourceOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.UntagResource">func (c *IoTSecureTunneling) UntagResource(input *UntagResourceInput) (*UntagResourceOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.UntagResourceRequest">func (c *IoTSecureTunneling) UntagResourceRequest(input *UntagResourceInput) (req *request.Request, output *UntagResourceOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IoTSecureTunneling.UntagResourceWithContext">func (c *IoTSecureTunneling) UntagResourceWithContext(ctx aws.Context, input *UntagResourceInput, opts ...request.Option) (*UntagResourceOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LimitExceededException">type LimitExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Code">func (s *LimitExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Error">func (s *LimitExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.GoString">func (s LimitExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.Message">func (s *LimitExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.OrigErr">func (s *LimitExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.RequestID">func (s *LimitExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.StatusCode">func (s *LimitExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#LimitExceededException.String">func (s LimitExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListTagsForResourceInput">type ListTagsForResourceInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceInput.GoString">func (s ListTagsForResourceInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceInput.SetResourceArn">func (s *ListTagsForResourceInput) SetResourceArn(v string) *ListTagsForResourceInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceInput.String">func (s ListTagsForResourceInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceInput.Validate">func (s *ListTagsForResourceInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListTagsForResourceOutput">type ListTagsForResourceOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceOutput.GoString">func (s ListTagsForResourceOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceOutput.SetTags">func (s *ListTagsForResourceOutput) SetTags(v []*Tag) *ListTagsForResourceOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTagsForResourceOutput.String">func (s ListTagsForResourceOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListTunnelsInput">type ListTunnelsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.GoString">func (s ListTunnelsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.SetMaxResults">func (s *ListTunnelsInput) SetMaxResults(v int64) *ListTunnelsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.SetNextToken">func (s *ListTunnelsInput) SetNextToken(v string) *ListTunnelsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.SetThingName">func (s *ListTunnelsInput) SetThingName(v string) *ListTunnelsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.String">func (s ListTunnelsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsInput.Validate">func (s *ListTunnelsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListTunnelsOutput">type ListTunnelsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListTunnelsOutput.GoString">func (s ListTunnelsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsOutput.SetNextToken">func (s *ListTunnelsOutput) SetNextToken(v string) *ListTunnelsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsOutput.SetTunnelSummaries">func (s *ListTunnelsOutput) SetTunnelSummaries(v []*TunnelSummary) *ListTunnelsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListTunnelsOutput.String">func (s ListTunnelsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OpenTunnelInput">type OpenTunnelInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.GoString">func (s OpenTunnelInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.SetDescription">func (s *OpenTunnelInput) SetDescription(v string) *OpenTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.SetDestinationConfig">func (s *OpenTunnelInput) SetDestinationConfig(v *DestinationConfig) *OpenTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.SetTags">func (s *OpenTunnelInput) SetTags(v []*Tag) *OpenTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.SetTimeoutConfig">func (s *OpenTunnelInput) SetTimeoutConfig(v *TimeoutConfig) *OpenTunnelInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.String">func (s OpenTunnelInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelInput.Validate">func (s *OpenTunnelInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OpenTunnelOutput">type OpenTunnelOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.GoString">func (s OpenTunnelOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.SetDestinationAccessToken">func (s *OpenTunnelOutput) SetDestinationAccessToken(v string) *OpenTunnelOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.SetSourceAccessToken">func (s *OpenTunnelOutput) SetSourceAccessToken(v string) *OpenTunnelOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.SetTunnelArn">func (s *OpenTunnelOutput) SetTunnelArn(v string) *OpenTunnelOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.SetTunnelId">func (s *OpenTunnelOutput) SetTunnelId(v string) *OpenTunnelOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#OpenTunnelOutput.String">func (s OpenTunnelOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Tag">type Tag</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Tag.GoString">func (s Tag) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tag.SetKey">func (s *Tag) SetKey(v string) *Tag</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tag.SetValue">func (s *Tag) SetValue(v string) *Tag</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tag.String">func (s Tag) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tag.Validate">func (s *Tag) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TagResourceInput">type TagResourceInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TagResourceInput.GoString">func (s TagResourceInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TagResourceInput.SetResourceArn">func (s *TagResourceInput) SetResourceArn(v string) *TagResourceInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#TagResourceInput.SetTags">func (s *TagResourceInput) SetTags(v []*Tag) *TagResourceInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#TagResourceInput.String">func (s TagResourceInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TagResourceInput.Validate">func (s *TagResourceInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TagResourceOutput">type TagResourceOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TagResourceOutput.GoString">func (s TagResourceOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TagResourceOutput.String">func (s TagResourceOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TimeoutConfig">type TimeoutConfig</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TimeoutConfig.GoString">func (s TimeoutConfig) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TimeoutConfig.SetMaxLifetimeTimeoutMinutes">func (s *TimeoutConfig) SetMaxLifetimeTimeoutMinutes(v int64) *TimeoutConfig</a></dd>
+				
+					
+					<dd>    <a href="index.html#TimeoutConfig.String">func (s TimeoutConfig) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TimeoutConfig.Validate">func (s *TimeoutConfig) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Tunnel">type Tunnel</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Tunnel.GoString">func (s Tunnel) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetCreatedAt">func (s *Tunnel) SetCreatedAt(v time.Time) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetDescription">func (s *Tunnel) SetDescription(v string) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetDestinationConfig">func (s *Tunnel) SetDestinationConfig(v *DestinationConfig) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetDestinationConnectionState">func (s *Tunnel) SetDestinationConnectionState(v *ConnectionState) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetLastUpdatedAt">func (s *Tunnel) SetLastUpdatedAt(v time.Time) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetSourceConnectionState">func (s *Tunnel) SetSourceConnectionState(v *ConnectionState) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetStatus">func (s *Tunnel) SetStatus(v string) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetTags">func (s *Tunnel) SetTags(v []*Tag) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetTimeoutConfig">func (s *Tunnel) SetTimeoutConfig(v *TimeoutConfig) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetTunnelArn">func (s *Tunnel) SetTunnelArn(v string) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.SetTunnelId">func (s *Tunnel) SetTunnelId(v string) *Tunnel</a></dd>
+				
+					
+					<dd>    <a href="index.html#Tunnel.String">func (s Tunnel) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TunnelSummary">type TunnelSummary</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.GoString">func (s TunnelSummary) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetCreatedAt">func (s *TunnelSummary) SetCreatedAt(v time.Time) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetDescription">func (s *TunnelSummary) SetDescription(v string) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetLastUpdatedAt">func (s *TunnelSummary) SetLastUpdatedAt(v time.Time) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetStatus">func (s *TunnelSummary) SetStatus(v string) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetTunnelArn">func (s *TunnelSummary) SetTunnelArn(v string) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.SetTunnelId">func (s *TunnelSummary) SetTunnelId(v string) *TunnelSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#TunnelSummary.String">func (s TunnelSummary) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UntagResourceInput">type UntagResourceInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UntagResourceInput.GoString">func (s UntagResourceInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UntagResourceInput.SetResourceArn">func (s *UntagResourceInput) SetResourceArn(v string) *UntagResourceInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UntagResourceInput.SetTagKeys">func (s *UntagResourceInput) SetTagKeys(v []*string) *UntagResourceInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UntagResourceInput.String">func (s UntagResourceInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UntagResourceInput.Validate">func (s *UntagResourceInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UntagResourceOutput">type UntagResourceOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UntagResourceOutput.GoString">func (s UntagResourceOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UntagResourceOutput.String">func (s UntagResourceOutput) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ConnectionStatusConnected is a ConnectionStatus enum value</span>
+    <span id="ConnectionStatusConnected">ConnectionStatusConnected</span> = &#34;CONNECTED&#34;
+
+    <span class="comment">// ConnectionStatusDisconnected is a ConnectionStatus enum value</span>
+    <span id="ConnectionStatusDisconnected">ConnectionStatusDisconnected</span> = &#34;DISCONNECTED&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// TunnelStatusOpen is a TunnelStatus enum value</span>
+    <span id="TunnelStatusOpen">TunnelStatusOpen</span> = &#34;OPEN&#34;
+
+    <span class="comment">// TunnelStatusClosed is a TunnelStatus enum value</span>
+    <span id="TunnelStatusClosed">TunnelStatusClosed</span> = &#34;CLOSED&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeLimitExceededException for service response error code</span>
+    <span class="comment">// &#34;LimitExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Thrown when a tunnel limit is exceeded.</span>
+    <span id="ErrCodeLimitExceededException">ErrCodeLimitExceededException</span> = &#34;LimitExceededException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Thrown when an operation is attempted on a resource that does not exist.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;IoTSecureTunneling&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;api.tunneling.iot&#34;  <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;IoTSecureTunneling&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ConnectionStatus_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=62600:62639#L1857">ConnectionStatus_Values</a>
+				<a class="permalink" href="index.html#ConnectionStatus_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ConnectionStatus_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ConnectionStatus_Values returns all elements of the ConnectionStatus enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="TunnelStatus_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=62968:63003#L1873">TunnelStatus_Values</a>
+				<a class="permalink" href="index.html#TunnelStatus_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func TunnelStatus_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+TunnelStatus_Values returns all elements of the TunnelStatus enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="CloseTunnelInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=23940:24288#L619">CloseTunnelInput</a>
+				<a class="permalink" href="index.html#CloseTunnelInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CloseTunnelInput struct {
+
+    <span class="comment">// When set to true, AWS IoT Secure Tunneling deletes the tunnel data immediately.</span>
+<span id="CloseTunnelInput.Delete"></span>    Delete *<a href="../../../../../builtin/index.html#bool">bool</a> `locationName:&#34;delete&#34; type:&#34;boolean&#34;`
+
+    <span class="comment">// The ID of the tunnel to close.</span>
+    <span class="comment">//</span>
+<span id="CloseTunnelInput.TunnelId"></span>    <span class="comment">// TunnelId is a required field</span>
+    TunnelId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CloseTunnelInput.GoString">func (CloseTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=24863:24906#L645">GoString</a>
+					<a class="permalink" href="index.html#CloseTunnelInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloseTunnelInput.SetDelete">func (*CloseTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=25329:25391#L663">SetDelete</a>
+					<a class="permalink" href="index.html#CloseTunnelInput.SetDelete">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) SetDelete(v <a href="../../../../../builtin/index.html#bool">bool</a>) *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a></pre>
+				<p>
+SetDelete sets the Delete field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloseTunnelInput.SetTunnelId">func (*CloseTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=25470:25536#L669">SetTunnelId</a>
+					<a class="permalink" href="index.html#CloseTunnelInput.SetTunnelId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) SetTunnelId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a></pre>
+				<p>
+SetTunnelId sets the TunnelId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloseTunnelInput.String">func (CloseTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=24538:24579#L636">String</a>
+					<a class="permalink" href="index.html#CloseTunnelInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloseTunnelInput.Validate">func (*CloseTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=25007:25050#L650">Validate</a>
+					<a class="permalink" href="index.html#CloseTunnelInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CloseTunnelOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=25569:25633#L674">CloseTunnelOutput</a>
+				<a class="permalink" href="index.html#CloseTunnelOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type CloseTunnelOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CloseTunnelOutput.GoString">func (CloseTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=26209:26253#L692">GoString</a>
+					<a class="permalink" href="index.html#CloseTunnelOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CloseTunnelOutput">CloseTunnelOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CloseTunnelOutput.String">func (CloseTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=25883:25925#L683">String</a>
+					<a class="permalink" href="index.html#CloseTunnelOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#CloseTunnelOutput">CloseTunnelOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConnectionState">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=26308:26663#L697">ConnectionState</a>
+				<a class="permalink" href="index.html#ConnectionState">¶</a>
+				
+				
+			</h2>
+			<p>
+The state of a connection.
+</p>
+
+			<pre>type ConnectionState struct {
+
+    <span class="comment">// The last time the connection status was updated.</span>
+<span id="ConnectionState.LastUpdatedAt"></span>    LastUpdatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastUpdatedAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// The connection status of the tunnel. Valid values are CONNECTED and DISCONNECTED.</span>
+<span id="ConnectionState.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;status&#34; type:&#34;string&#34; enum:&#34;ConnectionStatus&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ConnectionState.GoString">func (ConnectionState) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=27237:27279#L721">GoString</a>
+					<a class="permalink" href="index.html#ConnectionState.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConnectionState">ConnectionState</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionState.SetLastUpdatedAt">func (*ConnectionState) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=27362:27434#L726">SetLastUpdatedAt</a>
+					<a class="permalink" href="index.html#ConnectionState.SetLastUpdatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConnectionState">ConnectionState</a>) SetLastUpdatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#ConnectionState">ConnectionState</a></pre>
+				<p>
+SetLastUpdatedAt sets the LastUpdatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionState.SetStatus">func (*ConnectionState) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=27516:27578#L732">SetStatus</a>
+					<a class="permalink" href="index.html#ConnectionState.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConnectionState">ConnectionState</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ConnectionState">ConnectionState</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConnectionState.String">func (ConnectionState) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=26913:26953#L712">String</a>
+					<a class="permalink" href="index.html#ConnectionState.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConnectionState">ConnectionState</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeTunnelInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=27609:27815#L737">DescribeTunnelInput</a>
+				<a class="permalink" href="index.html#DescribeTunnelInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeTunnelInput struct {
+
+    <span class="comment">// The tunnel to describe.</span>
+    <span class="comment">//</span>
+<span id="DescribeTunnelInput.TunnelId"></span>    <span class="comment">// TunnelId is a required field</span>
+    TunnelId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelId&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeTunnelInput.GoString">func (DescribeTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=28393:28439#L760">GoString</a>
+					<a class="permalink" href="index.html#DescribeTunnelInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeTunnelInput.SetTunnelId">func (*DescribeTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=28872:28944#L778">SetTunnelId</a>
+					<a class="permalink" href="index.html#DescribeTunnelInput.SetTunnelId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) SetTunnelId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a></pre>
+				<p>
+SetTunnelId sets the TunnelId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeTunnelInput.String">func (DescribeTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=28065:28109#L751">String</a>
+					<a class="permalink" href="index.html#DescribeTunnelInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeTunnelInput.Validate">func (*DescribeTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=28540:28586#L765">Validate</a>
+					<a class="permalink" href="index.html#DescribeTunnelInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeTunnelOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=28977:29134#L783">DescribeTunnelOutput</a>
+				<a class="permalink" href="index.html#DescribeTunnelOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeTunnelOutput struct {
+
+    <span class="comment">// The tunnel being described.</span>
+<span id="DescribeTunnelOutput.Tunnel"></span>    Tunnel *<a href="index.html#Tunnel">Tunnel</a> `locationName:&#34;tunnel&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeTunnelOutput.GoString">func (DescribeTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=29713:29760#L804">GoString</a>
+					<a class="permalink" href="index.html#DescribeTunnelOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeTunnelOutput.SetTunnel">func (*DescribeTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=29829:29902#L809">SetTunnel</a>
+					<a class="permalink" href="index.html#DescribeTunnelOutput.SetTunnel">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>) SetTunnel(v *<a href="index.html#Tunnel">Tunnel</a>) *<a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a></pre>
+				<p>
+SetTunnel sets the Tunnel field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeTunnelOutput.String">func (DescribeTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=29384:29429#L795">String</a>
+					<a class="permalink" href="index.html#DescribeTunnelOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DestinationConfig">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=29966:30609#L815">DestinationConfig</a>
+				<a class="permalink" href="index.html#DestinationConfig">¶</a>
+				
+				
+			</h2>
+			<p>
+The destination configuration.
+</p>
+
+			<pre>type DestinationConfig struct {
+
+    <span class="comment">// A list of service names that identity the target application. The AWS IoT</span>
+    <span class="comment">// client running on the destination device reads this value and uses it to</span>
+    <span class="comment">// look up a port or an IP address and a port. The AWS IoT client instantiates</span>
+    <span class="comment">// the local proxy which uses this information to connect to the destination</span>
+    <span class="comment">// application.</span>
+    <span class="comment">//</span>
+<span id="DestinationConfig.Services"></span>    <span class="comment">// Services is a required field</span>
+    Services []*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;services&#34; min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The name of the IoT thing to which you want to connect.</span>
+<span id="DestinationConfig.ThingName"></span>    ThingName *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;thingName&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DestinationConfig.GoString">func (DestinationConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=31185:31229#L845">GoString</a>
+					<a class="permalink" href="index.html#DestinationConfig.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DestinationConfig">DestinationConfig</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DestinationConfig.SetServices">func (*DestinationConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=31886:31957#L869">SetServices</a>
+					<a class="permalink" href="index.html#DestinationConfig.SetServices">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DestinationConfig">DestinationConfig</a>) SetServices(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DestinationConfig">DestinationConfig</a></pre>
+				<p>
+SetServices sets the Services field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DestinationConfig.SetThingName">func (*DestinationConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=32039:32108#L875">SetThingName</a>
+					<a class="permalink" href="index.html#DestinationConfig.SetThingName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DestinationConfig">DestinationConfig</a>) SetThingName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DestinationConfig">DestinationConfig</a></pre>
+				<p>
+SetThingName sets the ThingName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DestinationConfig.String">func (DestinationConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=30859:30901#L836">String</a>
+					<a class="permalink" href="index.html#DestinationConfig.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DestinationConfig">DestinationConfig</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DestinationConfig.Validate">func (*DestinationConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=31330:31374#L850">Validate</a>
+					<a class="permalink" href="index.html#DestinationConfig.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DestinationConfig">DestinationConfig</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IoTSecureTunneling">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/service.go?s=734:784#L11">IoTSecureTunneling</a>
+				<a class="permalink" href="index.html#IoTSecureTunneling">¶</a>
+				
+				
+			</h2>
+			<p>
+IoTSecureTunneling provides the API operation methods for making requests to
+AWS IoT Secure Tunneling. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+IoTSecureTunneling methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type IoTSecureTunneling struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/service.go?s=1795:1869#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a></pre>
+				<p>
+New creates a new instance of the IoTSecureTunneling client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a IoTSecureTunneling client from just a session.
+svc := iotsecuretunneling.New(mySession)
+
+// Create a IoTSecureTunneling client with additional configuration
+svc := iotsecuretunneling.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IoTSecureTunneling.CloseTunnel">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=2658:2751#L67">CloseTunnel</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.CloseTunnel">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) CloseTunnel(input *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) (*<a href="index.html#CloseTunnelOutput">CloseTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CloseTunnel API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+Closes a tunnel identified by the unique tunnel id. When a CloseTunnel request
+is received, we close the WebSocket connections between the client and proxy
+server so no data can be transmitted.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation CloseTunnel for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Thrown when an operation is attempted on a resource that does not exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/CloseTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/CloseTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.CloseTunnelRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=1384:1506#L32">CloseTunnelRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.CloseTunnelRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) CloseTunnelRequest(input *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#CloseTunnelOutput">CloseTunnelOutput</a>)</pre>
+				<p>
+CloseTunnelRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the CloseTunnel operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See CloseTunnel for more information on using the CloseTunnel
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the CloseTunnelRequest method.
+req, resp := client.CloseTunnelRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/CloseTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/CloseTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.CloseTunnelWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=3298:3443#L81">CloseTunnelWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.CloseTunnelWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) CloseTunnelWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#CloseTunnelInput">CloseTunnelInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#CloseTunnelOutput">CloseTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+CloseTunnelWithContext is the same as CloseTunnel with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See CloseTunnel for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.DescribeTunnel">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=5703:5805#L146">DescribeTunnel</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.DescribeTunnel">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) DescribeTunnel(input *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) (*<a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeTunnel API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+Gets information about a tunnel identified by the unique tunnel id.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation DescribeTunnel for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Thrown when an operation is attempted on a resource that does not exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/DescribeTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/DescribeTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.DescribeTunnelRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=4632:4763#L114">DescribeTunnelRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.DescribeTunnelRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) DescribeTunnelRequest(input *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>)</pre>
+				<p>
+DescribeTunnelRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DescribeTunnel operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DescribeTunnel for more information on using the DescribeTunnel
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DescribeTunnelRequest method.
+req, resp := client.DescribeTunnelRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/DescribeTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/DescribeTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.DescribeTunnelWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=6364:6518#L160">DescribeTunnelWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.DescribeTunnelWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) DescribeTunnelWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DescribeTunnelInput">DescribeTunnelInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DescribeTunnelOutput">DescribeTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeTunnelWithContext is the same as DescribeTunnel with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DescribeTunnel for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTagsForResource">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=8846:8963#L225">ListTagsForResource</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTagsForResource">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTagsForResource(input *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListTagsForResource API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+Lists the tags for the specified resource.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation ListTagsForResource for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Thrown when an operation is attempted on a resource that does not exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTagsForResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTagsForResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTagsForResourceRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=7755:7901#L193">ListTagsForResourceRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTagsForResourceRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTagsForResourceRequest(input *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)</pre>
+				<p>
+ListTagsForResourceRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListTagsForResource operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListTagsForResource for more information on using the ListTagsForResource
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListTagsForResourceRequest method.
+req, resp := client.ListTagsForResourceRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTagsForResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTagsForResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTagsForResourceWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=9542:9711#L239">ListTagsForResourceWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTagsForResourceWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTagsForResourceWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListTagsForResourceWithContext is the same as ListTagsForResource with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListTagsForResource for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTunnels">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=12045:12138#L306">ListTunnels</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTunnels">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTunnels(input *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) (*<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListTunnels API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+List all tunnels for an AWS account. Tunnels are listed by creation time
+in descending order, newer tunnels will be listed before older tunnels.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation ListTunnels for usage and error information.
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTunnels">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTunnels</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTunnelsPages">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=13627:13743#L344">ListTunnelsPages</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTunnelsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTunnelsPages(input *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>, fn func(*<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListTunnelsPages iterates over the pages of a ListTunnels operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListTunnels method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListTunnels operation.
+pageNum := 0
+err := client.ListTunnelsPages(params,
+    func(page *iotsecuretunneling.ListTunnelsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTunnelsPagesWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=14226:14394#L355">ListTunnelsPagesWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTunnelsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTunnelsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>, fn func(*<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListTunnelsPagesWithContext same as ListTunnelsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTunnelsRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=10881:11003#L272">ListTunnelsRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTunnelsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTunnelsRequest(input *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>)</pre>
+				<p>
+ListTunnelsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListTunnels operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListTunnels for more information on using the ListTunnels
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListTunnelsRequest method.
+req, resp := client.ListTunnelsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTunnels">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/ListTunnels</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.ListTunnelsWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=12685:12830#L320">ListTunnelsWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.ListTunnelsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) ListTunnelsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListTunnelsWithContext is the same as ListTunnels with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListTunnels for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.OpenTunnel">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=16900:16990#L438">OpenTunnel</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.OpenTunnel">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) OpenTunnel(input *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) (*<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+OpenTunnel API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+Creates a new tunnel, and returns two client access tokens for clients to
+use to connect to the AWS IoT Secure Tunneling proxy server.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation OpenTunnel for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* LimitExceededException
+Thrown when a tunnel limit is exceeded.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/OpenTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/OpenTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.OpenTunnelRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=15831:15950#L405">OpenTunnelRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.OpenTunnelRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) OpenTunnelRequest(input *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>)</pre>
+				<p>
+OpenTunnelRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the OpenTunnel operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See OpenTunnel for more information on using the OpenTunnel
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the OpenTunnelRequest method.
+req, resp := client.OpenTunnelRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/OpenTunnel">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/OpenTunnel</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.OpenTunnelWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=17533:17675#L452">OpenTunnelWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.OpenTunnelWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) OpenTunnelWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+OpenTunnelWithContext is the same as OpenTunnel with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See OpenTunnel for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.TagResource">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=19926:20019#L518">TagResource</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.TagResource">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) TagResource(input *<a href="index.html#TagResourceInput">TagResourceInput</a>) (*<a href="index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+TagResource API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+A resource tag.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation TagResource for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Thrown when an operation is attempted on a resource that does not exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/TagResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/TagResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.TagResourceRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=18836:18958#L485">TagResourceRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.TagResourceRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) TagResourceRequest(input *<a href="index.html#TagResourceInput">TagResourceInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#TagResourceOutput">TagResourceOutput</a>)</pre>
+				<p>
+TagResourceRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the TagResource operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See TagResource for more information on using the TagResource
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the TagResourceRequest method.
+req, resp := client.TagResourceRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/TagResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/TagResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.TagResourceWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=20566:20711#L532">TagResourceWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.TagResourceWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) TagResourceWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#TagResourceInput">TagResourceInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+TagResourceWithContext is the same as TagResource with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See TagResource for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.UntagResource">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=23014:23113#L598">UntagResource</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.UntagResource">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) UntagResource(input *<a href="index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UntagResource API operation for AWS IoT Secure Tunneling.
+</p>
+<p>
+Removes a tag from a resource.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS IoT Secure Tunneling&#39;s
+API operation UntagResource for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Thrown when an operation is attempted on a resource that does not exist.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/UntagResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/UntagResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.UntagResourceRequest">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=21891:22019#L565">UntagResourceRequest</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.UntagResourceRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) UntagResourceRequest(input *<a href="index.html#UntagResourceInput">UntagResourceInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#UntagResourceOutput">UntagResourceOutput</a>)</pre>
+				<p>
+UntagResourceRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the UntagResource operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See UntagResource for more information on using the UntagResource
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the UntagResourceRequest method.
+req, resp := client.UntagResourceRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/UntagResource">https://docs.aws.amazon.com/goto/WebAPI/iotsecuretunneling-2018-10-05/UntagResource</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IoTSecureTunneling.UntagResourceWithContext">func (*IoTSecureTunneling) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=23668:23819#L612">UntagResourceWithContext</a>
+					<a class="permalink" href="index.html#IoTSecureTunneling.UntagResourceWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IoTSecureTunneling">IoTSecureTunneling</a>) UntagResourceWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#UntagResourceInput">UntagResourceInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UntagResourceWithContext is the same as UntagResource with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See UntagResource for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LimitExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=32185:32399#L881">LimitExceededException</a>
+				<a class="permalink" href="index.html#LimitExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+Thrown when a tunnel limit is exceeded.
+</p>
+
+			<pre>type LimitExceededException struct {
+<span id="LimitExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="LimitExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LimitExceededException.Code">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33226:33272#L913">Code</a>
+					<a class="permalink" href="index.html#LimitExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Error">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33600:33647#L930">Error</a>
+					<a class="permalink" href="index.html#LimitExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.GoString">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=32980:33029#L902">GoString</a>
+					<a class="permalink" href="index.html#LimitExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.Message">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33355:33404#L918">Message</a>
+					<a class="permalink" href="index.html#LimitExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.OrigErr">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33534:33582#L926">OrigErr</a>
+					<a class="permalink" href="index.html#LimitExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.RequestID">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33940:33991#L940">RequestID</a>
+					<a class="permalink" href="index.html#LimitExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.StatusCode">func (*LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=33784:33833#L935">StatusCode</a>
+					<a class="permalink" href="index.html#LimitExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#LimitExceededException">LimitExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LimitExceededException.String">func (LimitExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=32649:32696#L893">String</a>
+					<a class="permalink" href="index.html#LimitExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#LimitExceededException">LimitExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListTagsForResourceInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=34030:34252#L944">ListTagsForResourceInput</a>
+				<a class="permalink" href="index.html#ListTagsForResourceInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListTagsForResourceInput struct {
+
+    <span class="comment">// The resource ARN.</span>
+    <span class="comment">//</span>
+<span id="ListTagsForResourceInput.ResourceArn"></span>    <span class="comment">// ResourceArn is a required field</span>
+    ResourceArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceArn&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListTagsForResourceInput.GoString">func (ListTagsForResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=34835:34886#L967">GoString</a>
+					<a class="permalink" href="index.html#ListTagsForResourceInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTagsForResourceInput.SetResourceArn">func (*ListTagsForResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=35463:35548#L988">SetResourceArn</a>
+					<a class="permalink" href="index.html#ListTagsForResourceInput.SetResourceArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) SetResourceArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a></pre>
+				<p>
+SetResourceArn sets the ResourceArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTagsForResourceInput.String">func (ListTagsForResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=34502:34551#L958">String</a>
+					<a class="permalink" href="index.html#ListTagsForResourceInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTagsForResourceInput.Validate">func (*ListTagsForResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=34987:35038#L972">Validate</a>
+					<a class="permalink" href="index.html#ListTagsForResourceInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListTagsForResourceOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=35584:35753#L993">ListTagsForResourceOutput</a>
+				<a class="permalink" href="index.html#ListTagsForResourceOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListTagsForResourceOutput struct {
+
+    <span class="comment">// The tags for the specified resource.</span>
+<span id="ListTagsForResourceOutput.Tags"></span>    Tags []*<a href="index.html#Tag">Tag</a> `locationName:&#34;tags&#34; min:&#34;1&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListTagsForResourceOutput.GoString">func (ListTagsForResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=36337:36389#L1014">GoString</a>
+					<a class="permalink" href="index.html#ListTagsForResourceOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTagsForResourceOutput.SetTags">func (*ListTagsForResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=36454:36534#L1019">SetTags</a>
+					<a class="permalink" href="index.html#ListTagsForResourceOutput.SetTags">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>) SetTags(v []*<a href="index.html#Tag">Tag</a>) *<a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a></pre>
+				<p>
+SetTags sets the Tags field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTagsForResourceOutput.String">func (ListTagsForResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=36003:36053#L1005">String</a>
+					<a class="permalink" href="index.html#ListTagsForResourceOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListTunnelsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=36562:36998#L1024">ListTunnelsInput</a>
+				<a class="permalink" href="index.html#ListTunnelsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListTunnelsInput struct {
+
+    <span class="comment">// The maximum number of results to return at once.</span>
+<span id="ListTunnelsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;maxResults&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// A token to retrieve the next set of results.</span>
+<span id="ListTunnelsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;nextToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The name of the IoT thing associated with the destination device.</span>
+<span id="ListTunnelsInput.ThingName"></span>    ThingName *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;thingName&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListTunnelsInput.GoString">func (ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=37573:37616#L1051">GoString</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsInput.SetMaxResults">func (*ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=38191:38258#L1072">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsInput.SetNextToken">func (*ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=38343:38410#L1078">SetNextToken</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsInput.SetThingName">func (*ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=38494:38561#L1084">SetThingName</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.SetThingName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) SetThingName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a></pre>
+				<p>
+SetThingName sets the ThingName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsInput.String">func (ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=37248:37289#L1042">String</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsInput.Validate">func (*ListTunnelsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=37717:37760#L1056">Validate</a>
+					<a class="permalink" href="index.html#ListTunnelsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsInput">ListTunnelsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListTunnelsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=38595:38915#L1089">ListTunnelsOutput</a>
+				<a class="permalink" href="index.html#ListTunnelsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListTunnelsOutput struct {
+
+    <span class="comment">// A token to used to retrieve the next set of results.</span>
+<span id="ListTunnelsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;nextToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A short description of the tunnels in an AWS account.</span>
+<span id="ListTunnelsOutput.TunnelSummaries"></span>    TunnelSummaries []*<a href="index.html#TunnelSummary">TunnelSummary</a> `locationName:&#34;tunnelSummaries&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListTunnelsOutput.GoString">func (ListTunnelsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=39491:39535#L1113">GoString</a>
+					<a class="permalink" href="index.html#ListTunnelsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsOutput.SetNextToken">func (*ListTunnelsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=39610:39679#L1118">SetNextToken</a>
+					<a class="permalink" href="index.html#ListTunnelsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsOutput.SetTunnelSummaries">func (*ListTunnelsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=39775:39860#L1124">SetTunnelSummaries</a>
+					<a class="permalink" href="index.html#ListTunnelsOutput.SetTunnelSummaries">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>) SetTunnelSummaries(v []*<a href="index.html#TunnelSummary">TunnelSummary</a>) *<a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a></pre>
+				<p>
+SetTunnelSummaries sets the TunnelSummaries field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListTunnelsOutput.String">func (ListTunnelsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=39165:39207#L1104">String</a>
+					<a class="permalink" href="index.html#ListTunnelsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListTunnelsOutput">ListTunnelsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OpenTunnelInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=39899:40432#L1129">OpenTunnelInput</a>
+				<a class="permalink" href="index.html#OpenTunnelInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OpenTunnelInput struct {
+
+    <span class="comment">// A short text description of the tunnel.</span>
+<span id="OpenTunnelInput.Description"></span>    Description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;description&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The destination configuration for the OpenTunnel request.</span>
+<span id="OpenTunnelInput.DestinationConfig"></span>    DestinationConfig *<a href="index.html#DestinationConfig">DestinationConfig</a> `locationName:&#34;destinationConfig&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// A collection of tag metadata.</span>
+<span id="OpenTunnelInput.Tags"></span>    Tags []*<a href="index.html#Tag">Tag</a> `locationName:&#34;tags&#34; min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// Timeout configuration for a tunnel.</span>
+<span id="OpenTunnelInput.TimeoutConfig"></span>    TimeoutConfig *<a href="index.html#TimeoutConfig">TimeoutConfig</a> `locationName:&#34;timeoutConfig&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OpenTunnelInput.GoString">func (OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=41006:41048#L1159">GoString</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.SetDescription">func (*OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=42063:42130#L1197">SetDescription</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.SetDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) SetDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a></pre>
+				<p>
+SetDescription sets the Description field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.SetDestinationConfig">func (*OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=42232:42317#L1203">SetDestinationConfig</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.SetDestinationConfig">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) SetDestinationConfig(v *<a href="index.html#DestinationConfig">DestinationConfig</a>) *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a></pre>
+				<p>
+SetDestinationConfig sets the DestinationConfig field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.SetTags">func (*OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=42398:42458#L1209">SetTags</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.SetTags">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) SetTags(v []*<a href="index.html#Tag">Tag</a>) *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a></pre>
+				<p>
+SetTags sets the Tags field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.SetTimeoutConfig">func (*OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=42544:42621#L1215">SetTimeoutConfig</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.SetTimeoutConfig">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) SetTimeoutConfig(v *<a href="index.html#TimeoutConfig">TimeoutConfig</a>) *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a></pre>
+				<p>
+SetTimeoutConfig sets the TimeoutConfig field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.String">func (OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=40682:40722#L1150">String</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelInput.Validate">func (*OpenTunnelInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=41149:41191#L1164">Validate</a>
+					<a class="permalink" href="index.html#OpenTunnelInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelInput">OpenTunnelInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OpenTunnelOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=42658:43761#L1220">OpenTunnelOutput</a>
+				<a class="permalink" href="index.html#OpenTunnelOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OpenTunnelOutput struct {
+
+    <span class="comment">// The access token the destination local proxy uses to connect to AWS IoT Secure</span>
+    <span class="comment">// Tunneling.</span>
+    <span class="comment">//</span>
+<span id="OpenTunnelOutput.DestinationAccessToken"></span>    <span class="comment">// DestinationAccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by OpenTunnelOutput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    DestinationAccessToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;destinationAccessToken&#34; type:&#34;string&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// The access token the source local proxy uses to connect to AWS IoT Secure</span>
+    <span class="comment">// Tunneling.</span>
+    <span class="comment">//</span>
+<span id="OpenTunnelOutput.SourceAccessToken"></span>    <span class="comment">// SourceAccessToken is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by OpenTunnelOutput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    SourceAccessToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;sourceAccessToken&#34; type:&#34;string&#34; sensitive:&#34;true&#34;`
+
+    <span class="comment">// The Amazon Resource Name for the tunnel. The tunnel ARN format is arn:aws:tunnel:&lt;region&gt;:&lt;account-id&gt;:tunnel/&lt;tunnel-id&gt;</span>
+<span id="OpenTunnelOutput.TunnelArn"></span>    TunnelArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelArn&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A unique alpha-numeric tunnel ID.</span>
+<span id="OpenTunnelOutput.TunnelId"></span>    TunnelId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelId&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OpenTunnelOutput.GoString">func (OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44336:44379#L1260">GoString</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelOutput.SetDestinationAccessToken">func (*OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44480:44560#L1265">SetDestinationAccessToken</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.SetDestinationAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) SetDestinationAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a></pre>
+				<p>
+SetDestinationAccessToken sets the DestinationAccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelOutput.SetSourceAccessToken">func (*OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44673:44748#L1271">SetSourceAccessToken</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.SetSourceAccessToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) SetSourceAccessToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a></pre>
+				<p>
+SetSourceAccessToken sets the SourceAccessToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelOutput.SetTunnelArn">func (*OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44840:44907#L1277">SetTunnelArn</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.SetTunnelArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) SetTunnelArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a></pre>
+				<p>
+SetTunnelArn sets the TunnelArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelOutput.SetTunnelId">func (*OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44989:45055#L1283">SetTunnelId</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.SetTunnelId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) SetTunnelId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a></pre>
+				<p>
+SetTunnelId sets the TunnelId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpenTunnelOutput.String">func (OpenTunnelOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=44011:44052#L1251">String</a>
+					<a class="permalink" href="index.html#OpenTunnelOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OpenTunnelOutput">OpenTunnelOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=45164:45381#L1289">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+Thrown when an operation is attempted on a resource that does not exist.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46220:46269#L1321">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46606:46656#L1338">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=45965:46017#L1310">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46355:46407#L1326">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46537:46588#L1334">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46952:47006#L1348">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=46793:46845#L1343">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=45631:45681#L1301">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Tag">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=47138:47446#L1354">Tag</a>
+				<a class="permalink" href="index.html#Tag">¶</a>
+				
+				
+			</h2>
+			<p>
+An arbitary key/value pair used to add searchable metadata to secure tunnel
+resources.
+</p>
+
+			<pre>type Tag struct {
+
+    <span class="comment">// The key of the tag.</span>
+    <span class="comment">//</span>
+<span id="Tag.Key"></span>    <span class="comment">// Key is a required field</span>
+    Key *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;key&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The value of the tag.</span>
+    <span class="comment">//</span>
+<span id="Tag.Value"></span>    <span class="comment">// Value is a required field</span>
+    Value *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;value&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Tag.GoString">func (Tag) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=48008:48038#L1382">GoString</a>
+					<a class="permalink" href="index.html#Tag.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Tag">Tag</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tag.SetKey">func (*Tag) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=48599:48634#L1406">SetKey</a>
+					<a class="permalink" href="index.html#Tag.SetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tag">Tag</a>) SetKey(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tag">Tag</a></pre>
+				<p>
+SetKey sets the Key field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tag.SetValue">func (*Tag) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=48704:48741#L1412">SetValue</a>
+					<a class="permalink" href="index.html#Tag.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tag">Tag</a>) SetValue(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tag">Tag</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tag.String">func (Tag) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=47696:47724#L1373">String</a>
+					<a class="permalink" href="index.html#Tag.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Tag">Tag</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tag.Validate">func (*Tag) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=48139:48169#L1387">Validate</a>
+					<a class="permalink" href="index.html#Tag.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tag">Tag</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TagResourceInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=48771:49128#L1417">TagResourceInput</a>
+				<a class="permalink" href="index.html#TagResourceInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type TagResourceInput struct {
+
+    <span class="comment">// The ARN of the resource.</span>
+    <span class="comment">//</span>
+<span id="TagResourceInput.ResourceArn"></span>    <span class="comment">// ResourceArn is a required field</span>
+    ResourceArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceArn&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The tags for the resource.</span>
+    <span class="comment">//</span>
+<span id="TagResourceInput.Tags"></span>    <span class="comment">// Tags is a required field</span>
+    Tags []*<a href="index.html#Tag">Tag</a> `locationName:&#34;tags&#34; min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TagResourceInput.GoString">func (TagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=49703:49746#L1445">GoString</a>
+					<a class="permalink" href="index.html#TagResourceInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TagResourceInput">TagResourceInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TagResourceInput.SetResourceArn">func (*TagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=50717:50786#L1482">SetResourceArn</a>
+					<a class="permalink" href="index.html#TagResourceInput.SetResourceArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TagResourceInput">TagResourceInput</a>) SetResourceArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#TagResourceInput">TagResourceInput</a></pre>
+				<p>
+SetResourceArn sets the ResourceArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TagResourceInput.SetTags">func (*TagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=50862:50924#L1488">SetTags</a>
+					<a class="permalink" href="index.html#TagResourceInput.SetTags">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TagResourceInput">TagResourceInput</a>) SetTags(v []*<a href="index.html#Tag">Tag</a>) *<a href="index.html#TagResourceInput">TagResourceInput</a></pre>
+				<p>
+SetTags sets the Tags field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TagResourceInput.String">func (TagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=49378:49419#L1436">String</a>
+					<a class="permalink" href="index.html#TagResourceInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TagResourceInput">TagResourceInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TagResourceInput.Validate">func (*TagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=49847:49890#L1450">Validate</a>
+					<a class="permalink" href="index.html#TagResourceInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TagResourceInput">TagResourceInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TagResourceOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=50952:51016#L1493">TagResourceOutput</a>
+				<a class="permalink" href="index.html#TagResourceOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type TagResourceOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TagResourceOutput.GoString">func (TagResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=51592:51636#L1511">GoString</a>
+					<a class="permalink" href="index.html#TagResourceOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TagResourceOutput">TagResourceOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TagResourceOutput.String">func (TagResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=51266:51308#L1502">String</a>
+					<a class="permalink" href="index.html#TagResourceOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TagResourceOutput">TagResourceOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TimeoutConfig">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=51694:52059#L1516">TimeoutConfig</a>
+				<a class="permalink" href="index.html#TimeoutConfig">¶</a>
+				
+				
+			</h2>
+			<p>
+Tunnel timeout configuration.
+</p>
+
+			<pre>type TimeoutConfig struct {
+
+    <span class="comment">// The maximum amount of time (in minutes) a tunnel can remain open. If not</span>
+    <span class="comment">// specified, maxLifetimeTimeoutMinutes defaults to 720 minutes. Valid values</span>
+    <span class="comment">// are from 1 minute to 12 hours (720 minutes)</span>
+<span id="TimeoutConfig.MaxLifetimeTimeoutMinutes"></span>    MaxLifetimeTimeoutMinutes *<a href="../../../../../builtin/index.html#int64">int64</a> `locationName:&#34;maxLifetimeTimeoutMinutes&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TimeoutConfig.GoString">func (TimeoutConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=52631:52671#L1539">GoString</a>
+					<a class="permalink" href="index.html#TimeoutConfig.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TimeoutConfig">TimeoutConfig</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TimeoutConfig.SetMaxLifetimeTimeoutMinutes">func (*TimeoutConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=53199:53275#L1557">SetMaxLifetimeTimeoutMinutes</a>
+					<a class="permalink" href="index.html#TimeoutConfig.SetMaxLifetimeTimeoutMinutes">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TimeoutConfig">TimeoutConfig</a>) SetMaxLifetimeTimeoutMinutes(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#TimeoutConfig">TimeoutConfig</a></pre>
+				<p>
+SetMaxLifetimeTimeoutMinutes sets the MaxLifetimeTimeoutMinutes field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TimeoutConfig.String">func (TimeoutConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=52309:52347#L1530">String</a>
+					<a class="permalink" href="index.html#TimeoutConfig.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TimeoutConfig">TimeoutConfig</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TimeoutConfig.Validate">func (*TimeoutConfig) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=52772:52812#L1544">Validate</a>
+					<a class="permalink" href="index.html#TimeoutConfig.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TimeoutConfig">TimeoutConfig</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Tunnel">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=53393:55050#L1563">Tunnel</a>
+				<a class="permalink" href="index.html#Tunnel">¶</a>
+				
+				
+			</h2>
+			<p>
+A connection between a source computer and a destination device.
+</p>
+
+			<pre>type Tunnel struct {
+
+    <span class="comment">// The time when the tunnel was created.</span>
+<span id="Tunnel.CreatedAt"></span>    CreatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;createdAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// A description of the tunnel.</span>
+<span id="Tunnel.Description"></span>    Description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;description&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The destination configuration that specifies the thing name of the destination</span>
+    <span class="comment">// device and a service name that the local proxy uses to connect to the destination</span>
+    <span class="comment">// application.</span>
+<span id="Tunnel.DestinationConfig"></span>    DestinationConfig *<a href="index.html#DestinationConfig">DestinationConfig</a> `locationName:&#34;destinationConfig&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The connection state of the destination application.</span>
+<span id="Tunnel.DestinationConnectionState"></span>    DestinationConnectionState *<a href="index.html#ConnectionState">ConnectionState</a> `locationName:&#34;destinationConnectionState&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The last time the tunnel was updated.</span>
+<span id="Tunnel.LastUpdatedAt"></span>    LastUpdatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastUpdatedAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// The connection state of the source application.</span>
+<span id="Tunnel.SourceConnectionState"></span>    SourceConnectionState *<a href="index.html#ConnectionState">ConnectionState</a> `locationName:&#34;sourceConnectionState&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The status of a tunnel. Valid values are: Open and Closed.</span>
+<span id="Tunnel.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;status&#34; type:&#34;string&#34; enum:&#34;TunnelStatus&#34;`
+
+    <span class="comment">// A list of tag metadata associated with the secure tunnel.</span>
+<span id="Tunnel.Tags"></span>    Tags []*<a href="index.html#Tag">Tag</a> `locationName:&#34;tags&#34; min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// Timeout configuration for the tunnel.</span>
+<span id="Tunnel.TimeoutConfig"></span>    TimeoutConfig *<a href="index.html#TimeoutConfig">TimeoutConfig</a> `locationName:&#34;timeoutConfig&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of a tunnel. The tunnel ARN format is arn:aws:tunnel:&lt;region&gt;:&lt;account-id&gt;:tunnel/&lt;tunnel-id&gt;</span>
+<span id="Tunnel.TunnelArn"></span>    TunnelArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelArn&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A unique alpha-numeric ID that identifies a tunnel.</span>
+<span id="Tunnel.TunnelId"></span>    TunnelId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelId&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Tunnel.GoString">func (Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=55615:55648#L1616">GoString</a>
+					<a class="permalink" href="index.html#Tunnel.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Tunnel">Tunnel</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetCreatedAt">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=55723:55773#L1621">SetCreatedAt</a>
+					<a class="permalink" href="index.html#Tunnel.SetCreatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetCreatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetCreatedAt sets the CreatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetDescription">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=55861:55910#L1627">SetDescription</a>
+					<a class="permalink" href="index.html#Tunnel.SetDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetDescription sets the Description field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetDestinationConfig">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56012:56079#L1633">SetDestinationConfig</a>
+					<a class="permalink" href="index.html#Tunnel.SetDestinationConfig">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetDestinationConfig(v *<a href="index.html#DestinationConfig">DestinationConfig</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetDestinationConfig sets the DestinationConfig field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetDestinationConnectionState">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56204:56278#L1639">SetDestinationConnectionState</a>
+					<a class="permalink" href="index.html#Tunnel.SetDestinationConnectionState">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetDestinationConnectionState(v *<a href="index.html#ConnectionState">ConnectionState</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetDestinationConnectionState sets the DestinationConnectionState field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetLastUpdatedAt">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56386:56440#L1645">SetLastUpdatedAt</a>
+					<a class="permalink" href="index.html#Tunnel.SetLastUpdatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetLastUpdatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetLastUpdatedAt sets the LastUpdatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetSourceConnectionState">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56552:56621#L1651">SetSourceConnectionState</a>
+					<a class="permalink" href="index.html#Tunnel.SetSourceConnectionState">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetSourceConnectionState(v *<a href="index.html#ConnectionState">ConnectionState</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetSourceConnectionState sets the SourceConnectionState field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetStatus">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56710:56754#L1657">SetStatus</a>
+					<a class="permalink" href="index.html#Tunnel.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetTags">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56825:56867#L1663">SetTags</a>
+					<a class="permalink" href="index.html#Tunnel.SetTags">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetTags(v []*<a href="index.html#Tag">Tag</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetTags sets the Tags field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetTimeoutConfig">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=56953:57012#L1669">SetTimeoutConfig</a>
+					<a class="permalink" href="index.html#Tunnel.SetTimeoutConfig">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetTimeoutConfig(v *<a href="index.html#TimeoutConfig">TimeoutConfig</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetTimeoutConfig sets the TimeoutConfig field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetTunnelArn">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=57099:57146#L1675">SetTunnelArn</a>
+					<a class="permalink" href="index.html#Tunnel.SetTunnelArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetTunnelArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetTunnelArn sets the TunnelArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.SetTunnelId">func (*Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=57228:57274#L1681">SetTunnelId</a>
+					<a class="permalink" href="index.html#Tunnel.SetTunnelId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Tunnel">Tunnel</a>) SetTunnelId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Tunnel">Tunnel</a></pre>
+				<p>
+SetTunnelId sets the TunnelId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Tunnel.String">func (Tunnel) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=55300:55331#L1607">String</a>
+					<a class="permalink" href="index.html#Tunnel.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Tunnel">Tunnel</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TunnelSummary">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=57340:58166#L1687">TunnelSummary</a>
+				<a class="permalink" href="index.html#TunnelSummary">¶</a>
+				
+				
+			</h2>
+			<p>
+Information about the tunnel.
+</p>
+
+			<pre>type TunnelSummary struct {
+
+    <span class="comment">// The time the tunnel was created.</span>
+<span id="TunnelSummary.CreatedAt"></span>    CreatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;createdAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// A description of the tunnel.</span>
+<span id="TunnelSummary.Description"></span>    Description *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;description&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The time the tunnel was last updated.</span>
+<span id="TunnelSummary.LastUpdatedAt"></span>    LastUpdatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastUpdatedAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// The status of a tunnel. Valid values are: Open and Closed.</span>
+<span id="TunnelSummary.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;status&#34; type:&#34;string&#34; enum:&#34;TunnelStatus&#34;`
+
+    <span class="comment">// The Amazon Resource Name of the tunnel. The tunnel ARN format is arn:aws:tunnel:&lt;region&gt;:&lt;account-id&gt;:tunnel/&lt;tunnel-id&gt;</span>
+<span id="TunnelSummary.TunnelArn"></span>    TunnelArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelArn&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The unique alpha-numeric identifier for the tunnel.</span>
+<span id="TunnelSummary.TunnelId"></span>    TunnelId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tunnelId&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TunnelSummary.GoString">func (TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=58738:58778#L1723">GoString</a>
+					<a class="permalink" href="index.html#TunnelSummary.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TunnelSummary">TunnelSummary</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetCreatedAt">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=58853:58917#L1728">SetCreatedAt</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetCreatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetCreatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetCreatedAt sets the CreatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetDescription">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59005:59068#L1734">SetDescription</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetDescription sets the Description field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetLastUpdatedAt">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59162:59230#L1740">SetLastUpdatedAt</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetLastUpdatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetLastUpdatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetLastUpdatedAt sets the LastUpdatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetStatus">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59312:59370#L1746">SetStatus</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetTunnelArn">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59451:59512#L1752">SetTunnelArn</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetTunnelArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetTunnelArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetTunnelArn sets the TunnelArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.SetTunnelId">func (*TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59594:59654#L1758">SetTunnelId</a>
+					<a class="permalink" href="index.html#TunnelSummary.SetTunnelId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#TunnelSummary">TunnelSummary</a>) SetTunnelId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#TunnelSummary">TunnelSummary</a></pre>
+				<p>
+SetTunnelId sets the TunnelId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="TunnelSummary.String">func (TunnelSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=58416:58454#L1714">String</a>
+					<a class="permalink" href="index.html#TunnelSummary.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#TunnelSummary">TunnelSummary</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UntagResourceInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=59687:60048#L1763">UntagResourceInput</a>
+				<a class="permalink" href="index.html#UntagResourceInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UntagResourceInput struct {
+
+    <span class="comment">// The resource ARN.</span>
+    <span class="comment">//</span>
+<span id="UntagResourceInput.ResourceArn"></span>    <span class="comment">// ResourceArn is a required field</span>
+    ResourceArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;resourceArn&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The keys of the tags to remove.</span>
+    <span class="comment">//</span>
+<span id="UntagResourceInput.TagKeys"></span>    <span class="comment">// TagKeys is a required field</span>
+    TagKeys []*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;tagKeys&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UntagResourceInput.GoString">func (UntagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=60625:60670#L1791">GoString</a>
+					<a class="permalink" href="index.html#UntagResourceInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UntagResourceInput">UntagResourceInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UntagResourceInput.SetResourceArn">func (*UntagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=61321:61394#L1815">SetResourceArn</a>
+					<a class="permalink" href="index.html#UntagResourceInput.SetResourceArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UntagResourceInput">UntagResourceInput</a>) SetResourceArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UntagResourceInput">UntagResourceInput</a></pre>
+				<p>
+SetResourceArn sets the ResourceArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UntagResourceInput.SetTagKeys">func (*UntagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=61476:61548#L1821">SetTagKeys</a>
+					<a class="permalink" href="index.html#UntagResourceInput.SetTagKeys">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UntagResourceInput">UntagResourceInput</a>) SetTagKeys(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UntagResourceInput">UntagResourceInput</a></pre>
+				<p>
+SetTagKeys sets the TagKeys field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UntagResourceInput.String">func (UntagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=60298:60341#L1782">String</a>
+					<a class="permalink" href="index.html#UntagResourceInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UntagResourceInput">UntagResourceInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UntagResourceInput.Validate">func (*UntagResourceInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=60771:60816#L1796">Validate</a>
+					<a class="permalink" href="index.html#UntagResourceInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UntagResourceInput">UntagResourceInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UntagResourceOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=61579:61645#L1826">UntagResourceOutput</a>
+				<a class="permalink" href="index.html#UntagResourceOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UntagResourceOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UntagResourceOutput.GoString">func (UntagResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=62223:62269#L1844">GoString</a>
+					<a class="permalink" href="index.html#UntagResourceOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UntagResourceOutput">UntagResourceOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UntagResourceOutput.String">func (UntagResourceOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/iotsecuretunneling/api.go?s=61895:61939#L1835">String</a>
+					<a class="permalink" href="index.html#UntagResourceOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UntagResourceOutput">UntagResourceOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="iotsecuretunnelingiface/index.html">iotsecuretunnelingiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package iotsecuretunnelingiface provides an interface to enable mocking the AWS IoT Secure Tunneling service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

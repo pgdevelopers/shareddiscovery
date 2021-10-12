@@ -1,0 +1,284 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>arn - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package arn
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/arn&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package arn provides a parser for interacting with Amazon Resource Names.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#IsARN">func IsARN(arn string) bool</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ARN">type ARN</a></dd>
+				
+					
+					<dd>    <a href="index.html#Parse">func Parse(arn string) (ARN, error)</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ARN.String">func (arn ARN) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/arn/arn.go">arn.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="IsARN">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/arn/arn.go?s=2948:2975#L71">IsARN</a>
+				<a class="permalink" href="index.html#IsARN">¶</a>
+				
+				
+			</h2>
+			<pre>func IsARN(arn <a href="../../../../../builtin/index.html#string">string</a>) <a href="../../../../../builtin/index.html#bool">bool</a></pre>
+			<p>
+IsARN returns whether the given string is an ARN by looking for
+whether the string starts with &#34;arn:&#34; and contains the correct number
+of sections delimited by colons(:).
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ARN">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/arn/arn.go?s=591:1974#L18">ARN</a>
+				<a class="permalink" href="index.html#ARN">¶</a>
+				
+				
+			</h2>
+			<p>
+ARN captures the individual fields of an Amazon Resource Name.
+See <a href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html</a> for more information.
+</p>
+
+			<pre>type ARN struct {
+    <span class="comment">// The partition that the resource is in. For standard AWS regions, the partition is &#34;aws&#34;. If you have resources in</span>
+    <span class="comment">// other partitions, the partition is &#34;aws-partitionname&#34;. For example, the partition for resources in the China</span>
+    <span class="comment">// (Beijing) region is &#34;aws-cn&#34;.</span>
+<span id="ARN.Partition"></span>    Partition <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// The service namespace that identifies the AWS product (for example, Amazon S3, IAM, or Amazon RDS). For a list of</span>
+    <span class="comment">// namespaces, see</span>
+    <span class="comment">// http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces.</span>
+<span id="ARN.Service"></span>    Service <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// The region the resource resides in. Note that the ARNs for some resources do not require a region, so this</span>
+    <span class="comment">// component might be omitted.</span>
+<span id="ARN.Region"></span>    Region <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// The ID of the AWS account that owns the resource, without the hyphens. For example, 123456789012. Note that the</span>
+    <span class="comment">// ARNs for some resources don&#39;t require an account number, so this component might be omitted.</span>
+<span id="ARN.AccountID"></span>    AccountID <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// The content of this part of the ARN varies by service. It often includes an indicator of the type of resource —</span>
+    <span class="comment">// for example, an IAM user or Amazon RDS database - followed by a slash (/) or a colon (:), followed by the</span>
+    <span class="comment">// resource name itself. Some services allows paths for resource names, as described in</span>
+    <span class="comment">// http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arns-paths.</span>
+<span id="ARN.Resource"></span>    Resource <a href="../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="Parse">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/arn/arn.go?s=2280:2315#L51">Parse</a>
+					<a class="permalink" href="index.html#Parse">¶</a>
+					
+					
+				</h3>
+				<pre>func Parse(arn <a href="../../../../../builtin/index.html#string">string</a>) (<a href="index.html#ARN">ARN</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Parse parses an ARN into its constituent parts.
+</p>
+<p>
+Some example ARNs:
+arn:aws:elasticbeanstalk:us-east-1:123456789012:environment/My App/MyEnvironment
+arn:aws:iam::123456789012:user/David
+arn:aws:rds:eu-west-1:123456789012:db:mysql-db
+arn:aws:s3:::my_corporate_bucket/exampleobject.png
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ARN.String">func (ARN) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/arn/arn.go?s=3125:3155#L76">String</a>
+					<a class="permalink" href="index.html#ARN.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (arn <a href="index.html#ARN">ARN</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the canonical representation of the ARN
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>chimesdkidentityiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package chimesdkidentityiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/chimesdkidentity/chimesdkidentityiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package chimesdkidentityiface provides an interface to enable mocking the Amazon Chime SDK Identity service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ChimeSDKIdentityAPI">type ChimeSDKIdentityAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/chimesdkidentity/chimesdkidentityiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ChimeSDKIdentityAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/chimesdkidentity/chimesdkidentityiface/interface.go?s=2314:10318#L52">ChimeSDKIdentityAPI</a>
+				<a class="permalink" href="index.html#ChimeSDKIdentityAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+ChimeSDKIdentityAPI provides an interface to enable mocking the
+chimesdkidentity.ChimeSDKIdentity service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Chime SDK Identity.
+func myFunc(svc chimesdkidentityiface.ChimeSDKIdentityAPI) bool {
+    // Make svc.CreateAppInstance request
+}
+
+func main() {
+    sess := session.New()
+    svc := chimesdkidentity.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockChimeSDKIdentityClient struct {
+    chimesdkidentityiface.ChimeSDKIdentityAPI
+}
+func (m *mockChimeSDKIdentityClient) CreateAppInstance(input *chimesdkidentity.CreateAppInstanceInput) (*chimesdkidentity.CreateAppInstanceOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockChimeSDKIdentityClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type ChimeSDKIdentityAPI interface {
+    CreateAppInstance(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceInput">CreateAppInstanceInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceOutput">CreateAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceInput">CreateAppInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceOutput">CreateAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceInput">CreateAppInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceOutput">CreateAppInstanceOutput</a>)
+
+    CreateAppInstanceAdmin(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminInput">CreateAppInstanceAdminInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminOutput">CreateAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceAdminWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminInput">CreateAppInstanceAdminInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminOutput">CreateAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceAdminRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminInput">CreateAppInstanceAdminInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceAdminOutput">CreateAppInstanceAdminOutput</a>)
+
+    CreateAppInstanceUser(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserInput">CreateAppInstanceUserInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserOutput">CreateAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserInput">CreateAppInstanceUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserOutput">CreateAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppInstanceUserRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserInput">CreateAppInstanceUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#CreateAppInstanceUserOutput">CreateAppInstanceUserOutput</a>)
+
+    DeleteAppInstance(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceInput">DeleteAppInstanceInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceOutput">DeleteAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceInput">DeleteAppInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceOutput">DeleteAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceInput">DeleteAppInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceOutput">DeleteAppInstanceOutput</a>)
+
+    DeleteAppInstanceAdmin(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminInput">DeleteAppInstanceAdminInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminOutput">DeleteAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceAdminWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminInput">DeleteAppInstanceAdminInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminOutput">DeleteAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceAdminRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminInput">DeleteAppInstanceAdminInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceAdminOutput">DeleteAppInstanceAdminOutput</a>)
+
+    DeleteAppInstanceUser(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserInput">DeleteAppInstanceUserInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserOutput">DeleteAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserInput">DeleteAppInstanceUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserOutput">DeleteAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppInstanceUserRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserInput">DeleteAppInstanceUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DeleteAppInstanceUserOutput">DeleteAppInstanceUserOutput</a>)
+
+    DescribeAppInstance(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceInput">DescribeAppInstanceInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceOutput">DescribeAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceInput">DescribeAppInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceOutput">DescribeAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceInput">DescribeAppInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceOutput">DescribeAppInstanceOutput</a>)
+
+    DescribeAppInstanceAdmin(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminInput">DescribeAppInstanceAdminInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminOutput">DescribeAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceAdminWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminInput">DescribeAppInstanceAdminInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminOutput">DescribeAppInstanceAdminOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceAdminRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminInput">DescribeAppInstanceAdminInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceAdminOutput">DescribeAppInstanceAdminOutput</a>)
+
+    DescribeAppInstanceUser(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserInput">DescribeAppInstanceUserInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserOutput">DescribeAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserInput">DescribeAppInstanceUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserOutput">DescribeAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppInstanceUserRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserInput">DescribeAppInstanceUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#DescribeAppInstanceUserOutput">DescribeAppInstanceUserOutput</a>)
+
+    GetAppInstanceRetentionSettings(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsInput">GetAppInstanceRetentionSettingsInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsOutput">GetAppInstanceRetentionSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAppInstanceRetentionSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsInput">GetAppInstanceRetentionSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsOutput">GetAppInstanceRetentionSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAppInstanceRetentionSettingsRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsInput">GetAppInstanceRetentionSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#GetAppInstanceRetentionSettingsOutput">GetAppInstanceRetentionSettingsOutput</a>)
+
+    ListAppInstanceAdmins(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsInput">ListAppInstanceAdminsInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsOutput">ListAppInstanceAdminsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstanceAdminsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsInput">ListAppInstanceAdminsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsOutput">ListAppInstanceAdminsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstanceAdminsRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsInput">ListAppInstanceAdminsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsOutput">ListAppInstanceAdminsOutput</a>)
+
+    ListAppInstanceAdminsPages(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsInput">ListAppInstanceAdminsInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsOutput">ListAppInstanceAdminsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAppInstanceAdminsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsInput">ListAppInstanceAdminsInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceAdminsOutput">ListAppInstanceAdminsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAppInstanceUsers(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersInput">ListAppInstanceUsersInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersOutput">ListAppInstanceUsersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstanceUsersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersInput">ListAppInstanceUsersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersOutput">ListAppInstanceUsersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstanceUsersRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersInput">ListAppInstanceUsersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersOutput">ListAppInstanceUsersOutput</a>)
+
+    ListAppInstanceUsersPages(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersInput">ListAppInstanceUsersInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersOutput">ListAppInstanceUsersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAppInstanceUsersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersInput">ListAppInstanceUsersInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstanceUsersOutput">ListAppInstanceUsersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAppInstances(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesInput">ListAppInstancesInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesOutput">ListAppInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesInput">ListAppInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesOutput">ListAppInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAppInstancesRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesInput">ListAppInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesOutput">ListAppInstancesOutput</a>)
+
+    ListAppInstancesPages(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesInput">ListAppInstancesInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesOutput">ListAppInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAppInstancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesInput">ListAppInstancesInput</a>, func(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#ListAppInstancesOutput">ListAppInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PutAppInstanceRetentionSettings(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsInput">PutAppInstanceRetentionSettingsInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsOutput">PutAppInstanceRetentionSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAppInstanceRetentionSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsInput">PutAppInstanceRetentionSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsOutput">PutAppInstanceRetentionSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAppInstanceRetentionSettingsRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsInput">PutAppInstanceRetentionSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#PutAppInstanceRetentionSettingsOutput">PutAppInstanceRetentionSettingsOutput</a>)
+
+    UpdateAppInstance(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceInput">UpdateAppInstanceInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceOutput">UpdateAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceInput">UpdateAppInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceOutput">UpdateAppInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppInstanceRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceInput">UpdateAppInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceOutput">UpdateAppInstanceOutput</a>)
+
+    UpdateAppInstanceUser(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserInput">UpdateAppInstanceUserInput</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserOutput">UpdateAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppInstanceUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserInput">UpdateAppInstanceUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserOutput">UpdateAppInstanceUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppInstanceUserRequest(*<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserInput">UpdateAppInstanceUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">chimesdkidentity</a>.<a href="../index.html#UpdateAppInstanceUserOutput">UpdateAppInstanceUserOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

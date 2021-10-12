@@ -1,0 +1,388 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>memorydbiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package memorydbiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/memorydb/memorydbiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package memorydbiface provides an interface to enable mocking the Amazon MemoryDB service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#MemoryDBAPI">type MemoryDBAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/memorydb/memorydbiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="MemoryDBAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/memorydb/memorydbiface/interface.go?s=2170:13882#L52">MemoryDBAPI</a>
+				<a class="permalink" href="index.html#MemoryDBAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+MemoryDBAPI provides an interface to enable mocking the
+memorydb.MemoryDB service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon MemoryDB.
+func myFunc(svc memorydbiface.MemoryDBAPI) bool {
+    // Make svc.BatchUpdateCluster request
+}
+
+func main() {
+    sess := session.New()
+    svc := memorydb.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockMemoryDBClient struct {
+    memorydbiface.MemoryDBAPI
+}
+func (m *mockMemoryDBClient) BatchUpdateCluster(input *memorydb.BatchUpdateClusterInput) (*memorydb.BatchUpdateClusterOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockMemoryDBClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type MemoryDBAPI interface {
+    BatchUpdateCluster(*<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterInput">BatchUpdateClusterInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterOutput">BatchUpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchUpdateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterInput">BatchUpdateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterOutput">BatchUpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchUpdateClusterRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterInput">BatchUpdateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#BatchUpdateClusterOutput">BatchUpdateClusterOutput</a>)
+
+    CopySnapshot(*<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotInput">CopySnapshotInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotOutput">CopySnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopySnapshotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotInput">CopySnapshotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotOutput">CopySnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopySnapshotRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotInput">CopySnapshotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CopySnapshotOutput">CopySnapshotOutput</a>)
+
+    CreateACL(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLInput">CreateACLInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLOutput">CreateACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLInput">CreateACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLOutput">CreateACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateACLRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLInput">CreateACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateACLOutput">CreateACLOutput</a>)
+
+    CreateCluster(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>)
+
+    CreateParameterGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupInput">CreateParameterGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupOutput">CreateParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateParameterGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupInput">CreateParameterGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupOutput">CreateParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateParameterGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupInput">CreateParameterGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateParameterGroupOutput">CreateParameterGroupOutput</a>)
+
+    CreateSnapshot(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotInput">CreateSnapshotInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotOutput">CreateSnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSnapshotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotInput">CreateSnapshotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotOutput">CreateSnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSnapshotRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotInput">CreateSnapshotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSnapshotOutput">CreateSnapshotOutput</a>)
+
+    CreateSubnetGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupInput">CreateSubnetGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupOutput">CreateSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSubnetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupInput">CreateSubnetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupOutput">CreateSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSubnetGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupInput">CreateSubnetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateSubnetGroupOutput">CreateSubnetGroupOutput</a>)
+
+    CreateUser(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserInput">CreateUserInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserOutput">CreateUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserInput">CreateUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserOutput">CreateUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateUserRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserInput">CreateUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#CreateUserOutput">CreateUserOutput</a>)
+
+    DeleteACL(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLInput">DeleteACLInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLOutput">DeleteACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLInput">DeleteACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLOutput">DeleteACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteACLRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLInput">DeleteACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteACLOutput">DeleteACLOutput</a>)
+
+    DeleteCluster(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>)
+
+    DeleteParameterGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupInput">DeleteParameterGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupOutput">DeleteParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteParameterGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupInput">DeleteParameterGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupOutput">DeleteParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteParameterGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupInput">DeleteParameterGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteParameterGroupOutput">DeleteParameterGroupOutput</a>)
+
+    DeleteSnapshot(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotInput">DeleteSnapshotInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotOutput">DeleteSnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSnapshotWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotInput">DeleteSnapshotInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotOutput">DeleteSnapshotOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSnapshotRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotInput">DeleteSnapshotInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSnapshotOutput">DeleteSnapshotOutput</a>)
+
+    DeleteSubnetGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupInput">DeleteSubnetGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupOutput">DeleteSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSubnetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupInput">DeleteSubnetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupOutput">DeleteSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteSubnetGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupInput">DeleteSubnetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteSubnetGroupOutput">DeleteSubnetGroupOutput</a>)
+
+    DeleteUser(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserInput">DeleteUserInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserOutput">DeleteUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserInput">DeleteUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserOutput">DeleteUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteUserRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserInput">DeleteUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DeleteUserOutput">DeleteUserOutput</a>)
+
+    DescribeACLs(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsInput">DescribeACLsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsOutput">DescribeACLsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeACLsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsInput">DescribeACLsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsOutput">DescribeACLsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeACLsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsInput">DescribeACLsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeACLsOutput">DescribeACLsOutput</a>)
+
+    DescribeClusters(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClustersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClustersRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>)
+
+    DescribeEngineVersions(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsInput">DescribeEngineVersionsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsOutput">DescribeEngineVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEngineVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsInput">DescribeEngineVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsOutput">DescribeEngineVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEngineVersionsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsInput">DescribeEngineVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEngineVersionsOutput">DescribeEngineVersionsOutput</a>)
+
+    DescribeEvents(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsInput">DescribeEventsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsOutput">DescribeEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsInput">DescribeEventsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsOutput">DescribeEventsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEventsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsInput">DescribeEventsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeEventsOutput">DescribeEventsOutput</a>)
+
+    DescribeParameterGroups(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsInput">DescribeParameterGroupsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsOutput">DescribeParameterGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeParameterGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsInput">DescribeParameterGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsOutput">DescribeParameterGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeParameterGroupsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsInput">DescribeParameterGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParameterGroupsOutput">DescribeParameterGroupsOutput</a>)
+
+    DescribeParameters(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersInput">DescribeParametersInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersOutput">DescribeParametersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeParametersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersInput">DescribeParametersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersOutput">DescribeParametersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeParametersRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersInput">DescribeParametersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeParametersOutput">DescribeParametersOutput</a>)
+
+    DescribeServiceUpdates(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesInput">DescribeServiceUpdatesInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesOutput">DescribeServiceUpdatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServiceUpdatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesInput">DescribeServiceUpdatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesOutput">DescribeServiceUpdatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServiceUpdatesRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesInput">DescribeServiceUpdatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeServiceUpdatesOutput">DescribeServiceUpdatesOutput</a>)
+
+    DescribeSnapshots(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsInput">DescribeSnapshotsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsOutput">DescribeSnapshotsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSnapshotsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsInput">DescribeSnapshotsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsOutput">DescribeSnapshotsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSnapshotsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsInput">DescribeSnapshotsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSnapshotsOutput">DescribeSnapshotsOutput</a>)
+
+    DescribeSubnetGroups(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsInput">DescribeSubnetGroupsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsOutput">DescribeSubnetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSubnetGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsInput">DescribeSubnetGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsOutput">DescribeSubnetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSubnetGroupsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsInput">DescribeSubnetGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeSubnetGroupsOutput">DescribeSubnetGroupsOutput</a>)
+
+    DescribeUsers(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersInput">DescribeUsersInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersOutput">DescribeUsersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeUsersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersInput">DescribeUsersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersOutput">DescribeUsersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeUsersRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersInput">DescribeUsersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#DescribeUsersOutput">DescribeUsersOutput</a>)
+
+    FailoverShard(*<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardInput">FailoverShardInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardOutput">FailoverShardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    FailoverShardWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardInput">FailoverShardInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardOutput">FailoverShardOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    FailoverShardRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardInput">FailoverShardInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#FailoverShardOutput">FailoverShardOutput</a>)
+
+    ListAllowedNodeTypeUpdates(*<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesInput">ListAllowedNodeTypeUpdatesInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesOutput">ListAllowedNodeTypeUpdatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAllowedNodeTypeUpdatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesInput">ListAllowedNodeTypeUpdatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesOutput">ListAllowedNodeTypeUpdatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAllowedNodeTypeUpdatesRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesInput">ListAllowedNodeTypeUpdatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ListAllowedNodeTypeUpdatesOutput">ListAllowedNodeTypeUpdatesOutput</a>)
+
+    ListTags(*<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>)
+
+    ResetParameterGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupInput">ResetParameterGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupOutput">ResetParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ResetParameterGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupInput">ResetParameterGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupOutput">ResetParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ResetParameterGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupInput">ResetParameterGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#ResetParameterGroupOutput">ResetParameterGroupOutput</a>)
+
+    TagResource(*<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateACL(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLInput">UpdateACLInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLOutput">UpdateACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateACLWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLInput">UpdateACLInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLOutput">UpdateACLOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateACLRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLInput">UpdateACLInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateACLOutput">UpdateACLOutput</a>)
+
+    UpdateCluster(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>)
+
+    UpdateParameterGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupInput">UpdateParameterGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupOutput">UpdateParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateParameterGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupInput">UpdateParameterGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupOutput">UpdateParameterGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateParameterGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupInput">UpdateParameterGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateParameterGroupOutput">UpdateParameterGroupOutput</a>)
+
+    UpdateSubnetGroup(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupInput">UpdateSubnetGroupInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupOutput">UpdateSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSubnetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupInput">UpdateSubnetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupOutput">UpdateSubnetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateSubnetGroupRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupInput">UpdateSubnetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateSubnetGroupOutput">UpdateSubnetGroupOutput</a>)
+
+    UpdateUser(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserInput">UpdateUserInput</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserOutput">UpdateUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateUserWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserInput">UpdateUserInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserOutput">UpdateUserOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateUserRequest(*<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserInput">UpdateUserInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">memorydb</a>.<a href="../index.html#UpdateUserOutput">UpdateUserOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

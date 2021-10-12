@@ -1,0 +1,500 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>organizationsiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package organizationsiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/organizations/organizationsiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package organizationsiface provides an interface to enable mocking the AWS Organizations service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#OrganizationsAPI">type OrganizationsAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/organizations/organizationsiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="OrganizationsAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/organizations/organizationsiface/interface.go?s=2242:27922#L52">OrganizationsAPI</a>
+				<a class="permalink" href="index.html#OrganizationsAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+OrganizationsAPI provides an interface to enable mocking the
+organizations.Organizations service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Organizations.
+func myFunc(svc organizationsiface.OrganizationsAPI) bool {
+    // Make svc.AcceptHandshake request
+}
+
+func main() {
+    sess := session.New()
+    svc := organizations.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockOrganizationsClient struct {
+    organizationsiface.OrganizationsAPI
+}
+func (m *mockOrganizationsClient) AcceptHandshake(input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockOrganizationsClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type OrganizationsAPI interface {
+    AcceptHandshake(*<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeInput">AcceptHandshakeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeOutput">AcceptHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptHandshakeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeInput">AcceptHandshakeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeOutput">AcceptHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptHandshakeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeInput">AcceptHandshakeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#AcceptHandshakeOutput">AcceptHandshakeOutput</a>)
+
+    AttachPolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyInput">AttachPolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyOutput">AttachPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyInput">AttachPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyOutput">AttachPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachPolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyInput">AttachPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#AttachPolicyOutput">AttachPolicyOutput</a>)
+
+    CancelHandshake(*<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeInput">CancelHandshakeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeOutput">CancelHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelHandshakeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeInput">CancelHandshakeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeOutput">CancelHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelHandshakeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeInput">CancelHandshakeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CancelHandshakeOutput">CancelHandshakeOutput</a>)
+
+    CreateAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountInput">CreateAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountOutput">CreateAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountInput">CreateAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountOutput">CreateAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountInput">CreateAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateAccountOutput">CreateAccountOutput</a>)
+
+    CreateGovCloudAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountInput">CreateGovCloudAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountOutput">CreateGovCloudAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGovCloudAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountInput">CreateGovCloudAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountOutput">CreateGovCloudAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateGovCloudAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountInput">CreateGovCloudAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateGovCloudAccountOutput">CreateGovCloudAccountOutput</a>)
+
+    CreateOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationInput">CreateOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationOutput">CreateOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationInput">CreateOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationOutput">CreateOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationInput">CreateOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationOutput">CreateOrganizationOutput</a>)
+
+    CreateOrganizationalUnit(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitInput">CreateOrganizationalUnitInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitOutput">CreateOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOrganizationalUnitWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitInput">CreateOrganizationalUnitInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitOutput">CreateOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOrganizationalUnitRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitInput">CreateOrganizationalUnitInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreateOrganizationalUnitOutput">CreateOrganizationalUnitOutput</a>)
+
+    CreatePolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyInput">CreatePolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyOutput">CreatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyInput">CreatePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyOutput">CreatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyInput">CreatePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#CreatePolicyOutput">CreatePolicyOutput</a>)
+
+    DeclineHandshake(*<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeInput">DeclineHandshakeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeOutput">DeclineHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineHandshakeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeInput">DeclineHandshakeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeOutput">DeclineHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineHandshakeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeInput">DeclineHandshakeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeclineHandshakeOutput">DeclineHandshakeOutput</a>)
+
+    DeleteOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationInput">DeleteOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationOutput">DeleteOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationInput">DeleteOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationOutput">DeleteOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationInput">DeleteOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationOutput">DeleteOrganizationOutput</a>)
+
+    DeleteOrganizationalUnit(*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitInput">DeleteOrganizationalUnitInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitOutput">DeleteOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOrganizationalUnitWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitInput">DeleteOrganizationalUnitInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitOutput">DeleteOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOrganizationalUnitRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitInput">DeleteOrganizationalUnitInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeleteOrganizationalUnitOutput">DeleteOrganizationalUnitOutput</a>)
+
+    DeletePolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyInput">DeletePolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyOutput">DeletePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyInput">DeletePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyOutput">DeletePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyInput">DeletePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeletePolicyOutput">DeletePolicyOutput</a>)
+
+    DeregisterDelegatedAdministrator(*<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorInput">DeregisterDelegatedAdministratorInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorOutput">DeregisterDelegatedAdministratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterDelegatedAdministratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorInput">DeregisterDelegatedAdministratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorOutput">DeregisterDelegatedAdministratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterDelegatedAdministratorRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorInput">DeregisterDelegatedAdministratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DeregisterDelegatedAdministratorOutput">DeregisterDelegatedAdministratorOutput</a>)
+
+    DescribeAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountInput">DescribeAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountOutput">DescribeAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountInput">DescribeAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountOutput">DescribeAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountInput">DescribeAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeAccountOutput">DescribeAccountOutput</a>)
+
+    DescribeCreateAccountStatus(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusInput">DescribeCreateAccountStatusInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusOutput">DescribeCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCreateAccountStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusInput">DescribeCreateAccountStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusOutput">DescribeCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCreateAccountStatusRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusInput">DescribeCreateAccountStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeCreateAccountStatusOutput">DescribeCreateAccountStatusOutput</a>)
+
+    DescribeEffectivePolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyInput">DescribeEffectivePolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyOutput">DescribeEffectivePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEffectivePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyInput">DescribeEffectivePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyOutput">DescribeEffectivePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEffectivePolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyInput">DescribeEffectivePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeEffectivePolicyOutput">DescribeEffectivePolicyOutput</a>)
+
+    DescribeHandshake(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeInput">DescribeHandshakeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeOutput">DescribeHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeHandshakeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeInput">DescribeHandshakeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeOutput">DescribeHandshakeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeHandshakeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeInput">DescribeHandshakeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeHandshakeOutput">DescribeHandshakeOutput</a>)
+
+    DescribeOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationInput">DescribeOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationOutput">DescribeOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationInput">DescribeOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationOutput">DescribeOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationInput">DescribeOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationOutput">DescribeOrganizationOutput</a>)
+
+    DescribeOrganizationalUnit(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitInput">DescribeOrganizationalUnitInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitOutput">DescribeOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationalUnitWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitInput">DescribeOrganizationalUnitInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitOutput">DescribeOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationalUnitRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitInput">DescribeOrganizationalUnitInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribeOrganizationalUnitOutput">DescribeOrganizationalUnitOutput</a>)
+
+    DescribePolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyInput">DescribePolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyOutput">DescribePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyInput">DescribePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyOutput">DescribePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyInput">DescribePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DescribePolicyOutput">DescribePolicyOutput</a>)
+
+    DetachPolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyInput">DetachPolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyOutput">DetachPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyInput">DetachPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyOutput">DetachPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachPolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyInput">DetachPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DetachPolicyOutput">DetachPolicyOutput</a>)
+
+    DisableAWSServiceAccess(*<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessInput">DisableAWSServiceAccessInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessOutput">DisableAWSServiceAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableAWSServiceAccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessInput">DisableAWSServiceAccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessOutput">DisableAWSServiceAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableAWSServiceAccessRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessInput">DisableAWSServiceAccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DisableAWSServiceAccessOutput">DisableAWSServiceAccessOutput</a>)
+
+    DisablePolicyType(*<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeInput">DisablePolicyTypeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeOutput">DisablePolicyTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisablePolicyTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeInput">DisablePolicyTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeOutput">DisablePolicyTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisablePolicyTypeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeInput">DisablePolicyTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#DisablePolicyTypeOutput">DisablePolicyTypeOutput</a>)
+
+    EnableAWSServiceAccess(*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessInput">EnableAWSServiceAccessInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessOutput">EnableAWSServiceAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAWSServiceAccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessInput">EnableAWSServiceAccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessOutput">EnableAWSServiceAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAWSServiceAccessRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessInput">EnableAWSServiceAccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnableAWSServiceAccessOutput">EnableAWSServiceAccessOutput</a>)
+
+    EnableAllFeatures(*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesInput">EnableAllFeaturesInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesOutput">EnableAllFeaturesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAllFeaturesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesInput">EnableAllFeaturesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesOutput">EnableAllFeaturesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableAllFeaturesRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesInput">EnableAllFeaturesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnableAllFeaturesOutput">EnableAllFeaturesOutput</a>)
+
+    EnablePolicyType(*<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeInput">EnablePolicyTypeInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeOutput">EnablePolicyTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnablePolicyTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeInput">EnablePolicyTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeOutput">EnablePolicyTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnablePolicyTypeRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeInput">EnablePolicyTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#EnablePolicyTypeOutput">EnablePolicyTypeOutput</a>)
+
+    InviteAccountToOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationInput">InviteAccountToOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationOutput">InviteAccountToOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InviteAccountToOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationInput">InviteAccountToOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationOutput">InviteAccountToOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InviteAccountToOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationInput">InviteAccountToOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#InviteAccountToOrganizationOutput">InviteAccountToOrganizationOutput</a>)
+
+    LeaveOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationInput">LeaveOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationOutput">LeaveOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LeaveOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationInput">LeaveOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationOutput">LeaveOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    LeaveOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationInput">LeaveOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#LeaveOrganizationOutput">LeaveOrganizationOutput</a>)
+
+    ListAWSServiceAccessForOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationInput">ListAWSServiceAccessForOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationOutput">ListAWSServiceAccessForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAWSServiceAccessForOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationInput">ListAWSServiceAccessForOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationOutput">ListAWSServiceAccessForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAWSServiceAccessForOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationInput">ListAWSServiceAccessForOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationOutput">ListAWSServiceAccessForOrganizationOutput</a>)
+
+    ListAWSServiceAccessForOrganizationPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationInput">ListAWSServiceAccessForOrganizationInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationOutput">ListAWSServiceAccessForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAWSServiceAccessForOrganizationPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationInput">ListAWSServiceAccessForOrganizationInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAWSServiceAccessForOrganizationOutput">ListAWSServiceAccessForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccounts(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsInput">ListAccountsInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsInput">ListAccountsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsInput">ListAccountsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsOutput">ListAccountsOutput</a>)
+
+    ListAccountsPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsInput">ListAccountsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsInput">ListAccountsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsOutput">ListAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAccountsForParent(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentInput">ListAccountsForParentInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentOutput">ListAccountsForParentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsForParentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentInput">ListAccountsForParentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentOutput">ListAccountsForParentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountsForParentRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentInput">ListAccountsForParentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentOutput">ListAccountsForParentOutput</a>)
+
+    ListAccountsForParentPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentInput">ListAccountsForParentInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentOutput">ListAccountsForParentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountsForParentPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentInput">ListAccountsForParentInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListAccountsForParentOutput">ListAccountsForParentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListChildren(*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenInput">ListChildrenInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenOutput">ListChildrenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListChildrenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenInput">ListChildrenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenOutput">ListChildrenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListChildrenRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenInput">ListChildrenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenOutput">ListChildrenOutput</a>)
+
+    ListChildrenPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenInput">ListChildrenInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenOutput">ListChildrenOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListChildrenPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenInput">ListChildrenInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListChildrenOutput">ListChildrenOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListCreateAccountStatus(*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusInput">ListCreateAccountStatusInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusOutput">ListCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCreateAccountStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusInput">ListCreateAccountStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusOutput">ListCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCreateAccountStatusRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusInput">ListCreateAccountStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusOutput">ListCreateAccountStatusOutput</a>)
+
+    ListCreateAccountStatusPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusInput">ListCreateAccountStatusInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusOutput">ListCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCreateAccountStatusPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusInput">ListCreateAccountStatusInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListCreateAccountStatusOutput">ListCreateAccountStatusOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDelegatedAdministrators(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsInput">ListDelegatedAdministratorsInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsOutput">ListDelegatedAdministratorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDelegatedAdministratorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsInput">ListDelegatedAdministratorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsOutput">ListDelegatedAdministratorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDelegatedAdministratorsRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsInput">ListDelegatedAdministratorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsOutput">ListDelegatedAdministratorsOutput</a>)
+
+    ListDelegatedAdministratorsPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsInput">ListDelegatedAdministratorsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsOutput">ListDelegatedAdministratorsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDelegatedAdministratorsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsInput">ListDelegatedAdministratorsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedAdministratorsOutput">ListDelegatedAdministratorsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListDelegatedServicesForAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountInput">ListDelegatedServicesForAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountOutput">ListDelegatedServicesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDelegatedServicesForAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountInput">ListDelegatedServicesForAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountOutput">ListDelegatedServicesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDelegatedServicesForAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountInput">ListDelegatedServicesForAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountOutput">ListDelegatedServicesForAccountOutput</a>)
+
+    ListDelegatedServicesForAccountPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountInput">ListDelegatedServicesForAccountInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountOutput">ListDelegatedServicesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDelegatedServicesForAccountPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountInput">ListDelegatedServicesForAccountInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListDelegatedServicesForAccountOutput">ListDelegatedServicesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListHandshakesForAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountInput">ListHandshakesForAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountOutput">ListHandshakesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListHandshakesForAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountInput">ListHandshakesForAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountOutput">ListHandshakesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListHandshakesForAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountInput">ListHandshakesForAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountOutput">ListHandshakesForAccountOutput</a>)
+
+    ListHandshakesForAccountPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountInput">ListHandshakesForAccountInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountOutput">ListHandshakesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListHandshakesForAccountPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountInput">ListHandshakesForAccountInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForAccountOutput">ListHandshakesForAccountOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListHandshakesForOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationInput">ListHandshakesForOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationOutput">ListHandshakesForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListHandshakesForOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationInput">ListHandshakesForOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationOutput">ListHandshakesForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListHandshakesForOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationInput">ListHandshakesForOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationOutput">ListHandshakesForOrganizationOutput</a>)
+
+    ListHandshakesForOrganizationPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationInput">ListHandshakesForOrganizationInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationOutput">ListHandshakesForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListHandshakesForOrganizationPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationInput">ListHandshakesForOrganizationInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListHandshakesForOrganizationOutput">ListHandshakesForOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListOrganizationalUnitsForParent(*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentInput">ListOrganizationalUnitsForParentInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentOutput">ListOrganizationalUnitsForParentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationalUnitsForParentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentInput">ListOrganizationalUnitsForParentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentOutput">ListOrganizationalUnitsForParentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationalUnitsForParentRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentInput">ListOrganizationalUnitsForParentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentOutput">ListOrganizationalUnitsForParentOutput</a>)
+
+    ListOrganizationalUnitsForParentPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentInput">ListOrganizationalUnitsForParentInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentOutput">ListOrganizationalUnitsForParentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListOrganizationalUnitsForParentPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentInput">ListOrganizationalUnitsForParentInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListOrganizationalUnitsForParentOutput">ListOrganizationalUnitsForParentOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListParents(*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsInput">ListParentsInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsOutput">ListParentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListParentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsInput">ListParentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsOutput">ListParentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListParentsRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsInput">ListParentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsOutput">ListParentsOutput</a>)
+
+    ListParentsPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsInput">ListParentsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsOutput">ListParentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListParentsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsInput">ListParentsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListParentsOutput">ListParentsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPolicies(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesInput">ListPoliciesInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesOutput">ListPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPoliciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesInput">ListPoliciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesOutput">ListPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPoliciesRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesInput">ListPoliciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesOutput">ListPoliciesOutput</a>)
+
+    ListPoliciesPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesInput">ListPoliciesInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesOutput">ListPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPoliciesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesInput">ListPoliciesInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesOutput">ListPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPoliciesForTarget(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetInput">ListPoliciesForTargetInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetOutput">ListPoliciesForTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPoliciesForTargetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetInput">ListPoliciesForTargetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetOutput">ListPoliciesForTargetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPoliciesForTargetRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetInput">ListPoliciesForTargetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetOutput">ListPoliciesForTargetOutput</a>)
+
+    ListPoliciesForTargetPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetInput">ListPoliciesForTargetInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetOutput">ListPoliciesForTargetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPoliciesForTargetPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetInput">ListPoliciesForTargetInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListPoliciesForTargetOutput">ListPoliciesForTargetOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRoots(*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsInput">ListRootsInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsOutput">ListRootsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRootsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsInput">ListRootsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsOutput">ListRootsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRootsRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsInput">ListRootsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsOutput">ListRootsOutput</a>)
+
+    ListRootsPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsInput">ListRootsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsOutput">ListRootsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRootsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsInput">ListRootsInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListRootsOutput">ListRootsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTagsForResourcePages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTagsForResourcePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTargetsForPolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyInput">ListTargetsForPolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyOutput">ListTargetsForPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTargetsForPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyInput">ListTargetsForPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyOutput">ListTargetsForPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTargetsForPolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyInput">ListTargetsForPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyOutput">ListTargetsForPolicyOutput</a>)
+
+    ListTargetsForPolicyPages(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyInput">ListTargetsForPolicyInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyOutput">ListTargetsForPolicyOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTargetsForPolicyPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyInput">ListTargetsForPolicyInput</a>, func(*<a href="../index.html">organizations</a>.<a href="../index.html#ListTargetsForPolicyOutput">ListTargetsForPolicyOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    MoveAccount(*<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountInput">MoveAccountInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountOutput">MoveAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    MoveAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountInput">MoveAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountOutput">MoveAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    MoveAccountRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountInput">MoveAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#MoveAccountOutput">MoveAccountOutput</a>)
+
+    RegisterDelegatedAdministrator(*<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorInput">RegisterDelegatedAdministratorInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorOutput">RegisterDelegatedAdministratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterDelegatedAdministratorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorInput">RegisterDelegatedAdministratorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorOutput">RegisterDelegatedAdministratorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterDelegatedAdministratorRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorInput">RegisterDelegatedAdministratorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#RegisterDelegatedAdministratorOutput">RegisterDelegatedAdministratorOutput</a>)
+
+    RemoveAccountFromOrganization(*<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationInput">RemoveAccountFromOrganizationInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationOutput">RemoveAccountFromOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveAccountFromOrganizationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationInput">RemoveAccountFromOrganizationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationOutput">RemoveAccountFromOrganizationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveAccountFromOrganizationRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationInput">RemoveAccountFromOrganizationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#RemoveAccountFromOrganizationOutput">RemoveAccountFromOrganizationOutput</a>)
+
+    TagResource(*<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateOrganizationalUnit(*<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitInput">UpdateOrganizationalUnitInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitOutput">UpdateOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationalUnitWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitInput">UpdateOrganizationalUnitInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitOutput">UpdateOrganizationalUnitOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationalUnitRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitInput">UpdateOrganizationalUnitInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UpdateOrganizationalUnitOutput">UpdateOrganizationalUnitOutput</a>)
+
+    UpdatePolicy(*<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyInput">UpdatePolicyInput</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyOutput">UpdatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyInput">UpdatePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyOutput">UpdatePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePolicyRequest(*<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyInput">UpdatePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">organizations</a>.<a href="../index.html#UpdatePolicyOutput">UpdatePolicyOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

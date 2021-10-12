@@ -1,0 +1,492 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>ecsiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package ecsiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/ecs/ecsiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package ecsiface provides an interface to enable mocking the Amazon EC2 Container Service service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ECSAPI">type ECSAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ecs/ecsiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ECSAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ecs/ecsiface/interface.go?s=2132:21968#L52">ECSAPI</a>
+				<a class="permalink" href="index.html#ECSAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+ECSAPI provides an interface to enable mocking the
+ecs.ECS service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon EC2 Container Service.
+func myFunc(svc ecsiface.ECSAPI) bool {
+    // Make svc.CreateCapacityProvider request
+}
+
+func main() {
+    sess := session.New()
+    svc := ecs.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockECSClient struct {
+    ecsiface.ECSAPI
+}
+func (m *mockECSClient) CreateCapacityProvider(input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockECSClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type ECSAPI interface {
+    CreateCapacityProvider(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderInput">CreateCapacityProviderInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderOutput">CreateCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCapacityProviderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderInput">CreateCapacityProviderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderOutput">CreateCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCapacityProviderRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderInput">CreateCapacityProviderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateCapacityProviderOutput">CreateCapacityProviderOutput</a>)
+
+    CreateCluster(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClusterRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterInput">CreateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateClusterOutput">CreateClusterOutput</a>)
+
+    CreateService(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceInput">CreateServiceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceOutput">CreateServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceInput">CreateServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceOutput">CreateServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateServiceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceInput">CreateServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateServiceOutput">CreateServiceOutput</a>)
+
+    CreateTaskSet(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetInput">CreateTaskSetInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetOutput">CreateTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTaskSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetInput">CreateTaskSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetOutput">CreateTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTaskSetRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetInput">CreateTaskSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#CreateTaskSetOutput">CreateTaskSetOutput</a>)
+
+    DeleteAccountSetting(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingInput">DeleteAccountSettingInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingOutput">DeleteAccountSettingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAccountSettingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingInput">DeleteAccountSettingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingOutput">DeleteAccountSettingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAccountSettingRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingInput">DeleteAccountSettingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAccountSettingOutput">DeleteAccountSettingOutput</a>)
+
+    DeleteAttributes(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesInput">DeleteAttributesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesOutput">DeleteAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesInput">DeleteAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesOutput">DeleteAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAttributesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesInput">DeleteAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteAttributesOutput">DeleteAttributesOutput</a>)
+
+    DeleteCapacityProvider(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderInput">DeleteCapacityProviderInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderOutput">DeleteCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCapacityProviderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderInput">DeleteCapacityProviderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderOutput">DeleteCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCapacityProviderRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderInput">DeleteCapacityProviderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteCapacityProviderOutput">DeleteCapacityProviderOutput</a>)
+
+    DeleteCluster(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteClusterRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterInput">DeleteClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteClusterOutput">DeleteClusterOutput</a>)
+
+    DeleteService(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceInput">DeleteServiceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceOutput">DeleteServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceInput">DeleteServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceOutput">DeleteServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteServiceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceInput">DeleteServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteServiceOutput">DeleteServiceOutput</a>)
+
+    DeleteTaskSet(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetInput">DeleteTaskSetInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetOutput">DeleteTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTaskSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetInput">DeleteTaskSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetOutput">DeleteTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTaskSetRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetInput">DeleteTaskSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeleteTaskSetOutput">DeleteTaskSetOutput</a>)
+
+    DeregisterContainerInstance(*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceInput">DeregisterContainerInstanceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceOutput">DeregisterContainerInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterContainerInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceInput">DeregisterContainerInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceOutput">DeregisterContainerInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterContainerInstanceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceInput">DeregisterContainerInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterContainerInstanceOutput">DeregisterContainerInstanceOutput</a>)
+
+    DeregisterTaskDefinition(*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionInput">DeregisterTaskDefinitionInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionOutput">DeregisterTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterTaskDefinitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionInput">DeregisterTaskDefinitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionOutput">DeregisterTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterTaskDefinitionRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionInput">DeregisterTaskDefinitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DeregisterTaskDefinitionOutput">DeregisterTaskDefinitionOutput</a>)
+
+    DescribeCapacityProviders(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersInput">DescribeCapacityProvidersInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersOutput">DescribeCapacityProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCapacityProvidersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersInput">DescribeCapacityProvidersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersOutput">DescribeCapacityProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCapacityProvidersRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersInput">DescribeCapacityProvidersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeCapacityProvidersOutput">DescribeCapacityProvidersOutput</a>)
+
+    DescribeClusters(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClustersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClustersRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersInput">DescribeClustersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeClustersOutput">DescribeClustersOutput</a>)
+
+    DescribeContainerInstances(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesInput">DescribeContainerInstancesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesOutput">DescribeContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeContainerInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesInput">DescribeContainerInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesOutput">DescribeContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeContainerInstancesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesInput">DescribeContainerInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeContainerInstancesOutput">DescribeContainerInstancesOutput</a>)
+
+    DescribeServices(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesOutput">DescribeServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServicesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesOutput">DescribeServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServicesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesOutput">DescribeServicesOutput</a>)
+
+    DescribeTaskDefinition(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionInput">DescribeTaskDefinitionInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionOutput">DescribeTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTaskDefinitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionInput">DescribeTaskDefinitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionOutput">DescribeTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTaskDefinitionRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionInput">DescribeTaskDefinitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskDefinitionOutput">DescribeTaskDefinitionOutput</a>)
+
+    DescribeTaskSets(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsInput">DescribeTaskSetsInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsOutput">DescribeTaskSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTaskSetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsInput">DescribeTaskSetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsOutput">DescribeTaskSetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTaskSetsRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsInput">DescribeTaskSetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTaskSetsOutput">DescribeTaskSetsOutput</a>)
+
+    DescribeTasks(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksOutput">DescribeTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTasksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksOutput">DescribeTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTasksRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksOutput">DescribeTasksOutput</a>)
+
+    DiscoverPollEndpoint(*<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointInput">DiscoverPollEndpointInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointOutput">DiscoverPollEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DiscoverPollEndpointWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointInput">DiscoverPollEndpointInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointOutput">DiscoverPollEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DiscoverPollEndpointRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointInput">DiscoverPollEndpointInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DiscoverPollEndpointOutput">DiscoverPollEndpointOutput</a>)
+
+    ExecuteCommand(*<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandInput">ExecuteCommandInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandOutput">ExecuteCommandOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ExecuteCommandWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandInput">ExecuteCommandInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandOutput">ExecuteCommandOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ExecuteCommandRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandInput">ExecuteCommandInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ExecuteCommandOutput">ExecuteCommandOutput</a>)
+
+    ListAccountSettings(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsInput">ListAccountSettingsInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsOutput">ListAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsInput">ListAccountSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsOutput">ListAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAccountSettingsRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsInput">ListAccountSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsOutput">ListAccountSettingsOutput</a>)
+
+    ListAccountSettingsPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsInput">ListAccountSettingsInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsOutput">ListAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAccountSettingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsInput">ListAccountSettingsInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAccountSettingsOutput">ListAccountSettingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListAttributes(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesInput">ListAttributesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesOutput">ListAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesInput">ListAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesOutput">ListAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAttributesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesInput">ListAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesOutput">ListAttributesOutput</a>)
+
+    ListAttributesPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesInput">ListAttributesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesOutput">ListAttributesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAttributesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesInput">ListAttributesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListAttributesOutput">ListAttributesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListClusters(*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClustersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClustersRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>)
+
+    ListClustersPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListClustersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersInput">ListClustersInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListClustersOutput">ListClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListContainerInstances(*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesInput">ListContainerInstancesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesOutput">ListContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContainerInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesInput">ListContainerInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesOutput">ListContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListContainerInstancesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesInput">ListContainerInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesOutput">ListContainerInstancesOutput</a>)
+
+    ListContainerInstancesPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesInput">ListContainerInstancesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesOutput">ListContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListContainerInstancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesInput">ListContainerInstancesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListContainerInstancesOutput">ListContainerInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListServices(*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesInput">ListServicesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesOutput">ListServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListServicesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesInput">ListServicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesOutput">ListServicesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListServicesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesInput">ListServicesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesOutput">ListServicesOutput</a>)
+
+    ListServicesPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesInput">ListServicesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesOutput">ListServicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListServicesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesInput">ListServicesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListServicesOutput">ListServicesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListTaskDefinitionFamilies(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesInput">ListTaskDefinitionFamiliesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesOutput">ListTaskDefinitionFamiliesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTaskDefinitionFamiliesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesInput">ListTaskDefinitionFamiliesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesOutput">ListTaskDefinitionFamiliesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTaskDefinitionFamiliesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesInput">ListTaskDefinitionFamiliesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesOutput">ListTaskDefinitionFamiliesOutput</a>)
+
+    ListTaskDefinitionFamiliesPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesInput">ListTaskDefinitionFamiliesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesOutput">ListTaskDefinitionFamiliesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTaskDefinitionFamiliesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesInput">ListTaskDefinitionFamiliesInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionFamiliesOutput">ListTaskDefinitionFamiliesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTaskDefinitions(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsInput">ListTaskDefinitionsInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsOutput">ListTaskDefinitionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTaskDefinitionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsInput">ListTaskDefinitionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsOutput">ListTaskDefinitionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTaskDefinitionsRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsInput">ListTaskDefinitionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsOutput">ListTaskDefinitionsOutput</a>)
+
+    ListTaskDefinitionsPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsInput">ListTaskDefinitionsInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsOutput">ListTaskDefinitionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTaskDefinitionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsInput">ListTaskDefinitionsInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTaskDefinitionsOutput">ListTaskDefinitionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTasks(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksInput">ListTasksInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksOutput">ListTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTasksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksInput">ListTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksOutput">ListTasksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTasksRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksInput">ListTasksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksOutput">ListTasksOutput</a>)
+
+    ListTasksPages(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksInput">ListTasksInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksOutput">ListTasksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListTasksPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksInput">ListTasksInput</a>, func(*<a href="../index.html">ecs</a>.<a href="../index.html#ListTasksOutput">ListTasksOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PutAccountSetting(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingInput">PutAccountSettingInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingOutput">PutAccountSettingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAccountSettingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingInput">PutAccountSettingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingOutput">PutAccountSettingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAccountSettingRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingInput">PutAccountSettingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingOutput">PutAccountSettingOutput</a>)
+
+    PutAccountSettingDefault(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultInput">PutAccountSettingDefaultInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultOutput">PutAccountSettingDefaultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAccountSettingDefaultWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultInput">PutAccountSettingDefaultInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultOutput">PutAccountSettingDefaultOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAccountSettingDefaultRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultInput">PutAccountSettingDefaultInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAccountSettingDefaultOutput">PutAccountSettingDefaultOutput</a>)
+
+    PutAttributes(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesInput">PutAttributesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesOutput">PutAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesInput">PutAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesOutput">PutAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutAttributesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesInput">PutAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutAttributesOutput">PutAttributesOutput</a>)
+
+    PutClusterCapacityProviders(*<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersInput">PutClusterCapacityProvidersInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersOutput">PutClusterCapacityProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutClusterCapacityProvidersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersInput">PutClusterCapacityProvidersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersOutput">PutClusterCapacityProvidersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutClusterCapacityProvidersRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersInput">PutClusterCapacityProvidersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#PutClusterCapacityProvidersOutput">PutClusterCapacityProvidersOutput</a>)
+
+    RegisterContainerInstance(*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceInput">RegisterContainerInstanceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceOutput">RegisterContainerInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterContainerInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceInput">RegisterContainerInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceOutput">RegisterContainerInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterContainerInstanceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceInput">RegisterContainerInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RegisterContainerInstanceOutput">RegisterContainerInstanceOutput</a>)
+
+    RegisterTaskDefinition(*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionInput">RegisterTaskDefinitionInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionOutput">RegisterTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterTaskDefinitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionInput">RegisterTaskDefinitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionOutput">RegisterTaskDefinitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterTaskDefinitionRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionInput">RegisterTaskDefinitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RegisterTaskDefinitionOutput">RegisterTaskDefinitionOutput</a>)
+
+    RunTask(*<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskInput">RunTaskInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskOutput">RunTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RunTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskInput">RunTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskOutput">RunTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RunTaskRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskInput">RunTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#RunTaskOutput">RunTaskOutput</a>)
+
+    StartTask(*<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskInput">StartTaskInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskOutput">StartTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskInput">StartTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskOutput">StartTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartTaskRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskInput">StartTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#StartTaskOutput">StartTaskOutput</a>)
+
+    StopTask(*<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskInput">StopTaskInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskOutput">StopTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskInput">StopTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskOutput">StopTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopTaskRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskInput">StopTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#StopTaskOutput">StopTaskOutput</a>)
+
+    SubmitAttachmentStateChanges(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesInput">SubmitAttachmentStateChangesInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesOutput">SubmitAttachmentStateChangesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitAttachmentStateChangesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesInput">SubmitAttachmentStateChangesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesOutput">SubmitAttachmentStateChangesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitAttachmentStateChangesRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesInput">SubmitAttachmentStateChangesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitAttachmentStateChangesOutput">SubmitAttachmentStateChangesOutput</a>)
+
+    SubmitContainerStateChange(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeInput">SubmitContainerStateChangeInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeOutput">SubmitContainerStateChangeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitContainerStateChangeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeInput">SubmitContainerStateChangeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeOutput">SubmitContainerStateChangeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitContainerStateChangeRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeInput">SubmitContainerStateChangeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitContainerStateChangeOutput">SubmitContainerStateChangeOutput</a>)
+
+    SubmitTaskStateChange(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeInput">SubmitTaskStateChangeInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeOutput">SubmitTaskStateChangeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitTaskStateChangeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeInput">SubmitTaskStateChangeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeOutput">SubmitTaskStateChangeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SubmitTaskStateChangeRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeInput">SubmitTaskStateChangeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#SubmitTaskStateChangeOutput">SubmitTaskStateChangeOutput</a>)
+
+    TagResource(*<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateCapacityProvider(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderInput">UpdateCapacityProviderInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderOutput">UpdateCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCapacityProviderWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderInput">UpdateCapacityProviderInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderOutput">UpdateCapacityProviderOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateCapacityProviderRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderInput">UpdateCapacityProviderInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateCapacityProviderOutput">UpdateCapacityProviderOutput</a>)
+
+    UpdateCluster(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterInput">UpdateClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterOutput">UpdateClusterOutput</a>)
+
+    UpdateClusterSettings(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsInput">UpdateClusterSettingsInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsOutput">UpdateClusterSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterSettingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsInput">UpdateClusterSettingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsOutput">UpdateClusterSettingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClusterSettingsRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsInput">UpdateClusterSettingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateClusterSettingsOutput">UpdateClusterSettingsOutput</a>)
+
+    UpdateContainerAgent(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentInput">UpdateContainerAgentInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentOutput">UpdateContainerAgentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContainerAgentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentInput">UpdateContainerAgentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentOutput">UpdateContainerAgentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContainerAgentRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentInput">UpdateContainerAgentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerAgentOutput">UpdateContainerAgentOutput</a>)
+
+    UpdateContainerInstancesState(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateInput">UpdateContainerInstancesStateInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateOutput">UpdateContainerInstancesStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContainerInstancesStateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateInput">UpdateContainerInstancesStateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateOutput">UpdateContainerInstancesStateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateContainerInstancesStateRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateInput">UpdateContainerInstancesStateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateContainerInstancesStateOutput">UpdateContainerInstancesStateOutput</a>)
+
+    UpdateService(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceInput">UpdateServiceInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceOutput">UpdateServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceInput">UpdateServiceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceOutput">UpdateServiceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServiceRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceInput">UpdateServiceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServiceOutput">UpdateServiceOutput</a>)
+
+    UpdateServicePrimaryTaskSet(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetInput">UpdateServicePrimaryTaskSetInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetOutput">UpdateServicePrimaryTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServicePrimaryTaskSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetInput">UpdateServicePrimaryTaskSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetOutput">UpdateServicePrimaryTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateServicePrimaryTaskSetRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetInput">UpdateServicePrimaryTaskSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateServicePrimaryTaskSetOutput">UpdateServicePrimaryTaskSetOutput</a>)
+
+    UpdateTaskSet(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetInput">UpdateTaskSetInput</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetOutput">UpdateTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTaskSetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetInput">UpdateTaskSetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetOutput">UpdateTaskSetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateTaskSetRequest(*<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetInput">UpdateTaskSetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#UpdateTaskSetOutput">UpdateTaskSetOutput</a>)
+
+    WaitUntilServicesInactive(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilServicesInactiveWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilServicesStable(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilServicesStableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeServicesInput">DescribeServicesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilTasksRunning(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilTasksRunningWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilTasksStopped(*<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilTasksStoppedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecs</a>.<a href="../index.html#DescribeTasksInput">DescribeTasksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

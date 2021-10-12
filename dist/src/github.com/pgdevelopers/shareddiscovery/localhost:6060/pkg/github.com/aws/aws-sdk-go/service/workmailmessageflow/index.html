@@ -1,0 +1,2116 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>workmailmessageflow - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package workmailmessageflow
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/workmailmessageflow&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package workmailmessageflow provides the client and types for making API
+requests to Amazon WorkMail Message Flow.
+</p>
+<p>
+The WorkMail Message Flow API provides access to email messages as they are
+being sent and received by a WorkMail organization.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01">https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01</a> for more information on this service.
+</p>
+<p>
+See workmailmessageflow package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/workmailmessageflow/">https://docs.aws.amazon.com/sdk-for-go/api/service/workmailmessageflow/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon WorkMail Message Flow with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon WorkMail Message Flow client WorkMailMessageFlow for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/workmailmessageflow/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/workmailmessageflow/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#GetRawMessageContentInput">type GetRawMessageContentInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentInput.GoString">func (s GetRawMessageContentInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentInput.SetMessageId">func (s *GetRawMessageContentInput) SetMessageId(v string) *GetRawMessageContentInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentInput.String">func (s GetRawMessageContentInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentInput.Validate">func (s *GetRawMessageContentInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetRawMessageContentOutput">type GetRawMessageContentOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentOutput.GoString">func (s GetRawMessageContentOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentOutput.SetMessageContent">func (s *GetRawMessageContentOutput) SetMessageContent(v io.ReadCloser) *GetRawMessageContentOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetRawMessageContentOutput.String">func (s GetRawMessageContentOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidContentLocation">type InvalidContentLocation</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.Code">func (s *InvalidContentLocation) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.Error">func (s *InvalidContentLocation) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.GoString">func (s InvalidContentLocation) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.Message">func (s *InvalidContentLocation) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.OrigErr">func (s *InvalidContentLocation) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.RequestID">func (s *InvalidContentLocation) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.StatusCode">func (s *InvalidContentLocation) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidContentLocation.String">func (s InvalidContentLocation) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MessageFrozen">type MessageFrozen</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.Code">func (s *MessageFrozen) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.Error">func (s *MessageFrozen) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.GoString">func (s MessageFrozen) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.Message">func (s *MessageFrozen) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.OrigErr">func (s *MessageFrozen) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.RequestID">func (s *MessageFrozen) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.StatusCode">func (s *MessageFrozen) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageFrozen.String">func (s MessageFrozen) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MessageRejected">type MessageRejected</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MessageRejected.Code">func (s *MessageRejected) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.Error">func (s *MessageRejected) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.GoString">func (s MessageRejected) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.Message">func (s *MessageRejected) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.OrigErr">func (s *MessageRejected) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.RequestID">func (s *MessageRejected) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.StatusCode">func (s *MessageRejected) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#MessageRejected.String">func (s MessageRejected) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutRawMessageContentInput">type PutRawMessageContentInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentInput.GoString">func (s PutRawMessageContentInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentInput.SetContent">func (s *PutRawMessageContentInput) SetContent(v *RawMessageContent) *PutRawMessageContentInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentInput.SetMessageId">func (s *PutRawMessageContentInput) SetMessageId(v string) *PutRawMessageContentInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentInput.String">func (s PutRawMessageContentInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentInput.Validate">func (s *PutRawMessageContentInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutRawMessageContentOutput">type PutRawMessageContentOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentOutput.GoString">func (s PutRawMessageContentOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutRawMessageContentOutput.String">func (s PutRawMessageContentOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RawMessageContent">type RawMessageContent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RawMessageContent.GoString">func (s RawMessageContent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RawMessageContent.SetS3Reference">func (s *RawMessageContent) SetS3Reference(v *S3Reference) *RawMessageContent</a></dd>
+				
+					
+					<dd>    <a href="index.html#RawMessageContent.String">func (s RawMessageContent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#RawMessageContent.Validate">func (s *RawMessageContent) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#S3Reference">type S3Reference</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#S3Reference.GoString">func (s S3Reference) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Reference.SetBucket">func (s *S3Reference) SetBucket(v string) *S3Reference</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Reference.SetKey">func (s *S3Reference) SetKey(v string) *S3Reference</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Reference.SetObjectVersion">func (s *S3Reference) SetObjectVersion(v string) *S3Reference</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Reference.String">func (s S3Reference) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Reference.Validate">func (s *S3Reference) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WorkMailMessageFlow">type WorkMailMessageFlow</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *WorkMailMessageFlow</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.GetRawMessageContent">func (c *WorkMailMessageFlow) GetRawMessageContent(input *GetRawMessageContentInput) (*GetRawMessageContentOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.GetRawMessageContentRequest">func (c *WorkMailMessageFlow) GetRawMessageContentRequest(input *GetRawMessageContentInput) (req *request.Request, output *GetRawMessageContentOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.GetRawMessageContentWithContext">func (c *WorkMailMessageFlow) GetRawMessageContentWithContext(ctx aws.Context, input *GetRawMessageContentInput, opts ...request.Option) (*GetRawMessageContentOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.PutRawMessageContent">func (c *WorkMailMessageFlow) PutRawMessageContent(input *PutRawMessageContentInput) (*PutRawMessageContentOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.PutRawMessageContentRequest">func (c *WorkMailMessageFlow) PutRawMessageContentRequest(input *PutRawMessageContentInput) (req *request.Request, output *PutRawMessageContentOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#WorkMailMessageFlow.PutRawMessageContentWithContext">func (c *WorkMailMessageFlow) PutRawMessageContentWithContext(ctx aws.Context, input *PutRawMessageContentInput, opts ...request.Option) (*PutRawMessageContentOutput, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInvalidContentLocation for service response error code</span>
+    <span class="comment">// &#34;InvalidContentLocation&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// WorkMail could not access the updated email content. Possible reasons:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * You made the request in a region other than your S3 bucket region.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * The S3 bucket owner (https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-owner-condition.html)</span>
+    <span class="comment">//    is not the same as the calling AWS account.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * You have an incomplete or missing S3 bucket policy. For more information</span>
+    <span class="comment">//    about policies, see Updating message content with AWS Lambda (https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html)</span>
+    <span class="comment">//    in the WorkMail Administrator Guide.</span>
+    <span id="ErrCodeInvalidContentLocation">ErrCodeInvalidContentLocation</span> = &#34;InvalidContentLocation&#34;
+
+    <span class="comment">// ErrCodeMessageFrozen for service response error code</span>
+    <span class="comment">// &#34;MessageFrozen&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The requested email is not eligible for update. This is usually the case</span>
+    <span class="comment">// for a redirected email.</span>
+    <span id="ErrCodeMessageFrozen">ErrCodeMessageFrozen</span> = &#34;MessageFrozen&#34;
+
+    <span class="comment">// ErrCodeMessageRejected for service response error code</span>
+    <span class="comment">// &#34;MessageRejected&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The requested email could not be updated due to an error in the MIME content.</span>
+    <span class="comment">// Check the error message for more information about what caused the error.</span>
+    <span id="ErrCodeMessageRejected">ErrCodeMessageRejected</span> = &#34;MessageRejected&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The requested email message is not found.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;WorkMailMessageFlow&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;workmailmessageflow&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;WorkMailMessageFlow&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="GetRawMessageContentInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=8683:8946#L195">GetRawMessageContentInput</a>
+				<a class="permalink" href="index.html#GetRawMessageContentInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRawMessageContentInput struct {
+
+    <span class="comment">// The identifier of the email message to retrieve.</span>
+    <span class="comment">//</span>
+<span id="GetRawMessageContentInput.MessageId"></span>    <span class="comment">// MessageId is a required field</span>
+    MessageId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;messageId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRawMessageContentInput.GoString">func (GetRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=9530:9582#L218">GoString</a>
+					<a class="permalink" href="index.html#GetRawMessageContentInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRawMessageContentInput.SetMessageId">func (*GetRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=10147:10232#L239">SetMessageId</a>
+					<a class="permalink" href="index.html#GetRawMessageContentInput.SetMessageId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) SetMessageId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a></pre>
+				<p>
+SetMessageId sets the MessageId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRawMessageContentInput.String">func (GetRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=9196:9246#L209">String</a>
+					<a class="permalink" href="index.html#GetRawMessageContentInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRawMessageContentInput.Validate">func (*GetRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=9683:9735#L223">Validate</a>
+					<a class="permalink" href="index.html#GetRawMessageContentInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetRawMessageContentOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=10266:10556#L244">GetRawMessageContentOutput</a>
+				<a class="permalink" href="index.html#GetRawMessageContentOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetRawMessageContentOutput struct {
+
+    <span class="comment">// The raw content of the email message, in MIME format.</span>
+    <span class="comment">//</span>
+<span id="GetRawMessageContentOutput.MessageContent"></span>    <span class="comment">// MessageContent is a required field</span>
+    MessageContent <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadCloser">ReadCloser</a> `locationName:&#34;messageContent&#34; type:&#34;blob&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetRawMessageContentOutput.GoString">func (GetRawMessageContentOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=11141:11194#L267">GoString</a>
+					<a class="permalink" href="index.html#GetRawMessageContentOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRawMessageContentOutput.SetMessageContent">func (*GetRawMessageContentOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=11279:11378#L272">SetMessageContent</a>
+					<a class="permalink" href="index.html#GetRawMessageContentOutput.SetMessageContent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>) SetMessageContent(v <a href="../../../../../io/index.html">io</a>.<a href="../../../../../io/index.html#ReadCloser">ReadCloser</a>) *<a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a></pre>
+				<p>
+SetMessageContent sets the MessageContent field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetRawMessageContentOutput.String">func (GetRawMessageContentOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=10806:10857#L258">String</a>
+					<a class="permalink" href="index.html#GetRawMessageContentOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidContentLocation">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=12002:12216#L287">InvalidContentLocation</a>
+				<a class="permalink" href="index.html#InvalidContentLocation">¶</a>
+				
+				
+			</h2>
+			<p>
+WorkMail could not access the updated email content. Possible reasons:
+</p>
+<pre>* You made the request in a region other than your S3 bucket region.
+
+* The S3 bucket owner (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-owner-condition.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-owner-condition.html</a>)
+is not the same as the calling AWS account.
+
+* You have an incomplete or missing S3 bucket policy. For more information
+about policies, see Updating message content with AWS Lambda (<a href="https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html">https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html</a>)
+in the WorkMail Administrator Guide.
+</pre>
+
+			<pre>type InvalidContentLocation struct {
+<span id="InvalidContentLocation.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidContentLocation.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidContentLocation.Code">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13043:13089#L319">Code</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.Error">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13417:13464#L336">Error</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.GoString">func (InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=12797:12846#L308">GoString</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.Message">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13172:13221#L324">Message</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.OrigErr">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13351:13399#L332">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.RequestID">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13757:13808#L346">RequestID</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.StatusCode">func (*InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13601:13650#L341">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidContentLocation.String">func (InvalidContentLocation) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=12466:12513#L299">String</a>
+					<a class="permalink" href="index.html#InvalidContentLocation.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidContentLocation">InvalidContentLocation</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MessageFrozen">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=13950:14155#L352">MessageFrozen</a>
+				<a class="permalink" href="index.html#MessageFrozen">¶</a>
+				
+				
+			</h2>
+			<p>
+The requested email is not eligible for update. This is usually the case
+for a redirected email.
+</p>
+
+			<pre>type MessageFrozen struct {
+<span id="MessageFrozen.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="MessageFrozen.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MessageFrozen.Code">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=14946:14983#L384">Code</a>
+					<a class="permalink" href="index.html#MessageFrozen.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.Error">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15284:15322#L401">Error</a>
+					<a class="permalink" href="index.html#MessageFrozen.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.GoString">func (MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=14727:14767#L373">GoString</a>
+					<a class="permalink" href="index.html#MessageFrozen.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MessageFrozen">MessageFrozen</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.Message">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15057:15097#L389">Message</a>
+					<a class="permalink" href="index.html#MessageFrozen.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.OrigErr">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15227:15266#L397">OrigErr</a>
+					<a class="permalink" href="index.html#MessageFrozen.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.RequestID">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15606:15648#L411">RequestID</a>
+					<a class="permalink" href="index.html#MessageFrozen.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.StatusCode">func (*MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15459:15499#L406">StatusCode</a>
+					<a class="permalink" href="index.html#MessageFrozen.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageFrozen">MessageFrozen</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageFrozen.String">func (MessageFrozen) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=14405:14443#L364">String</a>
+					<a class="permalink" href="index.html#MessageFrozen.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MessageFrozen">MessageFrozen</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MessageRejected">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=15845:16052#L417">MessageRejected</a>
+				<a class="permalink" href="index.html#MessageRejected">¶</a>
+				
+				
+			</h2>
+			<p>
+The requested email could not be updated due to an error in the MIME content.
+Check the error message for more information about what caused the error.
+</p>
+
+			<pre>type MessageRejected struct {
+<span id="MessageRejected.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="MessageRejected.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MessageRejected.Code">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=16851:16890#L449">Code</a>
+					<a class="permalink" href="index.html#MessageRejected.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.Error">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=17197:17237#L466">Error</a>
+					<a class="permalink" href="index.html#MessageRejected.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.GoString">func (MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=16626:16668#L438">GoString</a>
+					<a class="permalink" href="index.html#MessageRejected.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MessageRejected">MessageRejected</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.Message">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=16966:17008#L454">Message</a>
+					<a class="permalink" href="index.html#MessageRejected.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.OrigErr">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=17138:17179#L462">OrigErr</a>
+					<a class="permalink" href="index.html#MessageRejected.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.RequestID">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=17523:17567#L476">RequestID</a>
+					<a class="permalink" href="index.html#MessageRejected.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.StatusCode">func (*MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=17374:17416#L471">StatusCode</a>
+					<a class="permalink" href="index.html#MessageRejected.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MessageRejected">MessageRejected</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MessageRejected.String">func (MessageRejected) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=16302:16342#L429">String</a>
+					<a class="permalink" href="index.html#MessageRejected.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MessageRejected">MessageRejected</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutRawMessageContentInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=17606:18062#L480">PutRawMessageContentInput</a>
+				<a class="permalink" href="index.html#PutRawMessageContentInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutRawMessageContentInput struct {
+
+    <span class="comment">// Describes the raw message content of the updated email message.</span>
+    <span class="comment">//</span>
+<span id="PutRawMessageContentInput.Content"></span>    <span class="comment">// Content is a required field</span>
+    Content *<a href="index.html#RawMessageContent">RawMessageContent</a> `locationName:&#34;content&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The identifier of the email message being updated.</span>
+    <span class="comment">//</span>
+<span id="PutRawMessageContentInput.MessageId"></span>    <span class="comment">// MessageId is a required field</span>
+    MessageId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;messageId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutRawMessageContentInput.GoString">func (PutRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=18646:18698#L508">GoString</a>
+					<a class="permalink" href="index.html#PutRawMessageContentInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRawMessageContentInput.SetContent">func (*PutRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=19492:19587#L537">SetContent</a>
+					<a class="permalink" href="index.html#PutRawMessageContentInput.SetContent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) SetContent(v *<a href="index.html#RawMessageContent">RawMessageContent</a>) *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a></pre>
+				<p>
+SetContent sets the Content field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRawMessageContentInput.SetMessageId">func (*PutRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=19668:19753#L543">SetMessageId</a>
+					<a class="permalink" href="index.html#PutRawMessageContentInput.SetMessageId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) SetMessageId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a></pre>
+				<p>
+SetMessageId sets the MessageId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRawMessageContentInput.String">func (PutRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=18312:18362#L499">String</a>
+					<a class="permalink" href="index.html#PutRawMessageContentInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRawMessageContentInput.Validate">func (*PutRawMessageContentInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=18799:18851#L513">Validate</a>
+					<a class="permalink" href="index.html#PutRawMessageContentInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutRawMessageContentOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=19787:19860#L548">PutRawMessageContentOutput</a>
+				<a class="permalink" href="index.html#PutRawMessageContentOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutRawMessageContentOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutRawMessageContentOutput.GoString">func (PutRawMessageContentOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=20445:20498#L566">GoString</a>
+					<a class="permalink" href="index.html#PutRawMessageContentOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRawMessageContentOutput">PutRawMessageContentOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutRawMessageContentOutput.String">func (PutRawMessageContentOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=20110:20161#L557">String</a>
+					<a class="permalink" href="index.html#PutRawMessageContentOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutRawMessageContentOutput">PutRawMessageContentOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RawMessageContent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=21668:21903#L593">RawMessageContent</a>
+				<a class="permalink" href="index.html#RawMessageContent">¶</a>
+				
+				
+			</h2>
+			<p>
+Provides the MIME content of the updated email message as an S3 object. All
+MIME content must meet the following criteria:
+</p>
+<pre>* Each part of a multipart MIME message must be formatted properly.
+
+* Attachments must be of a content type that Amazon SES supports. For
+more information, see Unsupported Attachment Types (<a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mime-types-appendix.html">https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mime-types-appendix.html</a>).
+
+* If any of the MIME parts in a message contain content that is outside
+of the 7-bit ASCII character range, we recommend encoding that content.
+
+* Per RFC 5321 (<a href="https://tools.ietf.org/html/rfc5321#section-4.5.3.1.6">https://tools.ietf.org/html/rfc5321#section-4.5.3.1.6</a>),
+the maximum length of each line of text, including the &lt;CRLF&gt;, must not
+exceed 1,000 characters.
+
+* The message must contain all the required header fields. Check the returned
+error message for more information.
+
+* The value of immutable headers must remain unchanged. Check the returned
+error message for more information.
+
+* Certain unique headers can only appear once. Check the returned error
+message for more information.
+</pre>
+
+			<pre>type RawMessageContent struct {
+
+    <span class="comment">// The S3 reference of an email message.</span>
+    <span class="comment">//</span>
+<span id="RawMessageContent.S3Reference"></span>    <span class="comment">// S3Reference is a required field</span>
+    S3Reference *<a href="index.html#S3Reference">S3Reference</a> `locationName:&#34;s3Reference&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RawMessageContent.GoString">func (RawMessageContent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=22479:22523#L616">GoString</a>
+					<a class="permalink" href="index.html#RawMessageContent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RawMessageContent">RawMessageContent</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RawMessageContent.SetS3Reference">func (*RawMessageContent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=23123:23200#L639">SetS3Reference</a>
+					<a class="permalink" href="index.html#RawMessageContent.SetS3Reference">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RawMessageContent">RawMessageContent</a>) SetS3Reference(v *<a href="index.html#S3Reference">S3Reference</a>) *<a href="index.html#RawMessageContent">RawMessageContent</a></pre>
+				<p>
+SetS3Reference sets the S3Reference field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RawMessageContent.String">func (RawMessageContent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=22153:22195#L607">String</a>
+					<a class="permalink" href="index.html#RawMessageContent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#RawMessageContent">RawMessageContent</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RawMessageContent.Validate">func (*RawMessageContent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=22624:22668#L621">Validate</a>
+					<a class="permalink" href="index.html#RawMessageContent.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#RawMessageContent">RawMessageContent</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=23280:23497#L645">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+The requested email message is not found.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24336:24385#L677">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24722:24772#L694">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24081:24133#L666">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24471:24523#L682">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24653:24704#L690">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=25068:25122#L704">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=24909:24961#L699">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=23747:23797#L657">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="S3Reference">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=25600:26087#L714">S3Reference</a>
+				<a class="permalink" href="index.html#S3Reference">¶</a>
+				
+				
+			</h2>
+			<p>
+Amazon S3 object representing the updated message content, in MIME format.
+</p>
+<p>
+The region for the S3 bucket containing the S3 object must match the region
+used for WorkMail operations. Also, for WorkMail to process an S3 object,
+it must have permission to access that object. For more information, see
+Updating message content with AWS Lambda (<a href="https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html">https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html</a>).
+</p>
+
+			<pre>type S3Reference struct {
+
+    <span class="comment">// The S3 bucket name.</span>
+    <span class="comment">//</span>
+<span id="S3Reference.Bucket"></span>    <span class="comment">// Bucket is a required field</span>
+    Bucket *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;bucket&#34; min:&#34;3&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The S3 key object name.</span>
+    <span class="comment">//</span>
+<span id="S3Reference.Key"></span>    <span class="comment">// Key is a required field</span>
+    Key *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;key&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// If you enable versioning for the bucket, you can specify the object version.</span>
+<span id="S3Reference.ObjectVersion"></span>    ObjectVersion *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;objectVersion&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="S3Reference.GoString">func (S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=26657:26695#L745">GoString</a>
+					<a class="permalink" href="index.html#S3Reference.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#S3Reference">S3Reference</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Reference.SetBucket">func (*S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=27515:27569#L775">SetBucket</a>
+					<a class="permalink" href="index.html#S3Reference.SetBucket">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Reference">S3Reference</a>) SetBucket(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#S3Reference">S3Reference</a></pre>
+				<p>
+SetBucket sets the Bucket field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Reference.SetKey">func (*S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=27638:27689#L781">SetKey</a>
+					<a class="permalink" href="index.html#S3Reference.SetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Reference">S3Reference</a>) SetKey(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#S3Reference">S3Reference</a></pre>
+				<p>
+SetKey sets the Key field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Reference.SetObjectVersion">func (*S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=27775:27836#L787">SetObjectVersion</a>
+					<a class="permalink" href="index.html#S3Reference.SetObjectVersion">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Reference">S3Reference</a>) SetObjectVersion(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#S3Reference">S3Reference</a></pre>
+				<p>
+SetObjectVersion sets the ObjectVersion field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Reference.String">func (S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=26337:26373#L736">String</a>
+					<a class="permalink" href="index.html#S3Reference.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#S3Reference">S3Reference</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Reference.Validate">func (*S3Reference) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=26796:26834#L750">Validate</a>
+					<a class="permalink" href="index.html#S3Reference.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Reference">S3Reference</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WorkMailMessageFlow">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/service.go?s=742:793#L11">WorkMailMessageFlow</a>
+				<a class="permalink" href="index.html#WorkMailMessageFlow">¶</a>
+				
+				
+			</h2>
+			<p>
+WorkMailMessageFlow provides the API operation methods for making requests to
+Amazon WorkMail Message Flow. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+WorkMailMessageFlow methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type WorkMailMessageFlow struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/service.go?s=1812:1887#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a></pre>
+				<p>
+New creates a new instance of the WorkMailMessageFlow client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a WorkMailMessageFlow client from just a session.
+svc := workmailmessageflow.New(mySession)
+
+// Create a WorkMailMessageFlow client with additional configuration
+svc := workmailmessageflow.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="WorkMailMessageFlow.GetRawMessageContent">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=2595:2716#L64">GetRawMessageContent</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.GetRawMessageContent">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) GetRawMessageContent(input *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) (*<a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRawMessageContent API operation for Amazon WorkMail Message Flow.
+</p>
+<p>
+Retrieves the raw content of an in-transit email message, in MIME format.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon WorkMail Message Flow&#39;s
+API operation GetRawMessageContent for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+The requested email message is not found.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/GetRawMessageContent">https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/GetRawMessageContent</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WorkMailMessageFlow.GetRawMessageContentRequest">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=1466:1616#L32">GetRawMessageContentRequest</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.GetRawMessageContentRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) GetRawMessageContentRequest(input *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>)</pre>
+				<p>
+GetRawMessageContentRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetRawMessageContent operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetRawMessageContent for more information on using the GetRawMessageContent
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetRawMessageContentRequest method.
+req, resp := client.GetRawMessageContentRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/GetRawMessageContent">https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/GetRawMessageContent</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WorkMailMessageFlow.GetRawMessageContentWithContext">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=3299:3472#L78">GetRawMessageContentWithContext</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.GetRawMessageContentWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) GetRawMessageContentWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetRawMessageContentInput">GetRawMessageContentInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetRawMessageContentOutput">GetRawMessageContentOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetRawMessageContentWithContext is the same as GetRawMessageContent with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetRawMessageContent for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WorkMailMessageFlow.PutRawMessageContent">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=7678:7799#L174">PutRawMessageContent</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.PutRawMessageContent">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) PutRawMessageContent(input *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) (*<a href="index.html#PutRawMessageContentOutput">PutRawMessageContentOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutRawMessageContent API operation for Amazon WorkMail Message Flow.
+</p>
+<p>
+Updates the raw content of an in-transit email message, in MIME format.
+</p>
+<p>
+This example describes how to update in-transit email message. For more information
+and examples for using this API, see Updating message content with AWS Lambda
+(<a href="https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html">https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html</a>).
+</p>
+<p>
+Updates to an in-transit message only appear when you call PutRawMessageContent
+from an AWS Lambda function configured with a synchronous Run Lambda (<a href="https://docs.aws.amazon.com/workmail/latest/adminguide/lambda.html#synchronous-rules">https://docs.aws.amazon.com/workmail/latest/adminguide/lambda.html#synchronous-rules</a>)
+rule. If you call PutRawMessageContent on a delivered or sent message, the
+message remains unchanged, even though GetRawMessageContent (<a href="https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_GetRawMessageContent.html">https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_GetRawMessageContent.html</a>)
+returns an updated message.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon WorkMail Message Flow&#39;s
+API operation PutRawMessageContent for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+The requested email message is not found.
+
+* InvalidContentLocation
+WorkMail could not access the updated email content. Possible reasons:
+
+   * You made the request in a region other than your S3 bucket region.
+
+   * The S3 bucket owner (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-owner-condition.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-owner-condition.html</a>)
+   is not the same as the calling AWS account.
+
+   * You have an incomplete or missing S3 bucket policy. For more information
+   about policies, see Updating message content with AWS Lambda (<a href="https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html">https://docs.aws.amazon.com/workmail/latest/adminguide/update-with-lambda.html</a>)
+   in the WorkMail Administrator Guide.
+
+* MessageRejected
+The requested email could not be updated due to an error in the MIME content.
+Check the error message for more information about what caused the error.
+
+* MessageFrozen
+The requested email is not eligible for update. This is usually the case
+for a redirected email.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/PutRawMessageContent">https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/PutRawMessageContent</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WorkMailMessageFlow.PutRawMessageContentRequest">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=4725:4875#L111">PutRawMessageContentRequest</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.PutRawMessageContentRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) PutRawMessageContentRequest(input *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutRawMessageContentOutput">PutRawMessageContentOutput</a>)</pre>
+				<p>
+PutRawMessageContentRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutRawMessageContent operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutRawMessageContent for more information on using the PutRawMessageContent
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutRawMessageContentRequest method.
+req, resp := client.PutRawMessageContentRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/PutRawMessageContent">https://docs.aws.amazon.com/goto/WebAPI/workmailmessageflow-2019-05-01/PutRawMessageContent</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WorkMailMessageFlow.PutRawMessageContentWithContext">func (*WorkMailMessageFlow) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/workmailmessageflow/api.go?s=8382:8555#L188">PutRawMessageContentWithContext</a>
+					<a class="permalink" href="index.html#WorkMailMessageFlow.PutRawMessageContentWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#WorkMailMessageFlow">WorkMailMessageFlow</a>) PutRawMessageContentWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutRawMessageContentInput">PutRawMessageContentInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutRawMessageContentOutput">PutRawMessageContentOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutRawMessageContentWithContext is the same as PutRawMessageContent with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutRawMessageContent for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="workmailmessageflowiface/index.html">workmailmessageflowiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package workmailmessageflowiface provides an interface to enable mocking the Amazon WorkMail Message Flow service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

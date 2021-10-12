@@ -1,0 +1,534 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>awserr - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package awserr
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/awserr&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package awserr represents API error interface accessors for the SDK.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#SprintError">func SprintError(code, message, extra string, origErr error) string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BatchError">type BatchError</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BatchedErrors">type BatchedErrors</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewBatchError">func NewBatchError(code, message string, errs []error) BatchedErrors</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Error">type Error</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(code, message string, origErr error) Error</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RequestFailure">type RequestFailure</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewRequestFailure">func NewRequestFailure(err Error, statusCode int, reqID string) RequestFailure</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UnmarshalError">type UnmarshalError</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewUnmarshalError">func NewUnmarshalError(err error, msg string, bytes []byte) UnmarshalError</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go">error.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/types.go">types.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="SprintError">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/types.go?s=265:332#L2">SprintError</a>
+				<a class="permalink" href="index.html#SprintError">¶</a>
+				
+				
+			</h2>
+			<pre>func SprintError(code, message, extra <a href="../../../../../builtin/index.html#string">string</a>, origErr <a href="../../../../../builtin/index.html#error">error</a>) <a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+SprintError returns a string of the formatted error code.
+</p>
+<p>
+Both extra and origErr are optional.  If they are included their lines
+will be added, but if they are not included their lines will be ignored.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BatchError">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=1690:2010#L41">BatchError</a>
+				<a class="permalink" href="index.html#BatchError">¶</a>
+				
+				
+			</h2>
+			<p>
+BatchError is a batch of errors which also wraps lower level errors with
+code, message, and original errors. Calling Error() will include all errors
+that occurred in the batch.
+</p>
+<p>
+Deprecated: Replaced with BatchedErrors. Only defined for backwards
+compatibility.
+</p>
+
+			<pre>type BatchError interface {
+    <span class="comment">// Satisfy the generic error interface.</span>
+    <a href="../../../../../builtin/index.html#error">error</a>
+
+    <span class="comment">// Returns the short phrase depicting the classification of the error.</span>
+    Code() <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// Returns the error details message.</span>
+    Message() <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// Returns the original error if one was set.  Nil is returned if not set.</span>
+    OrigErrs() []<a href="../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BatchedErrors">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=2227:2401#L60">BatchedErrors</a>
+				<a class="permalink" href="index.html#BatchedErrors">¶</a>
+				
+				
+			</h2>
+			<p>
+BatchedErrors is a batch of errors which also wraps lower level errors with
+code, message, and original errors. Calling Error() will include all errors
+that occurred in the batch.
+</p>
+<p>
+Replaces BatchError
+</p>
+
+			<pre>type BatchedErrors interface {
+    <span class="comment">// Satisfy the base Error interface.</span>
+    <a href="index.html#Error">Error</a>
+
+    <span class="comment">// Returns the original error if one was set.  Nil is returned if not set.</span>
+    OrigErrs() []<a href="../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBatchError">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=2876:2944#L82">NewBatchError</a>
+					<a class="permalink" href="index.html#NewBatchError">¶</a>
+					
+					
+				</h3>
+				<pre>func NewBatchError(code, message <a href="../../../../../builtin/index.html#string">string</a>, errs []<a href="../../../../../builtin/index.html#error">error</a>) <a href="index.html#BatchedErrors">BatchedErrors</a></pre>
+				<p>
+NewBatchError returns an BatchedErrors with a collection of errors as an
+array of errors.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Error">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=1098:1410#L21">Error</a>
+				<a class="permalink" href="index.html#Error">¶</a>
+				
+				
+			</h2>
+			<p>
+An Error wraps lower level errors with code, message and an original error.
+The underlying concrete error type may also satisfy other interfaces which
+can be to used to obtain more specific information about the error.
+</p>
+<p>
+Calling Error() or String() will always include the full information about
+an error based on its underlying type.
+</p>
+<p>
+Example:
+</p>
+<pre>output, err := s3manage.Upload(svc, input, opts)
+if err != nil {
+    if awsErr, ok := err.(awserr.Error); ok {
+        // Get error details
+        log.Println(&#34;Error:&#34;, awsErr.Code(), awsErr.Message())
+
+        // Prints out full error message, including original error if there was one.
+        log.Println(&#34;Error:&#34;, awsErr.Error())
+
+        // Get original error
+        if origErr := awsErr.OrigErr(); origErr != nil {
+            // operate on original error.
+        }
+    } else {
+        fmt.Println(err.Error())
+    }
+}
+</pre>
+
+			<pre>type Error interface {
+    <span class="comment">// Satisfy the generic error interface.</span>
+    <a href="../../../../../builtin/index.html#error">error</a>
+
+    <span class="comment">// Returns the short phrase depicting the classification of the error.</span>
+    Code() <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// Returns the error details message.</span>
+    Message() <a href="../../../../../builtin/index.html#string">string</a>
+
+    <span class="comment">// Returns the original error if one was set.  Nil is returned if not set.</span>
+    OrigErr() <a href="../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=2608:2659#L72">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(code, message <a href="../../../../../builtin/index.html#string">string</a>, origErr <a href="../../../../../builtin/index.html#error">error</a>) <a href="index.html#Error">Error</a></pre>
+				<p>
+New returns an Error object described by the code, message, and origErr.
+</p>
+<p>
+If origErr satisfies the Error interface it will not be wrapped within a new
+Error object and will instead be returned.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="RequestFailure">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=4242:4541#L119">RequestFailure</a>
+				<a class="permalink" href="index.html#RequestFailure">¶</a>
+				
+				
+			</h2>
+			<p>
+A RequestFailure is an interface to extract request failure information from
+an Error such as the request ID of the failed request returned by a service.
+RequestFailures may not always have a requestID value if the request failed
+prior to reaching the service such as a connection error.
+</p>
+<p>
+Example:
+</p>
+<pre>output, err := s3manage.Upload(svc, input, opts)
+if err != nil {
+    if reqerr, ok := err.(RequestFailure); ok {
+        log.Println(&#34;Request failed&#34;, reqerr.Code(), reqerr.Message(), reqerr.RequestID())
+    } else {
+        log.Println(&#34;Error:&#34;, err.Error())
+    }
+}
+</pre>
+<p>
+Combined with awserr.Error:
+</p>
+<pre>output, err := s3manage.Upload(svc, input, opts)
+if err != nil {
+    if awsErr, ok := err.(awserr.Error); ok {
+        // Generic AWS Error with Code, Message, and original error (if any)
+        fmt.Println(awsErr.Code(), awsErr.Message(), awsErr.OrigErr())
+
+        if reqErr, ok := err.(awserr.RequestFailure); ok {
+            // A service error occurred
+            fmt.Println(reqErr.StatusCode(), reqErr.RequestID())
+        }
+    } else {
+        fmt.Println(err.Error())
+    }
+}
+</pre>
+
+			<pre>type RequestFailure interface {
+    <a href="index.html#Error">Error</a>
+
+    <span class="comment">// The status code of the HTTP response.</span>
+    StatusCode() <a href="../../../../../builtin/index.html#int">int</a>
+
+    <span class="comment">// The request ID returned by the service for a request failure. This will</span>
+    <span class="comment">// be empty if no request ID is available such as the request failed due</span>
+    <span class="comment">// to a connection error.</span>
+    RequestID() <a href="../../../../../builtin/index.html#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRequestFailure">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=4853:4931#L137">NewRequestFailure</a>
+					<a class="permalink" href="index.html#NewRequestFailure">¶</a>
+					
+					
+				</h3>
+				<pre>func NewRequestFailure(err <a href="index.html#Error">Error</a>, statusCode <a href="../../../../../builtin/index.html#int">int</a>, reqID <a href="../../../../../builtin/index.html#string">string</a>) <a href="index.html#RequestFailure">RequestFailure</a></pre>
+				<p>
+NewRequestFailure returns a wrapped error with additional information for
+request status code, and service requestID.
+</p>
+<p>
+Should be used to wrap all request which involve service requests. Even if
+the request failed without a service response, but had an HTTP status code
+that may be meaningful.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="UnmarshalError">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=5065:5124#L142">UnmarshalError</a>
+				<a class="permalink" href="index.html#UnmarshalError">¶</a>
+				
+				
+			</h2>
+			<p>
+UnmarshalError provides the interface for the SDK failing to unmarshal data.
+</p>
+
+			<pre>type UnmarshalError interface {
+    Bytes() []<a href="../../../../../builtin/index.html#byte">byte</a>
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewUnmarshalError">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/awserr/error.go?s=5256:5330#L149">NewUnmarshalError</a>
+					<a class="permalink" href="index.html#NewUnmarshalError">¶</a>
+					
+					
+				</h3>
+				<pre>func NewUnmarshalError(err <a href="../../../../../builtin/index.html#error">error</a>, msg <a href="../../../../../builtin/index.html#string">string</a>, bytes []<a href="../../../../../builtin/index.html#byte">byte</a>) <a href="index.html#UnmarshalError">UnmarshalError</a></pre>
+				<p>
+NewUnmarshalError returns an initialized UnmarshalError error wrapper adding
+the bytes that fail to unmarshal to the error.
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

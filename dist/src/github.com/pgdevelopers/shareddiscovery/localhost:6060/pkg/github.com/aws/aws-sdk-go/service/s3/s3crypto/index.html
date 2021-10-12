@@ -1,0 +1,2989 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>s3crypto - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package s3crypto
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/s3/s3crypto&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+				<dd><a href="index.html#pkg-examples" class="examplesLink">Examples</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package s3crypto provides encryption to S3 using KMS and AES GCM.
+</p>
+<p>
+Keyproviders are interfaces that handle masterkeys. Masterkeys are used to encrypt and decrypt the randomly
+generated cipher keys. The SDK currently uses KMS to do this. A user does not need to provide a master key
+since all that information is hidden in KMS.
+</p>
+<p>
+Modes are interfaces that handle content encryption and decryption. It is an abstraction layer that instantiates
+the ciphers. If content is being encrypted we generate the key and iv of the cipher. For decryption, we use the
+metadata stored either on the object or an instruction file object to decrypt the contents.
+</p>
+<p>
+Ciphers are interfaces that handle encryption and decryption of data. This may be key wrap ciphers or content
+ciphers.
+</p>
+<p>
+Creating an S3 cryptography client
+</p>
+<pre>cmkID := &#34;&lt;some key ID&gt;&#34;
+sess := session.Must(session.NewSession())
+kmsClient := kms.New(sess)
+// Create the KeyProvider
+var matdesc s3crypto.MaterialDescription
+handler := s3crypto.NewKMSContextKeyGenerator(kmsClient, cmkID, matdesc)
+
+// Create an encryption and decryption client
+// We need to pass the session here so S3 can use it. In addition, any decryption that
+// occurs will use the KMS client.
+svc, err := s3crypto.NewEncryptionClientV2(sess, s3crypto.AESGCMContentCipherBuilderV2(handler))
+if err != nil {
+	panic(err) // handle error
+}
+
+// Create a CryptoRegistry and register the algorithms you wish to use for decryption
+cr := s3crypto.NewCryptoRegistry()
+
+if err := s3crypto.RegisterAESGCMContentCipher(cr); err != nil {
+	panic(err) // handle error
+}
+
+if err := s3crypto.RegisterKMSContextWrapWithAnyCMK(cr, kmsClient); err != nil {
+	panic(err) // handle error
+}
+
+// Create a decryption client to decrypt artifacts
+svc, err := s3crypto.NewDecryptionClientV2(sess, cr)
+if err != nil {
+	panic(err) // handle error
+}
+</pre>
+<p>
+Configuration of the S3 cryptography client
+</p>
+<pre>sess := session.Must(session.NewSession())
+handler := s3crypto.NewKMSContextKeyGenerator(kms.New(sess), cmkID, s3crypto.MaterialDescription{})
+svc, err := s3crypto.NewEncryptionClientV2(sess, s3crypto.AESGCMContentCipherBuilderV2(handler), func (o *s3crypto.EncryptionClientOptions) {
+	// Save instruction files to separate objects
+	o.SaveStrategy = NewS3SaveStrategy(sess, &#34;&#34;)
+
+	// Change instruction file suffix to .example
+	o.InstructionFileSuffix = &#34;.example&#34;
+
+	// Set temp folder path
+	o.TempFolderPath = &#34;/path/to/tmp/folder/&#34;
+
+	// Any content less than the minimum file size will use memory
+	// instead of writing the contents to a temp file.
+	o.MinFileSize = int64(1024 * 1024 * 1024)
+})
+if err != nil {
+	panic(err) // handle error
+}
+</pre>
+<h3 id="hdr-Object_Metadata_SaveStrategy">Object Metadata SaveStrategy</h3>
+<p>
+The default SaveStrategy is to save metadata to an object&#39;s headers. An alternative SaveStrategy can be provided to the EncryptionClientV2.
+For example, the S3SaveStrategy can be used to save the encryption metadata to a instruction file that is stored in S3
+using the objects KeyName+InstructionFileSuffix. The InstructionFileSuffix defaults to .instruction. If using this strategy you will need to
+configure the DecryptionClientV2 to use the matching S3LoadStrategy LoadStrategy in order to decrypt object using this save strategy.
+</p>
+<h3 id="hdr-Custom_Key_Wrappers_and_Custom_Content_Encryption_Algorithms">Custom Key Wrappers and Custom Content Encryption Algorithms</h3>
+<p>
+Registration of custom key wrapping or content encryption algorithms not provided by AWS is allowed by the SDK, but
+security and compatibility with custom types can not be guaranteed. For example if you want to support `CustomWrap`
+key wrapping algorithm and `CustomCEK` content encryption algorithm. You can use the CryptoRegistry to register these types.
+</p>
+<pre>cr := s3crypto.NewCryptoRegistry()
+
+// Register a custom key wrap algorithm to the CryptoRegistry
+if err := cr.AddWrap(&#34;CustomWrap&#34;, NewCustomWrapEntry); err != nil {
+	panic(err) // handle error
+}
+
+// Register a custom content encryption algorithm to the CryptoRegistry
+if err := cr.AddCEK(&#34;CustomCEK&#34;, NewCustomCEKEntry); err != nil {
+	panic(err) // handle error
+}
+
+svc, err := s3crypto.NewDecryptionClientV2(sess, cr)
+if err != nil {
+	panic(err) // handle error
+}
+</pre>
+<p>
+We have now registered these new algorithms to the decryption client. When the client calls `GetObject` and sees
+the wrap as `CustomWrap` then it&#39;ll use that wrap algorithm. This is also true for `CustomCEK`.
+</p>
+<p>
+For encryption adding a custom content cipher builder and key handler will allow for encryption of custom
+defined ciphers.
+</p>
+<pre>// Our wrap algorithm, CustomWrap
+handler := NewCustomWrap(key, iv)
+// Our content cipher builder, NewCustomCEKContentBuilder
+svc := s3crypto.NewEncryptionClientV2(sess, NewCustomCEKContentBuilder(handler))
+</pre>
+<h3 id="hdr-Maintenance_Mode_Notification_for_V1_Clients">Maintenance Mode Notification for V1 Clients</h3>
+<p>
+The EncryptionClient and DecryptionClient are in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+Users of these clients should migrate to EncryptionClientV2 and DecryptionClientV2.
+</p>
+<p>
+EncryptionClientV2 removes encryption support of the following features
+</p>
+<pre>* AES/CBC (content cipher)
+* kms (key wrap algorithm)
+</pre>
+<p>
+Attempting to construct an EncryptionClientV2 with deprecated features will result in an error returned back to the
+calling application during construction of the client.
+</p>
+<p>
+Users of `AES/CBC` will need to migrate usage to `AES/GCM`.
+Users of `kms` key provider will need to migrate `kms+context`.
+</p>
+<p>
+DecryptionClientV2 client adds support for the `kms+context` key provider and maintains backwards comparability with
+objects encrypted with the V1 EncryptionClient.
+</p>
+<h3 id="hdr-Migrating_from_V1_to_V2_Clients">Migrating from V1 to V2 Clients</h3>
+<p>
+Examples of how to migrate usage of the V1 clients to the V2 equivalents have been documented as usage examples of
+the NewEncryptionClientV2 and NewDecryptionClientV2 functions.
+</p>
+<p>
+Please see the AWS SDK for Go Developer Guide for additional migration steps <a href="https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/s3-encryption-migration.html">https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/s3-encryption-migration.html</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#RegisterAESCBCContentCipher">func RegisterAESCBCContentCipher(registry *CryptoRegistry, padder Padder) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterAESGCMContentCipher">func RegisterAESGCMContentCipher(registry *CryptoRegistry) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterKMSContextWrapWithAnyCMK">func RegisterKMSContextWrapWithAnyCMK(registry *CryptoRegistry, client kmsiface.KMSAPI) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterKMSContextWrapWithCMK">func RegisterKMSContextWrapWithCMK(registry *CryptoRegistry, client kmsiface.KMSAPI, cmkID string) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterKMSWrapWithAnyCMK">func RegisterKMSWrapWithAnyCMK(registry *CryptoRegistry, client kmsiface.KMSAPI) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterKMSWrapWithCMK">func RegisterKMSWrapWithCMK(registry *CryptoRegistry, client kmsiface.KMSAPI, cmkID string) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CEKEntry">type CEKEntry</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Cipher">type Cipher</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CipherData">type CipherData</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CipherData.Clone">func (cd CipherData) Clone() (v CipherData)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CipherDataDecrypter">type CipherDataDecrypter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CipherDataDecrypterWithContext">type CipherDataDecrypterWithContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CipherDataGenerator">type CipherDataGenerator</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewKMSKeyGenerator">func NewKMSKeyGenerator(kmsClient kmsiface.KMSAPI, cmkID string) CipherDataGenerator</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewKMSKeyGeneratorWithMatDesc">func NewKMSKeyGeneratorWithMatDesc(kmsClient kmsiface.KMSAPI, cmkID string, matdesc MaterialDescription) CipherDataGenerator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CipherDataGeneratorWithCEKAlg">type CipherDataGeneratorWithCEKAlg</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewKMSContextKeyGenerator">func NewKMSContextKeyGenerator(client kmsiface.KMSAPI, cmkID string, matdesc MaterialDescription) CipherDataGeneratorWithCEKAlg</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CipherDataGeneratorWithContext">type CipherDataGeneratorWithContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContentCipher">type ContentCipher</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContentCipherBuilder">type ContentCipherBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#AESCBCContentCipherBuilder">func AESCBCContentCipherBuilder(generator CipherDataGenerator, padder Padder) ContentCipherBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#AESGCMContentCipherBuilder">func AESGCMContentCipherBuilder(generator CipherDataGenerator) ContentCipherBuilder</a></dd>
+				
+					
+					<dd>    <a href="index.html#AESGCMContentCipherBuilderV2">func AESGCMContentCipherBuilderV2(generator CipherDataGeneratorWithCEKAlg) ContentCipherBuilder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContentCipherBuilderWithContext">type ContentCipherBuilderWithContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CryptoReadCloser">type CryptoReadCloser</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CryptoReadCloser.Close">func (rc *CryptoReadCloser) Close() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoReadCloser.Read">func (rc *CryptoReadCloser) Read(b []byte) (int, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CryptoRegistry">type CryptoRegistry</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewCryptoRegistry">func NewCryptoRegistry() *CryptoRegistry</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.AddCEK">func (c *CryptoRegistry) AddCEK(name string, entry CEKEntry) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.AddPadder">func (c *CryptoRegistry) AddPadder(name string, padder Padder) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.AddWrap">func (c *CryptoRegistry) AddWrap(name string, entry WrapEntry) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.GetCEK">func (c CryptoRegistry) GetCEK(name string) (CEKEntry, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.GetPadder">func (c *CryptoRegistry) GetPadder(name string) (Padder, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.GetWrap">func (c CryptoRegistry) GetWrap(name string) (WrapEntry, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.RemoveCEK">func (c *CryptoRegistry) RemoveCEK(name string) (CEKEntry, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.RemovePadder">func (c *CryptoRegistry) RemovePadder(name string) (Padder, bool)</a></dd>
+				
+					
+					<dd>    <a href="index.html#CryptoRegistry.RemoveWrap">func (c *CryptoRegistry) RemoveWrap(name string) (WrapEntry, bool)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Decrypter">type Decrypter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DecryptionClient">type DecryptionClient</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewDecryptionClient">func NewDecryptionClient(prov client.ConfigProvider, options ...func(*DecryptionClient)) *DecryptionClient</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DecryptionClient.GetObject">func (c *DecryptionClient) GetObject(input *s3.GetObjectInput) (*s3.GetObjectOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#DecryptionClient.GetObjectRequest">func (c *DecryptionClient) GetObjectRequest(input *s3.GetObjectInput) (*request.Request, *s3.GetObjectOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#DecryptionClient.GetObjectWithContext">func (c *DecryptionClient) GetObjectWithContext(ctx aws.Context, input *s3.GetObjectInput, opts ...request.Option) (*s3.GetObjectOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DecryptionClientOptions">type DecryptionClientOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DecryptionClientV2">type DecryptionClientV2</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewDecryptionClientV2">func NewDecryptionClientV2(prov client.ConfigProvider, cryptoRegistry *CryptoRegistry, options ...func(clientOptions *DecryptionClientOptions)) (*DecryptionClientV2, error)</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DecryptionClientV2.GetObject">func (c *DecryptionClientV2) GetObject(input *s3.GetObjectInput) (*s3.GetObjectOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#DecryptionClientV2.GetObjectRequest">func (c *DecryptionClientV2) GetObjectRequest(input *s3.GetObjectInput) (*request.Request, *s3.GetObjectOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#DecryptionClientV2.GetObjectWithContext">func (c *DecryptionClientV2) GetObjectWithContext(ctx aws.Context, input *s3.GetObjectInput, opts ...request.Option) (*s3.GetObjectOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Encrypter">type Encrypter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EncryptionClient">type EncryptionClient</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewEncryptionClient">func NewEncryptionClient(prov client.ConfigProvider, builder ContentCipherBuilder, options ...func(*EncryptionClient)) *EncryptionClient</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EncryptionClient.PutObject">func (c *EncryptionClient) PutObject(input *s3.PutObjectInput) (*s3.PutObjectOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EncryptionClient.PutObjectRequest">func (c *EncryptionClient) PutObjectRequest(input *s3.PutObjectInput) (*request.Request, *s3.PutObjectOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EncryptionClient.PutObjectWithContext">func (c *EncryptionClient) PutObjectWithContext(ctx aws.Context, input *s3.PutObjectInput, opts ...request.Option) (*s3.PutObjectOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EncryptionClientOptions">type EncryptionClientOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EncryptionClientV2">type EncryptionClientV2</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewEncryptionClientV2">func NewEncryptionClientV2(prov client.ConfigProvider, contentCipherBuilder ContentCipherBuilder, options ...func(clientOptions *EncryptionClientOptions)) (client *EncryptionClientV2, err error)</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EncryptionClientV2.PutObject">func (c *EncryptionClientV2) PutObject(input *s3.PutObjectInput) (*s3.PutObjectOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EncryptionClientV2.PutObjectRequest">func (c *EncryptionClientV2) PutObjectRequest(input *s3.PutObjectInput) (*request.Request, *s3.PutObjectOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EncryptionClientV2.PutObjectWithContext">func (c *EncryptionClientV2) PutObjectWithContext(ctx aws.Context, input *s3.PutObjectInput, opts ...request.Option) (*s3.PutObjectOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Envelope">type Envelope</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Envelope.UnmarshalJSON">func (e *Envelope) UnmarshalJSON(value []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HeaderV2LoadStrategy">type HeaderV2LoadStrategy</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HeaderV2LoadStrategy.Load">func (load HeaderV2LoadStrategy) Load(req *request.Request) (Envelope, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HeaderV2SaveStrategy">type HeaderV2SaveStrategy</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HeaderV2SaveStrategy.Save">func (strat HeaderV2SaveStrategy) Save(env Envelope, req *request.Request) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LoadStrategy">type LoadStrategy</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#MaterialDescription">type MaterialDescription</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MaterialDescription.Clone">func (md MaterialDescription) Clone() (clone MaterialDescription)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Padder">type Padder</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewPKCS7Padder">func NewPKCS7Padder(blockSize int) Padder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#S3LoadStrategy">type S3LoadStrategy</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#S3LoadStrategy.Load">func (load S3LoadStrategy) Load(req *request.Request) (Envelope, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#S3SaveStrategy">type S3SaveStrategy</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#S3SaveStrategy.Save">func (strat S3SaveStrategy) Save(env Envelope, req *request.Request) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SaveStrategy">type SaveStrategy</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#WrapEntry">type WrapEntry</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewKMSWrapEntry">func NewKMSWrapEntry(kmsClient kmsiface.KMSAPI) WrapEntry</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+		<div id="pkg-examples">
+			<h3>Examples</h3>
+			<div class="js-expandAll expandAll collapsed">(Expand All)</div>
+			<dl>
+			
+			<dd><a class="exampleLink" href="index.html#example_NewDecryptionClientV2_migration00">NewDecryptionClientV2 (Migration00)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_NewDecryptionClientV2_migration01">NewDecryptionClientV2 (Migration01)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_NewEncryptionClientV2_migration00">NewEncryptionClientV2 (Migration00)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_NewEncryptionClientV2_migration01">NewEncryptionClientV2 (Migration01)</a></dd>
+			
+			</dl>
+		</div>
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_cbc.go">aes_cbc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_cbc_content_cipher.go">aes_cbc_content_cipher.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_cbc_padder.go">aes_cbc_padder.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_gcm.go">aes_gcm.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_gcm_content_cipher.go">aes_gcm_content_cipher.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go">cipher.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go">cipher_builder.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_util.go">cipher_util.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go">crypto_registry.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go">decryption_client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go">decryption_client_v2.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go">encryption_client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go">encryption_client_v2.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/envelope.go">envelope.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/fixture.go">fixture.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/hash_io.go">hash_io.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/helper.go">helper.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go">key_handler.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_context_key_handler.go">kms_context_key_handler.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go">kms_key_handler.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/mat_desc.go">mat_desc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/padder.go">padder.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/pkcs7_padder.go">pkcs7_padder.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/shared_client.go">shared_client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go">strategy.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+AESCBC is the string constant that signifies the AES CBC algorithm cipher.
+</p>
+
+				<pre>const <span id="AESCBC">AESCBC</span> = &#34;AES/CBC&#34;</pre>
+			
+				<p>
+AESGCMNoPadding is the constant value that is used to specify
+the cek algorithm consiting of AES GCM with no padding.
+</p>
+
+				<pre>const <span id="AESGCMNoPadding">AESGCMNoPadding</span> = &#34;AES/GCM/NoPadding&#34;</pre>
+			
+				<p>
+DefaultInstructionKeySuffix is appended to the end of the instruction file key when
+grabbing or saving to S3
+</p>
+
+				<pre>const <span id="DefaultInstructionKeySuffix">DefaultInstructionKeySuffix</span> = &#34;.instruction&#34;</pre>
+			
+				<p>
+DefaultMinFileSize is used to check whether we want to write to a temp file
+or store the data in memory.
+</p>
+
+				<pre>const <span id="DefaultMinFileSize">DefaultMinFileSize</span> = 1024 * 512 * 5</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// KMSContextWrap is a constant used during decryption to build a kms+context key handler</span>
+    <span id="KMSContextWrap">KMSContextWrap</span> = &#34;kms+context&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// KMSWrap is a constant used during decryption to build a KMS key handler.</span>
+    <span id="KMSWrap">KMSWrap</span> = &#34;kms&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+AESCBCPadder is used to pad AES encrypted and decrypted data.
+Although it uses the pkcs5Padder, it isn&#39;t following the RFC
+for PKCS5. The only reason why it is called pkcs5Padder is
+due to the Name returning PKCS5Padding.
+</p>
+
+				<pre>var <span id="AESCBCPadder">AESCBCPadder</span> = <a href="index.html#Padder">Padder</a>(aescbcPadding)</pre>
+			
+				<p>
+NoPadder does not pad anything
+</p>
+
+				<pre>var <span id="NoPadder">NoPadder</span> = <a href="index.html#Padder">Padder</a>(noPadder{})</pre>
+			
+		
+		
+			
+			
+			<h2 id="RegisterAESCBCContentCipher">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_cbc_content_cipher.go?s=1221:1300#L24">RegisterAESCBCContentCipher</a>
+				<a class="permalink" href="index.html#RegisterAESCBCContentCipher">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterAESCBCContentCipher(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>, padder <a href="index.html#Padder">Padder</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterAESCBCContentCipher registers the AES/CBC cipher and padder with the provided CryptoRegistry.
+</p>
+<p>
+Example:
+</p>
+<pre>cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterAESCBCContentCipher(cr, s3crypto.AESCBCPadder); err != nil {
+	panic(err) // handle error
+}
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterAESGCMContentCipher">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_gcm_content_cipher.go?s=1808:1872#L35">RegisterAESGCMContentCipher</a>
+				<a class="permalink" href="index.html#RegisterAESGCMContentCipher">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterAESGCMContentCipher(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterAESGCMContentCipher registers the AES/GCM content cipher algorithm with the provided CryptoRegistry.
+</p>
+<p>
+Example:
+</p>
+<pre>cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterAESGCMContentCipher(cr); err != nil {
+	panic(err) // handle error
+}
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterKMSContextWrapWithAnyCMK">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_context_key_handler.go?s=2228:2321#L46">RegisterKMSContextWrapWithAnyCMK</a>
+				<a class="permalink" href="index.html#RegisterKMSContextWrapWithAnyCMK">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterKMSContextWrapWithAnyCMK(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>, client <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterKMSContextWrapWithAnyCMK registers the kms+context wrapping algorithm to the given WrapRegistry. The wrapper
+will be configured to call KMS decrypt without providing a CMK.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterKMSContextWrapWithAnyCMK(cr, kms.New(sess)); err != nil {
+	panic(err) // handle error
+}
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterKMSContextWrapWithCMK">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_context_key_handler.go?s=1566:1670#L30">RegisterKMSContextWrapWithCMK</a>
+				<a class="permalink" href="index.html#RegisterKMSContextWrapWithCMK">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterKMSContextWrapWithCMK(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>, client <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>, cmkID <a href="../../../../../../builtin/index.html#string">string</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterKMSContextWrapWithCMK registers the kms+context wrapping algorithm to the given WrapRegistry. The wrapper
+will be configured to only call KMS Decrypt using the provided CMK.
+</p>
+<p>
+Example:
+</p>
+<pre>cr := s3crypto.NewCryptoRegistry()
+if err := RegisterKMSContextWrapWithCMK(); err != nil {
+	panic(err) // handle error
+}
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterKMSWrapWithAnyCMK">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go?s=4429:4515#L109">RegisterKMSWrapWithAnyCMK</a>
+				<a class="permalink" href="index.html#RegisterKMSWrapWithAnyCMK">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterKMSWrapWithAnyCMK(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>, client <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterKMSWrapWithAnyCMK registers the `kms` wrapping algorithm to the given WrapRegistry. The wrapper will be
+configured to call KMS Decrypt without providing a CMK.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterKMSWrapWithAnyCMK(cr, kms.New(sess)); err != nil {
+	panic(err) // handle error
+}
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterKMSWrapWithCMK">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go?s=3615:3712#L91">RegisterKMSWrapWithCMK</a>
+				<a class="permalink" href="index.html#RegisterKMSWrapWithCMK">¶</a>
+				
+				
+			</h2>
+			<pre>func RegisterKMSWrapWithCMK(registry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>, client <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>, cmkID <a href="../../../../../../builtin/index.html#string">string</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+			<p>
+RegisterKMSWrapWithCMK registers the `kms` wrapping algorithm to the given WrapRegistry. The wrapper will be
+configured to call KMS Decrypt with the provided CMK.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterKMSWrapWithCMK(cr, kms.New(sess), &#34;cmkId&#34;); err != nil {
+	panic(err) // handle error
+}
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="CEKEntry">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=477:530#L6">CEKEntry</a>
+				<a class="permalink" href="index.html#CEKEntry">¶</a>
+				
+				
+			</h2>
+			<p>
+CEKEntry is a builder that returns a proper content decrypter and error
+</p>
+
+			<pre>type CEKEntry func(<a href="index.html#CipherData">CipherData</a>) (<a href="index.html#ContentCipher">ContentCipher</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Cipher">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=113:160#L1">Cipher</a>
+				<a class="permalink" href="index.html#Cipher">¶</a>
+				
+				
+			</h2>
+			<p>
+Cipher interface allows for either encryption and decryption of an object
+</p>
+
+			<pre>type Cipher interface {
+    <a href="index.html#Encrypter">Encrypter</a>
+    <a href="index.html#Decrypter">Decrypter</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CipherData">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go?s=789:1102#L20">CipherData</a>
+				<a class="permalink" href="index.html#CipherData">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherData is used for content encryption. It is used for storing the
+metadata of the encrypted content.
+</p>
+
+			<pre>type CipherData struct {
+<span id="CipherData.Key"></span>    Key                 []<a href="../../../../../../builtin/index.html#byte">byte</a>
+<span id="CipherData.IV"></span>    IV                  []<a href="../../../../../../builtin/index.html#byte">byte</a>
+<span id="CipherData.WrapAlgorithm"></span>    WrapAlgorithm       <a href="../../../../../../builtin/index.html#string">string</a>
+<span id="CipherData.CEKAlgorithm"></span>    CEKAlgorithm        <a href="../../../../../../builtin/index.html#string">string</a>
+<span id="CipherData.TagLength"></span>    TagLength           <a href="../../../../../../builtin/index.html#string">string</a>
+<span id="CipherData.MaterialDescription"></span>    MaterialDescription <a href="index.html#MaterialDescription">MaterialDescription</a>
+<span id="CipherData.EncryptedKey"></span>    <span class="comment">// EncryptedKey should be populated when calling GenerateCipherData</span>
+    EncryptedKey []<a href="../../../../../../builtin/index.html#byte">byte</a>
+
+<span id="CipherData.Padder"></span>    Padder <a href="index.html#Padder">Padder</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CipherData.Clone">func (CipherData) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go?s=1146:1189#L34">Clone</a>
+					<a class="permalink" href="index.html#CipherData.Clone">¶</a>
+					
+					
+				</h3>
+				<pre>func (cd <a href="index.html#CipherData">CipherData</a>) Clone() (v <a href="index.html#CipherData">CipherData</a>)</pre>
+				<p>
+Clone returns a new copy of CipherData
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CipherDataDecrypter">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go?s=1097:1171#L21">CipherDataDecrypter</a>
+				<a class="permalink" href="index.html#CipherDataDecrypter">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherDataDecrypter is a handler to decrypt keys from the envelope.
+</p>
+
+			<pre>type CipherDataDecrypter interface {
+    DecryptKey([]<a href="../../../../../../builtin/index.html#byte">byte</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CipherDataDecrypterWithContext">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go?s=1276:1385#L26">CipherDataDecrypterWithContext</a>
+				<a class="permalink" href="index.html#CipherDataDecrypterWithContext">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherDataDecrypterWithContext is a handler to decrypt keys from the envelope with request context.
+</p>
+
+			<pre>type CipherDataDecrypterWithContext interface {
+    DecryptKeyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, []<a href="../../../../../../builtin/index.html#byte">byte</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CipherDataGenerator">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go?s=263:351#L2">CipherDataGenerator</a>
+				<a class="permalink" href="index.html#CipherDataGenerator">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherDataGenerator handles generating proper key and IVs of proper size for the
+content cipher. CipherDataGenerator will also encrypt the key and store it in
+the CipherData.
+</p>
+
+			<pre>type CipherDataGenerator interface {
+    GenerateCipherData(<a href="../../../../../../builtin/index.html#int">int</a>, <a href="../../../../../../builtin/index.html#int">int</a>) (<a href="index.html#CipherData">CipherData</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKMSKeyGenerator">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go?s=1033:1117#L26">NewKMSKeyGenerator</a>
+					<a class="permalink" href="index.html#NewKMSKeyGenerator">¶</a>
+					
+					
+				</h3>
+				<pre>func NewKMSKeyGenerator(kmsClient <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>, cmkID <a href="../../../../../../builtin/index.html#string">string</a>) <a href="index.html#CipherDataGenerator">CipherDataGenerator</a></pre>
+				<p>
+NewKMSKeyGenerator builds a new KMS key provider using the customer key ID and material
+description.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cmkID := &#34;arn to key&#34;
+matdesc := s3crypto.MaterialDescription{}
+handler := s3crypto.NewKMSKeyGenerator(kms.New(sess), cmkID)
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewKMSKeyGeneratorWithMatDesc">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go?s=2141:2265#L59">NewKMSKeyGeneratorWithMatDesc</a>
+					<a class="permalink" href="index.html#NewKMSKeyGeneratorWithMatDesc">¶</a>
+					
+					
+				</h3>
+				<pre>func NewKMSKeyGeneratorWithMatDesc(kmsClient <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>, cmkID <a href="../../../../../../builtin/index.html#string">string</a>, matdesc <a href="index.html#MaterialDescription">MaterialDescription</a>) <a href="index.html#CipherDataGenerator">CipherDataGenerator</a></pre>
+				<p>
+NewKMSKeyGeneratorWithMatDesc builds a new KMS key provider using the customer key ID and material
+description.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cmkID := &#34;arn to key&#34;
+matdesc := s3crypto.MaterialDescription{}
+handler := s3crypto.NewKMSKeyGeneratorWithMatDesc(kms.New(sess), cmkID, matdesc)
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="CipherDataGeneratorWithCEKAlg">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go?s=867:1024#L16">CipherDataGeneratorWithCEKAlg</a>
+				<a class="permalink" href="index.html#CipherDataGeneratorWithCEKAlg">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherDataGeneratorWithCEKAlg handles generating proper key and IVs of proper size for the
+content cipher. CipherDataGenerator will also encrypt the key and store it in
+the CipherData.
+</p>
+
+			<pre>type CipherDataGeneratorWithCEKAlg interface {
+    GenerateCipherDataWithCEKAlg(ctx <a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, keySize, ivSize <a href="../../../../../../builtin/index.html#int">int</a>, cekAlgorithm <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#CipherData">CipherData</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKMSContextKeyGenerator">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_context_key_handler.go?s=1041:1168#L18">NewKMSContextKeyGenerator</a>
+					<a class="permalink" href="index.html#NewKMSContextKeyGenerator">¶</a>
+					
+					
+				</h3>
+				<pre>func NewKMSContextKeyGenerator(client <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>, cmkID <a href="../../../../../../builtin/index.html#string">string</a>, matdesc <a href="index.html#MaterialDescription">MaterialDescription</a>) <a href="index.html#CipherDataGeneratorWithCEKAlg">CipherDataGeneratorWithCEKAlg</a></pre>
+				<p>
+NewKMSContextKeyGenerator builds a new kms+context key provider using the customer key ID and material
+description.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cmkID := &#34;KMS Key ARN&#34;
+var matdesc s3crypto.MaterialDescription
+handler := s3crypto.NewKMSContextKeyGenerator(kms.New(sess), cmkID, matdesc)
+</pre>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="CipherDataGeneratorWithContext">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/key_handler.go?s=548:671#L9">CipherDataGeneratorWithContext</a>
+				<a class="permalink" href="index.html#CipherDataGeneratorWithContext">¶</a>
+				
+				
+			</h2>
+			<p>
+CipherDataGeneratorWithContext handles generating proper key and IVs of
+proper size for the content cipher. CipherDataGenerator will also encrypt
+the key and store it in the CipherData.
+</p>
+
+			<pre>type CipherDataGeneratorWithContext interface {
+    GenerateCipherDataWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, <a href="../../../../../../builtin/index.html#int">int</a>, <a href="../../../../../../builtin/index.html#int">int</a>) (<a href="index.html#CipherData">CipherData</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContentCipher">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go?s=514:676#L12">ContentCipher</a>
+				<a class="permalink" href="index.html#ContentCipher">¶</a>
+				
+				
+			</h2>
+			<p>
+ContentCipher deals with encrypting and decrypting content
+</p>
+
+			<pre>type ContentCipher interface {
+    EncryptContents(<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>) (<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DecryptContents(<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#ReadCloser">ReadCloser</a>) (<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#ReadCloser">ReadCloser</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCipherData() <a href="index.html#CipherData">CipherData</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContentCipherBuilder">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go?s=158:237#L1">ContentCipherBuilder</a>
+				<a class="permalink" href="index.html#ContentCipherBuilder">¶</a>
+				
+				
+			</h2>
+			<p>
+ContentCipherBuilder is a builder interface that builds
+ciphers for each request.
+</p>
+
+			<pre>type ContentCipherBuilder interface {
+    ContentCipher() (<a href="index.html#ContentCipher">ContentCipher</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="AESCBCContentCipherBuilder">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_cbc_content_cipher.go?s=569:667#L11">AESCBCContentCipherBuilder</a>
+					<a class="permalink" href="index.html#AESCBCContentCipherBuilder">¶</a>
+					
+					
+				</h3>
+				<pre>func AESCBCContentCipherBuilder(generator <a href="index.html#CipherDataGenerator">CipherDataGenerator</a>, padder <a href="index.html#Padder">Padder</a>) <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a></pre>
+				<p>
+AESCBCContentCipherBuilder returns a new encryption only AES/CBC mode structure using the provided padder. The provided cipher data generator
+will be used to provide keys for content encryption.
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+				
+				<h3 id="AESGCMContentCipherBuilder">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_gcm_content_cipher.go?s=760:843#L13">AESGCMContentCipherBuilder</a>
+					<a class="permalink" href="index.html#AESGCMContentCipherBuilder">¶</a>
+					
+					
+				</h3>
+				<pre>func AESGCMContentCipherBuilder(generator <a href="index.html#CipherDataGenerator">CipherDataGenerator</a>) <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a></pre>
+				<p>
+AESGCMContentCipherBuilder returns a new encryption only AES/GCM mode structure with a specific cipher data generator
+that will provide keys to be used for content encryption.
+</p>
+<p>
+Note: This uses the Go stdlib AEAD implementation for AES/GCM. Due to this objects to be encrypted or decrypted
+will be fully loaded into memory before encryption or decryption can occur. Caution must be taken to avoid memory
+allocation failures.
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+				
+				<h3 id="AESGCMContentCipherBuilderV2">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/aes_gcm_content_cipher.go?s=1390:1485#L23">AESGCMContentCipherBuilderV2</a>
+					<a class="permalink" href="index.html#AESGCMContentCipherBuilderV2">¶</a>
+					
+					
+				</h3>
+				<pre>func AESGCMContentCipherBuilderV2(generator <a href="index.html#CipherDataGeneratorWithCEKAlg">CipherDataGeneratorWithCEKAlg</a>) <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a></pre>
+				<p>
+AESGCMContentCipherBuilderV2 returns a new encryption only AES/GCM mode structure with a specific cipher data generator
+that will provide keys to be used for content encryption. This type is compatible with the V2 encryption client.
+</p>
+<p>
+Note: This uses the Go stdlib AEAD implementation for AES/GCM. Due to this objects to be encrypted or decrypted
+will be fully loaded into memory before encryption or decryption can occur. Caution must be taken to avoid memory
+allocation failures.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ContentCipherBuilderWithContext">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher_builder.go?s=338:450#L7">ContentCipherBuilderWithContext</a>
+				<a class="permalink" href="index.html#ContentCipherBuilderWithContext">¶</a>
+				
+				
+			</h2>
+			<p>
+ContentCipherBuilderWithContext is a builder interface that builds
+ciphers for each request.
+</p>
+
+			<pre>type ContentCipherBuilderWithContext interface {
+    ContentCipherWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>) (<a href="index.html#ContentCipher">ContentCipher</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CryptoReadCloser">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=484:578#L15">CryptoReadCloser</a>
+				<a class="permalink" href="index.html#CryptoReadCloser">¶</a>
+				
+				
+			</h2>
+			<p>
+CryptoReadCloser handles closing of the body and allowing reads from the decrypted
+content.
+</p>
+
+			<pre>type CryptoReadCloser struct {
+<span id="CryptoReadCloser.Body"></span>    Body      <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#ReadCloser">ReadCloser</a>
+<span id="CryptoReadCloser.Decrypter"></span>    Decrypter <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CryptoReadCloser.Close">func (*CryptoReadCloser) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=647:688#L22">Close</a>
+					<a class="permalink" href="index.html#CryptoReadCloser.Close">¶</a>
+					
+					
+				</h3>
+				<pre>func (rc *<a href="index.html#CryptoReadCloser">CryptoReadCloser</a>) Close() <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Close lets the CryptoReadCloser satisfy io.ReadCloser interface
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoReadCloser.Read">func (*CryptoReadCloser) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=804:859#L28">Read</a>
+					<a class="permalink" href="index.html#CryptoReadCloser.Read">¶</a>
+					
+					
+				</h3>
+				<pre>func (rc *<a href="index.html#CryptoReadCloser">CryptoReadCloser</a>) Read(b []<a href="../../../../../../builtin/index.html#byte">byte</a>) (<a href="../../../../../../builtin/index.html#int">int</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Read lets the CryptoReadCloser satisfy io.ReadCloser interface
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CryptoRegistry">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=208:321#L1">CryptoRegistry</a>
+				<a class="permalink" href="index.html#CryptoRegistry">¶</a>
+				
+				
+			</h2>
+			<p>
+CryptoRegistry is a collection of registries for configuring a decryption client with different key wrapping algorithms,
+content encryption algorithms, and padders.
+</p>
+
+			<pre>type CryptoRegistry struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCryptoRegistry">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=501:541#L7">NewCryptoRegistry</a>
+					<a class="permalink" href="index.html#NewCryptoRegistry">¶</a>
+					
+					
+				</h3>
+				<pre>func NewCryptoRegistry() *<a href="index.html#CryptoRegistry">CryptoRegistry</a></pre>
+				<p>
+NewCryptoRegistry creates a new CryptoRegistry to which wrapping algorithms, content encryption ciphers, and
+padders can be registered for use with the DecryptionClientV2.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="CryptoRegistry.AddCEK">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=2963:3029#L82">AddCEK</a>
+					<a class="permalink" href="index.html#CryptoRegistry.AddCEK">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) AddCEK(name <a href="../../../../../../builtin/index.html#string">string</a>, entry <a href="index.html#CEKEntry">CEKEntry</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+AddCEK registers CEKEntry under the given name, returns an error if a CEKEntry is already present for the given name.
+</p>
+<p>
+This method should only be used if you need to register custom content encryption algorithms. Please see the following methods
+for helpers to register AWS provided algorithms:
+</p>
+<pre>RegisterAESGCMContentCipher (AES/GCM)
+RegisterAESCBCContentCipher (AES/CBC)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.AddPadder">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=3952:4020#L117">AddPadder</a>
+					<a class="permalink" href="index.html#CryptoRegistry.AddPadder">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) AddPadder(name <a href="../../../../../../builtin/index.html#string">string</a>, padder <a href="index.html#Padder">Padder</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+AddPadder registers Padder under the given name, returns an error if a Padder is already present for the given name.
+</p>
+<p>
+This method should only be used to register custom padder implementations not provided by AWS.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.AddWrap">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=1787:1855#L43">AddWrap</a>
+					<a class="permalink" href="index.html#CryptoRegistry.AddWrap">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) AddWrap(name <a href="../../../../../../builtin/index.html#string">string</a>, entry <a href="index.html#WrapEntry">WrapEntry</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+AddWrap registers the provided WrapEntry under the given name, returns an error if a WrapEntry is already present
+for the given name.
+</p>
+<p>
+This method should only be used if you need to register custom wrapping algorithms. Please see the following methods
+for helpers to register AWS provided algorithms:
+</p>
+<pre>RegisterKMSContextWrapWithAnyCMK (kms+context)
+RegisterKMSContextWrapWithCMK (kms+context)
+RegisterKMSWrapWithAnyCMK (kms)
+RegisterKMSWrapWithCMK (kms)
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.GetCEK">func (CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=2423:2483#L68">GetCEK</a>
+					<a class="permalink" href="index.html#CryptoRegistry.GetCEK">¶</a>
+					
+					
+				</h3>
+				<pre>func (c <a href="index.html#CryptoRegistry">CryptoRegistry</a>) GetCEK(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#CEKEntry">CEKEntry</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+GetCEK returns the CEKEntry identified by the given name. Returns false if the entry is not registered.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.GetPadder">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=3571:3633#L106">GetPadder</a>
+					<a class="permalink" href="index.html#CryptoRegistry.GetPadder">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) GetPadder(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#Padder">Padder</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+GetPadder returns the Padder identified by name. If the Padder is not present, returns false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.GetWrap">func (CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=1152:1214#L26">GetWrap</a>
+					<a class="permalink" href="index.html#CryptoRegistry.GetWrap">¶</a>
+					
+					
+				</h3>
+				<pre>func (c <a href="index.html#CryptoRegistry">CryptoRegistry</a>) GetWrap(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#WrapEntry">WrapEntry</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+GetWrap returns the WrapEntry identified by the given name. Returns false if the entry is not registered.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.RemoveCEK">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=3284:3348#L94">RemoveCEK</a>
+					<a class="permalink" href="index.html#CryptoRegistry.RemoveCEK">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) RemoveCEK(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#CEKEntry">CEKEntry</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+RemoveCEK removes the CEKEntry identified by name. If the entry is not present returns false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.RemovePadder">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=4285:4350#L129">RemovePadder</a>
+					<a class="permalink" href="index.html#CryptoRegistry.RemovePadder">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) RemovePadder(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#Padder">Padder</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+RemovePadder removes the Padder identified by name. If the entry is not present returns false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CryptoRegistry.RemoveWrap">func (*CryptoRegistry) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/crypto_registry.go?s=2121:2187#L56">RemoveWrap</a>
+					<a class="permalink" href="index.html#CryptoRegistry.RemoveWrap">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#CryptoRegistry">CryptoRegistry</a>) RemoveWrap(name <a href="../../../../../../builtin/index.html#string">string</a>) (<a href="index.html#WrapEntry">WrapEntry</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>)</pre>
+				<p>
+RemoveWrap removes the WrapEntry identified by name. If the WrapEntry is not present returns false.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Decrypter">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=326:384#L9">Decrypter</a>
+				<a class="permalink" href="index.html#Decrypter">¶</a>
+				
+				
+			</h2>
+			<p>
+Decrypter interface with only the decrypt method
+</p>
+
+			<pre>type Decrypter interface {
+    Decrypt(<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>) <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DecryptionClient">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=955:1313#L18">DecryptionClient</a>
+				<a class="permalink" href="index.html#DecryptionClient">¶</a>
+				
+				
+			</h2>
+			<p>
+DecryptionClient is an S3 crypto client. The decryption client
+will handle all get object requests from Amazon S3.
+Supported key wrapping algorithms:
+</p>
+<pre>*AWS KMS
+</pre>
+<p>
+Supported content ciphers:
+</p>
+<pre>* AES/GCM
+* AES/CBC
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+			<pre>type DecryptionClient struct {
+<span id="DecryptionClient.S3Client"></span>    S3Client <a href="../s3iface/index.html">s3iface</a>.<a href="../s3iface/index.html#S3API">S3API</a>
+<span id="DecryptionClient.LoadStrategy"></span>    <span class="comment">// LoadStrategy is used to load the metadata either from the metadata of the object</span>
+    <span class="comment">// or from a separate file in s3.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Defaults to our default load strategy.</span>
+    LoadStrategy <a href="index.html#LoadStrategy">LoadStrategy</a>
+
+<span id="DecryptionClient.WrapRegistry"></span>    WrapRegistry   map[<a href="../../../../../../builtin/index.html#string">string</a>]<a href="index.html#WrapEntry">WrapEntry</a>
+<span id="DecryptionClient.CEKRegistry"></span>    CEKRegistry    map[<a href="../../../../../../builtin/index.html#string">string</a>]<a href="index.html#CEKEntry">CEKEntry</a>
+<span id="DecryptionClient.PadderRegistry"></span>    PadderRegistry map[<a href="../../../../../../builtin/index.html#string">string</a>]<a href="index.html#Padder">Padder</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDecryptionClient">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=1751:1857#L40">NewDecryptionClient</a>
+					<a class="permalink" href="index.html#NewDecryptionClient">¶</a>
+					
+					
+				</h3>
+				<pre>func NewDecryptionClient(prov <a href="../../../aws/client/index.html">client</a>.<a href="../../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, options ...func(*<a href="index.html#DecryptionClient">DecryptionClient</a>)) *<a href="index.html#DecryptionClient">DecryptionClient</a></pre>
+				<p>
+NewDecryptionClient instantiates a new S3 crypto client
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+svc := s3crypto.NewDecryptionClient(sess, func(svc *s3crypto.DecryptionClient{
+	// Custom client options here
+}))
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="DecryptionClient.GetObject">func (*DecryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=3709:3800#L93">GetObject</a>
+					<a class="permalink" href="index.html#DecryptionClient.GetObject">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClient">DecryptionClient</a>) GetObject(input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetObject is a wrapper for GetObjectRequest
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DecryptionClient.GetObjectRequest">func (*DecryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=3300:3409#L86">GetObjectRequest</a>
+					<a class="permalink" href="index.html#DecryptionClient.GetObjectRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClient">DecryptionClient</a>) GetObjectRequest(input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>)</pre>
+				<p>
+GetObjectRequest will make a request to s3 and retrieve the object. In this process
+decryption will be done. The SDK only supports V2 reads of KMS and GCM.
+</p>
+<p>
+Example:
+</p>
+<pre> sess := session.Must(session.NewSession())
+	svc := s3crypto.NewDecryptionClient(sess)
+	req, out := svc.GetObjectRequest(&amp;s3.GetObjectInput {
+	  Key: aws.String(&#34;testKey&#34;),
+	  Bucket: aws.String(&#34;testBucket&#34;),
+	})
+	err := req.Send()
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DecryptionClient.GetObjectWithContext">func (*DecryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=4476:4619#L106">GetObjectWithContext</a>
+					<a class="permalink" href="index.html#DecryptionClient.GetObjectWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClient">DecryptionClient</a>) GetObjectWithContext(ctx <a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>, opts ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetObjectWithContext is a wrapper for GetObjectRequest with the additional
+context, and request options support.
+</p>
+<p>
+GetObjectWithContext is the same as GetObject with the additional support for
+Context input parameters. The Context must not be nil. A nil Context will
+cause a panic. Use the Context to add deadlining, timeouts, etc. In the future
+this may create sub-contexts for individual underlying requests.
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DecryptionClientOptions">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=637:927#L15">DecryptionClientOptions</a>
+				<a class="permalink" href="index.html#DecryptionClientOptions">¶</a>
+				
+				
+			</h2>
+			<p>
+DecryptionClientOptions is the configuration options for DecryptionClientV2.
+</p>
+
+			<pre>type DecryptionClientOptions struct {
+<span id="DecryptionClientOptions.S3Client"></span>    S3Client <a href="../s3iface/index.html">s3iface</a>.<a href="../s3iface/index.html#S3API">S3API</a>
+<span id="DecryptionClientOptions.LoadStrategy"></span>    <span class="comment">// LoadStrategy is used to load the metadata either from the metadata of the object</span>
+    <span class="comment">// or from a separate file in s3.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Defaults to our default load strategy.</span>
+    LoadStrategy <a href="index.html#LoadStrategy">LoadStrategy</a>
+
+<span id="DecryptionClientOptions.CryptoRegistry"></span>    CryptoRegistry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DecryptionClientV2">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=488:555#L10">DecryptionClientV2</a>
+				<a class="permalink" href="index.html#DecryptionClientV2">¶</a>
+				
+				
+			</h2>
+			<p>
+DecryptionClientV2 is an S3 crypto client. The decryption client
+will handle all get object requests from Amazon S3.
+Supported key wrapping algorithms:
+</p>
+<pre>* AWS KMS
+* AWS KMS + Context
+</pre>
+<p>
+Supported content ciphers:
+</p>
+<pre>* AES/GCM
+* AES/CBC
+</pre>
+
+			<pre>type DecryptionClientV2 struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDecryptionClientV2">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=1924:2101#L46">NewDecryptionClientV2</a>
+					<a class="permalink" href="index.html#NewDecryptionClientV2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewDecryptionClientV2(
+    prov <a href="../../../aws/client/index.html">client</a>.<a href="../../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cryptoRegistry *<a href="index.html#CryptoRegistry">CryptoRegistry</a>,
+    options ...func(clientOptions *<a href="index.html#DecryptionClientOptions">DecryptionClientOptions</a>),
+) (*<a href="index.html#DecryptionClientV2">DecryptionClientV2</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+NewDecryptionClientV2 instantiates a new DecryptionClientV2. The NewDecryptionClientV2 must be configured with the
+desired key wrapping and content encryption algorithms that are required to be read by the client. These algorithms
+are registered by providing the client a CryptoRegistry that has been constructed with the desired configuration.
+NewDecryptionClientV2 will return an error if no key wrapping or content encryption algorithms have been provided.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+cr := s3crypto.NewCryptoRegistry()
+if err := s3crypto.RegisterKMSContextWrapWithAnyCMK(cr, kms.New(sess)); err != nil {
+	panic(err) // handle error
+}
+if err := s3crypto.RegisterAESGCMContentCipher(cr); err != nil {
+	panic(err) // handle error
+}
+svc, err := s3crypto.NewDecryptionClientV2(sess, cr, func(o *s3crypto.DecryptionClientOptions) {
+	// Custom client options here
+})
+if err != nil {
+	panic(err) // handle error
+}
+</pre>
+
+				<div id="example_NewDecryptionClientV2_migration00" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (Migration00)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (Migration00)</span></p>
+		<p>ExampleNewDecryptionClientV2_migration00 provides a migration example for how users can migrate
+from the V1 Decryption Clients to the V2 Decryption Clients.
+</p>
+		
+		
+			<p>Code:</p>
+			<pre class="code">sess := session.Must(session.NewSession())
+
+<span class="comment">// Construction of an decryption client must be done using NewDecryptionClientV2</span>
+<span class="comment">// The V2 decryption client is able to decrypt object encrypted by the V1 client.</span>
+<span class="comment">//</span>
+<span class="comment">// decryptionClient := s3crypto.NewDecryptionClient(sess)</span>
+
+<span class="comment">// The V2 decryption client requires you to explicitly register the key wrap algorithms and content encryption algorithms</span>
+<span class="comment">// that you want to explicitly support decryption for.</span>
+registry := s3crypto.NewCryptoRegistry()
+
+kmsClient := kms.New(sess)
+
+<span class="comment">// If you need support for unwrapping data keys wrapped using the `kms` wrap algorithm you can use RegisterKMSWrapWithAnyCMK.</span>
+<span class="comment">// Alternatively you may use RegisterKMSWrapWithCMK if you wish to limit KMS decrypt calls to a specific CMK.</span>
+if err := s3crypto.RegisterKMSWrapWithAnyCMK(registry, kmsClient); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+<span class="comment">// For unwrapping data keys wrapped using the new `kms+context` key wrap algorithm you can use RegisterKMSContextWrapWithAnyCMK.</span>
+<span class="comment">// Alternatively you may use RegisterKMSWrapWithCMK if you wish to limit KMS decrypt calls to a specific CMK.</span>
+if err := s3crypto.RegisterKMSContextWrapWithAnyCMK(registry, kmsClient); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+<span class="comment">// If you need to decrypt objects encrypted using the V1 AES/CBC/PCKS5Padding cipher you can do so with RegisterAESCBCContentCipher</span>
+if err := s3crypto.RegisterAESCBCContentCipher(registry, s3crypto.AESCBCPadder); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+<span class="comment">// For decrypting objects encrypted in V1 or V2 using AES/GCM/NoPadding cipher you can do so with RegisterAESGCMContentCipher.</span>
+if err := s3crypto.RegisterAESGCMContentCipher(registry); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+<span class="comment">// Instantiate a new decryption client, and provided the Wrap, cek, and Padder that have been registered</span>
+<span class="comment">// with your desired algorithms.</span>
+decryptionClient, err := s3crypto.NewDecryptionClientV2(sess, registry)
+if err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+getObject, err := decryptionClient.GetObject(&amp;s3.GetObjectInput{
+    Bucket: aws.String(&#34;your_bucket&#34;),
+    Key:    aws.String(&#34;your_key&#34;),
+})
+if err != nil {
+    fmt.Printf(&#34;get object error: %v\n&#34;, err)
+    return
+}
+
+_, err = ioutil.ReadAll(getObject.Body)
+if err != nil {
+    fmt.Printf(&#34;error reading object: %v\n&#34;, err)
+}
+fmt.Println(&#34;get object completed&#34;)
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_NewDecryptionClientV2_migration01" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (Migration01)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (Migration01)</span></p>
+		<p>ExampleNewDecryptionClientV2_migration01 provides a more advanced migration example for how users can
+migrate from the V1 decryption client to the V2 decryption client using more complex client construction.
+</p>
+		
+		
+			<p>Code:</p>
+			<pre class="code">sess := session.Must(session.NewSession())
+
+<span class="comment">// Construction of an decryption client must be done using NewDecryptionClientV2</span>
+<span class="comment">// The V2 decryption client is able to decrypt object encrypted by the V1 client.</span>
+<span class="comment">//</span>
+<span class="comment">// decryptionClient := s3crypto.NewDecryptionClient(sess, func(o *s3crypto.DecryptionClient) {</span>
+<span class="comment">//	 o.S3Client = s3.New(sess, &amp;aws.Config{Region: aws.String(&#34;us-west-2&#34;)})</span>
+<span class="comment">//})</span>
+registry := s3crypto.NewCryptoRegistry()
+
+kmsClient := kms.New(sess)
+if err := s3crypto.RegisterKMSWrapWithAnyCMK(registry, kmsClient); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+<span class="comment">// If you need to decrypt objects encrypted using AES/GCM/NoPadding cipher you can do so with RegisterAESGCMContentCipher</span>
+if err := s3crypto.RegisterAESGCMContentCipher(registry); err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+decryptionClient, err := s3crypto.NewDecryptionClientV2(sess, registry, func(o *s3crypto.DecryptionClientOptions) {
+    o.S3Client = s3.New(sess, &amp;aws.Config{Region: aws.String(&#34;us-west-2&#34;)})
+})
+if err != nil {
+    fmt.Printf(&#34;error: %v&#34;, err)
+    return
+}
+
+getObject, err := decryptionClient.GetObject(&amp;s3.GetObjectInput{
+    Bucket: aws.String(&#34;your_bucket&#34;),
+    Key:    aws.String(&#34;your_key&#34;),
+})
+if err != nil {
+    fmt.Printf(&#34;get object error: %v\n&#34;, err)
+    return
+}
+
+_, err = ioutil.ReadAll(getObject.Body)
+if err != nil {
+    fmt.Printf(&#34;error reading object: %v\n&#34;, err)
+}
+fmt.Println(&#34;get object completed&#34;)
+</pre>
+			
+		
+	</div>
+</div>
+
+				
+			
+
+			
+				
+				<h3 id="DecryptionClientV2.GetObject">func (*DecryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=3140:3233#L88">GetObject</a>
+					<a class="permalink" href="index.html#DecryptionClientV2.GetObject">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClientV2">DecryptionClientV2</a>) GetObject(input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetObject is a wrapper for GetObjectRequest
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DecryptionClientV2.GetObjectRequest">func (*DecryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=2933:3044#L83">GetObjectRequest</a>
+					<a class="permalink" href="index.html#DecryptionClientV2.GetObjectRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClientV2">DecryptionClientV2</a>) GetObjectRequest(input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>)</pre>
+				<p>
+GetObjectRequest will make a request to s3 and retrieve the object. In this process
+decryption will be done. The SDK only supports V2 reads of KMS and GCM.
+</p>
+<p>
+Example:
+</p>
+<pre>req, out := svc.GetObjectRequest(&amp;s3.GetObjectInput {
+  Key: aws.String(&#34;testKey&#34;),
+  Bucket: aws.String(&#34;testBucket&#34;),
+})
+err := req.Send()
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="DecryptionClientV2.GetObjectWithContext">func (*DecryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client_v2.go?s=3741:3886#L100">GetObjectWithContext</a>
+					<a class="permalink" href="index.html#DecryptionClientV2.GetObjectWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#DecryptionClientV2">DecryptionClientV2</a>) GetObjectWithContext(ctx <a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, input *<a href="../index.html">s3</a>.<a href="../index.html#GetObjectInput">GetObjectInput</a>, opts ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#GetObjectOutput">GetObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetObjectWithContext is a wrapper for GetObjectRequest with the additional
+context, and request options support.
+</p>
+<p>
+GetObjectWithContext is the same as GetObject with the additional support for
+Context input parameters. The Context must not be nil. A nil Context will
+cause a panic. Use the Context to add deadlining, timeouts, etc. In the future
+this may create sub-contexts for individual underlying requests.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Encrypter">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/cipher.go?s=214:272#L4">Encrypter</a>
+				<a class="permalink" href="index.html#Encrypter">¶</a>
+				
+				
+			</h2>
+			<p>
+Encrypter interface with only the encrypt method
+</p>
+
+			<pre>type Encrypter interface {
+    Encrypt(<a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>) <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#Reader">Reader</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EncryptionClient">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go?s=921:1458#L12">EncryptionClient</a>
+				<a class="permalink" href="index.html#EncryptionClient">¶</a>
+				
+				
+			</h2>
+			<p>
+EncryptionClient is an S3 crypto client. By default the SDK will use Authentication mode which
+will use KMS for key wrapping and AES GCM for content encryption.
+AES GCM will load all data into memory. However, the rest of the content algorithms
+do not load the entire contents into memory.
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+			<pre>type EncryptionClient struct {
+<span id="EncryptionClient.S3Client"></span>    S3Client             <a href="../s3iface/index.html">s3iface</a>.<a href="../s3iface/index.html#S3API">S3API</a>
+<span id="EncryptionClient.ContentCipherBuilder"></span>    ContentCipherBuilder <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a>
+<span id="EncryptionClient.SaveStrategy"></span>    <span class="comment">// SaveStrategy will dictate where the envelope is saved.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Defaults to the object&#39;s metadata</span>
+    SaveStrategy <a href="index.html#SaveStrategy">SaveStrategy</a>
+<span id="EncryptionClient.TempFolderPath"></span>    <span class="comment">// TempFolderPath is used to store temp files when calling PutObject.</span>
+    <span class="comment">// Temporary files are needed to compute the X-Amz-Content-Sha256 header.</span>
+    TempFolderPath <a href="../../../../../../builtin/index.html#string">string</a>
+<span id="EncryptionClient.MinFileSize"></span>    <span class="comment">// MinFileSize is the minimum size for the content to write to a</span>
+    <span class="comment">// temporary file instead of using memory.</span>
+    MinFileSize <a href="../../../../../../builtin/index.html#int64">int64</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEncryptionClient">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go?s=2369:2505#L49">NewEncryptionClient</a>
+					<a class="permalink" href="index.html#NewEncryptionClient">¶</a>
+					
+					
+				</h3>
+				<pre>func NewEncryptionClient(prov <a href="../../../aws/client/index.html">client</a>.<a href="../../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, builder <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a>, options ...func(*<a href="index.html#EncryptionClient">EncryptionClient</a>)) *<a href="index.html#EncryptionClient">EncryptionClient</a></pre>
+				<p>
+NewEncryptionClient instantiates a new S3 crypto client
+</p>
+<p>
+Example:
+</p>
+<pre>	cmkID := &#34;arn:aws:kms:region:000000000000:key/00000000-0000-0000-0000-000000000000&#34;
+ sess := session.Must(session.NewSession())
+	handler := s3crypto.NewKMSKeyGenerator(kms.New(sess), cmkID)
+	svc := s3crypto.NewEncryptionClient(sess, s3crypto.AESGCMContentCipherBuilder(handler))
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="EncryptionClient.PutObject">func (*EncryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go?s=4394:4485#L106">PutObject</a>
+					<a class="permalink" href="index.html#EncryptionClient.PutObject">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClient">EncryptionClient</a>) PutObject(input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutObject is a wrapper for PutObjectRequest
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EncryptionClient.PutObjectRequest">func (*EncryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go?s=3544:3653#L83">PutObjectRequest</a>
+					<a class="permalink" href="index.html#EncryptionClient.PutObjectRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClient">EncryptionClient</a>) PutObjectRequest(input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>)</pre>
+				<p>
+PutObjectRequest creates a temp file to encrypt the contents into. It then streams
+that data to S3.
+</p>
+<p>
+Example:
+</p>
+<pre>svc := s3crypto.NewEncryptionClient(session.Must(session.NewSession()), s3crypto.AESGCMContentCipherBuilder(handler))
+req, out := svc.PutObjectRequest(&amp;s3.PutObjectInput {
+  Key: aws.String(&#34;testKey&#34;),
+  Bucket: aws.String(&#34;testBucket&#34;),
+  Body: strings.NewReader(&#34;test data&#34;),
+})
+err := req.Send()
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EncryptionClient.PutObjectWithContext">func (*EncryptionClient) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client.go?s=5296:5439#L123">PutObjectWithContext</a>
+					<a class="permalink" href="index.html#EncryptionClient.PutObjectWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClient">EncryptionClient</a>) PutObjectWithContext(ctx <a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>, opts ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutObjectWithContext is a wrapper for PutObjectRequest with the additional
+context, and request options support.
+</p>
+<p>
+PutObjectWithContext is the same as PutObject with the additional support for
+Context input parameters. The Context must not be nil. A nil Context will
+cause a panic. Use the Context to add deadlining, timeouts, etc. In the future
+this may create sub-contexts for individual underlying requests.
+PutObject is a wrapper for PutObjectRequest
+</p>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EncryptionClientOptions">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=895:1439#L12">EncryptionClientOptions</a>
+				<a class="permalink" href="index.html#EncryptionClientOptions">¶</a>
+				
+				
+			</h2>
+			<p>
+EncryptionClientOptions is the configuration options for EncryptionClientV2
+</p>
+
+			<pre>type EncryptionClientOptions struct {
+<span id="EncryptionClientOptions.S3Client"></span>    S3Client             <a href="../s3iface/index.html">s3iface</a>.<a href="../s3iface/index.html#S3API">S3API</a>
+<span id="EncryptionClientOptions.ContentCipherBuilder"></span>    ContentCipherBuilder <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a>
+<span id="EncryptionClientOptions.SaveStrategy"></span>    <span class="comment">// SaveStrategy will dictate where the envelope is saved.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Defaults to the object&#39;s metadata</span>
+    SaveStrategy <a href="index.html#SaveStrategy">SaveStrategy</a>
+<span id="EncryptionClientOptions.TempFolderPath"></span>    <span class="comment">// TempFolderPath is used to store temp files when calling PutObject.</span>
+    <span class="comment">// Temporary files are needed to compute the X-Amz-Content-Sha256 header.</span>
+    TempFolderPath <a href="../../../../../../builtin/index.html#string">string</a>
+<span id="EncryptionClientOptions.MinFileSize"></span>    <span class="comment">// MinFileSize is the minimum size for the content to write to a</span>
+    <span class="comment">// temporary file instead of using memory.</span>
+    MinFileSize <a href="../../../../../../builtin/index.html#int64">int64</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EncryptionClientV2">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=747:814#L7">EncryptionClientV2</a>
+				<a class="permalink" href="index.html#EncryptionClientV2">¶</a>
+				
+				
+			</h2>
+			<p>
+EncryptionClientV2 is an S3 crypto client. By default the SDK will use Authentication mode which
+will use KMS for key wrapping and AES GCM for content encryption.
+AES GCM will load all data into memory. However, the rest of the content algorithms
+do not load the entire contents into memory.
+</p>
+
+			<pre>type EncryptionClientV2 struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEncryptionClientV2">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=2019:2219#L36">NewEncryptionClientV2</a>
+					<a class="permalink" href="index.html#NewEncryptionClientV2">¶</a>
+					
+					
+				</h3>
+				<pre>func NewEncryptionClientV2(prov <a href="../../../aws/client/index.html">client</a>.<a href="../../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, contentCipherBuilder <a href="index.html#ContentCipherBuilder">ContentCipherBuilder</a>, options ...func(clientOptions *<a href="index.html#EncryptionClientOptions">EncryptionClientOptions</a>),
+) (
+    client *<a href="index.html#EncryptionClientV2">EncryptionClientV2</a>, err <a href="../../../../../../builtin/index.html#error">error</a>,
+)</pre>
+				<p>
+NewEncryptionClientV2 instantiates a new S3 crypto client. An error will be returned to the caller if the provided
+contentCipherBuilder has been deprecated or was constructed with a deprecated component.
+</p>
+<p>
+Example:
+</p>
+<pre>	cmkID := &#34;arn:aws:kms:region:000000000000:key/00000000-0000-0000-0000-000000000000&#34;
+ sess := session.Must(session.NewSession())
+	var matdesc s3crypto.MaterialDescription
+	handler := s3crypto.NewKMSContextKeyGenerator(kms.New(sess), cmkID, matdesc)
+	svc := s3crypto.NewEncryptionClientV2(sess, s3crypto.AESGCMContentCipherBuilderV2(handler))
+</pre>
+
+				<div id="example_NewEncryptionClientV2_migration00" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (Migration00)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (Migration00)</span></p>
+		<p>ExampleNewEncryptionClientV2_migration00 provides a migration example for how users can migrate from the V1
+encryption client to the V2 encryption client. This example demonstrates how an application using  the `kms` key wrap
+algorithm with `AES/CBC/PKCS5Padding` can migrate their application to `kms+context` key wrapping with
+`AES/GCM/NoPadding` content encryption.
+</p>
+		
+		
+			<p>Code:</p>
+			<pre class="code">sess := session.Must(session.NewSession())
+kmsClient := kms.New(sess)
+cmkID := &#34;1234abcd-12ab-34cd-56ef-1234567890ab&#34;
+
+<span class="comment">// Usage of NewKMSKeyGenerator (kms) key wrapping algorithm must be migrated to NewKMSContextKeyGenerator (kms+context) key wrapping algorithm</span>
+<span class="comment">//</span>
+<span class="comment">// cipherDataGenerator := s3crypto.NewKMSKeyGenerator(kmsClient, cmkID)</span>
+cipherDataGenerator := s3crypto.NewKMSContextKeyGenerator(kmsClient, cmkID, s3crypto.MaterialDescription{})
+
+<span class="comment">// Usage of AESCBCContentCipherBuilder (AES/CBC/PKCS5Padding) must be migrated to AESGCMContentCipherBuilder (AES/GCM/NoPadding)</span>
+<span class="comment">//</span>
+<span class="comment">// contentCipherBuilder := s3crypto.AESCBCContentCipherBuilder(cipherDataGenerator, s3crypto.AESCBCPadder)</span>
+contentCipherBuilder := s3crypto.AESGCMContentCipherBuilderV2(cipherDataGenerator)
+
+<span class="comment">// Construction of an encryption client should be done using NewEncryptionClientV2</span>
+<span class="comment">//</span>
+<span class="comment">// encryptionClient := s3crypto.NewEncryptionClient(sess, contentCipherBuilder)</span>
+encryptionClient, err := s3crypto.NewEncryptionClientV2(sess, contentCipherBuilder)
+if err != nil {
+    fmt.Printf(&#34;failed to construct encryption client: %v&#34;, err)
+    return
+}
+
+_, err = encryptionClient.PutObject(&amp;s3.PutObjectInput{
+    Bucket: aws.String(&#34;your_bucket&#34;),
+    Key:    aws.String(&#34;your_key&#34;),
+    Body:   bytes.NewReader([]byte(&#34;your content&#34;)),
+})
+if err != nil {
+    fmt.Printf(&#34;put object error: %v\n&#34;, err)
+    return
+}
+fmt.Println(&#34;put object completed&#34;)
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_NewEncryptionClientV2_migration01" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (Migration01)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (Migration01)</span></p>
+		<p>ExampleNewEncryptionClientV2_migration01 provides a more advanced migration example for how users can
+migrate from the V1 encryption client to the V2 encryption client using more complex client construction.
+</p>
+		
+		
+			<p>Code:</p>
+			<pre class="code">sess := session.Must(session.NewSession())
+kmsClient := kms.New(sess)
+cmkID := &#34;1234abcd-12ab-34cd-56ef-1234567890ab&#34;
+
+cipherDataGenerator := s3crypto.NewKMSContextKeyGenerator(kmsClient, cmkID, s3crypto.MaterialDescription{})
+
+contentCipherBuilder := s3crypto.AESGCMContentCipherBuilderV2(cipherDataGenerator)
+
+<span class="comment">// Overriding of the encryption client options is possible by passing in functional arguments that override the</span>
+<span class="comment">// provided EncryptionClientOptions.</span>
+<span class="comment">//</span>
+<span class="comment">// encryptionClient := s3crypto.NewEncryptionClient(cipherDataGenerator, contentCipherBuilder, func(o *s3crypto.EncryptionClient) {</span>
+<span class="comment">//	 o.S3Client = s3.New(sess, &amp;aws.Config{Region: aws.String(&#34;us-west-2&#34;)}),</span>
+<span class="comment">// })</span>
+encryptionClient, err := s3crypto.NewEncryptionClientV2(sess, contentCipherBuilder, func(o *s3crypto.EncryptionClientOptions) {
+    o.S3Client = s3.New(sess, &amp;aws.Config{Region: aws.String(&#34;us-west-2&#34;)})
+})
+if err != nil {
+    fmt.Printf(&#34;failed to construct encryption client: %v&#34;, err)
+    return
+}
+
+_, err = encryptionClient.PutObject(&amp;s3.PutObjectInput{
+    Bucket: aws.String(&#34;your_bucket&#34;),
+    Key:    aws.String(&#34;your_key&#34;),
+    Body:   bytes.NewReader([]byte(&#34;your content&#34;)),
+})
+if err != nil {
+    fmt.Printf(&#34;put object error: %v\n&#34;, err)
+    return
+}
+fmt.Println(&#34;put object completed&#34;)
+</pre>
+			
+		
+	</div>
+</div>
+
+				
+			
+
+			
+				
+				<h3 id="EncryptionClientV2.PutObject">func (*EncryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=3832:3925#L92">PutObject</a>
+					<a class="permalink" href="index.html#EncryptionClientV2.PutObject">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClientV2">EncryptionClientV2</a>) PutObject(input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutObject is a wrapper for PutObjectRequest
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EncryptionClientV2.PutObjectRequest">func (*EncryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=3625:3736#L87">PutObjectRequest</a>
+					<a class="permalink" href="index.html#EncryptionClientV2.PutObjectRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClientV2">EncryptionClientV2</a>) PutObjectRequest(input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>)</pre>
+				<p>
+PutObjectRequest creates a temp file to encrypt the contents into. It then streams
+that data to S3.
+</p>
+<p>
+Example:
+</p>
+<pre>req, out := svc.PutObjectRequest(&amp;s3.PutObjectInput {
+  Key: aws.String(&#34;testKey&#34;),
+  Bucket: aws.String(&#34;testBucket&#34;),
+  Body: strings.NewReader(&#34;test data&#34;),
+})
+err := req.Send()
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="EncryptionClientV2.PutObjectWithContext">func (*EncryptionClientV2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/encryption_client_v2.go?s=4397:4542#L103">PutObjectWithContext</a>
+					<a class="permalink" href="index.html#EncryptionClientV2.PutObjectWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#EncryptionClientV2">EncryptionClientV2</a>) PutObjectWithContext(ctx <a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, input *<a href="../index.html">s3</a>.<a href="../index.html#PutObjectInput">PutObjectInput</a>, opts ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">s3</a>.<a href="../index.html#PutObjectOutput">PutObjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutObjectWithContext is a wrapper for PutObjectRequest with the additional
+context, and request options support.
+</p>
+<p>
+PutObjectWithContext is the same as PutObject with the additional support for
+Context input parameters. The Context must not be nil. A nil Context will
+cause a panic. Use the Context to add deadlining, timeouts, etc. In the future
+this may create sub-contexts for individual underlying requests.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Envelope">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/envelope.go?s=1144:1730#L21">Envelope</a>
+				<a class="permalink" href="index.html#Envelope">¶</a>
+				
+				
+			</h2>
+			<p>
+Envelope encryption starts off by generating a random symmetric key using
+AES GCM. The SDK generates a random IV based off the encryption cipher
+chosen. The master key that was provided, whether by the user or KMS, will be used
+to encrypt the randomly generated symmetric key and base64 encode the iv. This will
+allow for decryption of that same data later.
+</p>
+
+			<pre>type Envelope struct {
+<span id="Envelope.IV"></span>    <span class="comment">// IV is the randomly generated IV base64 encoded.</span>
+    IV <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-iv&#34;`
+<span id="Envelope.CipherKey"></span>    <span class="comment">// CipherKey is the randomly generated cipher key.</span>
+    CipherKey <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-key-v2&#34;`
+    <span class="comment">// MaterialDesc is a description to distinguish from other envelopes.</span>
+<span id="Envelope.MatDesc"></span>    MatDesc <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-matdesc&#34;`
+<span id="Envelope.WrapAlg"></span>    WrapAlg <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-wrap-alg&#34;`
+<span id="Envelope.CEKAlg"></span>    CEKAlg  <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-cek-alg&#34;`
+<span id="Envelope.TagLen"></span>    TagLen  <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-tag-len&#34;`
+
+    <span class="comment">// deprecated: This MD5 hash is no longer populated</span>
+<span id="Envelope.UnencryptedMD5"></span>    UnencryptedMD5 <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;-&#34;`
+
+<span id="Envelope.UnencryptedContentLen"></span>    UnencryptedContentLen <a href="../../../../../../builtin/index.html#string">string</a> `json:&#34;x-amz-unencrypted-content-length&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Envelope.UnmarshalJSON">func (*Envelope) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/envelope.go?s=1796:1848#L39">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#Envelope.UnmarshalJSON">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#Envelope">Envelope</a>) UnmarshalJSON(value []<a href="../../../../../../builtin/index.html#byte">byte</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalJSON unmarshalls the given JSON bytes into Envelope
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HeaderV2LoadStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=3021:3055#L100">HeaderV2LoadStrategy</a>
+				<a class="permalink" href="index.html#HeaderV2LoadStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+HeaderV2LoadStrategy will load the envelope from the metadata
+</p>
+
+			<pre>type HeaderV2LoadStrategy struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HeaderV2LoadStrategy.Load">func (HeaderV2LoadStrategy) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=3094:3171#L103">Load</a>
+					<a class="permalink" href="index.html#HeaderV2LoadStrategy.Load">¶</a>
+					
+					
+				</h3>
+				<pre>func (load <a href="index.html#HeaderV2LoadStrategy">HeaderV2LoadStrategy</a>) Load(req *<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) (<a href="index.html#Envelope">Envelope</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Load from a given object&#39;s header
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HeaderV2SaveStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=1229:1263#L42">HeaderV2SaveStrategy</a>
+				<a class="permalink" href="index.html#HeaderV2SaveStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+HeaderV2SaveStrategy will save the metadata of the crypto contents to the header of
+the object.
+</p>
+
+			<pre>type HeaderV2SaveStrategy struct{}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HeaderV2SaveStrategy.Save">func (HeaderV2SaveStrategy) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=1321:1401#L45">Save</a>
+					<a class="permalink" href="index.html#HeaderV2SaveStrategy.Save">¶</a>
+					
+					
+				</h3>
+				<pre>func (strat <a href="index.html#HeaderV2SaveStrategy">HeaderV2SaveStrategy</a>) Save(env <a href="index.html#Envelope">Envelope</a>, req *<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Save will save the envelope to the request&#39;s header.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LoadStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=2113:2186#L65">LoadStrategy</a>
+				<a class="permalink" href="index.html#LoadStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+LoadStrategy ...
+</p>
+
+			<pre>type LoadStrategy interface {
+    Load(*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) (<a href="index.html#Envelope">Envelope</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MaterialDescription">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/mat_desc.go?s=132:175#L1">MaterialDescription</a>
+				<a class="permalink" href="index.html#MaterialDescription">¶</a>
+				
+				
+			</h2>
+			<p>
+MaterialDescription is used to identify how and what master
+key has been used.
+</p>
+
+			<pre>type MaterialDescription map[<a href="../../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../../builtin/index.html#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MaterialDescription.Clone">func (MaterialDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/mat_desc.go?s=228:293#L2">Clone</a>
+					<a class="permalink" href="index.html#MaterialDescription.Clone">¶</a>
+					
+					
+				</h3>
+				<pre>func (md <a href="index.html#MaterialDescription">MaterialDescription</a>) Clone() (clone <a href="index.html#MaterialDescription">MaterialDescription</a>)</pre>
+				<p>
+Clone returns a copy of the MaterialDescription
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Padder">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/padder.go?s=59:545#L1">Padder</a>
+				<a class="permalink" href="index.html#Padder">¶</a>
+				
+				
+			</h2>
+			<p>
+Padder handles padding of crypto data
+</p>
+
+			<pre>type Padder interface {
+    <span class="comment">// Pad will pad the byte array.</span>
+    <span class="comment">// The second parameter is NOT how many</span>
+    <span class="comment">// bytes to pad by, but how many bytes</span>
+    <span class="comment">// have been read prior to the padding.</span>
+    <span class="comment">// This allows for streamable padding.</span>
+    Pad([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#int">int</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    <span class="comment">// Unpad will unpad the byte bytes. Unpad</span>
+    <span class="comment">// methods must be constant time.</span>
+    Unpad([]<a href="../../../../../../builtin/index.html#byte">byte</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    <span class="comment">// Name returns the name of the padder.</span>
+    <span class="comment">// This is used when decrypting on</span>
+    <span class="comment">// instantiating new padders.</span>
+    Name() <a href="../../../../../../builtin/index.html#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPKCS7Padder">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/pkcs7_padder.go?s=551:592#L15">NewPKCS7Padder</a>
+					<a class="permalink" href="index.html#NewPKCS7Padder">¶</a>
+					
+					
+				</h3>
+				<pre>func NewPKCS7Padder(blockSize <a href="../../../../../../builtin/index.html#int">int</a>) <a href="index.html#Padder">Padder</a></pre>
+				<p>
+NewPKCS7Padder follows the RFC 2315: <a href="https://www.ietf.org/rfc/rfc2315.txt">https://www.ietf.org/rfc/rfc2315.txt</a>
+PKCS7 padding is subject to side-channel attacks and timing attacks. For
+the most secure data, use an authenticated crypto algorithm.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="S3LoadStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=2245:2335#L70">S3LoadStrategy</a>
+				<a class="permalink" href="index.html#S3LoadStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+S3LoadStrategy will load the instruction file from s3
+</p>
+
+			<pre>type S3LoadStrategy struct {
+<span id="S3LoadStrategy.Client"></span>    Client                *<a href="../index.html">s3</a>.<a href="../index.html#S3">S3</a>
+<span id="S3LoadStrategy.InstructionFileSuffix"></span>    InstructionFileSuffix <a href="../../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="S3LoadStrategy.Load">func (S3LoadStrategy) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=2382:2453#L76">Load</a>
+					<a class="permalink" href="index.html#S3LoadStrategy.Load">¶</a>
+					
+					
+				</h3>
+				<pre>func (load <a href="index.html#S3LoadStrategy">S3LoadStrategy</a>) Load(req *<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) (<a href="index.html#Envelope">Envelope</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Load from a given instruction file suffix
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="S3SaveStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=459:549#L12">S3SaveStrategy</a>
+				<a class="permalink" href="index.html#S3SaveStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+S3SaveStrategy will save the metadata to a separate instruction file in S3
+</p>
+
+			<pre>type S3SaveStrategy struct {
+<span id="S3SaveStrategy.Client"></span>    Client                *<a href="../index.html">s3</a>.<a href="../index.html#S3">S3</a>
+<span id="S3SaveStrategy.InstructionFileSuffix"></span>    InstructionFileSuffix <a href="../../../../../../builtin/index.html#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="S3SaveStrategy.Save">func (S3SaveStrategy) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=598:672#L18">Save</a>
+					<a class="permalink" href="index.html#S3SaveStrategy.Save">¶</a>
+					
+					
+				</h3>
+				<pre>func (strat <a href="index.html#S3SaveStrategy">S3SaveStrategy</a>) Save(env <a href="index.html#Envelope">Envelope</a>, req *<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) <a href="../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Save will save the envelope contents to s3.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SaveStrategy">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/strategy.go?s=308:379#L7">SaveStrategy</a>
+				<a class="permalink" href="index.html#SaveStrategy">¶</a>
+				
+				
+			</h2>
+			<p>
+SaveStrategy is how the data&#39;s metadata wants to be saved
+</p>
+
+			<pre>type SaveStrategy interface {
+    Save(<a href="index.html#Envelope">Envelope</a>, *<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="WrapEntry">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/decryption_client.go?s=342:400#L3">WrapEntry</a>
+				<a class="permalink" href="index.html#WrapEntry">¶</a>
+				
+				
+			</h2>
+			<p>
+WrapEntry is builder that return a proper key decrypter and error
+</p>
+
+			<pre>type WrapEntry func(<a href="index.html#Envelope">Envelope</a>) (<a href="index.html#CipherDataDecrypter">CipherDataDecrypter</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKMSWrapEntry">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/s3/s3crypto/kms_key_handler.go?s=2908:2965#L75">NewKMSWrapEntry</a>
+					<a class="permalink" href="index.html#NewKMSWrapEntry">¶</a>
+					
+					
+				</h3>
+				<pre>func NewKMSWrapEntry(kmsClient <a href="../../kms/kmsiface/index.html">kmsiface</a>.<a href="../../kms/kmsiface/index.html#KMSAPI">KMSAPI</a>) <a href="index.html#WrapEntry">WrapEntry</a></pre>
+				<p>
+NewKMSWrapEntry builds returns a new KMS key provider and its decrypt handler.
+</p>
+<p>
+Example:
+</p>
+<pre>sess := session.Must(session.NewSession())
+customKMSClient := kms.New(sess)
+decryptHandler := s3crypto.NewKMSWrapEntry(customKMSClient)
+
+svc := s3crypto.NewDecryptionClient(sess, func(svc *s3crypto.DecryptionClient) {
+	svc.WrapRegistry[s3crypto.KMSWrap] = decryptHandler
+}))
+</pre>
+<p>
+deprecated: This feature is in maintenance mode, no new updates will be released. Please see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html">https://docs.aws.amazon.com/general/latest/gr/aws_sdk_cryptography.html</a> for more information.
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -3,6 +3,7 @@ package shareddiscovery
 import (
 	"context"
 	"errors"
+	"fmt"
 	"testing"
 
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -100,6 +101,10 @@ func TestGetConfig_WithCountry(t *testing.T) {
 	}
 }
 
+////////////////////////////////////////////////////////////////
+// EXAMPLES
+///////////////////////////////////////////////////////////////
+
 // Typical usage is to setup a variable with the interface type
 // and initialize that variable in your modules init function using
 // the New() function provided
@@ -120,6 +125,43 @@ func Example() {
 
 	// call functions
 	shareddiscovery.GetConfig(context.Background(), "someApiToken", query)
+}
+
+// For making an admin call, a secretKey is required
+// and the query string is needed to regenerate the
+// signature correctly. The callers signature should also
+// be passed via in to verify.
+func ExampleSharedDiscovery_AdminGetAPIToken() {
+	var shareddiscovery SharedDiscoveryIFace
+
+	// setup AWS Session
+	session := session.New()
+
+	// setup DynamoDB
+	dynamo := dynamodb.New(session)
+
+	// define a QueryInput
+	query := QueryInput{
+		Workspace:   "discovery_app",
+		Signature:   "e52af791ec66085081f993a42d2a02a4b1dc08ad7b9f030dac5a0c20d5a0c68c",
+		Brand:       "oralb",
+		Environment: "qa",
+		Country:     "US",
+		QueryString: map[string]string{
+			"brand":       "oralb",
+			"environment": "qa",
+			"countryCode": "US",
+		},
+	}
+
+	// setup shareddiscovery now
+	shareddiscovery = New(dynamo)
+
+	// call functions
+	key, _ := shareddiscovery.AdminGetAPIToken(context.Background(), "secretKey", query)
+	fmt.Println(key)
+	// OUTPUT:
+	// ZWk3QFdBWVVTVjFFbFE0dlBPQDhhSURabmtmN0dEN1k=
 }
 
 // Passing in only the workspace as a query is best used when the

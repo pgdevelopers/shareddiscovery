@@ -1,0 +1,3535 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>restjsonservice - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package restjsonservice
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package restjsonservice provides the client and types for making API
+requests to REST JSON Service.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00</a> for more information on this service.
+</p>
+<p>
+See restjsonservice package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/restjsonservice/">https://docs.aws.amazon.com/sdk-for-go/api/service/restjsonservice/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact REST JSON Service with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the REST JSON Service client RESTJSONService for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/restjsonservice/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/restjsonservice/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#EmptyEvent">type EmptyEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EmptyEvent.GoString">func (s EmptyEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyEvent.MarshalEvent">func (s *EmptyEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyEvent.String">func (s EmptyEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyEvent.UnmarshalEvent">func (s *EmptyEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EmptyEventStreamEvent">type EmptyEventStreamEvent</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmptyEventStreamReader">type EmptyEventStreamReader</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmptyEventStreamUnknownEvent">type EmptyEventStreamUnknownEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EmptyEventStreamUnknownEvent.MarshalEvent">func (e *EmptyEventStreamUnknownEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyEventStreamUnknownEvent.UnmarshalEvent">func (e *EmptyEventStreamUnknownEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EmptyStreamEventStream">type EmptyStreamEventStream</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewEmptyStreamEventStream">func NewEmptyStreamEventStream(opts ...func(*EmptyStreamEventStream)) *EmptyStreamEventStream</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EmptyStreamEventStream.Close">func (es *EmptyStreamEventStream) Close() (err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyStreamEventStream.Err">func (es *EmptyStreamEventStream) Err() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyStreamEventStream.Events">func (es *EmptyStreamEventStream) Events() &lt;-chan EmptyEventStreamEvent</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EmptyStreamInput">type EmptyStreamInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EmptyStreamInput.GoString">func (s EmptyStreamInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyStreamInput.String">func (s EmptyStreamInput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EmptyStreamOutput">type EmptyStreamOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EmptyStreamOutput.GetStream">func (s *EmptyStreamOutput) GetStream() *EmptyStreamEventStream</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyStreamOutput.GoString">func (s EmptyStreamOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#EmptyStreamOutput.String">func (s EmptyStreamOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EventStreamEvent">type EventStreamEvent</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventStreamReader">type EventStreamReader</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventStreamUnknownEvent">type EventStreamUnknownEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#EventStreamUnknownEvent.MarshalEvent">func (e *EventStreamUnknownEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#EventStreamUnknownEvent.UnmarshalEvent">func (e *EventStreamUnknownEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExceptionEvent">type ExceptionEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.Code">func (s *ExceptionEvent) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.Error">func (s *ExceptionEvent) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.GoString">func (s ExceptionEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.MarshalEvent">func (s *ExceptionEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.Message">func (s *ExceptionEvent) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.OrigErr">func (s *ExceptionEvent) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.RequestID">func (s *ExceptionEvent) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.StatusCode">func (s *ExceptionEvent) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.String">func (s ExceptionEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent.UnmarshalEvent">func (s *ExceptionEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExceptionEvent2">type ExceptionEvent2</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.Code">func (s *ExceptionEvent2) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.Error">func (s *ExceptionEvent2) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.GoString">func (s ExceptionEvent2) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.MarshalEvent">func (s *ExceptionEvent2) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.Message">func (s *ExceptionEvent2) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.OrigErr">func (s *ExceptionEvent2) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.RequestID">func (s *ExceptionEvent2) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.StatusCode">func (s *ExceptionEvent2) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.String">func (s ExceptionEvent2) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExceptionEvent2.UnmarshalEvent">func (s *ExceptionEvent2) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExplicitPayloadEvent">type ExplicitPayloadEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.GoString">func (s ExplicitPayloadEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.MarshalEvent">func (s *ExplicitPayloadEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.SetLongVal">func (s *ExplicitPayloadEvent) SetLongVal(v int64) *ExplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.SetNestedVal">func (s *ExplicitPayloadEvent) SetNestedVal(v *NestedShape) *ExplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.SetStringVal">func (s *ExplicitPayloadEvent) SetStringVal(v string) *ExplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.String">func (s ExplicitPayloadEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ExplicitPayloadEvent.UnmarshalEvent">func (s *ExplicitPayloadEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetEventStreamEventStream">type GetEventStreamEventStream</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewGetEventStreamEventStream">func NewGetEventStreamEventStream(opts ...func(*GetEventStreamEventStream)) *GetEventStreamEventStream</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetEventStreamEventStream.Close">func (es *GetEventStreamEventStream) Close() (err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamEventStream.Err">func (es *GetEventStreamEventStream) Err() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamEventStream.Events">func (es *GetEventStreamEventStream) Events() &lt;-chan EventStreamEvent</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetEventStreamInput">type GetEventStreamInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetEventStreamInput.GoString">func (s GetEventStreamInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamInput.SetInputVal">func (s *GetEventStreamInput) SetInputVal(v string) *GetEventStreamInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamInput.String">func (s GetEventStreamInput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetEventStreamOutput">type GetEventStreamOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetEventStreamOutput.GetStream">func (s *GetEventStreamOutput) GetStream() *GetEventStreamEventStream</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamOutput.GoString">func (s GetEventStreamOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamOutput.SetIntVal">func (s *GetEventStreamOutput) SetIntVal(v int64) *GetEventStreamOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamOutput.SetStrVal">func (s *GetEventStreamOutput) SetStrVal(v string) *GetEventStreamOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetEventStreamOutput.String">func (s GetEventStreamOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HeaderOnlyEvent">type HeaderOnlyEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.GoString">func (s HeaderOnlyEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.MarshalEvent">func (s *HeaderOnlyEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetBlobVal">func (s *HeaderOnlyEvent) SetBlobVal(v []byte) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetBoolVal">func (s *HeaderOnlyEvent) SetBoolVal(v bool) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetByteVal">func (s *HeaderOnlyEvent) SetByteVal(v int64) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetIntegerVal">func (s *HeaderOnlyEvent) SetIntegerVal(v int64) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetLongVal">func (s *HeaderOnlyEvent) SetLongVal(v int64) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetShortVal">func (s *HeaderOnlyEvent) SetShortVal(v int64) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetStringVal">func (s *HeaderOnlyEvent) SetStringVal(v string) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.SetTimeVal">func (s *HeaderOnlyEvent) SetTimeVal(v time.Time) *HeaderOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.String">func (s HeaderOnlyEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HeaderOnlyEvent.UnmarshalEvent">func (s *HeaderOnlyEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImplicitPayloadEvent">type ImplicitPayloadEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.GoString">func (s ImplicitPayloadEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.MarshalEvent">func (s *ImplicitPayloadEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.SetByteVal">func (s *ImplicitPayloadEvent) SetByteVal(v int64) *ImplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.SetIntegerVal">func (s *ImplicitPayloadEvent) SetIntegerVal(v int64) *ImplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.SetShortVal">func (s *ImplicitPayloadEvent) SetShortVal(v int64) *ImplicitPayloadEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.String">func (s ImplicitPayloadEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImplicitPayloadEvent.UnmarshalEvent">func (s *ImplicitPayloadEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NestedShape">type NestedShape</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#NestedShape.GoString">func (s NestedShape) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NestedShape.SetIntVal">func (s *NestedShape) SetIntVal(v int64) *NestedShape</a></dd>
+				
+					
+					<dd>    <a href="index.html#NestedShape.SetStrVal">func (s *NestedShape) SetStrVal(v string) *NestedShape</a></dd>
+				
+					
+					<dd>    <a href="index.html#NestedShape.String">func (s NestedShape) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OtherOperationInput">type OtherOperationInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#OtherOperationInput.GoString">func (s OtherOperationInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OtherOperationInput.String">func (s OtherOperationInput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OtherOperationOutput">type OtherOperationOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#OtherOperationOutput.GoString">func (s OtherOperationOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#OtherOperationOutput.String">func (s OtherOperationOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PayloadOnlyBlobEvent">type PayloadOnlyBlobEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyBlobEvent.GoString">func (s PayloadOnlyBlobEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyBlobEvent.MarshalEvent">func (s *PayloadOnlyBlobEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyBlobEvent.SetBlobPayload">func (s *PayloadOnlyBlobEvent) SetBlobPayload(v []byte) *PayloadOnlyBlobEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyBlobEvent.String">func (s PayloadOnlyBlobEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyBlobEvent.UnmarshalEvent">func (s *PayloadOnlyBlobEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PayloadOnlyEvent">type PayloadOnlyEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyEvent.GoString">func (s PayloadOnlyEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyEvent.MarshalEvent">func (s *PayloadOnlyEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyEvent.SetNestedVal">func (s *PayloadOnlyEvent) SetNestedVal(v *NestedShape) *PayloadOnlyEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyEvent.String">func (s PayloadOnlyEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyEvent.UnmarshalEvent">func (s *PayloadOnlyEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PayloadOnlyStringEvent">type PayloadOnlyStringEvent</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyStringEvent.GoString">func (s PayloadOnlyStringEvent) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyStringEvent.MarshalEvent">func (s *PayloadOnlyStringEvent) MarshalEvent(pm protocol.PayloadMarshaler) (msg eventstream.Message, err error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyStringEvent.SetStringPayload">func (s *PayloadOnlyStringEvent) SetStringPayload(v string) *PayloadOnlyStringEvent</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyStringEvent.String">func (s PayloadOnlyStringEvent) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PayloadOnlyStringEvent.UnmarshalEvent">func (s *PayloadOnlyStringEvent) UnmarshalEvent(payloadUnmarshaler protocol.PayloadUnmarshaler, msg eventstream.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RESTJSONService">type RESTJSONService</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *RESTJSONService</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.EmptyStream">func (c *RESTJSONService) EmptyStream(input *EmptyStreamInput) (*EmptyStreamOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.EmptyStreamRequest">func (c *RESTJSONService) EmptyStreamRequest(input *EmptyStreamInput) (req *request.Request, output *EmptyStreamOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.EmptyStreamWithContext">func (c *RESTJSONService) EmptyStreamWithContext(ctx aws.Context, input *EmptyStreamInput, opts ...request.Option) (*EmptyStreamOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.GetEventStream">func (c *RESTJSONService) GetEventStream(input *GetEventStreamInput) (*GetEventStreamOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.GetEventStreamRequest">func (c *RESTJSONService) GetEventStreamRequest(input *GetEventStreamInput) (req *request.Request, output *GetEventStreamOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.GetEventStreamWithContext">func (c *RESTJSONService) GetEventStreamWithContext(ctx aws.Context, input *GetEventStreamInput, opts ...request.Option) (*GetEventStreamOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.OtherOperation">func (c *RESTJSONService) OtherOperation(input *OtherOperationInput) (*OtherOperationOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.OtherOperationRequest">func (c *RESTJSONService) OtherOperationRequest(input *OtherOperationInput) (req *request.Request, output *OtherOperationOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#RESTJSONService.OtherOperationWithContext">func (c *RESTJSONService) OtherOperationWithContext(ctx aws.Context, input *OtherOperationInput, opts ...request.Option) (*OtherOperationOutput, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeExceptionEvent for service response error code</span>
+    <span class="comment">// &#34;ExceptionEvent&#34;.</span>
+    <span id="ErrCodeExceptionEvent">ErrCodeExceptionEvent</span> = &#34;ExceptionEvent&#34;
+
+    <span class="comment">// ErrCodeExceptionEvent2 for service response error code</span>
+    <span class="comment">// &#34;ExceptionEvent2&#34;.</span>
+    <span id="ErrCodeExceptionEvent2">ErrCodeExceptionEvent2</span> = &#34;ExceptionEvent2&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;RESTJSONService&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;restjsonservice&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;RESTJSONService&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="EmptyEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=18189:18246#L552">EmptyEvent</a>
+				<a class="permalink" href="index.html#EmptyEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type EmptyEvent struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EmptyEvent.GoString">func (EmptyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=18815:18852#L570">GoString</a>
+					<a class="permalink" href="index.html#EmptyEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyEvent">EmptyEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyEvent.MarshalEvent">func (*EmptyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=19427:19527#L588">MarshalEvent</a>
+					<a class="permalink" href="index.html#EmptyEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EmptyEvent">EmptyEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyEvent.String">func (EmptyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=18496:18531#L561">String</a>
+					<a class="permalink" href="index.html#EmptyEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyEvent">EmptyEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyEvent.UnmarshalEvent">func (*EmptyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=19146:19265#L579">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#EmptyEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EmptyEvent">EmptyEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the EmptyEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EmptyEventStreamEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=19782:19901#L598">EmptyEventStreamEvent</a>
+				<a class="permalink" href="index.html#EmptyEventStreamEvent">¶</a>
+				
+				
+			</h2>
+			<p>
+EmptyEventStreamEvent groups together all EventStream
+events writes for EmptyEventStream.
+</p>
+<p>
+These events are:
+</p>
+
+			<pre>type EmptyEventStreamEvent interface {
+    <a href="../../../../../protocol/eventstream/eventstreamapi/index.html">eventstreamapi</a>.<a href="../../../../../protocol/eventstream/eventstreamapi/index.html#Marshaler">Marshaler</a>
+    <a href="../../../../../protocol/eventstream/eventstreamapi/index.html">eventstreamapi</a>.<a href="../../../../../protocol/eventstream/eventstreamapi/index.html#Unmarshaler">Unmarshaler</a>
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmptyEventStreamReader">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=20189:20511#L612">EmptyEventStreamReader</a>
+				<a class="permalink" href="index.html#EmptyEventStreamReader">¶</a>
+				
+				
+			</h2>
+			<p>
+EmptyEventStreamReader provides the interface for reading to the stream. The
+default implementation for this interface will be EmptyEventStream.
+</p>
+<p>
+The reader&#39;s Close method must allow multiple concurrent calls.
+</p>
+<p>
+These events are:
+</p>
+<pre>* EmptyEventStreamUnknownEvent
+</pre>
+
+			<pre>type EmptyEventStreamReader interface {
+    <span class="comment">// Returns a channel of events as they are read from the event stream.</span>
+    Events() &lt;-chan <a href="index.html#EmptyEventStreamEvent">EmptyEventStreamEvent</a>
+
+    <span class="comment">// Close will stop the reader reading events from the stream.</span>
+    Close() <a href="../../../../../../../../../builtin/index.html#error">error</a>
+
+    <span class="comment">// Returns any error that has occurred while reading from the event stream.</span>
+    Err() <a href="../../../../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmptyEventStreamUnknownEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=22544:22633#L714">EmptyEventStreamUnknownEvent</a>
+				<a class="permalink" href="index.html#EmptyEventStreamUnknownEvent">¶</a>
+				
+				
+			</h2>
+			<p>
+EmptyEventStreamUnknownEvent provides a failsafe event for the
+EmptyEventStream group of events when an unknown event is received.
+</p>
+
+			<pre>type EmptyEventStreamUnknownEvent struct {
+<span id="EmptyEventStreamUnknownEvent.Type"></span>    Type    <a href="../../../../../../../../../builtin/index.html#string">string</a>
+<span id="EmptyEventStreamUnknownEvent.Message"></span>    Message <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EmptyEventStreamUnknownEvent.MarshalEvent">func (*EmptyEventStreamUnknownEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=22939:23061#L725">MarshalEvent</a>
+					<a class="permalink" href="index.html#EmptyEventStreamUnknownEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#EmptyEventStreamUnknownEvent">EmptyEventStreamUnknownEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>,
+)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyEventStreamUnknownEvent.UnmarshalEvent">func (*EmptyEventStreamUnknownEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=23262:23399#L733">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#EmptyEventStreamUnknownEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#EmptyEventStreamUnknownEvent">EmptyEventStreamUnknownEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the EmptyEventStream value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EmptyStreamEventStream">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=4029:4481#L101">EmptyStreamEventStream</a>
+				<a class="permalink" href="index.html#EmptyStreamEventStream">¶</a>
+				
+				
+			</h2>
+			<p>
+EmptyStreamEventStream provides the event stream handling for the EmptyStream.
+</p>
+<p>
+For testing and mocking the event stream this type should be initialized via
+the NewEmptyStreamEventStream constructor function. Using the functional options
+to pass in nested mock behavior.
+</p>
+
+			<pre>type EmptyStreamEventStream struct {
+
+<span id="EmptyStreamEventStream.Reader"></span>    <span class="comment">// Reader is the EventStream reader for the EmptyEventStream</span>
+    <span class="comment">// events. This value is automatically set by the SDK when the API call is made</span>
+    <span class="comment">// Use this member when unit testing your code with the SDK to mock out the</span>
+    <span class="comment">// EventStream Reader.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Must not be nil.</span>
+    Reader <a href="index.html#EmptyEventStreamReader">EmptyEventStreamReader</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEmptyStreamEventStream">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=4869:4962#L127">NewEmptyStreamEventStream</a>
+					<a class="permalink" href="index.html#NewEmptyStreamEventStream">¶</a>
+					
+					
+				</h3>
+				<pre>func NewEmptyStreamEventStream(opts ...func(*<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a>)) *<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a></pre>
+				<p>
+NewEmptyStreamEventStream initializes an EmptyStreamEventStream.
+This function should only be used for testing and mocking the EmptyStreamEventStream
+stream within your application.
+</p>
+<p>
+The Reader member must be set before reading events from the stream.
+</p>
+<pre>es := NewEmptyStreamEventStream(func(o *EmptyStreamEventStream{
+    es.Reader = myMockStreamReader
+})
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="EmptyStreamEventStream.Close">func (*EmptyStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=7149:7202#L212">Close</a>
+					<a class="permalink" href="index.html#EmptyStreamEventStream.Close">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a>) Close() (err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Close closes the stream. This will also cause the stream to be closed.
+Close must be called when done using the stream API. Not calling Close
+may result in resource leaks.
+</p>
+<p>
+You can use the closing of the Reader&#39;s Events channel to terminate your
+application&#39;s read from the API&#39;s stream.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyStreamEventStream.Err">func (*EmptyStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=7582:7627#L230">Err</a>
+					<a class="permalink" href="index.html#EmptyStreamEventStream.Err">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a>) Err() <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Err returns any error that occurred while reading or writing EventStream
+Events from the service API&#39;s response. Returns nil if there were no errors.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyStreamEventStream.Events">func (*EmptyStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=5934:6005#L176">Events</a>
+					<a class="permalink" href="index.html#EmptyStreamEventStream.Events">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a>) Events() &lt;-chan <a href="index.html#EmptyEventStreamEvent">EmptyEventStreamEvent</a></pre>
+				<p>
+Events returns a channel to read events from.
+</p>
+<p>
+These events are:
+</p>
+<pre>* EmptyEventStreamUnknownEvent
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EmptyStreamInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=23442:23505#L741">EmptyStreamInput</a>
+				<a class="permalink" href="index.html#EmptyStreamInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type EmptyStreamInput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EmptyStreamInput.GoString">func (EmptyStreamInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=24080:24123#L759">GoString</a>
+					<a class="permalink" href="index.html#EmptyStreamInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyStreamInput">EmptyStreamInput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyStreamInput.String">func (EmptyStreamInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=23755:23796#L750">String</a>
+					<a class="permalink" href="index.html#EmptyStreamInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyStreamInput">EmptyStreamInput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EmptyStreamOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=24148:24250#L763">EmptyStreamOutput</a>
+				<a class="permalink" href="index.html#EmptyStreamOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type EmptyStreamOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EmptyStreamOutput.GetStream">func (*EmptyStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=24960:25023#L788">GetStream</a>
+					<a class="permalink" href="index.html#EmptyStreamOutput.GetStream">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>) GetStream() *<a href="index.html#EmptyStreamEventStream">EmptyStreamEventStream</a></pre>
+				<p>
+GetStream returns the type to interact with the event stream.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyStreamOutput.GoString">func (EmptyStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=24826:24870#L783">GoString</a>
+					<a class="permalink" href="index.html#EmptyStreamOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EmptyStreamOutput.String">func (EmptyStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=24500:24542#L774">String</a>
+					<a class="permalink" href="index.html#EmptyStreamOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EventStreamEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=25357:25466#L804">EventStreamEvent</a>
+				<a class="permalink" href="index.html#EventStreamEvent">¶</a>
+				
+				
+			</h2>
+			<p>
+EventStreamEvent groups together all EventStream
+events writes for EventStream.
+</p>
+<p>
+These events are:
+</p>
+<pre>* EmptyEvent
+* ExplicitPayloadEvent
+* HeaderOnlyEvent
+* ImplicitPayloadEvent
+* PayloadOnlyEvent
+* PayloadOnlyBlobEvent
+* PayloadOnlyStringEvent
+</pre>
+
+			<pre>type EventStreamEvent interface {
+    <a href="../../../../../protocol/eventstream/eventstreamapi/index.html">eventstreamapi</a>.<a href="../../../../../protocol/eventstream/eventstreamapi/index.html#Marshaler">Marshaler</a>
+    <a href="../../../../../protocol/eventstream/eventstreamapi/index.html">eventstreamapi</a>.<a href="../../../../../protocol/eventstream/eventstreamapi/index.html#Unmarshaler">Unmarshaler</a>
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventStreamReader">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=25932:26244#L825">EventStreamReader</a>
+				<a class="permalink" href="index.html#EventStreamReader">¶</a>
+				
+				
+			</h2>
+			<p>
+EventStreamReader provides the interface for reading to the stream. The
+default implementation for this interface will be EventStream.
+</p>
+<p>
+The reader&#39;s Close method must allow multiple concurrent calls.
+</p>
+<p>
+These events are:
+</p>
+<pre>* EmptyEvent
+* ExplicitPayloadEvent
+* HeaderOnlyEvent
+* ImplicitPayloadEvent
+* PayloadOnlyEvent
+* PayloadOnlyBlobEvent
+* PayloadOnlyStringEvent
+* EventStreamUnknownEvent
+</pre>
+
+			<pre>type EventStreamReader interface {
+    <span class="comment">// Returns a channel of events as they are read from the event stream.</span>
+    Events() &lt;-chan <a href="index.html#EventStreamEvent">EventStreamEvent</a>
+
+    <span class="comment">// Close will stop the reader reading events from the stream.</span>
+    Close() <a href="../../../../../../../../../builtin/index.html#error">error</a>
+
+    <span class="comment">// Returns any error that has occurred while reading from the event stream.</span>
+    Err() <a href="../../../../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventStreamUnknownEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=28777:28861#L945">EventStreamUnknownEvent</a>
+				<a class="permalink" href="index.html#EventStreamUnknownEvent">¶</a>
+				
+				
+			</h2>
+			<p>
+EventStreamUnknownEvent provides a failsafe event for the
+EventStream group of events when an unknown event is received.
+</p>
+
+			<pre>type EventStreamUnknownEvent struct {
+<span id="EventStreamUnknownEvent.Type"></span>    Type    <a href="../../../../../../../../../builtin/index.html#string">string</a>
+<span id="EventStreamUnknownEvent.Message"></span>    Message <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EventStreamUnknownEvent.MarshalEvent">func (*EventStreamUnknownEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=29147:29264#L956">MarshalEvent</a>
+					<a class="permalink" href="index.html#EventStreamUnknownEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#EventStreamUnknownEvent">EventStreamUnknownEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>,
+)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="EventStreamUnknownEvent.UnmarshalEvent">func (*EventStreamUnknownEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=29460:29592#L964">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#EventStreamUnknownEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (e *<a href="index.html#EventStreamUnknownEvent">EventStreamUnknownEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the EventStream value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExceptionEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=29635:29874#L972">ExceptionEvent</a>
+				<a class="permalink" href="index.html#ExceptionEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ExceptionEvent struct {
+<span id="ExceptionEvent.RespMetadata"></span>    RespMetadata <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ExceptionEvent.IntVal"></span>    IntVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+<span id="ExceptionEvent.Message_"></span>    Message_ *<a href="../../../../../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExceptionEvent.Code">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=31730:31768#L1035">Code</a>
+					<a class="permalink" href="index.html#ExceptionEvent.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) Code() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.Error">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32072:32111#L1052">Error</a>
+					<a class="permalink" href="index.html#ExceptionEvent.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) Error() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.GoString">func (ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=30447:30488#L995">GoString</a>
+					<a class="permalink" href="index.html#ExceptionEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExceptionEvent">ExceptionEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.MarshalEvent">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=31195:31299#L1018">MarshalEvent</a>
+					<a class="permalink" href="index.html#ExceptionEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.Message">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=31843:31884#L1040">Message</a>
+					<a class="permalink" href="index.html#ExceptionEvent.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) Message() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.OrigErr">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32014:32054#L1048">OrigErr</a>
+					<a class="permalink" href="index.html#ExceptionEvent.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) OrigErr() <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.RequestID">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32412:32455#L1062">RequestID</a>
+					<a class="permalink" href="index.html#ExceptionEvent.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) RequestID() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.StatusCode">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32264:32305#L1057">StatusCode</a>
+					<a class="permalink" href="index.html#ExceptionEvent.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) StatusCode() <a href="../../../../../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.String">func (ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=30124:30163#L986">String</a>
+					<a class="permalink" href="index.html#ExceptionEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExceptionEvent">ExceptionEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent.UnmarshalEvent">func (*ExceptionEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=30794:30917#L1004">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#ExceptionEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent">ExceptionEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the ExceptionEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExceptionEvent2">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32494:32701#L1066">ExceptionEvent2</a>
+				<a class="permalink" href="index.html#ExceptionEvent2">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ExceptionEvent2 struct {
+<span id="ExceptionEvent2.RespMetadata"></span>    RespMetadata <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ExceptionEvent2.Message_"></span>    Message_ *<a href="../../../../../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExceptionEvent2.Code">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=34566:34605#L1127">Code</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) Code() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.Error">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=34912:34952#L1144">Error</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) Error() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.GoString">func (ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=33275:33317#L1087">GoString</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.MarshalEvent">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=34028:34133#L1110">MarshalEvent</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.Message">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=34681:34723#L1132">Message</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) Message() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.OrigErr">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=34853:34894#L1140">OrigErr</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) OrigErr() <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.RequestID">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=35238:35282#L1154">RequestID</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) RequestID() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.StatusCode">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=35089:35131#L1149">StatusCode</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) StatusCode() <a href="../../../../../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.String">func (ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=32951:32991#L1078">String</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExceptionEvent2.UnmarshalEvent">func (*ExceptionEvent2) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=33626:33750#L1096">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#ExceptionEvent2.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExceptionEvent2">ExceptionEvent2</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the ExceptionEvent2 value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExplicitPayloadEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=35321:35580#L1158">ExplicitPayloadEvent</a>
+				<a class="permalink" href="index.html#ExplicitPayloadEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ExplicitPayloadEvent struct {
+<span id="ExplicitPayloadEvent.LongVal"></span>    LongVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;long&#34;`
+
+<span id="ExplicitPayloadEvent.NestedVal"></span>    NestedVal *<a href="index.html#NestedShape">NestedShape</a> `locationName:&#34;NestedVal&#34; type:&#34;structure&#34;`
+
+<span id="ExplicitPayloadEvent.StringVal"></span>    StringVal *<a href="../../../../../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ExplicitPayloadEvent.GoString">func (ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=36159:36206#L1182">GoString</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.MarshalEvent">func (*ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=37603:37713#L1231">MarshalEvent</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.SetLongVal">func (*ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=36277:36349#L1187">SetLongVal</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.SetLongVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) SetLongVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a></pre>
+				<p>
+SetLongVal sets the LongVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.SetNestedVal">func (*ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=36431:36512#L1193">SetNestedVal</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.SetNestedVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) SetNestedVal(v *<a href="index.html#NestedShape">NestedShape</a>) *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a></pre>
+				<p>
+SetNestedVal sets the NestedVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.SetStringVal">func (*ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=36595:36670#L1199">SetStringVal</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.SetStringVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) SetStringVal(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a></pre>
+				<p>
+SetStringVal sets the StringVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.String">func (ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=35830:35875#L1173">String</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ExplicitPayloadEvent.UnmarshalEvent">func (*ExplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=37003:37132#L1209">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#ExplicitPayloadEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ExplicitPayloadEvent">ExplicitPayloadEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the ExplicitPayloadEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetEventStreamEventStream">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=11261:11706#L328">GetEventStreamEventStream</a>
+				<a class="permalink" href="index.html#GetEventStreamEventStream">¶</a>
+				
+				
+			</h2>
+			<p>
+GetEventStreamEventStream provides the event stream handling for the GetEventStream.
+</p>
+<p>
+For testing and mocking the event stream this type should be initialized via
+the NewGetEventStreamEventStream constructor function. Using the functional options
+to pass in nested mock behavior.
+</p>
+
+			<pre>type GetEventStreamEventStream struct {
+
+<span id="GetEventStreamEventStream.Reader"></span>    <span class="comment">// Reader is the EventStream reader for the EventStream</span>
+    <span class="comment">// events. This value is automatically set by the SDK when the API call is made</span>
+    <span class="comment">// Use this member when unit testing your code with the SDK to mock out the</span>
+    <span class="comment">// EventStream Reader.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Must not be nil.</span>
+    Reader <a href="index.html#EventStreamReader">EventStreamReader</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewGetEventStreamEventStream">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=12109:12211#L354">NewGetEventStreamEventStream</a>
+					<a class="permalink" href="index.html#NewGetEventStreamEventStream">¶</a>
+					
+					
+				</h3>
+				<pre>func NewGetEventStreamEventStream(opts ...func(*<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a>)) *<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a></pre>
+				<p>
+NewGetEventStreamEventStream initializes an GetEventStreamEventStream.
+This function should only be used for testing and mocking the GetEventStreamEventStream
+stream within your application.
+</p>
+<p>
+The Reader member must be set before reading events from the stream.
+</p>
+<pre>es := NewGetEventStreamEventStream(func(o *GetEventStreamEventStream{
+    es.Reader = myMockStreamReader
+})
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="GetEventStreamEventStream.Close">func (*GetEventStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=14586:14642#L446">Close</a>
+					<a class="permalink" href="index.html#GetEventStreamEventStream.Close">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a>) Close() (err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Close closes the stream. This will also cause the stream to be closed.
+Close must be called when done using the stream API. Not calling Close
+may result in resource leaks.
+</p>
+<p>
+You can use the closing of the Reader&#39;s Events channel to terminate your
+application&#39;s read from the API&#39;s stream.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamEventStream.Err">func (*GetEventStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=15025:15073#L464">Err</a>
+					<a class="permalink" href="index.html#GetEventStreamEventStream.Err">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a>) Err() <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Err returns any error that occurred while reading or writing EventStream
+Events from the service API&#39;s response. Returns nil if there were no errors.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamEventStream.Events">func (*GetEventStreamEventStream) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=13380:13449#L410">Events</a>
+					<a class="permalink" href="index.html#GetEventStreamEventStream.Events">¶</a>
+					
+					
+				</h3>
+				<pre>func (es *<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a>) Events() &lt;-chan <a href="index.html#EventStreamEvent">EventStreamEvent</a></pre>
+				<p>
+Events returns a channel to read events from.
+</p>
+<p>
+These events are:
+</p>
+<pre>* EmptyEvent
+* ExplicitPayloadEvent
+* HeaderOnlyEvent
+* ImplicitPayloadEvent
+* PayloadOnlyEvent
+* PayloadOnlyBlobEvent
+* PayloadOnlyStringEvent
+* EventStreamUnknownEvent
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetEventStreamInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=38117:38218#L1243">GetEventStreamInput</a>
+				<a class="permalink" href="index.html#GetEventStreamInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetEventStreamInput struct {
+<span id="GetEventStreamInput.InputVal"></span>    InputVal *<a href="../../../../../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetEventStreamInput.GoString">func (GetEventStreamInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=38796:38842#L1263">GoString</a>
+					<a class="permalink" href="index.html#GetEventStreamInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEventStreamInput">GetEventStreamInput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamInput.SetInputVal">func (*GetEventStreamInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=38915:38987#L1268">SetInputVal</a>
+					<a class="permalink" href="index.html#GetEventStreamInput.SetInputVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEventStreamInput">GetEventStreamInput</a>) SetInputVal(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEventStreamInput">GetEventStreamInput</a></pre>
+				<p>
+SetInputVal sets the InputVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamInput.String">func (GetEventStreamInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=38468:38512#L1254">String</a>
+					<a class="permalink" href="index.html#GetEventStreamInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEventStreamInput">GetEventStreamInput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetEventStreamOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=39020:39194#L1273">GetEventStreamOutput</a>
+				<a class="permalink" href="index.html#GetEventStreamOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetEventStreamOutput struct {
+<span id="GetEventStreamOutput.IntVal"></span>    IntVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+<span id="GetEventStreamOutput.StrVal"></span>    StrVal *<a href="../../../../../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetEventStreamOutput.GetStream">func (*GetEventStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=40203:40272#L1314">GetStream</a>
+					<a class="permalink" href="index.html#GetEventStreamOutput.GetStream">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>) GetStream() *<a href="index.html#GetEventStreamEventStream">GetEventStreamEventStream</a></pre>
+				<p>
+GetStream returns the type to interact with the event stream.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamOutput.GoString">func (GetEventStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=39773:39820#L1297">GoString</a>
+					<a class="permalink" href="index.html#GetEventStreamOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamOutput.SetIntVal">func (*GetEventStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=39889:39960#L1302">SetIntVal</a>
+					<a class="permalink" href="index.html#GetEventStreamOutput.SetIntVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>) SetIntVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a></pre>
+				<p>
+SetIntVal sets the IntVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamOutput.SetStrVal">func (*GetEventStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=40035:40107#L1308">SetStrVal</a>
+					<a class="permalink" href="index.html#GetEventStreamOutput.SetStrVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>) SetStrVal(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a></pre>
+				<p>
+SetStrVal sets the StrVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetEventStreamOutput.String">func (GetEventStreamOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=39444:39489#L1288">String</a>
+					<a class="permalink" href="index.html#GetEventStreamOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HeaderOnlyEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=40300:40842#L1318">HeaderOnlyEvent</a>
+				<a class="permalink" href="index.html#HeaderOnlyEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type HeaderOnlyEvent struct {
+
+<span id="HeaderOnlyEvent.BlobVal"></span>    <span class="comment">// BlobVal is automatically base64 encoded/decoded by the SDK.</span>
+    BlobVal []<a href="../../../../../../../../../builtin/index.html#byte">byte</a> `location:&#34;header&#34; type:&#34;blob&#34;`
+
+<span id="HeaderOnlyEvent.BoolVal"></span>    BoolVal *<a href="../../../../../../../../../builtin/index.html#bool">bool</a> `location:&#34;header&#34; type:&#34;boolean&#34;`
+
+<span id="HeaderOnlyEvent.ByteVal"></span>    ByteVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;byte&#34;`
+
+<span id="HeaderOnlyEvent.IntegerVal"></span>    IntegerVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;integer&#34;`
+
+<span id="HeaderOnlyEvent.LongVal"></span>    LongVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;long&#34;`
+
+<span id="HeaderOnlyEvent.ShortVal"></span>    ShortVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;short&#34;`
+
+<span id="HeaderOnlyEvent.StringVal"></span>    StringVal *<a href="../../../../../../../../../builtin/index.html#string">string</a> `location:&#34;header&#34; type:&#34;string&#34;`
+
+<span id="HeaderOnlyEvent.TimeVal"></span>    TimeVal *<a href="../../../../../../../../../time/index.html">time</a>.<a href="../../../../../../../../../time/index.html#Time">Time</a> `location:&#34;header&#34; type:&#34;timestamp&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HeaderOnlyEvent.GoString">func (HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41416:41458#L1353">GoString</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.MarshalEvent">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=44016:44121#L1454">MarshalEvent</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetBlobVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41529:41592#L1358">SetBlobVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetBlobVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetBlobVal(v []<a href="../../../../../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetBlobVal sets the BlobVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetBoolVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41669:41730#L1364">SetBoolVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetBoolVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetBoolVal(v <a href="../../../../../../../../../builtin/index.html#bool">bool</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetBoolVal sets the BoolVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetByteVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41808:41870#L1370">SetByteVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetByteVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetByteVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetByteVal sets the ByteVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetIntegerVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41954:42019#L1376">SetIntegerVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetIntegerVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetIntegerVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetIntegerVal sets the IntegerVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetLongVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=42100:42162#L1382">SetLongVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetLongVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetLongVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetLongVal sets the LongVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetShortVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=42242:42305#L1388">SetShortVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetShortVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetShortVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetShortVal sets the ShortVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetStringVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=42388:42453#L1394">SetStringVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetStringVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetStringVal(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetStringVal sets the StringVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.SetTimeVal">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=42533:42599#L1400">SetTimeVal</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.SetTimeVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) SetTimeVal(v <a href="../../../../../../../../../time/index.html">time</a>.<a href="../../../../../../../../../time/index.html#Time">Time</a>) *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a></pre>
+				<p>
+SetTimeVal sets the TimeVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.String">func (HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=41092:41132#L1344">String</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HeaderOnlyEvent.UnmarshalEvent">func (*HeaderOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=42915:43039#L1410">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#HeaderOnlyEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HeaderOnlyEvent">HeaderOnlyEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the HeaderOnlyEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImplicitPayloadEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=44799:44985#L1467">ImplicitPayloadEvent</a>
+				<a class="permalink" href="index.html#ImplicitPayloadEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ImplicitPayloadEvent struct {
+<span id="ImplicitPayloadEvent.ByteVal"></span>    ByteVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `location:&#34;header&#34; type:&#34;byte&#34;`
+
+<span id="ImplicitPayloadEvent.IntegerVal"></span>    IntegerVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+<span id="ImplicitPayloadEvent.ShortVal"></span>    ShortVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `type:&#34;short&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ImplicitPayloadEvent.GoString">func (ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=45564:45611#L1491">GoString</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.MarshalEvent">func (*ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=46917:47027#L1537">MarshalEvent</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.SetByteVal">func (*ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=45682:45754#L1496">SetByteVal</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.SetByteVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) SetByteVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a></pre>
+				<p>
+SetByteVal sets the ByteVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.SetIntegerVal">func (*ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=45838:45913#L1502">SetIntegerVal</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.SetIntegerVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) SetIntegerVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a></pre>
+				<p>
+SetIntegerVal sets the IntegerVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.SetShortVal">func (*ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=45996:46069#L1508">SetShortVal</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.SetShortVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) SetShortVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a></pre>
+				<p>
+SetShortVal sets the ShortVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.String">func (ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=45235:45280#L1482">String</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImplicitPayloadEvent.UnmarshalEvent">func (*ImplicitPayloadEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=46401:46530#L1518">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#ImplicitPayloadEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImplicitPayloadEvent">ImplicitPayloadEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the ImplicitPayloadEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NestedShape">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=47367:47491#L1548">NestedShape</a>
+				<a class="permalink" href="index.html#NestedShape">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type NestedShape struct {
+<span id="NestedShape.IntVal"></span>    IntVal *<a href="../../../../../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+<span id="NestedShape.StrVal"></span>    StrVal *<a href="../../../../../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NestedShape.GoString">func (NestedShape) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=48061:48099#L1570">GoString</a>
+					<a class="permalink" href="index.html#NestedShape.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NestedShape">NestedShape</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NestedShape.SetIntVal">func (*NestedShape) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=48168:48221#L1575">SetIntVal</a>
+					<a class="permalink" href="index.html#NestedShape.SetIntVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NestedShape">NestedShape</a>) SetIntVal(v <a href="../../../../../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#NestedShape">NestedShape</a></pre>
+				<p>
+SetIntVal sets the IntVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NestedShape.SetStrVal">func (*NestedShape) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=48296:48350#L1581">SetStrVal</a>
+					<a class="permalink" href="index.html#NestedShape.SetStrVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NestedShape">NestedShape</a>) SetStrVal(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#NestedShape">NestedShape</a></pre>
+				<p>
+SetStrVal sets the StrVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NestedShape.String">func (NestedShape) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=47741:47777#L1561">String</a>
+					<a class="permalink" href="index.html#NestedShape.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NestedShape">NestedShape</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OtherOperationInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=48381:48447#L1586">OtherOperationInput</a>
+				<a class="permalink" href="index.html#OtherOperationInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OtherOperationInput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OtherOperationInput.GoString">func (OtherOperationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=49025:49071#L1604">GoString</a>
+					<a class="permalink" href="index.html#OtherOperationInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OtherOperationInput">OtherOperationInput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OtherOperationInput.String">func (OtherOperationInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=48697:48741#L1595">String</a>
+					<a class="permalink" href="index.html#OtherOperationInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OtherOperationInput">OtherOperationInput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OtherOperationOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=49096:49163#L1608">OtherOperationOutput</a>
+				<a class="permalink" href="index.html#OtherOperationOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type OtherOperationOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OtherOperationOutput.GoString">func (OtherOperationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=49742:49789#L1626">GoString</a>
+					<a class="permalink" href="index.html#OtherOperationOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OtherOperationOutput">OtherOperationOutput</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OtherOperationOutput.String">func (OtherOperationOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=49413:49458#L1617">String</a>
+					<a class="permalink" href="index.html#OtherOperationOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#OtherOperationOutput">OtherOperationOutput</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PayloadOnlyBlobEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=49814:50006#L1630">PayloadOnlyBlobEvent</a>
+				<a class="permalink" href="index.html#PayloadOnlyBlobEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PayloadOnlyBlobEvent struct {
+
+<span id="PayloadOnlyBlobEvent.BlobPayload"></span>    <span class="comment">// BlobPayload is automatically base64 encoded/decoded by the SDK.</span>
+    BlobPayload []<a href="../../../../../../../../../builtin/index.html#byte">byte</a> `type:&#34;blob&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PayloadOnlyBlobEvent.GoString">func (PayloadOnlyBlobEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=50585:50632#L1651">GoString</a>
+					<a class="permalink" href="index.html#PayloadOnlyBlobEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyBlobEvent.MarshalEvent">func (*PayloadOnlyBlobEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=51495:51605#L1677">MarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyBlobEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyBlobEvent.SetBlobPayload">func (*PayloadOnlyBlobEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=50711:50788#L1656">SetBlobPayload</a>
+					<a class="permalink" href="index.html#PayloadOnlyBlobEvent.SetBlobPayload">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a>) SetBlobPayload(v []<a href="../../../../../../../../../builtin/index.html#byte">byte</a>) *<a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a></pre>
+				<p>
+SetBlobPayload sets the BlobPayload field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyBlobEvent.String">func (PayloadOnlyBlobEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=50256:50301#L1642">String</a>
+					<a class="permalink" href="index.html#PayloadOnlyBlobEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyBlobEvent.UnmarshalEvent">func (*PayloadOnlyBlobEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=51122:51251#L1666">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyBlobEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyBlobEvent">PayloadOnlyBlobEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the PayloadOnlyBlobEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PayloadOnlyEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=51853:52005#L1684">PayloadOnlyEvent</a>
+				<a class="permalink" href="index.html#PayloadOnlyEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PayloadOnlyEvent struct {
+<span id="PayloadOnlyEvent.NestedVal"></span>    NestedVal *<a href="index.html#NestedShape">NestedShape</a> `locationName:&#34;NestedVal&#34; type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PayloadOnlyEvent.GoString">func (PayloadOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=52580:52623#L1704">GoString</a>
+					<a class="permalink" href="index.html#PayloadOnlyEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyEvent.MarshalEvent">func (*PayloadOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=53494:53600#L1733">MarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyEvent.SetNestedVal">func (*PayloadOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=52698:52771#L1709">SetNestedVal</a>
+					<a class="permalink" href="index.html#PayloadOnlyEvent.SetNestedVal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a>) SetNestedVal(v *<a href="index.html#NestedShape">NestedShape</a>) *<a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a></pre>
+				<p>
+SetNestedVal sets the NestedVal field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyEvent.String">func (PayloadOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=52255:52296#L1695">String</a>
+					<a class="permalink" href="index.html#PayloadOnlyEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyEvent.UnmarshalEvent">func (*PayloadOnlyEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=53091:53216#L1719">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyEvent">PayloadOnlyEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the PayloadOnlyEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PayloadOnlyStringEvent">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=53871:54033#L1743">PayloadOnlyStringEvent</a>
+				<a class="permalink" href="index.html#PayloadOnlyStringEvent">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PayloadOnlyStringEvent struct {
+<span id="PayloadOnlyStringEvent.StringPayload"></span>    StringPayload *<a href="../../../../../../../../../builtin/index.html#string">string</a> `locationName:&#34;StringPayload&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PayloadOnlyStringEvent.GoString">func (PayloadOnlyStringEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=54614:54663#L1763">GoString</a>
+					<a class="permalink" href="index.html#PayloadOnlyStringEvent.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a>) GoString() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyStringEvent.MarshalEvent">func (*PayloadOnlyStringEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=55516:55628#L1788">MarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyStringEvent.MarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a>) MarshalEvent(pm <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadMarshaler">PayloadMarshaler</a>) (msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>, err <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+MarshalEvent marshals the type into an stream event value. This method
+should only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyStringEvent.SetStringPayload">func (*PayloadOnlyStringEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=54746:54829#L1768">SetStringPayload</a>
+					<a class="permalink" href="index.html#PayloadOnlyStringEvent.SetStringPayload">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a>) SetStringPayload(v <a href="../../../../../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a></pre>
+				<p>
+SetStringPayload sets the StringPayload field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyStringEvent.String">func (PayloadOnlyStringEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=54283:54330#L1754">String</a>
+					<a class="permalink" href="index.html#PayloadOnlyStringEvent.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a>) String() <a href="../../../../../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PayloadOnlyStringEvent.UnmarshalEvent">func (*PayloadOnlyStringEvent) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=55172:55303#L1778">UnmarshalEvent</a>
+					<a class="permalink" href="index.html#PayloadOnlyStringEvent.UnmarshalEvent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PayloadOnlyStringEvent">PayloadOnlyStringEvent</a>) UnmarshalEvent(
+    payloadUnmarshaler <a href="../../../../../protocol/index.html">protocol</a>.<a href="../../../../../protocol/index.html#PayloadUnmarshaler">PayloadUnmarshaler</a>,
+    msg <a href="../../../../../protocol/eventstream/index.html">eventstream</a>.<a href="../../../../../protocol/eventstream/index.html#Message">Message</a>,
+) <a href="../../../../../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+UnmarshalEvent unmarshals the EventStream Message into the PayloadOnlyStringEvent value.
+This method is only used internally within the SDK&#39;s EventStream handling.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RESTJSONService">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/service.go?s=719:766#L11">RESTJSONService</a>
+				<a class="permalink" href="index.html#RESTJSONService">¶</a>
+				
+				
+			</h2>
+			<p>
+RESTJSONService provides the API operation methods for making requests to
+REST JSON Service. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+RESTJSONService methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type RESTJSONService struct {
+    *<a href="../../../../../../aws/client/index.html">client</a>.<a href="../../../../../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/service.go?s=1753:1824#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../../../../../aws/client/index.html">client</a>.<a href="../../../../../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../../../../../aws/index.html">aws</a>.<a href="../../../../../../aws/index.html#Config">Config</a>) *<a href="index.html#RESTJSONService">RESTJSONService</a></pre>
+				<p>
+New creates a new instance of the RESTJSONService client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a RESTJSONService client from just a session.
+svc := restjsonservice.New(mySession)
+
+// Create a RESTJSONService client with additional configuration
+svc := restjsonservice.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="RESTJSONService.EmptyStream">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=2826:2916#L73">EmptyStream</a>
+					<a class="permalink" href="index.html#RESTJSONService.EmptyStream">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) EmptyStream(input *<a href="index.html#EmptyStreamInput">EmptyStreamInput</a>) (*<a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+EmptyStream API operation for REST JSON Service.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for REST JSON Service&#39;s
+API operation EmptyStream for usage and error information.
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/EmptyStream">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/EmptyStream</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.EmptyStreamRequest">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=1664:1783#L40">EmptyStreamRequest</a>
+					<a class="permalink" href="index.html#RESTJSONService.EmptyStreamRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) EmptyStreamRequest(input *<a href="index.html#EmptyStreamInput">EmptyStreamInput</a>) (req *<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>)</pre>
+				<p>
+EmptyStreamRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the EmptyStream operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See EmptyStream for more information on using the EmptyStream
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the EmptyStreamRequest method.
+req, resp := client.EmptyStreamRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/EmptyStream">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/EmptyStream</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.EmptyStreamWithContext">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=3463:3605#L87">EmptyStreamWithContext</a>
+					<a class="permalink" href="index.html#RESTJSONService.EmptyStreamWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) EmptyStreamWithContext(ctx <a href="../../../../../../aws/index.html">aws</a>.<a href="../../../../../../aws/index.html#Context">Context</a>, input *<a href="index.html#EmptyStreamInput">EmptyStreamInput</a>, opts ...<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#EmptyStreamOutput">EmptyStreamOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+EmptyStreamWithContext is the same as EmptyStream with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See EmptyStream for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.GetEventStream">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=10016:10115#L300">GetEventStream</a>
+					<a class="permalink" href="index.html#RESTJSONService.GetEventStream">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) GetEventStream(input *<a href="index.html#GetEventStreamInput">GetEventStreamInput</a>) (*<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetEventStream API operation for REST JSON Service.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for REST JSON Service&#39;s
+API operation GetEventStream for usage and error information.
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/GetEventStream">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/GetEventStream</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.GetEventStreamRequest">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=8824:8952#L267">GetEventStreamRequest</a>
+					<a class="permalink" href="index.html#RESTJSONService.GetEventStreamRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) GetEventStreamRequest(input *<a href="index.html#GetEventStreamInput">GetEventStreamInput</a>) (req *<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>)</pre>
+				<p>
+GetEventStreamRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetEventStream operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetEventStream for more information on using the GetEventStream
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetEventStreamRequest method.
+req, resp := client.GetEventStreamRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/GetEventStream">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/GetEventStream</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.GetEventStreamWithContext">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=10674:10825#L314">GetEventStreamWithContext</a>
+					<a class="permalink" href="index.html#RESTJSONService.GetEventStreamWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) GetEventStreamWithContext(ctx <a href="../../../../../../aws/index.html">aws</a>.<a href="../../../../../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetEventStreamInput">GetEventStreamInput</a>, opts ...<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetEventStreamOutput">GetEventStreamOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetEventStreamWithContext is the same as GetEventStream with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetEventStream for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.OtherOperation">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=17258:17357#L531">OtherOperation</a>
+					<a class="permalink" href="index.html#RESTJSONService.OtherOperation">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) OtherOperation(input *<a href="index.html#OtherOperationInput">OtherOperationInput</a>) (*<a href="index.html#OtherOperationOutput">OtherOperationOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+OtherOperation API operation for REST JSON Service.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for REST JSON Service&#39;s
+API operation OtherOperation for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ExceptionEvent2
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/OtherOperation">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/OtherOperation</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.OtherOperationRequest">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=16270:16398#L501">OtherOperationRequest</a>
+					<a class="permalink" href="index.html#RESTJSONService.OtherOperationRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) OtherOperationRequest(input *<a href="index.html#OtherOperationInput">OtherOperationInput</a>) (req *<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#OtherOperationOutput">OtherOperationOutput</a>)</pre>
+				<p>
+OtherOperationRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the OtherOperation operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See OtherOperation for more information on using the OtherOperation
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the OtherOperationRequest method.
+req, resp := client.OtherOperationRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/OtherOperation">https://docs.aws.amazon.com/goto/WebAPI/RESTJSONService-0000-00-00/OtherOperation</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RESTJSONService.OtherOperationWithContext">func (*RESTJSONService) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/private/model/api/codegentest/service/restjsonservice/api.go?s=17916:18067#L545">OtherOperationWithContext</a>
+					<a class="permalink" href="index.html#RESTJSONService.OtherOperationWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#RESTJSONService">RESTJSONService</a>) OtherOperationWithContext(ctx <a href="../../../../../../aws/index.html">aws</a>.<a href="../../../../../../aws/index.html#Context">Context</a>, input *<a href="index.html#OtherOperationInput">OtherOperationInput</a>, opts ...<a href="../../../../../../aws/request/index.html">request</a>.<a href="../../../../../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#OtherOperationOutput">OtherOperationOutput</a>, <a href="../../../../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+OtherOperationWithContext is the same as OtherOperation with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See OtherOperation for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="restjsonserviceiface/index.html">restjsonserviceiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package restjsonserviceiface provides an interface to enable mocking the REST JSON Service service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

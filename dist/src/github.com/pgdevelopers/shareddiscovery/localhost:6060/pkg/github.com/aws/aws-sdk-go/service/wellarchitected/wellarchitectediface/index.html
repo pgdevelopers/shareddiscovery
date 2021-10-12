@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>wellarchitectediface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package wellarchitectediface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/wellarchitected/wellarchitectediface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package wellarchitectediface provides an interface to enable mocking the AWS Well-Architected Tool service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#WellArchitectedAPI">type WellArchitectedAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/wellarchitected/wellarchitectediface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="WellArchitectedAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/wellarchitected/wellarchitectediface/interface.go?s=2290:16809#L52">WellArchitectedAPI</a>
+				<a class="permalink" href="index.html#WellArchitectedAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+WellArchitectedAPI provides an interface to enable mocking the
+wellarchitected.WellArchitected service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Well-Architected Tool.
+func myFunc(svc wellarchitectediface.WellArchitectedAPI) bool {
+    // Make svc.AssociateLenses request
+}
+
+func main() {
+    sess := session.New()
+    svc := wellarchitected.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockWellArchitectedClient struct {
+    wellarchitectediface.WellArchitectedAPI
+}
+func (m *mockWellArchitectedClient) AssociateLenses(input *wellarchitected.AssociateLensesInput) (*wellarchitected.AssociateLensesOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockWellArchitectedClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type WellArchitectedAPI interface {
+    AssociateLenses(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesInput">AssociateLensesInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesOutput">AssociateLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateLensesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesInput">AssociateLensesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesOutput">AssociateLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateLensesRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesInput">AssociateLensesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#AssociateLensesOutput">AssociateLensesOutput</a>)
+
+    CreateMilestone(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneInput">CreateMilestoneInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneOutput">CreateMilestoneOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMilestoneWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneInput">CreateMilestoneInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneOutput">CreateMilestoneOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMilestoneRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneInput">CreateMilestoneInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateMilestoneOutput">CreateMilestoneOutput</a>)
+
+    CreateWorkload(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadInput">CreateWorkloadInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadOutput">CreateWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorkloadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadInput">CreateWorkloadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadOutput">CreateWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorkloadRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadInput">CreateWorkloadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadOutput">CreateWorkloadOutput</a>)
+
+    CreateWorkloadShare(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareInput">CreateWorkloadShareInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareOutput">CreateWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorkloadShareWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareInput">CreateWorkloadShareInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareOutput">CreateWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateWorkloadShareRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareInput">CreateWorkloadShareInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#CreateWorkloadShareOutput">CreateWorkloadShareOutput</a>)
+
+    DeleteWorkload(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadInput">DeleteWorkloadInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadOutput">DeleteWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorkloadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadInput">DeleteWorkloadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadOutput">DeleteWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorkloadRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadInput">DeleteWorkloadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadOutput">DeleteWorkloadOutput</a>)
+
+    DeleteWorkloadShare(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareInput">DeleteWorkloadShareInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareOutput">DeleteWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorkloadShareWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareInput">DeleteWorkloadShareInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareOutput">DeleteWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteWorkloadShareRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareInput">DeleteWorkloadShareInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DeleteWorkloadShareOutput">DeleteWorkloadShareOutput</a>)
+
+    DisassociateLenses(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesInput">DisassociateLensesInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesOutput">DisassociateLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateLensesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesInput">DisassociateLensesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesOutput">DisassociateLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateLensesRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesInput">DisassociateLensesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#DisassociateLensesOutput">DisassociateLensesOutput</a>)
+
+    GetAnswer(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerInput">GetAnswerInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerOutput">GetAnswerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnswerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerInput">GetAnswerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerOutput">GetAnswerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAnswerRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerInput">GetAnswerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetAnswerOutput">GetAnswerOutput</a>)
+
+    GetLensReview(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewInput">GetLensReviewInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewOutput">GetLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensReviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewInput">GetLensReviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewOutput">GetLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensReviewRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewInput">GetLensReviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewOutput">GetLensReviewOutput</a>)
+
+    GetLensReviewReport(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportInput">GetLensReviewReportInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportOutput">GetLensReviewReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensReviewReportWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportInput">GetLensReviewReportInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportOutput">GetLensReviewReportOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensReviewReportRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportInput">GetLensReviewReportInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensReviewReportOutput">GetLensReviewReportOutput</a>)
+
+    GetLensVersionDifference(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceInput">GetLensVersionDifferenceInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceOutput">GetLensVersionDifferenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensVersionDifferenceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceInput">GetLensVersionDifferenceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceOutput">GetLensVersionDifferenceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLensVersionDifferenceRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceInput">GetLensVersionDifferenceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetLensVersionDifferenceOutput">GetLensVersionDifferenceOutput</a>)
+
+    GetMilestone(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneInput">GetMilestoneInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneOutput">GetMilestoneOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMilestoneWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneInput">GetMilestoneInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneOutput">GetMilestoneOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMilestoneRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneInput">GetMilestoneInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetMilestoneOutput">GetMilestoneOutput</a>)
+
+    GetWorkload(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadInput">GetWorkloadInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadOutput">GetWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWorkloadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadInput">GetWorkloadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadOutput">GetWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetWorkloadRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadInput">GetWorkloadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#GetWorkloadOutput">GetWorkloadOutput</a>)
+
+    ListAnswers(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersInput">ListAnswersInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersOutput">ListAnswersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnswersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersInput">ListAnswersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersOutput">ListAnswersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListAnswersRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersInput">ListAnswersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersOutput">ListAnswersOutput</a>)
+
+    ListAnswersPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersInput">ListAnswersInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersOutput">ListAnswersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListAnswersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersInput">ListAnswersInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListAnswersOutput">ListAnswersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLensReviewImprovements(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsInput">ListLensReviewImprovementsInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsOutput">ListLensReviewImprovementsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensReviewImprovementsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsInput">ListLensReviewImprovementsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsOutput">ListLensReviewImprovementsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensReviewImprovementsRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsInput">ListLensReviewImprovementsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsOutput">ListLensReviewImprovementsOutput</a>)
+
+    ListLensReviewImprovementsPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsInput">ListLensReviewImprovementsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsOutput">ListLensReviewImprovementsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLensReviewImprovementsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsInput">ListLensReviewImprovementsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewImprovementsOutput">ListLensReviewImprovementsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLensReviews(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsInput">ListLensReviewsInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsOutput">ListLensReviewsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensReviewsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsInput">ListLensReviewsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsOutput">ListLensReviewsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensReviewsRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsInput">ListLensReviewsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsOutput">ListLensReviewsOutput</a>)
+
+    ListLensReviewsPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsInput">ListLensReviewsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsOutput">ListLensReviewsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLensReviewsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsInput">ListLensReviewsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensReviewsOutput">ListLensReviewsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListLenses(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesInput">ListLensesInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesOutput">ListLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesInput">ListLensesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesOutput">ListLensesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListLensesRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesInput">ListLensesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesOutput">ListLensesOutput</a>)
+
+    ListLensesPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesInput">ListLensesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesOutput">ListLensesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListLensesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesInput">ListLensesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListLensesOutput">ListLensesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListMilestones(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesInput">ListMilestonesInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesOutput">ListMilestonesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMilestonesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesInput">ListMilestonesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesOutput">ListMilestonesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMilestonesRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesInput">ListMilestonesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesOutput">ListMilestonesOutput</a>)
+
+    ListMilestonesPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesInput">ListMilestonesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesOutput">ListMilestonesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMilestonesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesInput">ListMilestonesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListMilestonesOutput">ListMilestonesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListNotifications(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListNotificationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListNotificationsRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>)
+
+    ListNotificationsPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListNotificationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsInput">ListNotificationsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListNotificationsOutput">ListNotificationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListShareInvitations(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsInput">ListShareInvitationsInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsOutput">ListShareInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListShareInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsInput">ListShareInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsOutput">ListShareInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListShareInvitationsRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsInput">ListShareInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsOutput">ListShareInvitationsOutput</a>)
+
+    ListShareInvitationsPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsInput">ListShareInvitationsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsOutput">ListShareInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListShareInvitationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsInput">ListShareInvitationsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListShareInvitationsOutput">ListShareInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    ListWorkloadShares(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesInput">ListWorkloadSharesInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesOutput">ListWorkloadSharesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorkloadSharesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesInput">ListWorkloadSharesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesOutput">ListWorkloadSharesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorkloadSharesRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesInput">ListWorkloadSharesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesOutput">ListWorkloadSharesOutput</a>)
+
+    ListWorkloadSharesPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesInput">ListWorkloadSharesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesOutput">ListWorkloadSharesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorkloadSharesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesInput">ListWorkloadSharesInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadSharesOutput">ListWorkloadSharesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListWorkloads(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsInput">ListWorkloadsInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsOutput">ListWorkloadsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorkloadsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsInput">ListWorkloadsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsOutput">ListWorkloadsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListWorkloadsRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsInput">ListWorkloadsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsOutput">ListWorkloadsOutput</a>)
+
+    ListWorkloadsPages(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsInput">ListWorkloadsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsOutput">ListWorkloadsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListWorkloadsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsInput">ListWorkloadsInput</a>, func(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#ListWorkloadsOutput">ListWorkloadsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    TagResource(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateAnswer(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerInput">UpdateAnswerInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerOutput">UpdateAnswerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAnswerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerInput">UpdateAnswerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerOutput">UpdateAnswerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAnswerRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerInput">UpdateAnswerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateAnswerOutput">UpdateAnswerOutput</a>)
+
+    UpdateLensReview(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewInput">UpdateLensReviewInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewOutput">UpdateLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLensReviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewInput">UpdateLensReviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewOutput">UpdateLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLensReviewRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewInput">UpdateLensReviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateLensReviewOutput">UpdateLensReviewOutput</a>)
+
+    UpdateShareInvitation(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationInput">UpdateShareInvitationInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationOutput">UpdateShareInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateShareInvitationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationInput">UpdateShareInvitationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationOutput">UpdateShareInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateShareInvitationRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationInput">UpdateShareInvitationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateShareInvitationOutput">UpdateShareInvitationOutput</a>)
+
+    UpdateWorkload(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadInput">UpdateWorkloadInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadOutput">UpdateWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorkloadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadInput">UpdateWorkloadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadOutput">UpdateWorkloadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorkloadRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadInput">UpdateWorkloadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadOutput">UpdateWorkloadOutput</a>)
+
+    UpdateWorkloadShare(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareInput">UpdateWorkloadShareInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareOutput">UpdateWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorkloadShareWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareInput">UpdateWorkloadShareInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareOutput">UpdateWorkloadShareOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateWorkloadShareRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareInput">UpdateWorkloadShareInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpdateWorkloadShareOutput">UpdateWorkloadShareOutput</a>)
+
+    UpgradeLensReview(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewInput">UpgradeLensReviewInput</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewOutput">UpgradeLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpgradeLensReviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewInput">UpgradeLensReviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewOutput">UpgradeLensReviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpgradeLensReviewRequest(*<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewInput">UpgradeLensReviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">wellarchitected</a>.<a href="../index.html#UpgradeLensReviewOutput">UpgradeLensReviewOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

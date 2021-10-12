@@ -1,0 +1,497 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>rekognitioniface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package rekognitioniface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/rekognition/rekognitioniface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package rekognitioniface provides an interface to enable mocking the Amazon Rekognition service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#RekognitionAPI">type RekognitionAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rekognition/rekognitioniface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="RekognitionAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/rekognition/rekognitioniface/interface.go?s=2200:25296#L52">RekognitionAPI</a>
+				<a class="permalink" href="index.html#RekognitionAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+RekognitionAPI provides an interface to enable mocking the
+rekognition.Rekognition service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Rekognition.
+func myFunc(svc rekognitioniface.RekognitionAPI) bool {
+    // Make svc.CompareFaces request
+}
+
+func main() {
+    sess := session.New()
+    svc := rekognition.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockRekognitionClient struct {
+    rekognitioniface.RekognitionAPI
+}
+func (m *mockRekognitionClient) CompareFaces(input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockRekognitionClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type RekognitionAPI interface {
+    CompareFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesInput">CompareFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesOutput">CompareFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CompareFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesInput">CompareFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesOutput">CompareFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CompareFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesInput">CompareFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CompareFacesOutput">CompareFacesOutput</a>)
+
+    CreateCollection(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionInput">CreateCollectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionOutput">CreateCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCollectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionInput">CreateCollectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionOutput">CreateCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCollectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionInput">CreateCollectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateCollectionOutput">CreateCollectionOutput</a>)
+
+    CreateProject(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectInput">CreateProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectOutput">CreateProjectOutput</a>)
+
+    CreateProjectVersion(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionInput">CreateProjectVersionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionOutput">CreateProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionInput">CreateProjectVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionOutput">CreateProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateProjectVersionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionInput">CreateProjectVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateProjectVersionOutput">CreateProjectVersionOutput</a>)
+
+    CreateStreamProcessor(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorInput">CreateStreamProcessorInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorOutput">CreateStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamProcessorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorInput">CreateStreamProcessorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorOutput">CreateStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStreamProcessorRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorInput">CreateStreamProcessorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#CreateStreamProcessorOutput">CreateStreamProcessorOutput</a>)
+
+    DeleteCollection(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionInput">DeleteCollectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionOutput">DeleteCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCollectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionInput">DeleteCollectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionOutput">DeleteCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCollectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionInput">DeleteCollectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteCollectionOutput">DeleteCollectionOutput</a>)
+
+    DeleteFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesInput">DeleteFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesOutput">DeleteFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesInput">DeleteFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesOutput">DeleteFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesInput">DeleteFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteFacesOutput">DeleteFacesOutput</a>)
+
+    DeleteProject(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectInput">DeleteProjectInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectOutput">DeleteProjectOutput</a>)
+
+    DeleteProjectVersion(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionInput">DeleteProjectVersionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionOutput">DeleteProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionInput">DeleteProjectVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionOutput">DeleteProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteProjectVersionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionInput">DeleteProjectVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteProjectVersionOutput">DeleteProjectVersionOutput</a>)
+
+    DeleteStreamProcessor(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorInput">DeleteStreamProcessorInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorOutput">DeleteStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamProcessorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorInput">DeleteStreamProcessorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorOutput">DeleteStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStreamProcessorRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorInput">DeleteStreamProcessorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DeleteStreamProcessorOutput">DeleteStreamProcessorOutput</a>)
+
+    DescribeCollection(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionInput">DescribeCollectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionOutput">DescribeCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCollectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionInput">DescribeCollectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionOutput">DescribeCollectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCollectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionInput">DescribeCollectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeCollectionOutput">DescribeCollectionOutput</a>)
+
+    DescribeProjectVersions(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsOutput">DescribeProjectVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsOutput">DescribeProjectVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectVersionsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsOutput">DescribeProjectVersionsOutput</a>)
+
+    DescribeProjectVersionsPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsOutput">DescribeProjectVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeProjectVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsOutput">DescribeProjectVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeProjects(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsInput">DescribeProjectsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsOutput">DescribeProjectsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsInput">DescribeProjectsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsOutput">DescribeProjectsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeProjectsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsInput">DescribeProjectsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsOutput">DescribeProjectsOutput</a>)
+
+    DescribeProjectsPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsInput">DescribeProjectsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsOutput">DescribeProjectsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeProjectsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsInput">DescribeProjectsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectsOutput">DescribeProjectsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeStreamProcessor(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorInput">DescribeStreamProcessorInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorOutput">DescribeStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStreamProcessorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorInput">DescribeStreamProcessorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorOutput">DescribeStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStreamProcessorRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorInput">DescribeStreamProcessorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeStreamProcessorOutput">DescribeStreamProcessorOutput</a>)
+
+    DetectCustomLabels(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsInput">DetectCustomLabelsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsOutput">DetectCustomLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectCustomLabelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsInput">DetectCustomLabelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsOutput">DetectCustomLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectCustomLabelsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsInput">DetectCustomLabelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectCustomLabelsOutput">DetectCustomLabelsOutput</a>)
+
+    DetectFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesInput">DetectFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesOutput">DetectFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesInput">DetectFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesOutput">DetectFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesInput">DetectFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectFacesOutput">DetectFacesOutput</a>)
+
+    DetectLabels(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsInput">DetectLabelsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsOutput">DetectLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectLabelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsInput">DetectLabelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsOutput">DetectLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectLabelsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsInput">DetectLabelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectLabelsOutput">DetectLabelsOutput</a>)
+
+    DetectModerationLabels(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsInput">DetectModerationLabelsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsOutput">DetectModerationLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectModerationLabelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsInput">DetectModerationLabelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsOutput">DetectModerationLabelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectModerationLabelsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsInput">DetectModerationLabelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectModerationLabelsOutput">DetectModerationLabelsOutput</a>)
+
+    DetectProtectiveEquipment(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentInput">DetectProtectiveEquipmentInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentOutput">DetectProtectiveEquipmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectProtectiveEquipmentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentInput">DetectProtectiveEquipmentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentOutput">DetectProtectiveEquipmentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectProtectiveEquipmentRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentInput">DetectProtectiveEquipmentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectProtectiveEquipmentOutput">DetectProtectiveEquipmentOutput</a>)
+
+    DetectText(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextInput">DetectTextInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextOutput">DetectTextOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectTextWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextInput">DetectTextInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextOutput">DetectTextOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetectTextRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextInput">DetectTextInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DetectTextOutput">DetectTextOutput</a>)
+
+    GetCelebrityInfo(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoInput">GetCelebrityInfoInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoOutput">GetCelebrityInfoOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCelebrityInfoWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoInput">GetCelebrityInfoInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoOutput">GetCelebrityInfoOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCelebrityInfoRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoInput">GetCelebrityInfoInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityInfoOutput">GetCelebrityInfoOutput</a>)
+
+    GetCelebrityRecognition(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionInput">GetCelebrityRecognitionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionOutput">GetCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCelebrityRecognitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionInput">GetCelebrityRecognitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionOutput">GetCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCelebrityRecognitionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionInput">GetCelebrityRecognitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionOutput">GetCelebrityRecognitionOutput</a>)
+
+    GetCelebrityRecognitionPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionInput">GetCelebrityRecognitionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionOutput">GetCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetCelebrityRecognitionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionInput">GetCelebrityRecognitionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetCelebrityRecognitionOutput">GetCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetContentModeration(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationInput">GetContentModerationInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationOutput">GetContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentModerationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationInput">GetContentModerationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationOutput">GetContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetContentModerationRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationInput">GetContentModerationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationOutput">GetContentModerationOutput</a>)
+
+    GetContentModerationPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationInput">GetContentModerationInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationOutput">GetContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetContentModerationPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationInput">GetContentModerationInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetContentModerationOutput">GetContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetFaceDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionInput">GetFaceDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionOutput">GetFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFaceDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionInput">GetFaceDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionOutput">GetFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFaceDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionInput">GetFaceDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionOutput">GetFaceDetectionOutput</a>)
+
+    GetFaceDetectionPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionInput">GetFaceDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionOutput">GetFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetFaceDetectionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionInput">GetFaceDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceDetectionOutput">GetFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetFaceSearch(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchInput">GetFaceSearchInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchOutput">GetFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFaceSearchWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchInput">GetFaceSearchInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchOutput">GetFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFaceSearchRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchInput">GetFaceSearchInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchOutput">GetFaceSearchOutput</a>)
+
+    GetFaceSearchPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchInput">GetFaceSearchInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchOutput">GetFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetFaceSearchPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchInput">GetFaceSearchInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetFaceSearchOutput">GetFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetLabelDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionInput">GetLabelDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionOutput">GetLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLabelDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionInput">GetLabelDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionOutput">GetLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLabelDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionInput">GetLabelDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionOutput">GetLabelDetectionOutput</a>)
+
+    GetLabelDetectionPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionInput">GetLabelDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionOutput">GetLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetLabelDetectionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionInput">GetLabelDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetLabelDetectionOutput">GetLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetPersonTracking(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingInput">GetPersonTrackingInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingOutput">GetPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPersonTrackingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingInput">GetPersonTrackingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingOutput">GetPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPersonTrackingRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingInput">GetPersonTrackingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingOutput">GetPersonTrackingOutput</a>)
+
+    GetPersonTrackingPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingInput">GetPersonTrackingInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingOutput">GetPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetPersonTrackingPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingInput">GetPersonTrackingInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetPersonTrackingOutput">GetPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetSegmentDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionInput">GetSegmentDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionOutput">GetSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSegmentDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionInput">GetSegmentDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionOutput">GetSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetSegmentDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionInput">GetSegmentDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionOutput">GetSegmentDetectionOutput</a>)
+
+    GetSegmentDetectionPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionInput">GetSegmentDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionOutput">GetSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetSegmentDetectionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionInput">GetSegmentDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetSegmentDetectionOutput">GetSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetTextDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionInput">GetTextDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionOutput">GetTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTextDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionInput">GetTextDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionOutput">GetTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTextDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionInput">GetTextDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionOutput">GetTextDetectionOutput</a>)
+
+    GetTextDetectionPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionInput">GetTextDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionOutput">GetTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetTextDetectionPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionInput">GetTextDetectionInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#GetTextDetectionOutput">GetTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    IndexFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesInput">IndexFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesOutput">IndexFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    IndexFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesInput">IndexFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesOutput">IndexFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    IndexFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesInput">IndexFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#IndexFacesOutput">IndexFacesOutput</a>)
+
+    ListCollections(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsInput">ListCollectionsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsOutput">ListCollectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCollectionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsInput">ListCollectionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsOutput">ListCollectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCollectionsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsInput">ListCollectionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsOutput">ListCollectionsOutput</a>)
+
+    ListCollectionsPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsInput">ListCollectionsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsOutput">ListCollectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCollectionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsInput">ListCollectionsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListCollectionsOutput">ListCollectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesInput">ListFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesOutput">ListFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesInput">ListFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesOutput">ListFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesInput">ListFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesOutput">ListFacesOutput</a>)
+
+    ListFacesPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesInput">ListFacesInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesOutput">ListFacesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFacesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesInput">ListFacesInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListFacesOutput">ListFacesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStreamProcessors(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsInput">ListStreamProcessorsInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsOutput">ListStreamProcessorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamProcessorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsInput">ListStreamProcessorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsOutput">ListStreamProcessorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStreamProcessorsRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsInput">ListStreamProcessorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsOutput">ListStreamProcessorsOutput</a>)
+
+    ListStreamProcessorsPages(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsInput">ListStreamProcessorsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsOutput">ListStreamProcessorsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStreamProcessorsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsInput">ListStreamProcessorsInput</a>, func(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListStreamProcessorsOutput">ListStreamProcessorsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    RecognizeCelebrities(*<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesInput">RecognizeCelebritiesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesOutput">RecognizeCelebritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RecognizeCelebritiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesInput">RecognizeCelebritiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesOutput">RecognizeCelebritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RecognizeCelebritiesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesInput">RecognizeCelebritiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#RecognizeCelebritiesOutput">RecognizeCelebritiesOutput</a>)
+
+    SearchFaces(*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesInput">SearchFacesInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesOutput">SearchFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchFacesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesInput">SearchFacesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesOutput">SearchFacesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchFacesRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesInput">SearchFacesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesOutput">SearchFacesOutput</a>)
+
+    SearchFacesByImage(*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageInput">SearchFacesByImageInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageOutput">SearchFacesByImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchFacesByImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageInput">SearchFacesByImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageOutput">SearchFacesByImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchFacesByImageRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageInput">SearchFacesByImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#SearchFacesByImageOutput">SearchFacesByImageOutput</a>)
+
+    StartCelebrityRecognition(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionInput">StartCelebrityRecognitionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionOutput">StartCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartCelebrityRecognitionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionInput">StartCelebrityRecognitionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionOutput">StartCelebrityRecognitionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartCelebrityRecognitionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionInput">StartCelebrityRecognitionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartCelebrityRecognitionOutput">StartCelebrityRecognitionOutput</a>)
+
+    StartContentModeration(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationInput">StartContentModerationInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationOutput">StartContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartContentModerationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationInput">StartContentModerationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationOutput">StartContentModerationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartContentModerationRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationInput">StartContentModerationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartContentModerationOutput">StartContentModerationOutput</a>)
+
+    StartFaceDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionInput">StartFaceDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionOutput">StartFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartFaceDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionInput">StartFaceDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionOutput">StartFaceDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartFaceDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionInput">StartFaceDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceDetectionOutput">StartFaceDetectionOutput</a>)
+
+    StartFaceSearch(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchInput">StartFaceSearchInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchOutput">StartFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartFaceSearchWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchInput">StartFaceSearchInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchOutput">StartFaceSearchOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartFaceSearchRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchInput">StartFaceSearchInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartFaceSearchOutput">StartFaceSearchOutput</a>)
+
+    StartLabelDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionInput">StartLabelDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionOutput">StartLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLabelDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionInput">StartLabelDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionOutput">StartLabelDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLabelDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionInput">StartLabelDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartLabelDetectionOutput">StartLabelDetectionOutput</a>)
+
+    StartPersonTracking(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingInput">StartPersonTrackingInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingOutput">StartPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPersonTrackingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingInput">StartPersonTrackingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingOutput">StartPersonTrackingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartPersonTrackingRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingInput">StartPersonTrackingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartPersonTrackingOutput">StartPersonTrackingOutput</a>)
+
+    StartProjectVersion(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionInput">StartProjectVersionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionOutput">StartProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartProjectVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionInput">StartProjectVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionOutput">StartProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartProjectVersionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionInput">StartProjectVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartProjectVersionOutput">StartProjectVersionOutput</a>)
+
+    StartSegmentDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionInput">StartSegmentDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionOutput">StartSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSegmentDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionInput">StartSegmentDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionOutput">StartSegmentDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSegmentDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionInput">StartSegmentDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartSegmentDetectionOutput">StartSegmentDetectionOutput</a>)
+
+    StartStreamProcessor(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorInput">StartStreamProcessorInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorOutput">StartStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStreamProcessorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorInput">StartStreamProcessorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorOutput">StartStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStreamProcessorRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorInput">StartStreamProcessorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartStreamProcessorOutput">StartStreamProcessorOutput</a>)
+
+    StartTextDetection(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionInput">StartTextDetectionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionOutput">StartTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartTextDetectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionInput">StartTextDetectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionOutput">StartTextDetectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartTextDetectionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionInput">StartTextDetectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StartTextDetectionOutput">StartTextDetectionOutput</a>)
+
+    StopProjectVersion(*<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionInput">StopProjectVersionInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionOutput">StopProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopProjectVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionInput">StopProjectVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionOutput">StopProjectVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopProjectVersionRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionInput">StopProjectVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StopProjectVersionOutput">StopProjectVersionOutput</a>)
+
+    StopStreamProcessor(*<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorInput">StopStreamProcessorInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorOutput">StopStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopStreamProcessorWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorInput">StopStreamProcessorInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorOutput">StopStreamProcessorOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopStreamProcessorRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorInput">StopStreamProcessorInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#StopStreamProcessorOutput">StopStreamProcessorOutput</a>)
+
+    TagResource(*<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    WaitUntilProjectVersionRunning(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilProjectVersionRunningWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilProjectVersionTrainingCompleted(*<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilProjectVersionTrainingCompletedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">rekognition</a>.<a href="../index.html#DescribeProjectVersionsInput">DescribeProjectVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

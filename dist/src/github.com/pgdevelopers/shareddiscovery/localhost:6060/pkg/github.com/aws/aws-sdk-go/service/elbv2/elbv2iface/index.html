@@ -1,0 +1,408 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>elbv2iface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package elbv2iface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/elbv2/elbv2iface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package elbv2iface provides an interface to enable mocking the Elastic Load Balancing service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ELBV2API">type ELBV2API</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/elbv2/elbv2iface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ELBV2API">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/elbv2/elbv2iface/interface.go?s=2156:15470#L52">ELBV2API</a>
+				<a class="permalink" href="index.html#ELBV2API">¶</a>
+				
+				
+			</h2>
+			<p>
+ELBV2API provides an interface to enable mocking the
+elbv2.ELBV2 service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Elastic Load Balancing.
+func myFunc(svc elbv2iface.ELBV2API) bool {
+    // Make svc.AddListenerCertificates request
+}
+
+func main() {
+    sess := session.New()
+    svc := elbv2.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockELBV2Client struct {
+    elbv2iface.ELBV2API
+}
+func (m *mockELBV2Client) AddListenerCertificates(input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockELBV2Client{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type ELBV2API interface {
+    AddListenerCertificates(*<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesInput">AddListenerCertificatesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesOutput">AddListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddListenerCertificatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesInput">AddListenerCertificatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesOutput">AddListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddListenerCertificatesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesInput">AddListenerCertificatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#AddListenerCertificatesOutput">AddListenerCertificatesOutput</a>)
+
+    AddTags(*<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>)
+
+    CreateListener(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerInput">CreateListenerInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerOutput">CreateListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateListenerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerInput">CreateListenerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerOutput">CreateListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateListenerRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerInput">CreateListenerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateListenerOutput">CreateListenerOutput</a>)
+
+    CreateLoadBalancer(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerInput">CreateLoadBalancerInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerOutput">CreateLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLoadBalancerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerInput">CreateLoadBalancerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerOutput">CreateLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLoadBalancerRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerInput">CreateLoadBalancerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateLoadBalancerOutput">CreateLoadBalancerOutput</a>)
+
+    CreateRule(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRuleRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleInput">CreateRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateRuleOutput">CreateRuleOutput</a>)
+
+    CreateTargetGroup(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupInput">CreateTargetGroupInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupOutput">CreateTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTargetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupInput">CreateTargetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupOutput">CreateTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTargetGroupRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupInput">CreateTargetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#CreateTargetGroupOutput">CreateTargetGroupOutput</a>)
+
+    DeleteListener(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerInput">DeleteListenerInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerOutput">DeleteListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteListenerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerInput">DeleteListenerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerOutput">DeleteListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteListenerRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerInput">DeleteListenerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteListenerOutput">DeleteListenerOutput</a>)
+
+    DeleteLoadBalancer(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerInput">DeleteLoadBalancerInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerOutput">DeleteLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLoadBalancerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerInput">DeleteLoadBalancerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerOutput">DeleteLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLoadBalancerRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerInput">DeleteLoadBalancerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteLoadBalancerOutput">DeleteLoadBalancerOutput</a>)
+
+    DeleteRule(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRuleRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleInput">DeleteRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteRuleOutput">DeleteRuleOutput</a>)
+
+    DeleteTargetGroup(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupInput">DeleteTargetGroupInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupOutput">DeleteTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTargetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupInput">DeleteTargetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupOutput">DeleteTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTargetGroupRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupInput">DeleteTargetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeleteTargetGroupOutput">DeleteTargetGroupOutput</a>)
+
+    DeregisterTargets(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsInput">DeregisterTargetsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsOutput">DeregisterTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsInput">DeregisterTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsOutput">DeregisterTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterTargetsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsInput">DeregisterTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DeregisterTargetsOutput">DeregisterTargetsOutput</a>)
+
+    DescribeAccountLimits(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsInput">DescribeAccountLimitsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsOutput">DescribeAccountLimitsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountLimitsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsInput">DescribeAccountLimitsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsOutput">DescribeAccountLimitsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAccountLimitsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsInput">DescribeAccountLimitsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeAccountLimitsOutput">DescribeAccountLimitsOutput</a>)
+
+    DescribeListenerCertificates(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesInput">DescribeListenerCertificatesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesOutput">DescribeListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeListenerCertificatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesInput">DescribeListenerCertificatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesOutput">DescribeListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeListenerCertificatesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesInput">DescribeListenerCertificatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenerCertificatesOutput">DescribeListenerCertificatesOutput</a>)
+
+    DescribeListeners(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersInput">DescribeListenersInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersOutput">DescribeListenersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeListenersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersInput">DescribeListenersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersOutput">DescribeListenersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeListenersRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersInput">DescribeListenersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersOutput">DescribeListenersOutput</a>)
+
+    DescribeListenersPages(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersInput">DescribeListenersInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersOutput">DescribeListenersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeListenersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersInput">DescribeListenersInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeListenersOutput">DescribeListenersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeLoadBalancerAttributes(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesInput">DescribeLoadBalancerAttributesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesOutput">DescribeLoadBalancerAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBalancerAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesInput">DescribeLoadBalancerAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesOutput">DescribeLoadBalancerAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBalancerAttributesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesInput">DescribeLoadBalancerAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancerAttributesOutput">DescribeLoadBalancerAttributesOutput</a>)
+
+    DescribeLoadBalancers(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersOutput">DescribeLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBalancersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersOutput">DescribeLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBalancersRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersOutput">DescribeLoadBalancersOutput</a>)
+
+    DescribeLoadBalancersPages(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersOutput">DescribeLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeLoadBalancersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersOutput">DescribeLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeRules(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesInput">DescribeRulesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesOutput">DescribeRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRulesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesInput">DescribeRulesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesOutput">DescribeRulesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRulesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesInput">DescribeRulesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeRulesOutput">DescribeRulesOutput</a>)
+
+    DescribeSSLPolicies(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesInput">DescribeSSLPoliciesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesOutput">DescribeSSLPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSSLPoliciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesInput">DescribeSSLPoliciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesOutput">DescribeSSLPoliciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeSSLPoliciesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesInput">DescribeSSLPoliciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeSSLPoliciesOutput">DescribeSSLPoliciesOutput</a>)
+
+    DescribeTags(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTagsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsInput">DescribeTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTagsOutput">DescribeTagsOutput</a>)
+
+    DescribeTargetGroupAttributes(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesInput">DescribeTargetGroupAttributesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesOutput">DescribeTargetGroupAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetGroupAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesInput">DescribeTargetGroupAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesOutput">DescribeTargetGroupAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetGroupAttributesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesInput">DescribeTargetGroupAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupAttributesOutput">DescribeTargetGroupAttributesOutput</a>)
+
+    DescribeTargetGroups(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsInput">DescribeTargetGroupsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsOutput">DescribeTargetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsInput">DescribeTargetGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsOutput">DescribeTargetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetGroupsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsInput">DescribeTargetGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsOutput">DescribeTargetGroupsOutput</a>)
+
+    DescribeTargetGroupsPages(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsInput">DescribeTargetGroupsInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsOutput">DescribeTargetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeTargetGroupsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsInput">DescribeTargetGroupsInput</a>, func(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetGroupsOutput">DescribeTargetGroupsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeTargetHealth(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthOutput">DescribeTargetHealthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetHealthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthOutput">DescribeTargetHealthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTargetHealthRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthOutput">DescribeTargetHealthOutput</a>)
+
+    ModifyListener(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerInput">ModifyListenerInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerOutput">ModifyListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyListenerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerInput">ModifyListenerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerOutput">ModifyListenerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyListenerRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerInput">ModifyListenerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyListenerOutput">ModifyListenerOutput</a>)
+
+    ModifyLoadBalancerAttributes(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesInput">ModifyLoadBalancerAttributesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesOutput">ModifyLoadBalancerAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyLoadBalancerAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesInput">ModifyLoadBalancerAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesOutput">ModifyLoadBalancerAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyLoadBalancerAttributesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesInput">ModifyLoadBalancerAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyLoadBalancerAttributesOutput">ModifyLoadBalancerAttributesOutput</a>)
+
+    ModifyRule(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleInput">ModifyRuleInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleOutput">ModifyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyRuleWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleInput">ModifyRuleInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleOutput">ModifyRuleOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyRuleRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleInput">ModifyRuleInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyRuleOutput">ModifyRuleOutput</a>)
+
+    ModifyTargetGroup(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupInput">ModifyTargetGroupInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupOutput">ModifyTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyTargetGroupWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupInput">ModifyTargetGroupInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupOutput">ModifyTargetGroupOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyTargetGroupRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupInput">ModifyTargetGroupInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupOutput">ModifyTargetGroupOutput</a>)
+
+    ModifyTargetGroupAttributes(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesInput">ModifyTargetGroupAttributesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesOutput">ModifyTargetGroupAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyTargetGroupAttributesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesInput">ModifyTargetGroupAttributesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesOutput">ModifyTargetGroupAttributesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ModifyTargetGroupAttributesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesInput">ModifyTargetGroupAttributesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#ModifyTargetGroupAttributesOutput">ModifyTargetGroupAttributesOutput</a>)
+
+    RegisterTargets(*<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsInput">RegisterTargetsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsOutput">RegisterTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterTargetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsInput">RegisterTargetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsOutput">RegisterTargetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterTargetsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsInput">RegisterTargetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RegisterTargetsOutput">RegisterTargetsOutput</a>)
+
+    RemoveListenerCertificates(*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesInput">RemoveListenerCertificatesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesOutput">RemoveListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveListenerCertificatesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesInput">RemoveListenerCertificatesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesOutput">RemoveListenerCertificatesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveListenerCertificatesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesInput">RemoveListenerCertificatesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveListenerCertificatesOutput">RemoveListenerCertificatesOutput</a>)
+
+    RemoveTags(*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>)
+
+    SetIpAddressType(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeInput">SetIpAddressTypeInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeOutput">SetIpAddressTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIpAddressTypeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeInput">SetIpAddressTypeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeOutput">SetIpAddressTypeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetIpAddressTypeRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeInput">SetIpAddressTypeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetIpAddressTypeOutput">SetIpAddressTypeOutput</a>)
+
+    SetRulePriorities(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesInput">SetRulePrioritiesInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesOutput">SetRulePrioritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetRulePrioritiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesInput">SetRulePrioritiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesOutput">SetRulePrioritiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetRulePrioritiesRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesInput">SetRulePrioritiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetRulePrioritiesOutput">SetRulePrioritiesOutput</a>)
+
+    SetSecurityGroups(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsInput">SetSecurityGroupsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsOutput">SetSecurityGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetSecurityGroupsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsInput">SetSecurityGroupsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsOutput">SetSecurityGroupsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetSecurityGroupsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsInput">SetSecurityGroupsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetSecurityGroupsOutput">SetSecurityGroupsOutput</a>)
+
+    SetSubnets(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsInput">SetSubnetsInput</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsOutput">SetSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetSubnetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsInput">SetSubnetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsOutput">SetSubnetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetSubnetsRequest(*<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsInput">SetSubnetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#SetSubnetsOutput">SetSubnetsOutput</a>)
+
+    WaitUntilLoadBalancerAvailable(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilLoadBalancerAvailableWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilLoadBalancerExists(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilLoadBalancerExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilLoadBalancersDeleted(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilLoadBalancersDeletedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeLoadBalancersInput">DescribeLoadBalancersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilTargetDeregistered(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilTargetDeregisteredWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilTargetInService(*<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilTargetInServiceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">elbv2</a>.<a href="../index.html#DescribeTargetHealthInput">DescribeTargetHealthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

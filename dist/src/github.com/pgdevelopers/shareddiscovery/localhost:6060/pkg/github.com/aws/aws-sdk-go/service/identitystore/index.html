@@ -1,0 +1,3573 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>identitystore - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package identitystore
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/identitystore&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package identitystore provides the client and types for making API
+requests to AWS SSO Identity Store.
+</p>
+<p>
+The AWS Single Sign-On (SSO) Identity Store service provides a single place
+to retrieve all of your identities (users and groups). For more information
+about AWS, see the AWS Single Sign-On User Guide (<a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15</a> for more information on this service.
+</p>
+<p>
+See identitystore package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/identitystore/">https://docs.aws.amazon.com/sdk-for-go/api/service/identitystore/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS SSO Identity Store with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS SSO Identity Store client IdentityStore for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/identitystore/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/identitystore/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ResourceType_Values">func ResourceType_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AccessDeniedException">type AccessDeniedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Code">func (s *AccessDeniedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Error">func (s *AccessDeniedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.GoString">func (s AccessDeniedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Message">func (s *AccessDeniedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.OrigErr">func (s *AccessDeniedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.RequestID">func (s *AccessDeniedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.StatusCode">func (s *AccessDeniedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.String">func (s AccessDeniedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeGroupInput">type DescribeGroupInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeGroupInput.GoString">func (s DescribeGroupInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupInput.SetGroupId">func (s *DescribeGroupInput) SetGroupId(v string) *DescribeGroupInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupInput.SetIdentityStoreId">func (s *DescribeGroupInput) SetIdentityStoreId(v string) *DescribeGroupInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupInput.String">func (s DescribeGroupInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupInput.Validate">func (s *DescribeGroupInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeGroupOutput">type DescribeGroupOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeGroupOutput.GoString">func (s DescribeGroupOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupOutput.SetDisplayName">func (s *DescribeGroupOutput) SetDisplayName(v string) *DescribeGroupOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupOutput.SetGroupId">func (s *DescribeGroupOutput) SetGroupId(v string) *DescribeGroupOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeGroupOutput.String">func (s DescribeGroupOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeUserInput">type DescribeUserInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeUserInput.GoString">func (s DescribeUserInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserInput.SetIdentityStoreId">func (s *DescribeUserInput) SetIdentityStoreId(v string) *DescribeUserInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserInput.SetUserId">func (s *DescribeUserInput) SetUserId(v string) *DescribeUserInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserInput.String">func (s DescribeUserInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserInput.Validate">func (s *DescribeUserInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeUserOutput">type DescribeUserOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeUserOutput.GoString">func (s DescribeUserOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserOutput.SetUserId">func (s *DescribeUserOutput) SetUserId(v string) *DescribeUserOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserOutput.SetUserName">func (s *DescribeUserOutput) SetUserName(v string) *DescribeUserOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeUserOutput.String">func (s DescribeUserOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Filter">type Filter</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Filter.GoString">func (s Filter) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Filter.SetAttributePath">func (s *Filter) SetAttributePath(v string) *Filter</a></dd>
+				
+					
+					<dd>    <a href="index.html#Filter.SetAttributeValue">func (s *Filter) SetAttributeValue(v string) *Filter</a></dd>
+				
+					
+					<dd>    <a href="index.html#Filter.String">func (s Filter) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Filter.Validate">func (s *Filter) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Group">type Group</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Group.GoString">func (s Group) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Group.SetDisplayName">func (s *Group) SetDisplayName(v string) *Group</a></dd>
+				
+					
+					<dd>    <a href="index.html#Group.SetGroupId">func (s *Group) SetGroupId(v string) *Group</a></dd>
+				
+					
+					<dd>    <a href="index.html#Group.String">func (s Group) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IdentityStore">type IdentityStore</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *IdentityStore</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeGroup">func (c *IdentityStore) DescribeGroup(input *DescribeGroupInput) (*DescribeGroupOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeGroupRequest">func (c *IdentityStore) DescribeGroupRequest(input *DescribeGroupInput) (req *request.Request, output *DescribeGroupOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeGroupWithContext">func (c *IdentityStore) DescribeGroupWithContext(ctx aws.Context, input *DescribeGroupInput, opts ...request.Option) (*DescribeGroupOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeUser">func (c *IdentityStore) DescribeUser(input *DescribeUserInput) (*DescribeUserOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeUserRequest">func (c *IdentityStore) DescribeUserRequest(input *DescribeUserInput) (req *request.Request, output *DescribeUserOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.DescribeUserWithContext">func (c *IdentityStore) DescribeUserWithContext(ctx aws.Context, input *DescribeUserInput, opts ...request.Option) (*DescribeUserOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListGroups">func (c *IdentityStore) ListGroups(input *ListGroupsInput) (*ListGroupsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListGroupsPages">func (c *IdentityStore) ListGroupsPages(input *ListGroupsInput, fn func(*ListGroupsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListGroupsPagesWithContext">func (c *IdentityStore) ListGroupsPagesWithContext(ctx aws.Context, input *ListGroupsInput, fn func(*ListGroupsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListGroupsRequest">func (c *IdentityStore) ListGroupsRequest(input *ListGroupsInput) (req *request.Request, output *ListGroupsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListGroupsWithContext">func (c *IdentityStore) ListGroupsWithContext(ctx aws.Context, input *ListGroupsInput, opts ...request.Option) (*ListGroupsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListUsers">func (c *IdentityStore) ListUsers(input *ListUsersInput) (*ListUsersOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListUsersPages">func (c *IdentityStore) ListUsersPages(input *ListUsersInput, fn func(*ListUsersOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListUsersPagesWithContext">func (c *IdentityStore) ListUsersPagesWithContext(ctx aws.Context, input *ListUsersInput, fn func(*ListUsersOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListUsersRequest">func (c *IdentityStore) ListUsersRequest(input *ListUsersInput) (req *request.Request, output *ListUsersOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#IdentityStore.ListUsersWithContext">func (c *IdentityStore) ListUsersWithContext(ctx aws.Context, input *ListUsersInput, opts ...request.Option) (*ListUsersOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListGroupsInput">type ListGroupsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.GoString">func (s ListGroupsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.SetFilters">func (s *ListGroupsInput) SetFilters(v []*Filter) *ListGroupsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.SetIdentityStoreId">func (s *ListGroupsInput) SetIdentityStoreId(v string) *ListGroupsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.SetMaxResults">func (s *ListGroupsInput) SetMaxResults(v int64) *ListGroupsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.SetNextToken">func (s *ListGroupsInput) SetNextToken(v string) *ListGroupsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.String">func (s ListGroupsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsInput.Validate">func (s *ListGroupsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListGroupsOutput">type ListGroupsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListGroupsOutput.GoString">func (s ListGroupsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsOutput.SetGroups">func (s *ListGroupsOutput) SetGroups(v []*Group) *ListGroupsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsOutput.SetNextToken">func (s *ListGroupsOutput) SetNextToken(v string) *ListGroupsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListGroupsOutput.String">func (s ListGroupsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListUsersInput">type ListUsersInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.GoString">func (s ListUsersInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.SetFilters">func (s *ListUsersInput) SetFilters(v []*Filter) *ListUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.SetIdentityStoreId">func (s *ListUsersInput) SetIdentityStoreId(v string) *ListUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.SetMaxResults">func (s *ListUsersInput) SetMaxResults(v int64) *ListUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.SetNextToken">func (s *ListUsersInput) SetNextToken(v string) *ListUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.String">func (s ListUsersInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersInput.Validate">func (s *ListUsersInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListUsersOutput">type ListUsersOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListUsersOutput.GoString">func (s ListUsersOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersOutput.SetNextToken">func (s *ListUsersOutput) SetNextToken(v string) *ListUsersOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersOutput.SetUsers">func (s *ListUsersOutput) SetUsers(v []*User) *ListUsersOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListUsersOutput.String">func (s ListUsersOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ThrottlingException">type ThrottlingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Code">func (s *ThrottlingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Error">func (s *ThrottlingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.GoString">func (s ThrottlingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Message">func (s *ThrottlingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.OrigErr">func (s *ThrottlingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.RequestID">func (s *ThrottlingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.StatusCode">func (s *ThrottlingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.String">func (s ThrottlingException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#User">type User</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#User.GoString">func (s User) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.SetUserId">func (s *User) SetUserId(v string) *User</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.SetUserName">func (s *User) SetUserName(v string) *User</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.String">func (s User) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationException">type ValidationException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationException.Code">func (s *ValidationException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Error">func (s *ValidationException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.GoString">func (s ValidationException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Message">func (s *ValidationException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.OrigErr">func (s *ValidationException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.RequestID">func (s *ValidationException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.StatusCode">func (s *ValidationException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.String">func (s ValidationException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ResourceTypeGroup is a ResourceType enum value</span>
+    <span id="ResourceTypeGroup">ResourceTypeGroup</span> = &#34;GROUP&#34;
+
+    <span class="comment">// ResourceTypeUser is a ResourceType enum value</span>
+    <span id="ResourceTypeUser">ResourceTypeUser</span> = &#34;USER&#34;
+
+    <span class="comment">// ResourceTypeIdentityStore is a ResourceType enum value</span>
+    <span id="ResourceTypeIdentityStore">ResourceTypeIdentityStore</span> = &#34;IDENTITY_STORE&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessDeniedException for service response error code</span>
+    <span class="comment">// &#34;AccessDeniedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You do not have sufficient access to perform this action.</span>
+    <span id="ErrCodeAccessDeniedException">ErrCodeAccessDeniedException</span> = &#34;AccessDeniedException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request processing has failed because of an unknown error, exception</span>
+    <span class="comment">// or failure with an internal server.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that a requested resource is not found.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+
+    <span class="comment">// ErrCodeThrottlingException for service response error code</span>
+    <span class="comment">// &#34;ThrottlingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Indicates that the principal has crossed the throttling limits of the API</span>
+    <span class="comment">// operations.</span>
+    <span id="ErrCodeThrottlingException">ErrCodeThrottlingException</span> = &#34;ThrottlingException&#34;
+
+    <span class="comment">// ErrCodeValidationException for service response error code</span>
+    <span class="comment">// &#34;ValidationException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request failed because it contains a syntax error.</span>
+    <span id="ErrCodeValidationException">ErrCodeValidationException</span> = &#34;ValidationException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;identitystore&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = <a href="index.html#ServiceName">ServiceName</a>     <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;identitystore&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ResourceType_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=54349:54384#L1582">ResourceType_Values</a>
+				<a class="permalink" href="index.html#ResourceType_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ResourceType_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ResourceType_Values returns all elements of the ResourceType enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AccessDeniedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=18355:18827#L499">AccessDeniedException</a>
+				<a class="permalink" href="index.html#AccessDeniedException">¶</a>
+				
+				
+			</h2>
+			<p>
+You do not have sufficient access to perform this action.
+</p>
+
+			<pre>type AccessDeniedException struct {
+<span id="AccessDeniedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessDeniedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for each request. This value is a globally unique ID that</span>
+    <span class="comment">// is generated by the Identity Store service for each sent request, and is</span>
+    <span class="comment">// then returned inside the exception if the request fails.</span>
+<span id="AccessDeniedException.RequestId"></span>    RequestId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessDeniedException.Code">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=19650:19695#L536">Code</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Error">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=20020:20066#L553">Error</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.GoString">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=19407:19455#L525">GoString</a>
+					<a class="permalink" href="index.html#AccessDeniedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Message">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=19777:19825#L541">Message</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.OrigErr">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=19955:20002#L549">OrigErr</a>
+					<a class="permalink" href="index.html#AccessDeniedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.RequestID">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=20374:20424#L563">RequestID</a>
+					<a class="permalink" href="index.html#AccessDeniedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.StatusCode">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=20219:20267#L558">StatusCode</a>
+					<a class="permalink" href="index.html#AccessDeniedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.String">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=19077:19123#L516">String</a>
+					<a class="permalink" href="index.html#AccessDeniedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeGroupInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=20463:21083#L567">DescribeGroupInput</a>
+				<a class="permalink" href="index.html#DescribeGroupInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeGroupInput struct {
+
+    <span class="comment">// The identifier for a group in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeGroupInput.GroupId"></span>    <span class="comment">// GroupId is a required field</span>
+    GroupId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The globally unique identifier for the identity store, such as d-1234567890.</span>
+    <span class="comment">// In this example, d- is a fixed prefix, and 1234567890 is a randomly generated</span>
+    <span class="comment">// string that contains number and lower case letters. This value is generated</span>
+    <span class="comment">// at the time that a new identity store is created.</span>
+    <span class="comment">//</span>
+<span id="DescribeGroupInput.IdentityStoreId"></span>    <span class="comment">// IdentityStoreId is a required field</span>
+    IdentityStoreId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeGroupInput.GoString">func (DescribeGroupInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=21660:21705#L598">GoString</a>
+					<a class="permalink" href="index.html#DescribeGroupInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupInput.SetGroupId">func (*DescribeGroupInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=22478:22547#L625">SetGroupId</a>
+					<a class="permalink" href="index.html#DescribeGroupInput.SetGroupId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) SetGroupId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a></pre>
+				<p>
+SetGroupId sets the GroupId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupInput.SetIdentityStoreId">func (*DescribeGroupInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=22641:22718#L631">SetIdentityStoreId</a>
+					<a class="permalink" href="index.html#DescribeGroupInput.SetIdentityStoreId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) SetIdentityStoreId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a></pre>
+				<p>
+SetIdentityStoreId sets the IdentityStoreId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupInput.String">func (DescribeGroupInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=21333:21376#L589">String</a>
+					<a class="permalink" href="index.html#DescribeGroupInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupInput.Validate">func (*DescribeGroupInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=21806:21851#L603">Validate</a>
+					<a class="permalink" href="index.html#DescribeGroupInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeGroupOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=22758:23513#L636">DescribeGroupOutput</a>
+				<a class="permalink" href="index.html#DescribeGroupOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeGroupOutput struct {
+
+    <span class="comment">// Contains the group’s display name value. The length limit is 1,024 characters.</span>
+    <span class="comment">// This value can consist of letters, accented characters, symbols, numbers,</span>
+    <span class="comment">// punctuation, tab, new line, carriage return, space, and nonbreaking space</span>
+    <span class="comment">// in this attribute. The characters &lt;&gt;;:% are excluded. This value is specified</span>
+    <span class="comment">// at the time that the group is created and stored as an attribute of the group</span>
+    <span class="comment">// object in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeGroupOutput.DisplayName"></span>    <span class="comment">// DisplayName is a required field</span>
+    DisplayName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The identifier for a group in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeGroupOutput.GroupId"></span>    <span class="comment">// GroupId is a required field</span>
+    GroupId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeGroupOutput.GoString">func (DescribeGroupOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=24091:24137#L669">GoString</a>
+					<a class="permalink" href="index.html#DescribeGroupOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupOutput.SetDisplayName">func (*DescribeGroupOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=24216:24291#L674">SetDisplayName</a>
+					<a class="permalink" href="index.html#DescribeGroupOutput.SetDisplayName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>) SetDisplayName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a></pre>
+				<p>
+SetDisplayName sets the DisplayName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupOutput.SetGroupId">func (*DescribeGroupOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=24373:24444#L680">SetGroupId</a>
+					<a class="permalink" href="index.html#DescribeGroupOutput.SetGroupId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>) SetGroupId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a></pre>
+				<p>
+SetGroupId sets the GroupId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeGroupOutput.String">func (DescribeGroupOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=23763:23807#L660">String</a>
+					<a class="permalink" href="index.html#DescribeGroupOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeUserInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=24476:25092#L685">DescribeUserInput</a>
+				<a class="permalink" href="index.html#DescribeUserInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeUserInput struct {
+
+    <span class="comment">// The globally unique identifier for the identity store, such as d-1234567890.</span>
+    <span class="comment">// In this example, d- is a fixed prefix, and 1234567890 is a randomly generated</span>
+    <span class="comment">// string that contains number and lower case letters. This value is generated</span>
+    <span class="comment">// at the time that a new identity store is created.</span>
+    <span class="comment">//</span>
+<span id="DescribeUserInput.IdentityStoreId"></span>    <span class="comment">// IdentityStoreId is a required field</span>
+    IdentityStoreId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The identifier for a user in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeUserInput.UserId"></span>    <span class="comment">// UserId is a required field</span>
+    UserId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeUserInput.GoString">func (DescribeUserInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=25668:25712#L716">GoString</a>
+					<a class="permalink" href="index.html#DescribeUserInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeUserInput">DescribeUserInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserInput.SetIdentityStoreId">func (*DescribeUserInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=26494:26569#L743">SetIdentityStoreId</a>
+					<a class="permalink" href="index.html#DescribeUserInput.SetIdentityStoreId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeUserInput">DescribeUserInput</a>) SetIdentityStoreId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeUserInput">DescribeUserInput</a></pre>
+				<p>
+SetIdentityStoreId sets the IdentityStoreId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserInput.SetUserId">func (*DescribeUserInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=26653:26719#L749">SetUserId</a>
+					<a class="permalink" href="index.html#DescribeUserInput.SetUserId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeUserInput">DescribeUserInput</a>) SetUserId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeUserInput">DescribeUserInput</a></pre>
+				<p>
+SetUserId sets the UserId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserInput.String">func (DescribeUserInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=25342:25384#L707">String</a>
+					<a class="permalink" href="index.html#DescribeUserInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeUserInput">DescribeUserInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserInput.Validate">func (*DescribeUserInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=25813:25857#L721">Validate</a>
+					<a class="permalink" href="index.html#DescribeUserInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeUserInput">DescribeUserInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeUserOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=26750:27589#L754">DescribeUserOutput</a>
+				<a class="permalink" href="index.html#DescribeUserOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeUserOutput struct {
+
+    <span class="comment">// The identifier for a user in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeUserOutput.UserId"></span>    <span class="comment">// UserId is a required field</span>
+    UserId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Contains the user’s user name value. The length limit is 128 characters.</span>
+    <span class="comment">// This value can consist of letters, accented characters, symbols, numbers,</span>
+    <span class="comment">// and punctuation. The characters &lt;&gt;;:% are excluded. This value is specified</span>
+    <span class="comment">// at the time the user is created and stored as an attribute of the user object</span>
+    <span class="comment">// in the identity store.</span>
+    <span class="comment">//</span>
+<span id="DescribeUserOutput.UserName"></span>    <span class="comment">// UserName is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by DescribeUserOutput&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// UserName is a required field</span>
+    UserName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeUserOutput.GoString">func (DescribeUserOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=28166:28211#L790">GoString</a>
+					<a class="permalink" href="index.html#DescribeUserOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeUserOutput">DescribeUserOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserOutput.SetUserId">func (*DescribeUserOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=28280:28348#L795">SetUserId</a>
+					<a class="permalink" href="index.html#DescribeUserOutput.SetUserId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeUserOutput">DescribeUserOutput</a>) SetUserId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeUserOutput">DescribeUserOutput</a></pre>
+				<p>
+SetUserId sets the UserId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserOutput.SetUserName">func (*DescribeUserOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=28427:28497#L801">SetUserName</a>
+					<a class="permalink" href="index.html#DescribeUserOutput.SetUserName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeUserOutput">DescribeUserOutput</a>) SetUserName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeUserOutput">DescribeUserOutput</a></pre>
+				<p>
+SetUserName sets the UserName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeUserOutput.String">func (DescribeUserOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=27839:27882#L781">String</a>
+					<a class="permalink" href="index.html#DescribeUserOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeUserOutput">DescribeUserOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Filter">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=28678:29488#L808">Filter</a>
+				<a class="permalink" href="index.html#Filter">¶</a>
+				
+				
+			</h2>
+			<p>
+A query filter used by ListUsers and ListGroup. This filter object provides
+the attribute name and attribute value to search users or groups.
+</p>
+
+			<pre>type Filter struct {
+
+    <span class="comment">// The attribute path that is used to specify which attribute name to search.</span>
+    <span class="comment">// Length limit is 255 characters. For example, UserName is a valid attribute</span>
+    <span class="comment">// path for the ListUsers API, and DisplayName is a valid attribute path for</span>
+    <span class="comment">// the ListGroups API.</span>
+    <span class="comment">//</span>
+<span id="Filter.AttributePath"></span>    <span class="comment">// AttributePath is a required field</span>
+    AttributePath *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Represents the data for an attribute. Each attribute value is described as</span>
+    <span class="comment">// a name-value pair.</span>
+    <span class="comment">//</span>
+<span id="Filter.AttributeValue"></span>    <span class="comment">// AttributeValue is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by Filter&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// AttributeValue is a required field</span>
+    AttributeValue *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Filter.GoString">func (Filter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=30053:30086#L844">GoString</a>
+					<a class="permalink" href="index.html#Filter.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Filter">Filter</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Filter.SetAttributePath">func (*Filter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=30872:30923#L871">SetAttributePath</a>
+					<a class="permalink" href="index.html#Filter.SetAttributePath">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Filter">Filter</a>) SetAttributePath(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Filter">Filter</a></pre>
+				<p>
+SetAttributePath sets the AttributePath field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Filter.SetAttributeValue">func (*Filter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=31021:31073#L877">SetAttributeValue</a>
+					<a class="permalink" href="index.html#Filter.SetAttributeValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Filter">Filter</a>) SetAttributeValue(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Filter">Filter</a></pre>
+				<p>
+SetAttributeValue sets the AttributeValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Filter.String">func (Filter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=29738:29769#L835">String</a>
+					<a class="permalink" href="index.html#Filter.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Filter">Filter</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Filter.Validate">func (*Filter) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=30187:30220#L849">Validate</a>
+					<a class="permalink" href="index.html#Filter.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Filter">Filter</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Group">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=31193:31929#L883">Group</a>
+				<a class="permalink" href="index.html#Group">¶</a>
+				
+				
+			</h2>
+			<p>
+A group object, which contains a specified group’s metadata and attributes.
+</p>
+
+			<pre>type Group struct {
+
+    <span class="comment">// Contains the group’s display name value. The length limit is 1,024 characters.</span>
+    <span class="comment">// This value can consist of letters, accented characters, symbols, numbers,</span>
+    <span class="comment">// punctuation, tab, new line, carriage return, space, and nonbreaking space</span>
+    <span class="comment">// in this attribute. The characters &lt;&gt;;:% are excluded. This value is specified</span>
+    <span class="comment">// at the time the group is created and stored as an attribute of the group</span>
+    <span class="comment">// object in the identity store.</span>
+    <span class="comment">//</span>
+<span id="Group.DisplayName"></span>    <span class="comment">// DisplayName is a required field</span>
+    DisplayName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The identifier for a group in the identity store.</span>
+    <span class="comment">//</span>
+<span id="Group.GroupId"></span>    <span class="comment">// GroupId is a required field</span>
+    GroupId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Group.GoString">func (Group) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=32493:32525#L916">GoString</a>
+					<a class="permalink" href="index.html#Group.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Group">Group</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Group.SetDisplayName">func (*Group) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=32604:32651#L921">SetDisplayName</a>
+					<a class="permalink" href="index.html#Group.SetDisplayName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Group">Group</a>) SetDisplayName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Group">Group</a></pre>
+				<p>
+SetDisplayName sets the DisplayName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Group.SetGroupId">func (*Group) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=32733:32776#L927">SetGroupId</a>
+					<a class="permalink" href="index.html#Group.SetGroupId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Group">Group</a>) SetGroupId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Group">Group</a></pre>
+				<p>
+SetGroupId sets the GroupId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Group.String">func (Group) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=32179:32209#L907">String</a>
+					<a class="permalink" href="index.html#Group.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Group">Group</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IdentityStore">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/service.go?s=717:762#L11">IdentityStore</a>
+				<a class="permalink" href="index.html#IdentityStore">¶</a>
+				
+				
+			</h2>
+			<p>
+IdentityStore provides the API operation methods for making requests to
+AWS SSO Identity Store. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+IdentityStore methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type IdentityStore struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/service.go?s=1733:1802#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#IdentityStore">IdentityStore</a></pre>
+				<p>
+New creates a new instance of the IdentityStore client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a IdentityStore client from just a session.
+svc := identitystore.New(mySession)
+
+// Create a IdentityStore client with additional configuration
+svc := identitystore.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IdentityStore.DescribeGroup">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=2830:2924#L76">DescribeGroup</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeGroup">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeGroup(input *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) (*<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeGroup API operation for AWS SSO Identity Store.
+</p>
+<p>
+Retrieves the group metadata and attributes from GroupId in an identity store.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO Identity Store&#39;s
+API operation DescribeGroup for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Indicates that a requested resource is not found.
+
+* ValidationException
+The request failed because it contains a syntax error.
+
+* AccessDeniedException
+You do not have sufficient access to perform this action.
+
+* ThrottlingException
+Indicates that the principal has crossed the throttling limits of the API
+operations.
+
+* InternalServerException
+The request processing has failed because of an unknown error, exception
+or failure with an internal server.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeGroup">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeGroup</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.DescribeGroupRequest">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=1330:1453#L30">DescribeGroupRequest</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeGroupRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeGroupRequest(input *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>)</pre>
+				<p>
+DescribeGroupRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DescribeGroup operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DescribeGroup for more information on using the DescribeGroup
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DescribeGroupRequest method.
+req, resp := client.DescribeGroupRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeGroup">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeGroup</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.DescribeGroupWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=3479:3625#L90">DescribeGroupWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeGroupWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeGroupWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DescribeGroupInput">DescribeGroupInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DescribeGroupOutput">DescribeGroupOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeGroupWithContext is the same as DescribeGroup with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DescribeGroup for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.DescribeUser">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=6282:6373#L169">DescribeUser</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeUser">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeUser(input *<a href="index.html#DescribeUserInput">DescribeUserInput</a>) (*<a href="index.html#DescribeUserOutput">DescribeUserOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeUser API operation for AWS SSO Identity Store.
+</p>
+<p>
+Retrieves the user metadata and attributes from UserId in an identity store.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO Identity Store&#39;s
+API operation DescribeUser for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ResourceNotFoundException
+Indicates that a requested resource is not found.
+
+* ValidationException
+The request failed because it contains a syntax error.
+
+* AccessDeniedException
+You do not have sufficient access to perform this action.
+
+* ThrottlingException
+Indicates that the principal has crossed the throttling limits of the API
+operations.
+
+* InternalServerException
+The request processing has failed because of an unknown error, exception
+or failure with an internal server.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeUser">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeUser</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.DescribeUserRequest">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=4793:4913#L123">DescribeUserRequest</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeUserRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeUserRequest(input *<a href="index.html#DescribeUserInput">DescribeUserInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DescribeUserOutput">DescribeUserOutput</a>)</pre>
+				<p>
+DescribeUserRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DescribeUser operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DescribeUser for more information on using the DescribeUser
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DescribeUserRequest method.
+req, resp := client.DescribeUserRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeUser">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/DescribeUser</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.DescribeUserWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=6924:7067#L183">DescribeUserWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.DescribeUserWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) DescribeUserWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DescribeUserInput">DescribeUserInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DescribeUserOutput">DescribeUserOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeUserWithContext is the same as DescribeUser with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DescribeUser for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListGroups">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=10073:10158#L271">ListGroups</a>
+					<a class="permalink" href="index.html#IdentityStore.ListGroups">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListGroups(input *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) (*<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListGroups API operation for AWS SSO Identity Store.
+</p>
+<p>
+Lists the attribute name and value of the group that you specified in the
+search. We only support DisplayName as a valid filter attribute path currently,
+and filter is required. This API returns minimum attributes, including GroupId
+and group DisplayName in the response.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO Identity Store&#39;s
+API operation ListGroups for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request failed because it contains a syntax error.
+
+* AccessDeniedException
+You do not have sufficient access to perform this action.
+
+* ResourceNotFoundException
+Indicates that a requested resource is not found.
+
+* ThrottlingException
+Indicates that the principal has crossed the throttling limits of the API
+operations.
+
+* InternalServerException
+The request processing has failed because of an unknown error, exception
+or failure with an internal server.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListGroups">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListGroups</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListGroupsPages">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=11623:11731#L309">ListGroupsPages</a>
+					<a class="permalink" href="index.html#IdentityStore.ListGroupsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListGroupsPages(input *<a href="index.html#ListGroupsInput">ListGroupsInput</a>, fn func(*<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListGroupsPages iterates over the pages of a ListGroups operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListGroups method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListGroups operation.
+pageNum := 0
+err := client.ListGroupsPages(params,
+    func(page *identitystore.ListGroupsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListGroupsPagesWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=12211:12371#L320">ListGroupsPagesWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.ListGroupsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListGroupsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListGroupsInput">ListGroupsInput</a>, fn func(*<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListGroupsPagesWithContext same as ListGroupsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListGroupsRequest">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=8216:8330#L216">ListGroupsRequest</a>
+					<a class="permalink" href="index.html#IdentityStore.ListGroupsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListGroupsRequest(input *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>)</pre>
+				<p>
+ListGroupsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListGroups operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListGroups for more information on using the ListGroups
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListGroupsRequest method.
+req, resp := client.ListGroupsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListGroups">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListGroups</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListGroupsWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=10701:10838#L285">ListGroupsWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.ListGroupsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListGroupsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListGroupsInput">ListGroupsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListGroupsWithContext is the same as ListGroups with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListGroups for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListUsers">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=15625:15707#L425">ListUsers</a>
+					<a class="permalink" href="index.html#IdentityStore.ListUsers">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListUsers(input *<a href="index.html#ListUsersInput">ListUsersInput</a>) (*<a href="index.html#ListUsersOutput">ListUsersOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListUsers API operation for AWS SSO Identity Store.
+</p>
+<p>
+Lists the attribute name and value of the user that you specified in the
+search. We only support UserName as a valid filter attribute path currently,
+and filter is required. This API returns minimum attributes, including UserId
+and UserName in the response.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS SSO Identity Store&#39;s
+API operation ListUsers for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request failed because it contains a syntax error.
+
+* AccessDeniedException
+You do not have sufficient access to perform this action.
+
+* ResourceNotFoundException
+Indicates that a requested resource is not found.
+
+* ThrottlingException
+Indicates that the principal has crossed the throttling limits of the API
+operations.
+
+* InternalServerException
+The request processing has failed because of an unknown error, exception
+or failure with an internal server.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListUsers">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListUsers</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListUsersPages">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=17158:17263#L463">ListUsersPages</a>
+					<a class="permalink" href="index.html#IdentityStore.ListUsersPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListUsersPages(input *<a href="index.html#ListUsersInput">ListUsersInput</a>, fn func(*<a href="index.html#ListUsersOutput">ListUsersOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListUsersPages iterates over the pages of a ListUsers operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListUsers method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListUsers operation.
+pageNum := 0
+err := client.ListUsersPages(params,
+    func(page *identitystore.ListUsersOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListUsersPagesWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=17740:17897#L474">ListUsersPagesWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.ListUsersPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListUsersPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListUsersInput">ListUsersInput</a>, fn func(*<a href="index.html#ListUsersOutput">ListUsersOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListUsersPagesWithContext same as ListUsersPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListUsersRequest">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=13791:13902#L370">ListUsersRequest</a>
+					<a class="permalink" href="index.html#IdentityStore.ListUsersRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListUsersRequest(input *<a href="index.html#ListUsersInput">ListUsersInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListUsersOutput">ListUsersOutput</a>)</pre>
+				<p>
+ListUsersRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListUsers operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListUsers for more information on using the ListUsers
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListUsersRequest method.
+req, resp := client.ListUsersRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListUsers">https://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/ListUsers</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityStore.ListUsersWithContext">func (*IdentityStore) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=16246:16380#L439">ListUsersWithContext</a>
+					<a class="permalink" href="index.html#IdentityStore.ListUsersWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#IdentityStore">IdentityStore</a>) ListUsersWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListUsersInput">ListUsersInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListUsersOutput">ListUsersOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListUsersWithContext is the same as ListUsers with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListUsers for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=32923:33397#L934">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+The request processing has failed because of an unknown error, exception
+or failure with an internal server.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for each request. This value is a globally unique ID that</span>
+    <span class="comment">// is generated by the Identity Store service for each sent request, and is</span>
+    <span class="comment">// then returned inside the exception if the request fails.</span>
+<span id="InternalServerException.RequestId"></span>    RequestId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34228:34275#L971">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34606:34654#L988">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=33979:34029#L960">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34359:34409#L976">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34539:34588#L984">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34964:35016#L998">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=34807:34857#L993">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=33647:33695#L951">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListGroupsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=35055:36285#L1002">ListGroupsInput</a>
+				<a class="permalink" href="index.html#ListGroupsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListGroupsInput struct {
+
+    <span class="comment">// A list of Filter objects, which is used in the ListUsers and ListGroups request.</span>
+<span id="ListGroupsInput.Filters"></span>    Filters []*<a href="index.html#Filter">Filter</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The globally unique identifier for the identity store, such as d-1234567890.</span>
+    <span class="comment">// In this example, d- is a fixed prefix, and 1234567890 is a randomly generated</span>
+    <span class="comment">// string that contains number and lower case letters. This value is generated</span>
+    <span class="comment">// at the time that a new identity store is created.</span>
+    <span class="comment">//</span>
+<span id="ListGroupsInput.IdentityStoreId"></span>    <span class="comment">// IdentityStoreId is a required field</span>
+    IdentityStoreId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The maximum number of results to be returned per request. This parameter</span>
+    <span class="comment">// is used in the ListUsers and ListGroups request to specify how many results</span>
+    <span class="comment">// to return in one page. The length limit is 50 characters.</span>
+<span id="ListGroupsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The pagination token used for the ListUsers and ListGroups API operations.</span>
+    <span class="comment">// This value is generated by the identity store service. It is returned in</span>
+    <span class="comment">// the API response if the total results are more than the size of one page.</span>
+    <span class="comment">// This token is also returned when it is used in the API request to search</span>
+    <span class="comment">// for the next page.</span>
+<span id="ListGroupsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListGroupsInput.GoString">func (ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=36859:36901#L1043">GoString</a>
+					<a class="permalink" href="index.html#ListGroupsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListGroupsInput">ListGroupsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.SetFilters">func (*ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=37943:38009#L1080">SetFilters</a>
+					<a class="permalink" href="index.html#ListGroupsInput.SetFilters">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) SetFilters(v []*<a href="index.html#Filter">Filter</a>) *<a href="index.html#ListGroupsInput">ListGroupsInput</a></pre>
+				<p>
+SetFilters sets the Filters field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.SetIdentityStoreId">func (*ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=38102:38173#L1086">SetIdentityStoreId</a>
+					<a class="permalink" href="index.html#ListGroupsInput.SetIdentityStoreId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) SetIdentityStoreId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListGroupsInput">ListGroupsInput</a></pre>
+				<p>
+SetIdentityStoreId sets the IdentityStoreId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.SetMaxResults">func (*ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=38265:38330#L1092">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListGroupsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListGroupsInput">ListGroupsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.SetNextToken">func (*ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=38415:38480#L1098">SetNextToken</a>
+					<a class="permalink" href="index.html#ListGroupsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListGroupsInput">ListGroupsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.String">func (ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=36535:36575#L1034">String</a>
+					<a class="permalink" href="index.html#ListGroupsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListGroupsInput">ListGroupsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsInput.Validate">func (*ListGroupsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=37002:37044#L1048">Validate</a>
+					<a class="permalink" href="index.html#ListGroupsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsInput">ListGroupsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListGroupsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=38514:39090#L1103">ListGroupsOutput</a>
+				<a class="permalink" href="index.html#ListGroupsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListGroupsOutput struct {
+
+    <span class="comment">// A list of Group objects in the identity store.</span>
+    <span class="comment">//</span>
+<span id="ListGroupsOutput.Groups"></span>    <span class="comment">// Groups is a required field</span>
+    Groups []*<a href="index.html#Group">Group</a> `type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The pagination token used for the ListUsers and ListGroups API operations.</span>
+    <span class="comment">// This value is generated by the identity store service. It is returned in</span>
+    <span class="comment">// the API response if the total results are more than the size of one page.</span>
+    <span class="comment">// This token is also returned when it1 is used in the API request to search</span>
+    <span class="comment">// for the next page.</span>
+<span id="ListGroupsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListGroupsOutput.GoString">func (ListGroupsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=39665:39708#L1133">GoString</a>
+					<a class="permalink" href="index.html#ListGroupsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListGroupsOutput">ListGroupsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsOutput.SetGroups">func (*ListGroupsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=39777:39843#L1138">SetGroups</a>
+					<a class="permalink" href="index.html#ListGroupsOutput.SetGroups">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>) SetGroups(v []*<a href="index.html#Group">Group</a>) *<a href="index.html#ListGroupsOutput">ListGroupsOutput</a></pre>
+				<p>
+SetGroups sets the Groups field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsOutput.SetNextToken">func (*ListGroupsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=39923:39990#L1144">SetNextToken</a>
+					<a class="permalink" href="index.html#ListGroupsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListGroupsOutput">ListGroupsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListGroupsOutput">ListGroupsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListGroupsOutput.String">func (ListGroupsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=39340:39381#L1124">String</a>
+					<a class="permalink" href="index.html#ListGroupsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListGroupsOutput">ListGroupsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListUsersInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=40024:41253#L1149">ListUsersInput</a>
+				<a class="permalink" href="index.html#ListUsersInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListUsersInput struct {
+
+    <span class="comment">// A list of Filter objects, which is used in the ListUsers and ListGroups request.</span>
+<span id="ListUsersInput.Filters"></span>    Filters []*<a href="index.html#Filter">Filter</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The globally unique identifier for the identity store, such as d-1234567890.</span>
+    <span class="comment">// In this example, d- is a fixed prefix, and 1234567890 is a randomly generated</span>
+    <span class="comment">// string that contains number and lower case letters. This value is generated</span>
+    <span class="comment">// at the time that a new identity store is created.</span>
+    <span class="comment">//</span>
+<span id="ListUsersInput.IdentityStoreId"></span>    <span class="comment">// IdentityStoreId is a required field</span>
+    IdentityStoreId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The maximum number of results to be returned per request. This parameter</span>
+    <span class="comment">// is used in the ListUsers and ListGroups request to specify how many results</span>
+    <span class="comment">// to return in one page. The length limit is 50 characters.</span>
+<span id="ListUsersInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The pagination token used for the ListUsers and ListGroups API operations.</span>
+    <span class="comment">// This value is generated by the identity store service. It is returned in</span>
+    <span class="comment">// the API response if the total results are more than the size of one page.</span>
+    <span class="comment">// This token is also returned when it is used in the API request to search</span>
+    <span class="comment">// for the next page.</span>
+<span id="ListUsersInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListUsersInput.GoString">func (ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=41826:41867#L1190">GoString</a>
+					<a class="permalink" href="index.html#ListUsersInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListUsersInput">ListUsersInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.SetFilters">func (*ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=42907:42971#L1227">SetFilters</a>
+					<a class="permalink" href="index.html#ListUsersInput.SetFilters">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersInput">ListUsersInput</a>) SetFilters(v []*<a href="index.html#Filter">Filter</a>) *<a href="index.html#ListUsersInput">ListUsersInput</a></pre>
+				<p>
+SetFilters sets the Filters field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.SetIdentityStoreId">func (*ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=43064:43133#L1233">SetIdentityStoreId</a>
+					<a class="permalink" href="index.html#ListUsersInput.SetIdentityStoreId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersInput">ListUsersInput</a>) SetIdentityStoreId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListUsersInput">ListUsersInput</a></pre>
+				<p>
+SetIdentityStoreId sets the IdentityStoreId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.SetMaxResults">func (*ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=43225:43288#L1239">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListUsersInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersInput">ListUsersInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListUsersInput">ListUsersInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.SetNextToken">func (*ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=43373:43436#L1245">SetNextToken</a>
+					<a class="permalink" href="index.html#ListUsersInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersInput">ListUsersInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListUsersInput">ListUsersInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.String">func (ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=41503:41542#L1181">String</a>
+					<a class="permalink" href="index.html#ListUsersInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListUsersInput">ListUsersInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersInput.Validate">func (*ListUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=41968:42009#L1195">Validate</a>
+					<a class="permalink" href="index.html#ListUsersInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersInput">ListUsersInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListUsersOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=43470:44040#L1250">ListUsersOutput</a>
+				<a class="permalink" href="index.html#ListUsersOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListUsersOutput struct {
+
+    <span class="comment">// The pagination token used for the ListUsers and ListGroups API operations.</span>
+    <span class="comment">// This value is generated by the identity store service. It is returned in</span>
+    <span class="comment">// the API response if the total results are more than the size of one page.</span>
+    <span class="comment">// This token is also returned when it is used in the API request to search</span>
+    <span class="comment">// for the next page.</span>
+<span id="ListUsersOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A list of User objects in the identity store.</span>
+    <span class="comment">//</span>
+<span id="ListUsersOutput.Users"></span>    <span class="comment">// Users is a required field</span>
+    Users []*<a href="index.html#User">User</a> `type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListUsersOutput.GoString">func (ListUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=44614:44656#L1280">GoString</a>
+					<a class="permalink" href="index.html#ListUsersOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListUsersOutput">ListUsersOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersOutput.SetNextToken">func (*ListUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=44731:44796#L1285">SetNextToken</a>
+					<a class="permalink" href="index.html#ListUsersOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersOutput">ListUsersOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListUsersOutput">ListUsersOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersOutput.SetUsers">func (*ListUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=44872:44934#L1291">SetUsers</a>
+					<a class="permalink" href="index.html#ListUsersOutput.SetUsers">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListUsersOutput">ListUsersOutput</a>) SetUsers(v []*<a href="index.html#User">User</a>) *<a href="index.html#ListUsersOutput">ListUsersOutput</a></pre>
+				<p>
+SetUsers sets the Users field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListUsersOutput.String">func (ListUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=44290:44330#L1271">String</a>
+					<a class="permalink" href="index.html#ListUsersOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListUsersOutput">ListUsersOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=45016:46260#L1297">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that a requested resource is not found.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for each request. This value is a globally unique ID that</span>
+    <span class="comment">// is generated by the Identity Store service for each sent request, and is</span>
+    <span class="comment">// then returned inside the exception if the request fails.</span>
+<span id="ResourceNotFoundException.RequestId"></span>    RequestId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for a resource in the identity store, which can be used as</span>
+    <span class="comment">// UserId or GroupId. The format for ResourceId is either UUID or 1234567890-UUID,</span>
+    <span class="comment">// where UUID is a randomly generated value for each resource when it is created</span>
+    <span class="comment">// and 1234567890 represents the IdentityStoreId string value. In the case that</span>
+    <span class="comment">// the identity store is migrated from a legacy SSO identity store, the ResourceId</span>
+    <span class="comment">// for that identity store will be in the format of UUID. Otherwise, it will</span>
+    <span class="comment">// be in the 1234567890-UUID format.</span>
+<span id="ResourceNotFoundException.ResourceId"></span>    ResourceId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The type of resource in the Identity Store service, which is an enum object.</span>
+    <span class="comment">// Valid values include USER, GROUP, and IDENTITY_STORE.</span>
+<span id="ResourceNotFoundException.ResourceType"></span>    ResourceType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;ResourceType&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47099:47148#L1347">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47485:47535#L1364">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=46844:46896#L1336">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47234:47286#L1352">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47416:47467#L1360">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47847:47901#L1374">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=47688:47740#L1369">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=46510:46560#L1327">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ThrottlingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=48032:48502#L1380">ThrottlingException</a>
+				<a class="permalink" href="index.html#ThrottlingException">¶</a>
+				
+				
+			</h2>
+			<p>
+Indicates that the principal has crossed the throttling limits of the API
+operations.
+</p>
+
+			<pre>type ThrottlingException struct {
+<span id="ThrottlingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ThrottlingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for each request. This value is a globally unique ID that</span>
+    <span class="comment">// is generated by the Identity Store service for each sent request, and is</span>
+    <span class="comment">// then returned inside the exception if the request fails.</span>
+<span id="ThrottlingException.RequestId"></span>    RequestId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ThrottlingException.Code">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49317:49360#L1417">Code</a>
+					<a class="permalink" href="index.html#ThrottlingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Error">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49679:49723#L1434">Error</a>
+					<a class="permalink" href="index.html#ThrottlingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.GoString">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49080:49126#L1406">GoString</a>
+					<a class="permalink" href="index.html#ThrottlingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Message">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49440:49486#L1422">Message</a>
+					<a class="permalink" href="index.html#ThrottlingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.OrigErr">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49616:49661#L1430">OrigErr</a>
+					<a class="permalink" href="index.html#ThrottlingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.RequestID">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=50029:50077#L1444">RequestID</a>
+					<a class="permalink" href="index.html#ThrottlingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.StatusCode">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=49876:49922#L1439">StatusCode</a>
+					<a class="permalink" href="index.html#ThrottlingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.String">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=48752:48796#L1397">String</a>
+					<a class="permalink" href="index.html#ThrottlingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="User">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=50195:51006#L1449">User</a>
+				<a class="permalink" href="index.html#User">¶</a>
+				
+				
+			</h2>
+			<p>
+A user object, which contains a specified user’s metadata and attributes.
+</p>
+
+			<pre>type User struct {
+
+    <span class="comment">// The identifier for a user in the identity store.</span>
+    <span class="comment">//</span>
+<span id="User.UserId"></span>    <span class="comment">// UserId is a required field</span>
+    UserId *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Contains the user’s user name value. The length limit is 128 characters.</span>
+    <span class="comment">// This value can consist of letters, accented characters, symbols, numbers,</span>
+    <span class="comment">// and punctuation. The characters &lt;&gt;;:% are excluded. This value is specified</span>
+    <span class="comment">// at the time the user is created and stored as an attribute of the user object</span>
+    <span class="comment">// in the identity store.</span>
+    <span class="comment">//</span>
+<span id="User.UserName"></span>    <span class="comment">// UserName is a sensitive parameter and its value will be</span>
+    <span class="comment">// replaced with &#34;sensitive&#34; in string returned by User&#39;s</span>
+    <span class="comment">// String and GoString methods.</span>
+    <span class="comment">//</span>
+    <span class="comment">// UserName is a required field</span>
+    UserName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34; sensitive:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="User.GoString">func (User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=51569:51600#L1485">GoString</a>
+					<a class="permalink" href="index.html#User.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#User">User</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.SetUserId">func (*User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=51669:51709#L1490">SetUserId</a>
+					<a class="permalink" href="index.html#User.SetUserId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#User">User</a>) SetUserId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#User">User</a></pre>
+				<p>
+SetUserId sets the UserId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.SetUserName">func (*User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=51788:51830#L1496">SetUserName</a>
+					<a class="permalink" href="index.html#User.SetUserName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#User">User</a>) SetUserName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#User">User</a></pre>
+				<p>
+SetUserName sets the UserName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.String">func (User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=51256:51285#L1476">String</a>
+					<a class="permalink" href="index.html#User.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#User">User</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=51921:52391#L1502">ValidationException</a>
+				<a class="permalink" href="index.html#ValidationException">¶</a>
+				
+				
+			</h2>
+			<p>
+The request failed because it contains a syntax error.
+</p>
+
+			<pre>type ValidationException struct {
+<span id="ValidationException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ValidationException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The identifier for each request. This value is a globally unique ID that</span>
+    <span class="comment">// is generated by the Identity Store service for each sent request, and is</span>
+    <span class="comment">// then returned inside the exception if the request fails.</span>
+<span id="ValidationException.RequestId"></span>    RequestId *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationException.Code">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53206:53249#L1539">Code</a>
+					<a class="permalink" href="index.html#ValidationException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Error">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53568:53612#L1556">Error</a>
+					<a class="permalink" href="index.html#ValidationException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.GoString">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=52969:53015#L1528">GoString</a>
+					<a class="permalink" href="index.html#ValidationException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Message">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53329:53375#L1544">Message</a>
+					<a class="permalink" href="index.html#ValidationException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.OrigErr">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53505:53550#L1552">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.RequestID">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53918:53966#L1566">RequestID</a>
+					<a class="permalink" href="index.html#ValidationException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.StatusCode">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=53765:53811#L1561">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.String">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/identitystore/api.go?s=52641:52685#L1519">String</a>
+					<a class="permalink" href="index.html#ValidationException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="identitystoreiface/index.html">identitystoreiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package identitystoreiface provides an interface to enable mocking the AWS SSO Identity Store service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

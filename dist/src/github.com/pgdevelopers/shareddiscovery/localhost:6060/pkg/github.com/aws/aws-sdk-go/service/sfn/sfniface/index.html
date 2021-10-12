@@ -1,0 +1,352 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>sfniface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package sfniface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/sfn/sfniface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package sfniface provides an interface to enable mocking the AWS Step Functions service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#SFNAPI">type SFNAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sfn/sfniface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="SFNAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/sfn/sfniface/interface.go?s=2080:10374#L52">SFNAPI</a>
+				<a class="permalink" href="index.html#SFNAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+SFNAPI provides an interface to enable mocking the
+sfn.SFN service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS Step Functions.
+func myFunc(svc sfniface.SFNAPI) bool {
+    // Make svc.CreateActivity request
+}
+
+func main() {
+    sess := session.New()
+    svc := sfn.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockSFNClient struct {
+    sfniface.SFNAPI
+}
+func (m *mockSFNClient) CreateActivity(input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockSFNClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type SFNAPI interface {
+    CreateActivity(*<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityInput">CreateActivityInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityOutput">CreateActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateActivityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityInput">CreateActivityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityOutput">CreateActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateActivityRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityInput">CreateActivityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#CreateActivityOutput">CreateActivityOutput</a>)
+
+    CreateStateMachine(*<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineInput">CreateStateMachineInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineOutput">CreateStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStateMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineInput">CreateStateMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineOutput">CreateStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStateMachineRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineInput">CreateStateMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#CreateStateMachineOutput">CreateStateMachineOutput</a>)
+
+    DeleteActivity(*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityInput">DeleteActivityInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityOutput">DeleteActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteActivityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityInput">DeleteActivityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityOutput">DeleteActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteActivityRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityInput">DeleteActivityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DeleteActivityOutput">DeleteActivityOutput</a>)
+
+    DeleteStateMachine(*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineInput">DeleteStateMachineInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineOutput">DeleteStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStateMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineInput">DeleteStateMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineOutput">DeleteStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStateMachineRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineInput">DeleteStateMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DeleteStateMachineOutput">DeleteStateMachineOutput</a>)
+
+    DescribeActivity(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityInput">DescribeActivityInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityOutput">DescribeActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActivityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityInput">DescribeActivityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityOutput">DescribeActivityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeActivityRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityInput">DescribeActivityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeActivityOutput">DescribeActivityOutput</a>)
+
+    DescribeExecution(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionInput">DescribeExecutionInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionOutput">DescribeExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionInput">DescribeExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionOutput">DescribeExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeExecutionRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionInput">DescribeExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeExecutionOutput">DescribeExecutionOutput</a>)
+
+    DescribeStateMachine(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineInput">DescribeStateMachineInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineOutput">DescribeStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStateMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineInput">DescribeStateMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineOutput">DescribeStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStateMachineRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineInput">DescribeStateMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineOutput">DescribeStateMachineOutput</a>)
+
+    DescribeStateMachineForExecution(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionInput">DescribeStateMachineForExecutionInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionOutput">DescribeStateMachineForExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStateMachineForExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionInput">DescribeStateMachineForExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionOutput">DescribeStateMachineForExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStateMachineForExecutionRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionInput">DescribeStateMachineForExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#DescribeStateMachineForExecutionOutput">DescribeStateMachineForExecutionOutput</a>)
+
+    GetActivityTask(*<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskInput">GetActivityTaskInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskOutput">GetActivityTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetActivityTaskWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskInput">GetActivityTaskInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskOutput">GetActivityTaskOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetActivityTaskRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskInput">GetActivityTaskInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#GetActivityTaskOutput">GetActivityTaskOutput</a>)
+
+    GetExecutionHistory(*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryInput">GetExecutionHistoryInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryOutput">GetExecutionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetExecutionHistoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryInput">GetExecutionHistoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryOutput">GetExecutionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetExecutionHistoryRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryInput">GetExecutionHistoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryOutput">GetExecutionHistoryOutput</a>)
+
+    GetExecutionHistoryPages(*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryInput">GetExecutionHistoryInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryOutput">GetExecutionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetExecutionHistoryPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryInput">GetExecutionHistoryInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#GetExecutionHistoryOutput">GetExecutionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListActivities(*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesInput">ListActivitiesInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesOutput">ListActivitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActivitiesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesInput">ListActivitiesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesOutput">ListActivitiesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListActivitiesRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesInput">ListActivitiesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesOutput">ListActivitiesOutput</a>)
+
+    ListActivitiesPages(*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesInput">ListActivitiesInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesOutput">ListActivitiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListActivitiesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesInput">ListActivitiesInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListActivitiesOutput">ListActivitiesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListExecutions(*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsInput">ListExecutionsInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsOutput">ListExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListExecutionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsInput">ListExecutionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsOutput">ListExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListExecutionsRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsInput">ListExecutionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsOutput">ListExecutionsOutput</a>)
+
+    ListExecutionsPages(*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsInput">ListExecutionsInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsOutput">ListExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListExecutionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsInput">ListExecutionsInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListExecutionsOutput">ListExecutionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListStateMachines(*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesInput">ListStateMachinesInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesOutput">ListStateMachinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStateMachinesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesInput">ListStateMachinesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesOutput">ListStateMachinesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListStateMachinesRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesInput">ListStateMachinesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesOutput">ListStateMachinesOutput</a>)
+
+    ListStateMachinesPages(*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesInput">ListStateMachinesInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesOutput">ListStateMachinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListStateMachinesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesInput">ListStateMachinesInput</a>, func(*<a href="../index.html">sfn</a>.<a href="../index.html#ListStateMachinesOutput">ListStateMachinesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    SendTaskFailure(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureInput">SendTaskFailureInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureOutput">SendTaskFailureOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskFailureWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureInput">SendTaskFailureInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureOutput">SendTaskFailureOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskFailureRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureInput">SendTaskFailureInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskFailureOutput">SendTaskFailureOutput</a>)
+
+    SendTaskHeartbeat(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatInput">SendTaskHeartbeatInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatOutput">SendTaskHeartbeatOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskHeartbeatWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatInput">SendTaskHeartbeatInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatOutput">SendTaskHeartbeatOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskHeartbeatRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatInput">SendTaskHeartbeatInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskHeartbeatOutput">SendTaskHeartbeatOutput</a>)
+
+    SendTaskSuccess(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessInput">SendTaskSuccessInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessOutput">SendTaskSuccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskSuccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessInput">SendTaskSuccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessOutput">SendTaskSuccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SendTaskSuccessRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessInput">SendTaskSuccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#SendTaskSuccessOutput">SendTaskSuccessOutput</a>)
+
+    StartExecution(*<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionInput">StartExecutionInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionOutput">StartExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionInput">StartExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionOutput">StartExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartExecutionRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionInput">StartExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StartExecutionOutput">StartExecutionOutput</a>)
+
+    StartSyncExecution(*<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionInput">StartSyncExecutionInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionOutput">StartSyncExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSyncExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionInput">StartSyncExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionOutput">StartSyncExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartSyncExecutionRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionInput">StartSyncExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StartSyncExecutionOutput">StartSyncExecutionOutput</a>)
+
+    StopExecution(*<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionInput">StopExecutionInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionOutput">StopExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopExecutionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionInput">StopExecutionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionOutput">StopExecutionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopExecutionRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionInput">StopExecutionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#StopExecutionOutput">StopExecutionOutput</a>)
+
+    TagResource(*<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateStateMachine(*<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineInput">UpdateStateMachineInput</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineOutput">UpdateStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStateMachineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineInput">UpdateStateMachineInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineOutput">UpdateStateMachineOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStateMachineRequest(*<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineInput">UpdateStateMachineInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">sfn</a>.<a href="../index.html#UpdateStateMachineOutput">UpdateStateMachineOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>macie2iface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package macie2iface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/macie2/macie2iface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package macie2iface provides an interface to enable mocking the Amazon Macie 2 service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Macie2API">type Macie2API</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/macie2/macie2iface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Macie2API">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/macie2/macie2iface/interface.go?s=2128:26192#L52">Macie2API</a>
+				<a class="permalink" href="index.html#Macie2API">¶</a>
+				
+				
+			</h2>
+			<p>
+Macie2API provides an interface to enable mocking the
+macie2.Macie2 service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon Macie 2.
+func myFunc(svc macie2iface.Macie2API) bool {
+    // Make svc.AcceptInvitation request
+}
+
+func main() {
+    sess := session.New()
+    svc := macie2.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockMacie2Client struct {
+    macie2iface.Macie2API
+}
+func (m *mockMacie2Client) AcceptInvitation(input *macie2.AcceptInvitationInput) (*macie2.AcceptInvitationOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockMacie2Client{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type Macie2API interface {
+    AcceptInvitation(*<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInvitationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInvitationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationInput">AcceptInvitationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#AcceptInvitationOutput">AcceptInvitationOutput</a>)
+
+    BatchGetCustomDataIdentifiers(*<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersInput">BatchGetCustomDataIdentifiersInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersOutput">BatchGetCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetCustomDataIdentifiersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersInput">BatchGetCustomDataIdentifiersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersOutput">BatchGetCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetCustomDataIdentifiersRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersInput">BatchGetCustomDataIdentifiersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#BatchGetCustomDataIdentifiersOutput">BatchGetCustomDataIdentifiersOutput</a>)
+
+    CreateClassificationJob(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobInput">CreateClassificationJobInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobOutput">CreateClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClassificationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobInput">CreateClassificationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobOutput">CreateClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateClassificationJobRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobInput">CreateClassificationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateClassificationJobOutput">CreateClassificationJobOutput</a>)
+
+    CreateCustomDataIdentifier(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierInput">CreateCustomDataIdentifierInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierOutput">CreateCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomDataIdentifierWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierInput">CreateCustomDataIdentifierInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierOutput">CreateCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateCustomDataIdentifierRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierInput">CreateCustomDataIdentifierInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateCustomDataIdentifierOutput">CreateCustomDataIdentifierOutput</a>)
+
+    CreateFindingsFilter(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterInput">CreateFindingsFilterInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterOutput">CreateFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFindingsFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterInput">CreateFindingsFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterOutput">CreateFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateFindingsFilterRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterInput">CreateFindingsFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateFindingsFilterOutput">CreateFindingsFilterOutput</a>)
+
+    CreateInvitations(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsInput">CreateInvitationsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsOutput">CreateInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsInput">CreateInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsOutput">CreateInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInvitationsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsInput">CreateInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateInvitationsOutput">CreateInvitationsOutput</a>)
+
+    CreateMember(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberInput">CreateMemberInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberOutput">CreateMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberInput">CreateMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberOutput">CreateMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateMemberRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberInput">CreateMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateMemberOutput">CreateMemberOutput</a>)
+
+    CreateSampleFindings(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsInput">CreateSampleFindingsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsOutput">CreateSampleFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSampleFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsInput">CreateSampleFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsOutput">CreateSampleFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateSampleFindingsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsInput">CreateSampleFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#CreateSampleFindingsOutput">CreateSampleFindingsOutput</a>)
+
+    DeclineInvitations(*<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeclineInvitationsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsInput">DeclineInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeclineInvitationsOutput">DeclineInvitationsOutput</a>)
+
+    DeleteCustomDataIdentifier(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierInput">DeleteCustomDataIdentifierInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierOutput">DeleteCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomDataIdentifierWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierInput">DeleteCustomDataIdentifierInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierOutput">DeleteCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteCustomDataIdentifierRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierInput">DeleteCustomDataIdentifierInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteCustomDataIdentifierOutput">DeleteCustomDataIdentifierOutput</a>)
+
+    DeleteFindingsFilter(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterInput">DeleteFindingsFilterInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterOutput">DeleteFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFindingsFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterInput">DeleteFindingsFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterOutput">DeleteFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteFindingsFilterRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterInput">DeleteFindingsFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteFindingsFilterOutput">DeleteFindingsFilterOutput</a>)
+
+    DeleteInvitations(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInvitationsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsInput">DeleteInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteInvitationsOutput">DeleteInvitationsOutput</a>)
+
+    DeleteMember(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberInput">DeleteMemberInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberOutput">DeleteMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberInput">DeleteMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberOutput">DeleteMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteMemberRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberInput">DeleteMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DeleteMemberOutput">DeleteMemberOutput</a>)
+
+    DescribeBuckets(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsInput">DescribeBucketsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsOutput">DescribeBucketsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBucketsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsInput">DescribeBucketsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsOutput">DescribeBucketsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeBucketsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsInput">DescribeBucketsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsOutput">DescribeBucketsOutput</a>)
+
+    DescribeBucketsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsInput">DescribeBucketsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsOutput">DescribeBucketsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeBucketsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsInput">DescribeBucketsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeBucketsOutput">DescribeBucketsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeClassificationJob(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobInput">DescribeClassificationJobInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobOutput">DescribeClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClassificationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobInput">DescribeClassificationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobOutput">DescribeClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeClassificationJobRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobInput">DescribeClassificationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeClassificationJobOutput">DescribeClassificationJobOutput</a>)
+
+    DescribeOrganizationConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOrganizationConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationInput">DescribeOrganizationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DescribeOrganizationConfigurationOutput">DescribeOrganizationConfigurationOutput</a>)
+
+    DisableMacie(*<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieInput">DisableMacieInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieOutput">DisableMacieOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableMacieWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieInput">DisableMacieInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieOutput">DisableMacieOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableMacieRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieInput">DisableMacieInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisableMacieOutput">DisableMacieOutput</a>)
+
+    DisableOrganizationAdminAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisableOrganizationAdminAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountInput">DisableOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisableOrganizationAdminAccountOutput">DisableOrganizationAdminAccountOutput</a>)
+
+    DisassociateFromAdministratorAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromAdministratorAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromAdministratorAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountInput">DisassociateFromAdministratorAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromAdministratorAccountOutput">DisassociateFromAdministratorAccountOutput</a>)
+
+    DisassociateFromMasterAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromMasterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateFromMasterAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountInput">DisassociateFromMasterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateFromMasterAccountOutput">DisassociateFromMasterAccountOutput</a>)
+
+    DisassociateMember(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberInput">DisassociateMemberInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberOutput">DisassociateMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberInput">DisassociateMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberOutput">DisassociateMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateMemberRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberInput">DisassociateMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#DisassociateMemberOutput">DisassociateMemberOutput</a>)
+
+    EnableMacie(*<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieInput">EnableMacieInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieOutput">EnableMacieOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableMacieWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieInput">EnableMacieInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieOutput">EnableMacieOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableMacieRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieInput">EnableMacieInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#EnableMacieOutput">EnableMacieOutput</a>)
+
+    EnableOrganizationAdminAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableOrganizationAdminAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    EnableOrganizationAdminAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountInput">EnableOrganizationAdminAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#EnableOrganizationAdminAccountOutput">EnableOrganizationAdminAccountOutput</a>)
+
+    GetAdministratorAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAdministratorAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAdministratorAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountInput">GetAdministratorAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetAdministratorAccountOutput">GetAdministratorAccountOutput</a>)
+
+    GetBucketStatistics(*<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsInput">GetBucketStatisticsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsOutput">GetBucketStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBucketStatisticsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsInput">GetBucketStatisticsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsOutput">GetBucketStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBucketStatisticsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsInput">GetBucketStatisticsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetBucketStatisticsOutput">GetBucketStatisticsOutput</a>)
+
+    GetClassificationExportConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationInput">GetClassificationExportConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationOutput">GetClassificationExportConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetClassificationExportConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationInput">GetClassificationExportConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationOutput">GetClassificationExportConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetClassificationExportConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationInput">GetClassificationExportConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetClassificationExportConfigurationOutput">GetClassificationExportConfigurationOutput</a>)
+
+    GetCustomDataIdentifier(*<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierInput">GetCustomDataIdentifierInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierOutput">GetCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCustomDataIdentifierWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierInput">GetCustomDataIdentifierInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierOutput">GetCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCustomDataIdentifierRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierInput">GetCustomDataIdentifierInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetCustomDataIdentifierOutput">GetCustomDataIdentifierOutput</a>)
+
+    GetFindingStatistics(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsInput">GetFindingStatisticsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsOutput">GetFindingStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingStatisticsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsInput">GetFindingStatisticsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsOutput">GetFindingStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingStatisticsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsInput">GetFindingStatisticsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingStatisticsOutput">GetFindingStatisticsOutput</a>)
+
+    GetFindings(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsInput">GetFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsOutput">GetFindingsOutput</a>)
+
+    GetFindingsFilter(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterInput">GetFindingsFilterInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterOutput">GetFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterInput">GetFindingsFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterOutput">GetFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsFilterRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterInput">GetFindingsFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsFilterOutput">GetFindingsFilterOutput</a>)
+
+    GetFindingsPublicationConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationInput">GetFindingsPublicationConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationOutput">GetFindingsPublicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsPublicationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationInput">GetFindingsPublicationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationOutput">GetFindingsPublicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetFindingsPublicationConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationInput">GetFindingsPublicationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetFindingsPublicationConfigurationOutput">GetFindingsPublicationConfigurationOutput</a>)
+
+    GetInvitationsCount(*<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInvitationsCountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetInvitationsCountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountInput">GetInvitationsCountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetInvitationsCountOutput">GetInvitationsCountOutput</a>)
+
+    GetMacieSession(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionInput">GetMacieSessionInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionOutput">GetMacieSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMacieSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionInput">GetMacieSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionOutput">GetMacieSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMacieSessionRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionInput">GetMacieSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMacieSessionOutput">GetMacieSessionOutput</a>)
+
+    GetMasterAccount(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMasterAccountWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMasterAccountRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountInput">GetMasterAccountInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMasterAccountOutput">GetMasterAccountOutput</a>)
+
+    GetMember(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberInput">GetMemberInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberOutput">GetMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMemberWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberInput">GetMemberInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberOutput">GetMemberOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetMemberRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberInput">GetMemberInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetMemberOutput">GetMemberOutput</a>)
+
+    GetUsageStatistics(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsInput">GetUsageStatisticsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsOutput">GetUsageStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUsageStatisticsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsInput">GetUsageStatisticsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsOutput">GetUsageStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUsageStatisticsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsInput">GetUsageStatisticsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsOutput">GetUsageStatisticsOutput</a>)
+
+    GetUsageStatisticsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsInput">GetUsageStatisticsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsOutput">GetUsageStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetUsageStatisticsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsInput">GetUsageStatisticsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageStatisticsOutput">GetUsageStatisticsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetUsageTotals(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsInput">GetUsageTotalsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsOutput">GetUsageTotalsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUsageTotalsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsInput">GetUsageTotalsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsOutput">GetUsageTotalsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUsageTotalsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsInput">GetUsageTotalsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#GetUsageTotalsOutput">GetUsageTotalsOutput</a>)
+
+    ListClassificationJobs(*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsInput">ListClassificationJobsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsOutput">ListClassificationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClassificationJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsInput">ListClassificationJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsOutput">ListClassificationJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListClassificationJobsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsInput">ListClassificationJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsOutput">ListClassificationJobsOutput</a>)
+
+    ListClassificationJobsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsInput">ListClassificationJobsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsOutput">ListClassificationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListClassificationJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsInput">ListClassificationJobsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListClassificationJobsOutput">ListClassificationJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListCustomDataIdentifiers(*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersInput">ListCustomDataIdentifiersInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersOutput">ListCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCustomDataIdentifiersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersInput">ListCustomDataIdentifiersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersOutput">ListCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListCustomDataIdentifiersRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersInput">ListCustomDataIdentifiersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersOutput">ListCustomDataIdentifiersOutput</a>)
+
+    ListCustomDataIdentifiersPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersInput">ListCustomDataIdentifiersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersOutput">ListCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListCustomDataIdentifiersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersInput">ListCustomDataIdentifiersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListCustomDataIdentifiersOutput">ListCustomDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFindings(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>)
+
+    ListFindingsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFindingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsInput">ListFindingsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsOutput">ListFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListFindingsFilters(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersInput">ListFindingsFiltersInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersOutput">ListFindingsFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsFiltersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersInput">ListFindingsFiltersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersOutput">ListFindingsFiltersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListFindingsFiltersRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersInput">ListFindingsFiltersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersOutput">ListFindingsFiltersOutput</a>)
+
+    ListFindingsFiltersPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersInput">ListFindingsFiltersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersOutput">ListFindingsFiltersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListFindingsFiltersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersInput">ListFindingsFiltersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListFindingsFiltersOutput">ListFindingsFiltersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListInvitations(*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInvitationsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInvitationsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>)
+
+    ListInvitationsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListInvitationsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsInput">ListInvitationsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListInvitationsOutput">ListInvitationsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListManagedDataIdentifiers(*<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersInput">ListManagedDataIdentifiersInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersOutput">ListManagedDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListManagedDataIdentifiersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersInput">ListManagedDataIdentifiersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersOutput">ListManagedDataIdentifiersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListManagedDataIdentifiersRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersInput">ListManagedDataIdentifiersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListManagedDataIdentifiersOutput">ListManagedDataIdentifiersOutput</a>)
+
+    ListMembers(*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMembersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListMembersRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>)
+
+    ListMembersPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListMembersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersInput">ListMembersInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListMembersOutput">ListMembersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListOrganizationAdminAccounts(*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationAdminAccountsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListOrganizationAdminAccountsRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>)
+
+    ListOrganizationAdminAccountsPages(*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListOrganizationAdminAccountsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsInput">ListOrganizationAdminAccountsInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#ListOrganizationAdminAccountsOutput">ListOrganizationAdminAccountsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutClassificationExportConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationInput">PutClassificationExportConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationOutput">PutClassificationExportConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutClassificationExportConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationInput">PutClassificationExportConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationOutput">PutClassificationExportConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutClassificationExportConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationInput">PutClassificationExportConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#PutClassificationExportConfigurationOutput">PutClassificationExportConfigurationOutput</a>)
+
+    PutFindingsPublicationConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationInput">PutFindingsPublicationConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationOutput">PutFindingsPublicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFindingsPublicationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationInput">PutFindingsPublicationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationOutput">PutFindingsPublicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutFindingsPublicationConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationInput">PutFindingsPublicationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#PutFindingsPublicationConfigurationOutput">PutFindingsPublicationConfigurationOutput</a>)
+
+    SearchResources(*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesInput">SearchResourcesInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesOutput">SearchResourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchResourcesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesInput">SearchResourcesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesOutput">SearchResourcesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SearchResourcesRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesInput">SearchResourcesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesOutput">SearchResourcesOutput</a>)
+
+    SearchResourcesPages(*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesInput">SearchResourcesInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesOutput">SearchResourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    SearchResourcesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesInput">SearchResourcesInput</a>, func(*<a href="../index.html">macie2</a>.<a href="../index.html#SearchResourcesOutput">SearchResourcesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    TagResource(*<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    TestCustomDataIdentifier(*<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierInput">TestCustomDataIdentifierInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierOutput">TestCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestCustomDataIdentifierWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierInput">TestCustomDataIdentifierInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierOutput">TestCustomDataIdentifierOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TestCustomDataIdentifierRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierInput">TestCustomDataIdentifierInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#TestCustomDataIdentifierOutput">TestCustomDataIdentifierOutput</a>)
+
+    UntagResource(*<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateClassificationJob(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobInput">UpdateClassificationJobInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobOutput">UpdateClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClassificationJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobInput">UpdateClassificationJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobOutput">UpdateClassificationJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateClassificationJobRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobInput">UpdateClassificationJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateClassificationJobOutput">UpdateClassificationJobOutput</a>)
+
+    UpdateFindingsFilter(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterInput">UpdateFindingsFilterInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterOutput">UpdateFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsFilterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterInput">UpdateFindingsFilterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterOutput">UpdateFindingsFilterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateFindingsFilterRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterInput">UpdateFindingsFilterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateFindingsFilterOutput">UpdateFindingsFilterOutput</a>)
+
+    UpdateMacieSession(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionInput">UpdateMacieSessionInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionOutput">UpdateMacieSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMacieSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionInput">UpdateMacieSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionOutput">UpdateMacieSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMacieSessionRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionInput">UpdateMacieSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMacieSessionOutput">UpdateMacieSessionOutput</a>)
+
+    UpdateMemberSession(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionInput">UpdateMemberSessionInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionOutput">UpdateMemberSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMemberSessionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionInput">UpdateMemberSessionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionOutput">UpdateMemberSessionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMemberSessionRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionInput">UpdateMemberSessionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateMemberSessionOutput">UpdateMemberSessionOutput</a>)
+
+    UpdateOrganizationConfiguration(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateOrganizationConfigurationRequest(*<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationInput">UpdateOrganizationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">macie2</a>.<a href="../index.html#UpdateOrganizationConfigurationOutput">UpdateOrganizationConfigurationOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>codeartifactiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package codeartifactiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/codeartifact/codeartifactiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package codeartifactiface provides an interface to enable mocking the CodeArtifact service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CodeArtifactAPI">type CodeArtifactAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codeartifact/codeartifactiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CodeArtifactAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/codeartifact/codeartifactiface/interface.go?s=2264:17995#L52">CodeArtifactAPI</a>
+				<a class="permalink" href="index.html#CodeArtifactAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+CodeArtifactAPI provides an interface to enable mocking the
+codeartifact.CodeArtifact service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// CodeArtifact.
+func myFunc(svc codeartifactiface.CodeArtifactAPI) bool {
+    // Make svc.AssociateExternalConnection request
+}
+
+func main() {
+    sess := session.New()
+    svc := codeartifact.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockCodeArtifactClient struct {
+    codeartifactiface.CodeArtifactAPI
+}
+func (m *mockCodeArtifactClient) AssociateExternalConnection(input *codeartifact.AssociateExternalConnectionInput) (*codeartifact.AssociateExternalConnectionOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockCodeArtifactClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type CodeArtifactAPI interface {
+    AssociateExternalConnection(*<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionInput">AssociateExternalConnectionInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionOutput">AssociateExternalConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateExternalConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionInput">AssociateExternalConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionOutput">AssociateExternalConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateExternalConnectionRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionInput">AssociateExternalConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#AssociateExternalConnectionOutput">AssociateExternalConnectionOutput</a>)
+
+    CopyPackageVersions(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsInput">CopyPackageVersionsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsOutput">CopyPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopyPackageVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsInput">CopyPackageVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsOutput">CopyPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CopyPackageVersionsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsInput">CopyPackageVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CopyPackageVersionsOutput">CopyPackageVersionsOutput</a>)
+
+    CreateDomain(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDomainRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>)
+
+    CreateRepository(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRepositoryRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>)
+
+    DeleteDomain(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>)
+
+    DeleteDomainPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyInput">DeleteDomainPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyOutput">DeleteDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyInput">DeleteDomainPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyOutput">DeleteDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyInput">DeleteDomainPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteDomainPermissionsPolicyOutput">DeleteDomainPermissionsPolicyOutput</a>)
+
+    DeletePackageVersions(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsInput">DeletePackageVersionsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsOutput">DeletePackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePackageVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsInput">DeletePackageVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsOutput">DeletePackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePackageVersionsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsInput">DeletePackageVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeletePackageVersionsOutput">DeletePackageVersionsOutput</a>)
+
+    DeleteRepository(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>)
+
+    DeleteRepositoryPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyInput">DeleteRepositoryPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyOutput">DeleteRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyInput">DeleteRepositoryPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyOutput">DeleteRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyInput">DeleteRepositoryPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DeleteRepositoryPermissionsPolicyOutput">DeleteRepositoryPermissionsPolicyOutput</a>)
+
+    DescribeDomain(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>)
+
+    DescribePackageVersion(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionInput">DescribePackageVersionInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionOutput">DescribePackageVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePackageVersionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionInput">DescribePackageVersionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionOutput">DescribePackageVersionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePackageVersionRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionInput">DescribePackageVersionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribePackageVersionOutput">DescribePackageVersionOutput</a>)
+
+    DescribeRepository(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryInput">DescribeRepositoryInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryOutput">DescribeRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryInput">DescribeRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryOutput">DescribeRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRepositoryRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryInput">DescribeRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DescribeRepositoryOutput">DescribeRepositoryOutput</a>)
+
+    DisassociateExternalConnection(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionInput">DisassociateExternalConnectionInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionOutput">DisassociateExternalConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateExternalConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionInput">DisassociateExternalConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionOutput">DisassociateExternalConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateExternalConnectionRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionInput">DisassociateExternalConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DisassociateExternalConnectionOutput">DisassociateExternalConnectionOutput</a>)
+
+    DisposePackageVersions(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsInput">DisposePackageVersionsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsOutput">DisposePackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisposePackageVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsInput">DisposePackageVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsOutput">DisposePackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisposePackageVersionsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsInput">DisposePackageVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#DisposePackageVersionsOutput">DisposePackageVersionsOutput</a>)
+
+    GetAuthorizationToken(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAuthorizationTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAuthorizationTokenRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>)
+
+    GetDomainPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyInput">GetDomainPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyOutput">GetDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDomainPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyInput">GetDomainPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyOutput">GetDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDomainPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyInput">GetDomainPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetDomainPermissionsPolicyOutput">GetDomainPermissionsPolicyOutput</a>)
+
+    GetPackageVersionAsset(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetInput">GetPackageVersionAssetInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetOutput">GetPackageVersionAssetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionAssetWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetInput">GetPackageVersionAssetInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetOutput">GetPackageVersionAssetOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionAssetRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetInput">GetPackageVersionAssetInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionAssetOutput">GetPackageVersionAssetOutput</a>)
+
+    GetPackageVersionReadme(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeInput">GetPackageVersionReadmeInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeOutput">GetPackageVersionReadmeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionReadmeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeInput">GetPackageVersionReadmeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeOutput">GetPackageVersionReadmeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionReadmeRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeInput">GetPackageVersionReadmeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetPackageVersionReadmeOutput">GetPackageVersionReadmeOutput</a>)
+
+    GetRepositoryEndpoint(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointInput">GetRepositoryEndpointInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointOutput">GetRepositoryEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryEndpointWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointInput">GetRepositoryEndpointInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointOutput">GetRepositoryEndpointOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryEndpointRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointInput">GetRepositoryEndpointInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryEndpointOutput">GetRepositoryEndpointOutput</a>)
+
+    GetRepositoryPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyInput">GetRepositoryPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyOutput">GetRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyInput">GetRepositoryPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyOutput">GetRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyInput">GetRepositoryPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#GetRepositoryPermissionsPolicyOutput">GetRepositoryPermissionsPolicyOutput</a>)
+
+    ListDomains(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>)
+
+    ListDomainsPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDomainsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsInput">ListDomainsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListDomainsOutput">ListDomainsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPackageVersionAssets(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsInput">ListPackageVersionAssetsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsOutput">ListPackageVersionAssetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionAssetsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsInput">ListPackageVersionAssetsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsOutput">ListPackageVersionAssetsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionAssetsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsInput">ListPackageVersionAssetsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsOutput">ListPackageVersionAssetsOutput</a>)
+
+    ListPackageVersionAssetsPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsInput">ListPackageVersionAssetsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsOutput">ListPackageVersionAssetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPackageVersionAssetsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsInput">ListPackageVersionAssetsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionAssetsOutput">ListPackageVersionAssetsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPackageVersionDependencies(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesInput">ListPackageVersionDependenciesInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesOutput">ListPackageVersionDependenciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionDependenciesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesInput">ListPackageVersionDependenciesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesOutput">ListPackageVersionDependenciesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionDependenciesRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesInput">ListPackageVersionDependenciesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionDependenciesOutput">ListPackageVersionDependenciesOutput</a>)
+
+    ListPackageVersions(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsInput">ListPackageVersionsInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsOutput">ListPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsInput">ListPackageVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsOutput">ListPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackageVersionsRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsInput">ListPackageVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsOutput">ListPackageVersionsOutput</a>)
+
+    ListPackageVersionsPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsInput">ListPackageVersionsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsOutput">ListPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPackageVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsInput">ListPackageVersionsInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackageVersionsOutput">ListPackageVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPackages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesInput">ListPackagesInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesOutput">ListPackagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesInput">ListPackagesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesOutput">ListPackagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackagesRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesInput">ListPackagesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesOutput">ListPackagesOutput</a>)
+
+    ListPackagesPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesInput">ListPackagesInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesOutput">ListPackagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPackagesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesInput">ListPackagesInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListPackagesOutput">ListPackagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRepositories(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInput">ListRepositoriesInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesOutput">ListRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRepositoriesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInput">ListRepositoriesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesOutput">ListRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRepositoriesRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInput">ListRepositoriesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesOutput">ListRepositoriesOutput</a>)
+
+    ListRepositoriesPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInput">ListRepositoriesInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesOutput">ListRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRepositoriesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInput">ListRepositoriesInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesOutput">ListRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListRepositoriesInDomain(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainInput">ListRepositoriesInDomainInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainOutput">ListRepositoriesInDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRepositoriesInDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainInput">ListRepositoriesInDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainOutput">ListRepositoriesInDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListRepositoriesInDomainRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainInput">ListRepositoriesInDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainOutput">ListRepositoriesInDomainOutput</a>)
+
+    ListRepositoriesInDomainPages(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainInput">ListRepositoriesInDomainInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainOutput">ListRepositoriesInDomainOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListRepositoriesInDomainPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainInput">ListRepositoriesInDomainInput</a>, func(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListRepositoriesInDomainOutput">ListRepositoriesInDomainOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutDomainPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyInput">PutDomainPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyOutput">PutDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutDomainPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyInput">PutDomainPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyOutput">PutDomainPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutDomainPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyInput">PutDomainPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#PutDomainPermissionsPolicyOutput">PutDomainPermissionsPolicyOutput</a>)
+
+    PutRepositoryPermissionsPolicy(*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyInput">PutRepositoryPermissionsPolicyInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyOutput">PutRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRepositoryPermissionsPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyInput">PutRepositoryPermissionsPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyOutput">PutRepositoryPermissionsPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRepositoryPermissionsPolicyRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyInput">PutRepositoryPermissionsPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#PutRepositoryPermissionsPolicyOutput">PutRepositoryPermissionsPolicyOutput</a>)
+
+    TagResource(*<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdatePackageVersionsStatus(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusInput">UpdatePackageVersionsStatusInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusOutput">UpdatePackageVersionsStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePackageVersionsStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusInput">UpdatePackageVersionsStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusOutput">UpdatePackageVersionsStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePackageVersionsStatusRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusInput">UpdatePackageVersionsStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdatePackageVersionsStatusOutput">UpdatePackageVersionsStatusOutput</a>)
+
+    UpdateRepository(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryInput">UpdateRepositoryInput</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryOutput">UpdateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryInput">UpdateRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryOutput">UpdateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRepositoryRequest(*<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryInput">UpdateRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">codeartifact</a>.<a href="../index.html#UpdateRepositoryOutput">UpdateRepositoryOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

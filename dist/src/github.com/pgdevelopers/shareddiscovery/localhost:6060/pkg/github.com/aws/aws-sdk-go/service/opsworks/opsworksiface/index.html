@@ -1,0 +1,565 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>opsworksiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package opsworksiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/opsworks/opsworksiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package opsworksiface provides an interface to enable mocking the AWS OpsWorks service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#OpsWorksAPI">type OpsWorksAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/opsworks/opsworksiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="OpsWorksAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/opsworks/opsworksiface/interface.go?s=2148:29243#L52">OpsWorksAPI</a>
+				<a class="permalink" href="index.html#OpsWorksAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+OpsWorksAPI provides an interface to enable mocking the
+opsworks.OpsWorks service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AWS OpsWorks.
+func myFunc(svc opsworksiface.OpsWorksAPI) bool {
+    // Make svc.AssignInstance request
+}
+
+func main() {
+    sess := session.New()
+    svc := opsworks.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockOpsWorksClient struct {
+    opsworksiface.OpsWorksAPI
+}
+func (m *mockOpsWorksClient) AssignInstance(input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockOpsWorksClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type OpsWorksAPI interface {
+    AssignInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceInput">AssignInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceOutput">AssignInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssignInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceInput">AssignInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceOutput">AssignInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssignInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceInput">AssignInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssignInstanceOutput">AssignInstanceOutput</a>)
+
+    AssignVolume(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeInput">AssignVolumeInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeOutput">AssignVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssignVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeInput">AssignVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeOutput">AssignVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssignVolumeRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeInput">AssignVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssignVolumeOutput">AssignVolumeOutput</a>)
+
+    AssociateElasticIp(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpInput">AssociateElasticIpInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpOutput">AssociateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateElasticIpWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpInput">AssociateElasticIpInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpOutput">AssociateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociateElasticIpRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpInput">AssociateElasticIpInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AssociateElasticIpOutput">AssociateElasticIpOutput</a>)
+
+    AttachElasticLoadBalancer(*<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerInput">AttachElasticLoadBalancerInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerOutput">AttachElasticLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachElasticLoadBalancerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerInput">AttachElasticLoadBalancerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerOutput">AttachElasticLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AttachElasticLoadBalancerRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerInput">AttachElasticLoadBalancerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#AttachElasticLoadBalancerOutput">AttachElasticLoadBalancerOutput</a>)
+
+    CloneStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackInput">CloneStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackOutput">CloneStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackInput">CloneStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackOutput">CloneStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackInput">CloneStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CloneStackOutput">CloneStackOutput</a>)
+
+    CreateApp(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppInput">CreateAppInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppOutput">CreateAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppInput">CreateAppInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppOutput">CreateAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateAppRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppInput">CreateAppInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateAppOutput">CreateAppOutput</a>)
+
+    CreateDeployment(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDeploymentRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentInput">CreateDeploymentInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateDeploymentOutput">CreateDeploymentOutput</a>)
+
+    CreateInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceInput">CreateInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceOutput">CreateInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceInput">CreateInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceOutput">CreateInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceInput">CreateInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateInstanceOutput">CreateInstanceOutput</a>)
+
+    CreateLayer(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerInput">CreateLayerInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerOutput">CreateLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLayerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerInput">CreateLayerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerOutput">CreateLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateLayerRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerInput">CreateLayerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateLayerOutput">CreateLayerOutput</a>)
+
+    CreateStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackInput">CreateStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackOutput">CreateStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackInput">CreateStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackOutput">CreateStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackInput">CreateStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateStackOutput">CreateStackOutput</a>)
+
+    CreateUserProfile(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileInput">CreateUserProfileInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileOutput">CreateUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateUserProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileInput">CreateUserProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileOutput">CreateUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateUserProfileRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileInput">CreateUserProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#CreateUserProfileOutput">CreateUserProfileOutput</a>)
+
+    DeleteApp(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppInput">DeleteAppInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppOutput">DeleteAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppInput">DeleteAppInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppOutput">DeleteAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteAppRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppInput">DeleteAppInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteAppOutput">DeleteAppOutput</a>)
+
+    DeleteInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceInput">DeleteInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceOutput">DeleteInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceInput">DeleteInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceOutput">DeleteInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceInput">DeleteInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteInstanceOutput">DeleteInstanceOutput</a>)
+
+    DeleteLayer(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerInput">DeleteLayerInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerOutput">DeleteLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLayerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerInput">DeleteLayerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerOutput">DeleteLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLayerRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerInput">DeleteLayerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteLayerOutput">DeleteLayerOutput</a>)
+
+    DeleteStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackInput">DeleteStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackOutput">DeleteStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackInput">DeleteStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackOutput">DeleteStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackInput">DeleteStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteStackOutput">DeleteStackOutput</a>)
+
+    DeleteUserProfile(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileInput">DeleteUserProfileInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileOutput">DeleteUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteUserProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileInput">DeleteUserProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileOutput">DeleteUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteUserProfileRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileInput">DeleteUserProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeleteUserProfileOutput">DeleteUserProfileOutput</a>)
+
+    DeregisterEcsCluster(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterInput">DeregisterEcsClusterInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterOutput">DeregisterEcsClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterEcsClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterInput">DeregisterEcsClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterOutput">DeregisterEcsClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterEcsClusterRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterInput">DeregisterEcsClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterEcsClusterOutput">DeregisterEcsClusterOutput</a>)
+
+    DeregisterElasticIp(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpInput">DeregisterElasticIpInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpOutput">DeregisterElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterElasticIpWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpInput">DeregisterElasticIpInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpOutput">DeregisterElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterElasticIpRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpInput">DeregisterElasticIpInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterElasticIpOutput">DeregisterElasticIpOutput</a>)
+
+    DeregisterInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceInput">DeregisterInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceOutput">DeregisterInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceInput">DeregisterInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceOutput">DeregisterInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceInput">DeregisterInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterInstanceOutput">DeregisterInstanceOutput</a>)
+
+    DeregisterRdsDbInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceInput">DeregisterRdsDbInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceOutput">DeregisterRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterRdsDbInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceInput">DeregisterRdsDbInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceOutput">DeregisterRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterRdsDbInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceInput">DeregisterRdsDbInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterRdsDbInstanceOutput">DeregisterRdsDbInstanceOutput</a>)
+
+    DeregisterVolume(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeInput">DeregisterVolumeInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeOutput">DeregisterVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeInput">DeregisterVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeOutput">DeregisterVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeregisterVolumeRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeInput">DeregisterVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DeregisterVolumeOutput">DeregisterVolumeOutput</a>)
+
+    DescribeAgentVersions(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsInput">DescribeAgentVersionsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsOutput">DescribeAgentVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAgentVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsInput">DescribeAgentVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsOutput">DescribeAgentVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAgentVersionsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsInput">DescribeAgentVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAgentVersionsOutput">DescribeAgentVersionsOutput</a>)
+
+    DescribeApps(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsInput">DescribeAppsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsOutput">DescribeAppsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsInput">DescribeAppsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsOutput">DescribeAppsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeAppsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsInput">DescribeAppsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsOutput">DescribeAppsOutput</a>)
+
+    DescribeCommands(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsInput">DescribeCommandsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsOutput">DescribeCommandsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCommandsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsInput">DescribeCommandsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsOutput">DescribeCommandsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeCommandsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsInput">DescribeCommandsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeCommandsOutput">DescribeCommandsOutput</a>)
+
+    DescribeDeployments(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsInput">DescribeDeploymentsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsOutput">DescribeDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeploymentsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsInput">DescribeDeploymentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsOutput">DescribeDeploymentsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDeploymentsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsInput">DescribeDeploymentsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsOutput">DescribeDeploymentsOutput</a>)
+
+    DescribeEcsClusters(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersInput">DescribeEcsClustersInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersOutput">DescribeEcsClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEcsClustersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersInput">DescribeEcsClustersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersOutput">DescribeEcsClustersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeEcsClustersRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersInput">DescribeEcsClustersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersOutput">DescribeEcsClustersOutput</a>)
+
+    DescribeEcsClustersPages(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersInput">DescribeEcsClustersInput</a>, func(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersOutput">DescribeEcsClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeEcsClustersPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersInput">DescribeEcsClustersInput</a>, func(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeEcsClustersOutput">DescribeEcsClustersOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeElasticIps(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsInput">DescribeElasticIpsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsOutput">DescribeElasticIpsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeElasticIpsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsInput">DescribeElasticIpsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsOutput">DescribeElasticIpsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeElasticIpsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsInput">DescribeElasticIpsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticIpsOutput">DescribeElasticIpsOutput</a>)
+
+    DescribeElasticLoadBalancers(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersInput">DescribeElasticLoadBalancersInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersOutput">DescribeElasticLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeElasticLoadBalancersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersInput">DescribeElasticLoadBalancersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersOutput">DescribeElasticLoadBalancersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeElasticLoadBalancersRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersInput">DescribeElasticLoadBalancersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeElasticLoadBalancersOutput">DescribeElasticLoadBalancersOutput</a>)
+
+    DescribeInstances(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesOutput">DescribeInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesOutput">DescribeInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstancesRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesOutput">DescribeInstancesOutput</a>)
+
+    DescribeLayers(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersInput">DescribeLayersInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersOutput">DescribeLayersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLayersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersInput">DescribeLayersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersOutput">DescribeLayersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLayersRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersInput">DescribeLayersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLayersOutput">DescribeLayersOutput</a>)
+
+    DescribeLoadBasedAutoScaling(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingInput">DescribeLoadBasedAutoScalingInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingOutput">DescribeLoadBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBasedAutoScalingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingInput">DescribeLoadBasedAutoScalingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingOutput">DescribeLoadBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeLoadBasedAutoScalingRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingInput">DescribeLoadBasedAutoScalingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeLoadBasedAutoScalingOutput">DescribeLoadBasedAutoScalingOutput</a>)
+
+    DescribeMyUserProfile(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileInput">DescribeMyUserProfileInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileOutput">DescribeMyUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMyUserProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileInput">DescribeMyUserProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileOutput">DescribeMyUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeMyUserProfileRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileInput">DescribeMyUserProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeMyUserProfileOutput">DescribeMyUserProfileOutput</a>)
+
+    DescribeOperatingSystems(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsInput">DescribeOperatingSystemsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsOutput">DescribeOperatingSystemsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOperatingSystemsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsInput">DescribeOperatingSystemsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsOutput">DescribeOperatingSystemsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOperatingSystemsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsInput">DescribeOperatingSystemsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeOperatingSystemsOutput">DescribeOperatingSystemsOutput</a>)
+
+    DescribePermissions(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsInput">DescribePermissionsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsOutput">DescribePermissionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsInput">DescribePermissionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsOutput">DescribePermissionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePermissionsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsInput">DescribePermissionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribePermissionsOutput">DescribePermissionsOutput</a>)
+
+    DescribeRaidArrays(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysInput">DescribeRaidArraysInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysOutput">DescribeRaidArraysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRaidArraysWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysInput">DescribeRaidArraysInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysOutput">DescribeRaidArraysOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRaidArraysRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysInput">DescribeRaidArraysInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRaidArraysOutput">DescribeRaidArraysOutput</a>)
+
+    DescribeRdsDbInstances(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesInput">DescribeRdsDbInstancesInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesOutput">DescribeRdsDbInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRdsDbInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesInput">DescribeRdsDbInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesOutput">DescribeRdsDbInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRdsDbInstancesRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesInput">DescribeRdsDbInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeRdsDbInstancesOutput">DescribeRdsDbInstancesOutput</a>)
+
+    DescribeServiceErrors(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsInput">DescribeServiceErrorsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsOutput">DescribeServiceErrorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServiceErrorsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsInput">DescribeServiceErrorsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsOutput">DescribeServiceErrorsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeServiceErrorsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsInput">DescribeServiceErrorsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeServiceErrorsOutput">DescribeServiceErrorsOutput</a>)
+
+    DescribeStackProvisioningParameters(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersInput">DescribeStackProvisioningParametersInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersOutput">DescribeStackProvisioningParametersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStackProvisioningParametersWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersInput">DescribeStackProvisioningParametersInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersOutput">DescribeStackProvisioningParametersOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStackProvisioningParametersRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersInput">DescribeStackProvisioningParametersInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackProvisioningParametersOutput">DescribeStackProvisioningParametersOutput</a>)
+
+    DescribeStackSummary(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryInput">DescribeStackSummaryInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryOutput">DescribeStackSummaryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStackSummaryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryInput">DescribeStackSummaryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryOutput">DescribeStackSummaryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStackSummaryRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryInput">DescribeStackSummaryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStackSummaryOutput">DescribeStackSummaryOutput</a>)
+
+    DescribeStacks(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksInput">DescribeStacksInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksOutput">DescribeStacksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStacksWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksInput">DescribeStacksInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksOutput">DescribeStacksOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeStacksRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksInput">DescribeStacksInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeStacksOutput">DescribeStacksOutput</a>)
+
+    DescribeTimeBasedAutoScaling(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingInput">DescribeTimeBasedAutoScalingInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingOutput">DescribeTimeBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTimeBasedAutoScalingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingInput">DescribeTimeBasedAutoScalingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingOutput">DescribeTimeBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeTimeBasedAutoScalingRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingInput">DescribeTimeBasedAutoScalingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeTimeBasedAutoScalingOutput">DescribeTimeBasedAutoScalingOutput</a>)
+
+    DescribeUserProfiles(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesInput">DescribeUserProfilesInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesOutput">DescribeUserProfilesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeUserProfilesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesInput">DescribeUserProfilesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesOutput">DescribeUserProfilesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeUserProfilesRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesInput">DescribeUserProfilesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeUserProfilesOutput">DescribeUserProfilesOutput</a>)
+
+    DescribeVolumes(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVolumesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeVolumesRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesInput">DescribeVolumesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeVolumesOutput">DescribeVolumesOutput</a>)
+
+    DetachElasticLoadBalancer(*<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerInput">DetachElasticLoadBalancerInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerOutput">DetachElasticLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachElasticLoadBalancerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerInput">DetachElasticLoadBalancerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerOutput">DetachElasticLoadBalancerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DetachElasticLoadBalancerRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerInput">DetachElasticLoadBalancerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DetachElasticLoadBalancerOutput">DetachElasticLoadBalancerOutput</a>)
+
+    DisassociateElasticIp(*<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpInput">DisassociateElasticIpInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpOutput">DisassociateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateElasticIpWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpInput">DisassociateElasticIpInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpOutput">DisassociateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DisassociateElasticIpRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpInput">DisassociateElasticIpInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DisassociateElasticIpOutput">DisassociateElasticIpOutput</a>)
+
+    GetHostnameSuggestion(*<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionInput">GetHostnameSuggestionInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionOutput">GetHostnameSuggestionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetHostnameSuggestionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionInput">GetHostnameSuggestionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionOutput">GetHostnameSuggestionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetHostnameSuggestionRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionInput">GetHostnameSuggestionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#GetHostnameSuggestionOutput">GetHostnameSuggestionOutput</a>)
+
+    GrantAccess(*<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessInput">GrantAccessInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessOutput">GrantAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GrantAccessWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessInput">GrantAccessInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessOutput">GrantAccessOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GrantAccessRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessInput">GrantAccessInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#GrantAccessOutput">GrantAccessOutput</a>)
+
+    ListTags(*<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>)
+
+    RebootInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceInput">RebootInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceOutput">RebootInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RebootInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceInput">RebootInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceOutput">RebootInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RebootInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceInput">RebootInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RebootInstanceOutput">RebootInstanceOutput</a>)
+
+    RegisterEcsCluster(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterInput">RegisterEcsClusterInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterOutput">RegisterEcsClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterEcsClusterWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterInput">RegisterEcsClusterInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterOutput">RegisterEcsClusterOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterEcsClusterRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterInput">RegisterEcsClusterInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterEcsClusterOutput">RegisterEcsClusterOutput</a>)
+
+    RegisterElasticIp(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpInput">RegisterElasticIpInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpOutput">RegisterElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterElasticIpWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpInput">RegisterElasticIpInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpOutput">RegisterElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterElasticIpRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpInput">RegisterElasticIpInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterElasticIpOutput">RegisterElasticIpOutput</a>)
+
+    RegisterInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceInput">RegisterInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceOutput">RegisterInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceInput">RegisterInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceOutput">RegisterInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceInput">RegisterInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterInstanceOutput">RegisterInstanceOutput</a>)
+
+    RegisterRdsDbInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceInput">RegisterRdsDbInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceOutput">RegisterRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterRdsDbInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceInput">RegisterRdsDbInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceOutput">RegisterRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterRdsDbInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceInput">RegisterRdsDbInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterRdsDbInstanceOutput">RegisterRdsDbInstanceOutput</a>)
+
+    RegisterVolume(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeInput">RegisterVolumeInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeOutput">RegisterVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeInput">RegisterVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeOutput">RegisterVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RegisterVolumeRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeInput">RegisterVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#RegisterVolumeOutput">RegisterVolumeOutput</a>)
+
+    SetLoadBasedAutoScaling(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingInput">SetLoadBasedAutoScalingInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingOutput">SetLoadBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetLoadBasedAutoScalingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingInput">SetLoadBasedAutoScalingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingOutput">SetLoadBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetLoadBasedAutoScalingRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingInput">SetLoadBasedAutoScalingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetLoadBasedAutoScalingOutput">SetLoadBasedAutoScalingOutput</a>)
+
+    SetPermission(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionInput">SetPermissionInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionOutput">SetPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetPermissionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionInput">SetPermissionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionOutput">SetPermissionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetPermissionRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionInput">SetPermissionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetPermissionOutput">SetPermissionOutput</a>)
+
+    SetTimeBasedAutoScaling(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingInput">SetTimeBasedAutoScalingInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingOutput">SetTimeBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetTimeBasedAutoScalingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingInput">SetTimeBasedAutoScalingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingOutput">SetTimeBasedAutoScalingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetTimeBasedAutoScalingRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingInput">SetTimeBasedAutoScalingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#SetTimeBasedAutoScalingOutput">SetTimeBasedAutoScalingOutput</a>)
+
+    StartInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceInput">StartInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceOutput">StartInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceInput">StartInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceOutput">StartInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceInput">StartInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StartInstanceOutput">StartInstanceOutput</a>)
+
+    StartStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackInput">StartStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackOutput">StartStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackInput">StartStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackOutput">StartStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackInput">StartStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StartStackOutput">StartStackOutput</a>)
+
+    StopInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceInput">StopInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceOutput">StopInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceInput">StopInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceOutput">StopInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceInput">StopInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StopInstanceOutput">StopInstanceOutput</a>)
+
+    StopStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackInput">StopStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackOutput">StopStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackInput">StopStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackOutput">StopStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StopStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackInput">StopStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#StopStackOutput">StopStackOutput</a>)
+
+    TagResource(*<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UnassignInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceInput">UnassignInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceOutput">UnassignInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnassignInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceInput">UnassignInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceOutput">UnassignInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnassignInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceInput">UnassignInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignInstanceOutput">UnassignInstanceOutput</a>)
+
+    UnassignVolume(*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeInput">UnassignVolumeInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeOutput">UnassignVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnassignVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeInput">UnassignVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeOutput">UnassignVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UnassignVolumeRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeInput">UnassignVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UnassignVolumeOutput">UnassignVolumeOutput</a>)
+
+    UntagResource(*<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UpdateApp(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppInput">UpdateAppInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppOutput">UpdateAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppInput">UpdateAppInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppOutput">UpdateAppOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateAppRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppInput">UpdateAppInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateAppOutput">UpdateAppOutput</a>)
+
+    UpdateElasticIp(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpInput">UpdateElasticIpInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpOutput">UpdateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateElasticIpWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpInput">UpdateElasticIpInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpOutput">UpdateElasticIpOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateElasticIpRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpInput">UpdateElasticIpInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateElasticIpOutput">UpdateElasticIpOutput</a>)
+
+    UpdateInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceInput">UpdateInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceOutput">UpdateInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceInput">UpdateInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceOutput">UpdateInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceInput">UpdateInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateInstanceOutput">UpdateInstanceOutput</a>)
+
+    UpdateLayer(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerInput">UpdateLayerInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerOutput">UpdateLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLayerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerInput">UpdateLayerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerOutput">UpdateLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateLayerRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerInput">UpdateLayerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateLayerOutput">UpdateLayerOutput</a>)
+
+    UpdateMyUserProfile(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileInput">UpdateMyUserProfileInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileOutput">UpdateMyUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMyUserProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileInput">UpdateMyUserProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileOutput">UpdateMyUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateMyUserProfileRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileInput">UpdateMyUserProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateMyUserProfileOutput">UpdateMyUserProfileOutput</a>)
+
+    UpdateRdsDbInstance(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceInput">UpdateRdsDbInstanceInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceOutput">UpdateRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRdsDbInstanceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceInput">UpdateRdsDbInstanceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceOutput">UpdateRdsDbInstanceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateRdsDbInstanceRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceInput">UpdateRdsDbInstanceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateRdsDbInstanceOutput">UpdateRdsDbInstanceOutput</a>)
+
+    UpdateStack(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackInput">UpdateStackInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackOutput">UpdateStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStackWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackInput">UpdateStackInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackOutput">UpdateStackOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateStackRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackInput">UpdateStackInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateStackOutput">UpdateStackOutput</a>)
+
+    UpdateUserProfile(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileInput">UpdateUserProfileInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileOutput">UpdateUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateUserProfileWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileInput">UpdateUserProfileInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileOutput">UpdateUserProfileOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateUserProfileRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileInput">UpdateUserProfileInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateUserProfileOutput">UpdateUserProfileOutput</a>)
+
+    UpdateVolume(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVolumeWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateVolumeRequest(*<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeInput">UpdateVolumeInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#UpdateVolumeOutput">UpdateVolumeOutput</a>)
+
+    WaitUntilAppExists(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsInput">DescribeAppsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilAppExistsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeAppsInput">DescribeAppsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilDeploymentSuccessful(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsInput">DescribeDeploymentsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilDeploymentSuccessfulWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeDeploymentsInput">DescribeDeploymentsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilInstanceOnline(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilInstanceOnlineWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilInstanceRegistered(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilInstanceRegisteredWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilInstanceStopped(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilInstanceStoppedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilInstanceTerminated(*<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilInstanceTerminatedWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opsworks</a>.<a href="../index.html#DescribeInstancesInput">DescribeInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

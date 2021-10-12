@@ -1,0 +1,3959 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>pi - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package pi
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/pi&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package pi provides the client and types for making API
+requests to AWS Performance Insights.
+</p>
+<p>
+Amazon RDS Performance Insights enables you to monitor and explore different
+dimensions of database load based on data captured from a running DB instance.
+The guide provides detailed information about Performance Insights data types,
+parameters and errors.
+</p>
+<p>
+When Performance Insights is enabled, the Amazon RDS Performance Insights
+API provides visibility into the performance of your DB instance. Amazon
+CloudWatch provides the authoritative source for AWS service-vended monitoring
+metrics. Performance Insights offers a domain-specific view of DB load.
+</p>
+<p>
+DB load is measured as Average Active Sessions. Performance Insights provides
+the data to API consumers as a two-dimensional time-series dataset. The time
+dimension provides DB load data for each time point in the queried time range.
+Each time point decomposes overall load in relation to the requested dimensions,
+measured at that time point. Examples include SQL, Wait event, User, and
+Host.
+</p>
+<pre>* To learn more about Performance Insights and Amazon Aurora DB instances,
+go to the Amazon Aurora User Guide (<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html</a>).
+
+* To learn more about Performance Insights and Amazon RDS DB instances,
+go to the Amazon RDS User Guide (<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html</a>).
+</pre>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27</a> for more information on this service.
+</p>
+<p>
+See pi package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/pi/">https://docs.aws.amazon.com/sdk-for-go/api/service/pi/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS Performance Insights with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS Performance Insights client PI for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/pi/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/pi/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#DetailStatus_Values">func DetailStatus_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#ServiceType_Values">func ServiceType_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#DataPoint">type DataPoint</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DataPoint.GoString">func (s DataPoint) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.SetTimestamp">func (s *DataPoint) SetTimestamp(v time.Time) *DataPoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.SetValue">func (s *DataPoint) SetValue(v float64) *DataPoint</a></dd>
+				
+					
+					<dd>    <a href="index.html#DataPoint.String">func (s DataPoint) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeDimensionKeysInput">type DescribeDimensionKeysInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.GoString">func (s DescribeDimensionKeysInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetEndTime">func (s *DescribeDimensionKeysInput) SetEndTime(v time.Time) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetFilter">func (s *DescribeDimensionKeysInput) SetFilter(v map[string]*string) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetGroupBy">func (s *DescribeDimensionKeysInput) SetGroupBy(v *DimensionGroup) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetIdentifier">func (s *DescribeDimensionKeysInput) SetIdentifier(v string) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetMaxResults">func (s *DescribeDimensionKeysInput) SetMaxResults(v int64) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetMetric">func (s *DescribeDimensionKeysInput) SetMetric(v string) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetNextToken">func (s *DescribeDimensionKeysInput) SetNextToken(v string) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetPartitionBy">func (s *DescribeDimensionKeysInput) SetPartitionBy(v *DimensionGroup) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetPeriodInSeconds">func (s *DescribeDimensionKeysInput) SetPeriodInSeconds(v int64) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetServiceType">func (s *DescribeDimensionKeysInput) SetServiceType(v string) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.SetStartTime">func (s *DescribeDimensionKeysInput) SetStartTime(v time.Time) *DescribeDimensionKeysInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.String">func (s DescribeDimensionKeysInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysInput.Validate">func (s *DescribeDimensionKeysInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeDimensionKeysOutput">type DescribeDimensionKeysOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.GoString">func (s DescribeDimensionKeysOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.SetAlignedEndTime">func (s *DescribeDimensionKeysOutput) SetAlignedEndTime(v time.Time) *DescribeDimensionKeysOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.SetAlignedStartTime">func (s *DescribeDimensionKeysOutput) SetAlignedStartTime(v time.Time) *DescribeDimensionKeysOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.SetKeys">func (s *DescribeDimensionKeysOutput) SetKeys(v []*DimensionKeyDescription) *DescribeDimensionKeysOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.SetNextToken">func (s *DescribeDimensionKeysOutput) SetNextToken(v string) *DescribeDimensionKeysOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.SetPartitionKeys">func (s *DescribeDimensionKeysOutput) SetPartitionKeys(v []*ResponsePartitionKey) *DescribeDimensionKeysOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeDimensionKeysOutput.String">func (s DescribeDimensionKeysOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DimensionGroup">type DimensionGroup</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.GoString">func (s DimensionGroup) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.SetDimensions">func (s *DimensionGroup) SetDimensions(v []*string) *DimensionGroup</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.SetGroup">func (s *DimensionGroup) SetGroup(v string) *DimensionGroup</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.SetLimit">func (s *DimensionGroup) SetLimit(v int64) *DimensionGroup</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.String">func (s DimensionGroup) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionGroup.Validate">func (s *DimensionGroup) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DimensionKeyDescription">type DimensionKeyDescription</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDescription.GoString">func (s DimensionKeyDescription) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDescription.SetDimensions">func (s *DimensionKeyDescription) SetDimensions(v map[string]*string) *DimensionKeyDescription</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDescription.SetPartitions">func (s *DimensionKeyDescription) SetPartitions(v []*float64) *DimensionKeyDescription</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDescription.SetTotal">func (s *DimensionKeyDescription) SetTotal(v float64) *DimensionKeyDescription</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDescription.String">func (s DimensionKeyDescription) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DimensionKeyDetail">type DimensionKeyDetail</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDetail.GoString">func (s DimensionKeyDetail) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDetail.SetDimension">func (s *DimensionKeyDetail) SetDimension(v string) *DimensionKeyDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDetail.SetStatus">func (s *DimensionKeyDetail) SetStatus(v string) *DimensionKeyDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDetail.SetValue">func (s *DimensionKeyDetail) SetValue(v string) *DimensionKeyDetail</a></dd>
+				
+					
+					<dd>    <a href="index.html#DimensionKeyDetail.String">func (s DimensionKeyDetail) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetDimensionKeyDetailsInput">type GetDimensionKeyDetailsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.GoString">func (s GetDimensionKeyDetailsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.SetGroup">func (s *GetDimensionKeyDetailsInput) SetGroup(v string) *GetDimensionKeyDetailsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.SetGroupIdentifier">func (s *GetDimensionKeyDetailsInput) SetGroupIdentifier(v string) *GetDimensionKeyDetailsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.SetIdentifier">func (s *GetDimensionKeyDetailsInput) SetIdentifier(v string) *GetDimensionKeyDetailsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.SetRequestedDimensions">func (s *GetDimensionKeyDetailsInput) SetRequestedDimensions(v []*string) *GetDimensionKeyDetailsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.SetServiceType">func (s *GetDimensionKeyDetailsInput) SetServiceType(v string) *GetDimensionKeyDetailsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.String">func (s GetDimensionKeyDetailsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsInput.Validate">func (s *GetDimensionKeyDetailsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetDimensionKeyDetailsOutput">type GetDimensionKeyDetailsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsOutput.GoString">func (s GetDimensionKeyDetailsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsOutput.SetDimensions">func (s *GetDimensionKeyDetailsOutput) SetDimensions(v []*DimensionKeyDetail) *GetDimensionKeyDetailsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetDimensionKeyDetailsOutput.String">func (s GetDimensionKeyDetailsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetResourceMetricsInput">type GetResourceMetricsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.GoString">func (s GetResourceMetricsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetEndTime">func (s *GetResourceMetricsInput) SetEndTime(v time.Time) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetIdentifier">func (s *GetResourceMetricsInput) SetIdentifier(v string) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetMaxResults">func (s *GetResourceMetricsInput) SetMaxResults(v int64) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetMetricQueries">func (s *GetResourceMetricsInput) SetMetricQueries(v []*MetricQuery) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetNextToken">func (s *GetResourceMetricsInput) SetNextToken(v string) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetPeriodInSeconds">func (s *GetResourceMetricsInput) SetPeriodInSeconds(v int64) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetServiceType">func (s *GetResourceMetricsInput) SetServiceType(v string) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.SetStartTime">func (s *GetResourceMetricsInput) SetStartTime(v time.Time) *GetResourceMetricsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.String">func (s GetResourceMetricsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsInput.Validate">func (s *GetResourceMetricsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetResourceMetricsOutput">type GetResourceMetricsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.GoString">func (s GetResourceMetricsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.SetAlignedEndTime">func (s *GetResourceMetricsOutput) SetAlignedEndTime(v time.Time) *GetResourceMetricsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.SetAlignedStartTime">func (s *GetResourceMetricsOutput) SetAlignedStartTime(v time.Time) *GetResourceMetricsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.SetIdentifier">func (s *GetResourceMetricsOutput) SetIdentifier(v string) *GetResourceMetricsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.SetMetricList">func (s *GetResourceMetricsOutput) SetMetricList(v []*MetricKeyDataPoints) *GetResourceMetricsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.SetNextToken">func (s *GetResourceMetricsOutput) SetNextToken(v string) *GetResourceMetricsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetResourceMetricsOutput.String">func (s GetResourceMetricsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServiceError">type InternalServiceError</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.Code">func (s *InternalServiceError) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.Error">func (s *InternalServiceError) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.GoString">func (s InternalServiceError) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.Message">func (s *InternalServiceError) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.OrigErr">func (s *InternalServiceError) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.RequestID">func (s *InternalServiceError) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.StatusCode">func (s *InternalServiceError) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServiceError.String">func (s InternalServiceError) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidArgumentException">type InvalidArgumentException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.Code">func (s *InvalidArgumentException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.Error">func (s *InvalidArgumentException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.GoString">func (s InvalidArgumentException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.Message">func (s *InvalidArgumentException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.OrigErr">func (s *InvalidArgumentException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.RequestID">func (s *InvalidArgumentException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.StatusCode">func (s *InvalidArgumentException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidArgumentException.String">func (s InvalidArgumentException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MetricKeyDataPoints">type MetricKeyDataPoints</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MetricKeyDataPoints.GoString">func (s MetricKeyDataPoints) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricKeyDataPoints.SetDataPoints">func (s *MetricKeyDataPoints) SetDataPoints(v []*DataPoint) *MetricKeyDataPoints</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricKeyDataPoints.SetKey">func (s *MetricKeyDataPoints) SetKey(v *ResponseResourceMetricKey) *MetricKeyDataPoints</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricKeyDataPoints.String">func (s MetricKeyDataPoints) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MetricQuery">type MetricQuery</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#MetricQuery.GoString">func (s MetricQuery) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricQuery.SetFilter">func (s *MetricQuery) SetFilter(v map[string]*string) *MetricQuery</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricQuery.SetGroupBy">func (s *MetricQuery) SetGroupBy(v *DimensionGroup) *MetricQuery</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricQuery.SetMetric">func (s *MetricQuery) SetMetric(v string) *MetricQuery</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricQuery.String">func (s MetricQuery) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#MetricQuery.Validate">func (s *MetricQuery) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NotAuthorizedException">type NotAuthorizedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.Code">func (s *NotAuthorizedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.Error">func (s *NotAuthorizedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.GoString">func (s NotAuthorizedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.Message">func (s *NotAuthorizedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.OrigErr">func (s *NotAuthorizedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.RequestID">func (s *NotAuthorizedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.StatusCode">func (s *NotAuthorizedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#NotAuthorizedException.String">func (s NotAuthorizedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PI">type PI</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *PI</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PI.DescribeDimensionKeys">func (c *PI) DescribeDimensionKeys(input *DescribeDimensionKeysInput) (*DescribeDimensionKeysOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.DescribeDimensionKeysRequest">func (c *PI) DescribeDimensionKeysRequest(input *DescribeDimensionKeysInput) (req *request.Request, output *DescribeDimensionKeysOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.DescribeDimensionKeysWithContext">func (c *PI) DescribeDimensionKeysWithContext(ctx aws.Context, input *DescribeDimensionKeysInput, opts ...request.Option) (*DescribeDimensionKeysOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetDimensionKeyDetails">func (c *PI) GetDimensionKeyDetails(input *GetDimensionKeyDetailsInput) (*GetDimensionKeyDetailsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetDimensionKeyDetailsRequest">func (c *PI) GetDimensionKeyDetailsRequest(input *GetDimensionKeyDetailsInput) (req *request.Request, output *GetDimensionKeyDetailsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetDimensionKeyDetailsWithContext">func (c *PI) GetDimensionKeyDetailsWithContext(ctx aws.Context, input *GetDimensionKeyDetailsInput, opts ...request.Option) (*GetDimensionKeyDetailsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetResourceMetrics">func (c *PI) GetResourceMetrics(input *GetResourceMetricsInput) (*GetResourceMetricsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetResourceMetricsRequest">func (c *PI) GetResourceMetricsRequest(input *GetResourceMetricsInput) (req *request.Request, output *GetResourceMetricsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PI.GetResourceMetricsWithContext">func (c *PI) GetResourceMetricsWithContext(ctx aws.Context, input *GetResourceMetricsInput, opts ...request.Option) (*GetResourceMetricsOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResponsePartitionKey">type ResponsePartitionKey</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResponsePartitionKey.GoString">func (s ResponsePartitionKey) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResponsePartitionKey.SetDimensions">func (s *ResponsePartitionKey) SetDimensions(v map[string]*string) *ResponsePartitionKey</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResponsePartitionKey.String">func (s ResponsePartitionKey) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResponseResourceMetricKey">type ResponseResourceMetricKey</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResponseResourceMetricKey.GoString">func (s ResponseResourceMetricKey) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResponseResourceMetricKey.SetDimensions">func (s *ResponseResourceMetricKey) SetDimensions(v map[string]*string) *ResponseResourceMetricKey</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResponseResourceMetricKey.SetMetric">func (s *ResponseResourceMetricKey) SetMetric(v string) *ResponseResourceMetricKey</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResponseResourceMetricKey.String">func (s ResponseResourceMetricKey) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DetailStatusAvailable is a DetailStatus enum value</span>
+    <span id="DetailStatusAvailable">DetailStatusAvailable</span> = &#34;AVAILABLE&#34;
+
+    <span class="comment">// DetailStatusProcessing is a DetailStatus enum value</span>
+    <span id="DetailStatusProcessing">DetailStatusProcessing</span> = &#34;PROCESSING&#34;
+
+    <span class="comment">// DetailStatusUnavailable is a DetailStatus enum value</span>
+    <span id="DetailStatusUnavailable">DetailStatusUnavailable</span> = &#34;UNAVAILABLE&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInternalServiceError for service response error code</span>
+    <span class="comment">// &#34;InternalServiceError&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request failed due to an unknown error.</span>
+    <span id="ErrCodeInternalServiceError">ErrCodeInternalServiceError</span> = &#34;InternalServiceError&#34;
+
+    <span class="comment">// ErrCodeInvalidArgumentException for service response error code</span>
+    <span class="comment">// &#34;InvalidArgumentException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// One of the arguments provided is invalid for this request.</span>
+    <span id="ErrCodeInvalidArgumentException">ErrCodeInvalidArgumentException</span> = &#34;InvalidArgumentException&#34;
+
+    <span class="comment">// ErrCodeNotAuthorizedException for service response error code</span>
+    <span class="comment">// &#34;NotAuthorizedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The user is not authorized to perform this request.</span>
+    <span id="ErrCodeNotAuthorizedException">ErrCodeNotAuthorizedException</span> = &#34;NotAuthorizedException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;pi&#34;        <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = <a href="index.html#ServiceName">ServiceName</a> <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;PI&#34;        <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// ServiceTypeRds is a ServiceType enum value</span>
+    <span id="ServiceTypeRds">ServiceTypeRds</span> = &#34;RDS&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="DetailStatus_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=60612:60647#L1722">DetailStatus_Values</a>
+				<a class="permalink" href="index.html#DetailStatus_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func DetailStatus_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+DetailStatus_Values returns all elements of the DetailStatus enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ServiceType_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=60901:60935#L1736">ServiceType_Values</a>
+				<a class="permalink" href="index.html#ServiceType_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ServiceType_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ServiceType_Values returns all elements of the ServiceType enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="DataPoint">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=11151:11514#L274">DataPoint</a>
+				<a class="permalink" href="index.html#DataPoint">¶</a>
+				
+				
+			</h2>
+			<p>
+A timestamp, and a single numerical value, which together represent a measurement
+at a particular point in time.
+</p>
+
+			<pre>type DataPoint struct {
+
+    <span class="comment">// The time, in epoch format, associated with a particular Value.</span>
+    <span class="comment">//</span>
+<span id="DataPoint.Timestamp"></span>    <span class="comment">// Timestamp is a required field</span>
+    Timestamp *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The actual value associated with a particular Timestamp.</span>
+    <span class="comment">//</span>
+<span id="DataPoint.Value"></span>    <span class="comment">// Value is a required field</span>
+    Value *<a href="../../../../../builtin/index.html#float64">float64</a> `type:&#34;double&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DataPoint.GoString">func (DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=12082:12118#L302">GoString</a>
+					<a class="permalink" href="index.html#DataPoint.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DataPoint">DataPoint</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.SetTimestamp">func (*DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=12193:12249#L307">SetTimestamp</a>
+					<a class="permalink" href="index.html#DataPoint.SetTimestamp">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DataPoint">DataPoint</a>) SetTimestamp(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DataPoint">DataPoint</a></pre>
+				<p>
+SetTimestamp sets the Timestamp field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.SetValue">func (*DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=12325:12375#L313">SetValue</a>
+					<a class="permalink" href="index.html#DataPoint.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DataPoint">DataPoint</a>) SetValue(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#DataPoint">DataPoint</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DataPoint.String">func (DataPoint) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=11764:11798#L293">String</a>
+					<a class="permalink" href="index.html#DataPoint.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DataPoint">DataPoint</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeDimensionKeysInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=12405:16773#L318">DescribeDimensionKeysInput</a>
+				<a class="permalink" href="index.html#DescribeDimensionKeysInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeDimensionKeysInput struct {
+
+    <span class="comment">// The date and time specifying the end of the requested time series data. The</span>
+    <span class="comment">// value specified is exclusive, which means that data points less than (but</span>
+    <span class="comment">// not equal to) EndTime are returned.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The value for EndTime must be later than the value for StartTime.</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.EndTime"></span>    <span class="comment">// EndTime is a required field</span>
+    EndTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// One or more filters to apply in the request. Restrictions:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * Any number of filters by the same dimension, as specified in the GroupBy</span>
+    <span class="comment">//    or Partition parameters.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * A single filter for any other dimension in this dimension group.</span>
+<span id="DescribeDimensionKeysInput.Filter"></span>    Filter map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34;`
+
+    <span class="comment">// A specification for how to aggregate the data points from a query result.</span>
+    <span class="comment">// You must specify a valid dimension group. Performance Insights returns all</span>
+    <span class="comment">// dimensions within this group, unless you provide the names of specific dimensions</span>
+    <span class="comment">// within this group. You can also request that Performance Insights return</span>
+    <span class="comment">// a limited number of values for a dimension.</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.GroupBy"></span>    <span class="comment">// GroupBy is a required field</span>
+    GroupBy *<a href="index.html#DimensionGroup">DimensionGroup</a> `type:&#34;structure&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An immutable, AWS Region-unique identifier for a data source. Performance</span>
+    <span class="comment">// Insights gathers metrics from this data source.</span>
+    <span class="comment">//</span>
+    <span class="comment">// To use an Amazon RDS instance as a data source, you specify its DbiResourceId</span>
+    <span class="comment">// value. For example, specify db-FAIHNTYBKTGAUSUZQYPDS2GW4A</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.Identifier"></span>    <span class="comment">// Identifier is a required field</span>
+    Identifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The maximum number of items to return in the response. If more items exist</span>
+    <span class="comment">// than the specified MaxRecords value, a pagination token is included in the</span>
+    <span class="comment">// response so that the remaining results can be retrieved.</span>
+<span id="DescribeDimensionKeysInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// The name of a Performance Insights metric to be measured.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Valid values for Metric are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.load.avg - a scaled representation of the number of active sessions</span>
+    <span class="comment">//    for the database engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sampledload.avg - the raw number of active sessions for the database</span>
+    <span class="comment">//    engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the number of active sessions is less than an internal Performance Insights</span>
+    <span class="comment">// threshold, db.load.avg and db.sampledload.avg are the same value. If the</span>
+    <span class="comment">// number of active sessions is greater than the internal threshold, Performance</span>
+    <span class="comment">// Insights samples the active sessions, with db.load.avg showing the scaled</span>
+    <span class="comment">// values, db.sampledload.avg showing the raw values, and db.sampledload.avg</span>
+    <span class="comment">// less than db.load.avg. For most use cases, you can query db.load.avg only.</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.Metric"></span>    <span class="comment">// Metric is a required field</span>
+    Metric *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An optional pagination token provided by a previous request. If this parameter</span>
+    <span class="comment">// is specified, the response includes only records beyond the token, up to</span>
+    <span class="comment">// the value specified by MaxRecords.</span>
+<span id="DescribeDimensionKeysInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// For each dimension specified in GroupBy, specify a secondary dimension to</span>
+    <span class="comment">// further subdivide the partition keys in the response.</span>
+<span id="DescribeDimensionKeysInput.PartitionBy"></span>    PartitionBy *<a href="index.html#DimensionGroup">DimensionGroup</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The granularity, in seconds, of the data points returned from Performance</span>
+    <span class="comment">// Insights. A period can be as short as one second, or as long as one day (86400</span>
+    <span class="comment">// seconds). Valid values are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 1 (one second)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 60 (one minute)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 300 (five minutes)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 3600 (one hour)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 86400 (twenty-four hours)</span>
+    <span class="comment">//</span>
+    <span class="comment">// If you don&#39;t specify PeriodInSeconds, then Performance Insights chooses a</span>
+    <span class="comment">// value for you, with a goal of returning roughly 100-200 data points in the</span>
+    <span class="comment">// response.</span>
+<span id="DescribeDimensionKeysInput.PeriodInSeconds"></span>    PeriodInSeconds *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// The AWS service for which Performance Insights will return metrics. The only</span>
+    <span class="comment">// valid value for ServiceType is RDS.</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.ServiceType"></span>    <span class="comment">// ServiceType is a required field</span>
+    ServiceType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ServiceType&#34;`
+
+    <span class="comment">// The date and time specifying the beginning of the requested time series data.</span>
+    <span class="comment">// You must specify a StartTime within the past 7 days. The value specified</span>
+    <span class="comment">// is inclusive, which means that data points equal to or greater than StartTime</span>
+    <span class="comment">// are returned.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The value for StartTime must be earlier than the value for EndTime.</span>
+    <span class="comment">//</span>
+<span id="DescribeDimensionKeysInput.StartTime"></span>    <span class="comment">// StartTime is a required field</span>
+    StartTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeDimensionKeysInput.GoString">func (DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=17358:17411#L440">GoString</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetEndTime">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=18722:18810#L486">SetEndTime</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetEndTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetEndTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetEndTime sets the EndTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetFilter">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=18886:18982#L492">SetFilter</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetFilter">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetFilter(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetFilter sets the Filter field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetGroupBy">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19058:19152#L498">SetGroupBy</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetGroupBy">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetGroupBy(v *<a href="index.html#DimensionGroup">DimensionGroup</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetGroupBy sets the GroupBy field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetIdentifier">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19235:19323#L504">SetIdentifier</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetIdentifier sets the Identifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetMaxResults">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19410:19497#L510">SetMaxResults</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetMetric">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19576:19660#L516">SetMetric</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetMetric">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetMetric(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetMetric sets the Metric field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetNextToken">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19741:19828#L522">SetNextToken</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetPartitionBy">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=19916:20014#L528">SetPartitionBy</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetPartitionBy">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetPartitionBy(v *<a href="index.html#DimensionGroup">DimensionGroup</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetPartitionBy sets the PartitionBy field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetPeriodInSeconds">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=20111:20203#L534">SetPeriodInSeconds</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetPeriodInSeconds">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetPeriodInSeconds(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetPeriodInSeconds sets the PeriodInSeconds field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetServiceType">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=20297:20386#L540">SetServiceType</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetServiceType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetServiceType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetServiceType sets the ServiceType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.SetStartTime">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=20472:20562#L546">SetStartTime</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.SetStartTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) SetStartTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a></pre>
+				<p>
+SetStartTime sets the StartTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.String">func (DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=17023:17074#L431">String</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysInput.Validate">func (*DescribeDimensionKeysInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=17512:17565#L445">Validate</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeDimensionKeysOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=20596:21735#L551">DescribeDimensionKeysOutput</a>
+				<a class="permalink" href="index.html#DescribeDimensionKeysOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeDimensionKeysOutput struct {
+
+    <span class="comment">// The end time for the returned dimension keys, after alignment to a granular</span>
+    <span class="comment">// boundary (as specified by PeriodInSeconds). AlignedEndTime will be greater</span>
+    <span class="comment">// than or equal to the value of the user-specified Endtime.</span>
+<span id="DescribeDimensionKeysOutput.AlignedEndTime"></span>    AlignedEndTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The start time for the returned dimension keys, after alignment to a granular</span>
+    <span class="comment">// boundary (as specified by PeriodInSeconds). AlignedStartTime will be less</span>
+    <span class="comment">// than or equal to the value of the user-specified StartTime.</span>
+<span id="DescribeDimensionKeysOutput.AlignedStartTime"></span>    AlignedStartTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The dimension keys that were requested.</span>
+<span id="DescribeDimensionKeysOutput.Keys"></span>    Keys []*<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a> `type:&#34;list&#34;`
+
+    <span class="comment">// An optional pagination token provided by a previous request. If this parameter</span>
+    <span class="comment">// is specified, the response includes only records beyond the token, up to</span>
+    <span class="comment">// the value specified by MaxRecords.</span>
+<span id="DescribeDimensionKeysOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// If PartitionBy was present in the request, PartitionKeys contains the breakdown</span>
+    <span class="comment">// of dimension keys by the specified partitions.</span>
+<span id="DescribeDimensionKeysOutput.PartitionKeys"></span>    PartitionKeys []*<a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a> `type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.GoString">func (DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=22321:22375#L591">GoString</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.SetAlignedEndTime">func (*DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=22460:22557#L596">SetAlignedEndTime</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.SetAlignedEndTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) SetAlignedEndTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a></pre>
+				<p>
+SetAlignedEndTime sets the AlignedEndTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.SetAlignedStartTime">func (*DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=22660:22759#L602">SetAlignedStartTime</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.SetAlignedStartTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) SetAlignedStartTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a></pre>
+				<p>
+SetAlignedStartTime sets the AlignedStartTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.SetKeys">func (*DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=22840:22944#L608">SetKeys</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.SetKeys">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) SetKeys(v []*<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a></pre>
+				<p>
+SetKeys sets the Keys field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.SetNextToken">func (*DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=23022:23111#L614">SetNextToken</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.SetPartitionKeys">func (*DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=23203:23313#L620">SetPartitionKeys</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.SetPartitionKeys">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) SetPartitionKeys(v []*<a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a>) *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a></pre>
+				<p>
+SetPartitionKeys sets the PartitionKeys field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeDimensionKeysOutput.String">func (DescribeDimensionKeysOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=21985:22037#L582">String</a>
+					<a class="permalink" href="index.html#DescribeDimensionKeysOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DimensionGroup">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=23731:26922#L631">DimensionGroup</a>
+				<a class="permalink" href="index.html#DimensionGroup">¶</a>
+				
+				
+			</h2>
+			<p>
+A logical grouping of Performance Insights metrics for a related subject
+area. For example, the db.sql dimension group consists of the following dimensions:
+db.sql.id, db.sql.db_id, db.sql.statement, and db.sql.tokenized_id.
+</p>
+<p>
+Each response element returns a maximum of 500 bytes. For larger elements,
+such as SQL statements, only the first 500 bytes are returned.
+</p>
+
+			<pre>type DimensionGroup struct {
+
+    <span class="comment">// A list of specific dimensions from a dimension group. If this parameter is</span>
+    <span class="comment">// not present, then it signifies that all of the dimensions in the group were</span>
+    <span class="comment">// requested, or are present in the response.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Valid values for elements in the Dimensions array are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.application.name - The name of the application that is connected</span>
+    <span class="comment">//    to the database (only Aurora PostgreSQL and RDS PostgreSQL)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.host.id - The host ID of the connected client (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.host.name - The host name of the connected client (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.name - The name of the database to which the client is connected</span>
+    <span class="comment">//    (only Aurora PostgreSQL, RDS PostgreSQL, Aurora MySQL, RDS MySQL, and</span>
+    <span class="comment">//    MariaDB)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.session_type.name - The type of the current session (only Aurora</span>
+    <span class="comment">//    PostgreSQL and RDS PostgreSQL)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql.id - The SQL ID generated by Performance Insights (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql.db_id - The SQL ID generated by the database (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql.statement - The SQL text that is being executed (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql.tokenized_id</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql_tokenized.id - The SQL digest ID generated by Performance Insights</span>
+    <span class="comment">//    (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql_tokenized.db_id - SQL digest ID generated by the database (all</span>
+    <span class="comment">//    engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql_tokenized.statement - The SQL digest text (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.user.id - The ID of the user logged in to the database (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.user.name - The name of the user logged in to the database (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.wait_event.name - The event for which the backend is waiting (all</span>
+    <span class="comment">//    engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.wait_event.type - The type of event for which the backend is waiting</span>
+    <span class="comment">//    (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.wait_event_type.name - The name of the event type for which the backend</span>
+    <span class="comment">//    is waiting (all engines)</span>
+<span id="DimensionGroup.Dimensions"></span>    Dimensions []*<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The name of the dimension group. Valid values are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db - The name of the database to which the client is connected (only</span>
+    <span class="comment">//    Aurora PostgreSQL, RDS PostgreSQL, Aurora MySQL, RDS MySQL, and MariaDB)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.application - The name of the application that is connected to the</span>
+    <span class="comment">//    database (only Aurora PostgreSQL and RDS PostgreSQL)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.host - The host name of the connected client (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.session_type - The type of the current session (only Aurora PostgreSQL</span>
+    <span class="comment">//    and RDS PostgreSQL)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql - The SQL that is currently executing (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sql_tokenized - The SQL digest (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.wait_event - The event for which the database backend is waiting</span>
+    <span class="comment">//    (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.wait_event_type - The type of event for which the database backend</span>
+    <span class="comment">//    is waiting (all engines)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.user - The user logged in to the database (all engines)</span>
+    <span class="comment">//</span>
+<span id="DimensionGroup.Group"></span>    <span class="comment">// Group is a required field</span>
+    Group *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The maximum number of items to fetch for this dimension group.</span>
+<span id="DimensionGroup.Limit"></span>    Limit *<a href="../../../../../builtin/index.html#int64">int64</a> `min:&#34;1&#34; type:&#34;integer&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DimensionGroup.GoString">func (DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=27495:27536#L730">GoString</a>
+					<a class="permalink" href="index.html#DimensionGroup.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionGroup">DimensionGroup</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionGroup.SetDimensions">func (*DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=28176:28243#L754">SetDimensions</a>
+					<a class="permalink" href="index.html#DimensionGroup.SetDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionGroup">DimensionGroup</a>) SetDimensions(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionGroup">DimensionGroup</a></pre>
+				<p>
+SetDimensions sets the Dimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionGroup.SetGroup">func (*DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=28319:28378#L760">SetGroup</a>
+					<a class="permalink" href="index.html#DimensionGroup.SetGroup">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionGroup">DimensionGroup</a>) SetGroup(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionGroup">DimensionGroup</a></pre>
+				<p>
+SetGroup sets the Group field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionGroup.SetLimit">func (*DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=28450:28508#L766">SetLimit</a>
+					<a class="permalink" href="index.html#DimensionGroup.SetLimit">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionGroup">DimensionGroup</a>) SetLimit(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#DimensionGroup">DimensionGroup</a></pre>
+				<p>
+SetLimit sets the Limit field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionGroup.String">func (DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=27172:27211#L721">String</a>
+					<a class="permalink" href="index.html#DimensionGroup.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionGroup">DimensionGroup</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionGroup.Validate">func (*DimensionGroup) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=27637:27678#L735">Validate</a>
+					<a class="permalink" href="index.html#DimensionGroup.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionGroup">DimensionGroup</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DimensionKeyDescription">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=28636:29061#L773">DimensionKeyDescription</a>
+				<a class="permalink" href="index.html#DimensionKeyDescription">¶</a>
+				
+				
+			</h2>
+			<p>
+An array of descriptions and aggregated values for each dimension within
+a dimension group.
+</p>
+
+			<pre>type DimensionKeyDescription struct {
+
+    <span class="comment">// A map of name-value pairs for the dimensions in the group.</span>
+<span id="DimensionKeyDescription.Dimensions"></span>    Dimensions map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34;`
+
+    <span class="comment">// If PartitionBy was specified, PartitionKeys contains the dimensions that</span>
+    <span class="comment">// were.</span>
+<span id="DimensionKeyDescription.Partitions"></span>    Partitions []*<a href="../../../../../builtin/index.html#float64">float64</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The aggregated metric value for the dimension(s), over the requested time</span>
+    <span class="comment">// range.</span>
+<span id="DimensionKeyDescription.Total"></span>    Total *<a href="../../../../../builtin/index.html#float64">float64</a> `type:&#34;double&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DimensionKeyDescription.GoString">func (DimensionKeyDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=29643:29693#L802">GoString</a>
+					<a class="permalink" href="index.html#DimensionKeyDescription.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDescription.SetDimensions">func (*DimensionKeyDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=29770:29864#L807">SetDimensions</a>
+					<a class="permalink" href="index.html#DimensionKeyDescription.SetDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) SetDimensions(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a></pre>
+				<p>
+SetDimensions sets the Dimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDescription.SetPartitions">func (*DimensionKeyDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=29950:30036#L813">SetPartitions</a>
+					<a class="permalink" href="index.html#DimensionKeyDescription.SetPartitions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) SetPartitions(v []*<a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a></pre>
+				<p>
+SetPartitions sets the Partitions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDescription.SetTotal">func (*DimensionKeyDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=30112:30190#L819">SetTotal</a>
+					<a class="permalink" href="index.html#DimensionKeyDescription.SetTotal">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) SetTotal(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a></pre>
+				<p>
+SetTotal sets the Total field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDescription.String">func (DimensionKeyDescription) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=29311:29359#L793">String</a>
+					<a class="permalink" href="index.html#DimensionKeyDescription.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionKeyDescription">DimensionKeyDescription</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DimensionKeyDetail">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=30287:31302#L825">DimensionKeyDetail</a>
+				<a class="permalink" href="index.html#DimensionKeyDetail">¶</a>
+				
+				
+			</h2>
+			<p>
+An object that describes the details for a specified dimension.
+</p>
+
+			<pre>type DimensionKeyDetail struct {
+
+    <span class="comment">// The full name of the dimension. The full name includes the group name and</span>
+    <span class="comment">// key name. The only valid value is db.sql.statement.</span>
+<span id="DimensionKeyDetail.Dimension"></span>    Dimension *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The status of the dimension detail data. Possible values include the following:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * AVAILABLE - The dimension detail data is ready to be retrieved.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * PROCESSING - The dimension detail data isn&#39;t ready to be retrieved because</span>
+    <span class="comment">//    more processing time is required. If the requested detail data for db.sql.statement</span>
+    <span class="comment">//    has the status PROCESSING, Performance Insights returns the truncated</span>
+    <span class="comment">//    query.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * UNAVAILABLE - The dimension detail data could not be collected successfully.</span>
+<span id="DimensionKeyDetail.Status"></span>    Status *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;DetailStatus&#34;`
+
+    <span class="comment">// The value of the dimension detail data. For the db.sql.statement dimension,</span>
+    <span class="comment">// this value is either the full or truncated SQL query, depending on the return</span>
+    <span class="comment">// status.</span>
+<span id="DimensionKeyDetail.Value"></span>    Value *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DimensionKeyDetail.GoString">func (DimensionKeyDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=31879:31924#L864">GoString</a>
+					<a class="permalink" href="index.html#DimensionKeyDetail.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDetail.SetDimension">func (*DimensionKeyDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=31999:32070#L869">SetDimension</a>
+					<a class="permalink" href="index.html#DimensionKeyDetail.SetDimension">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) SetDimension(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a></pre>
+				<p>
+SetDimension sets the Dimension field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDetail.SetStatus">func (*DimensionKeyDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=32148:32216#L875">SetStatus</a>
+					<a class="permalink" href="index.html#DimensionKeyDetail.SetStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) SetStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a></pre>
+				<p>
+SetStatus sets the Status field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDetail.SetValue">func (*DimensionKeyDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=32289:32356#L881">SetValue</a>
+					<a class="permalink" href="index.html#DimensionKeyDetail.SetValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) SetValue(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a></pre>
+				<p>
+SetValue sets the Value field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DimensionKeyDetail.String">func (DimensionKeyDetail) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=31552:31595#L855">String</a>
+					<a class="permalink" href="index.html#DimensionKeyDetail.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetDimensionKeyDetailsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=32386:33901#L886">GetDimensionKeyDetailsInput</a>
+				<a class="permalink" href="index.html#GetDimensionKeyDetailsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetDimensionKeyDetailsInput struct {
+
+    <span class="comment">// The name of the dimension group. The only valid value is db.sql. Performance</span>
+    <span class="comment">// Insights searches the specified group for the dimension group ID.</span>
+    <span class="comment">//</span>
+<span id="GetDimensionKeyDetailsInput.Group"></span>    <span class="comment">// Group is a required field</span>
+    Group *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The ID of the dimension group from which to retrieve dimension details. For</span>
+    <span class="comment">// dimension group db.sql, the group ID is db.sql.id.</span>
+    <span class="comment">//</span>
+<span id="GetDimensionKeyDetailsInput.GroupIdentifier"></span>    <span class="comment">// GroupIdentifier is a required field</span>
+    GroupIdentifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The ID for a data source from which to gather dimension data. This ID must</span>
+    <span class="comment">// be immutable and unique within an AWS Region. When a DB instance is the data</span>
+    <span class="comment">// source, specify its DbiResourceId value. For example, specify db-ABCDEFGHIJKLMNOPQRSTU1VW2X.</span>
+    <span class="comment">//</span>
+<span id="GetDimensionKeyDetailsInput.Identifier"></span>    <span class="comment">// Identifier is a required field</span>
+    Identifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A list of dimensions to retrieve the detail data for within the given dimension</span>
+    <span class="comment">// group. For the dimension group db.sql, specify either the full dimension</span>
+    <span class="comment">// name db.sql.statement or the short dimension name statement. If you don&#39;t</span>
+    <span class="comment">// specify this parameter, Performance Insights returns all dimension data within</span>
+    <span class="comment">// the specified dimension group.</span>
+<span id="GetDimensionKeyDetailsInput.RequestedDimensions"></span>    RequestedDimensions []*<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The AWS service for which Performance Insights returns data. The only valid</span>
+    <span class="comment">// value is RDS.</span>
+    <span class="comment">//</span>
+<span id="GetDimensionKeyDetailsInput.ServiceType"></span>    <span class="comment">// ServiceType is a required field</span>
+    ServiceType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ServiceType&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.GoString">func (GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=34487:34541#L936">GoString</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.SetGroup">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=35411:35496#L966">SetGroup</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.SetGroup">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) SetGroup(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a></pre>
+				<p>
+SetGroup sets the Group field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.SetGroupIdentifier">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=35588:35683#L972">SetGroupIdentifier</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.SetGroupIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) SetGroupIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a></pre>
+				<p>
+SetGroupIdentifier sets the GroupIdentifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.SetIdentifier">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=35775:35865#L978">SetIdentifier</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.SetIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) SetIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a></pre>
+				<p>
+SetIdentifier sets the Identifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.SetRequestedDimensions">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=35970:36072#L984">SetRequestedDimensions</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.SetRequestedDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) SetRequestedDimensions(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a></pre>
+				<p>
+SetRequestedDimensions sets the RequestedDimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.SetServiceType">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=36169:36260#L990">SetServiceType</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.SetServiceType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) SetServiceType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a></pre>
+				<p>
+SetServiceType sets the ServiceType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.String">func (GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=34151:34203#L927">String</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsInput.Validate">func (*GetDimensionKeyDetailsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=34642:34696#L941">Validate</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetDimensionKeyDetailsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=36296:36466#L995">GetDimensionKeyDetailsOutput</a>
+				<a class="permalink" href="index.html#GetDimensionKeyDetailsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetDimensionKeyDetailsOutput struct {
+
+    <span class="comment">// The details for the requested dimensions.</span>
+<span id="GetDimensionKeyDetailsOutput.Dimensions"></span>    Dimensions []*<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a> `type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetDimensionKeyDetailsOutput.GoString">func (GetDimensionKeyDetailsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=37053:37108#L1016">GoString</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsOutput.SetDimensions">func (*GetDimensionKeyDetailsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=37185:37292#L1021">SetDimensions</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsOutput.SetDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>) SetDimensions(v []*<a href="index.html#DimensionKeyDetail">DimensionKeyDetail</a>) *<a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a></pre>
+				<p>
+SetDimensions sets the Dimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetDimensionKeyDetailsOutput.String">func (GetDimensionKeyDetailsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=36716:36769#L1007">String</a>
+					<a class="permalink" href="index.html#GetDimensionKeyDetailsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetResourceMetricsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=37326:40111#L1026">GetResourceMetricsInput</a>
+				<a class="permalink" href="index.html#GetResourceMetricsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetResourceMetricsInput struct {
+
+    <span class="comment">// The date and time specifying the end of the requested time series data. The</span>
+    <span class="comment">// value specified is exclusive - data points less than (but not equal to) EndTime</span>
+    <span class="comment">// will be returned.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The value for EndTime must be later than the value for StartTime.</span>
+    <span class="comment">//</span>
+<span id="GetResourceMetricsInput.EndTime"></span>    <span class="comment">// EndTime is a required field</span>
+    EndTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An immutable, AWS Region-unique identifier for a data source. Performance</span>
+    <span class="comment">// Insights gathers metrics from this data source.</span>
+    <span class="comment">//</span>
+    <span class="comment">// To use a DB instance as a data source, specify its DbiResourceId value. For</span>
+    <span class="comment">// example, specify db-FAIHNTYBKTGAUSUZQYPDS2GW4A.</span>
+    <span class="comment">//</span>
+<span id="GetResourceMetricsInput.Identifier"></span>    <span class="comment">// Identifier is a required field</span>
+    Identifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The maximum number of items to return in the response. If more items exist</span>
+    <span class="comment">// than the specified MaxRecords value, a pagination token is included in the</span>
+    <span class="comment">// response so that the remaining results can be retrieved.</span>
+<span id="GetResourceMetricsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// An array of one or more queries to perform. Each query must specify a Performance</span>
+    <span class="comment">// Insights metric, and can optionally specify aggregation and filtering criteria.</span>
+    <span class="comment">//</span>
+<span id="GetResourceMetricsInput.MetricQueries"></span>    <span class="comment">// MetricQueries is a required field</span>
+    MetricQueries []*<a href="index.html#MetricQuery">MetricQuery</a> `min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An optional pagination token provided by a previous request. If this parameter</span>
+    <span class="comment">// is specified, the response includes only records beyond the token, up to</span>
+    <span class="comment">// the value specified by MaxRecords.</span>
+<span id="GetResourceMetricsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The granularity, in seconds, of the data points returned from Performance</span>
+    <span class="comment">// Insights. A period can be as short as one second, or as long as one day (86400</span>
+    <span class="comment">// seconds). Valid values are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 1 (one second)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 60 (one minute)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 300 (five minutes)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 3600 (one hour)</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * 86400 (twenty-four hours)</span>
+    <span class="comment">//</span>
+    <span class="comment">// If you don&#39;t specify PeriodInSeconds, then Performance Insights will choose</span>
+    <span class="comment">// a value for you, with a goal of returning roughly 100-200 data points in</span>
+    <span class="comment">// the response.</span>
+<span id="GetResourceMetricsInput.PeriodInSeconds"></span>    PeriodInSeconds *<a href="../../../../../builtin/index.html#int64">int64</a> `type:&#34;integer&#34;`
+
+    <span class="comment">// The AWS service for which Performance Insights returns metrics. The only</span>
+    <span class="comment">// valid value for ServiceType is RDS.</span>
+    <span class="comment">//</span>
+<span id="GetResourceMetricsInput.ServiceType"></span>    <span class="comment">// ServiceType is a required field</span>
+    ServiceType *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ServiceType&#34;`
+
+    <span class="comment">// The date and time specifying the beginning of the requested time series data.</span>
+    <span class="comment">// You can&#39;t specify a StartTime that&#39;s earlier than 7 days ago. The value specified</span>
+    <span class="comment">// is inclusive - data points equal to or greater than StartTime will be returned.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The value for StartTime must be earlier than the value for EndTime.</span>
+    <span class="comment">//</span>
+<span id="GetResourceMetricsInput.StartTime"></span>    <span class="comment">// StartTime is a required field</span>
+    StartTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetResourceMetricsInput.GoString">func (GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=40693:40743#L1112">GoString</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetEndTime">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42054:42136#L1158">SetEndTime</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetEndTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetEndTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetEndTime sets the EndTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetIdentifier">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42220:42302#L1164">SetIdentifier</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetIdentifier sets the Identifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetMaxResults">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42389:42470#L1170">SetMaxResults</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetMetricQueries">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42563:42656#L1176">SetMetricQueries</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetMetricQueries">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetMetricQueries(v []*<a href="index.html#MetricQuery">MetricQuery</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetMetricQueries sets the MetricQueries field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetNextToken">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42743:42824#L1182">SetNextToken</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetPeriodInSeconds">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=42920:43006#L1188">SetPeriodInSeconds</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetPeriodInSeconds">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetPeriodInSeconds(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetPeriodInSeconds sets the PeriodInSeconds field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetServiceType">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=43100:43183#L1194">SetServiceType</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetServiceType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetServiceType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetServiceType sets the ServiceType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.SetStartTime">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=43269:43353#L1200">SetStartTime</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.SetStartTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) SetStartTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a></pre>
+				<p>
+SetStartTime sets the StartTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.String">func (GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=40361:40409#L1103">String</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsInput.Validate">func (*GetResourceMetricsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=40844:40894#L1117">Validate</a>
+					<a class="permalink" href="index.html#GetResourceMetricsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetResourceMetricsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=43387:44699#L1205">GetResourceMetricsOutput</a>
+				<a class="permalink" href="index.html#GetResourceMetricsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetResourceMetricsOutput struct {
+
+    <span class="comment">// The end time for the returned metrics, after alignment to a granular boundary</span>
+    <span class="comment">// (as specified by PeriodInSeconds). AlignedEndTime will be greater than or</span>
+    <span class="comment">// equal to the value of the user-specified Endtime.</span>
+<span id="GetResourceMetricsOutput.AlignedEndTime"></span>    AlignedEndTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The start time for the returned metrics, after alignment to a granular boundary</span>
+    <span class="comment">// (as specified by PeriodInSeconds). AlignedStartTime will be less than or</span>
+    <span class="comment">// equal to the value of the user-specified StartTime.</span>
+<span id="GetResourceMetricsOutput.AlignedStartTime"></span>    AlignedStartTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// An immutable, AWS Region-unique identifier for a data source. Performance</span>
+    <span class="comment">// Insights gathers metrics from this data source.</span>
+    <span class="comment">//</span>
+    <span class="comment">// To use a DB instance as a data source, you specify its DbiResourceId value</span>
+    <span class="comment">// - for example: db-FAIHNTYBKTGAUSUZQYPDS2GW4A</span>
+<span id="GetResourceMetricsOutput.Identifier"></span>    Identifier *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// An array of metric results,, where each array element contains all of the</span>
+    <span class="comment">// data points for a particular dimension.</span>
+<span id="GetResourceMetricsOutput.MetricList"></span>    MetricList []*<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a> `type:&#34;list&#34;`
+
+    <span class="comment">// An optional pagination token provided by a previous request. If this parameter</span>
+    <span class="comment">// is specified, the response includes only records beyond the token, up to</span>
+    <span class="comment">// the value specified by MaxRecords.</span>
+<span id="GetResourceMetricsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetResourceMetricsOutput.GoString">func (GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=45282:45333#L1249">GoString</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.SetAlignedEndTime">func (*GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=45418:45509#L1254">SetAlignedEndTime</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.SetAlignedEndTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) SetAlignedEndTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a></pre>
+				<p>
+SetAlignedEndTime sets the AlignedEndTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.SetAlignedStartTime">func (*GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=45612:45705#L1260">SetAlignedStartTime</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.SetAlignedStartTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) SetAlignedStartTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a></pre>
+				<p>
+SetAlignedStartTime sets the AlignedStartTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.SetIdentifier">func (*GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=45798:45882#L1266">SetIdentifier</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.SetIdentifier">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) SetIdentifier(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a></pre>
+				<p>
+SetIdentifier sets the Identifier field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.SetMetricList">func (*GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=45969:46069#L1272">SetMetricList</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.SetMetricList">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) SetMetricList(v []*<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a>) *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a></pre>
+				<p>
+SetMetricList sets the MetricList field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.SetNextToken">func (*GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=46153:46236#L1278">SetNextToken</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetResourceMetricsOutput.String">func (GetResourceMetricsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=44949:44998#L1240">String</a>
+					<a class="permalink" href="index.html#GetResourceMetricsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServiceError">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=46317:46529#L1284">InternalServiceError</a>
+				<a class="permalink" href="index.html#InternalServiceError">¶</a>
+				
+				
+			</h2>
+			<p>
+The request failed due to an unknown error.
+</p>
+
+			<pre>type InternalServiceError struct {
+<span id="InternalServiceError.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServiceError.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServiceError.Code">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47348:47392#L1316">Code</a>
+					<a class="permalink" href="index.html#InternalServiceError.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.Error">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47714:47759#L1333">Error</a>
+					<a class="permalink" href="index.html#InternalServiceError.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.GoString">func (InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47108:47155#L1305">GoString</a>
+					<a class="permalink" href="index.html#InternalServiceError.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServiceError">InternalServiceError</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.Message">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47473:47520#L1321">Message</a>
+					<a class="permalink" href="index.html#InternalServiceError.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.OrigErr">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47650:47696#L1329">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServiceError.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.RequestID">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=48050:48099#L1343">RequestID</a>
+					<a class="permalink" href="index.html#InternalServiceError.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.StatusCode">func (*InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=47896:47943#L1338">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServiceError.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServiceError">InternalServiceError</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServiceError.String">func (InternalServiceError) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=46779:46824#L1296">String</a>
+					<a class="permalink" href="index.html#InternalServiceError.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServiceError">InternalServiceError</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidArgumentException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=48200:48416#L1348">InvalidArgumentException</a>
+				<a class="permalink" href="index.html#InvalidArgumentException">¶</a>
+				
+				
+			</h2>
+			<p>
+One of the arguments provided is invalid for this request.
+</p>
+
+			<pre>type InvalidArgumentException struct {
+<span id="InvalidArgumentException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidArgumentException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidArgumentException.Code">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49251:49299#L1380">Code</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.Error">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49633:49682#L1397">Error</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.GoString">func (InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=48999:49050#L1369">GoString</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.Message">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49384:49435#L1385">Message</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.OrigErr">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49565:49615#L1393">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.RequestID">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49977:50030#L1407">RequestID</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.StatusCode">func (*InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=49819:49870#L1402">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidArgumentException.String">func (InvalidArgumentException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=48666:48715#L1360">String</a>
+					<a class="permalink" href="index.html#InvalidArgumentException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidArgumentException">InvalidArgumentException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MetricKeyDataPoints">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=50176:50479#L1413">MetricKeyDataPoints</a>
+				<a class="permalink" href="index.html#MetricKeyDataPoints">¶</a>
+				
+				
+			</h2>
+			<p>
+A time-ordered series of data points, corresponding to a dimension of a Performance
+Insights metric.
+</p>
+
+			<pre>type MetricKeyDataPoints struct {
+
+    <span class="comment">// An array of timestamp-value pairs, representing measurements over a period</span>
+    <span class="comment">// of time.</span>
+<span id="MetricKeyDataPoints.DataPoints"></span>    DataPoints []*<a href="index.html#DataPoint">DataPoint</a> `type:&#34;list&#34;`
+
+    <span class="comment">// The dimension(s) to which the data points apply.</span>
+<span id="MetricKeyDataPoints.Key"></span>    Key *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a> `type:&#34;structure&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MetricKeyDataPoints.GoString">func (MetricKeyDataPoints) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=51057:51103#L1438">GoString</a>
+					<a class="permalink" href="index.html#MetricKeyDataPoints.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricKeyDataPoints.SetDataPoints">func (*MetricKeyDataPoints) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=51180:51260#L1443">SetDataPoints</a>
+					<a class="permalink" href="index.html#MetricKeyDataPoints.SetDataPoints">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a>) SetDataPoints(v []*<a href="index.html#DataPoint">DataPoint</a>) *<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a></pre>
+				<p>
+SetDataPoints sets the DataPoints field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricKeyDataPoints.SetKey">func (*MetricKeyDataPoints) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=51332:51419#L1449">SetKey</a>
+					<a class="permalink" href="index.html#MetricKeyDataPoints.SetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a>) SetKey(v *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a>) *<a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a></pre>
+				<p>
+SetKey sets the Key field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricKeyDataPoints.String">func (MetricKeyDataPoints) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=50729:50773#L1429">String</a>
+					<a class="permalink" href="index.html#MetricKeyDataPoints.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MetricKeyDataPoints">MetricKeyDataPoints</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MetricQuery">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=51800:53448#L1459">MetricQuery</a>
+				<a class="permalink" href="index.html#MetricQuery">¶</a>
+				
+				
+			</h2>
+			<p>
+A single query to be processed. You must provide the metric to query. If
+no other parameters are specified, Performance Insights returns all of the
+data points for that metric. You can optionally request that the data points
+be aggregated by dimension group ( GroupBy), and return only those data points
+that match your criteria (Filter).
+</p>
+
+			<pre>type MetricQuery struct {
+
+    <span class="comment">// One or more filters to apply in the request. Restrictions:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * Any number of filters by the same dimension, as specified in the GroupBy</span>
+    <span class="comment">//    parameter.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * A single filter for any other dimension in this dimension group.</span>
+<span id="MetricQuery.Filter"></span>    Filter map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34;`
+
+    <span class="comment">// A specification for how to aggregate the data points from a query result.</span>
+    <span class="comment">// You must specify a valid dimension group. Performance Insights will return</span>
+    <span class="comment">// all of the dimensions within that group, unless you provide the names of</span>
+    <span class="comment">// specific dimensions within that group. You can also request that Performance</span>
+    <span class="comment">// Insights return a limited number of values for a dimension.</span>
+<span id="MetricQuery.GroupBy"></span>    GroupBy *<a href="index.html#DimensionGroup">DimensionGroup</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The name of a Performance Insights metric to be measured.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Valid values for Metric are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.load.avg - a scaled representation of the number of active sessions</span>
+    <span class="comment">//    for the database engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sampledload.avg - the raw number of active sessions for the database</span>
+    <span class="comment">//    engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the number of active sessions is less than an internal Performance Insights</span>
+    <span class="comment">// threshold, db.load.avg and db.sampledload.avg are the same value. If the</span>
+    <span class="comment">// number of active sessions is greater than the internal threshold, Performance</span>
+    <span class="comment">// Insights samples the active sessions, with db.load.avg showing the scaled</span>
+    <span class="comment">// values, db.sampledload.avg showing the raw values, and db.sampledload.avg</span>
+    <span class="comment">// less than db.load.avg. For most use cases, you can query db.load.avg only.</span>
+    <span class="comment">//</span>
+<span id="MetricQuery.Metric"></span>    <span class="comment">// Metric is a required field</span>
+    Metric *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MetricQuery.GoString">func (MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=54018:54056#L1512">GoString</a>
+					<a class="permalink" href="index.html#MetricQuery.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MetricQuery">MetricQuery</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricQuery.SetFilter">func (*MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=54612:54678#L1535">SetFilter</a>
+					<a class="permalink" href="index.html#MetricQuery.SetFilter">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricQuery">MetricQuery</a>) SetFilter(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#MetricQuery">MetricQuery</a></pre>
+				<p>
+SetFilter sets the Filter field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricQuery.SetGroupBy">func (*MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=54754:54818#L1541">SetGroupBy</a>
+					<a class="permalink" href="index.html#MetricQuery.SetGroupBy">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricQuery">MetricQuery</a>) SetGroupBy(v *<a href="index.html#DimensionGroup">DimensionGroup</a>) *<a href="index.html#MetricQuery">MetricQuery</a></pre>
+				<p>
+SetGroupBy sets the GroupBy field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricQuery.SetMetric">func (*MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=54893:54947#L1547">SetMetric</a>
+					<a class="permalink" href="index.html#MetricQuery.SetMetric">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricQuery">MetricQuery</a>) SetMetric(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#MetricQuery">MetricQuery</a></pre>
+				<p>
+SetMetric sets the Metric field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricQuery.String">func (MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=53698:53734#L1503">String</a>
+					<a class="permalink" href="index.html#MetricQuery.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#MetricQuery">MetricQuery</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MetricQuery.Validate">func (*MetricQuery) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=54157:54195#L1517">Validate</a>
+					<a class="permalink" href="index.html#MetricQuery.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#MetricQuery">MetricQuery</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NotAuthorizedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=55033:55247#L1553">NotAuthorizedException</a>
+				<a class="permalink" href="index.html#NotAuthorizedException">¶</a>
+				
+				
+			</h2>
+			<p>
+The user is not authorized to perform this request.
+</p>
+
+			<pre>type NotAuthorizedException struct {
+<span id="NotAuthorizedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="NotAuthorizedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NotAuthorizedException.Code">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56074:56120#L1585">Code</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.Error">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56448:56495#L1602">Error</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.GoString">func (NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=55828:55877#L1574">GoString</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.Message">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56203:56252#L1590">Message</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.OrigErr">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56382:56430#L1598">OrigErr</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.RequestID">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56788:56839#L1612">RequestID</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.StatusCode">func (*NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=56632:56681#L1607">StatusCode</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NotAuthorizedException.String">func (NotAuthorizedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=55497:55544#L1565">String</a>
+					<a class="permalink" href="index.html#NotAuthorizedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#NotAuthorizedException">NotAuthorizedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/service.go?s=686:720#L11">PI</a>
+				<a class="permalink" href="index.html#PI">¶</a>
+				
+				
+			</h2>
+			<p>
+PI provides the API operation methods for making requests to
+AWS Performance Insights. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+PI methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type PI struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/service.go?s=1624:1682#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#PI">PI</a></pre>
+				<p>
+New creates a new instance of the PI client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a PI client from just a session.
+svc := pi.New(mySession)
+
+// Create a PI client with additional configuration
+svc := pi.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="PI.DescribeDimensionKeys">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=2800:2907#L72">DescribeDimensionKeys</a>
+					<a class="permalink" href="index.html#PI.DescribeDimensionKeys">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) DescribeDimensionKeys(input *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) (*<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeDimensionKeys API operation for AWS Performance Insights.
+</p>
+<p>
+For a specific time period, retrieve the top N dimension keys for a metric.
+</p>
+<p>
+Each response element returns a maximum of 500 bytes. For larger elements,
+such as SQL statements, only the first 500 bytes are returned.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Performance Insights&#39;s
+API operation DescribeDimensionKeys for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidArgumentException
+One of the arguments provided is invalid for this request.
+
+* InternalServiceError
+The request failed due to an unknown error.
+
+* NotAuthorizedException
+The user is not authorized to perform this request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/DescribeDimensionKeys">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/DescribeDimensionKeys</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.DescribeDimensionKeysRequest">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=1388:1524#L31">DescribeDimensionKeysRequest</a>
+					<a class="permalink" href="index.html#PI.DescribeDimensionKeysRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) DescribeDimensionKeysRequest(input *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>)</pre>
+				<p>
+DescribeDimensionKeysRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DescribeDimensionKeys operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DescribeDimensionKeys for more information on using the DescribeDimensionKeys
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DescribeDimensionKeysRequest method.
+req, resp := client.DescribeDimensionKeysRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/DescribeDimensionKeys">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/DescribeDimensionKeys</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.DescribeDimensionKeysWithContext">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=3494:3653#L86">DescribeDimensionKeysWithContext</a>
+					<a class="permalink" href="index.html#PI.DescribeDimensionKeysWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) DescribeDimensionKeysWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DescribeDimensionKeysInput">DescribeDimensionKeysInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DescribeDimensionKeysOutput">DescribeDimensionKeysOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeDimensionKeysWithContext is the same as DescribeDimensionKeys with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DescribeDimensionKeys for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetDimensionKeyDetails">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=6479:6589#L161">GetDimensionKeyDetails</a>
+					<a class="permalink" href="index.html#PI.GetDimensionKeyDetails">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetDimensionKeyDetails(input *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) (*<a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetDimensionKeyDetails API operation for AWS Performance Insights.
+</p>
+<p>
+Get the attributes of the specified dimension group for a DB instance or
+data source. For example, if you specify a SQL ID, GetDimensionKeyDetails
+retrieves the full text of the dimension db.sql.statement associated with
+this ID. This operation is useful because GetResourceMetrics and DescribeDimensionKeys
+don&#39;t support retrieval of large SQL statement text.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Performance Insights&#39;s
+API operation GetDimensionKeyDetails for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidArgumentException
+One of the arguments provided is invalid for this request.
+
+* InternalServiceError
+The request failed due to an unknown error.
+
+* NotAuthorizedException
+The user is not authorized to perform this request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetDimensionKeyDetails">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetDimensionKeyDetails</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetDimensionKeyDetailsRequest">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=4908:5047#L119">GetDimensionKeyDetailsRequest</a>
+					<a class="permalink" href="index.html#PI.GetDimensionKeyDetailsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetDimensionKeyDetailsRequest(input *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>)</pre>
+				<p>
+GetDimensionKeyDetailsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetDimensionKeyDetails operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetDimensionKeyDetails for more information on using the GetDimensionKeyDetails
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetDimensionKeyDetailsRequest method.
+req, resp := client.GetDimensionKeyDetailsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetDimensionKeyDetails">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetDimensionKeyDetails</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetDimensionKeyDetailsWithContext">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=7180:7342#L175">GetDimensionKeyDetailsWithContext</a>
+					<a class="permalink" href="index.html#PI.GetDimensionKeyDetailsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetDimensionKeyDetailsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetDimensionKeyDetailsInput">GetDimensionKeyDetailsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetDimensionKeyDetailsOutput">GetDimensionKeyDetailsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetDimensionKeyDetailsWithContext is the same as GetDimensionKeyDetails with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetDimensionKeyDetails for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetResourceMetrics">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=10083:10181#L251">GetResourceMetrics</a>
+					<a class="permalink" href="index.html#PI.GetResourceMetrics">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetResourceMetrics(input *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) (*<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetResourceMetrics API operation for AWS Performance Insights.
+</p>
+<p>
+Retrieve Performance Insights metrics for a set of data sources, over a time
+period. You can provide specific dimension groups and dimensions, and provide
+aggregation and filtering criteria for each group.
+</p>
+<p>
+Each response element returns a maximum of 500 bytes. For larger elements,
+such as SQL statements, only the first 500 bytes are returned.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Performance Insights&#39;s
+API operation GetResourceMetrics for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidArgumentException
+One of the arguments provided is invalid for this request.
+
+* InternalServiceError
+The request failed due to an unknown error.
+
+* NotAuthorizedException
+The user is not authorized to perform this request.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetrics">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetrics</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetResourceMetricsRequest">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=8562:8689#L208">GetResourceMetricsRequest</a>
+					<a class="permalink" href="index.html#PI.GetResourceMetricsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetResourceMetricsRequest(input *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>)</pre>
+				<p>
+GetResourceMetricsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetResourceMetrics operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetResourceMetrics for more information on using the GetResourceMetrics
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetResourceMetricsRequest method.
+req, resp := client.GetResourceMetricsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetrics">https://docs.aws.amazon.com/goto/WebAPI/pi-2018-02-27/GetResourceMetrics</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PI.GetResourceMetricsWithContext">func (*PI) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=10756:10906#L265">GetResourceMetricsWithContext</a>
+					<a class="permalink" href="index.html#PI.GetResourceMetricsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PI">PI</a>) GetResourceMetricsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetResourceMetricsInput">GetResourceMetricsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetResourceMetricsOutput">GetResourceMetricsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetResourceMetricsWithContext is the same as GetResourceMetrics with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetResourceMetrics for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResponsePartitionKey">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=57041:57279#L1618">ResponsePartitionKey</a>
+				<a class="permalink" href="index.html#ResponsePartitionKey">¶</a>
+				
+				
+			</h2>
+			<p>
+If PartitionBy was specified in a DescribeDimensionKeys request, the dimensions
+are returned in an array. Each element in the array specifies one dimension.
+</p>
+
+			<pre>type ResponsePartitionKey struct {
+
+    <span class="comment">// A dimension map that contains the dimension(s) for this partition.</span>
+    <span class="comment">//</span>
+<span id="ResponsePartitionKey.Dimensions"></span>    <span class="comment">// Dimensions is a required field</span>
+    Dimensions map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResponsePartitionKey.GoString">func (ResponsePartitionKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=57858:57905#L1641">GoString</a>
+					<a class="permalink" href="index.html#ResponsePartitionKey.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResponsePartitionKey.SetDimensions">func (*ResponsePartitionKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=57982:58070#L1646">SetDimensions</a>
+					<a class="permalink" href="index.html#ResponsePartitionKey.SetDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a>) SetDimensions(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a></pre>
+				<p>
+SetDimensions sets the Dimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResponsePartitionKey.String">func (ResponsePartitionKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=57529:57574#L1632">String</a>
+					<a class="permalink" href="index.html#ResponsePartitionKey.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResponsePartitionKey">ResponsePartitionKey</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResponseResourceMetricKey">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=58205:59243#L1653">ResponseResourceMetricKey</a>
+				<a class="permalink" href="index.html#ResponseResourceMetricKey">¶</a>
+				
+				
+			</h2>
+			<p>
+An object describing a Performance Insights metric and one or more dimensions
+for that metric.
+</p>
+
+			<pre>type ResponseResourceMetricKey struct {
+
+    <span class="comment">// The valid dimensions for the metric.</span>
+<span id="ResponseResourceMetricKey.Dimensions"></span>    Dimensions map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;map&#34;`
+
+    <span class="comment">// The name of a Performance Insights metric to be measured.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Valid values for Metric are:</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.load.avg - a scaled representation of the number of active sessions</span>
+    <span class="comment">//    for the database engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">//    * db.sampledload.avg - the raw number of active sessions for the database</span>
+    <span class="comment">//    engine.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the number of active sessions is less than an internal Performance Insights</span>
+    <span class="comment">// threshold, db.load.avg and db.sampledload.avg are the same value. If the</span>
+    <span class="comment">// number of active sessions is greater than the internal threshold, Performance</span>
+    <span class="comment">// Insights samples the active sessions, with db.load.avg showing the scaled</span>
+    <span class="comment">// values, db.sampledload.avg showing the raw values, and db.sampledload.avg</span>
+    <span class="comment">// less than db.load.avg. For most use cases, you can query db.load.avg only.</span>
+    <span class="comment">//</span>
+<span id="ResponseResourceMetricKey.Metric"></span>    <span class="comment">// Metric is a required field</span>
+    Metric *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResponseResourceMetricKey.GoString">func (ResponseResourceMetricKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=59827:59879#L1694">GoString</a>
+					<a class="permalink" href="index.html#ResponseResourceMetricKey.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResponseResourceMetricKey.SetDimensions">func (*ResponseResourceMetricKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=59956:60054#L1699">SetDimensions</a>
+					<a class="permalink" href="index.html#ResponseResourceMetricKey.SetDimensions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a>) SetDimensions(v map[<a href="../../../../../builtin/index.html#string">string</a>]*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a></pre>
+				<p>
+SetDimensions sets the Dimensions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResponseResourceMetricKey.SetMetric">func (*ResponseResourceMetricKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=60132:60214#L1705">SetMetric</a>
+					<a class="permalink" href="index.html#ResponseResourceMetricKey.SetMetric">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a>) SetMetric(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a></pre>
+				<p>
+SetMetric sets the Metric field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResponseResourceMetricKey.String">func (ResponseResourceMetricKey) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/pi/api.go?s=59493:59543#L1685">String</a>
+					<a class="permalink" href="index.html#ResponseResourceMetricKey.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResponseResourceMetricKey">ResponseResourceMetricKey</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="piiface/index.html">piiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package piiface provides an interface to enable mocking the AWS Performance Insights service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

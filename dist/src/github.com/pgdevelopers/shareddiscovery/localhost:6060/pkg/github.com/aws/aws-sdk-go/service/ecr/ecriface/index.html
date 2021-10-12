@@ -1,0 +1,409 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>ecriface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package ecriface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/ecr/ecriface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package ecriface provides an interface to enable mocking the Amazon EC2 Container Registry service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ECRAPI">type ECRAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ecr/ecriface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ECRAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/ecr/ecriface/interface.go?s=2154:15743#L52">ECRAPI</a>
+				<a class="permalink" href="index.html#ECRAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+ECRAPI provides an interface to enable mocking the
+ecr.ECR service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon EC2 Container Registry.
+func myFunc(svc ecriface.ECRAPI) bool {
+    // Make svc.BatchCheckLayerAvailability request
+}
+
+func main() {
+    sess := session.New()
+    svc := ecr.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockECRClient struct {
+    ecriface.ECRAPI
+}
+func (m *mockECRClient) BatchCheckLayerAvailability(input *ecr.BatchCheckLayerAvailabilityInput) (*ecr.BatchCheckLayerAvailabilityOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockECRClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type ECRAPI interface {
+    BatchCheckLayerAvailability(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityInput">BatchCheckLayerAvailabilityInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityOutput">BatchCheckLayerAvailabilityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchCheckLayerAvailabilityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityInput">BatchCheckLayerAvailabilityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityOutput">BatchCheckLayerAvailabilityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchCheckLayerAvailabilityRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityInput">BatchCheckLayerAvailabilityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchCheckLayerAvailabilityOutput">BatchCheckLayerAvailabilityOutput</a>)
+
+    BatchDeleteImage(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageInput">BatchDeleteImageInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageOutput">BatchDeleteImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageInput">BatchDeleteImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageOutput">BatchDeleteImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchDeleteImageRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageInput">BatchDeleteImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchDeleteImageOutput">BatchDeleteImageOutput</a>)
+
+    BatchGetImage(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageInput">BatchGetImageInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageOutput">BatchGetImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageInput">BatchGetImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageOutput">BatchGetImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    BatchGetImageRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageInput">BatchGetImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#BatchGetImageOutput">BatchGetImageOutput</a>)
+
+    CompleteLayerUpload(*<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadInput">CompleteLayerUploadInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadOutput">CompleteLayerUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CompleteLayerUploadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadInput">CompleteLayerUploadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadOutput">CompleteLayerUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CompleteLayerUploadRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadInput">CompleteLayerUploadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#CompleteLayerUploadOutput">CompleteLayerUploadOutput</a>)
+
+    CreateRepository(*<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateRepositoryRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryInput">CreateRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#CreateRepositoryOutput">CreateRepositoryOutput</a>)
+
+    DeleteLifecyclePolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteLifecyclePolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyInput">DeleteLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteLifecyclePolicyOutput">DeleteLifecyclePolicyOutput</a>)
+
+    DeleteRegistryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyInput">DeleteRegistryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyOutput">DeleteRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegistryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyInput">DeleteRegistryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyOutput">DeleteRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRegistryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyInput">DeleteRegistryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRegistryPolicyOutput">DeleteRegistryPolicyOutput</a>)
+
+    DeleteRepository(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryInput">DeleteRepositoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryOutput">DeleteRepositoryOutput</a>)
+
+    DeleteRepositoryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyInput">DeleteRepositoryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyOutput">DeleteRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyInput">DeleteRepositoryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyOutput">DeleteRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteRepositoryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyInput">DeleteRepositoryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DeleteRepositoryPolicyOutput">DeleteRepositoryPolicyOutput</a>)
+
+    DescribeImageReplicationStatus(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusInput">DescribeImageReplicationStatusInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusOutput">DescribeImageReplicationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImageReplicationStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusInput">DescribeImageReplicationStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusOutput">DescribeImageReplicationStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImageReplicationStatusRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusInput">DescribeImageReplicationStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageReplicationStatusOutput">DescribeImageReplicationStatusOutput</a>)
+
+    DescribeImageScanFindings(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsOutput">DescribeImageScanFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImageScanFindingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsOutput">DescribeImageScanFindingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImageScanFindingsRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsOutput">DescribeImageScanFindingsOutput</a>)
+
+    DescribeImageScanFindingsPages(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsOutput">DescribeImageScanFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeImageScanFindingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsOutput">DescribeImageScanFindingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeImages(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesInput">DescribeImagesInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesOutput">DescribeImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesInput">DescribeImagesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesOutput">DescribeImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeImagesRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesInput">DescribeImagesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesOutput">DescribeImagesOutput</a>)
+
+    DescribeImagesPages(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesInput">DescribeImagesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesOutput">DescribeImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeImagesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesInput">DescribeImagesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImagesOutput">DescribeImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeRegistry(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryInput">DescribeRegistryInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryOutput">DescribeRegistryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRegistryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryInput">DescribeRegistryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryOutput">DescribeRegistryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRegistryRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryInput">DescribeRegistryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRegistryOutput">DescribeRegistryOutput</a>)
+
+    DescribeRepositories(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesInput">DescribeRepositoriesInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesOutput">DescribeRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRepositoriesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesInput">DescribeRepositoriesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesOutput">DescribeRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeRepositoriesRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesInput">DescribeRepositoriesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesOutput">DescribeRepositoriesOutput</a>)
+
+    DescribeRepositoriesPages(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesInput">DescribeRepositoriesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesOutput">DescribeRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeRepositoriesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesInput">DescribeRepositoriesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeRepositoriesOutput">DescribeRepositoriesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetAuthorizationToken(*<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAuthorizationTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetAuthorizationTokenRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenInput">GetAuthorizationTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetAuthorizationTokenOutput">GetAuthorizationTokenOutput</a>)
+
+    GetDownloadUrlForLayer(*<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerInput">GetDownloadUrlForLayerInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerOutput">GetDownloadUrlForLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDownloadUrlForLayerWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerInput">GetDownloadUrlForLayerInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerOutput">GetDownloadUrlForLayerOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetDownloadUrlForLayerRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerInput">GetDownloadUrlForLayerInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetDownloadUrlForLayerOutput">GetDownloadUrlForLayerOutput</a>)
+
+    GetLifecyclePolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyInput">GetLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyOutput">GetLifecyclePolicyOutput</a>)
+
+    GetLifecyclePolicyPreview(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewOutput">GetLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyPreviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewOutput">GetLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetLifecyclePolicyPreviewRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewOutput">GetLifecyclePolicyPreviewOutput</a>)
+
+    GetLifecyclePolicyPreviewPages(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewOutput">GetLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetLifecyclePolicyPreviewPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewOutput">GetLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetRegistryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyInput">GetRegistryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyOutput">GetRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegistryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyInput">GetRegistryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyOutput">GetRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRegistryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyInput">GetRegistryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetRegistryPolicyOutput">GetRegistryPolicyOutput</a>)
+
+    GetRepositoryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyInput">GetRepositoryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyOutput">GetRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyInput">GetRepositoryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyOutput">GetRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetRepositoryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyInput">GetRepositoryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetRepositoryPolicyOutput">GetRepositoryPolicyOutput</a>)
+
+    InitiateLayerUpload(*<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadInput">InitiateLayerUploadInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadOutput">InitiateLayerUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InitiateLayerUploadWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadInput">InitiateLayerUploadInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadOutput">InitiateLayerUploadOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    InitiateLayerUploadRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadInput">InitiateLayerUploadInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#InitiateLayerUploadOutput">InitiateLayerUploadOutput</a>)
+
+    ListImages(*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesInput">ListImagesInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesOutput">ListImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListImagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesInput">ListImagesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesOutput">ListImagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListImagesRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesInput">ListImagesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesOutput">ListImagesOutput</a>)
+
+    ListImagesPages(*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesInput">ListImagesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesOutput">ListImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListImagesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesInput">ListImagesInput</a>, func(*<a href="../index.html">ecr</a>.<a href="../index.html#ListImagesOutput">ListImagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTagsForResource(*<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsForResourceRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceInput">ListTagsForResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#ListTagsForResourceOutput">ListTagsForResourceOutput</a>)
+
+    PutImage(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageInput">PutImageInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageOutput">PutImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageInput">PutImageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageOutput">PutImageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageInput">PutImageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageOutput">PutImageOutput</a>)
+
+    PutImageScanningConfiguration(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationInput">PutImageScanningConfigurationInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationOutput">PutImageScanningConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageScanningConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationInput">PutImageScanningConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationOutput">PutImageScanningConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageScanningConfigurationRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationInput">PutImageScanningConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageScanningConfigurationOutput">PutImageScanningConfigurationOutput</a>)
+
+    PutImageTagMutability(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityInput">PutImageTagMutabilityInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityOutput">PutImageTagMutabilityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageTagMutabilityWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityInput">PutImageTagMutabilityInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityOutput">PutImageTagMutabilityOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutImageTagMutabilityRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityInput">PutImageTagMutabilityInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutImageTagMutabilityOutput">PutImageTagMutabilityOutput</a>)
+
+    PutLifecyclePolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecyclePolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutLifecyclePolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyInput">PutLifecyclePolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutLifecyclePolicyOutput">PutLifecyclePolicyOutput</a>)
+
+    PutRegistryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyInput">PutRegistryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyOutput">PutRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRegistryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyInput">PutRegistryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyOutput">PutRegistryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutRegistryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyInput">PutRegistryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutRegistryPolicyOutput">PutRegistryPolicyOutput</a>)
+
+    PutReplicationConfiguration(*<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationInput">PutReplicationConfigurationInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationOutput">PutReplicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutReplicationConfigurationWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationInput">PutReplicationConfigurationInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationOutput">PutReplicationConfigurationOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PutReplicationConfigurationRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationInput">PutReplicationConfigurationInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#PutReplicationConfigurationOutput">PutReplicationConfigurationOutput</a>)
+
+    SetRepositoryPolicy(*<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyInput">SetRepositoryPolicyInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyOutput">SetRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetRepositoryPolicyWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyInput">SetRepositoryPolicyInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyOutput">SetRepositoryPolicyOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    SetRepositoryPolicyRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyInput">SetRepositoryPolicyInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#SetRepositoryPolicyOutput">SetRepositoryPolicyOutput</a>)
+
+    StartImageScan(*<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanInput">StartImageScanInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanOutput">StartImageScanOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartImageScanWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanInput">StartImageScanInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanOutput">StartImageScanOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartImageScanRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanInput">StartImageScanInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#StartImageScanOutput">StartImageScanOutput</a>)
+
+    StartLifecyclePolicyPreview(*<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewInput">StartLifecyclePolicyPreviewInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewOutput">StartLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLifecyclePolicyPreviewWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewInput">StartLifecyclePolicyPreviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewOutput">StartLifecyclePolicyPreviewOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartLifecyclePolicyPreviewRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewInput">StartLifecyclePolicyPreviewInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#StartLifecyclePolicyPreviewOutput">StartLifecyclePolicyPreviewOutput</a>)
+
+    TagResource(*<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    TagResourceRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceInput">TagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#TagResourceOutput">TagResourceOutput</a>)
+
+    UntagResource(*<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UntagResourceRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceInput">UntagResourceInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#UntagResourceOutput">UntagResourceOutput</a>)
+
+    UploadLayerPart(*<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartInput">UploadLayerPartInput</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartOutput">UploadLayerPartOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UploadLayerPartWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartInput">UploadLayerPartInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartOutput">UploadLayerPartOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UploadLayerPartRequest(*<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartInput">UploadLayerPartInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#UploadLayerPartOutput">UploadLayerPartOutput</a>)
+
+    WaitUntilImageScanComplete(*<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilImageScanCompleteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#DescribeImageScanFindingsInput">DescribeImageScanFindingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    WaitUntilLifecyclePolicyPreviewComplete(*<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    WaitUntilLifecyclePolicyPreviewCompleteWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">ecr</a>.<a href="../index.html#GetLifecyclePolicyPreviewInput">GetLifecyclePolicyPreviewInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#WaiterOption">WaiterOption</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

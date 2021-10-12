@@ -1,0 +1,4385 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>applicationcostprofiler - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package applicationcostprofiler
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/applicationcostprofiler&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package applicationcostprofiler provides the client and types for making API
+requests to AWS Application Cost Profiler.
+</p>
+<p>
+This reference provides descriptions of the AWS Application Cost Profiler
+API.
+</p>
+<p>
+The AWS Application Cost Profiler API provides programmatic access to view,
+create, update, and delete application cost report definitions, as well as
+to import your usage data into the Application Cost Profiler service.
+</p>
+<p>
+For more information about using this service, see the AWS Application Cost
+Profiler User Guide (<a href="https://docs.aws.amazon.com/application-cost-profiler/latest/userguide/introduction.html">https://docs.aws.amazon.com/application-cost-profiler/latest/userguide/introduction.html</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10</a> for more information on this service.
+</p>
+<p>
+See applicationcostprofiler package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/applicationcostprofiler/">https://docs.aws.amazon.com/sdk-for-go/api/service/applicationcostprofiler/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact AWS Application Cost Profiler with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the AWS Application Cost Profiler client ApplicationCostProfiler for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/applicationcostprofiler/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/applicationcostprofiler/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#Format_Values">func Format_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#ReportFrequency_Values">func ReportFrequency_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#S3BucketRegion_Values">func S3BucketRegion_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AccessDeniedException">type AccessDeniedException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Code">func (s *AccessDeniedException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Error">func (s *AccessDeniedException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.GoString">func (s AccessDeniedException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.Message">func (s *AccessDeniedException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.OrigErr">func (s *AccessDeniedException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.RequestID">func (s *AccessDeniedException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.StatusCode">func (s *AccessDeniedException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#AccessDeniedException.String">func (s AccessDeniedException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ApplicationCostProfiler">type ApplicationCostProfiler</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *ApplicationCostProfiler</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.DeleteReportDefinition">func (c *ApplicationCostProfiler) DeleteReportDefinition(input *DeleteReportDefinitionInput) (*DeleteReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.DeleteReportDefinitionRequest">func (c *ApplicationCostProfiler) DeleteReportDefinitionRequest(input *DeleteReportDefinitionInput) (req *request.Request, output *DeleteReportDefinitionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.DeleteReportDefinitionWithContext">func (c *ApplicationCostProfiler) DeleteReportDefinitionWithContext(ctx aws.Context, input *DeleteReportDefinitionInput, opts ...request.Option) (*DeleteReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.GetReportDefinition">func (c *ApplicationCostProfiler) GetReportDefinition(input *GetReportDefinitionInput) (*GetReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.GetReportDefinitionRequest">func (c *ApplicationCostProfiler) GetReportDefinitionRequest(input *GetReportDefinitionInput) (req *request.Request, output *GetReportDefinitionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.GetReportDefinitionWithContext">func (c *ApplicationCostProfiler) GetReportDefinitionWithContext(ctx aws.Context, input *GetReportDefinitionInput, opts ...request.Option) (*GetReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ImportApplicationUsage">func (c *ApplicationCostProfiler) ImportApplicationUsage(input *ImportApplicationUsageInput) (*ImportApplicationUsageOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ImportApplicationUsageRequest">func (c *ApplicationCostProfiler) ImportApplicationUsageRequest(input *ImportApplicationUsageInput) (req *request.Request, output *ImportApplicationUsageOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ImportApplicationUsageWithContext">func (c *ApplicationCostProfiler) ImportApplicationUsageWithContext(ctx aws.Context, input *ImportApplicationUsageInput, opts ...request.Option) (*ImportApplicationUsageOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ListReportDefinitions">func (c *ApplicationCostProfiler) ListReportDefinitions(input *ListReportDefinitionsInput) (*ListReportDefinitionsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ListReportDefinitionsPages">func (c *ApplicationCostProfiler) ListReportDefinitionsPages(input *ListReportDefinitionsInput, fn func(*ListReportDefinitionsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ListReportDefinitionsPagesWithContext">func (c *ApplicationCostProfiler) ListReportDefinitionsPagesWithContext(ctx aws.Context, input *ListReportDefinitionsInput, fn func(*ListReportDefinitionsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ListReportDefinitionsRequest">func (c *ApplicationCostProfiler) ListReportDefinitionsRequest(input *ListReportDefinitionsInput) (req *request.Request, output *ListReportDefinitionsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.ListReportDefinitionsWithContext">func (c *ApplicationCostProfiler) ListReportDefinitionsWithContext(ctx aws.Context, input *ListReportDefinitionsInput, opts ...request.Option) (*ListReportDefinitionsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.PutReportDefinition">func (c *ApplicationCostProfiler) PutReportDefinition(input *PutReportDefinitionInput) (*PutReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.PutReportDefinitionRequest">func (c *ApplicationCostProfiler) PutReportDefinitionRequest(input *PutReportDefinitionInput) (req *request.Request, output *PutReportDefinitionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.PutReportDefinitionWithContext">func (c *ApplicationCostProfiler) PutReportDefinitionWithContext(ctx aws.Context, input *PutReportDefinitionInput, opts ...request.Option) (*PutReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.UpdateReportDefinition">func (c *ApplicationCostProfiler) UpdateReportDefinition(input *UpdateReportDefinitionInput) (*UpdateReportDefinitionOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.UpdateReportDefinitionRequest">func (c *ApplicationCostProfiler) UpdateReportDefinitionRequest(input *UpdateReportDefinitionInput) (req *request.Request, output *UpdateReportDefinitionOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#ApplicationCostProfiler.UpdateReportDefinitionWithContext">func (c *ApplicationCostProfiler) UpdateReportDefinitionWithContext(ctx aws.Context, input *UpdateReportDefinitionInput, opts ...request.Option) (*UpdateReportDefinitionOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteReportDefinitionInput">type DeleteReportDefinitionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionInput.GoString">func (s DeleteReportDefinitionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionInput.SetReportId">func (s *DeleteReportDefinitionInput) SetReportId(v string) *DeleteReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionInput.String">func (s DeleteReportDefinitionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionInput.Validate">func (s *DeleteReportDefinitionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteReportDefinitionOutput">type DeleteReportDefinitionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionOutput.GoString">func (s DeleteReportDefinitionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionOutput.SetReportId">func (s *DeleteReportDefinitionOutput) SetReportId(v string) *DeleteReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteReportDefinitionOutput.String">func (s DeleteReportDefinitionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetReportDefinitionInput">type GetReportDefinitionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionInput.GoString">func (s GetReportDefinitionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionInput.SetReportId">func (s *GetReportDefinitionInput) SetReportId(v string) *GetReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionInput.String">func (s GetReportDefinitionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionInput.Validate">func (s *GetReportDefinitionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#GetReportDefinitionOutput">type GetReportDefinitionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.GoString">func (s GetReportDefinitionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetCreatedAt">func (s *GetReportDefinitionOutput) SetCreatedAt(v time.Time) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetDestinationS3Location">func (s *GetReportDefinitionOutput) SetDestinationS3Location(v *S3Location) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetFormat">func (s *GetReportDefinitionOutput) SetFormat(v string) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetLastUpdated">func (s *GetReportDefinitionOutput) SetLastUpdated(v time.Time) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetReportDescription">func (s *GetReportDefinitionOutput) SetReportDescription(v string) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetReportFrequency">func (s *GetReportDefinitionOutput) SetReportFrequency(v string) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.SetReportId">func (s *GetReportDefinitionOutput) SetReportId(v string) *GetReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#GetReportDefinitionOutput.String">func (s GetReportDefinitionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImportApplicationUsageInput">type ImportApplicationUsageInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageInput.GoString">func (s ImportApplicationUsageInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageInput.SetSourceS3Location">func (s *ImportApplicationUsageInput) SetSourceS3Location(v *SourceS3Location) *ImportApplicationUsageInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageInput.String">func (s ImportApplicationUsageInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageInput.Validate">func (s *ImportApplicationUsageInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImportApplicationUsageOutput">type ImportApplicationUsageOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageOutput.GoString">func (s ImportApplicationUsageOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageOutput.SetImportId">func (s *ImportApplicationUsageOutput) SetImportId(v string) *ImportApplicationUsageOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ImportApplicationUsageOutput.String">func (s ImportApplicationUsageOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListReportDefinitionsInput">type ListReportDefinitionsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsInput.GoString">func (s ListReportDefinitionsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsInput.SetMaxResults">func (s *ListReportDefinitionsInput) SetMaxResults(v int64) *ListReportDefinitionsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsInput.SetNextToken">func (s *ListReportDefinitionsInput) SetNextToken(v string) *ListReportDefinitionsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsInput.String">func (s ListReportDefinitionsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsInput.Validate">func (s *ListReportDefinitionsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListReportDefinitionsOutput">type ListReportDefinitionsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsOutput.GoString">func (s ListReportDefinitionsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsOutput.SetNextToken">func (s *ListReportDefinitionsOutput) SetNextToken(v string) *ListReportDefinitionsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsOutput.SetReportDefinitions">func (s *ListReportDefinitionsOutput) SetReportDefinitions(v []*ReportDefinition) *ListReportDefinitionsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListReportDefinitionsOutput.String">func (s ListReportDefinitionsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutReportDefinitionInput">type PutReportDefinitionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.GoString">func (s PutReportDefinitionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.SetDestinationS3Location">func (s *PutReportDefinitionInput) SetDestinationS3Location(v *S3Location) *PutReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.SetFormat">func (s *PutReportDefinitionInput) SetFormat(v string) *PutReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.SetReportDescription">func (s *PutReportDefinitionInput) SetReportDescription(v string) *PutReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.SetReportFrequency">func (s *PutReportDefinitionInput) SetReportFrequency(v string) *PutReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.SetReportId">func (s *PutReportDefinitionInput) SetReportId(v string) *PutReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.String">func (s PutReportDefinitionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionInput.Validate">func (s *PutReportDefinitionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutReportDefinitionOutput">type PutReportDefinitionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionOutput.GoString">func (s PutReportDefinitionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionOutput.SetReportId">func (s *PutReportDefinitionOutput) SetReportId(v string) *PutReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutReportDefinitionOutput.String">func (s PutReportDefinitionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ReportDefinition">type ReportDefinition</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.GoString">func (s ReportDefinition) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetCreatedAt">func (s *ReportDefinition) SetCreatedAt(v time.Time) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetDestinationS3Location">func (s *ReportDefinition) SetDestinationS3Location(v *S3Location) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetFormat">func (s *ReportDefinition) SetFormat(v string) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetLastUpdatedAt">func (s *ReportDefinition) SetLastUpdatedAt(v time.Time) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetReportDescription">func (s *ReportDefinition) SetReportDescription(v string) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetReportFrequency">func (s *ReportDefinition) SetReportFrequency(v string) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.SetReportId">func (s *ReportDefinition) SetReportId(v string) *ReportDefinition</a></dd>
+				
+					
+					<dd>    <a href="index.html#ReportDefinition.String">func (s ReportDefinition) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#S3Location">type S3Location</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#S3Location.GoString">func (s S3Location) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Location.SetBucket">func (s *S3Location) SetBucket(v string) *S3Location</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Location.SetPrefix">func (s *S3Location) SetPrefix(v string) *S3Location</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Location.String">func (s S3Location) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#S3Location.Validate">func (s *S3Location) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ServiceQuotaExceededException">type ServiceQuotaExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Code">func (s *ServiceQuotaExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Error">func (s *ServiceQuotaExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.GoString">func (s ServiceQuotaExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Message">func (s *ServiceQuotaExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.OrigErr">func (s *ServiceQuotaExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.RequestID">func (s *ServiceQuotaExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.StatusCode">func (s *ServiceQuotaExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.String">func (s ServiceQuotaExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SourceS3Location">type SourceS3Location</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.GoString">func (s SourceS3Location) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.SetBucket">func (s *SourceS3Location) SetBucket(v string) *SourceS3Location</a></dd>
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.SetKey">func (s *SourceS3Location) SetKey(v string) *SourceS3Location</a></dd>
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.SetRegion">func (s *SourceS3Location) SetRegion(v string) *SourceS3Location</a></dd>
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.String">func (s SourceS3Location) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#SourceS3Location.Validate">func (s *SourceS3Location) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ThrottlingException">type ThrottlingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Code">func (s *ThrottlingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Error">func (s *ThrottlingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.GoString">func (s ThrottlingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Message">func (s *ThrottlingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.OrigErr">func (s *ThrottlingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.RequestID">func (s *ThrottlingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.StatusCode">func (s *ThrottlingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.String">func (s ThrottlingException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateReportDefinitionInput">type UpdateReportDefinitionInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.GoString">func (s UpdateReportDefinitionInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.SetDestinationS3Location">func (s *UpdateReportDefinitionInput) SetDestinationS3Location(v *S3Location) *UpdateReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.SetFormat">func (s *UpdateReportDefinitionInput) SetFormat(v string) *UpdateReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.SetReportDescription">func (s *UpdateReportDefinitionInput) SetReportDescription(v string) *UpdateReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.SetReportFrequency">func (s *UpdateReportDefinitionInput) SetReportFrequency(v string) *UpdateReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.SetReportId">func (s *UpdateReportDefinitionInput) SetReportId(v string) *UpdateReportDefinitionInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.String">func (s UpdateReportDefinitionInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionInput.Validate">func (s *UpdateReportDefinitionInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateReportDefinitionOutput">type UpdateReportDefinitionOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionOutput.GoString">func (s UpdateReportDefinitionOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionOutput.SetReportId">func (s *UpdateReportDefinitionOutput) SetReportId(v string) *UpdateReportDefinitionOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#UpdateReportDefinitionOutput.String">func (s UpdateReportDefinitionOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationException">type ValidationException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationException.Code">func (s *ValidationException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Error">func (s *ValidationException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.GoString">func (s ValidationException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Message">func (s *ValidationException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.OrigErr">func (s *ValidationException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.RequestID">func (s *ValidationException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.StatusCode">func (s *ValidationException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.String">func (s ValidationException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// FormatCsv is a Format enum value</span>
+    <span id="FormatCsv">FormatCsv</span> = &#34;CSV&#34;
+
+    <span class="comment">// FormatParquet is a Format enum value</span>
+    <span id="FormatParquet">FormatParquet</span> = &#34;PARQUET&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// ReportFrequencyMonthly is a ReportFrequency enum value</span>
+    <span id="ReportFrequencyMonthly">ReportFrequencyMonthly</span> = &#34;MONTHLY&#34;
+
+    <span class="comment">// ReportFrequencyDaily is a ReportFrequency enum value</span>
+    <span id="ReportFrequencyDaily">ReportFrequencyDaily</span> = &#34;DAILY&#34;
+
+    <span class="comment">// ReportFrequencyAll is a ReportFrequency enum value</span>
+    <span id="ReportFrequencyAll">ReportFrequencyAll</span> = &#34;ALL&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// S3BucketRegionApEast1 is a S3BucketRegion enum value</span>
+    <span id="S3BucketRegionApEast1">S3BucketRegionApEast1</span> = &#34;ap-east-1&#34;
+
+    <span class="comment">// S3BucketRegionMeSouth1 is a S3BucketRegion enum value</span>
+    <span id="S3BucketRegionMeSouth1">S3BucketRegionMeSouth1</span> = &#34;me-south-1&#34;
+
+    <span class="comment">// S3BucketRegionEuSouth1 is a S3BucketRegion enum value</span>
+    <span id="S3BucketRegionEuSouth1">S3BucketRegionEuSouth1</span> = &#34;eu-south-1&#34;
+
+    <span class="comment">// S3BucketRegionAfSouth1 is a S3BucketRegion enum value</span>
+    <span id="S3BucketRegionAfSouth1">S3BucketRegionAfSouth1</span> = &#34;af-south-1&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeAccessDeniedException for service response error code</span>
+    <span class="comment">// &#34;AccessDeniedException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You do not have permission to perform this action.</span>
+    <span id="ErrCodeAccessDeniedException">ErrCodeAccessDeniedException</span> = &#34;AccessDeniedException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// An internal server error occurred. Retry your request.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeServiceQuotaExceededException for service response error code</span>
+    <span class="comment">// &#34;ServiceQuotaExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Your request exceeds one or more of the service quotas.</span>
+    <span id="ErrCodeServiceQuotaExceededException">ErrCodeServiceQuotaExceededException</span> = &#34;ServiceQuotaExceededException&#34;
+
+    <span class="comment">// ErrCodeThrottlingException for service response error code</span>
+    <span class="comment">// &#34;ThrottlingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The calls to AWS Application Cost Profiler API are throttled. The request</span>
+    <span class="comment">// was denied.</span>
+    <span id="ErrCodeThrottlingException">ErrCodeThrottlingException</span> = &#34;ThrottlingException&#34;
+
+    <span class="comment">// ErrCodeValidationException for service response error code</span>
+    <span class="comment">// &#34;ValidationException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The input fails to satisfy the constraints for the API.</span>
+    <span id="ErrCodeValidationException">ErrCodeValidationException</span> = &#34;ValidationException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;ApplicationCostProfiler&#34;   <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;application-cost-profiler&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;ApplicationCostProfiler&#34;   <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="Format_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=65336:65365#L1873">Format_Values</a>
+				<a class="permalink" href="index.html#Format_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func Format_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+Format_Values returns all elements of the Format enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReportFrequency_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=65777:65815#L1892">ReportFrequency_Values</a>
+				<a class="permalink" href="index.html#ReportFrequency_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ReportFrequency_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ReportFrequency_Values returns all elements of the ReportFrequency enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="S3BucketRegion_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=66386:66423#L1915">S3BucketRegion_Values</a>
+				<a class="permalink" href="index.html#S3BucketRegion_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func S3BucketRegion_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+S3BucketRegion_Values returns all elements of the S3BucketRegion enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AccessDeniedException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=24775:24988#L610">AccessDeniedException</a>
+				<a class="permalink" href="index.html#AccessDeniedException">¶</a>
+				
+				
+			</h2>
+			<p>
+You do not have permission to perform this action.
+</p>
+
+			<pre>type AccessDeniedException struct {
+<span id="AccessDeniedException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="AccessDeniedException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AccessDeniedException.Code">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=25811:25856#L642">Code</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Error">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=26181:26227#L659">Error</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.GoString">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=25568:25616#L631">GoString</a>
+					<a class="permalink" href="index.html#AccessDeniedException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.Message">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=25938:25986#L647">Message</a>
+					<a class="permalink" href="index.html#AccessDeniedException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.OrigErr">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=26116:26163#L655">OrigErr</a>
+					<a class="permalink" href="index.html#AccessDeniedException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.RequestID">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=26519:26569#L669">RequestID</a>
+					<a class="permalink" href="index.html#AccessDeniedException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.StatusCode">func (*AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=26364:26412#L664">StatusCode</a>
+					<a class="permalink" href="index.html#AccessDeniedException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#AccessDeniedException">AccessDeniedException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AccessDeniedException.String">func (AccessDeniedException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=25238:25284#L622">String</a>
+					<a class="permalink" href="index.html#AccessDeniedException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#AccessDeniedException">AccessDeniedException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ApplicationCostProfiler">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/service.go?s=755:810#L11">ApplicationCostProfiler</a>
+				<a class="permalink" href="index.html#ApplicationCostProfiler">¶</a>
+				
+				
+			</h2>
+			<p>
+ApplicationCostProfiler provides the API operation methods for making requests to
+AWS Application Cost Profiler. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+ApplicationCostProfiler methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type ApplicationCostProfiler struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/service.go?s=1867:1946#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a></pre>
+				<p>
+New creates a new instance of the ApplicationCostProfiler client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a ApplicationCostProfiler client from just a session.
+svc := applicationcostprofiler.New(mySession)
+
+// Create a ApplicationCostProfiler client with additional configuration
+svc := applicationcostprofiler.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ApplicationCostProfiler.DeleteReportDefinition">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=2975:3106#L74">DeleteReportDefinition</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.DeleteReportDefinition">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) DeleteReportDefinition(input *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) (*<a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteReportDefinition API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Deletes the specified report definition in AWS Application Cost Profiler.
+This stops the report from being generated.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation DeleteReportDefinition for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/DeleteReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/DeleteReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.DeleteReportDefinitionRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=1442:1602#L31">DeleteReportDefinitionRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.DeleteReportDefinitionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) DeleteReportDefinitionRequest(input *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>)</pre>
+				<p>
+DeleteReportDefinitionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DeleteReportDefinition operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DeleteReportDefinition for more information on using the DeleteReportDefinition
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DeleteReportDefinitionRequest method.
+req, resp := client.DeleteReportDefinitionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/DeleteReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/DeleteReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.DeleteReportDefinitionWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=3697:3880#L88">DeleteReportDefinitionWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.DeleteReportDefinitionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) DeleteReportDefinitionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteReportDefinitionWithContext is the same as DeleteReportDefinition with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DeleteReportDefinition for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.GetReportDefinition">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=6608:6730#L164">GetReportDefinition</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.GetReportDefinition">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) GetReportDefinition(input *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) (*<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetReportDefinition API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Retrieves the definition of a report already configured in AWS Application
+Cost Profiler.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation GetReportDefinition for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/GetReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/GetReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.GetReportDefinitionRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=5133:5284#L121">GetReportDefinitionRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.GetReportDefinitionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) GetReportDefinitionRequest(input *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>)</pre>
+				<p>
+GetReportDefinitionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the GetReportDefinition operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See GetReportDefinition for more information on using the GetReportDefinition
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the GetReportDefinitionRequest method.
+req, resp := client.GetReportDefinitionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/GetReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/GetReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.GetReportDefinitionWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=7309:7483#L178">GetReportDefinitionWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.GetReportDefinitionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) GetReportDefinitionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetReportDefinitionWithContext is the same as GetReportDefinition with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See GetReportDefinition for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ImportApplicationUsage">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=10461:10592#L258">ImportApplicationUsage</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ImportApplicationUsage">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ImportApplicationUsage(input *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) (*<a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ImportApplicationUsage API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Ingests application usage data from Amazon Simple Storage Service (Amazon
+S3).
+</p>
+<p>
+The data must already exist in the S3 location. As part of the action, AWS
+Application Cost Profiler copies the object from your S3 bucket to an S3
+bucket owned by Amazon for processing asynchronously.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation ImportApplicationUsage for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ImportApplicationUsage">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ImportApplicationUsage</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ImportApplicationUsageRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=8760:8920#L211">ImportApplicationUsageRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ImportApplicationUsageRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ImportApplicationUsageRequest(input *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>)</pre>
+				<p>
+ImportApplicationUsageRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ImportApplicationUsage operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ImportApplicationUsage for more information on using the ImportApplicationUsage
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ImportApplicationUsageRequest method.
+req, resp := client.ImportApplicationUsageRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ImportApplicationUsage">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ImportApplicationUsage</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ImportApplicationUsageWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=11183:11366#L272">ImportApplicationUsageWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ImportApplicationUsageWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ImportApplicationUsageWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ImportApplicationUsageWithContext is the same as ImportApplicationUsage with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ImportApplicationUsage for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ListReportDefinitions">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=14331:14459#L355">ListReportDefinitions</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ListReportDefinitions">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ListReportDefinitions(input *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) (*<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListReportDefinitions API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Retrieves a list of all reports and their configurations for your AWS account.
+</p>
+<p>
+The maximum number of reports is one.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation ListReportDefinitions for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ListReportDefinitions">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ListReportDefinitions</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ListReportDefinitionsPages">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=16098:16249#L393">ListReportDefinitionsPages</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ListReportDefinitionsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ListReportDefinitionsPages(input *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>, fn func(*<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListReportDefinitionsPages iterates over the pages of a ListReportDefinitions operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListReportDefinitions method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListReportDefinitions operation.
+pageNum := 0
+err := client.ListReportDefinitionsPages(params,
+    func(page *applicationcostprofiler.ListReportDefinitionsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ListReportDefinitionsPagesWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=16762:16965#L404">ListReportDefinitionsPagesWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ListReportDefinitionsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ListReportDefinitionsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>, fn func(*<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListReportDefinitionsPagesWithContext same as ListReportDefinitionsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ListReportDefinitionsRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=12637:12794#L305">ListReportDefinitionsRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ListReportDefinitionsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ListReportDefinitionsRequest(input *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>)</pre>
+				<p>
+ListReportDefinitionsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListReportDefinitions operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListReportDefinitions for more information on using the ListReportDefinitions
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListReportDefinitionsRequest method.
+req, resp := client.ListReportDefinitionsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ListReportDefinitions">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/ListReportDefinitions</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.ListReportDefinitionsWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=15046:15226#L369">ListReportDefinitionsWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.ListReportDefinitionsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) ListReportDefinitionsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListReportDefinitionsWithContext is the same as ListReportDefinitions with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListReportDefinitions for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.PutReportDefinition">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=20067:20189#L499">PutReportDefinition</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.PutReportDefinition">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) PutReportDefinition(input *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) (*<a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutReportDefinition API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Creates the report definition for a report in Application Cost Profiler.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation PutReportDefinition for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+
+* ServiceQuotaExceededException
+Your request exceeds one or more of the service quotas.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/PutReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/PutReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.PutReportDefinitionRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=18521:18672#L454">PutReportDefinitionRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.PutReportDefinitionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) PutReportDefinitionRequest(input *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>)</pre>
+				<p>
+PutReportDefinitionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutReportDefinition operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutReportDefinition for more information on using the PutReportDefinition
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutReportDefinitionRequest method.
+req, resp := client.PutReportDefinitionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/PutReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/PutReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.PutReportDefinitionWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=20768:20942#L513">PutReportDefinitionWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.PutReportDefinitionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) PutReportDefinitionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutReportDefinitionWithContext is the same as PutReportDefinition with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutReportDefinition for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.UpdateReportDefinition">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=23686:23817#L588">UpdateReportDefinition</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.UpdateReportDefinition">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) UpdateReportDefinition(input *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) (*<a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateReportDefinition API operation for AWS Application Cost Profiler.
+</p>
+<p>
+Updates existing report in AWS Application Cost Profiler.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for AWS Application Cost Profiler&#39;s
+API operation UpdateReportDefinition for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InternalServerException
+An internal server error occurred. Retry your request.
+
+* ThrottlingException
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+
+* ValidationException
+The input fails to satisfy the constraints for the API.
+
+* AccessDeniedException
+You do not have permission to perform this action.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/UpdateReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/UpdateReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.UpdateReportDefinitionRequest">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=22219:22379#L546">UpdateReportDefinitionRequest</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.UpdateReportDefinitionRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) UpdateReportDefinitionRequest(input *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>)</pre>
+				<p>
+UpdateReportDefinitionRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the UpdateReportDefinition operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See UpdateReportDefinition for more information on using the UpdateReportDefinition
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the UpdateReportDefinitionRequest method.
+req, resp := client.UpdateReportDefinitionRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/UpdateReportDefinition">https://docs.aws.amazon.com/goto/WebAPI/AWSApplicationCostProfiler-2020-09-10/UpdateReportDefinition</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ApplicationCostProfiler.UpdateReportDefinitionWithContext">func (*ApplicationCostProfiler) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=24408:24591#L602">UpdateReportDefinitionWithContext</a>
+					<a class="permalink" href="index.html#ApplicationCostProfiler.UpdateReportDefinitionWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#ApplicationCostProfiler">ApplicationCostProfiler</a>) UpdateReportDefinitionWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+UpdateReportDefinitionWithContext is the same as UpdateReportDefinition with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See UpdateReportDefinition for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteReportDefinitionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=26608:26859#L673">DeleteReportDefinitionInput</a>
+				<a class="permalink" href="index.html#DeleteReportDefinitionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteReportDefinitionInput struct {
+
+    <span class="comment">// Required. ID of the report to delete.</span>
+    <span class="comment">//</span>
+<span id="DeleteReportDefinitionInput.ReportId"></span>    <span class="comment">// ReportId is a required field</span>
+    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteReportDefinitionInput.GoString">func (DeleteReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=27445:27499#L696">GoString</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteReportDefinitionInput.SetReportId">func (*DeleteReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=28061:28149#L717">SetReportId</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionInput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteReportDefinitionInput.String">func (DeleteReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=27109:27161#L687">String</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteReportDefinitionInput.Validate">func (*DeleteReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=27600:27654#L701">Validate</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteReportDefinitionInput">DeleteReportDefinitionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteReportDefinitionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=28182:28363#L722">DeleteReportDefinitionOutput</a>
+				<a class="permalink" href="index.html#DeleteReportDefinitionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteReportDefinitionOutput struct {
+
+    <span class="comment">// ID of the report that was deleted.</span>
+<span id="DeleteReportDefinitionOutput.ReportId"></span>    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteReportDefinitionOutput.GoString">func (DeleteReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=28950:29005#L743">GoString</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteReportDefinitionOutput.SetReportId">func (*DeleteReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=29078:29168#L748">SetReportId</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionOutput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteReportDefinitionOutput.String">func (DeleteReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=28613:28666#L734">String</a>
+					<a class="permalink" href="index.html#DeleteReportDefinitionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteReportDefinitionOutput">DeleteReportDefinitionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetReportDefinitionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=29201:29441#L753">GetReportDefinitionInput</a>
+				<a class="permalink" href="index.html#GetReportDefinitionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetReportDefinitionInput struct {
+
+    <span class="comment">// ID of the report to retrieve.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionInput.ReportId"></span>    <span class="comment">// ReportId is a required field</span>
+    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetReportDefinitionInput.GoString">func (GetReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=30024:30075#L776">GoString</a>
+					<a class="permalink" href="index.html#GetReportDefinitionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionInput.SetReportId">func (*GetReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=30631:30713#L797">SetReportId</a>
+					<a class="permalink" href="index.html#GetReportDefinitionInput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionInput.String">func (GetReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=29691:29740#L767">String</a>
+					<a class="permalink" href="index.html#GetReportDefinitionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionInput.Validate">func (*GetReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=30176:30227#L781">Validate</a>
+					<a class="permalink" href="index.html#GetReportDefinitionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionInput">GetReportDefinitionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="GetReportDefinitionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=30746:32137#L802">GetReportDefinitionOutput</a>
+				<a class="permalink" href="index.html#GetReportDefinitionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type GetReportDefinitionOutput struct {
+
+    <span class="comment">// Timestamp (milliseconds) when this report definition was created.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.CreatedAt"></span>    <span class="comment">// CreatedAt is a required field</span>
+    CreatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;createdAt&#34; type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Amazon Simple Storage Service (Amazon S3) location where the report is uploaded.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.DestinationS3Location"></span>    <span class="comment">// DestinationS3Location is a required field</span>
+    DestinationS3Location *<a href="index.html#S3Location">S3Location</a> `locationName:&#34;destinationS3Location&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+
+<span id="GetReportDefinitionOutput.Format"></span>    <span class="comment">// Format of the generated report.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Format is a required field</span>
+    Format *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;format&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;Format&#34;`
+
+    <span class="comment">// Timestamp (milliseconds) when this report definition was last updated.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.LastUpdated"></span>    <span class="comment">// LastUpdated is a required field</span>
+    LastUpdated *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastUpdated&#34; type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Description of the report.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.ReportDescription"></span>    <span class="comment">// ReportDescription is a required field</span>
+    ReportDescription *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportDescription&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Cadence used to generate the report.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.ReportFrequency"></span>    <span class="comment">// ReportFrequency is a required field</span>
+    ReportFrequency *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportFrequency&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ReportFrequency&#34;`
+
+    <span class="comment">// ID of the report retrieved.</span>
+    <span class="comment">//</span>
+<span id="GetReportDefinitionOutput.ReportId"></span>    <span class="comment">// ReportId is a required field</span>
+    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="GetReportDefinitionOutput.GoString">func (GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=32721:32773#L855">GoString</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetCreatedAt">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=32848:32936#L860">SetCreatedAt</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetCreatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetCreatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetCreatedAt sets the CreatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetDestinationS3Location">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33044:33146#L866">SetDestinationS3Location</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetDestinationS3Location">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetDestinationS3Location(v *<a href="index.html#S3Location">S3Location</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetDestinationS3Location sets the DestinationS3Location field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetFormat">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33235:33317#L872">SetFormat</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetFormat(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetFormat sets the Format field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetLastUpdated">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33402:33492#L878">SetLastUpdated</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetLastUpdated">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetLastUpdated(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetLastUpdated sets the LastUpdated field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetReportDescription">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33594:33687#L884">SetReportDescription</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetReportDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetReportDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetReportDescription sets the ReportDescription field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetReportFrequency">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33791:33882#L890">SetReportFrequency</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetReportFrequency">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetReportFrequency(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetReportFrequency sets the ReportFrequency field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.SetReportId">func (*GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=33970:34054#L896">SetReportId</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="GetReportDefinitionOutput.String">func (GetReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=32387:32437#L846">String</a>
+					<a class="permalink" href="index.html#GetReportDefinitionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#GetReportDefinitionOutput">GetReportDefinitionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImportApplicationUsageInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=34087:34372#L901">ImportApplicationUsageInput</a>
+				<a class="permalink" href="index.html#ImportApplicationUsageInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ImportApplicationUsageInput struct {
+
+    <span class="comment">// Amazon S3 location to import application usage data from.</span>
+    <span class="comment">//</span>
+<span id="ImportApplicationUsageInput.SourceS3Location"></span>    <span class="comment">// SourceS3Location is a required field</span>
+    SourceS3Location *<a href="index.html#SourceS3Location">SourceS3Location</a> `locationName:&#34;sourceS3Location&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ImportApplicationUsageInput.GoString">func (ImportApplicationUsageInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=34958:35012#L924">GoString</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImportApplicationUsageInput.SetSourceS3Location">func (*ImportApplicationUsageInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=35667:35774#L947">SetSourceS3Location</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageInput.SetSourceS3Location">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) SetSourceS3Location(v *<a href="index.html#SourceS3Location">SourceS3Location</a>) *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a></pre>
+				<p>
+SetSourceS3Location sets the SourceS3Location field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImportApplicationUsageInput.String">func (ImportApplicationUsageInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=34622:34674#L915">String</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImportApplicationUsageInput.Validate">func (*ImportApplicationUsageInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=35113:35167#L929">Validate</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImportApplicationUsageInput">ImportApplicationUsageInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImportApplicationUsageOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=35814:36039#L952">ImportApplicationUsageOutput</a>
+				<a class="permalink" href="index.html#ImportApplicationUsageOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ImportApplicationUsageOutput struct {
+
+    <span class="comment">// ID of the import request.</span>
+    <span class="comment">//</span>
+<span id="ImportApplicationUsageOutput.ImportId"></span>    <span class="comment">// ImportId is a required field</span>
+    ImportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;importId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ImportApplicationUsageOutput.GoString">func (ImportApplicationUsageOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=36626:36681#L975">GoString</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImportApplicationUsageOutput.SetImportId">func (*ImportApplicationUsageOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=36754:36844#L980">SetImportId</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageOutput.SetImportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>) SetImportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a></pre>
+				<p>
+SetImportId sets the ImportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImportApplicationUsageOutput.String">func (ImportApplicationUsageOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=36289:36342#L966">String</a>
+					<a class="permalink" href="index.html#ImportApplicationUsageOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ImportApplicationUsageOutput">ImportApplicationUsageOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=36935:37150#L986">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+An internal server error occurred. Retry your request.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=37981:38028#L1018">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38359:38407#L1035">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=37732:37782#L1007">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38112:38162#L1023">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38292:38341#L1031">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38701:38753#L1045">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38544:38594#L1040">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=37400:37448#L998">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListReportDefinitionsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=38792:39173#L1049">ListReportDefinitionsInput</a>
+				<a class="permalink" href="index.html#ListReportDefinitionsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListReportDefinitionsInput struct {
+
+    <span class="comment">// The maximum number of results to return.</span>
+<span id="ListReportDefinitionsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;maxResults&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// The token value from a previous call to access the next page of results.</span>
+<span id="ListReportDefinitionsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;nextToken&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListReportDefinitionsInput.GoString">func (ListReportDefinitionsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=39758:39811#L1073">GoString</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsInput.SetMaxResults">func (*ListReportDefinitionsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=40406:40493#L1094">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsInput.SetNextToken">func (*ListReportDefinitionsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=40578:40665#L1100">SetNextToken</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsInput.String">func (ListReportDefinitionsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=39423:39474#L1064">String</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsInput.Validate">func (*ListReportDefinitionsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=39912:39965#L1078">Validate</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListReportDefinitionsInput">ListReportDefinitionsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListReportDefinitionsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=40699:41038#L1105">ListReportDefinitionsOutput</a>
+				<a class="permalink" href="index.html#ListReportDefinitionsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListReportDefinitionsOutput struct {
+
+    <span class="comment">// The value of the next token, if it exists. Null if there are no more results.</span>
+<span id="ListReportDefinitionsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;nextToken&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The retrieved reports.</span>
+<span id="ListReportDefinitionsOutput.ReportDefinitions"></span>    ReportDefinitions []*<a href="index.html#ReportDefinition">ReportDefinition</a> `locationName:&#34;reportDefinitions&#34; type:&#34;list&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListReportDefinitionsOutput.GoString">func (ListReportDefinitionsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=41624:41678#L1129">GoString</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsOutput.SetNextToken">func (*ListReportDefinitionsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=41753:41842#L1134">SetNextToken</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsOutput.SetReportDefinitions">func (*ListReportDefinitionsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=41942:42052#L1140">SetReportDefinitions</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsOutput.SetReportDefinitions">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>) SetReportDefinitions(v []*<a href="index.html#ReportDefinition">ReportDefinition</a>) *<a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a></pre>
+				<p>
+SetReportDefinitions sets the ReportDefinitions field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListReportDefinitionsOutput.String">func (ListReportDefinitionsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=41288:41340#L1120">String</a>
+					<a class="permalink" href="index.html#ListReportDefinitionsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListReportDefinitionsOutput">ListReportDefinitionsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutReportDefinitionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=42093:43236#L1145">PutReportDefinitionInput</a>
+				<a class="permalink" href="index.html#PutReportDefinitionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutReportDefinitionInput struct {
+
+    <span class="comment">// Required. Amazon Simple Storage Service (Amazon S3) location where Application</span>
+    <span class="comment">// Cost Profiler uploads the report.</span>
+    <span class="comment">//</span>
+<span id="PutReportDefinitionInput.DestinationS3Location"></span>    <span class="comment">// DestinationS3Location is a required field</span>
+    DestinationS3Location *<a href="index.html#S3Location">S3Location</a> `locationName:&#34;destinationS3Location&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Required. The format to use for the generated report.</span>
+    <span class="comment">//</span>
+<span id="PutReportDefinitionInput.Format"></span>    <span class="comment">// Format is a required field</span>
+    Format *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;format&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;Format&#34;`
+
+    <span class="comment">// Required. Description of the report.</span>
+    <span class="comment">//</span>
+<span id="PutReportDefinitionInput.ReportDescription"></span>    <span class="comment">// ReportDescription is a required field</span>
+    ReportDescription *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportDescription&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Required. The cadence to generate the report.</span>
+    <span class="comment">//</span>
+<span id="PutReportDefinitionInput.ReportFrequency"></span>    <span class="comment">// ReportFrequency is a required field</span>
+    ReportFrequency *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportFrequency&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ReportFrequency&#34;`
+
+    <span class="comment">// Required. ID of the report. You can choose any valid string matching the</span>
+    <span class="comment">// pattern for the ID.</span>
+    <span class="comment">//</span>
+<span id="PutReportDefinitionInput.ReportId"></span>    <span class="comment">// ReportId is a required field</span>
+    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutReportDefinitionInput.GoString">func (PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=43819:43870#L1190">GoString</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.SetDestinationS3Location">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=45187:45287#L1231">SetDestinationS3Location</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.SetDestinationS3Location">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) SetDestinationS3Location(v *<a href="index.html#S3Location">S3Location</a>) *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a></pre>
+				<p>
+SetDestinationS3Location sets the DestinationS3Location field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.SetFormat">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=45376:45456#L1237">SetFormat</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.SetFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) SetFormat(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a></pre>
+				<p>
+SetFormat sets the Format field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.SetReportDescription">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=45553:45644#L1243">SetReportDescription</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.SetReportDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) SetReportDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a></pre>
+				<p>
+SetReportDescription sets the ReportDescription field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.SetReportFrequency">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=45748:45837#L1249">SetReportFrequency</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.SetReportFrequency">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) SetReportFrequency(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a></pre>
+				<p>
+SetReportFrequency sets the ReportFrequency field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.SetReportId">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=45925:46007#L1255">SetReportId</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.String">func (PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=43486:43535#L1181">String</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionInput.Validate">func (*PutReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=43971:44022#L1195">Validate</a>
+					<a class="permalink" href="index.html#PutReportDefinitionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionInput">PutReportDefinitionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutReportDefinitionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=46040:46201#L1260">PutReportDefinitionOutput</a>
+				<a class="permalink" href="index.html#PutReportDefinitionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutReportDefinitionOutput struct {
+
+    <span class="comment">// ID of the report.</span>
+<span id="PutReportDefinitionOutput.ReportId"></span>    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutReportDefinitionOutput.GoString">func (PutReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=46785:46837#L1281">GoString</a>
+					<a class="permalink" href="index.html#PutReportDefinitionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionOutput.SetReportId">func (*PutReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=46910:46994#L1286">SetReportId</a>
+					<a class="permalink" href="index.html#PutReportDefinitionOutput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutReportDefinitionOutput.String">func (PutReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=46451:46501#L1272">String</a>
+					<a class="permalink" href="index.html#PutReportDefinitionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutReportDefinitionOutput">PutReportDefinitionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ReportDefinition">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=47094:48104#L1292">ReportDefinition</a>
+				<a class="permalink" href="index.html#ReportDefinition">¶</a>
+				
+				
+			</h2>
+			<p>
+The configuration of a report in AWS Application Cost Profiler.
+</p>
+
+			<pre>type ReportDefinition struct {
+
+    <span class="comment">// Timestamp (milliseconds) when this report definition was created.</span>
+<span id="ReportDefinition.CreatedAt"></span>    CreatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;createdAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// The location in Amazon Simple Storage Service (Amazon S3) the reports should</span>
+    <span class="comment">// be saved to.</span>
+<span id="ReportDefinition.DestinationS3Location"></span>    DestinationS3Location *<a href="index.html#S3Location">S3Location</a> `locationName:&#34;destinationS3Location&#34; type:&#34;structure&#34;`
+
+    <span class="comment">// The format used for the generated reports.</span>
+<span id="ReportDefinition.Format"></span>    Format *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;format&#34; type:&#34;string&#34; enum:&#34;Format&#34;`
+
+    <span class="comment">// Timestamp (milliseconds) when this report definition was last updated.</span>
+<span id="ReportDefinition.LastUpdatedAt"></span>    LastUpdatedAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;lastUpdatedAt&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// Description of the report</span>
+<span id="ReportDefinition.ReportDescription"></span>    ReportDescription *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportDescription&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The cadence at which the report is generated.</span>
+<span id="ReportDefinition.ReportFrequency"></span>    ReportFrequency *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportFrequency&#34; type:&#34;string&#34; enum:&#34;ReportFrequency&#34;`
+
+    <span class="comment">// The ID of the report.</span>
+<span id="ReportDefinition.ReportId"></span>    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ReportDefinition.GoString">func (ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=48679:48722#L1332">GoString</a>
+					<a class="permalink" href="index.html#ReportDefinition.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ReportDefinition">ReportDefinition</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetCreatedAt">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=48797:48867#L1337">SetCreatedAt</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetCreatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetCreatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetCreatedAt sets the CreatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetDestinationS3Location">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=48975:49059#L1343">SetDestinationS3Location</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetDestinationS3Location">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetDestinationS3Location(v *<a href="index.html#S3Location">S3Location</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetDestinationS3Location sets the DestinationS3Location field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetFormat">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=49148:49212#L1349">SetFormat</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetFormat(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetFormat sets the Format field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetLastUpdatedAt">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=49301:49375#L1355">SetLastUpdatedAt</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetLastUpdatedAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetLastUpdatedAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetLastUpdatedAt sets the LastUpdatedAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetReportDescription">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=49479:49554#L1361">SetReportDescription</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetReportDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetReportDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetReportDescription sets the ReportDescription field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetReportFrequency">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=49658:49731#L1367">SetReportFrequency</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetReportFrequency">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetReportFrequency(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetReportFrequency sets the ReportFrequency field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.SetReportId">func (*ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=49819:49885#L1373">SetReportId</a>
+					<a class="permalink" href="index.html#ReportDefinition.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ReportDefinition">ReportDefinition</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ReportDefinition">ReportDefinition</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ReportDefinition.String">func (ReportDefinition) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=48354:48395#L1323">String</a>
+					<a class="permalink" href="index.html#ReportDefinition.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ReportDefinition">ReportDefinition</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="S3Location">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=50069:50422#L1380">S3Location</a>
+				<a class="permalink" href="index.html#S3Location">¶</a>
+				
+				
+			</h2>
+			<p>
+Represents the Amazon Simple Storage Service (Amazon S3) location where AWS
+Application Cost Profiler reports are generated and then written to.
+</p>
+
+			<pre>type S3Location struct {
+
+    <span class="comment">// Name of the S3 bucket.</span>
+    <span class="comment">//</span>
+<span id="S3Location.Bucket"></span>    <span class="comment">// Bucket is a required field</span>
+    Bucket *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;bucket&#34; min:&#34;3&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+<span id="S3Location.Prefix"></span>    <span class="comment">// Prefix for the location to write to.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Prefix is a required field</span>
+    Prefix *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;prefix&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="S3Location.GoString">func (S3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=50991:51028#L1408">GoString</a>
+					<a class="permalink" href="index.html#S3Location.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#S3Location">S3Location</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Location.SetBucket">func (*S3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=51733:51785#L1435">SetBucket</a>
+					<a class="permalink" href="index.html#S3Location.SetBucket">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Location">S3Location</a>) SetBucket(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#S3Location">S3Location</a></pre>
+				<p>
+SetBucket sets the Bucket field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Location.SetPrefix">func (*S3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=51860:51912#L1441">SetPrefix</a>
+					<a class="permalink" href="index.html#S3Location.SetPrefix">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Location">S3Location</a>) SetPrefix(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#S3Location">S3Location</a></pre>
+				<p>
+SetPrefix sets the Prefix field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Location.String">func (S3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=50672:50707#L1399">String</a>
+					<a class="permalink" href="index.html#S3Location.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#S3Location">S3Location</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="S3Location.Validate">func (*S3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=51129:51166#L1413">Validate</a>
+					<a class="permalink" href="index.html#S3Location.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#S3Location">S3Location</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ServiceQuotaExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=52002:52223#L1447">ServiceQuotaExceededException</a>
+				<a class="permalink" href="index.html#ServiceQuotaExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+Your request exceeds one or more of the service quotas.
+</p>
+
+			<pre>type ServiceQuotaExceededException struct {
+<span id="ServiceQuotaExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ServiceQuotaExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ServiceQuotaExceededException.Code">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53078:53131#L1479">Code</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.Error">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53480:53534#L1496">Error</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.GoString">func (ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=52811:52867#L1468">GoString</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.Message">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53221:53277#L1484">Message</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.OrigErr">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53407:53462#L1492">OrigErr</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.RequestID">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53834:53892#L1506">RequestID</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.StatusCode">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=53671:53727#L1501">StatusCode</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.String">func (ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=52473:52527#L1459">String</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SourceS3Location">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=54034:54743#L1512">SourceS3Location</a>
+				<a class="permalink" href="index.html#SourceS3Location">¶</a>
+				
+				
+			</h2>
+			<p>
+Represents the Amazon Simple Storage Service (Amazon S3) location where usage
+data is read from.
+</p>
+
+			<pre>type SourceS3Location struct {
+
+    <span class="comment">// Name of the bucket.</span>
+    <span class="comment">//</span>
+<span id="SourceS3Location.Bucket"></span>    <span class="comment">// Bucket is a required field</span>
+    Bucket *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;bucket&#34; min:&#34;3&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+<span id="SourceS3Location.Key"></span>    <span class="comment">// Key of the object.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Key is a required field</span>
+    Key *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;key&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+<span id="SourceS3Location.Region"></span>    <span class="comment">// Region of the bucket. Only required for Regions that are disabled by default.</span>
+    <span class="comment">// For more infomration about Regions that are disabled by default, see Enabling</span>
+    <span class="comment">// a Region (https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable)</span>
+    <span class="comment">// in the AWS General Reference guide.</span>
+    Region *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;region&#34; type:&#34;string&#34; enum:&#34;S3BucketRegion&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="SourceS3Location.GoString">func (SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=55318:55361#L1546">GoString</a>
+					<a class="permalink" href="index.html#SourceS3Location.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SourceS3Location">SourceS3Location</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SourceS3Location.SetBucket">func (*SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=56063:56127#L1573">SetBucket</a>
+					<a class="permalink" href="index.html#SourceS3Location.SetBucket">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SourceS3Location">SourceS3Location</a>) SetBucket(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SourceS3Location">SourceS3Location</a></pre>
+				<p>
+SetBucket sets the Bucket field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SourceS3Location.SetKey">func (*SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=56196:56257#L1579">SetKey</a>
+					<a class="permalink" href="index.html#SourceS3Location.SetKey">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SourceS3Location">SourceS3Location</a>) SetKey(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SourceS3Location">SourceS3Location</a></pre>
+				<p>
+SetKey sets the Key field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SourceS3Location.SetRegion">func (*SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=56329:56393#L1585">SetRegion</a>
+					<a class="permalink" href="index.html#SourceS3Location.SetRegion">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SourceS3Location">SourceS3Location</a>) SetRegion(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#SourceS3Location">SourceS3Location</a></pre>
+				<p>
+SetRegion sets the Region field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SourceS3Location.String">func (SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=54993:55034#L1537">String</a>
+					<a class="permalink" href="index.html#SourceS3Location.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#SourceS3Location">SourceS3Location</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="SourceS3Location.Validate">func (*SourceS3Location) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=55462:55505#L1551">Validate</a>
+					<a class="permalink" href="index.html#SourceS3Location.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#SourceS3Location">SourceS3Location</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ThrottlingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=56516:56727#L1592">ThrottlingException</a>
+				<a class="permalink" href="index.html#ThrottlingException">¶</a>
+				
+				
+			</h2>
+			<p>
+The calls to AWS Application Cost Profiler API are throttled. The request
+was denied.
+</p>
+
+			<pre>type ThrottlingException struct {
+<span id="ThrottlingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ThrottlingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ThrottlingException.Code">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=57542:57585#L1624">Code</a>
+					<a class="permalink" href="index.html#ThrottlingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Error">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=57904:57948#L1641">Error</a>
+					<a class="permalink" href="index.html#ThrottlingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.GoString">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=57305:57351#L1613">GoString</a>
+					<a class="permalink" href="index.html#ThrottlingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Message">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=57665:57711#L1629">Message</a>
+					<a class="permalink" href="index.html#ThrottlingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.OrigErr">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=57841:57886#L1637">OrigErr</a>
+					<a class="permalink" href="index.html#ThrottlingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.RequestID">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=58238:58286#L1651">RequestID</a>
+					<a class="permalink" href="index.html#ThrottlingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.StatusCode">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=58085:58131#L1646">StatusCode</a>
+					<a class="permalink" href="index.html#ThrottlingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.String">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=56977:57021#L1604">String</a>
+					<a class="permalink" href="index.html#ThrottlingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateReportDefinitionInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=58325:59427#L1655">UpdateReportDefinitionInput</a>
+				<a class="permalink" href="index.html#UpdateReportDefinitionInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateReportDefinitionInput struct {
+
+    <span class="comment">// Required. Amazon Simple Storage Service (Amazon S3) location where Application</span>
+    <span class="comment">// Cost Profiler uploads the report.</span>
+    <span class="comment">//</span>
+<span id="UpdateReportDefinitionInput.DestinationS3Location"></span>    <span class="comment">// DestinationS3Location is a required field</span>
+    DestinationS3Location *<a href="index.html#S3Location">S3Location</a> `locationName:&#34;destinationS3Location&#34; type:&#34;structure&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Required. The format to use for the generated report.</span>
+    <span class="comment">//</span>
+<span id="UpdateReportDefinitionInput.Format"></span>    <span class="comment">// Format is a required field</span>
+    Format *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;format&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;Format&#34;`
+
+    <span class="comment">// Required. Description of the report.</span>
+    <span class="comment">//</span>
+<span id="UpdateReportDefinitionInput.ReportDescription"></span>    <span class="comment">// ReportDescription is a required field</span>
+    ReportDescription *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportDescription&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// Required. The cadence to generate the report.</span>
+    <span class="comment">//</span>
+<span id="UpdateReportDefinitionInput.ReportFrequency"></span>    <span class="comment">// ReportFrequency is a required field</span>
+    ReportFrequency *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportFrequency&#34; type:&#34;string&#34; required:&#34;true&#34; enum:&#34;ReportFrequency&#34;`
+
+    <span class="comment">// Required. ID of the report to update.</span>
+    <span class="comment">//</span>
+<span id="UpdateReportDefinitionInput.ReportId"></span>    <span class="comment">// ReportId is a required field</span>
+    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateReportDefinitionInput.GoString">func (UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=60013:60067#L1699">GoString</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.SetDestinationS3Location">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=61390:61496#L1740">SetDestinationS3Location</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.SetDestinationS3Location">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) SetDestinationS3Location(v *<a href="index.html#S3Location">S3Location</a>) *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a></pre>
+				<p>
+SetDestinationS3Location sets the DestinationS3Location field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.SetFormat">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=61585:61671#L1746">SetFormat</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.SetFormat">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) SetFormat(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a></pre>
+				<p>
+SetFormat sets the Format field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.SetReportDescription">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=61768:61865#L1752">SetReportDescription</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.SetReportDescription">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) SetReportDescription(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a></pre>
+				<p>
+SetReportDescription sets the ReportDescription field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.SetReportFrequency">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=61969:62064#L1758">SetReportFrequency</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.SetReportFrequency">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) SetReportFrequency(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a></pre>
+				<p>
+SetReportFrequency sets the ReportFrequency field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.SetReportId">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=62152:62240#L1764">SetReportId</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.String">func (UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=59677:59729#L1690">String</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionInput.Validate">func (*UpdateReportDefinitionInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=60168:60222#L1704">Validate</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionInput">UpdateReportDefinitionInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateReportDefinitionOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=62273:62437#L1769">UpdateReportDefinitionOutput</a>
+				<a class="permalink" href="index.html#UpdateReportDefinitionOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type UpdateReportDefinitionOutput struct {
+
+    <span class="comment">// ID of the report.</span>
+<span id="UpdateReportDefinitionOutput.ReportId"></span>    ReportId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;reportId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UpdateReportDefinitionOutput.GoString">func (UpdateReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=63024:63079#L1790">GoString</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionOutput.SetReportId">func (*UpdateReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=63152:63242#L1795">SetReportId</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionOutput.SetReportId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>) SetReportId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a></pre>
+				<p>
+SetReportId sets the ReportId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UpdateReportDefinitionOutput.String">func (UpdateReportDefinitionOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=62687:62740#L1781">String</a>
+					<a class="permalink" href="index.html#UpdateReportDefinitionOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#UpdateReportDefinitionOutput">UpdateReportDefinitionOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=63334:63545#L1801">ValidationException</a>
+				<a class="permalink" href="index.html#ValidationException">¶</a>
+				
+				
+			</h2>
+			<p>
+The input fails to satisfy the constraints for the API.
+</p>
+
+			<pre>type ValidationException struct {
+<span id="ValidationException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ValidationException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationException.Code">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64360:64403#L1833">Code</a>
+					<a class="permalink" href="index.html#ValidationException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Error">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64722:64766#L1850">Error</a>
+					<a class="permalink" href="index.html#ValidationException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.GoString">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64123:64169#L1822">GoString</a>
+					<a class="permalink" href="index.html#ValidationException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Message">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64483:64529#L1838">Message</a>
+					<a class="permalink" href="index.html#ValidationException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.OrigErr">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64659:64704#L1846">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.RequestID">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=65056:65104#L1860">RequestID</a>
+					<a class="permalink" href="index.html#ValidationException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.StatusCode">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=64903:64949#L1855">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.String">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/applicationcostprofiler/api.go?s=63795:63839#L1813">String</a>
+					<a class="permalink" href="index.html#ValidationException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="applicationcostprofileriface/index.html">applicationcostprofileriface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package applicationcostprofileriface provides an interface to enable mocking the AWS Application Cost Profiler service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>amplifybackendiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package amplifybackendiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/amplifybackend/amplifybackendiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package amplifybackendiface provides an interface to enable mocking the AmplifyBackend service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AmplifyBackendAPI">type AmplifyBackendAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/amplifybackend/amplifybackendiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AmplifyBackendAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/amplifybackend/amplifybackendiface/interface.go?s=2240:11826#L52">AmplifyBackendAPI</a>
+				<a class="permalink" href="index.html#AmplifyBackendAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+AmplifyBackendAPI provides an interface to enable mocking the
+amplifybackend.AmplifyBackend service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// AmplifyBackend.
+func myFunc(svc amplifybackendiface.AmplifyBackendAPI) bool {
+    // Make svc.CloneBackend request
+}
+
+func main() {
+    sess := session.New()
+    svc := amplifybackend.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockAmplifyBackendClient struct {
+    amplifybackendiface.AmplifyBackendAPI
+}
+func (m *mockAmplifyBackendClient) CloneBackend(input *amplifybackend.CloneBackendInput) (*amplifybackend.CloneBackendOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockAmplifyBackendClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type AmplifyBackendAPI interface {
+    CloneBackend(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendInput">CloneBackendInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendOutput">CloneBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneBackendWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendInput">CloneBackendInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendOutput">CloneBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CloneBackendRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendInput">CloneBackendInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CloneBackendOutput">CloneBackendOutput</a>)
+
+    CreateBackend(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendInput">CreateBackendInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendOutput">CreateBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendInput">CreateBackendInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendOutput">CreateBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendInput">CreateBackendInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendOutput">CreateBackendOutput</a>)
+
+    CreateBackendAPI(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIInput">CreateBackendAPIInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIOutput">CreateBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendAPIWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIInput">CreateBackendAPIInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIOutput">CreateBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendAPIRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIInput">CreateBackendAPIInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAPIOutput">CreateBackendAPIOutput</a>)
+
+    CreateBackendAuth(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthInput">CreateBackendAuthInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthOutput">CreateBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendAuthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthInput">CreateBackendAuthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthOutput">CreateBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendAuthRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthInput">CreateBackendAuthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendAuthOutput">CreateBackendAuthOutput</a>)
+
+    CreateBackendConfig(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigInput">CreateBackendConfigInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigOutput">CreateBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigInput">CreateBackendConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigOutput">CreateBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateBackendConfigRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigInput">CreateBackendConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateBackendConfigOutput">CreateBackendConfigOutput</a>)
+
+    CreateToken(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateTokenRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenInput">CreateTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#CreateTokenOutput">CreateTokenOutput</a>)
+
+    DeleteBackend(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendInput">DeleteBackendInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendOutput">DeleteBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendInput">DeleteBackendInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendOutput">DeleteBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendInput">DeleteBackendInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendOutput">DeleteBackendOutput</a>)
+
+    DeleteBackendAPI(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIInput">DeleteBackendAPIInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIOutput">DeleteBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendAPIWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIInput">DeleteBackendAPIInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIOutput">DeleteBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendAPIRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIInput">DeleteBackendAPIInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAPIOutput">DeleteBackendAPIOutput</a>)
+
+    DeleteBackendAuth(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthInput">DeleteBackendAuthInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthOutput">DeleteBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendAuthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthInput">DeleteBackendAuthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthOutput">DeleteBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteBackendAuthRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthInput">DeleteBackendAuthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteBackendAuthOutput">DeleteBackendAuthOutput</a>)
+
+    DeleteToken(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteTokenRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenInput">DeleteTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#DeleteTokenOutput">DeleteTokenOutput</a>)
+
+    GenerateBackendAPIModels(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsInput">GenerateBackendAPIModelsInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsOutput">GenerateBackendAPIModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GenerateBackendAPIModelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsInput">GenerateBackendAPIModelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsOutput">GenerateBackendAPIModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GenerateBackendAPIModelsRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsInput">GenerateBackendAPIModelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GenerateBackendAPIModelsOutput">GenerateBackendAPIModelsOutput</a>)
+
+    GetBackend(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendInput">GetBackendInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendOutput">GetBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendInput">GetBackendInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendOutput">GetBackendOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendInput">GetBackendInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendOutput">GetBackendOutput</a>)
+
+    GetBackendAPI(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIInput">GetBackendAPIInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIOutput">GetBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAPIWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIInput">GetBackendAPIInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIOutput">GetBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAPIRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIInput">GetBackendAPIInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIOutput">GetBackendAPIOutput</a>)
+
+    GetBackendAPIModels(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsInput">GetBackendAPIModelsInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsOutput">GetBackendAPIModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAPIModelsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsInput">GetBackendAPIModelsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsOutput">GetBackendAPIModelsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAPIModelsRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsInput">GetBackendAPIModelsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAPIModelsOutput">GetBackendAPIModelsOutput</a>)
+
+    GetBackendAuth(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthInput">GetBackendAuthInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthOutput">GetBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAuthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthInput">GetBackendAuthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthOutput">GetBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendAuthRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthInput">GetBackendAuthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendAuthOutput">GetBackendAuthOutput</a>)
+
+    GetBackendJob(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobInput">GetBackendJobInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobOutput">GetBackendJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobInput">GetBackendJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobOutput">GetBackendJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetBackendJobRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobInput">GetBackendJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetBackendJobOutput">GetBackendJobOutput</a>)
+
+    GetToken(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenInput">GetTokenInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenOutput">GetTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTokenWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenInput">GetTokenInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenOutput">GetTokenOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetTokenRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenInput">GetTokenInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#GetTokenOutput">GetTokenOutput</a>)
+
+    ImportBackendAuth(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthInput">ImportBackendAuthInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthOutput">ImportBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ImportBackendAuthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthInput">ImportBackendAuthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthOutput">ImportBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ImportBackendAuthRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthInput">ImportBackendAuthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#ImportBackendAuthOutput">ImportBackendAuthOutput</a>)
+
+    ListBackendJobs(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsInput">ListBackendJobsInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsOutput">ListBackendJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListBackendJobsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsInput">ListBackendJobsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsOutput">ListBackendJobsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListBackendJobsRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsInput">ListBackendJobsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsOutput">ListBackendJobsOutput</a>)
+
+    ListBackendJobsPages(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsInput">ListBackendJobsInput</a>, func(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsOutput">ListBackendJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListBackendJobsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsInput">ListBackendJobsInput</a>, func(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#ListBackendJobsOutput">ListBackendJobsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    RemoveAllBackends(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsInput">RemoveAllBackendsInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsOutput">RemoveAllBackendsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveAllBackendsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsInput">RemoveAllBackendsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsOutput">RemoveAllBackendsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveAllBackendsRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsInput">RemoveAllBackendsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveAllBackendsOutput">RemoveAllBackendsOutput</a>)
+
+    RemoveBackendConfig(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigInput">RemoveBackendConfigInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigOutput">RemoveBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveBackendConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigInput">RemoveBackendConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigOutput">RemoveBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveBackendConfigRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigInput">RemoveBackendConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#RemoveBackendConfigOutput">RemoveBackendConfigOutput</a>)
+
+    UpdateBackendAPI(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIInput">UpdateBackendAPIInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIOutput">UpdateBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendAPIWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIInput">UpdateBackendAPIInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIOutput">UpdateBackendAPIOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendAPIRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIInput">UpdateBackendAPIInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAPIOutput">UpdateBackendAPIOutput</a>)
+
+    UpdateBackendAuth(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthInput">UpdateBackendAuthInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthOutput">UpdateBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendAuthWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthInput">UpdateBackendAuthInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthOutput">UpdateBackendAuthOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendAuthRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthInput">UpdateBackendAuthInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendAuthOutput">UpdateBackendAuthOutput</a>)
+
+    UpdateBackendConfig(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigInput">UpdateBackendConfigInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigOutput">UpdateBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigInput">UpdateBackendConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigOutput">UpdateBackendConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendConfigRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigInput">UpdateBackendConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendConfigOutput">UpdateBackendConfigOutput</a>)
+
+    UpdateBackendJob(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobInput">UpdateBackendJobInput</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobOutput">UpdateBackendJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendJobWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobInput">UpdateBackendJobInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobOutput">UpdateBackendJobOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateBackendJobRequest(*<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobInput">UpdateBackendJobInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">amplifybackend</a>.<a href="../index.html#UpdateBackendJobOutput">UpdateBackendJobOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

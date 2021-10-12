@@ -1,0 +1,440 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>opensearchserviceiface - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package opensearchserviceiface
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/opensearchservice/opensearchserviceiface&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package opensearchserviceiface provides an interface to enable mocking the Amazon OpenSearch Service service client
+for testing your code.
+</p>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#OpenSearchServiceAPI">type OpenSearchServiceAPI</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/opensearchservice/opensearchserviceiface/interface.go">interface.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="OpenSearchServiceAPI">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/opensearchservice/opensearchserviceiface/interface.go?s=2354:23050#L52">OpenSearchServiceAPI</a>
+				<a class="permalink" href="index.html#OpenSearchServiceAPI">¶</a>
+				
+				
+			</h2>
+			<p>
+OpenSearchServiceAPI provides an interface to enable mocking the
+opensearchservice.OpenSearchService service client&#39;s API operation,
+paginators, and waiters. This make unit testing your code that calls out
+to the SDK&#39;s service client&#39;s calls easier.
+</p>
+<p>
+The best way to use this interface is so the SDK&#39;s service client&#39;s calls
+can be stubbed out for unit testing your code with the SDK without needing
+to inject custom request handlers into the SDK&#39;s request pipeline.
+</p>
+<pre>// myFunc uses an SDK service client to make a request to
+// Amazon OpenSearch Service.
+func myFunc(svc opensearchserviceiface.OpenSearchServiceAPI) bool {
+    // Make svc.AcceptInboundConnection request
+}
+
+func main() {
+    sess := session.New()
+    svc := opensearchservice.New(sess)
+
+    myFunc(svc)
+}
+</pre>
+<p>
+In your _test.go file:
+</p>
+<pre>// Define a mock struct to be used in your unit tests of myFunc.
+type mockOpenSearchServiceClient struct {
+    opensearchserviceiface.OpenSearchServiceAPI
+}
+func (m *mockOpenSearchServiceClient) AcceptInboundConnection(input *opensearchservice.AcceptInboundConnectionInput) (*opensearchservice.AcceptInboundConnectionOutput, error) {
+    // mock response/functionality
+}
+
+func TestMyFunc(t *testing.T) {
+    // Setup Test
+    mockSvc := &amp;mockOpenSearchServiceClient{}
+
+    myfunc(mockSvc)
+
+    // Verify myFunc&#39;s functionality
+}
+</pre>
+<p>
+It is important to note that this interface will have breaking changes
+when the service model is updated and adds new API operations, paginators,
+and waiters. Its suggested to use the pattern above for testing, or using
+tooling to generate mocks to satisfy the interfaces.
+</p>
+
+			<pre>type OpenSearchServiceAPI interface {
+    AcceptInboundConnection(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionInput">AcceptInboundConnectionInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionOutput">AcceptInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInboundConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionInput">AcceptInboundConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionOutput">AcceptInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AcceptInboundConnectionRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionInput">AcceptInboundConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AcceptInboundConnectionOutput">AcceptInboundConnectionOutput</a>)
+
+    AddTags(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AddTagsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsInput">AddTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AddTagsOutput">AddTagsOutput</a>)
+
+    AssociatePackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageInput">AssociatePackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageOutput">AssociatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociatePackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageInput">AssociatePackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageOutput">AssociatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    AssociatePackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageInput">AssociatePackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#AssociatePackageOutput">AssociatePackageOutput</a>)
+
+    CancelServiceSoftwareUpdate(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateInput">CancelServiceSoftwareUpdateInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateOutput">CancelServiceSoftwareUpdateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelServiceSoftwareUpdateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateInput">CancelServiceSoftwareUpdateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateOutput">CancelServiceSoftwareUpdateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CancelServiceSoftwareUpdateRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateInput">CancelServiceSoftwareUpdateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CancelServiceSoftwareUpdateOutput">CancelServiceSoftwareUpdateOutput</a>)
+
+    CreateDomain(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateDomainRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainInput">CreateDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateDomainOutput">CreateDomainOutput</a>)
+
+    CreateOutboundConnection(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionInput">CreateOutboundConnectionInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionOutput">CreateOutboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOutboundConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionInput">CreateOutboundConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionOutput">CreateOutboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreateOutboundConnectionRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionInput">CreateOutboundConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreateOutboundConnectionOutput">CreateOutboundConnectionOutput</a>)
+
+    CreatePackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageInput">CreatePackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageOutput">CreatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageInput">CreatePackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageOutput">CreatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    CreatePackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageInput">CreatePackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#CreatePackageOutput">CreatePackageOutput</a>)
+
+    DeleteDomain(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteDomainRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainInput">DeleteDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteDomainOutput">DeleteDomainOutput</a>)
+
+    DeleteInboundConnection(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionInput">DeleteInboundConnectionInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionOutput">DeleteInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInboundConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionInput">DeleteInboundConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionOutput">DeleteInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteInboundConnectionRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionInput">DeleteInboundConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteInboundConnectionOutput">DeleteInboundConnectionOutput</a>)
+
+    DeleteOutboundConnection(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionInput">DeleteOutboundConnectionInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionOutput">DeleteOutboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOutboundConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionInput">DeleteOutboundConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionOutput">DeleteOutboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeleteOutboundConnectionRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionInput">DeleteOutboundConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeleteOutboundConnectionOutput">DeleteOutboundConnectionOutput</a>)
+
+    DeletePackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageInput">DeletePackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageOutput">DeletePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageInput">DeletePackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageOutput">DeletePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DeletePackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageInput">DeletePackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DeletePackageOutput">DeletePackageOutput</a>)
+
+    DescribeDomain(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainInput">DescribeDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainOutput">DescribeDomainOutput</a>)
+
+    DescribeDomainAutoTunes(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesInput">DescribeDomainAutoTunesInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesOutput">DescribeDomainAutoTunesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainAutoTunesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesInput">DescribeDomainAutoTunesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesOutput">DescribeDomainAutoTunesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainAutoTunesRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesInput">DescribeDomainAutoTunesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesOutput">DescribeDomainAutoTunesOutput</a>)
+
+    DescribeDomainAutoTunesPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesInput">DescribeDomainAutoTunesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesOutput">DescribeDomainAutoTunesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeDomainAutoTunesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesInput">DescribeDomainAutoTunesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainAutoTunesOutput">DescribeDomainAutoTunesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeDomainConfig(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigInput">DescribeDomainConfigInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigOutput">DescribeDomainConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigInput">DescribeDomainConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigOutput">DescribeDomainConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainConfigRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigInput">DescribeDomainConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainConfigOutput">DescribeDomainConfigOutput</a>)
+
+    DescribeDomains(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsInput">DescribeDomainsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsOutput">DescribeDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsInput">DescribeDomainsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsOutput">DescribeDomainsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeDomainsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsInput">DescribeDomainsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeDomainsOutput">DescribeDomainsOutput</a>)
+
+    DescribeInboundConnections(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsInput">DescribeInboundConnectionsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsOutput">DescribeInboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInboundConnectionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsInput">DescribeInboundConnectionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsOutput">DescribeInboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInboundConnectionsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsInput">DescribeInboundConnectionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsOutput">DescribeInboundConnectionsOutput</a>)
+
+    DescribeInboundConnectionsPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsInput">DescribeInboundConnectionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsOutput">DescribeInboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeInboundConnectionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsInput">DescribeInboundConnectionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInboundConnectionsOutput">DescribeInboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeInstanceTypeLimits(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsInput">DescribeInstanceTypeLimitsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsOutput">DescribeInstanceTypeLimitsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstanceTypeLimitsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsInput">DescribeInstanceTypeLimitsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsOutput">DescribeInstanceTypeLimitsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeInstanceTypeLimitsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsInput">DescribeInstanceTypeLimitsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeInstanceTypeLimitsOutput">DescribeInstanceTypeLimitsOutput</a>)
+
+    DescribeOutboundConnections(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsInput">DescribeOutboundConnectionsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsOutput">DescribeOutboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOutboundConnectionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsInput">DescribeOutboundConnectionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsOutput">DescribeOutboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeOutboundConnectionsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsInput">DescribeOutboundConnectionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsOutput">DescribeOutboundConnectionsOutput</a>)
+
+    DescribeOutboundConnectionsPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsInput">DescribeOutboundConnectionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsOutput">DescribeOutboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeOutboundConnectionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsInput">DescribeOutboundConnectionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeOutboundConnectionsOutput">DescribeOutboundConnectionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribePackages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesInput">DescribePackagesInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesOutput">DescribePackagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePackagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesInput">DescribePackagesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesOutput">DescribePackagesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribePackagesRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesInput">DescribePackagesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesOutput">DescribePackagesOutput</a>)
+
+    DescribePackagesPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesInput">DescribePackagesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesOutput">DescribePackagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribePackagesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesInput">DescribePackagesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribePackagesOutput">DescribePackagesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeReservedInstanceOfferings(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsInput">DescribeReservedInstanceOfferingsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsOutput">DescribeReservedInstanceOfferingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReservedInstanceOfferingsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsInput">DescribeReservedInstanceOfferingsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsOutput">DescribeReservedInstanceOfferingsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReservedInstanceOfferingsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsInput">DescribeReservedInstanceOfferingsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsOutput">DescribeReservedInstanceOfferingsOutput</a>)
+
+    DescribeReservedInstanceOfferingsPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsInput">DescribeReservedInstanceOfferingsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsOutput">DescribeReservedInstanceOfferingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeReservedInstanceOfferingsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsInput">DescribeReservedInstanceOfferingsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstanceOfferingsOutput">DescribeReservedInstanceOfferingsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DescribeReservedInstances(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesInput">DescribeReservedInstancesInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesOutput">DescribeReservedInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReservedInstancesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesInput">DescribeReservedInstancesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesOutput">DescribeReservedInstancesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DescribeReservedInstancesRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesInput">DescribeReservedInstancesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesOutput">DescribeReservedInstancesOutput</a>)
+
+    DescribeReservedInstancesPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesInput">DescribeReservedInstancesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesOutput">DescribeReservedInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    DescribeReservedInstancesPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesInput">DescribeReservedInstancesInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DescribeReservedInstancesOutput">DescribeReservedInstancesOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    DissociatePackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageInput">DissociatePackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageOutput">DissociatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DissociatePackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageInput">DissociatePackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageOutput">DissociatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    DissociatePackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageInput">DissociatePackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#DissociatePackageOutput">DissociatePackageOutput</a>)
+
+    GetCompatibleVersions(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsInput">GetCompatibleVersionsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsOutput">GetCompatibleVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCompatibleVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsInput">GetCompatibleVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsOutput">GetCompatibleVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetCompatibleVersionsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsInput">GetCompatibleVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetCompatibleVersionsOutput">GetCompatibleVersionsOutput</a>)
+
+    GetPackageVersionHistory(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryInput">GetPackageVersionHistoryInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryOutput">GetPackageVersionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionHistoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryInput">GetPackageVersionHistoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryOutput">GetPackageVersionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetPackageVersionHistoryRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryInput">GetPackageVersionHistoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryOutput">GetPackageVersionHistoryOutput</a>)
+
+    GetPackageVersionHistoryPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryInput">GetPackageVersionHistoryInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryOutput">GetPackageVersionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetPackageVersionHistoryPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryInput">GetPackageVersionHistoryInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetPackageVersionHistoryOutput">GetPackageVersionHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetUpgradeHistory(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryInput">GetUpgradeHistoryInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryOutput">GetUpgradeHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUpgradeHistoryWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryInput">GetUpgradeHistoryInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryOutput">GetUpgradeHistoryOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUpgradeHistoryRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryInput">GetUpgradeHistoryInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryOutput">GetUpgradeHistoryOutput</a>)
+
+    GetUpgradeHistoryPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryInput">GetUpgradeHistoryInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryOutput">GetUpgradeHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    GetUpgradeHistoryPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryInput">GetUpgradeHistoryInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeHistoryOutput">GetUpgradeHistoryOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    GetUpgradeStatus(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusInput">GetUpgradeStatusInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusOutput">GetUpgradeStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUpgradeStatusWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusInput">GetUpgradeStatusInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusOutput">GetUpgradeStatusOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    GetUpgradeStatusRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusInput">GetUpgradeStatusInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#GetUpgradeStatusOutput">GetUpgradeStatusOutput</a>)
+
+    ListDomainNames(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesInput">ListDomainNamesInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesOutput">ListDomainNamesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainNamesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesInput">ListDomainNamesInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesOutput">ListDomainNamesOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainNamesRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesInput">ListDomainNamesInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainNamesOutput">ListDomainNamesOutput</a>)
+
+    ListDomainsForPackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageInput">ListDomainsForPackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageOutput">ListDomainsForPackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsForPackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageInput">ListDomainsForPackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageOutput">ListDomainsForPackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListDomainsForPackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageInput">ListDomainsForPackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageOutput">ListDomainsForPackageOutput</a>)
+
+    ListDomainsForPackagePages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageInput">ListDomainsForPackageInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageOutput">ListDomainsForPackageOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListDomainsForPackagePagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageInput">ListDomainsForPackageInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListDomainsForPackageOutput">ListDomainsForPackageOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListInstanceTypeDetails(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsInput">ListInstanceTypeDetailsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsOutput">ListInstanceTypeDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInstanceTypeDetailsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsInput">ListInstanceTypeDetailsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsOutput">ListInstanceTypeDetailsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListInstanceTypeDetailsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsInput">ListInstanceTypeDetailsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsOutput">ListInstanceTypeDetailsOutput</a>)
+
+    ListInstanceTypeDetailsPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsInput">ListInstanceTypeDetailsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsOutput">ListInstanceTypeDetailsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListInstanceTypeDetailsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsInput">ListInstanceTypeDetailsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListInstanceTypeDetailsOutput">ListInstanceTypeDetailsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListPackagesForDomain(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainInput">ListPackagesForDomainInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainOutput">ListPackagesForDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackagesForDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainInput">ListPackagesForDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainOutput">ListPackagesForDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListPackagesForDomainRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainInput">ListPackagesForDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainOutput">ListPackagesForDomainOutput</a>)
+
+    ListPackagesForDomainPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainInput">ListPackagesForDomainInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainOutput">ListPackagesForDomainOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListPackagesForDomainPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainInput">ListPackagesForDomainInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListPackagesForDomainOutput">ListPackagesForDomainOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    ListTags(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListTagsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsInput">ListTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListTagsOutput">ListTagsOutput</a>)
+
+    ListVersions(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsInput">ListVersionsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsOutput">ListVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVersionsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsInput">ListVersionsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsOutput">ListVersionsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    ListVersionsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsInput">ListVersionsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsOutput">ListVersionsOutput</a>)
+
+    ListVersionsPages(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsInput">ListVersionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsOutput">ListVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+    ListVersionsPagesWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsInput">ListVersionsInput</a>, func(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#ListVersionsOutput">ListVersionsOutput</a>, <a href="../../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../../builtin/index.html#bool">bool</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) <a href="../../../../../../builtin/index.html#error">error</a>
+
+    PurchaseReservedInstanceOffering(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingInput">PurchaseReservedInstanceOfferingInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingOutput">PurchaseReservedInstanceOfferingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PurchaseReservedInstanceOfferingWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingInput">PurchaseReservedInstanceOfferingInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingOutput">PurchaseReservedInstanceOfferingOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    PurchaseReservedInstanceOfferingRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingInput">PurchaseReservedInstanceOfferingInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#PurchaseReservedInstanceOfferingOutput">PurchaseReservedInstanceOfferingOutput</a>)
+
+    RejectInboundConnection(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionInput">RejectInboundConnectionInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionOutput">RejectInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RejectInboundConnectionWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionInput">RejectInboundConnectionInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionOutput">RejectInboundConnectionOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RejectInboundConnectionRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionInput">RejectInboundConnectionInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#RejectInboundConnectionOutput">RejectInboundConnectionOutput</a>)
+
+    RemoveTags(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    RemoveTagsRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsInput">RemoveTagsInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#RemoveTagsOutput">RemoveTagsOutput</a>)
+
+    StartServiceSoftwareUpdate(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateInput">StartServiceSoftwareUpdateInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateOutput">StartServiceSoftwareUpdateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartServiceSoftwareUpdateWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateInput">StartServiceSoftwareUpdateInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateOutput">StartServiceSoftwareUpdateOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    StartServiceSoftwareUpdateRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateInput">StartServiceSoftwareUpdateInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#StartServiceSoftwareUpdateOutput">StartServiceSoftwareUpdateOutput</a>)
+
+    UpdateDomainConfig(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigInput">UpdateDomainConfigInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigOutput">UpdateDomainConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDomainConfigWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigInput">UpdateDomainConfigInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigOutput">UpdateDomainConfigOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdateDomainConfigRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigInput">UpdateDomainConfigInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdateDomainConfigOutput">UpdateDomainConfigOutput</a>)
+
+    UpdatePackage(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageInput">UpdatePackageInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageOutput">UpdatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePackageWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageInput">UpdatePackageInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageOutput">UpdatePackageOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpdatePackageRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageInput">UpdatePackageInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpdatePackageOutput">UpdatePackageOutput</a>)
+
+    UpgradeDomain(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainInput">UpgradeDomainInput</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainOutput">UpgradeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpgradeDomainWithContext(<a href="../../../aws/index.html">aws</a>.<a href="../../../aws/index.html#Context">Context</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainInput">UpgradeDomainInput</a>, ...<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Option">Option</a>) (*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainOutput">UpgradeDomainOutput</a>, <a href="../../../../../../builtin/index.html#error">error</a>)
+    UpgradeDomainRequest(*<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainInput">UpgradeDomainInput</a>) (*<a href="../../../aws/request/index.html">request</a>.<a href="../../../aws/request/index.html#Request">Request</a>, *<a href="../index.html">opensearchservice</a>.<a href="../index.html#UpgradeDomainOutput">UpgradeDomainOutput</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

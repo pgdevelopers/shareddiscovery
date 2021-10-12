@@ -1,0 +1,2538 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>personalizeevents - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package personalizeevents
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/personalizeevents&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package personalizeevents provides the client and types for making API
+requests to Amazon Personalize Events.
+</p>
+<p>
+Amazon Personalize can consume real-time user event data, such as stream
+or click data, and use it for model training either alone or combined with
+historical data. For more information see Recording Events (<a href="https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html">https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html</a>).
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22</a> for more information on this service.
+</p>
+<p>
+See personalizeevents package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/personalizeevents/">https://docs.aws.amazon.com/sdk-for-go/api/service/personalizeevents/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon Personalize Events with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon Personalize Events client PersonalizeEvents for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/personalizeevents/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/personalizeevents/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Event">type Event</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Event.GoString">func (s Event) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetEventId">func (s *Event) SetEventId(v string) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetEventType">func (s *Event) SetEventType(v string) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetEventValue">func (s *Event) SetEventValue(v float64) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetImpression">func (s *Event) SetImpression(v []*string) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetItemId">func (s *Event) SetItemId(v string) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetProperties">func (s *Event) SetProperties(v aws.JSONValue) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetRecommendationId">func (s *Event) SetRecommendationId(v string) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.SetSentAt">func (s *Event) SetSentAt(v time.Time) *Event</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.String">func (s Event) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Event.Validate">func (s *Event) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InvalidInputException">type InvalidInputException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Code">func (s *InvalidInputException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Error">func (s *InvalidInputException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.GoString">func (s InvalidInputException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.Message">func (s *InvalidInputException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.OrigErr">func (s *InvalidInputException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.RequestID">func (s *InvalidInputException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.StatusCode">func (s *InvalidInputException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InvalidInputException.String">func (s InvalidInputException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Item">type Item</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Item.GoString">func (s Item) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Item.SetItemId">func (s *Item) SetItemId(v string) *Item</a></dd>
+				
+					
+					<dd>    <a href="index.html#Item.SetProperties">func (s *Item) SetProperties(v aws.JSONValue) *Item</a></dd>
+				
+					
+					<dd>    <a href="index.html#Item.String">func (s Item) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#Item.Validate">func (s *Item) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PersonalizeEvents">type PersonalizeEvents</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *PersonalizeEvents</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutEvents">func (c *PersonalizeEvents) PutEvents(input *PutEventsInput) (*PutEventsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutEventsRequest">func (c *PersonalizeEvents) PutEventsRequest(input *PutEventsInput) (req *request.Request, output *PutEventsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutEventsWithContext">func (c *PersonalizeEvents) PutEventsWithContext(ctx aws.Context, input *PutEventsInput, opts ...request.Option) (*PutEventsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutItems">func (c *PersonalizeEvents) PutItems(input *PutItemsInput) (*PutItemsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutItemsRequest">func (c *PersonalizeEvents) PutItemsRequest(input *PutItemsInput) (req *request.Request, output *PutItemsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutItemsWithContext">func (c *PersonalizeEvents) PutItemsWithContext(ctx aws.Context, input *PutItemsInput, opts ...request.Option) (*PutItemsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutUsers">func (c *PersonalizeEvents) PutUsers(input *PutUsersInput) (*PutUsersOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutUsersRequest">func (c *PersonalizeEvents) PutUsersRequest(input *PutUsersInput) (req *request.Request, output *PutUsersOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#PersonalizeEvents.PutUsersWithContext">func (c *PersonalizeEvents) PutUsersWithContext(ctx aws.Context, input *PutUsersInput, opts ...request.Option) (*PutUsersOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutEventsInput">type PutEventsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.GoString">func (s PutEventsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.SetEventList">func (s *PutEventsInput) SetEventList(v []*Event) *PutEventsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.SetSessionId">func (s *PutEventsInput) SetSessionId(v string) *PutEventsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.SetTrackingId">func (s *PutEventsInput) SetTrackingId(v string) *PutEventsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.SetUserId">func (s *PutEventsInput) SetUserId(v string) *PutEventsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.String">func (s PutEventsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsInput.Validate">func (s *PutEventsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutEventsOutput">type PutEventsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutEventsOutput.GoString">func (s PutEventsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutEventsOutput.String">func (s PutEventsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutItemsInput">type PutItemsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutItemsInput.GoString">func (s PutItemsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutItemsInput.SetDatasetArn">func (s *PutItemsInput) SetDatasetArn(v string) *PutItemsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutItemsInput.SetItems">func (s *PutItemsInput) SetItems(v []*Item) *PutItemsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutItemsInput.String">func (s PutItemsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutItemsInput.Validate">func (s *PutItemsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutItemsOutput">type PutItemsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutItemsOutput.GoString">func (s PutItemsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutItemsOutput.String">func (s PutItemsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutUsersInput">type PutUsersInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutUsersInput.GoString">func (s PutUsersInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutUsersInput.SetDatasetArn">func (s *PutUsersInput) SetDatasetArn(v string) *PutUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutUsersInput.SetUsers">func (s *PutUsersInput) SetUsers(v []*User) *PutUsersInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutUsersInput.String">func (s PutUsersInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutUsersInput.Validate">func (s *PutUsersInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PutUsersOutput">type PutUsersOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#PutUsersOutput.GoString">func (s PutUsersOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#PutUsersOutput.String">func (s PutUsersOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceInUseException">type ResourceInUseException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Code">func (s *ResourceInUseException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Error">func (s *ResourceInUseException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.GoString">func (s ResourceInUseException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.Message">func (s *ResourceInUseException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.OrigErr">func (s *ResourceInUseException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.RequestID">func (s *ResourceInUseException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.StatusCode">func (s *ResourceInUseException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceInUseException.String">func (s ResourceInUseException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#User">type User</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#User.GoString">func (s User) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.SetProperties">func (s *User) SetProperties(v aws.JSONValue) *User</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.SetUserId">func (s *User) SetUserId(v string) *User</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.String">func (s User) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#User.Validate">func (s *User) Validate() error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeInvalidInputException for service response error code</span>
+    <span class="comment">// &#34;InvalidInputException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Provide a valid value for the field or parameter.</span>
+    <span id="ErrCodeInvalidInputException">ErrCodeInvalidInputException</span> = &#34;InvalidInputException&#34;
+
+    <span class="comment">// ErrCodeResourceInUseException for service response error code</span>
+    <span class="comment">// &#34;ResourceInUseException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The specified resource is in use.</span>
+    <span id="ErrCodeResourceInUseException">ErrCodeResourceInUseException</span> = &#34;ResourceInUseException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Could not find the specified resource.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;Personalize Events&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;personalize-events&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;Personalize Events&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Event">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=9998:12254#L262">Event</a>
+				<a class="permalink" href="index.html#Event">¶</a>
+				
+				
+			</h2>
+			<p>
+Represents user interaction event information sent using the PutEvents API.
+</p>
+
+			<pre>type Event struct {
+
+    <span class="comment">// An ID associated with the event. If an event ID is not provided, Amazon Personalize</span>
+    <span class="comment">// generates a unique ID for the event. An event ID is not used as an input</span>
+    <span class="comment">// to the model. Amazon Personalize uses the event ID to distinquish unique</span>
+    <span class="comment">// events. Any subsequent events after the first with the same event ID are</span>
+    <span class="comment">// not used in model training.</span>
+<span id="Event.EventId"></span>    EventId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;eventId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The type of event, such as click or download. This property corresponds to</span>
+    <span class="comment">// the EVENT_TYPE field of your Interactions schema and depends on the types</span>
+    <span class="comment">// of events you are tracking.</span>
+    <span class="comment">//</span>
+<span id="Event.EventType"></span>    <span class="comment">// EventType is a required field</span>
+    EventType *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;eventType&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The event value that corresponds to the EVENT_VALUE field of the Interactions</span>
+    <span class="comment">// schema.</span>
+<span id="Event.EventValue"></span>    EventValue *<a href="../../../../../builtin/index.html#float64">float64</a> `locationName:&#34;eventValue&#34; type:&#34;float&#34;`
+
+    <span class="comment">// A list of item IDs that represents the sequence of items you have shown the</span>
+    <span class="comment">// user. For example, [&#34;itemId1&#34;, &#34;itemId2&#34;, &#34;itemId3&#34;].</span>
+<span id="Event.Impression"></span>    Impression []*<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;impression&#34; min:&#34;1&#34; type:&#34;list&#34;`
+
+    <span class="comment">// The item ID key that corresponds to the ITEM_ID field of the Interactions</span>
+    <span class="comment">// schema.</span>
+<span id="Event.ItemId"></span>    ItemId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;itemId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// A string map of event-specific data that you might choose to record. For</span>
+    <span class="comment">// example, if a user rates a movie on your site, other than movie ID (itemId)</span>
+    <span class="comment">// and rating (eventValue) , you might also send the number of movie ratings</span>
+    <span class="comment">// made by the user.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Each item in the map consists of a key-value pair. For example,</span>
+    <span class="comment">//</span>
+    <span class="comment">// {&#34;numberOfRatings&#34;: &#34;12&#34;}</span>
+    <span class="comment">//</span>
+    <span class="comment">// The keys use camel case names that match the fields in the Interactions schema.</span>
+    <span class="comment">// In the above example, the numberOfRatings would match the &#39;NUMBER_OF_RATINGS&#39;</span>
+    <span class="comment">// field defined in the Interactions schema.</span>
+<span id="Event.Properties"></span>    Properties <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a> `locationName:&#34;properties&#34; type:&#34;jsonvalue&#34;`
+
+    <span class="comment">// The ID of the recommendation.</span>
+<span id="Event.RecommendationId"></span>    RecommendationId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;recommendationId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The timestamp (in Unix time) on the client side when the event occurred.</span>
+    <span class="comment">//</span>
+<span id="Event.SentAt"></span>    <span class="comment">// SentAt is a required field</span>
+    SentAt *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `locationName:&#34;sentAt&#34; type:&#34;timestamp&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Event.GoString">func (Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=12818:12850#L328">GoString</a>
+					<a class="permalink" href="index.html#Event.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Event">Event</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetEventId">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=13927:13970#L364">SetEventId</a>
+					<a class="permalink" href="index.html#Event.SetEventId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetEventId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetEventId sets the EventId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetEventType">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14052:14097#L370">SetEventType</a>
+					<a class="permalink" href="index.html#Event.SetEventType">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetEventType(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetEventType sets the EventType field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetEventValue">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14183:14230#L376">SetEventValue</a>
+					<a class="permalink" href="index.html#Event.SetEventValue">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetEventValue(v <a href="../../../../../builtin/index.html#float64">float64</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetEventValue sets the EventValue field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetImpression">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14317:14366#L382">SetImpression</a>
+					<a class="permalink" href="index.html#Event.SetImpression">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetImpression(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetImpression sets the Impression field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetItemId">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14444:14486#L388">SetItemId</a>
+					<a class="permalink" href="index.html#Event.SetItemId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetItemId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetItemId sets the ItemId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetProperties">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14569:14622#L394">SetProperties</a>
+					<a class="permalink" href="index.html#Event.SetProperties">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetProperties(v <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetProperties sets the Properties field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetRecommendationId">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14720:14772#L400">SetRecommendationId</a>
+					<a class="permalink" href="index.html#Event.SetRecommendationId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetRecommendationId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetRecommendationId sets the RecommendationId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.SetSentAt">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14857:14902#L406">SetSentAt</a>
+					<a class="permalink" href="index.html#Event.SetSentAt">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) SetSentAt(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#Event">Event</a></pre>
+				<p>
+SetSentAt sets the SentAt field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.String">func (Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=12504:12534#L319">String</a>
+					<a class="permalink" href="index.html#Event.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Event">Event</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Event.Validate">func (*Event) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=12951:12983#L333">Validate</a>
+					<a class="permalink" href="index.html#Event.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Event">Event</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InvalidInputException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=14986:15199#L412">InvalidInputException</a>
+				<a class="permalink" href="index.html#InvalidInputException">¶</a>
+				
+				
+			</h2>
+			<p>
+Provide a valid value for the field or parameter.
+</p>
+
+			<pre>type InvalidInputException struct {
+<span id="InvalidInputException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InvalidInputException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InvalidInputException.Code">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16022:16067#L444">Code</a>
+					<a class="permalink" href="index.html#InvalidInputException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.Error">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16392:16438#L461">Error</a>
+					<a class="permalink" href="index.html#InvalidInputException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.GoString">func (InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=15779:15827#L433">GoString</a>
+					<a class="permalink" href="index.html#InvalidInputException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidInputException">InvalidInputException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.Message">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16149:16197#L449">Message</a>
+					<a class="permalink" href="index.html#InvalidInputException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.OrigErr">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16327:16374#L457">OrigErr</a>
+					<a class="permalink" href="index.html#InvalidInputException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.RequestID">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16730:16780#L471">RequestID</a>
+					<a class="permalink" href="index.html#InvalidInputException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.StatusCode">func (*InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=16575:16623#L466">StatusCode</a>
+					<a class="permalink" href="index.html#InvalidInputException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InvalidInputException">InvalidInputException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InvalidInputException.String">func (InvalidInputException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=15449:15495#L424">String</a>
+					<a class="permalink" href="index.html#InvalidInputException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InvalidInputException">InvalidInputException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Item">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=17029:17831#L477">Item</a>
+				<a class="permalink" href="index.html#Item">¶</a>
+				
+				
+			</h2>
+			<p>
+Represents item metadata added to an Items dataset using the PutItems API.
+For more information see Importing Items Incrementally (<a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html</a>).
+</p>
+
+			<pre>type Item struct {
+
+    <span class="comment">// The ID associated with the item.</span>
+    <span class="comment">//</span>
+<span id="Item.ItemId"></span>    <span class="comment">// ItemId is a required field</span>
+    ItemId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;itemId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A string map of item-specific metadata. Each element in the map consists</span>
+    <span class="comment">// of a key-value pair. For example, {&#34;numberOfRatings&#34;: &#34;12&#34;}.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The keys use camel case names that match the fields in the schema for the</span>
+    <span class="comment">// Items dataset. In the previous example, the numberOfRatings matches the &#39;NUMBER_OF_RATINGS&#39;</span>
+    <span class="comment">// field defined in the Items schema. For categorical string data, to include</span>
+    <span class="comment">// multiple categories for a single item, separate each category with a pipe</span>
+    <span class="comment">// separator (|). For example, \&#34;Horror|Action\&#34;.</span>
+<span id="Item.Properties"></span>    Properties <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a> `locationName:&#34;properties&#34; type:&#34;jsonvalue&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Item.GoString">func (Item) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=18394:18425#L510">GoString</a>
+					<a class="permalink" href="index.html#Item.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Item">Item</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Item.SetItemId">func (*Item) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=18927:18967#L531">SetItemId</a>
+					<a class="permalink" href="index.html#Item.SetItemId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Item">Item</a>) SetItemId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#Item">Item</a></pre>
+				<p>
+SetItemId sets the ItemId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Item.SetProperties">func (*Item) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=19050:19101#L537">SetProperties</a>
+					<a class="permalink" href="index.html#Item.SetProperties">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Item">Item</a>) SetProperties(v <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a>) *<a href="index.html#Item">Item</a></pre>
+				<p>
+SetProperties sets the Properties field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Item.String">func (Item) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=18081:18110#L501">String</a>
+					<a class="permalink" href="index.html#Item.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#Item">Item</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Item.Validate">func (*Item) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=18526:18557#L515">Validate</a>
+					<a class="permalink" href="index.html#Item.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#Item">Item</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PersonalizeEvents">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/service.go?s=733:782#L11">PersonalizeEvents</a>
+				<a class="permalink" href="index.html#PersonalizeEvents">¶</a>
+				
+				
+			</h2>
+			<p>
+PersonalizeEvents provides the API operation methods for making requests to
+Amazon Personalize Events. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+PersonalizeEvents methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type PersonalizeEvents struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/service.go?s=1788:1861#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a></pre>
+				<p>
+New creates a new instance of the PersonalizeEvents client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a PersonalizeEvents client from just a session.
+svc := personalizeevents.New(mySession)
+
+// Create a PersonalizeEvents client with additional configuration
+svc := personalizeevents.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="PersonalizeEvents.PutEvents">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=2560:2646#L66">PutEvents</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutEvents">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutEvents(input *<a href="index.html#PutEventsInput">PutEventsInput</a>) (*<a href="index.html#PutEventsOutput">PutEventsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutEvents API operation for Amazon Personalize Events.
+</p>
+<p>
+Records user interaction event data. For more information see Recording Events
+(<a href="https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html">https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html</a>).
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Personalize Events&#39;s
+API operation PutEvents for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidInputException
+Provide a valid value for the field or parameter.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutEvents">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutEvents</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutEventsRequest">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=1366:1481#L32">PutEventsRequest</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutEventsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutEventsRequest(input *<a href="index.html#PutEventsInput">PutEventsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutEventsOutput">PutEventsOutput</a>)</pre>
+				<p>
+PutEventsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutEvents operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutEvents for more information on using the PutEvents
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutEventsRequest method.
+req, resp := client.PutEventsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutEvents">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutEvents</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutEventsWithContext">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=3185:3323#L80">PutEventsWithContext</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutEventsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutEventsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutEventsInput">PutEventsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutEventsOutput">PutEventsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutEventsWithContext is the same as PutEvents with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutEvents for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutItems">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=5811:5894#L153">PutItems</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutItems">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutItems(input *<a href="index.html#PutItemsInput">PutItemsInput</a>) (*<a href="index.html#PutItemsOutput">PutItemsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutItems API operation for Amazon Personalize Events.
+</p>
+<p>
+Adds one or more items to an Items dataset. For more information see Importing
+Items Incrementally (<a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html</a>).
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Personalize Events&#39;s
+API operation PutItems for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidInputException
+Provide a valid value for the field or parameter.
+
+* ResourceNotFoundException
+Could not find the specified resource.
+
+* ResourceInUseException
+The specified resource is in use.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutItems">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutItems</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutItemsRequest">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=4456:4568#L113">PutItemsRequest</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutItemsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutItemsRequest(input *<a href="index.html#PutItemsInput">PutItemsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutItemsOutput">PutItemsOutput</a>)</pre>
+				<p>
+PutItemsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutItems operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutItems for more information on using the PutItems
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutItemsRequest method.
+req, resp := client.PutItemsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutItems">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutItems</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutItemsWithContext">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=6429:6564#L167">PutItemsWithContext</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutItemsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutItemsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutItemsInput">PutItemsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutItemsOutput">PutItemsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutItemsWithContext is the same as PutItems with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutItems for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutUsers">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=9050:9133#L240">PutUsers</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutUsers">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutUsers(input *<a href="index.html#PutUsersInput">PutUsersInput</a>) (*<a href="index.html#PutUsersOutput">PutUsersOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutUsers API operation for Amazon Personalize Events.
+</p>
+<p>
+Adds one or more users to a Users dataset. For more information see Importing
+Users Incrementally (<a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html</a>).
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Personalize Events&#39;s
+API operation PutUsers for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* InvalidInputException
+Provide a valid value for the field or parameter.
+
+* ResourceNotFoundException
+Could not find the specified resource.
+
+* ResourceInUseException
+The specified resource is in use.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutUsers">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutUsers</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutUsersRequest">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=7696:7808#L200">PutUsersRequest</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutUsersRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutUsersRequest(input *<a href="index.html#PutUsersInput">PutUsersInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#PutUsersOutput">PutUsersOutput</a>)</pre>
+				<p>
+PutUsersRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the PutUsers operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See PutUsers for more information on using the PutUsers
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the PutUsersRequest method.
+req, resp := client.PutUsersRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutUsers">https://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/PutUsers</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PersonalizeEvents.PutUsersWithContext">func (*PersonalizeEvents) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=9668:9803#L254">PutUsersWithContext</a>
+					<a class="permalink" href="index.html#PersonalizeEvents.PutUsersWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#PersonalizeEvents">PersonalizeEvents</a>) PutUsersWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#PutUsersInput">PutUsersInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#PutUsersOutput">PutUsersOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+PutUsersWithContext is the same as PutUsers with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See PutUsers for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutEventsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=19135:20277#L542">PutEventsInput</a>
+				<a class="permalink" href="index.html#PutEventsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutEventsInput struct {
+
+    <span class="comment">// A list of event data from the session.</span>
+    <span class="comment">//</span>
+<span id="PutEventsInput.EventList"></span>    <span class="comment">// EventList is a required field</span>
+    EventList []*<a href="index.html#Event">Event</a> `locationName:&#34;eventList&#34; min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The session ID associated with the user&#39;s visit. Your application generates</span>
+    <span class="comment">// the sessionId when a user first visits your website or uses your application.</span>
+    <span class="comment">// Amazon Personalize uses the sessionId to associate events with the user before</span>
+    <span class="comment">// they log in. For more information, see Recording Events (https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html).</span>
+    <span class="comment">//</span>
+<span id="PutEventsInput.SessionId"></span>    <span class="comment">// SessionId is a required field</span>
+    SessionId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;sessionId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The tracking ID for the event. The ID is generated by a call to the CreateEventTracker</span>
+    <span class="comment">// (https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html)</span>
+    <span class="comment">// API.</span>
+    <span class="comment">//</span>
+<span id="PutEventsInput.TrackingId"></span>    <span class="comment">// TrackingId is a required field</span>
+    TrackingId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;trackingId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The user associated with the event.</span>
+<span id="PutEventsInput.UserId"></span>    UserId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;userId&#34; min:&#34;1&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutEventsInput.GoString">func (PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=20850:20891#L583">GoString</a>
+					<a class="permalink" href="index.html#PutEventsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutEventsInput">PutEventsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.SetEventList">func (*PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=22202:22267#L629">SetEventList</a>
+					<a class="permalink" href="index.html#PutEventsInput.SetEventList">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutEventsInput">PutEventsInput</a>) SetEventList(v []*<a href="index.html#Event">Event</a>) *<a href="index.html#PutEventsInput">PutEventsInput</a></pre>
+				<p>
+SetEventList sets the EventList field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.SetSessionId">func (*PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=22350:22413#L635">SetSessionId</a>
+					<a class="permalink" href="index.html#PutEventsInput.SetSessionId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutEventsInput">PutEventsInput</a>) SetSessionId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutEventsInput">PutEventsInput</a></pre>
+				<p>
+SetSessionId sets the SessionId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.SetTrackingId">func (*PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=22499:22563#L641">SetTrackingId</a>
+					<a class="permalink" href="index.html#PutEventsInput.SetTrackingId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutEventsInput">PutEventsInput</a>) SetTrackingId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutEventsInput">PutEventsInput</a></pre>
+				<p>
+SetTrackingId sets the TrackingId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.SetUserId">func (*PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=22642:22702#L647">SetUserId</a>
+					<a class="permalink" href="index.html#PutEventsInput.SetUserId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutEventsInput">PutEventsInput</a>) SetUserId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutEventsInput">PutEventsInput</a></pre>
+				<p>
+SetUserId sets the UserId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.String">func (PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=20527:20566#L574">String</a>
+					<a class="permalink" href="index.html#PutEventsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutEventsInput">PutEventsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsInput.Validate">func (*PutEventsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=20992:21033#L588">Validate</a>
+					<a class="permalink" href="index.html#PutEventsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutEventsInput">PutEventsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutEventsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=22733:22795#L652">PutEventsOutput</a>
+				<a class="permalink" href="index.html#PutEventsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutEventsOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutEventsOutput.GoString">func (PutEventsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=23369:23411#L670">GoString</a>
+					<a class="permalink" href="index.html#PutEventsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutEventsOutput">PutEventsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutEventsOutput.String">func (PutEventsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=23045:23085#L661">String</a>
+					<a class="permalink" href="index.html#PutEventsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutEventsOutput">PutEventsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutItemsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=23436:23845#L674">PutItemsInput</a>
+				<a class="permalink" href="index.html#PutItemsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutItemsInput struct {
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the Items dataset you are adding the item</span>
+    <span class="comment">// or items to.</span>
+    <span class="comment">//</span>
+<span id="PutItemsInput.DatasetArn"></span>    <span class="comment">// DatasetArn is a required field</span>
+    DatasetArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;datasetArn&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A list of item data.</span>
+    <span class="comment">//</span>
+<span id="PutItemsInput.Items"></span>    <span class="comment">// Items is a required field</span>
+    Items []*<a href="index.html#Item">Item</a> `locationName:&#34;items&#34; min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutItemsInput.GoString">func (PutItemsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=24417:24457#L703">GoString</a>
+					<a class="permalink" href="index.html#PutItemsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutItemsInput">PutItemsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutItemsInput.SetDatasetArn">func (*PutItemsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=25304:25366#L737">SetDatasetArn</a>
+					<a class="permalink" href="index.html#PutItemsInput.SetDatasetArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutItemsInput">PutItemsInput</a>) SetDatasetArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutItemsInput">PutItemsInput</a></pre>
+				<p>
+SetDatasetArn sets the DatasetArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutItemsInput.SetItems">func (*PutItemsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=25443:25501#L743">SetItems</a>
+					<a class="permalink" href="index.html#PutItemsInput.SetItems">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutItemsInput">PutItemsInput</a>) SetItems(v []*<a href="index.html#Item">Item</a>) *<a href="index.html#PutItemsInput">PutItemsInput</a></pre>
+				<p>
+SetItems sets the Items field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutItemsInput.String">func (PutItemsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=24095:24133#L694">String</a>
+					<a class="permalink" href="index.html#PutItemsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutItemsInput">PutItemsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutItemsInput.Validate">func (*PutItemsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=24558:24598#L708">Validate</a>
+					<a class="permalink" href="index.html#PutItemsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutItemsInput">PutItemsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutItemsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=25530:25591#L748">PutItemsOutput</a>
+				<a class="permalink" href="index.html#PutItemsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutItemsOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutItemsOutput.GoString">func (PutItemsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=26164:26205#L766">GoString</a>
+					<a class="permalink" href="index.html#PutItemsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutItemsOutput">PutItemsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutItemsOutput.String">func (PutItemsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=25841:25880#L757">String</a>
+					<a class="permalink" href="index.html#PutItemsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutItemsOutput">PutItemsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutUsersInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=26230:26639#L770">PutUsersInput</a>
+				<a class="permalink" href="index.html#PutUsersInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutUsersInput struct {
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the Users dataset you are adding the user</span>
+    <span class="comment">// or users to.</span>
+    <span class="comment">//</span>
+<span id="PutUsersInput.DatasetArn"></span>    <span class="comment">// DatasetArn is a required field</span>
+    DatasetArn *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;datasetArn&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A list of user data.</span>
+    <span class="comment">//</span>
+<span id="PutUsersInput.Users"></span>    <span class="comment">// Users is a required field</span>
+    Users []*<a href="index.html#User">User</a> `locationName:&#34;users&#34; min:&#34;1&#34; type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutUsersInput.GoString">func (PutUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=27211:27251#L799">GoString</a>
+					<a class="permalink" href="index.html#PutUsersInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutUsersInput">PutUsersInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutUsersInput.SetDatasetArn">func (*PutUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=28098:28160#L833">SetDatasetArn</a>
+					<a class="permalink" href="index.html#PutUsersInput.SetDatasetArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutUsersInput">PutUsersInput</a>) SetDatasetArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#PutUsersInput">PutUsersInput</a></pre>
+				<p>
+SetDatasetArn sets the DatasetArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutUsersInput.SetUsers">func (*PutUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=28237:28295#L839">SetUsers</a>
+					<a class="permalink" href="index.html#PutUsersInput.SetUsers">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutUsersInput">PutUsersInput</a>) SetUsers(v []*<a href="index.html#User">User</a>) *<a href="index.html#PutUsersInput">PutUsersInput</a></pre>
+				<p>
+SetUsers sets the Users field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutUsersInput.String">func (PutUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=26889:26927#L790">String</a>
+					<a class="permalink" href="index.html#PutUsersInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutUsersInput">PutUsersInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutUsersInput.Validate">func (*PutUsersInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=27352:27392#L804">Validate</a>
+					<a class="permalink" href="index.html#PutUsersInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#PutUsersInput">PutUsersInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PutUsersOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=28324:28385#L844">PutUsersOutput</a>
+				<a class="permalink" href="index.html#PutUsersOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type PutUsersOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PutUsersOutput.GoString">func (PutUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=28958:28999#L862">GoString</a>
+					<a class="permalink" href="index.html#PutUsersOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutUsersOutput">PutUsersOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PutUsersOutput.String">func (PutUsersOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=28635:28674#L853">String</a>
+					<a class="permalink" href="index.html#PutUsersOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#PutUsersOutput">PutUsersOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceInUseException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=29061:29275#L867">ResourceInUseException</a>
+				<a class="permalink" href="index.html#ResourceInUseException">¶</a>
+				
+				
+			</h2>
+			<p>
+The specified resource is in use.
+</p>
+
+			<pre>type ResourceInUseException struct {
+<span id="ResourceInUseException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceInUseException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceInUseException.Code">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30102:30148#L899">Code</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.Error">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30476:30523#L916">Error</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.GoString">func (ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=29856:29905#L888">GoString</a>
+					<a class="permalink" href="index.html#ResourceInUseException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceInUseException">ResourceInUseException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.Message">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30231:30280#L904">Message</a>
+					<a class="permalink" href="index.html#ResourceInUseException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.OrigErr">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30410:30458#L912">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceInUseException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.RequestID">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30816:30867#L926">RequestID</a>
+					<a class="permalink" href="index.html#ResourceInUseException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.StatusCode">func (*ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30660:30709#L921">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceInUseException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceInUseException">ResourceInUseException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceInUseException.String">func (ResourceInUseException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=29525:29572#L879">String</a>
+					<a class="permalink" href="index.html#ResourceInUseException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceInUseException">ResourceInUseException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=30948:31165#L931">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+Could not find the specified resource.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32004:32053#L963">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32390:32440#L980">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=31749:31801#L952">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32139:32191#L968">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32321:32372#L976">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32736:32790#L990">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=32577:32629#L985">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=31415:31465#L943">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="User">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=33038:33869#L996">User</a>
+				<a class="permalink" href="index.html#User">¶</a>
+				
+				
+			</h2>
+			<p>
+Represents user metadata added to a Users dataset using the PutUsers API.
+For more information see Importing Users Incrementally (<a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html</a>).
+</p>
+
+			<pre>type User struct {
+
+    <span class="comment">// A string map of user-specific metadata. Each element in the map consists</span>
+    <span class="comment">// of a key-value pair. For example, {&#34;numberOfVideosWatched&#34;: &#34;45&#34;}.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The keys use camel case names that match the fields in the schema for the</span>
+    <span class="comment">// Users dataset. In the previous example, the numberOfVideosWatched matches</span>
+    <span class="comment">// the &#39;NUMBER_OF_VIDEOS_WATCHED&#39; field defined in the Users schema. For categorical</span>
+    <span class="comment">// string data, to include multiple categories for a single user, separate each</span>
+    <span class="comment">// category with a pipe separator (|). For example, \&#34;Member|Frequent shopper\&#34;.</span>
+<span id="User.Properties"></span>    Properties <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a> `locationName:&#34;properties&#34; type:&#34;jsonvalue&#34;`
+
+    <span class="comment">// The ID associated with the user.</span>
+    <span class="comment">//</span>
+<span id="User.UserId"></span>    <span class="comment">// UserId is a required field</span>
+    UserId *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;userId&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="User.GoString">func (User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=34432:34463#L1029">GoString</a>
+					<a class="permalink" href="index.html#User.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#User">User</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.SetProperties">func (*User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=34973:35024#L1050">SetProperties</a>
+					<a class="permalink" href="index.html#User.SetProperties">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#User">User</a>) SetProperties(v <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#JSONValue">JSONValue</a>) *<a href="index.html#User">User</a></pre>
+				<p>
+SetProperties sets the Properties field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.SetUserId">func (*User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=35102:35142#L1056">SetUserId</a>
+					<a class="permalink" href="index.html#User.SetUserId">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#User">User</a>) SetUserId(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#User">User</a></pre>
+				<p>
+SetUserId sets the UserId field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.String">func (User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=34119:34148#L1020">String</a>
+					<a class="permalink" href="index.html#User.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#User">User</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="User.Validate">func (*User) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/personalizeevents/api.go?s=34564:34595#L1034">Validate</a>
+					<a class="permalink" href="index.html#User.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#User">User</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="personalizeeventsiface/index.html">personalizeeventsiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package personalizeeventsiface provides an interface to enable mocking the Amazon Personalize Events service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

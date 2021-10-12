@@ -1,0 +1,4247 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>augmentedairuntime - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package augmentedairuntime
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/service/augmentedairuntime&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package augmentedairuntime provides the client and types for making API
+requests to Amazon Augmented AI Runtime.
+</p>
+<p>
+Amazon Augmented AI (Amazon A2I) adds the benefit of human judgment to any
+machine learning application. When an AI application can&#39;t evaluate data
+with a high degree of confidence, human reviewers can take over. This human
+review is called a human review workflow. To create and start a human review
+workflow, you need three resources: a worker task template, a flow definition,
+and a human loop.
+</p>
+<p>
+For information about these resources and prerequisites for using Amazon
+A2I, see Get Started with Amazon Augmented AI (<a href="https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-getting-started.html">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-getting-started.html</a>)
+in the Amazon SageMaker Developer Guide.
+</p>
+<p>
+This API reference includes information about API actions and data types
+that you can use to interact with Amazon A2I programmatically. Use this guide
+to:
+</p>
+<pre>* Start a human loop with the StartHumanLoop operation when using Amazon
+A2I with a custom task type. To learn more about the difference between
+custom and built-in task types, see Use Task Types (<a href="https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-task-types-general.html">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-task-types-general.html</a>).
+To learn how to start a human loop using this API, see Create and Start
+a Human Loop for a Custom Task Type (<a href="https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-start-human-loop.html#a2i-instructions-starthumanloop">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-start-human-loop.html#a2i-instructions-starthumanloop</a>)
+in the Amazon SageMaker Developer Guide.
+
+* Manage your human loops. You can list all human loops that you have
+created, describe individual human loops, and stop and delete human loops.
+To learn more, see Monitor and Manage Your Human Loop (<a href="https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-monitor-humanloop-results.html">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-monitor-humanloop-results.html</a>)
+in the Amazon SageMaker Developer Guide.
+</pre>
+<p>
+Amazon A2I integrates APIs from various AWS services to create and start
+human review workflows for those services. To learn how Amazon A2I uses these
+APIs, see Use APIs in Amazon A2I (<a href="https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-api-references.html">https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-api-references.html</a>)
+in the Amazon SageMaker Developer Guide.
+</p>
+<p>
+See <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07</a> for more information on this service.
+</p>
+<p>
+See augmentedairuntime package documentation for more information.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/augmentedairuntime/">https://docs.aws.amazon.com/sdk-for-go/api/service/augmentedairuntime/</a>
+</p>
+<h3 id="hdr-Using_the_Client">Using the Client</h3>
+<p>
+To contact Amazon Augmented AI Runtime with the SDK use the New function to create
+a new service client. With that client you can make API requests to the service.
+These clients are safe to use concurrently.
+</p>
+<p>
+See the SDK&#39;s documentation for more information on how to use the SDK.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/">https://docs.aws.amazon.com/sdk-for-go/api/</a>
+</p>
+<p>
+See aws.Config documentation for more information on configuring SDK clients.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config">https://docs.aws.amazon.com/sdk-for-go/api/aws/#Config</a>
+</p>
+<p>
+See the Amazon Augmented AI Runtime client AugmentedAIRuntime for more
+information on creating client for this service.
+<a href="https://docs.aws.amazon.com/sdk-for-go/api/service/augmentedairuntime/#New">https://docs.aws.amazon.com/sdk-for-go/api/service/augmentedairuntime/#New</a>
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ContentClassifier_Values">func ContentClassifier_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#HumanLoopStatus_Values">func HumanLoopStatus_Values() []string</a></dd>
+			
+				
+				<dd><a href="index.html#SortOrder_Values">func SortOrder_Values() []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AugmentedAIRuntime">type AugmentedAIRuntime</a></dd>
+				
+					
+					<dd>    <a href="index.html#New">func New(p client.ConfigProvider, cfgs ...*aws.Config) *AugmentedAIRuntime</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DeleteHumanLoop">func (c *AugmentedAIRuntime) DeleteHumanLoop(input *DeleteHumanLoopInput) (*DeleteHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DeleteHumanLoopRequest">func (c *AugmentedAIRuntime) DeleteHumanLoopRequest(input *DeleteHumanLoopInput) (req *request.Request, output *DeleteHumanLoopOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DeleteHumanLoopWithContext">func (c *AugmentedAIRuntime) DeleteHumanLoopWithContext(ctx aws.Context, input *DeleteHumanLoopInput, opts ...request.Option) (*DeleteHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DescribeHumanLoop">func (c *AugmentedAIRuntime) DescribeHumanLoop(input *DescribeHumanLoopInput) (*DescribeHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DescribeHumanLoopRequest">func (c *AugmentedAIRuntime) DescribeHumanLoopRequest(input *DescribeHumanLoopInput) (req *request.Request, output *DescribeHumanLoopOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.DescribeHumanLoopWithContext">func (c *AugmentedAIRuntime) DescribeHumanLoopWithContext(ctx aws.Context, input *DescribeHumanLoopInput, opts ...request.Option) (*DescribeHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.ListHumanLoops">func (c *AugmentedAIRuntime) ListHumanLoops(input *ListHumanLoopsInput) (*ListHumanLoopsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.ListHumanLoopsPages">func (c *AugmentedAIRuntime) ListHumanLoopsPages(input *ListHumanLoopsInput, fn func(*ListHumanLoopsOutput, bool) bool) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.ListHumanLoopsPagesWithContext">func (c *AugmentedAIRuntime) ListHumanLoopsPagesWithContext(ctx aws.Context, input *ListHumanLoopsInput, fn func(*ListHumanLoopsOutput, bool) bool, opts ...request.Option) error</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.ListHumanLoopsRequest">func (c *AugmentedAIRuntime) ListHumanLoopsRequest(input *ListHumanLoopsInput) (req *request.Request, output *ListHumanLoopsOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.ListHumanLoopsWithContext">func (c *AugmentedAIRuntime) ListHumanLoopsWithContext(ctx aws.Context, input *ListHumanLoopsInput, opts ...request.Option) (*ListHumanLoopsOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StartHumanLoop">func (c *AugmentedAIRuntime) StartHumanLoop(input *StartHumanLoopInput) (*StartHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StartHumanLoopRequest">func (c *AugmentedAIRuntime) StartHumanLoopRequest(input *StartHumanLoopInput) (req *request.Request, output *StartHumanLoopOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StartHumanLoopWithContext">func (c *AugmentedAIRuntime) StartHumanLoopWithContext(ctx aws.Context, input *StartHumanLoopInput, opts ...request.Option) (*StartHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StopHumanLoop">func (c *AugmentedAIRuntime) StopHumanLoop(input *StopHumanLoopInput) (*StopHumanLoopOutput, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StopHumanLoopRequest">func (c *AugmentedAIRuntime) StopHumanLoopRequest(input *StopHumanLoopInput) (req *request.Request, output *StopHumanLoopOutput)</a></dd>
+				
+					
+					<dd>    <a href="index.html#AugmentedAIRuntime.StopHumanLoopWithContext">func (c *AugmentedAIRuntime) StopHumanLoopWithContext(ctx aws.Context, input *StopHumanLoopInput, opts ...request.Option) (*StopHumanLoopOutput, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ConflictException">type ConflictException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ConflictException.Code">func (s *ConflictException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Error">func (s *ConflictException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.GoString">func (s ConflictException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.Message">func (s *ConflictException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.OrigErr">func (s *ConflictException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.RequestID">func (s *ConflictException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.StatusCode">func (s *ConflictException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ConflictException.String">func (s ConflictException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteHumanLoopInput">type DeleteHumanLoopInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopInput.GoString">func (s DeleteHumanLoopInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopInput.SetHumanLoopName">func (s *DeleteHumanLoopInput) SetHumanLoopName(v string) *DeleteHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopInput.String">func (s DeleteHumanLoopInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopInput.Validate">func (s *DeleteHumanLoopInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DeleteHumanLoopOutput">type DeleteHumanLoopOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopOutput.GoString">func (s DeleteHumanLoopOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DeleteHumanLoopOutput.String">func (s DeleteHumanLoopOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeHumanLoopInput">type DescribeHumanLoopInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopInput.GoString">func (s DescribeHumanLoopInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopInput.SetHumanLoopName">func (s *DescribeHumanLoopInput) SetHumanLoopName(v string) *DescribeHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopInput.String">func (s DescribeHumanLoopInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopInput.Validate">func (s *DescribeHumanLoopInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DescribeHumanLoopOutput">type DescribeHumanLoopOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.GoString">func (s DescribeHumanLoopOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetCreationTime">func (s *DescribeHumanLoopOutput) SetCreationTime(v time.Time) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetFailureCode">func (s *DescribeHumanLoopOutput) SetFailureCode(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetFailureReason">func (s *DescribeHumanLoopOutput) SetFailureReason(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetFlowDefinitionArn">func (s *DescribeHumanLoopOutput) SetFlowDefinitionArn(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetHumanLoopArn">func (s *DescribeHumanLoopOutput) SetHumanLoopArn(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetHumanLoopName">func (s *DescribeHumanLoopOutput) SetHumanLoopName(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetHumanLoopOutput">func (s *DescribeHumanLoopOutput) SetHumanLoopOutput(v *HumanLoopOutput) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.SetHumanLoopStatus">func (s *DescribeHumanLoopOutput) SetHumanLoopStatus(v string) *DescribeHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#DescribeHumanLoopOutput.String">func (s DescribeHumanLoopOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HumanLoopDataAttributes">type HumanLoopDataAttributes</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HumanLoopDataAttributes.GoString">func (s HumanLoopDataAttributes) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopDataAttributes.SetContentClassifiers">func (s *HumanLoopDataAttributes) SetContentClassifiers(v []*string) *HumanLoopDataAttributes</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopDataAttributes.String">func (s HumanLoopDataAttributes) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopDataAttributes.Validate">func (s *HumanLoopDataAttributes) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HumanLoopInput">type HumanLoopInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HumanLoopInput.GoString">func (s HumanLoopInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopInput.SetInputContent">func (s *HumanLoopInput) SetInputContent(v string) *HumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopInput.String">func (s HumanLoopInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopInput.Validate">func (s *HumanLoopInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HumanLoopOutput">type HumanLoopOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HumanLoopOutput.GoString">func (s HumanLoopOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopOutput.SetOutputS3Uri">func (s *HumanLoopOutput) SetOutputS3Uri(v string) *HumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopOutput.String">func (s HumanLoopOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#HumanLoopSummary">type HumanLoopSummary</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.GoString">func (s HumanLoopSummary) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.SetCreationTime">func (s *HumanLoopSummary) SetCreationTime(v time.Time) *HumanLoopSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.SetFailureReason">func (s *HumanLoopSummary) SetFailureReason(v string) *HumanLoopSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.SetFlowDefinitionArn">func (s *HumanLoopSummary) SetFlowDefinitionArn(v string) *HumanLoopSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.SetHumanLoopName">func (s *HumanLoopSummary) SetHumanLoopName(v string) *HumanLoopSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.SetHumanLoopStatus">func (s *HumanLoopSummary) SetHumanLoopStatus(v string) *HumanLoopSummary</a></dd>
+				
+					
+					<dd>    <a href="index.html#HumanLoopSummary.String">func (s HumanLoopSummary) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#InternalServerException">type InternalServerException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Code">func (s *InternalServerException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Error">func (s *InternalServerException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.GoString">func (s InternalServerException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.Message">func (s *InternalServerException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.OrigErr">func (s *InternalServerException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.RequestID">func (s *InternalServerException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.StatusCode">func (s *InternalServerException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#InternalServerException.String">func (s InternalServerException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListHumanLoopsInput">type ListHumanLoopsInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.GoString">func (s ListHumanLoopsInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetCreationTimeAfter">func (s *ListHumanLoopsInput) SetCreationTimeAfter(v time.Time) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetCreationTimeBefore">func (s *ListHumanLoopsInput) SetCreationTimeBefore(v time.Time) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetFlowDefinitionArn">func (s *ListHumanLoopsInput) SetFlowDefinitionArn(v string) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetMaxResults">func (s *ListHumanLoopsInput) SetMaxResults(v int64) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetNextToken">func (s *ListHumanLoopsInput) SetNextToken(v string) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.SetSortOrder">func (s *ListHumanLoopsInput) SetSortOrder(v string) *ListHumanLoopsInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.String">func (s ListHumanLoopsInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsInput.Validate">func (s *ListHumanLoopsInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListHumanLoopsOutput">type ListHumanLoopsOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsOutput.GoString">func (s ListHumanLoopsOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsOutput.SetHumanLoopSummaries">func (s *ListHumanLoopsOutput) SetHumanLoopSummaries(v []*HumanLoopSummary) *ListHumanLoopsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsOutput.SetNextToken">func (s *ListHumanLoopsOutput) SetNextToken(v string) *ListHumanLoopsOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#ListHumanLoopsOutput.String">func (s ListHumanLoopsOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ResourceNotFoundException">type ResourceNotFoundException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Code">func (s *ResourceNotFoundException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Error">func (s *ResourceNotFoundException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.GoString">func (s ResourceNotFoundException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.Message">func (s *ResourceNotFoundException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.OrigErr">func (s *ResourceNotFoundException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.RequestID">func (s *ResourceNotFoundException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.StatusCode">func (s *ResourceNotFoundException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ResourceNotFoundException.String">func (s ResourceNotFoundException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ServiceQuotaExceededException">type ServiceQuotaExceededException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Code">func (s *ServiceQuotaExceededException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Error">func (s *ServiceQuotaExceededException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.GoString">func (s ServiceQuotaExceededException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.Message">func (s *ServiceQuotaExceededException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.OrigErr">func (s *ServiceQuotaExceededException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.RequestID">func (s *ServiceQuotaExceededException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.StatusCode">func (s *ServiceQuotaExceededException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ServiceQuotaExceededException.String">func (s ServiceQuotaExceededException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartHumanLoopInput">type StartHumanLoopInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.GoString">func (s StartHumanLoopInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.SetDataAttributes">func (s *StartHumanLoopInput) SetDataAttributes(v *HumanLoopDataAttributes) *StartHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.SetFlowDefinitionArn">func (s *StartHumanLoopInput) SetFlowDefinitionArn(v string) *StartHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.SetHumanLoopInput">func (s *StartHumanLoopInput) SetHumanLoopInput(v *HumanLoopInput) *StartHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.SetHumanLoopName">func (s *StartHumanLoopInput) SetHumanLoopName(v string) *StartHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.String">func (s StartHumanLoopInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopInput.Validate">func (s *StartHumanLoopInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StartHumanLoopOutput">type StartHumanLoopOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopOutput.GoString">func (s StartHumanLoopOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopOutput.SetHumanLoopArn">func (s *StartHumanLoopOutput) SetHumanLoopArn(v string) *StartHumanLoopOutput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StartHumanLoopOutput.String">func (s StartHumanLoopOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StopHumanLoopInput">type StopHumanLoopInput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopInput.GoString">func (s StopHumanLoopInput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopInput.SetHumanLoopName">func (s *StopHumanLoopInput) SetHumanLoopName(v string) *StopHumanLoopInput</a></dd>
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopInput.String">func (s StopHumanLoopInput) String() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopInput.Validate">func (s *StopHumanLoopInput) Validate() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StopHumanLoopOutput">type StopHumanLoopOutput</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopOutput.GoString">func (s StopHumanLoopOutput) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#StopHumanLoopOutput.String">func (s StopHumanLoopOutput) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ThrottlingException">type ThrottlingException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Code">func (s *ThrottlingException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Error">func (s *ThrottlingException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.GoString">func (s ThrottlingException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.Message">func (s *ThrottlingException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.OrigErr">func (s *ThrottlingException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.RequestID">func (s *ThrottlingException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.StatusCode">func (s *ThrottlingException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ThrottlingException.String">func (s ThrottlingException) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidationException">type ValidationException</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#ValidationException.Code">func (s *ValidationException) Code() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Error">func (s *ValidationException) Error() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.GoString">func (s ValidationException) GoString() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.Message">func (s *ValidationException) Message() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.OrigErr">func (s *ValidationException) OrigErr() error</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.RequestID">func (s *ValidationException) RequestID() string</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.StatusCode">func (s *ValidationException) StatusCode() int</a></dd>
+				
+					
+					<dd>    <a href="index.html#ValidationException.String">func (s ValidationException) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go">api.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/doc.go">doc.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/errors.go">errors.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// ContentClassifierFreeOfPersonallyIdentifiableInformation is a ContentClassifier enum value</span>
+    <span id="ContentClassifierFreeOfPersonallyIdentifiableInformation">ContentClassifierFreeOfPersonallyIdentifiableInformation</span> = &#34;FreeOfPersonallyIdentifiableInformation&#34;
+
+    <span class="comment">// ContentClassifierFreeOfAdultContent is a ContentClassifier enum value</span>
+    <span id="ContentClassifierFreeOfAdultContent">ContentClassifierFreeOfAdultContent</span> = &#34;FreeOfAdultContent&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// HumanLoopStatusInProgress is a HumanLoopStatus enum value</span>
+    <span id="HumanLoopStatusInProgress">HumanLoopStatusInProgress</span> = &#34;InProgress&#34;
+
+    <span class="comment">// HumanLoopStatusFailed is a HumanLoopStatus enum value</span>
+    <span id="HumanLoopStatusFailed">HumanLoopStatusFailed</span> = &#34;Failed&#34;
+
+    <span class="comment">// HumanLoopStatusCompleted is a HumanLoopStatus enum value</span>
+    <span id="HumanLoopStatusCompleted">HumanLoopStatusCompleted</span> = &#34;Completed&#34;
+
+    <span class="comment">// HumanLoopStatusStopped is a HumanLoopStatus enum value</span>
+    <span id="HumanLoopStatusStopped">HumanLoopStatusStopped</span> = &#34;Stopped&#34;
+
+    <span class="comment">// HumanLoopStatusStopping is a HumanLoopStatus enum value</span>
+    <span id="HumanLoopStatusStopping">HumanLoopStatusStopping</span> = &#34;Stopping&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// SortOrderAscending is a SortOrder enum value</span>
+    <span id="SortOrderAscending">SortOrderAscending</span> = &#34;Ascending&#34;
+
+    <span class="comment">// SortOrderDescending is a SortOrder enum value</span>
+    <span id="SortOrderDescending">SortOrderDescending</span> = &#34;Descending&#34;
+)</pre>
+			
+				
+				<pre>const (
+
+    <span class="comment">// ErrCodeConflictException for service response error code</span>
+    <span class="comment">// &#34;ConflictException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Your request has the same name as another active human loop but has different</span>
+    <span class="comment">// input data. You cannot start two human loops with the same name and different</span>
+    <span class="comment">// input data.</span>
+    <span id="ErrCodeConflictException">ErrCodeConflictException</span> = &#34;ConflictException&#34;
+
+    <span class="comment">// ErrCodeInternalServerException for service response error code</span>
+    <span class="comment">// &#34;InternalServerException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// We couldn&#39;t process your request because of an issue with the server. Try</span>
+    <span class="comment">// again later.</span>
+    <span id="ErrCodeInternalServerException">ErrCodeInternalServerException</span> = &#34;InternalServerException&#34;
+
+    <span class="comment">// ErrCodeResourceNotFoundException for service response error code</span>
+    <span class="comment">// &#34;ResourceNotFoundException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// We couldn&#39;t find the requested resource. Check that your resources exists</span>
+    <span class="comment">// and were created in the same AWS Region as your request, and try your request</span>
+    <span class="comment">// again.</span>
+    <span id="ErrCodeResourceNotFoundException">ErrCodeResourceNotFoundException</span> = &#34;ResourceNotFoundException&#34;
+
+    <span class="comment">// ErrCodeServiceQuotaExceededException for service response error code</span>
+    <span class="comment">// &#34;ServiceQuotaExceededException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You exceeded your service quota. Service quotas, also referred to as limits,</span>
+    <span class="comment">// are the maximum number of service resources or operations for your AWS account.</span>
+    <span class="comment">// For a list of Amazon A2I service quotes, see Amazon Augmented AI Service</span>
+    <span class="comment">// Quotes (https://docs.aws.amazon.com/general/latest/gr/a2i.html). Delete some</span>
+    <span class="comment">// resources or request an increase in your service quota. You can request a</span>
+    <span class="comment">// quota increase using Service Quotas or the AWS Support Center. To request</span>
+    <span class="comment">// an increase, see AWS Service Quotas (https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)</span>
+    <span class="comment">// in the AWS General Reference.</span>
+    <span id="ErrCodeServiceQuotaExceededException">ErrCodeServiceQuotaExceededException</span> = &#34;ServiceQuotaExceededException&#34;
+
+    <span class="comment">// ErrCodeThrottlingException for service response error code</span>
+    <span class="comment">// &#34;ThrottlingException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// You exceeded the maximum number of requests.</span>
+    <span id="ErrCodeThrottlingException">ErrCodeThrottlingException</span> = &#34;ThrottlingException&#34;
+
+    <span class="comment">// ErrCodeValidationException for service response error code</span>
+    <span class="comment">// &#34;ValidationException&#34;.</span>
+    <span class="comment">//</span>
+    <span class="comment">// The request isn&#39;t valid. Check the syntax and try again.</span>
+    <span id="ErrCodeValidationException">ErrCodeValidationException</span> = &#34;ValidationException&#34;
+)</pre>
+			
+				<p>
+Service information constants
+</p>
+
+				<pre>const (
+    <span id="ServiceName">ServiceName</span> = &#34;SageMaker A2I Runtime&#34; <span class="comment">// Name of service.</span>
+    <span id="EndpointsID">EndpointsID</span> = &#34;a2i-runtime.sagemaker&#34; <span class="comment">// ID to lookup a service endpoint with.</span>
+    <span id="ServiceID">ServiceID</span>   = &#34;SageMaker A2I Runtime&#34; <span class="comment">// ServiceID is a unique identifier of a specific service.</span>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ContentClassifier_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=59291:59331#L1714">ContentClassifier_Values</a>
+				<a class="permalink" href="index.html#ContentClassifier_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func ContentClassifier_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+ContentClassifier_Values returns all elements of the ContentClassifier enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HumanLoopStatus_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=60037:60075#L1739">HumanLoopStatus_Values</a>
+				<a class="permalink" href="index.html#HumanLoopStatus_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func HumanLoopStatus_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+HumanLoopStatus_Values returns all elements of the HumanLoopStatus enum
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SortOrder_Values">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=60481:60513#L1758">SortOrder_Values</a>
+				<a class="permalink" href="index.html#SortOrder_Values">¶</a>
+				
+				
+			</h2>
+			<pre>func SortOrder_Values() []<a href="../../../../../builtin/index.html#string">string</a></pre>
+			<p>
+SortOrder_Values returns all elements of the SortOrder enum
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AugmentedAIRuntime">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/service.go?s=738:788#L11">AugmentedAIRuntime</a>
+				<a class="permalink" href="index.html#AugmentedAIRuntime">¶</a>
+				
+				
+			</h2>
+			<p>
+AugmentedAIRuntime provides the API operation methods for making requests to
+Amazon Augmented AI Runtime. See this package&#39;s package overview docs
+for details on the service.
+</p>
+<p>
+AugmentedAIRuntime methods are safe to use concurrently. It is not safe to
+modify mutate any of the struct&#39;s properties though.
+</p>
+
+			<pre>type AugmentedAIRuntime struct {
+    *<a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#Client">Client</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/service.go?s=1808:1882#L40">New</a>
+					<a class="permalink" href="index.html#New">¶</a>
+					
+					
+				</h3>
+				<pre>func New(p <a href="../../aws/client/index.html">client</a>.<a href="../../aws/client/index.html#ConfigProvider">ConfigProvider</a>, cfgs ...*<a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Config">Config</a>) *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a></pre>
+				<p>
+New creates a new instance of the AugmentedAIRuntime client with a session.
+If additional configuration is needed for the client instance use the optional
+aws.Config parameter to add your extra config.
+</p>
+<p>
+Example:
+</p>
+<pre>mySession := session.Must(session.NewSession())
+
+// Create a AugmentedAIRuntime client from just a session.
+svc := augmentedairuntime.New(mySession)
+
+// Create a AugmentedAIRuntime client with additional configuration
+svc := augmentedairuntime.New(mySession, aws.NewConfig().WithRegion(&#34;us-west-2&#34;))
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="AugmentedAIRuntime.DeleteHumanLoop">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=3121:3226#L79">DeleteHumanLoop</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DeleteHumanLoop">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DeleteHumanLoop(input *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) (*<a href="index.html#DeleteHumanLoopOutput">DeleteHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteHumanLoop API operation for Amazon Augmented AI Runtime.
+</p>
+<p>
+Deletes the specified human loop for a flow definition.
+</p>
+<p>
+If the human loop was deleted, this operation will return a ResourceNotFoundException.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Augmented AI Runtime&#39;s
+API operation DeleteHumanLoop for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request isn&#39;t valid. Check the syntax and try again.
+
+* ResourceNotFoundException
+We couldn&#39;t find the requested resource. Check that your resources exists
+and were created in the same AWS Region as your request, and try your request
+again.
+
+* ThrottlingException
+You exceeded the maximum number of requests.
+
+* InternalServerException
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DeleteHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DeleteHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.DeleteHumanLoopRequest">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=1424:1558#L32">DeleteHumanLoopRequest</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DeleteHumanLoopRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DeleteHumanLoopRequest(input *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DeleteHumanLoopOutput">DeleteHumanLoopOutput</a>)</pre>
+				<p>
+DeleteHumanLoopRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DeleteHumanLoop operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DeleteHumanLoop for more information on using the DeleteHumanLoop
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DeleteHumanLoopRequest method.
+req, resp := client.DeleteHumanLoopRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DeleteHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DeleteHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.DeleteHumanLoopWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=3789:3946#L93">DeleteHumanLoopWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DeleteHumanLoopWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DeleteHumanLoopWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DeleteHumanLoopOutput">DeleteHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DeleteHumanLoopWithContext is the same as DeleteHumanLoop with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DeleteHumanLoop for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.DescribeHumanLoop">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=6781:6892#L171">DescribeHumanLoop</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DescribeHumanLoop">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DescribeHumanLoop(input *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) (*<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeHumanLoop API operation for Amazon Augmented AI Runtime.
+</p>
+<p>
+Returns information about the specified human loop. If the human loop was
+deleted, this operation will return a ResourceNotFoundException error.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Augmented AI Runtime&#39;s
+API operation DescribeHumanLoop for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request isn&#39;t valid. Check the syntax and try again.
+
+* ResourceNotFoundException
+We couldn&#39;t find the requested resource. Check that your resources exists
+and were created in the same AWS Region as your request, and try your request
+again.
+
+* ThrottlingException
+You exceeded the maximum number of requests.
+
+* InternalServerException
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DescribeHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DescribeHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.DescribeHumanLoopRequest">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=5169:5309#L126">DescribeHumanLoopRequest</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DescribeHumanLoopRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DescribeHumanLoopRequest(input *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>)</pre>
+				<p>
+DescribeHumanLoopRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the DescribeHumanLoop operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See DescribeHumanLoop for more information on using the DescribeHumanLoop
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the DescribeHumanLoopRequest method.
+req, resp := client.DescribeHumanLoopRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DescribeHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/DescribeHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.DescribeHumanLoopWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=7463:7626#L185">DescribeHumanLoopWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.DescribeHumanLoopWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) DescribeHumanLoopWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+DescribeHumanLoopWithContext is the same as DescribeHumanLoop with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See DescribeHumanLoop for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.ListHumanLoops">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=10555:10657#L269">ListHumanLoops</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.ListHumanLoops">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) ListHumanLoops(input *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) (*<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListHumanLoops API operation for Amazon Augmented AI Runtime.
+</p>
+<p>
+Returns information about human loops, given the specified parameters. If
+a human loop was deleted, it will not be included.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Augmented AI Runtime&#39;s
+API operation ListHumanLoops for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request isn&#39;t valid. Check the syntax and try again.
+
+* ResourceNotFoundException
+We couldn&#39;t find the requested resource. Check that your resources exists
+and were created in the same AWS Region as your request, and try your request
+again.
+
+* ThrottlingException
+You exceeded the maximum number of requests.
+
+* InternalServerException
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/ListHumanLoops">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/ListHumanLoops</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.ListHumanLoopsPages">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=12188:12313#L307">ListHumanLoopsPages</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.ListHumanLoopsPages">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) ListHumanLoopsPages(input *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>, fn func(*<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListHumanLoopsPages iterates over the pages of a ListHumanLoops operation,
+calling the &#34;fn&#34; function with the response data for each page. To stop
+iterating, return false from the fn function.
+</p>
+<p>
+See ListHumanLoops method for more information on how to use this operation.
+</p>
+<p>
+Note: This operation can generate multiple requests to a service.
+</p>
+<pre>// Example iterating over at most 3 pages of a ListHumanLoops operation.
+pageNum := 0
+err := client.ListHumanLoopsPages(params,
+    func(page *augmentedairuntime.ListHumanLoopsOutput, lastPage bool) bool {
+        pageNum++
+        fmt.Println(page)
+        return pageNum &lt;= 3
+    })
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.ListHumanLoopsPagesWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=12805:12982#L318">ListHumanLoopsPagesWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.ListHumanLoopsPagesWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) ListHumanLoopsPagesWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>, fn func(*<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>, <a href="../../../../../builtin/index.html#bool">bool</a>) <a href="../../../../../builtin/index.html#bool">bool</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+ListHumanLoopsPagesWithContext same as ListHumanLoopsPages except
+it takes a Context and allows setting request options on the pages.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.ListHumanLoopsRequest">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=8824:8955#L218">ListHumanLoopsRequest</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.ListHumanLoopsRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) ListHumanLoopsRequest(input *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>)</pre>
+				<p>
+ListHumanLoopsRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the ListHumanLoops operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See ListHumanLoops for more information on using the ListHumanLoops
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the ListHumanLoopsRequest method.
+req, resp := client.ListHumanLoopsRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/ListHumanLoops">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/ListHumanLoops</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.ListHumanLoopsWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=11216:11370#L283">ListHumanLoopsWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.ListHumanLoopsWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) ListHumanLoopsWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+ListHumanLoopsWithContext is the same as ListHumanLoops with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See ListHumanLoops for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StartHumanLoop">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=16640:16742#L422">StartHumanLoop</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StartHumanLoop">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StartHumanLoop(input *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) (*<a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StartHumanLoop API operation for Amazon Augmented AI Runtime.
+</p>
+<p>
+Starts a human loop, provided that at least one activation condition is met.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Augmented AI Runtime&#39;s
+API operation StartHumanLoop for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request isn&#39;t valid. Check the syntax and try again.
+
+* ThrottlingException
+You exceeded the maximum number of requests.
+
+* ServiceQuotaExceededException
+You exceeded your service quota. Service quotas, also referred to as limits,
+are the maximum number of service resources or operations for your AWS account.
+For a list of Amazon A2I service quotes, see Amazon Augmented AI Service
+Quotes (<a href="https://docs.aws.amazon.com/general/latest/gr/a2i.html">https://docs.aws.amazon.com/general/latest/gr/a2i.html</a>). Delete some
+resources or request an increase in your service quota. You can request a
+quota increase using Service Quotas or the AWS Support Center. To request
+an increase, see AWS Service Quotas (<a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html</a>)
+in the AWS General Reference.
+
+* InternalServerException
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+
+* ConflictException
+Your request has the same name as another active human loop but has different
+input data. You cannot start two human loops with the same name and different
+input data.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StartHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StartHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StartHumanLoopRequest">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=14467:14598#L368">StartHumanLoopRequest</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StartHumanLoopRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StartHumanLoopRequest(input *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>)</pre>
+				<p>
+StartHumanLoopRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the StartHumanLoop operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See StartHumanLoop for more information on using the StartHumanLoop
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the StartHumanLoopRequest method.
+req, resp := client.StartHumanLoopRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StartHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StartHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StartHumanLoopWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=17301:17455#L436">StartHumanLoopWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StartHumanLoopWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StartHumanLoopWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StartHumanLoopWithContext is the same as StartHumanLoop with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See StartHumanLoop for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StopHumanLoop">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=20190:20289#L514">StopHumanLoop</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StopHumanLoop">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StopHumanLoop(input *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) (*<a href="index.html#StopHumanLoopOutput">StopHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StopHumanLoop API operation for Amazon Augmented AI Runtime.
+</p>
+<p>
+Stops the specified human loop.
+</p>
+<p>
+Returns awserr.Error for service API and SDK errors. Use runtime type assertions
+with awserr.Error&#39;s Code and Message methods to get detailed information about
+the error.
+</p>
+<p>
+See the AWS API reference guide for Amazon Augmented AI Runtime&#39;s
+API operation StopHumanLoop for usage and error information.
+</p>
+<p>
+Returned Error Types:
+</p>
+<pre>* ValidationException
+The request isn&#39;t valid. Check the syntax and try again.
+
+* ResourceNotFoundException
+We couldn&#39;t find the requested resource. Check that your resources exists
+and were created in the same AWS Region as your request, and try your request
+again.
+
+* ThrottlingException
+You exceeded the maximum number of requests.
+
+* InternalServerException
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StopHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StopHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StopHumanLoopRequest">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=18641:18769#L469">StopHumanLoopRequest</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StopHumanLoopRequest">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StopHumanLoopRequest(input *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) (req *<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Request">Request</a>, output *<a href="index.html#StopHumanLoopOutput">StopHumanLoopOutput</a>)</pre>
+				<p>
+StopHumanLoopRequest generates a &#34;aws/request.Request&#34; representing the
+client&#39;s request for the StopHumanLoop operation. The &#34;output&#34; return
+value will be populated with the request&#39;s response once the request completes
+successfully.
+</p>
+<p>
+Use &#34;Send&#34; method on the returned Request to send the API call to the service.
+the &#34;output&#34; return value is not valid until after Send returns without error.
+</p>
+<p>
+See StopHumanLoop for more information on using the StopHumanLoop
+API call, and error handling.
+</p>
+<p>
+This method is useful when you want to inject custom logic or configuration
+into the SDK&#39;s request lifecycle. Such as custom headers, or retry logic.
+</p>
+<pre>// Example sending a request using the StopHumanLoopRequest method.
+req, resp := client.StopHumanLoopRequest(params)
+
+err := req.Send()
+if err == nil { // resp is now filled
+    fmt.Println(resp)
+}
+</pre>
+<p>
+See also, <a href="https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StopHumanLoop">https://docs.aws.amazon.com/goto/WebAPI/sagemaker-a2i-runtime-2019-11-07/StopHumanLoop</a>
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AugmentedAIRuntime.StopHumanLoopWithContext">func (*AugmentedAIRuntime) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=20844:20995#L528">StopHumanLoopWithContext</a>
+					<a class="permalink" href="index.html#AugmentedAIRuntime.StopHumanLoopWithContext">¶</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#AugmentedAIRuntime">AugmentedAIRuntime</a>) StopHumanLoopWithContext(ctx <a href="../../aws/index.html">aws</a>.<a href="../../aws/index.html#Context">Context</a>, input *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>, opts ...<a href="../../aws/request/index.html">request</a>.<a href="../../aws/request/index.html#Option">Option</a>) (*<a href="index.html#StopHumanLoopOutput">StopHumanLoopOutput</a>, <a href="../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+StopHumanLoopWithContext is the same as StopHumanLoop with the addition of
+the ability to pass a context and additional request options.
+</p>
+<p>
+See StopHumanLoop for details on how to use this API operation.
+</p>
+<p>
+The context must be non-nil and will be used for request cancellation. If
+the context is nil a panic will occur. In the future the SDK may create
+sub-contexts for http.Requests. See <a href="https://golang.org/pkg/context/">https://golang.org/pkg/context/</a>
+for more information on using Contexts.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConflictException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=21293:21502#L538">ConflictException</a>
+				<a class="permalink" href="index.html#ConflictException">¶</a>
+				
+				
+			</h2>
+			<p>
+Your request has the same name as another active human loop but has different
+input data. You cannot start two human loops with the same name and different
+input data.
+</p>
+
+			<pre>type ConflictException struct {
+<span id="ConflictException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ConflictException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ConflictException.Code">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22309:22350#L570">Code</a>
+					<a class="permalink" href="index.html#ConflictException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Error">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22663:22705#L587">Error</a>
+					<a class="permalink" href="index.html#ConflictException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.GoString">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22078:22122#L559">GoString</a>
+					<a class="permalink" href="index.html#ConflictException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.Message">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22428:22472#L575">Message</a>
+					<a class="permalink" href="index.html#ConflictException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.OrigErr">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22602:22645#L583">OrigErr</a>
+					<a class="permalink" href="index.html#ConflictException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.RequestID">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22993:23039#L597">RequestID</a>
+					<a class="permalink" href="index.html#ConflictException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.StatusCode">func (*ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=22842:22886#L592">StatusCode</a>
+					<a class="permalink" href="index.html#ConflictException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ConflictException">ConflictException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ConflictException.String">func (ConflictException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=21752:21794#L550">String</a>
+					<a class="permalink" href="index.html#ConflictException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ConflictException">ConflictException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteHumanLoopInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=23078:23351#L601">DeleteHumanLoopInput</a>
+				<a class="permalink" href="index.html#DeleteHumanLoopInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteHumanLoopInput struct {
+
+    <span class="comment">// The name of the human loop that you want to delete.</span>
+    <span class="comment">//</span>
+<span id="DeleteHumanLoopInput.HumanLoopName"></span>    <span class="comment">// HumanLoopName is a required field</span>
+    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;HumanLoopName&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteHumanLoopInput.GoString">func (DeleteHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=23930:23977#L624">GoString</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteHumanLoopInput.SetHumanLoopName">func (*DeleteHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=24560:24639#L645">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopInput.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteHumanLoopInput.String">func (DeleteHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=23601:23646#L615">String</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteHumanLoopInput.Validate">func (*DeleteHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=24078:24125#L629">Validate</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DeleteHumanLoopInput">DeleteHumanLoopInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DeleteHumanLoopOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=24677:24745#L650">DeleteHumanLoopOutput</a>
+				<a class="permalink" href="index.html#DeleteHumanLoopOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DeleteHumanLoopOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DeleteHumanLoopOutput.GoString">func (DeleteHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=25325:25373#L668">GoString</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteHumanLoopOutput">DeleteHumanLoopOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeleteHumanLoopOutput.String">func (DeleteHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=24995:25041#L659">String</a>
+					<a class="permalink" href="index.html#DeleteHumanLoopOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DeleteHumanLoopOutput">DeleteHumanLoopOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeHumanLoopInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=25398:25681#L672">DescribeHumanLoopInput</a>
+				<a class="permalink" href="index.html#DescribeHumanLoopInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeHumanLoopInput struct {
+
+    <span class="comment">// The name of the human loop that you want information about.</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopInput.HumanLoopName"></span>    <span class="comment">// HumanLoopName is a required field</span>
+    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;uri&#34; locationName:&#34;HumanLoopName&#34; min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeHumanLoopInput.GoString">func (DescribeHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=26262:26311#L695">GoString</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopInput.SetHumanLoopName">func (*DescribeHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=26898:26981#L716">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopInput.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopInput.String">func (DescribeHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=25931:25978#L686">String</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopInput.Validate">func (*DescribeHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=26412:26461#L700">Validate</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopInput">DescribeHumanLoopInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DescribeHumanLoopOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=27019:28479#L721">DescribeHumanLoopOutput</a>
+				<a class="permalink" href="index.html#DescribeHumanLoopOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type DescribeHumanLoopOutput struct {
+
+    <span class="comment">// The creation time when Amazon Augmented AI created the human loop.</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopOutput.CreationTime"></span>    <span class="comment">// CreationTime is a required field</span>
+    CreationTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A failure code that identifies the type of failure.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Possible values: ValidationError, Expired, InternalError</span>
+<span id="DescribeHumanLoopOutput.FailureCode"></span>    FailureCode *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The reason why a human loop failed. The failure reason is returned when the</span>
+    <span class="comment">// status of the human loop is Failed.</span>
+<span id="DescribeHumanLoopOutput.FailureReason"></span>    FailureReason *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the flow definition.</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopOutput.FlowDefinitionArn"></span>    <span class="comment">// FlowDefinitionArn is a required field</span>
+    FlowDefinitionArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the human loop.</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopOutput.HumanLoopArn"></span>    <span class="comment">// HumanLoopArn is a required field</span>
+    HumanLoopArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The name of the human loop. The name must be lowercase, unique within the</span>
+    <span class="comment">// Region in your account, and can have up to 63 characters. Valid characters:</span>
+    <span class="comment">// a-z, 0-9, and - (hyphen).</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopOutput.HumanLoopName"></span>    <span class="comment">// HumanLoopName is a required field</span>
+    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An object that contains information about the output of the human loop.</span>
+<span id="DescribeHumanLoopOutput.HumanLoopOutput"></span>    HumanLoopOutput *<a href="index.html#HumanLoopOutput">HumanLoopOutput</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The status of the human loop.</span>
+    <span class="comment">//</span>
+<span id="DescribeHumanLoopOutput.HumanLoopStatus"></span>    <span class="comment">// HumanLoopStatus is a required field</span>
+    HumanLoopStatus *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34; enum:&#34;HumanLoopStatus&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DescribeHumanLoopOutput.GoString">func (DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29061:29111#L778">GoString</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetCreationTime">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29192:29279#L783">SetCreationTime</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetCreationTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetCreationTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetCreationTime sets the CreationTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetFailureCode">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29370:29453#L789">SetFailureCode</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetFailureCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetFailureCode(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetFailureCode sets the FailureCode field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetFailureReason">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29547:29632#L795">SetFailureReason</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetFailureReason">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetFailureReason(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetFailureReason sets the FailureReason field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetFlowDefinitionArn">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29736:29825#L801">SetFlowDefinitionArn</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetFlowDefinitionArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetFlowDefinitionArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetFlowDefinitionArn sets the FlowDefinitionArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetHumanLoopArn">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=29923:30007#L807">SetHumanLoopArn</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetHumanLoopArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetHumanLoopArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetHumanLoopArn sets the HumanLoopArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetHumanLoopName">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=30102:30187#L813">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetHumanLoopOutput">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=30287:30384#L819">SetHumanLoopOutput</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetHumanLoopOutput">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetHumanLoopOutput(v *<a href="index.html#HumanLoopOutput">HumanLoopOutput</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetHumanLoopOutput sets the HumanLoopOutput field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.SetHumanLoopStatus">func (*DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=30485:30572#L825">SetHumanLoopStatus</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.SetHumanLoopStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) SetHumanLoopStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a></pre>
+				<p>
+SetHumanLoopStatus sets the HumanLoopStatus field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DescribeHumanLoopOutput.String">func (DescribeHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=28729:28777#L769">String</a>
+					<a class="permalink" href="index.html#DescribeHumanLoopOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#DescribeHumanLoopOutput">DescribeHumanLoopOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HumanLoopDataAttributes">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=30714:31119#L832">HumanLoopDataAttributes</a>
+				<a class="permalink" href="index.html#HumanLoopDataAttributes">¶</a>
+				
+				
+			</h2>
+			<p>
+Attributes of the data specified by the customer. Use these to describe the
+data to be labeled.
+</p>
+
+			<pre>type HumanLoopDataAttributes struct {
+
+    <span class="comment">// Declares that your content is free of personally identifiable information</span>
+    <span class="comment">// or adult content.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Amazon SageMaker can restrict the Amazon Mechanical Turk workers who can</span>
+    <span class="comment">// view your task based on this information.</span>
+    <span class="comment">//</span>
+<span id="HumanLoopDataAttributes.ContentClassifiers"></span>    <span class="comment">// ContentClassifiers is a required field</span>
+    ContentClassifiers []*<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;list&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HumanLoopDataAttributes.GoString">func (HumanLoopDataAttributes) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=31701:31751#L859">GoString</a>
+					<a class="permalink" href="index.html#HumanLoopDataAttributes.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopDataAttributes.SetContentClassifiers">func (*HumanLoopDataAttributes) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=32232:32325#L877">SetContentClassifiers</a>
+					<a class="permalink" href="index.html#HumanLoopDataAttributes.SetContentClassifiers">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a>) SetContentClassifiers(v []*<a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a></pre>
+				<p>
+SetContentClassifiers sets the ContentClassifiers field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopDataAttributes.String">func (HumanLoopDataAttributes) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=31369:31417#L850">String</a>
+					<a class="permalink" href="index.html#HumanLoopDataAttributes.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopDataAttributes.Validate">func (*HumanLoopDataAttributes) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=31852:31902#L864">Validate</a>
+					<a class="permalink" href="index.html#HumanLoopDataAttributes.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HumanLoopInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=32428:32699#L883">HumanLoopInput</a>
+				<a class="permalink" href="index.html#HumanLoopInput">¶</a>
+				
+				
+			</h2>
+			<p>
+An object containing the human loop input in JSON format.
+</p>
+
+			<pre>type HumanLoopInput struct {
+
+    <span class="comment">// Serialized input from the human loop. The input must be a string representation</span>
+    <span class="comment">// of a file in JSON format.</span>
+    <span class="comment">//</span>
+<span id="HumanLoopInput.InputContent"></span>    <span class="comment">// InputContent is a required field</span>
+    InputContent *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HumanLoopInput.GoString">func (HumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=33272:33313#L907">GoString</a>
+					<a class="permalink" href="index.html#HumanLoopInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopInput">HumanLoopInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopInput.SetInputContent">func (*HumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=33752:33818#L925">SetInputContent</a>
+					<a class="permalink" href="index.html#HumanLoopInput.SetInputContent">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopInput">HumanLoopInput</a>) SetInputContent(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopInput">HumanLoopInput</a></pre>
+				<p>
+SetInputContent sets the InputContent field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopInput.String">func (HumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=32949:32988#L898">String</a>
+					<a class="permalink" href="index.html#HumanLoopInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopInput">HumanLoopInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopInput.Validate">func (*HumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=33414:33455#L912">Validate</a>
+					<a class="permalink" href="index.html#HumanLoopInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopInput">HumanLoopInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HumanLoopOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=33915:34173#L931">HumanLoopOutput</a>
+				<a class="permalink" href="index.html#HumanLoopOutput">¶</a>
+				
+				
+			</h2>
+			<p>
+Information about where the human output will be stored.
+</p>
+
+			<pre>type HumanLoopOutput struct {
+
+    <span class="comment">// The location of the Amazon S3 object where Amazon Augmented AI stores your</span>
+    <span class="comment">// human loop output.</span>
+    <span class="comment">//</span>
+<span id="HumanLoopOutput.OutputS3Uri"></span>    <span class="comment">// OutputS3Uri is a required field</span>
+    OutputS3Uri *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HumanLoopOutput.GoString">func (HumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=34747:34789#L955">GoString</a>
+					<a class="permalink" href="index.html#HumanLoopOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopOutput">HumanLoopOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopOutput.SetOutputS3Uri">func (*HumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=34868:34935#L960">SetOutputS3Uri</a>
+					<a class="permalink" href="index.html#HumanLoopOutput.SetOutputS3Uri">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopOutput">HumanLoopOutput</a>) SetOutputS3Uri(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopOutput">HumanLoopOutput</a></pre>
+				<p>
+SetOutputS3Uri sets the OutputS3Uri field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopOutput.String">func (HumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=34423:34463#L946">String</a>
+					<a class="permalink" href="index.html#HumanLoopOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopOutput">HumanLoopOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="HumanLoopSummary">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=35016:35656#L966">HumanLoopSummary</a>
+				<a class="permalink" href="index.html#HumanLoopSummary">¶</a>
+				
+				
+			</h2>
+			<p>
+Summary information about the human loop.
+</p>
+
+			<pre>type HumanLoopSummary struct {
+
+    <span class="comment">// When Amazon Augmented AI created the human loop.</span>
+<span id="HumanLoopSummary.CreationTime"></span>    CreationTime *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `type:&#34;timestamp&#34;`
+
+    <span class="comment">// The reason why the human loop failed. A failure reason is returned when the</span>
+    <span class="comment">// status of the human loop is Failed.</span>
+<span id="HumanLoopSummary.FailureReason"></span>    FailureReason *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the flow definition used to configure the</span>
+    <span class="comment">// human loop.</span>
+<span id="HumanLoopSummary.FlowDefinitionArn"></span>    FlowDefinitionArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+
+    <span class="comment">// The name of the human loop.</span>
+<span id="HumanLoopSummary.HumanLoopName"></span>    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34;`
+
+    <span class="comment">// The status of the human loop.</span>
+<span id="HumanLoopSummary.HumanLoopStatus"></span>    HumanLoopStatus *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; enum:&#34;HumanLoopStatus&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="HumanLoopSummary.GoString">func (HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=36231:36274#L1001">GoString</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.SetCreationTime">func (*HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=36355:36428#L1006">SetCreationTime</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.SetCreationTime">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) SetCreationTime(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a></pre>
+				<p>
+SetCreationTime sets the CreationTime field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.SetFailureReason">func (*HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=36523:36594#L1012">SetFailureReason</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.SetFailureReason">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) SetFailureReason(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a></pre>
+				<p>
+SetFailureReason sets the FailureReason field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.SetFlowDefinitionArn">func (*HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=36698:36773#L1018">SetFlowDefinitionArn</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.SetFlowDefinitionArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) SetFlowDefinitionArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a></pre>
+				<p>
+SetFlowDefinitionArn sets the FlowDefinitionArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.SetHumanLoopName">func (*HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=36873:36944#L1024">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.SetHumanLoopStatus">func (*HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=37044:37117#L1030">SetHumanLoopStatus</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.SetHumanLoopStatus">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) SetHumanLoopStatus(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#HumanLoopSummary">HumanLoopSummary</a></pre>
+				<p>
+SetHumanLoopStatus sets the HumanLoopStatus field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="HumanLoopSummary.String">func (HumanLoopSummary) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=35906:35947#L992">String</a>
+					<a class="permalink" href="index.html#HumanLoopSummary.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="InternalServerException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=37250:37465#L1037">InternalServerException</a>
+				<a class="permalink" href="index.html#InternalServerException">¶</a>
+				
+				
+			</h2>
+			<p>
+We couldn&#39;t process your request because of an issue with the server. Try
+again later.
+</p>
+
+			<pre>type InternalServerException struct {
+<span id="InternalServerException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="InternalServerException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="InternalServerException.Code">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38296:38343#L1069">Code</a>
+					<a class="permalink" href="index.html#InternalServerException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Error">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38674:38722#L1086">Error</a>
+					<a class="permalink" href="index.html#InternalServerException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.GoString">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38047:38097#L1058">GoString</a>
+					<a class="permalink" href="index.html#InternalServerException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.Message">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38427:38477#L1074">Message</a>
+					<a class="permalink" href="index.html#InternalServerException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.OrigErr">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38607:38656#L1082">OrigErr</a>
+					<a class="permalink" href="index.html#InternalServerException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.RequestID">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=39016:39068#L1096">RequestID</a>
+					<a class="permalink" href="index.html#InternalServerException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.StatusCode">func (*InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=38859:38909#L1091">StatusCode</a>
+					<a class="permalink" href="index.html#InternalServerException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#InternalServerException">InternalServerException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="InternalServerException.String">func (InternalServerException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=37715:37763#L1049">String</a>
+					<a class="permalink" href="index.html#InternalServerException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#InternalServerException">InternalServerException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListHumanLoopsInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=39107:40528#L1100">ListHumanLoopsInput</a>
+				<a class="permalink" href="index.html#ListHumanLoopsInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListHumanLoopsInput struct {
+
+    <span class="comment">// (Optional) The timestamp of the date when you want the human loops to begin</span>
+    <span class="comment">// in ISO 8601 format. For example, 2020-02-24.</span>
+<span id="ListHumanLoopsInput.CreationTimeAfter"></span>    CreationTimeAfter *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `location:&#34;querystring&#34; locationName:&#34;CreationTimeAfter&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// (Optional) The timestamp of the date before which you want the human loops</span>
+    <span class="comment">// to begin in ISO 8601 format. For example, 2020-02-24.</span>
+<span id="ListHumanLoopsInput.CreationTimeBefore"></span>    CreationTimeBefore *<a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a> `location:&#34;querystring&#34; locationName:&#34;CreationTimeBefore&#34; type:&#34;timestamp&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of a flow definition.</span>
+    <span class="comment">//</span>
+<span id="ListHumanLoopsInput.FlowDefinitionArn"></span>    <span class="comment">// FlowDefinitionArn is a required field</span>
+    FlowDefinitionArn *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;FlowDefinitionArn&#34; type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The total number of items to return. If the total number of available items</span>
+    <span class="comment">// is more than the value specified in MaxResults, then a NextToken is returned</span>
+    <span class="comment">// in the output. You can use this token to display the next page of results.</span>
+<span id="ListHumanLoopsInput.MaxResults"></span>    MaxResults *<a href="../../../../../builtin/index.html#int64">int64</a> `location:&#34;querystring&#34; locationName:&#34;MaxResults&#34; min:&#34;1&#34; type:&#34;integer&#34;`
+
+    <span class="comment">// A token to display the next page of results.</span>
+<span id="ListHumanLoopsInput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;NextToken&#34; type:&#34;string&#34;`
+
+    <span class="comment">// Optional. The order for displaying results. Valid values: Ascending and Descending.</span>
+<span id="ListHumanLoopsInput.SortOrder"></span>    SortOrder *<a href="../../../../../builtin/index.html#string">string</a> `location:&#34;querystring&#34; locationName:&#34;SortOrder&#34; type:&#34;string&#34; enum:&#34;SortOrder&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListHumanLoopsInput.GoString">func (ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=41106:41152#L1142">GoString</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetCreationTimeAfter">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=41737:41821#L1163">SetCreationTimeAfter</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetCreationTimeAfter">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetCreationTimeAfter(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetCreationTimeAfter sets the CreationTimeAfter field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetCreationTimeBefore">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=41931:42016#L1169">SetCreationTimeBefore</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetCreationTimeBefore">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetCreationTimeBefore(v <a href="../../../../../time/index.html">time</a>.<a href="../../../../../time/index.html#Time">Time</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetCreationTimeBefore sets the CreationTimeBefore field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetFlowDefinitionArn">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=42125:42206#L1175">SetFlowDefinitionArn</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetFlowDefinitionArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetFlowDefinitionArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetFlowDefinitionArn sets the FlowDefinitionArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetMaxResults">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=42300:42373#L1181">SetMaxResults</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetMaxResults">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetMaxResults(v <a href="../../../../../builtin/index.html#int64">int64</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetMaxResults sets the MaxResults field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetNextToken">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=42458:42531#L1187">SetNextToken</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.SetSortOrder">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=42615:42688#L1193">SetSortOrder</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.SetSortOrder">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) SetSortOrder(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a></pre>
+				<p>
+SetSortOrder sets the SortOrder field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.String">func (ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=40778:40822#L1133">String</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsInput.Validate">func (*ListHumanLoopsInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=41253:41299#L1147">Validate</a>
+					<a class="permalink" href="index.html#ListHumanLoopsInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsInput">ListHumanLoopsInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListHumanLoopsOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=42722:43064#L1198">ListHumanLoopsOutput</a>
+				<a class="permalink" href="index.html#ListHumanLoopsOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type ListHumanLoopsOutput struct {
+
+    <span class="comment">// An array of objects that contain information about the human loops.</span>
+    <span class="comment">//</span>
+<span id="ListHumanLoopsOutput.HumanLoopSummaries"></span>    <span class="comment">// HumanLoopSummaries is a required field</span>
+    HumanLoopSummaries []*<a href="index.html#HumanLoopSummary">HumanLoopSummary</a> `type:&#34;list&#34; required:&#34;true&#34;`
+
+    <span class="comment">// A token to display the next page of results.</span>
+<span id="ListHumanLoopsOutput.NextToken"></span>    NextToken *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ListHumanLoopsOutput.GoString">func (ListHumanLoopsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=43643:43690#L1224">GoString</a>
+					<a class="permalink" href="index.html#ListHumanLoopsOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsOutput.SetHumanLoopSummaries">func (*ListHumanLoopsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=43783:43880#L1229">SetHumanLoopSummaries</a>
+					<a class="permalink" href="index.html#ListHumanLoopsOutput.SetHumanLoopSummaries">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>) SetHumanLoopSummaries(v []*<a href="index.html#HumanLoopSummary">HumanLoopSummary</a>) *<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a></pre>
+				<p>
+SetHumanLoopSummaries sets the HumanLoopSummaries field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsOutput.SetNextToken">func (*ListHumanLoopsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=43972:44047#L1235">SetNextToken</a>
+					<a class="permalink" href="index.html#ListHumanLoopsOutput.SetNextToken">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>) SetNextToken(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a></pre>
+				<p>
+SetNextToken sets the NextToken field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListHumanLoopsOutput.String">func (ListHumanLoopsOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=43314:43359#L1215">String</a>
+					<a class="permalink" href="index.html#ListHumanLoopsOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ListHumanLoopsOutput">ListHumanLoopsOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ResourceNotFoundException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=44249:44466#L1243">ResourceNotFoundException</a>
+				<a class="permalink" href="index.html#ResourceNotFoundException">¶</a>
+				
+				
+			</h2>
+			<p>
+We couldn&#39;t find the requested resource. Check that your resources exists
+and were created in the same AWS Region as your request, and try your request
+again.
+</p>
+
+			<pre>type ResourceNotFoundException struct {
+<span id="ResourceNotFoundException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ResourceNotFoundException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ResourceNotFoundException.Code">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45305:45354#L1275">Code</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Error">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45691:45741#L1292">Error</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.GoString">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45050:45102#L1264">GoString</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.Message">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45440:45492#L1280">Message</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.OrigErr">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45622:45673#L1288">OrigErr</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.RequestID">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=46037:46091#L1302">RequestID</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.StatusCode">func (*ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=45878:45930#L1297">StatusCode</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ResourceNotFoundException.String">func (ResourceNotFoundException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=44716:44766#L1255">String</a>
+					<a class="permalink" href="index.html#ResourceNotFoundException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ResourceNotFoundException">ResourceNotFoundException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ServiceQuotaExceededException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=46747:46968#L1314">ServiceQuotaExceededException</a>
+				<a class="permalink" href="index.html#ServiceQuotaExceededException">¶</a>
+				
+				
+			</h2>
+			<p>
+You exceeded your service quota. Service quotas, also referred to as limits,
+are the maximum number of service resources or operations for your AWS account.
+For a list of Amazon A2I service quotes, see Amazon Augmented AI Service
+Quotes (<a href="https://docs.aws.amazon.com/general/latest/gr/a2i.html">https://docs.aws.amazon.com/general/latest/gr/a2i.html</a>). Delete some
+resources or request an increase in your service quota. You can request a
+quota increase using Service Quotas or the AWS Support Center. To request
+an increase, see AWS Service Quotas (<a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html</a>)
+in the AWS General Reference.
+</p>
+
+			<pre>type ServiceQuotaExceededException struct {
+<span id="ServiceQuotaExceededException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ServiceQuotaExceededException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ServiceQuotaExceededException.Code">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=47823:47876#L1346">Code</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.Error">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=48225:48279#L1363">Error</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.GoString">func (ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=47556:47612#L1335">GoString</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.Message">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=47966:48022#L1351">Message</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.OrigErr">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=48152:48207#L1359">OrigErr</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.RequestID">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=48579:48637#L1373">RequestID</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.StatusCode">func (*ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=48416:48472#L1368">StatusCode</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ServiceQuotaExceededException.String">func (ServiceQuotaExceededException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=47218:47272#L1326">String</a>
+					<a class="permalink" href="index.html#ServiceQuotaExceededException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ServiceQuotaExceededException">ServiceQuotaExceededException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartHumanLoopInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=48676:49477#L1377">StartHumanLoopInput</a>
+				<a class="permalink" href="index.html#StartHumanLoopInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StartHumanLoopInput struct {
+
+    <span class="comment">// Attributes of the specified data. Use DataAttributes to specify if your data</span>
+    <span class="comment">// is free of personally identifiable information and/or free of adult content.</span>
+<span id="StartHumanLoopInput.DataAttributes"></span>    DataAttributes *<a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a> `type:&#34;structure&#34;`
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the flow definition associated with this</span>
+    <span class="comment">// human loop.</span>
+    <span class="comment">//</span>
+<span id="StartHumanLoopInput.FlowDefinitionArn"></span>    <span class="comment">// FlowDefinitionArn is a required field</span>
+    FlowDefinitionArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34; required:&#34;true&#34;`
+
+    <span class="comment">// An object that contains information about the human loop.</span>
+    <span class="comment">//</span>
+<span id="StartHumanLoopInput.HumanLoopInput"></span>    <span class="comment">// HumanLoopInput is a required field</span>
+    HumanLoopInput *<a href="index.html#HumanLoopInput">HumanLoopInput</a> `type:&#34;structure&#34; required:&#34;true&#34;`
+
+    <span class="comment">// The name of the human loop.</span>
+    <span class="comment">//</span>
+<span id="StartHumanLoopInput.HumanLoopName"></span>    <span class="comment">// HumanLoopName is a required field</span>
+    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartHumanLoopInput.GoString">func (StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=50055:50101#L1415">GoString</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.SetDataAttributes">func (*StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=51226:51322#L1452">SetDataAttributes</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.SetDataAttributes">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) SetDataAttributes(v *<a href="index.html#HumanLoopDataAttributes">HumanLoopDataAttributes</a>) *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a></pre>
+				<p>
+SetDataAttributes sets the DataAttributes field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.SetFlowDefinitionArn">func (*StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=51426:51507#L1458">SetFlowDefinitionArn</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.SetFlowDefinitionArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) SetFlowDefinitionArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a></pre>
+				<p>
+SetFlowDefinitionArn sets the FlowDefinitionArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.SetHumanLoopInput">func (*StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=51609:51696#L1464">SetHumanLoopInput</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.SetHumanLoopInput">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) SetHumanLoopInput(v *<a href="index.html#HumanLoopInput">HumanLoopInput</a>) *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a></pre>
+				<p>
+SetHumanLoopInput sets the HumanLoopInput field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.SetHumanLoopName">func (*StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=51792:51869#L1470">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.String">func (StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=49727:49771#L1406">String</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopInput.Validate">func (*StartHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=50202:50248#L1420">Validate</a>
+					<a class="permalink" href="index.html#StartHumanLoopInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopInput">StartHumanLoopInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StartHumanLoopOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=51907:52067#L1475">StartHumanLoopOutput</a>
+				<a class="permalink" href="index.html#StartHumanLoopOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StartHumanLoopOutput struct {
+
+    <span class="comment">// The Amazon Resource Name (ARN) of the human loop.</span>
+<span id="StartHumanLoopOutput.HumanLoopArn"></span>    HumanLoopArn *<a href="../../../../../builtin/index.html#string">string</a> `type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StartHumanLoopOutput.GoString">func (StartHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=52646:52693#L1496">GoString</a>
+					<a class="permalink" href="index.html#StartHumanLoopOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopOutput.SetHumanLoopArn">func (*StartHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=52774:52852#L1501">SetHumanLoopArn</a>
+					<a class="permalink" href="index.html#StartHumanLoopOutput.SetHumanLoopArn">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>) SetHumanLoopArn(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a></pre>
+				<p>
+SetHumanLoopArn sets the HumanLoopArn field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StartHumanLoopOutput.String">func (StartHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=52317:52362#L1487">String</a>
+					<a class="permalink" href="index.html#StartHumanLoopOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StartHumanLoopOutput">StartHumanLoopOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StopHumanLoopInput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=52889:53114#L1506">StopHumanLoopInput</a>
+				<a class="permalink" href="index.html#StopHumanLoopInput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StopHumanLoopInput struct {
+
+    <span class="comment">// The name of the human loop that you want to stop.</span>
+    <span class="comment">//</span>
+<span id="StopHumanLoopInput.HumanLoopName"></span>    <span class="comment">// HumanLoopName is a required field</span>
+    HumanLoopName *<a href="../../../../../builtin/index.html#string">string</a> `min:&#34;1&#34; type:&#34;string&#34; required:&#34;true&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StopHumanLoopInput.GoString">func (StopHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=53691:53736#L1529">GoString</a>
+					<a class="permalink" href="index.html#StopHumanLoopInput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StopHumanLoopInput.SetHumanLoopName">func (*StopHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=54315:54390#L1550">SetHumanLoopName</a>
+					<a class="permalink" href="index.html#StopHumanLoopInput.SetHumanLoopName">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) SetHumanLoopName(v <a href="../../../../../builtin/index.html#string">string</a>) *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a></pre>
+				<p>
+SetHumanLoopName sets the HumanLoopName field&#39;s value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StopHumanLoopInput.String">func (StopHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=53364:53407#L1520">String</a>
+					<a class="permalink" href="index.html#StopHumanLoopInput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StopHumanLoopInput.Validate">func (*StopHumanLoopInput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=53837:53882#L1534">Validate</a>
+					<a class="permalink" href="index.html#StopHumanLoopInput.Validate">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StopHumanLoopInput">StopHumanLoopInput</a>) Validate() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+Validate inspects the fields of the type to determine if they are valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StopHumanLoopOutput">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=54428:54494#L1555">StopHumanLoopOutput</a>
+				<a class="permalink" href="index.html#StopHumanLoopOutput">¶</a>
+				
+				
+			</h2>
+			
+			<pre>type StopHumanLoopOutput struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StopHumanLoopOutput.GoString">func (StopHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=55072:55118#L1573">GoString</a>
+					<a class="permalink" href="index.html#StopHumanLoopOutput.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StopHumanLoopOutput">StopHumanLoopOutput</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StopHumanLoopOutput.String">func (StopHumanLoopOutput) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=54744:54788#L1564">String</a>
+					<a class="permalink" href="index.html#StopHumanLoopOutput.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#StopHumanLoopOutput">StopHumanLoopOutput</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ThrottlingException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=55191:55402#L1578">ThrottlingException</a>
+				<a class="permalink" href="index.html#ThrottlingException">¶</a>
+				
+				
+			</h2>
+			<p>
+You exceeded the maximum number of requests.
+</p>
+
+			<pre>type ThrottlingException struct {
+<span id="ThrottlingException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ThrottlingException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ThrottlingException.Code">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56217:56260#L1610">Code</a>
+					<a class="permalink" href="index.html#ThrottlingException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Error">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56579:56623#L1627">Error</a>
+					<a class="permalink" href="index.html#ThrottlingException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.GoString">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=55980:56026#L1599">GoString</a>
+					<a class="permalink" href="index.html#ThrottlingException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.Message">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56340:56386#L1615">Message</a>
+					<a class="permalink" href="index.html#ThrottlingException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.OrigErr">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56516:56561#L1623">OrigErr</a>
+					<a class="permalink" href="index.html#ThrottlingException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.RequestID">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56913:56961#L1637">RequestID</a>
+					<a class="permalink" href="index.html#ThrottlingException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.StatusCode">func (*ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=56760:56806#L1632">StatusCode</a>
+					<a class="permalink" href="index.html#ThrottlingException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ThrottlingException">ThrottlingException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ThrottlingException.String">func (ThrottlingException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=55652:55696#L1590">String</a>
+					<a class="permalink" href="index.html#ThrottlingException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ThrottlingException">ThrottlingException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidationException">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=57060:57271#L1642">ValidationException</a>
+				<a class="permalink" href="index.html#ValidationException">¶</a>
+				
+				
+			</h2>
+			<p>
+The request isn&#39;t valid. Check the syntax and try again.
+</p>
+
+			<pre>type ValidationException struct {
+<span id="ValidationException.RespMetadata"></span>    RespMetadata <a href="../../private/protocol/index.html">protocol</a>.<a href="../../private/protocol/index.html#ResponseMetadata">ResponseMetadata</a> `json:&#34;-&#34; xml:&#34;-&#34;`
+
+<span id="ValidationException.Message_"></span>    Message_ *<a href="../../../../../builtin/index.html#string">string</a> `locationName:&#34;Message&#34; type:&#34;string&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ValidationException.Code">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58086:58129#L1674">Code</a>
+					<a class="permalink" href="index.html#ValidationException.Code">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Code() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Code returns the exception type name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Error">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58448:58492#L1691">Error</a>
+					<a class="permalink" href="index.html#ValidationException.Error">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Error() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.GoString">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=57849:57895#L1663">GoString</a>
+					<a class="permalink" href="index.html#ValidationException.GoString">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) GoString() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+GoString returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.Message">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58209:58255#L1679">Message</a>
+					<a class="permalink" href="index.html#ValidationException.Message">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) Message() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+Message returns the exception&#39;s message.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.OrigErr">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58385:58430#L1687">OrigErr</a>
+					<a class="permalink" href="index.html#ValidationException.OrigErr">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) OrigErr() <a href="../../../../../builtin/index.html#error">error</a></pre>
+				<p>
+OrigErr always returns nil, satisfies awserr.Error interface.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.RequestID">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58782:58830#L1701">RequestID</a>
+					<a class="permalink" href="index.html#ValidationException.RequestID">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) RequestID() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+RequestID returns the service&#39;s response RequestID for request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.StatusCode">func (*ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=58629:58675#L1696">StatusCode</a>
+					<a class="permalink" href="index.html#ValidationException.StatusCode">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#ValidationException">ValidationException</a>) StatusCode() <a href="../../../../../builtin/index.html#int">int</a></pre>
+				<p>
+Status code returns the HTTP status code for the request&#39;s response error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ValidationException.String">func (ValidationException) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/service/augmentedairuntime/api.go?s=57521:57565#L1654">String</a>
+					<a class="permalink" href="index.html#ValidationException.String">¶</a>
+					
+					
+				</h3>
+				<pre>func (s <a href="index.html#ValidationException">ValidationException</a>) String() <a href="../../../../../builtin/index.html#string">string</a></pre>
+				<p>
+String returns the string representation.
+</p>
+<p>
+API parameter values that are decorated as &#34;sensitive&#34; in the API will not
+be included in the string output. The member name will be present, but the
+value will be replaced with &#34;sensitive&#34;.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	<div class="pkg-dir">
+		<table>
+			<tbody><tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				<tr>
+				
+					<td class="pkg-name" style="padding-left: 0px;">
+						<a href="augmentedairuntimeiface/index.html">augmentedairuntimeiface</a>
+					</td>
+				
+					<td class="pkg-synopsis">
+						Package augmentedairuntimeiface provides an interface to enable mocking the Amazon Augmented AI Runtime service client for testing your code.
+					</td>
+				</tr>
+			
+		</tbody></table>
+	</div>
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#375EAB"/>
+
+  <title>v4 - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css"/>
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../../../lib/godoc/jquery.js" defer=""></script>
+
+
+
+<script>var goVersion = "go1.17";</script>
+<script src="../../../../../../../lib/godoc/godocs.js" defer=""></script>
+</head>
+<body>
+
+<div id="lowframe" style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">▽</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required=""/><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package v4
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import &#34;github.com/aws/aws-sdk-go/aws/signer/v4&#34;</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package v4 implements signing for AWS V4 signer
+</p>
+<p>
+Provides request signing for request that need to be signed with
+AWS V4 Signatures.
+</p>
+<h3 id="hdr-Standalone_Signer">Standalone Signer</h3>
+<p>
+Generally using the signer outside of the SDK should not require any additional
+logic when using Go v1.5 or higher. The signer does this by taking advantage
+of the URL.EscapedPath method. If your request URI requires additional escaping
+you many need to use the URL.Opaque to define what the raw URI should be sent
+to the service as.
+</p>
+<p>
+The signer will first check the URL.Opaque field, and use its value if set.
+The signer does require the URL.Opaque field to be set in the form of:
+</p>
+<pre>&#34;//&lt;hostname&gt;/&lt;path&gt;&#34;
+
+// e.g.
+&#34;//example.com/some/path&#34;
+</pre>
+<p>
+The leading &#34;//&#34; and hostname are required or the URL.Opaque escaping will
+not work correctly.
+</p>
+<p>
+If URL.Opaque is not set the signer will fallback to the URL.EscapedPath()
+method and using the returned value. If you&#39;re using Go v1.4 you must set
+URL.Opaque if the URI path needs escaping. If URL.Opaque is not set with
+Go v1.5 the signer will fallback to URL.Path.
+</p>
+<p>
+AWS v4 signature validation requires that the canonical string&#39;s URI path
+element must be the URI escaped form of the HTTP request&#39;s path.
+<a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>
+</p>
+<p>
+The Go HTTP client will perform escaping automatically on the request. Some
+of these escaping may cause signature validation errors because the HTTP
+request differs from the URI path or query that the signature was generated.
+<a href="https://golang.org/pkg/net/url/#URL.EscapedPath">https://golang.org/pkg/net/url/#URL.EscapedPath</a>
+</p>
+<p>
+Because of this, it is recommended that when using the signer outside of the
+SDK that explicitly escaping the request prior to being signed is preferable,
+and will help prevent signature validation errors. This can be done by setting
+the URL.Opaque or URL.RawPath. The SDK will use URL.Opaque first and then
+call URL.EscapedPath() if Opaque is not set.
+</p>
+<p>
+If signing a request intended for HTTP2 server, and you&#39;re using Go 1.6.2
+through 1.7.4 you should use the URL.RawPath as the pre-escaped form of the
+request URL. <a href="https://github.com/golang/go/issues/16847">https://github.com/golang/go/issues/16847</a> points to a bug in
+Go pre 1.8 that fails to make HTTP2 requests using absolute URL in the HTTP
+message. URL.Opaque generally will force Go to make requests with absolute URL.
+URL.RawPath does not do this, but RawPath must be a valid escaping of Path
+or url.EscapedPath will ignore the RawPath escaping.
+</p>
+<p>
+Test `TestStandaloneSign` provides a complete example of using the signer
+outside of the SDK and pre-escaping the URI path.
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BuildNamedHandler">func BuildNamedHandler(name string, opts ...func(*Signer)) request.NamedHandler</a></dd>
+			
+				
+				<dd><a href="index.html#GetSignedRequestSignature">func GetSignedRequestSignature(r *http.Request) ([]byte, error)</a></dd>
+			
+				
+				<dd><a href="index.html#SignSDKRequest">func SignSDKRequest(req *request.Request)</a></dd>
+			
+				
+				<dd><a href="index.html#SignSDKRequestWithCurrentTime">func SignSDKRequestWithCurrentTime(req *request.Request, curTimeFn func() time.Time, opts ...func(*Signer))</a></dd>
+			
+				
+				<dd><a href="index.html#WithUnsignedPayload">func WithUnsignedPayload(v4 *Signer)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Signer">type Signer</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewSigner">func NewSigner(credentials *credentials.Credentials, options ...func(*Signer)) *Signer</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#Signer.Presign">func (v4 Signer) Presign(r *http.Request, body io.ReadSeeker, service, region string, exp time.Duration, signTime time.Time) (http.Header, error)</a></dd>
+				
+					
+					<dd>    <a href="index.html#Signer.Sign">func (v4 Signer) Sign(r *http.Request, body io.ReadSeeker, service, region string, signTime time.Time) (http.Header, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StreamSigner">type StreamSigner</a></dd>
+				
+					
+					<dd>    <a href="index.html#NewStreamSigner">func NewStreamSigner(region, service string, seedSignature []byte, credentials *credentials.Credentials) *StreamSigner</a></dd>
+				
+				
+					
+					<dd>    <a href="index.html#StreamSigner.GetSignature">func (s *StreamSigner) GetSignature(headers, payload []byte, date time.Time) ([]byte, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/header_rules.go">header_rules.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/options.go">options.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/request_context_go1.7.go">request_context_go1.7.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/stream.go">stream.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/uri_path.go">uri_path.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go">v4.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+SignRequestHandler is a named request handler the SDK will use to sign
+service client request with using the V4 signature.
+</p>
+
+				<pre>var <span id="SignRequestHandler">SignRequestHandler</span> = <a href="../../request/index.html">request</a>.<a href="../../request/index.html#NamedHandler">NamedHandler</a>{
+    <a href="../../request/index.html#NamedHandler.Name">Name</a>: &#34;v4.SignRequestHandler&#34;, <a href="../../request/index.html#NamedHandler.Fn">Fn</a>: <a href="index.html#SignSDKRequest">SignSDKRequest</a>,
+}</pre>
+			
+		
+		
+			
+			
+			<h2 id="BuildNamedHandler">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=17069:17148#L423">BuildNamedHandler</a>
+				<a class="permalink" href="index.html#BuildNamedHandler">¶</a>
+				
+				
+			</h2>
+			<pre>func BuildNamedHandler(name <a href="../../../../../../builtin/index.html#string">string</a>, opts ...func(*<a href="index.html#Signer">Signer</a>)) <a href="../../request/index.html">request</a>.<a href="../../request/index.html#NamedHandler">NamedHandler</a></pre>
+			<p>
+BuildNamedHandler will build a generic handler for signing.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetSignedRequestSignature">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=20838:20901#L545">GetSignedRequestSignature</a>
+				<a class="permalink" href="index.html#GetSignedRequestSignature">¶</a>
+				
+				
+			</h2>
+			<pre>func GetSignedRequestSignature(r *<a href="../../../../../../net/http/index.html">http</a>.<a href="../../../../../../net/http/index.html#Request">Request</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+			<p>
+GetSignedRequestSignature attempts to extract the signature of the request.
+Returning an error if the request is unsigned, or unable to extract the
+signature.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SignSDKRequest">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=16913:16954#L418">SignSDKRequest</a>
+				<a class="permalink" href="index.html#SignSDKRequest">¶</a>
+				
+				
+			</h2>
+			<pre>func SignSDKRequest(req *<a href="../../request/index.html">request</a>.<a href="../../request/index.html#Request">Request</a>)</pre>
+			<p>
+SignSDKRequest signs an AWS request with the V4 signature. This
+request handler should only be used with the SDK&#39;s built in service client&#39;s
+API operation requests.
+</p>
+<p>
+This function should not be used on its own, but in conjunction with
+an AWS service client&#39;s API operation call. To sign a standalone request
+not created by a service client&#39;s API operation method use the &#34;Sign&#34; or
+&#34;Presign&#34; functions of the &#34;Signer&#34; type.
+</p>
+<p>
+If the credentials of the request&#39;s config are set to
+credentials.AnonymousCredentials the request will not be signed.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SignSDKRequestWithCurrentTime">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=17530:17637#L435">SignSDKRequestWithCurrentTime</a>
+				<a class="permalink" href="index.html#SignSDKRequestWithCurrentTime">¶</a>
+				
+				
+			</h2>
+			<pre>func SignSDKRequestWithCurrentTime(req *<a href="../../request/index.html">request</a>.<a href="../../request/index.html#Request">Request</a>, curTimeFn func() <a href="../../../../../../time/index.html">time</a>.<a href="../../../../../../time/index.html#Time">Time</a>, opts ...func(*<a href="index.html#Signer">Signer</a>))</pre>
+			<p>
+SignSDKRequestWithCurrentTime will sign the SDK&#39;s request using the time
+function passed in. Behaves the same as SignSDKRequest with the exception
+the request is signed with the value returned by the current time function.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithUnsignedPayload">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/options.go?s=107:143#L1">WithUnsignedPayload</a>
+				<a class="permalink" href="index.html#WithUnsignedPayload">¶</a>
+				
+				
+			</h2>
+			<pre>func WithUnsignedPayload(v4 *<a href="index.html#Signer">Signer</a>)</pre>
+			<p>
+WithUnsignedPayload will enable and set the UnsignedPayload field to
+true of the signer.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Signer">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=6854:8986#L150">Signer</a>
+				<a class="permalink" href="index.html#Signer">¶</a>
+				
+				
+			</h2>
+			<p>
+Signer applies AWS v4 signing to given request. Use this to sign requests
+that need to be signed with AWS V4 Signatures.
+</p>
+
+			<pre>type Signer struct {
+    <span class="comment">// The authentication credentials the request will be signed against.</span>
+    <span class="comment">// This value must be set to sign requests.</span>
+<span id="Signer.Credentials"></span>    Credentials *<a href="../../credentials/index.html">credentials</a>.<a href="../../credentials/index.html#Credentials">Credentials</a>
+
+    <span class="comment">// Sets the log level the signer should use when reporting information to</span>
+    <span class="comment">// the logger. If the logger is nil nothing will be logged. See</span>
+    <span class="comment">// aws.LogLevelType for more information on available logging levels</span>
+    <span class="comment">//</span>
+    <span class="comment">// By default nothing will be logged.</span>
+<span id="Signer.Debug"></span>    Debug <a href="../../index.html">aws</a>.<a href="../../index.html#LogLevelType">LogLevelType</a>
+
+    <span class="comment">// The logger loging information will be written to. If there the logger</span>
+    <span class="comment">// is nil, nothing will be logged.</span>
+<span id="Signer.Logger"></span>    Logger <a href="../../index.html">aws</a>.<a href="../../index.html#Logger">Logger</a>
+
+    <span class="comment">// Disables the Signer&#39;s moving HTTP header key/value pairs from the HTTP</span>
+    <span class="comment">// request header to the request&#39;s query string. This is most commonly used</span>
+    <span class="comment">// with pre-signed requests preventing headers from being added to the</span>
+    <span class="comment">// request&#39;s query string.</span>
+<span id="Signer.DisableHeaderHoisting"></span>    DisableHeaderHoisting <a href="../../../../../../builtin/index.html#bool">bool</a>
+
+    <span class="comment">// Disables the automatic escaping of the URI path of the request for the</span>
+    <span class="comment">// siganture&#39;s canonical string&#39;s path. For services that do not need additional</span>
+    <span class="comment">// escaping then use this to disable the signer escaping the path.</span>
+    <span class="comment">//</span>
+    <span class="comment">// S3 is an example of a service that does not need additional escaping.</span>
+    <span class="comment">//</span>
+    <span class="comment">// http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</span>
+<span id="Signer.DisableURIPathEscaping"></span>    DisableURIPathEscaping <a href="../../../../../../builtin/index.html#bool">bool</a>
+
+    <span class="comment">// Disables the automatical setting of the HTTP request&#39;s Body field with the</span>
+    <span class="comment">// io.ReadSeeker passed in to the signer. This is useful if you&#39;re using a</span>
+    <span class="comment">// custom wrapper around the body for the io.ReadSeeker and want to preserve</span>
+    <span class="comment">// the Body value on the Request.Body.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This does run the risk of signing a request with a body that will not be</span>
+    <span class="comment">// sent in the request. Need to ensure that the underlying data of the Body</span>
+    <span class="comment">// values are the same.</span>
+<span id="Signer.DisableRequestBodyOverwrite"></span>    DisableRequestBodyOverwrite <a href="../../../../../../builtin/index.html#bool">bool</a>
+
+<span id="Signer.UnsignedPayload"></span>    <span class="comment">// UnsignedPayload will prevent signing of the payload. This will only</span>
+    <span class="comment">// work for services that have support for this.</span>
+    UnsignedPayload <a href="../../../../../../builtin/index.html#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSigner">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=9176:9262#L204">NewSigner</a>
+					<a class="permalink" href="index.html#NewSigner">¶</a>
+					
+					
+				</h3>
+				<pre>func NewSigner(credentials *<a href="../../credentials/index.html">credentials</a>.<a href="../../credentials/index.html#Credentials">Credentials</a>, options ...func(*<a href="index.html#Signer">Signer</a>)) *<a href="index.html#Signer">Signer</a></pre>
+				<p>
+NewSigner returns a Signer pointer configured with the credentials and optional
+option values provided. If not options are provided the Signer will use its
+default configuration.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Signer.Presign">func (Signer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=13306:13451#L301">Presign</a>
+					<a class="permalink" href="index.html#Signer.Presign">¶</a>
+					
+					
+				</h3>
+				<pre>func (v4 <a href="index.html#Signer">Signer</a>) Presign(r *<a href="../../../../../../net/http/index.html">http</a>.<a href="../../../../../../net/http/index.html#Request">Request</a>, body <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#ReadSeeker">ReadSeeker</a>, service, region <a href="../../../../../../builtin/index.html#string">string</a>, exp <a href="../../../../../../time/index.html">time</a>.<a href="../../../../../../time/index.html#Duration">Duration</a>, signTime <a href="../../../../../../time/index.html">time</a>.<a href="../../../../../../time/index.html#Time">Time</a>) (<a href="../../../../../../net/http/index.html">http</a>.<a href="../../../../../../net/http/index.html#Header">Header</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Presign signs AWS v4 requests with the provided body, service name, region
+the request is made to, and time the request is signed at. The signTime
+allows you to specify that a request is signed for the future, and cannot
+be used until then.
+</p>
+<p>
+Returns a list of HTTP headers that were included in the signature or an
+error if signing the request failed. For presigned requests these headers
+and their values must be included on the HTTP request when it is made. This
+is helpful to know what header values need to be shared with the party the
+presigned request will be distributed to.
+</p>
+<p>
+Presign differs from Sign in that it will sign the request using query string
+instead of header values. This allows you to share the Presigned Request&#39;s
+URL with third parties, or distribute it throughout your system with minimal
+dependencies.
+</p>
+<p>
+Presign also takes an exp value which is the duration the
+signed request will be valid after the signing time. This is allows you to
+set when the request will expire.
+</p>
+<p>
+The requests body is an io.ReadSeeker so the SHA256 of the body can be
+generated. To bypass the signer computing the hash you can set the
+&#34;X-Amz-Content-Sha256&#34; header with a precomputed value. The signer will
+only compute the hash if the request header value is empty.
+</p>
+<p>
+Presigning a S3 request will not compute the body&#39;s SHA256 hash by default.
+This is done due to the general use case for S3 presigned URLs is to share
+PUT/GET capabilities. If you would like to include the body&#39;s SHA256 in the
+presigned request&#39;s signature you can set the &#34;X-Amz-Content-Sha256&#34;
+HTTP header and that will be included in the request&#39;s signature.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Signer.Sign">func (Signer) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/v4.go?s=11393:11516#L267">Sign</a>
+					<a class="permalink" href="index.html#Signer.Sign">¶</a>
+					
+					
+				</h3>
+				<pre>func (v4 <a href="index.html#Signer">Signer</a>) Sign(r *<a href="../../../../../../net/http/index.html">http</a>.<a href="../../../../../../net/http/index.html#Request">Request</a>, body <a href="../../../../../../io/index.html">io</a>.<a href="../../../../../../io/index.html#ReadSeeker">ReadSeeker</a>, service, region <a href="../../../../../../builtin/index.html#string">string</a>, signTime <a href="../../../../../../time/index.html">time</a>.<a href="../../../../../../time/index.html#Time">Time</a>) (<a href="../../../../../../net/http/index.html">http</a>.<a href="../../../../../../net/http/index.html#Header">Header</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+Sign signs AWS v4 requests with the provided body, service name, region the
+request is made to, and time the request is signed at. The signTime allows
+you to specify that a request is signed for the future, and cannot be
+used until then.
+</p>
+<p>
+Returns a list of HTTP headers that were included in the signature or an
+error if signing the request failed. Generally for signed requests this value
+is not needed as the full request context will be captured by the http.Request
+value. It is included for reference though.
+</p>
+<p>
+Sign will set the request&#39;s Body to be the `body` parameter passed in. If
+the body is not already an io.ReadCloser, it will be wrapped within one. If
+a `nil` body parameter passed to Sign, the request&#39;s Body field will be
+also set to nil. Its important to note that this functionality will not
+change the request&#39;s ContentLength of the request.
+</p>
+<p>
+Sign differs from Presign in that it will sign the request using HTTP
+header values. This type of signing is intended for http.Request values that
+will not be shared, or are shared in a way the header values on the request
+will not be lost.
+</p>
+<p>
+The requests body is an io.ReadSeeker so the SHA256 of the body can be
+generated. To bypass the signer computing the hash you can set the
+&#34;X-Amz-Content-Sha256&#34; header with a precomputed value. The signer will
+only compute the hash if the request header value is empty.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StreamSigner">type <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/stream.go?s=251:366#L6">StreamSigner</a>
+				<a class="permalink" href="index.html#StreamSigner">¶</a>
+				
+				
+			</h2>
+			<p>
+StreamSigner implements signing of event stream encoded payloads
+</p>
+
+			<pre>type StreamSigner struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStreamSigner">func <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/stream.go?s=453:571#L16">NewStreamSigner</a>
+					<a class="permalink" href="index.html#NewStreamSigner">¶</a>
+					
+					
+				</h3>
+				<pre>func NewStreamSigner(region, service <a href="../../../../../../builtin/index.html#string">string</a>, seedSignature []<a href="../../../../../../builtin/index.html#byte">byte</a>, credentials *<a href="../../credentials/index.html">credentials</a>.<a href="../../credentials/index.html#Credentials">Credentials</a>) *<a href="index.html#StreamSigner">StreamSigner</a></pre>
+				<p>
+NewStreamSigner creates a SigV4 signer used to sign Event Stream encoded messages
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="StreamSigner.GetSignature">func (*StreamSigner) <a href="http://localhost:6060/src/github.com/aws/aws-sdk-go/aws/signer/v4/stream.go?s=798:890#L26">GetSignature</a>
+					<a class="permalink" href="index.html#StreamSigner.GetSignature">¶</a>
+					
+					
+				</h3>
+				<pre>func (s *<a href="index.html#StreamSigner">StreamSigner</a>) GetSignature(headers, payload []<a href="../../../../../../builtin/index.html#byte">byte</a>, date <a href="../../../../../../time/index.html">time</a>.<a href="../../../../../../time/index.html#Time">Time</a>) ([]<a href="../../../../../../builtin/index.html#byte">byte</a>, <a href="../../../../../../builtin/index.html#error">error</a>)</pre>
+				<p>
+GetSignature takes an event stream encoded headers and payload and returns a signature
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.17.<br/>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br/>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+
+</body></html>
