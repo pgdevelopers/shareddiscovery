@@ -1,0 +1,30 @@
+name: test
+on: push
+
+jobs:
+  unittests:
+    name: run unit tests
+    runs-on: ubuntu-20.04
+    steps:
+      - name: cache go deps
+        uses: actions/cache@v1
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashfiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+      
+      - name: set up go 1.17
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+        id: go
+
+      - name: check out code
+        uses: actions/checkout@v2
+
+      - name: get dependencies
+        run: go get -t -v -d
+
+      - name: run tests
+        run: make test
