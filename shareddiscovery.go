@@ -63,9 +63,6 @@ func (service SharedDiscovery) GetConfig(ctx context.Context, apiToken string, q
 	_, configSpan := beeline.StartSpan(ctx, "GetConfig")
 	configSpan.AddField("table_name", query.Workspace)
 
-	var err error
-	var appResult *dynamodb.GetItemOutput
-
 	// dynamically build attribute values
 	searchAttributes := map[string]*dynamodb.AttributeValue{
 		"apiToken": {
@@ -74,7 +71,7 @@ func (service SharedDiscovery) GetConfig(ctx context.Context, apiToken string, q
 	}
 	searchAttributes = addNeededSearchAttributes(searchAttributes, query)
 
-	appResult, err = service.DynamodbSvc.GetItem(&dynamodb.GetItemInput{
+	appResult, err := service.DynamodbSvc.GetItem(&dynamodb.GetItemInput{
 		TableName: &query.Workspace,
 		Key:       searchAttributes,
 	})
