@@ -1,9 +1,8 @@
 <p align="center"><img src="lightyear-logo.png"></img></p>
 
-# Shared Discovery
-
 ![Test](https://github.com/pgdevelopers/shareddiscovery/actions/workflows/gotest.yml/badge.svg)
 
+# Shared Discovery
 A library for shared code in the Discovery Service.
 
 [API Documentation](https://pgdevelopers.github.io/shareddiscovery)
