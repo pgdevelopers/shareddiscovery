@@ -39,15 +39,15 @@ type QueryInput struct {
 	Workspace   string
 }
 
-// SharedDiscoveryIFace describes what is required for building a SharedDiscovery implementation.
-type SharedDiscoveryIFace interface {
+// IFace describes what is required for building a SharedDiscovery implementation.
+type IFace interface {
 	GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error)
 	AdminGetAPIToken(ctx context.Context, secretKey string, query QueryInput) (string, error)
 }
 
 // SharedDiscovery is a custom service object for interacting with the global config
 type SharedDiscovery struct {
-	SharedDiscoveryIFace
+	IFace
 	DynamodbSvc dynamodbiface.DynamoDBAPI
 }
 

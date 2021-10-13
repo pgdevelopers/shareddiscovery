@@ -32,7 +32,9 @@ func TestGetConfig_Success(t *testing.T) {
 				},
 			}}).
 		Return(&dynamodb.GetItemOutput{Item: map[string]*dynamodb.AttributeValue{
-			"field": &dynamodb.AttributeValue{S: &value},
+			"field": {
+				S: &value,
+			},
 		}}, nil)
 
 	if _, err := self.GetConfig(ctx, token, query); err != nil {
@@ -48,7 +50,7 @@ func TestGetConfig_Err(t *testing.T) {
 		self         = New(mockDynamoDB)
 		query        = QueryInput{Workspace: "apps"}
 		token        = "apiToken"
-		want         = errors.New("error recieved")
+		want         = errors.New("error received")
 	)
 
 	mockDynamoDB.
@@ -91,7 +93,7 @@ func TestGetConfig_WithCountry(t *testing.T) {
 				},
 			}}).
 		Return(&dynamodb.GetItemOutput{Item: map[string]*dynamodb.AttributeValue{
-			"field": &dynamodb.AttributeValue{S: &value},
+			"field": {S: &value},
 		}}, nil)
 
 	if _, err := self.GetConfig(ctx, token, query); err != nil {
@@ -253,10 +255,10 @@ func TestAdminGetAPIToken_InvalidSignature(t *testing.T) {
 // and initialize that variable in your modules init function using
 // the New() function provided
 func Example() {
-	var shareddiscovery SharedDiscoveryIFace
+	var shareddiscovery IFace
 
 	// setup AWS Session
-	session := session.New()
+	session, _ := session.NewSession()
 
 	// setup DynamoDB
 	dynamo := dynamodb.New(session)
@@ -268,7 +270,11 @@ func Example() {
 	shareddiscovery = New(dynamo)
 
 	// call functions
-	shareddiscovery.GetConfig(context.Background(), "someApiToken", query)
+	_, err := shareddiscovery.GetConfig(context.Background(), "someApiToken", query)
+	if err != nil {
+		// deal with the error
+	}
+
 }
 
 // For making an admin call, a secretKey is required
@@ -276,10 +282,10 @@ func Example() {
 // signature correctly. The callers signature should also
 // be passed via in to verify.
 func ExampleSharedDiscovery_AdminGetAPIToken() {
-	var shareddiscovery SharedDiscoveryIFace
+	var shareddiscovery IFace
 
 	// setup AWS Session
-	session := session.New()
+	session, _ := session.NewSession()
 
 	// setup DynamoDB
 	dynamo := dynamodb.New(session)
@@ -302,27 +308,36 @@ func ExampleSharedDiscovery_AdminGetAPIToken() {
 	shareddiscovery = New(dynamo)
 
 	// call functions
-	shareddiscovery.AdminGetAPIToken(context.Background(), "secretKey", query)
+	_, err := shareddiscovery.AdminGetAPIToken(context.Background(), "secretKey", query)
+	if err != nil {
+		// deal with the error
+	}
 }
 
 // Passing in only the workspace as a query is best used when the
 // apiToken is unique for every row. In our case, this is the Firmware
 // table
 func ExampleSharedDiscovery_GetConfig_withoutCountry() {
-	session := session.New()
+	session, _ := session.NewSession()
 	shared := New(dynamodb.New(session))
 	query := QueryInput{Workspace: "tableName"}
-	shared.GetConfig(context.Background(), "apitoken", query)
+	_, err := shared.GetConfig(context.Background(), "apitoken", query)
+	if err != nil {
+		// deal with the error
+	}
 }
 
 // Passing in a Country will get data from the table filtered by
 // the apiToken and Country. This is useful when the apiToken isn't
 // unique per row, but an apiToken can have multiple countries.
 func ExampleSharedDiscovery_GetConfig_withCountry() {
-	session := session.New()
+	session, _ := session.NewSession()
 	shared := New(dynamodb.New(session))
 	query := QueryInput{Workspace: "tableName", Country: "US"}
-	shared.GetConfig(context.Background(), "apitoken", query)
+	_, err := shared.GetConfig(context.Background(), "apitoken", query)
+	if err != nil {
+		// deal with the error
+	}
 }
 
 func generateQueryWithoutAppName() QueryInput {

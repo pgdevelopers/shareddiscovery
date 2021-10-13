@@ -1,6 +1,7 @@
 <p align="center"><img src="lightyear-logo.png"></img></p>
 
 ![Test](https://github.com/pgdevelopers/shareddiscovery/actions/workflows/gotest.yml/badge.svg)
+![Lint](https://github.com/pgdevelopers/shareddiscovery/actions/workflows/golint.yml/badge.svg)
 
 # Shared Discovery
 A library for shared code in the Discovery Service.
@@ -42,7 +43,7 @@ See [the docs](https://pgdevelopers.github.io/shareddiscovery) for complete API 
 	  "github.com/aws/aws-sdk-go/service/dynamodb"
   )
 
-  var discovery SharedDiscoveryIFace
+  var discovery shareddiscovery.IFace
 
   func main() {
     query := QueryInput{Workspace: "tableName"}
