@@ -122,10 +122,10 @@ the New() function provided
 		
 			<p>Code:</p>
 			<pre class="code">
-var shareddiscovery SharedDiscoveryIFace
+var shareddiscovery IFace
 
 <span class="comment">// setup AWS Session</span>
-session := session.New()
+session, _ := session.NewSession()
 
 <span class="comment">// setup DynamoDB</span>
 dynamo := dynamodb.New(session)
@@ -137,7 +137,11 @@ query := QueryInput{Workspace: &#34;tableName&#34;}
 shareddiscovery = New(dynamo)
 
 <span class="comment">// call functions</span>
-shareddiscovery.GetConfig(context.Background(), &#34;someApiToken&#34;, query)
+_, err := shareddiscovery.GetConfig(context.Background(), &#34;someApiToken&#34;, query)
+if err != nil {
+    <span class="comment">// deal with the error</span>
+}
+
 </pre>
 			
 		
@@ -162,6 +166,11 @@ shareddiscovery.GetConfig(context.Background(), &#34;someApiToken&#34;, query)
 			
 			
 				
+				<dd><a href="#IFace">type IFace</a></dd>
+				
+				
+			
+				
 				<dd><a href="#QueryInput">type QueryInput</a></dd>
 				
 				
@@ -178,11 +187,6 @@ shareddiscovery.GetConfig(context.Background(), &#34;someApiToken&#34;, query)
 				
 					
 					<dd>&nbsp; &nbsp; <a href="#SharedDiscovery.GetConfig">func (service SharedDiscovery) GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error)</a></dd>
-				
-			
-				
-				<dd><a href="#SharedDiscoveryIFace">type SharedDiscoveryIFace</a></dd>
-				
 				
 			
 			
@@ -225,6 +229,34 @@ shareddiscovery.GetConfig(context.Background(), &#34;someApiToken&#34;, query)
 		
 		
 		
+		
+			
+			
+			<h2 id="IFace">type <a href="./https:/pgdevelopers.github.io/shareddiscovery/src/github.com/pgdevelopers/shareddiscovery/shareddiscovery.go#L43">IFace</a>
+				<a class="permalink" href="#IFace">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IFace describes what is required for building a SharedDiscovery implementation.
+</p>
+
+			<pre>type IFace interface {
+    GetConfig(ctx <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/">context</a>.<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/#Context">Context</a>, apiToken <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, query <a href="#QueryInput">QueryInput</a>) (map[<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>]interface{}, <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#error">error</a>)
+    AdminGetAPIToken(ctx <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/">context</a>.<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/#Context">Context</a>, secretKey <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, query <a href="#QueryInput">QueryInput</a>) (<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
 		
 			
 			
@@ -272,7 +304,7 @@ SharedDiscovery is a custom service object for interacting with the global confi
 </p>
 
 			<pre>type SharedDiscovery struct {
-    <a href="#SharedDiscoveryIFace">SharedDiscoveryIFace</a>
+    <a href="#IFace">IFace</a>
 <span id="SharedDiscovery.DynamodbSvc"></span>    DynamodbSvc <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface/">dynamodbiface</a>.<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface/#DynamoDBAPI">DynamoDBAPI</a>
 }
 </pre>
@@ -334,10 +366,10 @@ be passed via in to verify.
 		
 			<p>Code:</p>
 			<pre class="code">
-var shareddiscovery SharedDiscoveryIFace
+var shareddiscovery IFace
 
 <span class="comment">// setup AWS Session</span>
-session := session.New()
+session, _ := session.NewSession()
 
 <span class="comment">// setup DynamoDB</span>
 dynamo := dynamodb.New(session)
@@ -360,7 +392,10 @@ query := QueryInput{
 shareddiscovery = New(dynamo)
 
 <span class="comment">// call functions</span>
-shareddiscovery.AdminGetAPIToken(context.Background(), &#34;secretKey&#34;, query)
+_, err := shareddiscovery.AdminGetAPIToken(context.Background(), &#34;secretKey&#34;, query)
+if err != nil {
+    <span class="comment">// deal with the error</span>
+}
 </pre>
 			
 		
@@ -396,10 +431,13 @@ unique per row, but an apiToken can have multiple countries.
 		
 			<p>Code:</p>
 			<pre class="code">
-session := session.New()
+session, _ := session.NewSession()
 shared := New(dynamodb.New(session))
 query := QueryInput{Workspace: &#34;tableName&#34;, Country: &#34;US&#34;}
-shared.GetConfig(context.Background(), &#34;apitoken&#34;, query)
+_, err := shared.GetConfig(context.Background(), &#34;apitoken&#34;, query)
+if err != nil {
+    <span class="comment">// deal with the error</span>
+}
 </pre>
 			
 		
@@ -419,10 +457,13 @@ table
 		
 			<p>Code:</p>
 			<pre class="code">
-session := session.New()
+session, _ := session.NewSession()
 shared := New(dynamodb.New(session))
 query := QueryInput{Workspace: &#34;tableName&#34;}
-shared.GetConfig(context.Background(), &#34;apitoken&#34;, query)
+_, err := shared.GetConfig(context.Background(), &#34;apitoken&#34;, query)
+if err != nil {
+    <span class="comment">// deal with the error</span>
+}
 </pre>
 			
 		
@@ -430,34 +471,6 @@ shared.GetConfig(context.Background(), &#34;apitoken&#34;, query)
 </div>
 
 				
-			
-		
-			
-			
-			<h2 id="SharedDiscoveryIFace">type <a href="./https:/pgdevelopers.github.io/shareddiscovery/src/github.com/pgdevelopers/shareddiscovery/shareddiscovery.go#L43">SharedDiscoveryIFace</a>
-				<a class="permalink" href="#SharedDiscoveryIFace">&#xb6;</a>
-				
-				
-			</h2>
-			<p>
-SharedDiscoveryIFace describes what is required for building a SharedDiscovery implementation.
-</p>
-
-			<pre>type SharedDiscoveryIFace interface {
-    GetConfig(ctx <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/">context</a>.<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/#Context">Context</a>, apiToken <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, query <a href="#QueryInput">QueryInput</a>) (map[<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>]interface{}, <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#error">error</a>)
-    AdminGetAPIToken(ctx <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/">context</a>.<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/context/#Context">Context</a>, secretKey <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, query <a href="#QueryInput">QueryInput</a>) (<a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#string">string</a>, <a href="https:/pgdevelopers.github.io/shareddiscovery/pkg/builtin/#error">error</a>)
-}</pre>
-
-			
-
-			
-
-			
-			
-			
-
-			
-
 			
 		
 	

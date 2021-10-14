@@ -95,15 +95,15 @@
 <span id="L39" class="ln">    39  </span>	Workspace   string
 <span id="L40" class="ln">    40  </span>}
 <span id="L41" class="ln">    41  </span>
-<span id="L42" class="ln">    42  </span><span class="comment">// SharedDiscoveryIFace describes what is required for building a SharedDiscovery implementation.</span>
-<span id="L43" class="ln">    43  </span>type SharedDiscoveryIFace interface {
+<span id="L42" class="ln">    42  </span><span class="comment">// IFace describes what is required for building a SharedDiscovery implementation.</span>
+<span id="L43" class="ln">    43  </span>type IFace interface {
 <span id="L44" class="ln">    44  </span>	GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error)
 <span id="L45" class="ln">    45  </span>	AdminGetAPIToken(ctx context.Context, secretKey string, query QueryInput) (string, error)
 <span id="L46" class="ln">    46  </span>}
 <span id="L47" class="ln">    47  </span>
 <span id="L48" class="ln">    48  </span><span class="comment">// SharedDiscovery is a custom service object for interacting with the global config</span>
 <span id="L49" class="ln">    49  </span>type SharedDiscovery struct {
-<span id="L50" class="ln">    50  </span>	SharedDiscoveryIFace
+<span id="L50" class="ln">    50  </span>	IFace
 <span id="L51" class="ln">    51  </span>	DynamodbSvc dynamodbiface.DynamoDBAPI
 <span id="L52" class="ln">    52  </span>}
 <span id="L53" class="ln">    53  </span>
