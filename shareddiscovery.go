@@ -61,7 +61,7 @@ func New(dynamodb dynamodbiface.DynamoDBAPI) SharedDiscovery {
 // configuration from the specified `tableName`.
 func (service SharedDiscovery) GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error) {
 	_, configSpan := beeline.StartSpan(ctx, "GetConfig")
-	configSpan.AddField("table_name", query.Workspace)
+	configSpan.AddField("workspace", query.Workspace)
 
 	// dynamically build attribute values
 	searchAttributes := map[string]*dynamodb.AttributeValue{
@@ -122,13 +122,11 @@ func (service SharedDiscovery) AdminGetAPIToken(ctx context.Context, secretKey s
 
 	// parse token
 	return parseAPIToken(ctx, items)
-
 }
 
 func validateSignature(ctx context.Context, query QueryInput, secretKey string) bool {
 	_, validateSignatureSpan := beeline.StartSpan(ctx, "validateSignature")
 	validateSignatureSpan.AddField("query.object", query)
-	// order the query string keys alphabetically
 	message := messageFromQuery(query)
 	validateSignatureSpan.AddField("query.string", message)
 	mac := hmac.New(sha256.New, []byte(secretKey))
