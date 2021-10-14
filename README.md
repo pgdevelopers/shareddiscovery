@@ -6,7 +6,7 @@
 # Shared Discovery
 A library for shared code in the Discovery Service.
 
-[API Documentation](https://pgdevelopers.github.io/shareddiscovery)
+[API Documentation](https://pkg.go.dev/github.com/pgdevelopers/shareddiscovery)
 
 ## Contributing
 To contribute, you will need:
@@ -32,7 +32,7 @@ Now you should be able to run `go get github.com/pgdevelopers/shareddiscovery` t
 
 ## Usage
 
-See [the docs](https://pgdevelopers.github.io/shareddiscovery) for complete API documentation.
+See [the docs](https://pkg.go.dev/github.com/pgdevelopers/shareddiscovery) for complete API documentation.
 
 ### Basic usage
 ```go
