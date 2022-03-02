@@ -19,6 +19,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"github.com/aws/aws-sdk-go/service/dynamodb/expression"
 	"sort"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -41,6 +42,7 @@ type QueryInput struct {
 
 // IFace describes what is required for building a SharedDiscovery implementation.
 type IFace interface {
+	GetValidation(ctx context.Context, query QueryInput) (string, error)
 	GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error)
 	AdminGetAPIToken(ctx context.Context, secretKey string, query QueryInput) (string, error)
 }
@@ -55,6 +57,45 @@ type SharedDiscovery struct {
 // Use this in your init function after creating your aws session and initializing dynamo.
 func New(dynamodb dynamodbiface.DynamoDBAPI) SharedDiscovery {
 	return SharedDiscovery{DynamodbSvc: dynamodb}
+}
+
+// GetValidation uses the provided `AppName` and `Country` to check the item
+// exists in the specified `tableName`.
+func (service SharedDiscovery) GetValidation(ctx context.Context, query QueryInput) (bool, error) {
+	_, validationgSpan := beeline.StartSpan(ctx, "GetValidation")
+	validationgSpan.AddField("workspace", "discovery_app")
+
+	// Set up filters
+	filter1 := expression.Name("appName").Equal(expression.Value(&query.AppName))
+	filter2 := expression.Name("countryCode").Equal(expression.Value(&query.Country))
+
+	// Get back the appName, countryCode, and brandName
+	proj := expression.NamesList(expression.Name("appName"), expression.Name("countryCode"), expression.Name("brandName"))
+
+	expr, err := expression.NewBuilder().WithFilter(filter1.And(filter2)).WithProjection(proj).Build()
+	if err != nil {
+		validationgSpan.AddField("error.message", err.Error())
+		return false, err
+	}
+
+	// Build the query input parameters
+	params := &dynamodb.ScanInput{
+		ExpressionAttributeNames:  expr.Names(),
+		ExpressionAttributeValues: expr.Values(),
+		FilterExpression:          expr.Filter(),
+		ProjectionExpression:      expr.Projection(),
+		TableName:                 aws.String("discovery_app"),
+	}
+
+	// Make the DynamoDB Query API call
+	result, err := service.DynamodbSvc.Scan(params)
+	if err != nil {
+		validationgSpan.AddField("error.message", err.Error())
+		return false, err
+	}
+
+	validationgSpan.Send()
+	return len(result.Items) > 0, nil
 }
 
 // GetConfig uses the provided `APIToken` to get the correct
