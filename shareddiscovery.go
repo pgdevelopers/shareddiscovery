@@ -42,7 +42,7 @@ type QueryInput struct {
 
 // IFace describes what is required for building a SharedDiscovery implementation.
 type IFace interface {
-	GetValidation(ctx context.Context, query QueryInput) (string, error)
+	GetValidation(ctx context.Context, query QueryInput) (bool, error)
 	GetConfig(ctx context.Context, apiToken string, query QueryInput) (map[string]interface{}, error)
 	AdminGetAPIToken(ctx context.Context, secretKey string, query QueryInput) (string, error)
 }
